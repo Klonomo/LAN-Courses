@@ -6,11 +6,12 @@
         author="LearnAnythingNow Team"
         lastUpdated="2026-07-07"
         uuid="f47ac10b-58cc-4372-a567-0e02b2c3d479"
-        bannerImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+        icons="icons.xml"
+        bannerIcon="banner"
         flashcardDefinition="flashcard_definition.xml"
         vocabulary="vocabulary.xml"
         vocabularyListMap="vocabulary_list_map.xml">
-        <domain id="domain_a1" title="A1">
+        <domain id="domain_a1" title="A1" icon="domain_a1">
             <chapter id="chapter_bienvenue" title="👋 BIENVENUE!">
                 <section id="section_bienvenue" title="Vokabeln" exp="140" />
             </chapter>
@@ -51,9 +52,9 @@
                 <section id="section_12" title="Vokabeln" exp="396" />
             </chapter>
         </domain>
-        <domain id="domain_a2" title="A2">
+        <domain id="domain_a2" title="A2" icon="domain_a2">
         </domain>
-        <domain id="domain_top5000" title="Top5000">
+        <domain id="domain_top5000" title="Top5000" icon="domain_vocab">
             <chapter id="chapter_top_0001" title="🥇 Top 1-1000">
                 <section id="section_top_0001" title="Vokabeln" exp="2000" />
             </chapter>
