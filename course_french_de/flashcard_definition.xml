@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flashcard-definition>
+    <front>
+        <field id="german_word" label="German Word" type="text" display="primary" />
+        <field id="example_sentence_de" label="Example Sentence" type="text" display="quote" />
+    </front>
+    <back>
+        <field id="french_word" label="French Word" type="text" display="primary" />
+        <field id="pronunciation" label="Pronunciation" type="text" display="secondary" />
+        <field id="example_sentence_fr" label="Example Sentence" type="text" display="quote" />
+    </back>
+</flashcard-definition>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_18_04" title="Verneinung ohne ne">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="B2">Verneinung ohne <i>ne</i></div>
+<div class="section-content">
+  <p>Bei Verben müssen in der formellen Sprache beide Teile des Negativadverbs (<span class="fr"><span class="tag-lemma">ne</span> ... <span class="tag-lemma">pas</span></span>) um das Verb herum stehen. Bei anderen Wortarten wird <span class="fr">pas</span> jedoch häufig ohne <span class="fr">ne</span> verwendet.</p>
+
+  <h3><i>pas</i> + Adjektiv</h3>
+  <div class="examples">
+    <div class="fr">– Il est grand ?<br>– Non, <u>pas</u> grand.</div>
+    <div class="de spoiler">– Ist er groß?<br>– Nein, nicht groß.</div>
+
+    <div class="fr">C'est un homme <u>pas</u> fier.</div>
+    <div class="de spoiler">Das ist kein stolzer Mann.</div>
+
+    <div class="fr"><u>Pas</u> bête, ça !</div>
+    <div class="de spoiler">Gar keine schlechte Idee!</div>
+
+    <div class="fr"><u>Pas</u> possible !</div>
+    <div class="de spoiler">Das gibt's doch nicht!</div>
+  </div>
+
+  <h3><i>pas</i> + Adverb</h3>
+  <div class="examples">
+    <div class="fr">– Tu as faim ?<br>– <u>Pas</u> trop.</div>
+    <div class="de spoiler">– Hast du Hunger?<br>– Nicht so sehr.</div>
+
+    <div class="fr">– Comment ça va ?<br>– <u>Pas</u> mal.</div>
+    <div class="de spoiler">– Wie geht's?<br>– Nicht schlecht.</div>
+
+    <div class="fr">Pourquoi <u>pas</u> ?</div>
+    <div class="de spoiler">Warum nicht?</div>
+
+    <div class="fr">J'en ai deux, <u>pas</u> trois.</div>
+    <div class="de spoiler">Ich habe zwei davon, nicht drei.</div>
+  </div>
+
+  <h3><i>pas de</i> + Substantive</h3>
+  <p>Diese Konstruktion wird häufig in kurzen Mitteilungen und Schildern verwendet.</p>
+  <div class="examples">
+    <div class="fr"><u>Pas de</u> fraises aujourd'hui</div>
+    <div class="de spoiler">Heute keine Erdbeeren</div>
+
+    <div class="fr"><u>Pas de</u> sucre pour moi.</div>
+    <div class="de spoiler">Keinen Zucker für mich.</div>
+
+    <div class="fr"><u>Pas de</u> problème</div>
+    <div class="de spoiler">Kein Problem</div>
+
+    <div class="fr"><u>Pas de</u> pot</div>
+    <div class="de spoiler">Kein Glück</div>
+
+    <div class="fr"><u>Pas de</u> panique !</div>
+    <div class="de spoiler">Keine Panik!</div>
+  </div>
+
+  <h3><i>pas</i> + Pronomen</h3>
+  <div class="examples">
+    <div class="fr">– Qui va conduire ?<br>– <u>Pas</u> moi !</div>
+    <div class="de spoiler">– Wer wird fahren?<br>– Nicht ich!</div>
+
+    <div class="fr">J'ai faim, <u>pas</u> toi ?</div>
+    <div class="de spoiler">Ich habe Hunger, du nicht?</div>
+
+    <div class="fr">Il vient à la fête mais <u>pas</u> elle.</div>
+    <div class="de spoiler">Er kommt zur Party, aber sie nicht.</div>
+
+    <div class="fr">Ah non, <u>pas</u> ça !</div>
+    <div class="de spoiler">Oh nein, das nicht!</div>
+  </div>
+
+  <h3><i>pas</i> + feststehende Wendung</h3>
+  <div class="examples">
+    <div class="fr"><u>pas</u> du tout</div>
+    <div class="de spoiler">überhaupt nicht</div>
+
+    <div class="fr"><u>pas</u> tout à fait</div>
+    <div class="de spoiler">nicht ganz</div>
+
+    <div class="fr"><u>pas</u> tout de suite</div>
+    <div class="de spoiler">nicht sofort</div>
+  </div>
+
+  <h3>Nachfragen</h3>
+  <div class="examples">
+    <div class="fr">Tu le feras, <u>pas</u> ?</div>
+    <div class="de spoiler">Du machst das, oder?</div>
+
+    <div class="fr">Tu viens, ou <u>pas</u> ?</div>
+    <div class="de spoiler">Kommst du oder nicht?</div>
+
+    <div class="fr">Elle est belle, <u>pas</u> vrai ?</div>
+    <div class="de spoiler">Sie ist schön, nicht wahr?</div>
+  </div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

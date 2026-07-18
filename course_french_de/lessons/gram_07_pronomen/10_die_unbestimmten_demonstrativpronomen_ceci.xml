@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_07_10" title="Die unbestimmten Demonstrativpronomen (ceci)">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="B1">Die unbestimmten Demonstrativpronomen <small>(ceci)</small></div>
+<div class="section-content">
+  <p>Die unbestimmten Demonstrativpronomen sind <span class="fr">ce</span>, <span class="fr">ça</span>, <span class="fr">cela</span> (gehoben) und <span class="fr">ceci</span> (gehoben). Sie können sich auf eine Wortgruppe oder einen ganzen Satz beziehen.</p>
+  <table>
+    <tbody>
+      <tr>
+        <td colspan="4"><b><a grammar="Die Demonstrativpronomen">Demonstrativpronomen</a></b></td>
+      </tr>
+      <tr>
+        <td colspan="2">Person</td>
+        <td>einfach</td>
+        <td>zusammengesetzt</td>
+      </tr>
+      <tr>
+        <td rowspan="2">maskulin</td>
+        <td>Singular</td>
+        <td><span class="fr">celui</span></td>
+        <td><span class="fr">celui-ci</span> / <span class="fr">celui-là</span></td>
+      </tr>
+      <tr>
+        <td>Plural</td>
+        <td><span class="fr">ceux</span></td>
+        <td><span class="fr">ceux-ci</span> / <span class="fr">ceux-là</span></td>
+      </tr>
+      <tr>
+        <td rowspan="2">feminin</td>
+        <td>Singular</td>
+        <td><span class="fr">celle</span></td>
+        <td><span class="fr">celle-ci</span> / <span class="fr">celle-là</span></td>
+      </tr>
+      <tr>
+        <td>Plural</td>
+        <td><span class="fr">celles</span></td>
+        <td><span class="fr">celles-ci</span> / <span class="fr">celles-là</span></td>
+      </tr>
+      <tr>
+        <td class="middle center" colspan="2"><b><u>unbestimmte Form</u></b></td>
+        <td><span class="fr tag-lemma rounded-border">ce</span></td>
+        <td><span class="fr tag-lemma rounded-border">ceci</span> / <span class="fr tag-lemma rounded-border">cela</span> / <span class="fr rounded-border">ça</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <div class="examples">
+    <div class="fr"><u>C’</u>est lui qui garde les moutons.</div>
+    <div class="de spoiler">Er ist <u>es</u>, der die Schafe hütet.</div>
+    <div class="fr"><u>Ce</u> sont eux qui sont gardés par le berger.</div>
+    <div class="de spoiler">Sie sind <u>es</u>, die der Schäfer hütet.</div>
+    <div class="fr">J'aime <u>ça</u>.</div>
+    <div class="de spoiler">Ich mag <u>das</u>.</div>
+  </div>
+  <p><span class="fr">Ce/c'</span> verwendet man zusammen mit <span class="fr">être</span>. Wie das deutsche <span class="de">das</span> wird <span class="fr">ce/c'</span> immer im Singular gebraucht, unabhängig davon, ob das Verb im Singular oder Plural steht.</p>
+  <div class="examples">
+    <div class="fr"><u>C'</u>est intéressant. <u>Ce</u> sont de bonnes nouvelles.</div>
+    <div class="de spoiler"><u>Das</u> ist interessant. <u>Das</u> sind ja gute Neuigkeiten.</div>
+  </div>
+  <p>Mit allen anderen Verben außer <span class="fr">être</span> verwendet man <span class="fr">ça</span>.</p>
+  <div class="examples">
+    <div class="fr"><u>Ça</u> m’a beaucoup plu.</div>
+    <div class="de spoiler"><u>Es</u> hat mir sehr gefallen.</div>
+  </div>
+  <p class="highlight">Die Formen <span class="fr">ceci</span> und <span class="fr">cela</span> können mit allen Verben verwendet werden und sind vor allem in geschriebenen Texten zu finden; beim Sprechen bevorzugt man <span class="fr">ça</span> bzw. <span class="fr">ce/c'</span>.</p>
+  <div class="examples">
+    <div class="fr">Je trouve <u>ceci</u> très intéressant.</div>
+    <div class="de spoiler">Ich finde <u>das</u> sehr interessant.</div>
+    <div class="fr"><u>Cela</u> est bien dit.</div>
+    <div class="de spoiler"><u>Das</u> ist gut gesagt.</div>
+  </div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

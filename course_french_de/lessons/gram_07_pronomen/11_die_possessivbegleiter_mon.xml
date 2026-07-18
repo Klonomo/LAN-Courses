@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_07_11" title="Die Possessivbegleiter (mon)">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="A1">Die Possessivbegleiter <small>(mon)</small></div>
+<div class="section-content">
+  <p>Die Possessivbegleiter (<span class="fr">déterminants possessifs</span>) drücken ein Besitz- oder Zugehörigkeitsverhältnis aus.</p>
+  <table>
+    <tbody>
+      <tr>
+        <th></th>
+        <th colspan="2" style="text-align: center">Singular</th>
+        <th rowspan="2" style="text-align: center">Plural</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th>männlich</th>
+        <th>weiblich</th>
+      </tr>
+      <tr>
+        <td>1. Person</td>
+        <td><span class="fr tag-lemma rounded-border">mon</span> frère</td>
+        <td><span class="fr rounded-border">ma</span> sœur</td>
+        <td><span class="fr markmma rounded-border">mes</span> frères<br><span class="fr rounded-border">mes</span> sœurs</td>
+      </tr>
+      <tr>
+        <td>2. Person</td>
+        <td><span class="fr tag-lemma rounded-border">ton</span> frère</td>
+        <td><span class="fr rounded-border">ta</span> sœur</td>
+        <td><span class="fr rounded-border">tes</span> frères<br><span class="fr rounded-border">tes</span> sœurs</td>
+      </tr>
+      <tr>
+        <td>3. Person</td>
+        <td><span class="fr tag-lemma rounded-border">son</span> frère</td>
+        <td><span class="fr rounded-border">sa</span> sœur</td>
+        <td><span class="fr rounded-border">ses</span> frères<br><span class="fr rounded-border">ses</span> sœurs</td>
+      </tr>
+      <tr>
+        <th colspan="4">Mehrere Besitzer</th>
+      </tr>
+      <tr>
+        <td>1. Person</td>
+        <td><span class="fr tag-lemma rounded-border">notre</span> frère</td>
+        <td><span class="fr rounded-border">notre</span> sœur</td>
+        <td><span class="fr rounded-border">nos</span> frères<br><span class="fr rounded-border">nos</span> sœurs</td>
+      </tr>
+      <tr>
+        <td>2. Person</td>
+        <td><span class="fr tag-lemma rounded-border">votre</span> frère</td>
+        <td><span class="fr rounded-border">votre</span> sœur</td>
+        <td><span class="fr rounded-border">vos</span> frères<br><span class="fr rounded-border">vos</span> sœurs</td>
+      </tr>
+      <tr>
+        <td>3. Person</td>
+        <td><span class="fr tag-lemma rounded-border">leur</span> frère</td>
+        <td><span class="fr rounded-border">leur</span> sœur</td>
+        <td><span class="fr rounded-border">leurs</span> frères<br><span class="fr rounded-border">leurs</span> sœurs</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="attention">Anders als im Deutschen richtet sich der französische Possessivbegleiter nicht nach dem Geschlecht des Besitzers, sondern nach der Zahl und dem Geschlecht der besessenen Sache!</p>
+  <div class="examples">
+    <div class="fr">Dans le sac, il y a <u>ma</u> trousse.</div>
+    <div class="de spoiler">In der Tasche befindet sich <i>mein</i> Etui.</div>
+    <div class="fr">Nous allons célébrer l'anniversaire avec <u>nos</u> amis.</div>
+    <div class="de spoiler">Wir werden den Geburtstag mit <i>unseren</i> Freunden feiern.</div>
+  </div>
+  <p>Vor einem weiblichen Substantiv, das mit Vokal oder <a grammar="Das h aspiré">stummem h</a> beginnt, werden in der 1., 2. und 3. Person Singular die Possessivbegleiter <b>mon</b>, <b>ton</b> und <b>son</b> verwendet.</p>
+  <div class="examples">
+    <div class="fr">Elle a perdu <u>son</u> amie.</div>
+    <div class="de spoiler">Sie hat <i>ihre</i> Freundin verloren.</div>
+  </div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_07_05" title="Die Reflexivpronomen (me, se)">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="A2">Die Reflexivpronomen <small>(me, se)</small></div>
+<div class="section-content">
+  <p>Reflexivpronomen (<span class="fr">pronoms réfléchis</span>) sind rückbezügliche Fürwörter, die sich stets auf das Subjekt des Satzes beziehen.</p>
+  <table>
+    <tbody>
+      <tr>
+        <td rowspan="3">Singular</td>
+        <td>1.</td>
+        <td><span class="fr tag-lemma rounded-border">me</span> (m’)</td>
+        <td><span class="de">mich</span></td>
+        <td>
+          <div class="examples">
+            <div class="fr">Je <u>me</u> lave.</div>
+            <div class="de spoiler">Ich wasche <u>mich</u>.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td><span class="fr tag-lemma rounded-border">te</span> (t’)</td>
+        <td><span class="de">dich</span></td>
+        <td>
+          <div class="examples">
+            <div class="fr">Tu <u>te</u> lèves.</div>
+            <div class="de spoiler">Du stehst auf.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td><span class="fr tag-lemma rounded-border">se</span> (s’)</td>
+        <td><span class="de">sich</span></td>
+        <td>
+          <div class="examples">
+            <div class="fr">Il <u>se</u> rase.</div>
+            <div class="de spoiler">Er rasiert <u>sich</u>.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">Plural</td>
+        <td>1.</td>
+        <td><span class="fr tag-lemma rounded-border">nous</span></td>
+        <td><span class="de">uns</span></td>
+        <td>
+          <div class="examples">
+            <div class="fr">Nous <u>nous</u> amusons.</div>
+            <div class="de spoiler">Wir amüsieren <u>uns</u>.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td><span class="fr tag-lemma rounded-border">vous</span></td>
+        <td><span class="de">euch, sich</span></td>
+        <td>
+          <div class="examples">
+            <div class="fr">Vous <u>vous</u> habillez.</div>
+            <div class="de spoiler">Ihr kleidet <u>euch</u> an.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td><span class="fr tag-lemma rounded-border">se</span> (s’)</td>
+        <td><span class="de">sich</span></td>
+        <td>
+          <div class="examples">
+            <div class="fr">Elles <u>se</u> maquillent.</div>
+            <div class="de spoiler">Sie schminken <u>sich</u>.</div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="tip">Das Reflexivpronomen hat nur für die 3. Person Singular und Plural eine eigenständige Form: <span class="fr">se</span> bzw. <span class="fr">s’</span> vor Vokal und <a grammar="Das h aspiré">stummem h</a>. In den anderen Personen ist das Reflexivpronomen mit den Objektpronomen identisch.</p>
+  <div class="examples">
+    <div class="fr">Je <u>me</u> réveille à 7 heures.</div>
+    <div class="de spoiler">Ich wache um 7 Uhr auf. (wörtlich: Ich wecke <u>mich</u>...)</div>
+    <div class="fr">Tu <u>te</u> prépares pour l’examen.</div>
+    <div class="de spoiler">Du bereitest <u>dich</u> auf die Prüfung vor.</div>
+    <div class="fr">Elle <u>s</u>’intéresse à l’art moderne.</div>
+    <div class="de spoiler">Sie interessiert <u>sich</u> für moderne Kunst.</div>
+    <div class="fr">Nous <u>nous</u> retrouvons devant le cinéma.</div>
+    <div class="de spoiler">Wir treffen <u>uns</u> vor dem Kino.</div>
+    <div class="fr">Vous <u>vous</u> reposez après le travail.</div>
+    <div class="de spoiler">Ihr ruht <u>euch</u> nach der Arbeit aus.</div>
+    <div class="fr">Ils <u>se</u> parlent au téléphone.</div>
+    <div class="de spoiler">Sie sprechen <u>sich</u> am Telefon.</div>
+  </div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

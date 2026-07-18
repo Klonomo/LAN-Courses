@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_09_02" title="Die Verben auf &amp;#8209;er">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="A1/A2">Die Verben auf &#8209;er</div>
+<div class="section-content">
+  <p>Die Verben auf <b>&#8209;er</b> bilden die größte Gruppe (ca. 90% aller Verben) und sind alle (außer <span class="fr">aller</span>) regelmäßig.</p>
+  <p>Die Endungen im <a grammar="Présent">Präsens</a> lauten <b>&#8209;e, &#8209;es, &#8209;e, &#8209;ons, &#8209;ez, &#8209;ent</b>. Beispiel am Verb <span class="fr tag-lemma">donner</span> (<span class="de">geben</span>):</p>
+  <table class="section-conjugation-table">
+    <tr>
+      <td>
+        <span class="full">je</span>
+        <span class="reflexive full">je me</span>
+      </td>
+      <td>donn<u>e</u></td>
+    </tr>
+    <tr>
+      <td>
+        <span class="full">tu</span>
+        <span class="reflexive full">tu te</span>
+      </td>
+      <td>donn<u>es</u></td>
+    </tr>
+    <tr>
+      <td>
+        <span class="full">il/elle/on</span>
+        <span class="reflexive full">il/elle/on se</span>
+      </td>
+      <td>donn<u>e</u></td>
+    </tr>
+    <tr>
+      <td>
+        <span class="full">nous</span>
+        <span class="reflexive">nous nous</span>
+      </td>
+      <td>donn<u>ons</u></td>
+    </tr>
+    <tr>
+      <td>
+        <span class="full">vous</span>
+        <span class="reflexive">vous vous</span>
+      </td>
+      <td>donn<u>ez</u></td>
+    </tr>
+    <tr>
+      <td>
+        <span class="full">ils/elles</span>
+        <span class="reflexive full">ils/elles se</span>
+      </td>
+      <td>donn<u>ent</u></td>
+    </tr>
+  </table>
+  <p>Das <i><a grammar="Participe passé">participe passé</a></i> wird auf <b>&#8209;é</b> gebildet:</p>
+  <div class="examples">
+    <div><span class="fr force-audio">parler</span> (<span class="de">sprechen</span>) &rarr; <span class="fr force-audio">j'ai parl<u>é</u></span></div>
+    <div class="de spoiler">ich habe <u>gesprochen</u></div>
+  </div>
+
+  <p>Besonderheiten bei der Rechtschreibung:</p>
+  <ul>
+    <li>Bei Verben auf <b>&#8209;cer</b> wird das <b>c</b> vor <b>o</b> und <b>a</b> zu einem <b>ç</b>, um die <span class="ipa">\s\</span>&#8209;Aussprache beizubehalten.</li>
+  </ul>
+  <div class="examples">
+    <div><span class="fr force-audio">commencer</span> (<span class="de">anfangen</span>) &rarr; <span class="fr force-audio">nous commen<u>ç</u>ons</span></div>
+    <div class="de spoiler">wir fangen an</div>
+  </div>
+  <ul>
+    <li>Bei Verben auf <b>&#8209;ger</b> wird ein <b>e</b> zwischen <b>g</b> und <b>o</b>/<b>a</b> eingefügt, um die <span class="ipa">\ʒ\</span>&#8209;Aussprache zu erhalten.</li>
+  </ul>
+  <div class="examples">
+    <div><span class="fr force-audio">manger</span> (<span class="de">essen</span>) &rarr; <span class="fr force-audio">nous mang<u>e</u>ons</span></div>
+    <div class="de spoiler">wir essen</div>
+  </div>
+  <ul>
+    <li>Bei Verben auf <b>&#8209;yer</b> wird das <b>y</b> vor einem stummen <b>e</b> zu einem <b>i</b>.</li>
+  </ul>
+  <div class="examples">
+    <div><span class="fr force-audio">employer</span> (<span class="de">verwenden</span>) &rarr; <span class="fr force-audio">j'emplo<u>i</u>e</span></div>
+    <div class="de spoiler">ich verwende</div>
+  </div>
+  <ul>
+    <li>Bei Verben auf <b>&#8209;eler</b> und <b>&#8209;eter</b> wird der Konsonant vor der Endung verdoppelt.</li>
+  </ul>
+  <div class="examples">
+    <div><span class="fr force-audio">appeler</span> (<span class="de">rufen</span>) &rarr; <span class="fr force-audio">j'appe<u>ll</u>e</span>, aber: <span class="fr force-audio">nous appe<u>l</u>ons</span></div>
+    <div class="de spoiler">ich rufe, aber: wir rufen</div>
+    <div><span class="fr force-audio">jeter</span> (<span class="de">werfen</span>) &rarr; <span class="fr force-audio">je je<u>tt</u>e</span>, aber: <span class="fr force-audio">nous je<u>t</u>ons</span></div>
+    <div class="de spoiler">ich werfe, aber: wir werfen</div>
+  </div>
+  <ul>
+    <li>Bei Verben mit <b>&#8209;e-</b> oder <b>&#8209;é-</b> im Stamm ändert sich der Akzent zu <b>&#8209;è-</b>.</li>
+  </ul>
+  <div class="examples">
+    <div><span class="fr force-audio">se lever</span> (<span class="de">aufstehen</span>) &rarr; <span class="fr force-audio">je me l<u>è</u>ve</span>, aber: <span class="fr force-audio">nous nous l<u>e</u>vons</span></div>
+    <div class="de spoiler">ich stehe auf, aber: wir stehen auf</div>
+    <div><span class="fr force-audio">répéter</span> (<span class="de">wiederholen</span>) &rarr; <span class="fr force-audio">je rép<u>è</u>te</span>, aber: <span class="fr force-audio">vous rép<u>é</u>tez</span></div>
+    <div class="de spoiler">ich wiederhole, aber: ihr wiederholt</div>
+  </div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

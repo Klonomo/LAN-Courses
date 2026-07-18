@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_07_09" title="Die Demonstrativbegleiter (ce, cette)">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="A2">Die Demonstrativbegleiter <small>(ce, cette)</small></div>
+<div class="section-content">
+  <p>Demonstrativbegleiter haben eine hinweisende Funktion: Sie bestimmen ein Substantiv näher. Im Deutschen gibt es zwei Demonstrativbegleiter: <span class="de">diese(&#8209;r/s)</span> und <span class="de">jene(&#8209;r/s)</span>. Das Französische hat nur einen, der sich in Geschlecht und Zahl dem begleiteten Substantiv anpasst.</p>
+  <table>
+    <tbody>
+      <tr>
+        <th colspan="3">Demonstrativbegleiter</th>
+      </tr>
+      <tr>
+        <td><span class="fr rounded-border tag-lemma">ce</span></td>
+        <td><span class="de">dieser</span></td>
+        <td>maskulin</td>
+      </tr>
+      <tr>
+        <td><span class="fr rounded-border">cet</span></td>
+        <td><span class="de">dieser</span></td>
+        <td>(vor Vokal / <a grammar="Das h aspiré">stummem h</a>)</td>
+      </tr>
+      <tr>
+        <td><span class="fr rounded-border">cette</span></td>
+        <td><span class="de">diese</span></td>
+        <td>feminin</td>
+      </tr>
+      <tr>
+        <td><span class="fr rounded-border">ces</span></td>
+        <td><span class="de">diese</span></td>
+        <td>Plural</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Bei Gegenüberstellungen oder Vergleichen zweier Objekte werden die <b>Anhängepartikel</b> <span class="fr">&#8209;ci</span> oder <span class="fr">&#8209;là</span> an das Substantiv angehängt, das von <span class="fr">ce</span>, <span class="fr">cet</span>, <span class="fr">cette</span> oder <span class="fr">ces</span> begleitet wird. Dabei drückt <span class="fr">&#8209;ci</span> räumliche Nähe aus, <span class="fr">&#8209;là</span> eine größere Entfernung.</p>
+  <div class="examples">
+    <div class="fr">Quelle voiture préfères-tu – <u>cette</u> voiture-<u>ci</u> ou <u>cette</u> voiture-<u>là</u> ?</div>
+    <div class="de spoiler">Welches Auto bevorzugst du – <u>dieses</u> Auto <u>hier</u> oder <u>jenes</u> Auto <u>dort</u>?</div>
+  </div>
+  <p><span class="fr">&#8209;là</span> wird häufig auch zur Verstärkung des Demonstrativbegleiters verwendet, oft mit einer leicht abwertenden Nuance.</p>
+  <div class="examples">
+    <div class="fr">- As-tu vu le nouveau film d'action ?<br>– Oui, mais je n'apprécie pas tellement <u>ce</u> film-<u>là</u>.</div>
+    <div class="de spoiler">- Hast du den neuen Actionfilm gesehen?<br>– Ja, aber ich mag <u>diesen</u> Film nicht besonders.</div>
+  </div>
+  <p>In Verbindung mit Tageszeiten bezeichnen <span class="fr">ce</span>, <span class="fr">cet</span> und <span class="fr">cette</span> immer den aktuellen Tag:</p>
+  <ul>
+    <li><span class="fr">ce matin</span> = heute Morgen</li>
+    <li><span class="fr">cet après-midi</span> = heute Nachmittag</li>
+    <li><span class="fr">ce soir</span> = heute Abend</li>
+    <li><span class="fr">cette nuit</span> = heute Nacht</li>
+  </ul>
+  <p>Um einen vergangenen oder zukünftigen Tag zu bezeichnen, wird <span class="fr">&#8209;là</span> angehängt:</p>
+  <div class="examples">
+    <div class="fr"><u>Cet</u> après-midi-<u>là</u>, elle n'est pas venue au rendez-vous.</div>
+    <div class="de spoiler">An <u>jenem</u> Nachmittag ist sie nicht zum Treffen erschienen.</div>
+  </div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

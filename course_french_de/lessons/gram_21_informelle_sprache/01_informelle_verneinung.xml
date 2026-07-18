@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_21_01" title="Informelle Verneinung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="B2">Informelle Verneinung</div>
+<div class="section-content">
+  <p>Nach der Standardregel wird ein französisches Verb durch <span class="fr">ne</span> vor dem Verb und <span class="fr">pas</span> nach dem Verb verneint. Dies ist die korrekte französische Grammatik, die man im Schriftlichen immer verwenden sollte:</p>
+
+  <div class="examples">
+    <div class="fr">Je <u>ne</u> veux <u>pas</u> y aller.</div>
+    <div class="de spoiler">Ich will nicht hingehen.</div>
+    <div class="fr">On <u>ne</u> sait <u>pas</u>.</div>
+    <div class="de spoiler">Wir wissen es nicht.</div>
+    <div class="fr"><u>Ne</u> touche <u>pas</u> !</div>
+    <div class="de spoiler">Nicht anfassen!</div>
+    <div class="fr">Il <u>n'</u>y en a <u>pas</u>.</div>
+    <div class="de spoiler">Es gibt keine(s).</div>
+  </div>
+
+  <p class="attention">Die tatsächliche französische Aussprache sieht jedoch anders aus, wie man in Filmen, im Fernsehen und bei Muttersprachlern hören kann.</p>
+
+  <h3>Aussprache von <i>ne</i></h3>
+  <p>Theoretisch sollte <span class="fr">ne</span> als vollständige Silbe <span class="ipa">\nə\</span> ausgesprochen werden. In Wirklichkeit wird der Vokal außerhalb der Poesie fast nie ausgesprochen:</p>
+
+  <div class="examples">
+    <div class="fr">Je <u>n'</u>veux pas y aller.</div>
+    <div class="fr">On <u>n'</u>sait pas.</div>
+    <div class="fr"><u>N'</u>touche pas !</div>
+  </div>
+
+  <h3>Wegfall von <i>ne</i></h3>
+  <p class="highlight">In der Umgangssprache wird <span class="fr">ne</span> komplett weggelassen.</p>
+
+  <div class="examples">
+    <div class="fr">Je veux <u>pas</u> y aller.</div>
+    <div class="de spoiler">Ich will nicht hingehen.</div>
+    <div class="fr">On sait <u>pas</u>.</div>
+    <div class="de spoiler">Wir wissen es nicht.</div>
+    <div class="fr">Touche <u>pas</u> !</div>
+    <div class="de spoiler">Nicht anfassen!</div>
+    <div class="fr">Il y en a <u>pas</u>.</div>
+    <div class="de spoiler">Es gibt keine(s).</div>
+  </div>
+
+  <p>Dies gilt auch für andere Verneinungswörter:</p>
+  <div class="examples">
+    <div class="fr">Je n'aime plus cette émission. → J'aime <u>plus</u> cette émission.</div>
+    <div class="de spoiler">Ich mag diese Sendung nicht mehr.</div>
+    <div class="fr">Il ne va jamais au ciné. → Il va <u>jamais</u> au ciné.</div>
+    <div class="de spoiler">Er geht nie ins Kino.</div>
+  </div>
+
+  <p class="attention">Muttersprachler kritisieren oft das Unterrichten dieser „inkorrekten“ Grammatik. Dennoch ist es wichtig, diesen allgegenwärtigen Aspekt der Aussprache zu kennen, auch wenn man selbst das <span class="fr">ne</span> nicht weglassen möchte. So spricht man nun mal in Frankreich.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

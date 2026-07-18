@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_21_03" title="Informelle Fragen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="B1">Informelle Fragen</div>
+<div class="section-content">
+  <p>Im Französischen gibt es verschiedene Möglichkeiten, <a grammar="Die drei Frageformen">Fragen zu stellen</a>. Die offiziellen Varianten sind die Inversion (formell) und <span class="fr">est-ce que</span> (Standardsprache). In der Umgangssprache gibt es jedoch weitere Möglichkeiten.</p>
+
+  <h3>1. Intonation</h3>
+  <p>Eine Aussage wird durch Anheben der Stimme am Satzende zur Frage – genau wie im Deutschen:</p>
+
+  <div class="examples">
+    <span class="fr">Tu viens demain ?</span>&nbsp;<u>↗</u>
+    <div class="de spoiler">Kommst du morgen?</div>
+    <span class="fr">Il va nous aider ?</span>&nbsp;<u>↗</u>
+    <div class="de spoiler">Wird er uns helfen?</div>
+    <span class="fr">Vous voulez l'essayer ?</span>&nbsp;<u>↗</u>
+    <div class="de spoiler">Wollt ihr es probieren?</div>
+  </div>
+
+  <p>Man kann auch eine Rückversicherungsfrage anhängen.</p>
+
+  <div class="examples">
+    <div class="fr">Tu viens demain, <u>c’est ça</u> ?</div>
+    <div class="de spoiler">Du kommst morgen, oder?</div>
+    <div class="fr">Il va nous aider, <u>pas vrai</u> ?</div>
+    <div class="de spoiler">Er wird uns helfen, richtig?</div>
+  </div>
+
+  <h3>2. Betonung mit Fragewörtern</h3>
+  <p>Ein Interrogativpronomen oder &#8209;adverb kann am Anfang oder Ende der Frage stehen (am Ende ist gebräuchlicher):</p>
+
+  <div class="examples">
+    <div class="fr"><u>Quand</u> t'es arrivé ? → T'es arrivé <u>quand</u> ?</div>
+    <div class="de spoiler">Wann bist du angekommen?</div>
+    <div class="fr"><u>À quoi</u> tu penses ? → Tu penses <u>à quoi</u> ?</div>
+    <div class="de spoiler">Woran denkst du?</div>
+    <div class="fr"><u>Pourquoi</u> tu dis ça ? → Tu dis ça <u>pourquoi</u> ?</div>
+    <div class="de spoiler">Warum sagst du das?</div>
+  </div>
+
+  <h3>3. <i>C’est</i> mit Fragewörtern</h3>
+  <p>Bei Fragen nach Informationen über ein Nomen kann man <span class="fr">c’est</span> vor das Fragewort setzen:</p>
+
+  <div class="examples">
+    <div class="fr">Quand est ton anniversaire ? → Ton anniversaire, <u>c’est quand</u> ?</div>
+    <div class="de spoiler">Wann ist dein Geburtstag?</div>
+    <div class="fr">Où est ton école ? → Ton école, <u>c’est où</u> ?</div>
+    <div class="de spoiler">Wo ist deine Schule?</div>
+    <div class="fr">Qui est ce mec ? → Ce mec, <u>c’est qui</u> ?</div>
+    <div class="de spoiler">Wer ist dieser Typ?</div>
+    <div class="fr">Quelle est ta couleur préférée ? → Ta couleur préférée, <u>c’est quoi</u> ?</div>
+    <div class="de spoiler">Was ist deine Lieblingsfarbe?</div>
+  </div>
+
+  <h3>4. <i>Qui c’est qui</i></h3>
+  <p><span class="fr">Qui c’est qui</span> ersetzt in der Umgangssprache <span class="fr">qui</span>:</p>
+
+  <div class="examples">
+    <div class="fr"><u>Qui c’est qui</u> a fait ça ?</div>
+    <div class="de spoiler">Wer hat das gemacht?</div>
+    <div class="fr"><u>Qui c’est qui</u> va conduire ?</div>
+    <div class="de spoiler">Wer wird fahren?</div>
+  </div>
+
+  <h3>5. Wegfall von <i>est-ce</i></h3>
+  <p class="highlight">Eine sehr informelle Art, Fragen zu stellen, ist die Verwendung von nur <span class="fr">que</span> statt <span class="fr">est-ce que</span>.</p>
+
+  <div class="examples">
+    <div class="fr"><u>Quand qu'</u>elle va arriver ? (Quand est-ce qu'elle va arriver ?)</div>
+    <div class="de spoiler">Wann kommt sie an?</div>
+    <div class="fr"><u>Pourquoi que</u> tu dis ça ? (Pourquoi est-ce que tu dis ça ?)</div>
+    <div class="de spoiler">Warum sagst du das?</div>
+    <div class="fr"><u>Où que</u> tu vas ? (Où est-ce que tu vas ?)</div>
+    <div class="de spoiler">Wo gehst du hin?</div>
+  </div>
+
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

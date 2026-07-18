@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_10_10" title="Impératif">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="A2">Impératif</div>
+<div class="section-content">
+  <p>Der <b>impératif</b> (Imperativ) wird verwendet, um eine direkte Aufforderung, einen Wunsch, einen Befehl, eine Bitte, eine Empfehlung, ein Verbot oder einen Ratschlag auszudrücken.</p>
+
+  <p>Im Französischen gibt es den Imperativ nur für drei Personen: 2. Person Singular, 1. Person Plural und 2. Person Plural.</p>
+
+  <table class="section-conjugation-table">
+    <tr style="display: none">
+      <td data-tense="IF"></td>
+    </tr>
+    <tr>
+      <td data-tense="IF" data-reflexive-suffix="&#8209;toi"></td>
+    </tr>
+    <tr style="display: none">
+      <td data-tense="IF"></td>
+    </tr>
+    <tr>
+      <td data-tense="IF" data-reflexive-suffix="&#8209;nous"></td>
+    </tr>
+    <tr>
+      <td data-tense="IF" data-reflexive-suffix="&#8209;vous"></td>
+    </tr>
+    <tr style="display: none">
+      <td data-tense="IF"></td>
+    </tr>
+  </table>
+
+  <p class="tip">Französische Imperativsätze enden normalerweise mit einem Punkt. Ein Ausrufezeichen wird nur bei besonders nachdrücklichen Aufforderungen verwendet.</p>
+
+  <p>Die Imperativformen im Plural entsprechen in der Regel den Indikativ-Präsens-Formen. Ausnahme: Die 2. Person Singular der <span class="fr no-break">&#8209;er</span>&#8209;Verben und einiger <span class="fr no-break">&#8209;ir</span>&#8209;Verben endet auf <span class="fr no-break">&#8209;e</span>.</p>
+
+  <p class="attention">Wenn dem Imperativ die Pronomen <span class="fr">en</span> oder <span class="fr">y</span> ohne folgenden <a grammar="Der Infinitiv">Infinitiv</a> folgen, erhält der Imperativ die Endung <span class="fr no-break">&#8209;es</span>, um die Aussprache zu erleichtern, z.B. <span class="fr no-break">penses-y</span> (denk daran).</p>
+
+  <p>Bei <a grammar="Reflexive Verben">reflexiven Verben</a> im Imperativ wird das <a grammar="Die Reflexivpronomen">Reflexivpronomen</a> verwendet und im bejahten Imperativ mit Bindestrich nach dem Verb platziert:</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <th></th>
+        <th>se laver</th>
+        <th>ne pas se laver</th>
+      </tr>
+      <tr>
+        <td>2. Person Singular</td>
+        <td>lave-toi</td>
+        <td>ne te lave pas</td>
+      </tr>
+      <tr>
+        <td>1. Person Plural</td>
+        <td>lavons-nous</td>
+        <td>ne nous lavons pas</td>
+      </tr>
+      <tr>
+        <td>2. Person Plural</td>
+        <td>lavez-vous</td>
+        <td>ne vous lavez pas</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Der Imperativ drückt u.a. einen Wunsch, eine Anweisung, einen Befehl oder einen Ratschlag aus.</p>
+
+  <div class="examples">
+    <div class="fr"><u>Profite</u> bien de tes vacances.</div>
+    <div class="de spoiler">Genieße deinen Urlaub!</div>
+    <div class="fr"><u>Mélangez</u> les ingrédients pendant 5 minutes.</div>
+    <div class="de spoiler">Vermischen Sie die Zutaten fünf Minuten lang.</div>
+    <div class="fr"><u>Écoute</u> attentivement !</div>
+    <div class="de spoiler">Hör genau zu!</div>
+    <div class="fr"><u>Partons</u> maintenant !</div>
+    <div class="de spoiler">Lass uns jetzt gehen!</div>
+  </div>
+
+  <p><span class="fr">donc</span> betont den Imperativ.</p>
+  <div class="examples">
+    <div class="fr"><u>Essayez</u> donc cette recette.</div>
+    <div class="de spoiler">Probieren Sie/Probiert doch mal dieses Rezept aus!</div>
+  </div>
+
+  <p>Statt der nicht vorhandenen 1. Person Singular wird manchmal die 1. Person Plural verwendet.</p>
+  <div class="examples">
+    <div class="fr">Je me suis dit : <u>restons</u> calme.</div>
+    <div class="de spoiler">Ich sagte mir: Bleib ruhig!</div>
+  </div>
+
+  <p>Für Befehle an eine dritte Person (Singular oder Plural) wird der <i><a grammar="Subjonctif">subjonctif</a></i> verwendet.</p>
+  <div class="examples">
+    <div class="fr">Qu'elle <u>vienne</u> tout de suite !</div>
+    <div class="de spoiler">Sie soll sofort kommen!</div>
+  </div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

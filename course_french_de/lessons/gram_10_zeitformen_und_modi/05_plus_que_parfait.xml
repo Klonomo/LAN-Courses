@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_10_05" title="Plus-que-parfait">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="B1">Plus-que-parfait</div>
+<div class="section-content">
+  <p>Das <b>plus-que-parfait</b> (Plusquamperfekt) ist eine zusammengesetzte Vergangenheitsform des Indikativs. Es wird ähnlich wie im Deutschen verwendet, um ein Ereignis zu beschreiben, das vor einem anderen Ereignis in der Vergangenheit stattgefunden hat.</p>
+
+  <p>Das <i>plus-que-parfait</i> wird folgendermaßen gebildet: das <i><a grammar="Imparfait">imparfait</a></i> der <a grammar="Die Hilfsverben avoir und être">Hilfsverben</a> <span class="fr">être</span> (sein) oder <span class="fr">avoir</span> (haben) + <i><a grammar="Participe passé">participe passé</a></i> des Hauptverbs.</p>
+
+  <table class="section-conjugation-table">
+    <tr>
+      <td>
+        <span class="avoir">j’avais</span>
+        <span class="etre">j’étais</span>
+        <span class="etre reflexive">je m’étais</span>
+      </td>
+      <td data-tense="PC"></td>
+    </tr>
+    <tr>
+      <td>
+        <span class="avoir">tu avais</span>
+        <span class="etre">tu étais</span>
+        <span class="etre reflexive">tu t’étais</span>
+      </td>
+      <td data-tense="PC"></td>
+    </tr>
+    <tr>
+      <td>
+        <span class="avoir">il avait</span>
+        <span class="etre">il était</span>
+        <span class="etre reflexive">il s’était</span>
+      </td>
+      <td data-tense="PC"></td>
+    </tr>
+    <tr>
+      <td>
+        <span class="avoir">nous avions</span>
+        <span class="etre">nous étions</span>
+        <span class="etre reflexive">nous nous étions</span>
+      </td>
+      <td data-tense="PC" data-plural="true"></td>
+    </tr>
+    <tr>
+      <td>
+        <span class="avoir">vous aviez</span>
+        <span class="etre">vous étiez</span>
+        <span class="etre reflexive">vous vous étiez</span>
+      </td>
+      <td data-tense="PC" data-plural="true"></td>
+    </tr>
+    <tr>
+      <td>
+        <span class="avoir">ils avaient</span>
+        <span class="etre">ils étaient</span>
+        <span class="etre reflexive">ils s’étaient</span>
+      </td>
+      <td data-tense="PC" data-plural="true"></td>
+    </tr>
+  </table>
+
+  <div class="examples">
+    <div class="fr">Sophie lui a demandé s'il <u>avait</u> déjà <u>visité</u> le musée.</div>
+    <div class="de spoiler">Sophie hat ihn gefragt, ob er das Museum schon besucht hatte.</div>
+  </div>
+
+  <p>Das <i>plus-que-parfait</i> kann in Kombination mit dem <i>passé composé</i>, dem <i>imparfait</i> oder dem <i>passé simple</i> verwendet werden.</p>
+  <div class="examples">
+    <div class="fr">Thomas <u>avait préparé</u> le dîner et tout le monde était ravi.</div>
+    <div class="de spoiler">Thomas hatte das Abendessen vorbereitet und alle waren begeistert.</div>
+    <div class="fr">L'étudiante expliqua ce qu'elle <u>avait appris</u> pendant le semestre.</div>
+    <div class="de spoiler">Die Studentin erklärte, was sie während des Semesters gelernt hatte.</div>
+  </div>
+
+  <p class="attention">In einigen Ausrufesätzen wird im Französischen das <i>plus-que-parfait</i> verwendet, während im Deutschen das Perfekt steht.</p>
+  <div class="examples">
+    <div class="fr">Ah, je n'y <u>avais</u> même pas <u>fait attention</u> !</div>
+    <div class="de spoiler">Ach, darauf habe ich gar nicht geachtet!</div>
+  </div>
+
+  <p>Nach <span class="fr">si</span> (wenn) wird das <i>plus-que-parfait</i> benutzt, um eine <a grammar="Bedingungssätze mit si">nicht mehr erfüllbare Bedingung</a> auszudrücken.</p>
+  <div class="examples">
+    <div class="fr">Si Marc <u>avait su</u> la vérité, il <u>aurait agi</u> différemment.</div>
+    <div class="de spoiler">Wenn Marc die Wahrheit gewusst hätte, hätte er anders gehandelt.</div>
+  </div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

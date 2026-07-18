@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_13_08" title="Verb + sur">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="B1">Verb + <i>sur</i></div>
+<div class="section-content">
+  <p>Manche Verben werden mit der Präposition <b>sur</b> an ein indirektes Objekt angebunden.</p>
+  <p class="attention">Die deutsche Übersetzung ist dabei manchmal nicht intuitiv. Statt der direkten Entsprechung „auf“ oder „über“ wird im Deutschen manchmal eine andere Präposition (z. B. <i>in, mit, an, zu, vor, gegenüber</i>) verwendet. Diese Liste konzentriert sich auf diese Fälle.</p>
+  <table>
+    <tbody>
+      <tr>
+        <td><span class="fr rounded-border tag-lemma" data-lemma="donner">donner sur</span> <small>(#46)</small></td>
+        <td><span class="de">hinausgehen <b>zu</b></span></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="examples">
+            <div class="fr">Ma fenêtre <u>donne sur</u> la cour.</div>
+            <div class="de spoiler">Mein Fenster geht <u>zum</u> Hof <u>hinaus</u>.</div>
+            <div class="fr wrong no-audio">Ma fenêtre <u>donne à</u> la cour.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="fr rounded-border tag-lemma" data-lemma="prononcer">se prononcer sur</span> <small>(#706)</small></td>
+        <td><span class="de">sich äußern <b>zu</b></span></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="examples">
+            <div class="fr">Le ministre ne veut pas <u>se prononcer sur</u> ce sujet.</div>
+            <div class="de spoiler">Der Minister will sich nicht <u>zu</u> diesem Thema <u>äußern</u>.</div>
+            <div class="fr wrong no-audio">Le ministre ne veut pas <u>se prononcer à</u> ce sujet.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="fr rounded-border tag-lemma" data-lemma="fermer">fermer les yeux sur</span> <small>(#757)</small></td>
+        <td><span class="de">die Augen verschließen <b>vor</b></span></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="examples">
+            <div class="fr">On ne peut pas <u>fermer les yeux sur</u> l'injustice.</div>
+            <div class="de spoiler">Man kann nicht die Augen <u>vor</u> der Ungerechtigkeit <u>verschließen</u>.</div>
+            <div class="fr wrong no-audio">On ne peut pas <u>fermer les yeux devant</u> l'injustice.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="fr rounded-border tag-lemma" data-lemma="tromper">se tromper sur</span> <small>(#1539)</small></td>
+        <td><span class="de">sich irren <b>in</b></span></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="examples">
+            <div class="fr">Je me suis <u>trompé sur</u> son compte.</div>
+            <div class="de spoiler">Ich habe mich <u>in</u> ihm <u>geirrt</u>.</div>
+            <div class="fr wrong no-audio">Je me suis <u>trompé en</u> lui.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="fr rounded-border tag-lemma" data-lemma="pencher">se pencher sur</span> <small>(#1796)</small></td>
+        <td><span class="de">sich befassen <b>mit</b></span></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="examples">
+            <div class="fr">Il faut <u>se pencher sur</u> ce problème.</div>
+            <div class="de spoiler">Man muss sich <u>mit</u> diesem Problem <u>befassen</u>.</div>
+            <div class="fr wrong no-audio">Il faut <u>se pencher avec</u> ce problème.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="fr rounded-border tag-lemma" data-lemma="prévaloir">prévaloir sur</span> <small>(#3123)</small></td>
+        <td><span class="de">sich durchsetzen <b>gegenüber</b></span></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="examples">
+            <div class="fr">La raison <u>prévalait sur</u> les émotions.</div>
+            <div class="de spoiler">Die Vernunft <u>setzte sich gegenüber</u> den Emotionen <u>durch</u>.</div>
+            <div class="fr wrong no-audio">La raison <u>prévalait contre</u> les émotions.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="fr rounded-border tag-lemma" data-lemma="enquêter">enquêter sur</span> <small>(#3811)</small></td>
+        <td><span class="de">ermitteln <b>in</b></span></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="examples">
+            <div class="fr">La police <u>enquête sur</u> cette affaire.</div>
+            <div class="de spoiler">Die Polizei <u>ermittelt in</u> dieser Angelegenheit.</div>
+            <div class="fr wrong no-audio">La police <u>enquête dans</u> cette affaire.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="fr rounded-border tag-lemma" data-lemma="venger">se venger sur</span> <small>(#4656)</small></td>
+        <td><span class="de">sich rächen <b>an</b></span></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="examples">
+            <div class="fr">Il s'est <u>vengé sur</u> son ennemi.</div>
+            <div class="de spoiler">Er hat sich <u>an</u> seinem Feind <u>gerächt</u>.</div>
+            <div class="fr wrong no-audio">Il s'est <u>vengé à</u> son ennemi.</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="fr rounded-border tag-lemma" data-lemma="influer">influer sur</span> <small>(#4690)</small></td>
+        <td><span class="de">beeinflussen</span></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="examples">
+            <div class="fr">Le climat <u>influe sur</u> la santé.</div>
+            <div class="de spoiler">Das Klima beeinflusst die Gesundheit.</div>
+            <div class="fr wrong no-audio">Le climat <u>influe</u> la santé.</div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_16_03" title="Modale Präpositionen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="A1/A2">Modale Präpositionen</div>
+<div class="section-content">
+  <p>Modale Präpositionen beschreiben die Art und Weise eines Geschehens und erklären die Umstände einer Handlung.</p>
+
+  <h3><span class="fr tag-lemma rounded-border" data-level="A1">à</span>: <span class="de">um, an, in</span></h3>
+  <p>Drückt aus:</p>
+  <ul>
+    <li>Zweck</li>
+    <div class="examples">
+      <div class="fr">Voici une tasse <u>à</u> café.</div>
+      <div class="de spoiler">Hier ist eine <u>Kaffeetasse</u>.</div>
+    </div>
+    <li>Art und Weise</li>
+    <div class="examples">
+      <div class="fr">Les enfants dessinent <u>au</u> feutre.</div>
+      <div class="de spoiler">Die Kinder zeichnen <u>mit</u> Filzstiften.</div>
+    </div>
+    <li>Preisangabe</li>
+    <div class="examples">
+      <div class="fr">Ces pommes sont <u>à</u> deux euros.</div>
+      <div class="de spoiler">Diese Äpfel <u>kosten</u> zwei Euro.</div>
+    </div>
+    <li>Fortbewegungsart</li>
+    <div class="examples">
+      <div class="fr">Nous allons <u>à</u> moto/<u>à</u> cheval au parc.</div>
+      <div class="de spoiler">Wir fahren <u>mit dem</u> Motorrad/reiten zum Park.</div>
+    </div>
+    <li>Entfernung</li>
+    <div class="examples">
+      <div class="fr">La plage est <u>à</u> cinq minutes d'ici.</div>
+      <div class="de spoiler">Der Strand ist fünf Minuten von hier <u>entfernt</u>.</div>
+    </div>
+  </ul>
+
+  <h3><span class="fr tag-lemma rounded-border" data-level="A1">avec</span>: <span class="de">mit</span></h3>
+  <p>Beschreibt Mittel oder Werkzeug:</p>
+  <div class="examples">
+    <div class="fr">Elle coupe le pain <u>avec</u> un couteau.</div>
+    <div class="de spoiler">Sie schneidet das Brot <u>mit</u> einem Messer.</div>
+  </div>
+
+  <h3><span class="fr tag-lemma rounded-border" data-level="A1">de</span>: <span class="de">von, aus</span></h3>
+  <p>Drückt aus:</p>
+  <ul>
+    <li>Körperteil</li>
+    <div class="examples">
+      <div class="fr">Le chien remue <u>de</u> la queue.</div>
+      <div class="de spoiler">Der Hund wedelt <u>mit dem</u> Schwanz.</div>
+    </div>
+    <li>Materialangabe</li>
+    <div class="examples">
+      <div class="fr">Cette table est faite <u>de</u> verre.</div>
+      <div class="de spoiler">Dieser Tisch ist <u>aus</u> Glas gemacht.</div>
+    </div>
+    <li>Ursache</li>
+    <div class="examples">
+      <div class="fr">Les enfants sautent <u>de</u> joie.</div>
+      <div class="de spoiler">Die Kinder springen <u>vor</u> Freude.</div>
+    </div>
+    <li>Mengenangabe</li>
+    <div class="examples">
+      <div class="fr">J'ai besoin d'un kilo <u>de</u> farine.</div>
+      <div class="de spoiler">Ich brauche ein Kilo Mehl.</div>
+    </div>
+  </ul>
+
+  <h3><span class="fr tag-lemma rounded-border" data-level="A1">en</span>: <span class="de">in, aus</span></h3>
+  <p>Bezeichnet:</p>
+  <ul>
+    <li>Fortbewegung mit einem Transportmittel</li>
+    <div class="examples">
+      <div class="fr">Nous voyageons <u>en</u> train.</div>
+      <div class="de spoiler">Wir reisen <u>mit dem</u> Zug.</div>
+    </div>
+    <li>Materialangabe</li>
+    <div class="examples">
+      <div class="fr">Elle porte un collier <u>en</u> argent.</div>
+      <div class="de spoiler">Sie trägt eine <u>silberne</u> Halskette.</div>
+    </div>
+  </ul>
+
+  <h3><span class="fr tag-lemma rounded-border" data-level="B1">par</span>: <span class="de">mit, durch, aus, pro</span></h3>
+  <p>Drückt aus:</p>
+  <ul>
+    <li>Mittel</li>
+    <div class="examples">
+      <div class="fr">Le message a été envoyé <u>par</u> e-mail.</div>
+      <div class="de spoiler">Die Nachricht wurde <u>per</u> E-Mail gesendet.</div>
+    </div>
+    <li>Urheberbezeichnung</li>
+    <div class="examples">
+      <div class="fr">Nous avons été informés <u>par</u> la radio.</div>
+      <div class="de spoiler">Wir wurden <u>durch</u> das Radio informiert.</div>
+    </div>
+    <li>Beweggrund</li>
+    <div class="examples">
+      <div class="fr">Elle a menti <u>par</u> jalousie.</div>
+      <div class="de spoiler">Sie hat <u>aus</u> Eifersucht gelogen.</div>
+    </div>
+    <li>Verteilung</li>
+    <div class="examples">
+      <div class="fr">Le loyer est de 500 € <u>par</u> mois.</div>
+      <div class="de spoiler">Die Miete beträgt 500€ <u>pro</u> Monat.</div>
+    </div>
+  </ul>
+
+  <h3><span class="fr tag-lemma rounded-border" data-level="A2">pour</span>: <span class="de">für</span></h3>
+  <p>Drückt aus:</p>
+  <ul>
+    <li>Zweck</li>
+    <div class="examples">
+      <div class="fr">Elle étudie <u>pour</u> devenir médecin.</div>
+      <div class="de spoiler">Sie studiert, <u>um</u> Ärztin zu werden.</div>
+    </div>
+    <li>Preisangabe</li>
+    <div class="examples">
+      <div class="fr">J'ai acheté ces chaussures <u>pour</u> 50 €.</div>
+      <div class="de spoiler">Ich habe diese Schuhe <u>für</u> 50€ gekauft.</div>
+    </div>
+  </ul>
+
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

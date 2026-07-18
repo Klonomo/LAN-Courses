@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_10_01" title="Présent">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="A1">Présent</div>
+<div class="section-content">
+  <p>Das <b>présent</b> (Präsens) ist eine einfache Zeitform des Indikativs. Es beschreibt, ähnlich wie im Deutschen, gegenwärtige Ereignisse und Handlungen, die zum Sprechzeitpunkt stattfinden, sowie Gewohnheiten und allgemeine Tatsachen.</p>
+
+  <table class="section-conjugation-table">
+    <tr>
+      <td>
+        <span class="full">je</span>
+        <span class="elision">j’</span>
+        <span class="reflexive full">je me</span>
+        <span class="reflexive elision">je m’</span>
+      </td>
+      <td data-tense="P"></td>
+    </tr>
+    <tr>
+      <td>
+        <span>tu</span>
+        <span class="reflexive full">tu te</span>
+        <span class="reflexive elision">tu t’</span>
+      </td>
+      <td data-tense="P"></td>
+    </tr>
+    <tr>
+      <td>
+        <span>il</span>
+        <span class="reflexive full">il se</span>
+        <span class="reflexive elision">il s’</span>
+      </td>
+      <td data-tense="P"></td>
+    </tr>
+    <tr>
+      <td>
+        <span>nous</span>
+        <span class="reflexive">nous nous</span>
+      </td>
+      <td data-tense="P"></td>
+    </tr>
+    <tr>
+      <td>
+        <span>vous</span>
+        <span class="reflexive">vous vous</span>
+      </td>
+      <td data-tense="P"></td>
+    </tr>
+    <tr>
+      <td>
+        <span>ils</span>
+        <span class="reflexive full">ils se</span>
+        <span class="reflexive elision">ils s’</span>
+      </td>
+      <td data-tense="P"></td>
+    </tr>
+  </table>
+
+  <p>Das Präsens beschreibt ein Ereignis, das zum Sprechzeitpunkt stattfindet.</p>
+  <div class="examples">
+    <div class="fr">Sophie et Lucas <u>préparent</u> le dîner.</div>
+    <div class="de spoiler">Sophie und Lucas bereiten das Abendessen zu.</div>
+  </div>
+
+  <p>Mit <span class="fr">depuis</span> (seit) kann das Präsens eine Handlung ausdrücken, die in der Vergangenheit begonnen hat und noch andauert.</p>
+  <div class="examples">
+    <div class="fr">Emma <u>étudie</u> le français depuis deux ans.</div>
+    <div class="de spoiler">Emma lernt seit zwei Jahren Französisch.</div>
+  </div>
+
+  <p>Es kann auch ein Ereignis in der nahen Zukunft beschreiben.</p>
+  <div class="examples">
+    <div class="fr">Nous <u>commençons</u> notre nouveau projet la semaine prochaine.</div>
+    <div class="de spoiler">Wir beginnen nächste Woche mit unserem neuen Projekt.</div>
+  </div>
+
+  <p>Das Präsens wird für Gewohnheiten, allgemeine Erkenntnisse und in Sprichwörtern verwendet.</p>
+  <div class="examples">
+    <div class="fr">Les Martin <u>font</u> du sport tous les weekends.</div>
+    <div class="de spoiler">Die Martins treiben jedes Wochenende Sport.</div>
+    <div class="fr">La patience <u>est</u> une vertu.</div>
+    <div class="de spoiler">Geduld ist eine Tugend.</div>
+  </div>
+
+  <p>Nach <a grammar="Bedingungssätze mit si"><span class="fr">si</span></a> (wenn) drückt das Präsens eine realisierbare Bedingung oder Hypothese aus.</p>
+  <div class="examples">
+    <div class="fr">Si nous <u>prenons</u> le train de 8h, nous arriverons à temps pour la réunion.</div>
+    <div class="de spoiler">Wenn wir den Zug um 8 Uhr nehmen, kommen wir rechtzeitig zum Meeting an.</div>
+  </div>
+
+  <p>In Erzählungen kann das Präsens verwendet werden, um vergangene Ereignisse lebendiger darzustellen (historisches Präsens).</p>
+  <div class="examples">
+    <div class="fr">Je regardais la télévision. Soudain, on <u>sonne</u> à la porte.</div>
+    <div class="de spoiler">Ich schaute fern. Plötzlich klingelt es an der Tür.</div>
+  </div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_15_02" title="Weitere Bedingungssätze">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="B2/C1">Weitere Bedingungssätze</div>
+<div class="section-content">
+  <p>Neben der Konjunktion <b>si</b> gibt es weitere Möglichkeiten, Bedingungen im Französischen auszudrücken.</p>
+
+  <h3>Mit einer Präposition</h3>
+  <ul>
+    <li><a grammar="Präpositionen">Präposition</a> + Substantiv anstelle des <b>si</b>&#8209;Satzes:</li>
+    <div class="example">
+      <div class="fr alternative"><u>S'il n'y a pas de contretemps</u>, nous arriverons samedi matin.</div>
+      <div class="fr"><u>À moins d’un contretemps</u>, nous arriverons samedi matin.</div>
+      <div class="de spoiler">Falls nichts dazwischenkommt, werden wir Samstagvormittag ankommen.</div>
+    </div>
+    <li>Präposition + <a grammar="Der Infinitiv">Infinitiv</a> anstelle des <b>si</b>&#8209;Satzes:</li>
+    <div class="example">
+      <div class="fr alternative"><u>Si nous n'avons pas de contretemps</u>, nous arriverons samedi matin.</div>
+      <div class="fr"><u>À moins d’avoir</u> un contretemps, nous arriverons samedi matin.</div>
+      <div class="de spoiler">Falls nichts dazwischenkommt, werden wir Samstagvormittag ankommen.</div>
+    </div>
+  </ul>
+  <p></p>
+
+  <h3>Mit dem <i><a grammar="Gérondif">gérondif</a></i></h3>
+  <div class="example">
+    <div class="fr alternative"><u>Si vous utilisez</u> cette crème, vous protégerez votre peau contre les effets de la pollution.</div>
+    <div class="fr"><u>En utilisant</u> cette crème, vous protégerez votre peau contre les effets de la pollution.</div>
+    <div class="de spoiler">Bei Anwendung dieser Creme können Sie Ihre Haut gegen schädliche Umwelteinflüsse schützen.</div>
+  </div>
+
+  <h3>Mit dem <i>participe passé</i> oder einem Adjektiv</h3>
+  <ul>
+    <li>Mit dem <i><a grammar="Participe passé">participe passé</a></i>:</li>
+    <div class="example">
+      <div class="fr alternative"><u>Si elle est</u> bien habillée, Sophie a vraiment beaucoup d’allure.</div>
+      <div class="fr">Bien <u>habillée</u>, Sophie a vraiment beaucoup d’allure.</div>
+      <div class="de spoiler">Wenn sie gut angezogen ist, sieht Sophie echt klasse aus.</div>
+    </div>
+    <li>Mit einem Adjektiv:</li>
+    <div class="example">
+      <div class="fr alternative"><u>S'il avait été</u> plus jeune, il se serait lancé dans l’aventure.</div>
+      <div class="fr">Plus <u>jeune</u>, il se serait lancé dans l’aventure.</div>
+      <div class="de spoiler">Wenn er jünger gewesen wäre, hätte er sich in das Abenteuer gestürzt.</div>
+    </div>
+  </ul>
+
+  <h3>Mit dem <i><a grammar="Conditionnel">conditionnel</a></i></h3>
+  <div class="example">
+    <div class="fr alternative"><u>Si vous n'aviez rien dit</u>, il ne se serait aperçu de rien.</div>
+    <div class="fr">Vous n’<u>auriez</u> rien dit, il ne se <u>serait</u> aperçu de rien.</div>
+    <div class="de spoiler">Hätten Sie nichts gesagt, hätte er nichts bemerkt.</div>
+  </div>
+
+  <p class="attention">Hauptsatz und Nebensatz müssen dasselbe Subjekt haben.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

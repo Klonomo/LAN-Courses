@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_18_01" title="Verneinungswörter">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="A2">Verneinungswörter</div>
+<div class="section-content">
+  <p>Im Französischen besteht die Verneinung in der Regel aus zwei Teilen: <span class="fr tag-lemma rounded-border">ne</span> (oder <span class="fr">n’</span> vor Vokal oder <a grammar="Das h aspiré">stummem h</a>) und einem zweiten Verneinungswort. Dies unterscheidet sich vom Deutschen, wo die Verneinung meist nur aus einem Wort besteht.</p>
+
+  <table>
+    <tr>
+      <td class="fr">ne ... <span class="tag-lemma">pas</span></td>
+      <td class="de">nicht</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... <span class="tag-lemma">plus</span></td>
+      <td class="de">nicht mehr</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... <span class="tag-lemma">jamais</span></td>
+      <td class="de">nie</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... plus jamais</td>
+      <td class="de">nie mehr</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... <span class="tag-lemma">rien</span></td>
+      <td class="de">nichts</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... plus rien</td>
+      <td class="de">nichts mehr</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... <span class="tag-lemma">personne</span></td>
+      <td class="de">niemand</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... plus personne</td>
+      <td class="de">niemand mehr</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... <span class="tag-lemma">guère</span></td>
+      <td class="de">kaum</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... pas <span class="tag-lemma">encore</span></td>
+      <td class="de">noch nicht</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... <span class="tag-lemma">toujours</span> pas</td>
+      <td class="de">immer noch nicht</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... pas toujours</td>
+      <td class="de">nicht immer</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... <span class="tag-lemma">ni</span> ... <span class="tag-lemma">ni</span></td>
+      <td class="de">weder ... noch</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... pas ... ni</td>
+      <td class="de">weder ... noch</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... pas ... du tout</td>
+      <td class="de">überhaupt nicht</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... <span class="tag-lemma" data-lemma="nul">nulle</span> part</td>
+      <td class="de">nirgends</td>
+    </tr>
+    <tr>
+      <td class="fr">ne ... <span class="tag-lemma">point</span></td>
+      <td class="de">gar nicht</td>
+    </tr>
+  </table>
+
+  <p>Beispiele für die Anwendung:</p>
+
+  <div class="examples">
+    <div class="fr">Marie <u>n</u>’aime <u>pas</u> le café.</div>
+    <div class="de spoiler">Marie mag <u>keinen</u> Kaffee.</div>
+    <div class="fr">Nous <u>ne</u> voyons <u>plus</u> nos voisins.</div>
+    <div class="de spoiler">Wir sehen unsere Nachbarn <u>nicht mehr</u>.</div>
+    <div class="fr">Ils <u>ne</u> vont <u>jamais</u> au cinéma.</div>
+    <div class="de spoiler">Sie gehen <u>nie</u> ins Kino.</div>
+    <div class="fr">Je <u>ne</u> connais <u>personne</u> ici.</div>
+    <div class="de spoiler">Ich kenne hier <u>niemanden</u>.</div>
+  </div>
+
+  <p class="tip">In der Umgangssprache wird das <span class="fr">ne</span> oft weggelassen, in der Schriftsprache sollte es jedoch immer verwendet werden:</p>
+
+  <div class="examples">
+    <div class="fr">Je (<u>ne</u>) sais <u>pas</u>.</div>
+    <div class="de spoiler">Ich weiß <u>nicht</u>.</div>
+  </div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

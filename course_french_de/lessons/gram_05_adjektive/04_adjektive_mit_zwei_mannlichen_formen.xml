@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_05_04" title="Adjektive mit zwei männlichen Formen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="A2">Adjektive mit zwei männlichen Formen</div>
+<div class="section-content">
+  <p>Die drei Adjektive <span class="fr">beau</span> (<span class="de">schön</span>), <span class="fr">nouveau</span> (<span class="de">neu</span>) und <span class="fr">vieux</span> (<span class="de">alt</span>) haben im männlichen Singular zwei Formen. Die Form hängt davon ab, ob das folgende Substantiv mit einem Konsonanten oder mit einem Vokal oder <a grammar="Das h aspiré">stummen h</a> beginnt.</p>
+
+  <h3><span class="fr tag-lemma">beau</span> (<span class="de">schön</span>)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>männlich</th>
+        <th>weiblich</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Singular</b></td>
+        <td>
+          <div>
+            <div class="fr force-audio">un <u>beau</u> parc</div>
+            <div class="de spoiler">ein <u>schöner</u> Park</div>
+            <div class="fr force-audio">un <u class="warning">bel</u> arbre</div>
+            <div class="de spoiler">ein <u>schöner</u> Baum</div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <div class="fr force-audio">une <u>belle</u> fleur</div>
+            <div class="de spoiler">eine <u>schöne</u> Blume</div>
+            <div class="fr force-audio">une <u>belle</u> histoire</div>
+            <div class="de spoiler">eine <u>schöne</u> Geschichte</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Plural</b></td>
+        <td>
+          <div>
+            <div class="fr force-audio">de(s) <u>beaux</u> parcs</div>
+            <div class="de spoiler"><u>schöne</u> Parks</div>
+            <div class="fr force-audio">de(s) <u>beaux</u> arbres</div>
+            <div class="de spoiler"><u>schöne</u> Bäume</div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <div class="fr force-audio">de(s) <u>belles</u> fleurs</div>
+            <div class="de spoiler"><u>schöne</u> Blumen</div>
+            <div class="fr force-audio">de(s) <u>belles</u> histoires</div>
+            <div class="de spoiler"><u>schöne</u> Geschichten</div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3><span class="fr tag-lemma">nouveau</span> (<span class="de">neu</span>)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>männlich</th>
+        <th>weiblich</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Singular</b></td>
+        <td>
+          <div>
+            <div class="fr force-audio">un <u>nouveau</u> livre</div>
+            <div class="de spoiler">ein <u>neues</u> Buch</div>
+            <div class="fr force-audio">un <u class="warning">nouvel</u> appartement</div>
+            <div class="de spoiler">eine <u>neue</u> Wohnung</div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <div class="fr force-audio">une <u>nouvelle</u> chanson</div>
+            <div class="de spoiler">ein <u>neues</u> Lied</div>
+            <div class="fr force-audio">une <u>nouvelle</u> idée</div>
+            <div class="de spoiler">eine <u>neue</u> Idee</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Plural</b></td>
+        <td>
+          <div>
+            <div class="fr force-audio">des <u>nouveaux</u> livres</div>
+            <div class="de spoiler"><u>neue</u> Bücher</div>
+            <div class="fr force-audio">des <u>nouveaux</u> appartements</div>
+            <div class="de spoiler"><u>neue</u> Wohnungen</div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <div class="fr force-audio">des <u>nouvelles</u> chansons</div>
+            <div class="de spoiler"><u>neue</u> Lieder</div>
+            <div class="fr force-audio">des <u>nouvelles</u> idées</div>
+            <div class="de spoiler"><u>neue</u> Ideen</div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3><span class="fr tag-lemma">vieux</span> (<span class="de">alt</span>)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>männlich</th>
+        <th>weiblich</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Singular</b></td>
+        <td>
+          <div>
+            <div class="fr force-audio">un <u>vieux</u> pont</div>
+            <div class="de spoiler">eine <u>alte</u> Brücke</div>
+            <div class="fr force-audio">un <u class="warning">vieil</u> ami</div>
+            <div class="de spoiler">ein <u>alter</u> Freund</div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <div class="fr force-audio">une <u>vieille</u> dame</div>
+            <div class="de spoiler">eine <u>alte</u> Dame</div>
+            <div class="fr force-audio">une <u>vieille</u> habitude</div>
+            <div class="de spoiler">eine <u>alte</u> Gewohnheit</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Plural</b></td>
+        <td>
+          <div>
+            <div class="fr force-audio">de(s) <u>vieux</u> ponts</div>
+            <div class="de spoiler"><u>alte</u> Brücken</div>
+            <div class="fr force-audio">de(s) <u>vieux</u> amis</div>
+            <div class="de spoiler"><u>alte</u> Freunde</div>
+          </div>
+        </td>
+        <td>
+          <div>
+            <div class="fr force-audio">de(s) <u>vieilles</u> dames</div>
+            <div class="de spoiler"><u>alte</u> Damen</div>
+            <div class="fr force-audio">de(s) <u>vieilles</u> habitudes</div>
+            <div class="de spoiler"><u>alte</u> Gewohnheiten</div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Weitere Fälle</h3>
+  <p>Auch die Adjektive <span class="fr tag-lemma">fou</span> (<span class="de">verrückt</span>) und <span class="fr tag-lemma">mou</span> (<span class="de">weich</span>) bilden vor Vokalen eine zweite männliche Singularform (<span class="fr">fol</span>, <span class="fr">mol</span>). Da diese Adjektive üblicherweise <a grammar="Die Stellung des Adjektivs">nachgestellt werden</a>, kommen die Formen nur in festen Wendungen vor:</p>
+  <div>
+    <div class="fr force-audio">un <u>fol</u> espoir</div>
+    <div class="de spoiler">eine <u>vergebliche</u> Hoffnung</div>
+    <div class="fr force-audio">un <u>mol</u> abandon</div>
+    <div class="de spoiler">ein <u>schwaches</u> Nachgeben</div>
+  </div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

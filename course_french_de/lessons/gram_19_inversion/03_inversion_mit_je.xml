@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_19_03" title="Inversion mit je">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="B2">Inversion mit <i>je</i></div>
+<div class="section-content">
+  <p>Die Inversion mit <span class="fr">je</span> ist komplizierter als mit anderen <a grammar="Die verbundenen Personalpronomen">Subjektpronomen</a>. Sie ist sehr formell und daher selten – man sollte sie zwar erkennen können, muss sie aber nicht aktiv verwenden.</p>
+
+  <h3>Regelmäßige Verben auf &#8209;er</h3>
+  <p>Bei der <span class="fr">je</span>&#8209;Form <a grammar="Die Verben auf -er">regelmäßiger &#8209;er-Verben</a> gibt es eine Besonderheit: Das stumme &#8209;e am Ende muss bei der Inversion ausgesprochen werden. Dies wird durch einen Akzent angezeigt:</p>
+
+  <div class="examples">
+    <div class="fr force-audio">je pense → <u>pensé-je</u> / <u>pensè-je</u></div>
+    <div class="fr force-audio">je parle → <u>parlé-je</u> / <u>parlè-je</u></div>
+  </div>
+
+  <p class="tip">Traditionell wurde der <a grammar="Der Akzent">accent aigu</a> (é) verwendet. Seit 1990 ist auch der accent grave (è) erlaubt, da er die tatsächliche Aussprache <span class="ipa">\ɛ\</span> besser wiedergibt. Beide Schreibweisen sind heute korrekt.</p>
+
+  <div class="examples">
+    <div class="fr"><u>Pensé-je</u> vraiment qu'il chante bien ?</div>
+    <div class="de spoiler">Denke ich wirklich, dass er gut singt?</div>
+    <div class="fr"><u>Parlè-je</u> trop fort ?</div>
+    <div class="de spoiler">Spreche ich zu laut?</div>
+  </div>
+
+  <p class="attention">Wichtig für die Aussprache: Das &#8209;e von <span class="fr">je</span> ist stumm, sodass man effektiv <span class="ipa">\pãsɛʒ\</span> und <span class="ipa">\parlɛʒ\</span> ausspricht.</p>
+
+  <h3>Andere Verben</h3>
+  <p>Bei Verben, deren <span class="fr">je</span>&#8209;Form nicht auf &#8209;e endet, ist die Inversion nur mit 10 sehr häufigen Verben möglich:</p>
+
+  <table>
+    <tr>
+      <th>Verb</th>
+      <th>Bedeutung</th>
+      <th>Inversion</th>
+    </tr>
+    <tr>
+      <td>aller</td>
+      <td>gehen</td>
+      <td><u>vais-je</u></td>
+    </tr>
+    <tr>
+      <td>avoir</td>
+      <td>haben</td>
+      <td><u>ai-je</u></td>
+    </tr>
+    <tr>
+      <td>devoir</td>
+      <td>müssen</td>
+      <td><u>dois-je</u></td>
+    </tr>
+    <tr>
+      <td>dire</td>
+      <td>sagen</td>
+      <td><u>dis-je</u></td>
+    </tr>
+    <tr>
+      <td>être</td>
+      <td>sein</td>
+      <td><u>suis-je</u></td>
+    </tr>
+    <tr>
+      <td>faire</td>
+      <td>machen</td>
+      <td><u>fais-je</u></td>
+    </tr>
+    <tr>
+      <td>pouvoir</td>
+      <td>können</td>
+      <td><u>puis-je</u></td>
+    </tr>
+    <tr>
+      <td>savoir</td>
+      <td>wissen</td>
+      <td><u>sais-je</u></td>
+    </tr>
+    <tr>
+      <td>voir</td>
+      <td>sehen</td>
+      <td><u>vois-je</u></td>
+    </tr>
+    <tr>
+      <td>vouloir</td>
+      <td>wollen</td>
+      <td><u>veux-je</u></td>
+    </tr>
+  </table>
+
+  <div class="examples">
+    <div class="fr"><u>Ai-je</u> bien compris ?</div>
+    <div class="de spoiler">Habe ich das richtig verstanden?</div>
+    <div class="fr"><u>Dois-je</u> tout faire moi-même ?</div>
+    <div class="de spoiler">Muss ich alles selbst machen?</div>
+  </div>
+
+  <p class="tip">Besonderheit: <span class="fr">puis</span> ist eine spezielle Form von <span class="fr">pouvoir</span>, die heute nur noch in der Inversion mit <span class="fr">je</span> verwendet wird.</p>
+
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

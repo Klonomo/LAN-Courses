@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_gram_01_05" title="Satzzeichen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.examples { margin: 8px 0; padding: 8px 10px; background: #f4f4f4; border-radius: 6px; }
+.examples div { margin: 4px 0; }
+.fr { font-weight: 500; }
+.de { color: #555; font-style: italic; }
+.ipa { color: #777; font-size: 0.9em; margin-left: 6px; }
+.attention { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+h3 { margin-top: 18px; margin-bottom: 8px; font-size: 1.1em; }
+ul, ol { padding-left: 20px; }
+li { margin: 8px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+th { background: #f0f0f0; }
+.spoiler { display: block; }
+a { color: #1565c0; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="section-title" data-topic="B1">Satzzeichen</div>
+<div class="section-content">
+  <ul>
+    <li><b>Der Punkt (.)</b> steht am Ende eines Aussagesatzes und bei vielen Abkürzungen.
+      <div class="examples">
+        <div class="fr">Le train arrive<u>.</u></div>
+        <div class="de spoiler">Der Zug kommt an.</div>
+        <div class="fr">S.N.C.F.</div>
+        <div class="de spoiler">Nationale Gesellschaft der französischen Eisenbahnen</div>
+      </div>
+    </li>
+    <li><b>Das Komma (,)</b> trennt Satzteile voneinander. Kein Komma steht jedoch vor notwendigen <a grammar="Relativsätze">Relativsätzen</a> und um Nebensätze mit <span class="fr">que</span> einzuleiten.
+      <div class="examples">
+        <div class="fr">Pendant les vacances<u>,</u> nous sommes à la mer.</div>
+        <div class="de spoiler">In den Ferien sind wir am Meer.</div>
+        <div class="fr">Voilà le livre que je te donne.</div>
+        <div class="de spoiler">Hier ist das Buch, das ich dir gebe.</div>
+        <div class="fr">Je pense que tu as raison.</div>
+        <div class="de spoiler">Ich denke, dass du recht hast.</div>
+      </div>
+    </li>
+    <li><b>Das Fragezeichen (?)</b> steht am Ende einer Frage.
+      <div class="examples">
+        <div class="fr">Tu viens me voir<u> ?</u></div>
+        <div class="de spoiler">Besuchst du mich?</div>
+      </div>
+    </li>
+    <li><b>Das Ausrufezeichen (!)</b> folgt auf einen Ausruf oder Befehl.
+      <div class="examples">
+        <div class="fr">Au secours<u> !</u></div>
+        <div class="de spoiler">Zu Hilfe!</div>
+        <div class="fr">À votre santé<u> !</u></div>
+        <div class="de spoiler">Auf Ihr Wohl!</div>
+      </div>
+    </li>
+    <li><b>Die Anführungszeichen (« »)</b>, genannt Guillemets, werden für Zitate oder direkte Rede verwendet.
+      <div class="examples">
+        <div class="fr">On va dîner au <u>«</u> Cheval Blanc <u>»</u>.</div>
+        <div class="de spoiler">Wir essen im „Cheval Blanc“ zu Abend.</div>
+      </div>
+    </li>
+    <li><b>Der Gedankenstrich (–)</b> kennzeichnet in einem Dialog den Sprecherwechsel.
+      <div class="examples">
+        <div class="fr"><u>–</u> Tu prends du thé ?<br><u>–</u> Non, merci.</div>
+        <div class="de spoiler">– Nimmst du Tee?<br>– Nein, danke.</div>
+      </div>
+    </li>
+  </ul>
+  <p class="attention">Im Französischen steht vor ?, !, :, ; und den Guillemets (« ») ein schmales Leerzeichen.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>
