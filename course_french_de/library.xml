@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<library schemaVersion="1">
+    <course
+        id="course_french_de"
+        title="Französisch [DE]"
+        author="LearnAnythingNow Team"
+        lastUpdated="2026-07-07"
+        uuid="f47ac10b-58cc-4372-a567-0e02b2c3d479"
+        bannerImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+        flashcardDefinition="courses/course_french_de/flashcard_definition.xml"
+        vocabulary="courses/course_french_de/vocabulary.xml"
+        vocabularyListMap="courses/course_french_de/vocabulary_list_map.xml">
+        <domain id="domain_a1" title="A1">
+            <chapter id="chapter_bienvenue" title="👋 BIENVENUE!">
+                <section id="section_bienvenue" title="Vokabeln" exp="140" />
+            </chapter>
+            <chapter id="chapter_1" title="🤝 1 // PREMIÈRES RENCONTRES">
+                <section id="section_1" title="Vokabeln" exp="306" />
+            </chapter>
+            <chapter id="chapter_2" title="🏨 2 // A L'HÔTEL">
+                <section id="section_2" title="Vokabeln" exp="328" />
+            </chapter>
+            <chapter id="chapter_3" title="🌊 3 // J'ADORE LA MER">
+                <section id="section_3" title="Vokabeln" exp="314" />
+            </chapter>
+            <chapter id="chapter_4" title="🏙️ 4 // EN VILLE">
+                <section id="section_4" title="Vokabeln" exp="284" />
+            </chapter>
+            <chapter id="chapter_5" title="🛍️ 5 // QU'EST-CE QU'ON ACHÈTE ?">
+                <section id="section_5" title="Vokabeln" exp="328" />
+            </chapter>
+            <chapter id="chapter_6" title="🎯 6 // QU'EST-CE QU'ON PEUT FAIRE ?">
+                <section id="section_6" title="Vokabeln" exp="240" />
+            </chapter>
+            <chapter id="chapter_7" title="📅 7 // LA VIE DE TOUS LES JOURS">
+                <section id="section_7" title="Vokabeln" exp="316" />
+            </chapter>
+            <chapter id="chapter_8" title="✈️ 8 // BON VOYAGE !">
+                <section id="section_8" title="Vokabeln" exp="414" />
+            </chapter>
+            <chapter id="chapter_9" title="🍽️ 9 // A TABLE !">
+                <section id="section_9" title="Vokabeln" exp="436" />
+            </chapter>
+            <chapter id="chapter_10" title="🌻 10 // AU JARDIN">
+                <section id="section_10" title="Vokabeln" exp="346" />
+            </chapter>
+            <chapter id="chapter_11" title="🎭 11 // ON SORT">
+                <section id="section_11" title="Vokabeln" exp="280" />
+            </chapter>
+            <chapter id="chapter_12" title="🏡 12 // CHEZ NOUS, CHEZ VOUS">
+                <section id="section_12" title="Vokabeln" exp="396" />
+            </chapter>
+        </domain>
+        <domain id="domain_a2" title="A2">
+        </domain>
+        <domain id="domain_top5000" title="Top5000">
+            <chapter id="chapter_top_0001" title="🥇 Top 1-1000">
+                <section id="section_top_0001" title="Vokabeln" exp="2000" />
+            </chapter>
+            <chapter id="chapter_top_0002" title="🥈 Top 1001-2000">
+                <section id="section_top_0002" title="Vokabeln" exp="2000" />
+            </chapter>
+            <chapter id="chapter_top_0003" title="🥉 Top 2001-3000">
+                <section id="section_top_0003" title="Vokabeln" exp="2000" />
+            </chapter>
+            <chapter id="chapter_top_0004" title="📗 Top 3001-4000">
+                <section id="section_top_0004" title="Vokabeln" exp="2000" />
+            </chapter>
+            <chapter id="chapter_top_0005" title="📘 Top 4001-5000">
+                <section id="section_top_0005" title="Vokabeln" exp="2000" />
+            </chapter>
+            <chapter id="chapter_vok_familie" title="👪 Familie">
+                <section id="section_vok_familie" title="Vokabeln" exp="70" />
+            </chapter>
+            <chapter id="chapter_vok_status_und_beziehungen" title="💞 Status und Beziehungen">
+                <section id="section_vok_status_und_beziehungen" title="Vokabeln" exp="216" />
+            </chapter>
+            <chapter id="chapter_vok_korper_und_gesundheit" title="🩺 Körper und Gesundheit">
+                <section id="section_vok_korper_und_gesundheit" title="Vokabeln" exp="238" />
+            </chapter>
+            <chapter id="chapter_vok_emotionen_und_charakter" title="😊 Emotionen und Charakter">
+                <section id="section_vok_emotionen_und_charakter" title="Vokabeln" exp="436" />
+            </chapter>
+            <chapter id="chapter_vok_haus_und_wohnung" title="🏠 Haus und Wohnung">
+                <section id="section_vok_haus_und_wohnung" title="Vokabeln" exp="132" />
+            </chapter>
+            <chapter id="chapter_vok_essen_und_trinken" title="🍽️ Essen und Trinken">
+                <section id="section_vok_essen_und_trinken" title="Vokabeln" exp="168" />
+            </chapter>
+            <chapter id="chapter_vok_kleidung" title="👕 Kleidung">
+                <section id="section_vok_kleidung" title="Vokabeln" exp="50" />
+            </chapter>
+            <chapter id="chapter_vok_wetter" title="🌤️ Wetter">
+                <section id="section_vok_wetter" title="Vokabeln" exp="66" />
+            </chapter>
+            <chapter id="chapter_vok_stadt_und_reise" title="🗺️ Stadt und Reise">
+                <section id="section_vok_stadt_und_reise" title="Vokabeln" exp="168" />
+            </chapter>
+            <chapter id="chapter_vok_transport" title="🚌 Transport">
+                <section id="section_vok_transport" title="Vokabeln" exp="144" />
+            </chapter>
+            <chapter id="chapter_vok_natur" title="🌿 Natur">
+                <section id="section_vok_natur" title="Vokabeln" exp="188" />
+            </chapter>
+            <chapter id="chapter_vok_tiere" title="🐾 Tiere">
+                <section id="section_vok_tiere" title="Vokabeln" exp="50" />
+            </chapter>
+            <chapter id="chapter_vok_gesellschaft" title="👥 Gesellschaft">
+                <section id="section_vok_gesellschaft" title="Vokabeln" exp="346" />
+            </chapter>
+            <chapter id="chapter_vok_berufe" title="💼 Berufe">
+                <section id="section_vok_berufe" title="Vokabeln" exp="266" />
+            </chapter>
+            <chapter id="chapter_vok_arbeit_und_wirtschaft" title="💰 Arbeit und Wirtschaft">
+                <section id="section_vok_arbeit_und_wirtschaft" title="Vokabeln" exp="266" />
+            </chapter>
+            <chapter id="chapter_vok_bildung_und_wissenschaft" title="🎓 Bildung und Wissenschaft">
+                <section id="section_vok_bildung_und_wissenschaft" title="Vokabeln" exp="226" />
+            </chapter>
+            <chapter id="chapter_vok_recht" title="⚖️ Recht">
+                <section id="section_vok_recht" title="Vokabeln" exp="242" />
+            </chapter>
+            <chapter id="chapter_vok_nationalitaten" title="🌍 Nationalitäten">
+                <section id="section_vok_nationalitaten" title="Vokabeln" exp="102" />
+            </chapter>
+            <chapter id="chapter_vok_sport" title="⚽ Sport">
+                <section id="section_vok_sport" title="Vokabeln" exp="84" />
+            </chapter>
+            <chapter id="chapter_vok_kunst_und_kultur" title="🎨 Kunst und Kultur">
+                <section id="section_vok_kunst_und_kultur" title="Vokabeln" exp="76" />
+            </chapter>
+            <chapter id="chapter_vok_technologie_und_medien" title="💻 Technologie und Medien">
+                <section id="section_vok_technologie_und_medien" title="Vokabeln" exp="170" />
+            </chapter>
+            <chapter id="chapter_vok_farben" title="🌈 Farben">
+                <section id="section_vok_farben" title="Vokabeln" exp="50" />
+            </chapter>
+            <chapter id="chapter_vok_materialien" title="🧱 Materialien">
+                <section id="section_vok_materialien" title="Vokabeln" exp="60" />
+            </chapter>
+            <chapter id="chapter_vok_gegensatze" title="↔️ Gegensätze">
+                <section id="section_vok_gegensatze" title="Vokabeln" exp="296" />
+            </chapter>
+            <chapter id="chapter_vok_zeit" title="⏰ Zeit">
+                <section id="section_vok_zeit" title="Vokabeln" exp="186" />
+            </chapter>
+            <chapter id="chapter_vok_bewegungsverben" title="🏃 Bewegungsverben">
+                <section id="section_vok_bewegungsverben" title="Vokabeln" exp="188" />
+            </chapter>
+            <chapter id="chapter_vok_kommunikationsverben" title="💬 Kommunikationsverben">
+                <section id="section_vok_kommunikationsverben" title="Vokabeln" exp="320" />
+            </chapter>
+            <chapter id="chapter_vok_falsche_freunde" title="⚠️ Falsche Freunde">
+                <section id="section_vok_falsche_freunde" title="Vokabeln" exp="192" />
+            </chapter>
+
+            <chapter id="chapter_grammatik" title="📚 Grammatik">
+                <subchapter id="subchapter_gram_01_orthografie" title="✍️ 01 Orthografie">
+                    <section id="section_gram_01_01" title="Das Alphabet" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_01_orthografie/01_das_alphabet.xml" />
+                    <section id="section_gram_01_02" title="Der Akzent" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_01_orthografie/02_der_akzent.xml" />
+                    <section id="section_gram_01_03" title="Cedille, Apostroph und Trema" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_01_orthografie/03_cedille_apostroph_und_trema.xml" />
+                    <section id="section_gram_01_04" title="Groß- und Kleinschreibung" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_01_orthografie/04_gro_und_kleinschreibung.xml" />
+                    <section id="section_gram_01_05" title="Satzzeichen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_01_orthografie/05_satzzeichen.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_02_aussprache" title="🗣️ 02 Aussprache">
+                    <section id="section_gram_02_01" title="Die Aussprache" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_02_aussprache/01_die_aussprache.xml" />
+                    <section id="section_gram_02_02" title="Die Aussprache der Vokale" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_02_aussprache/02_die_aussprache_der_vokale.xml" />
+                    <section id="section_gram_02_03" title="Die Aussprache der Konsonanten" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_02_aussprache/03_die_aussprache_der_konsonanten.xml" />
+                    <section id="section_gram_02_04" title="Das h aspiré" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_02_aussprache/04_das_h_aspire.xml" />
+                    <section id="section_gram_02_05" title="Die Liaison" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_02_aussprache/05_die_liaison.xml" />
+                    <section id="section_gram_02_06" title="Die Aussprache von plus" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_02_aussprache/06_die_aussprache_von_plus.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_03_artikel" title="🔤 03 Artikel">
+                    <section id="section_gram_03_01" title="Der bestimmte Artikel (le, la)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_03_artikel/01_der_bestimmte_artikel_le_la.xml" />
+                    <section id="section_gram_03_02" title="Der unbestimmte Artikel (un, une)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_03_artikel/02_der_unbestimmte_artikel_un_une.xml" />
+                    <section id="section_gram_03_03" title="Der Teilungsartikel (de)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_03_artikel/03_der_teilungsartikel_de.xml" />
+                    <section id="section_gram_03_04" title="Artikel bei Redewendungen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_03_artikel/04_artikel_bei_redewendungen.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_04_substantive" title="📦 04 Substantive">
+                    <section id="section_gram_04_01" title="Das Geschlecht der Substantive" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_04_substantive/01_das_geschlecht_der_substantive.xml" />
+                    <section id="section_gram_04_02" title="Geschlechtsabhängige Wortendungen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_04_substantive/02_geschlechtsabhangige_wortendungen.xml" />
+                    <section id="section_gram_04_03" title="Der Plural der Substantive" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_04_substantive/03_der_plural_der_substantive.xml" />
+                    <section id="section_gram_04_04" title="Zusammengesetzte Substantive" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_04_substantive/04_zusammengesetzte_substantive.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_05_adjektive" title="✨ 05 Adjektive">
+                    <section id="section_gram_05_01" title="Die Stellung des Adjektivs" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_05_adjektive/01_die_stellung_des_adjektivs.xml" />
+                    <section id="section_gram_05_02" title="Adjektive im Plural" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_05_adjektive/02_adjektive_im_plural.xml" />
+                    <section id="section_gram_05_03" title="Adjektive in der Femininform" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_05_adjektive/03_adjektive_in_der_femininform.xml" />
+                    <section id="section_gram_05_04" title="Adjektive mit zwei männlichen Formen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_05_adjektive/04_adjektive_mit_zwei_mannlichen_formen.xml" />
+                    <section id="section_gram_05_05" title="Die Steigerung der Adjektive" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_05_adjektive/05_die_steigerung_der_adjektive.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_06_adverbien" title="⚡ 06 Adverbien">
+                    <section id="section_gram_06_01" title="Die Formen von Adverbien" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_06_adverbien/01_die_formen_von_adverbien.xml" />
+                    <section id="section_gram_06_02" title="Die Stellung der Adverbien" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_06_adverbien/02_die_stellung_der_adverbien.xml" />
+                    <section id="section_gram_06_03" title="Die Steigerung der Adverbien" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_06_adverbien/03_die_steigerung_der_adverbien.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_07_pronomen" title="👤 07 Pronomen">
+                    <section id="section_gram_07_01" title="Die verbundenen Personalpronomen (je, il)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/01_die_verbundenen_personalpronomen_je_il.xml" />
+                    <section id="section_gram_07_02" title="Die unverbundenen Personalpronomen (moi, lui)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/02_die_unverbundenen_personalpronomen_moi_lui.xml" />
+                    <section id="section_gram_07_03" title="Die direkten Objektpronomen (me, le)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/03_die_direkten_objektpronomen_me_le.xml" />
+                    <section id="section_gram_07_04" title="Die indirekten Objektpronomen (me, lui)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/04_die_indirekten_objektpronomen_me_lui.xml" />
+                    <section id="section_gram_07_05" title="Die Reflexivpronomen (me, se)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/05_die_reflexivpronomen_me_se.xml" />
+                    <section id="section_gram_07_06" title="Das Adverbialpronomen en" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/06_das_adverbialpronomen_en.xml" />
+                    <section id="section_gram_07_07" title="Das Adverbialpronomen y" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/07_das_adverbialpronomen_y.xml" />
+                    <section id="section_gram_07_08" title="Die Demonstrativpronomen (celui)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/08_die_demonstrativpronomen_celui.xml" />
+                    <section id="section_gram_07_09" title="Die Demonstrativbegleiter (ce, cette)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/09_die_demonstrativbegleiter_ce_cette.xml" />
+                    <section id="section_gram_07_10" title="Die unbestimmten Demonstrativpronomen (ceci)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/10_die_unbestimmten_demonstrativpronomen_ceci.xml" />
+                    <section id="section_gram_07_11" title="Die Possessivbegleiter (mon)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/11_die_possessivbegleiter_mon.xml" />
+                    <section id="section_gram_07_12" title="Die Possessivpronomen (mien)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/12_die_possessivpronomen_mien.xml" />
+                    <section id="section_gram_07_13" title="Die Indefinitbegleiter" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/13_die_indefinitbegleiter.xml" />
+                    <section id="section_gram_07_14" title="Die Indefinitpronomen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_07_pronomen/14_die_indefinitpronomen.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_08_fragen" title="❓ 08 Fragen">
+                    <section id="section_gram_08_01" title="Die drei Frageformen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_08_fragen/01_die_drei_frageformen.xml" />
+                    <section id="section_gram_08_02" title="Die Fragepronomen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_08_fragen/02_die_fragepronomen.xml" />
+                    <section id="section_gram_08_03" title="Fragen mit qui" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_08_fragen/03_fragen_mit_qui.xml" />
+                    <section id="section_gram_08_04" title="Fragen mit que" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_08_fragen/04_fragen_mit_que.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_09_verben" title="⚙️ 09 Verben">
+                    <section id="section_gram_09_01" title="Das Verb" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_09_verben/01_das_verb.xml" />
+                    <section id="section_gram_09_02" title="Die Verben auf &amp;#8209;er" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_09_verben/02_die_verben_auf_8209_er.xml" />
+                    <section id="section_gram_09_03" title="Die Verben auf &amp;#8209;ir" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_09_verben/03_die_verben_auf_8209_ir.xml" />
+                    <section id="section_gram_09_04" title="Die Verben auf &amp;#8209;re" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_09_verben/04_die_verben_auf_8209_re.xml" />
+                    <section id="section_gram_09_05" title="Die Verben auf &amp;#8209;oir" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_09_verben/05_die_verben_auf_8209_oir.xml" />
+                    <section id="section_gram_09_06" title="Die Ableitungsregeln der Verben" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_09_verben/06_die_ableitungsregeln_der_verben.xml" />
+                    <section id="section_gram_09_07" title="Die Hilfsverben avoir und être" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_09_verben/07_die_hilfsverben_avoir_und_etre.xml" />
+                    <section id="section_gram_09_08" title="Modal- und Hilfsverben" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_09_verben/08_modal_und_hilfsverben.xml" />
+                    <section id="section_gram_09_09" title="Reflexive Verben" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_09_verben/09_reflexive_verben.xml" />
+                    <section id="section_gram_09_10" title="Unpersönliche Verben" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_09_verben/10_unpersonliche_verben.xml" />
+                    <section id="section_gram_09_11" title="Der Infinitiv" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_09_verben/11_der_infinitiv.xml" />
+                    <section id="section_gram_09_12" title="Verkürzung von Nebensätzen mit dem Infinitiv" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_09_verben/12_verkurzung_von_nebensatzen_mit_dem_infinitiv.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_10_zeitformen_und_modi" title="⏳ 10 Zeitformen und Modi">
+                    <section id="section_gram_10_01" title="Présent" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/01_present.xml" />
+                    <section id="section_gram_10_02" title="Présent progressif" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/02_present_progressif.xml" />
+                    <section id="section_gram_10_03" title="Passé récent" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/03_passe_recent.xml" />
+                    <section id="section_gram_10_04" title="Passé composé" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/04_passe_compose.xml" />
+                    <section id="section_gram_10_05" title="Plus-que-parfait" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/05_plus_que_parfait.xml" />
+                    <section id="section_gram_10_06" title="Imparfait" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/06_imparfait.xml" />
+                    <section id="section_gram_10_07" title="Futur proche" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/07_futur_proche.xml" />
+                    <section id="section_gram_10_08" title="Futur simple" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/08_futur_simple.xml" />
+                    <section id="section_gram_10_09" title="Futur antérieur" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/09_futur_anterieur.xml" />
+                    <section id="section_gram_10_10" title="Impératif" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/10_imperatif.xml" />
+                    <section id="section_gram_10_11" title="Conditionnel" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/11_conditionnel.xml" />
+                    <section id="section_gram_10_12" title="Subjonctif" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/12_subjonctif.xml" />
+                    <section id="section_gram_10_13" title="Subjonctif imparfait" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/13_subjonctif_imparfait.xml" />
+                    <section id="section_gram_10_14" title="Passé simple" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/14_passe_simple.xml" />
+                    <section id="section_gram_10_15" title="Passé antérieur" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_10_zeitformen_und_modi/15_passe_anterieur.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_11_partizip" title="🧩 11 Partizip">
+                    <section id="section_gram_11_01" title="Participe présent" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_11_partizip/01_participe_present.xml" />
+                    <section id="section_gram_11_02" title="Gérondif" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_11_partizip/02_gerondif.xml" />
+                    <section id="section_gram_11_03" title="Participe passé" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_11_partizip/03_participe_passe.xml" />
+                    <section id="section_gram_11_04" title="Participe présent composé" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_11_partizip/04_participe_present_compose.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_12_passiv" title="🔄 12 Passiv">
+                    <section id="section_gram_12_01" title="Das Passif" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_12_passiv/01_das_passif.xml" />
+                    <section id="section_gram_12_02" title="Umschreibung des Passif" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_12_passiv/02_umschreibung_des_passif.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_13_erganzung_des_verbs" title="➕ 13 Ergänzung des Verbs">
+                    <section id="section_gram_13_01" title="Die Ergänzung des Verbs (Valenz)" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_13_erganzung_des_verbs/01_die_erganzung_des_verbs_valenz.xml" />
+                    <section id="section_gram_13_02" title="Verb + direktes Objekt" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_13_erganzung_des_verbs/02_verb_direktes_objekt.xml" />
+                    <section id="section_gram_13_03" title="Verb + à" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_13_erganzung_des_verbs/03_verb_a.xml" />
+                    <section id="section_gram_13_04" title="Verb + de" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_13_erganzung_des_verbs/04_verb_de.xml" />
+                    <section id="section_gram_13_05" title="Verb + à oder de" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_13_erganzung_des_verbs/05_verb_a_oder_de.xml" />
+                    <section id="section_gram_13_06" title="Verb + pour" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_13_erganzung_des_verbs/06_verb_pour.xml" />
+                    <section id="section_gram_13_07" title="Verb + contre" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_13_erganzung_des_verbs/07_verb_contre.xml" />
+                    <section id="section_gram_13_08" title="Verb + sur" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_13_erganzung_des_verbs/08_verb_sur.xml" />
+                    <section id="section_gram_13_09" title="Verb + en" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_13_erganzung_des_verbs/09_verb_en.xml" />
+                    <section id="section_gram_13_10" title="Verb + Infinitiv" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_13_erganzung_des_verbs/10_verb_infinitiv.xml" />
+                    <section id="section_gram_13_11" title="Verb + à + Infinitiv" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_13_erganzung_des_verbs/11_verb_a_infinitiv.xml" />
+                    <section id="section_gram_13_12" title="Verb + de + Infinitiv" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_13_erganzung_des_verbs/12_verb_de_infinitiv.xml" />
+                    <section id="section_gram_13_13" title="Verb + Präposition + Infinitiv" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_13_erganzung_des_verbs/13_verb_praposition_infinitiv.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_14_relativsatze" title="🔗 14 Relativsätze">
+                    <section id="section_gram_14_01" title="Relativsätze mit qui" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_14_relativsatze/01_relativsatze_mit_qui.xml" />
+                    <section id="section_gram_14_02" title="Relativsätze mit que" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_14_relativsatze/02_relativsatze_mit_que.xml" />
+                    <section id="section_gram_14_03" title="Relativsätze mit dont" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_14_relativsatze/03_relativsatze_mit_dont.xml" />
+                    <section id="section_gram_14_04" title="Relativsätze mit lequel" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_14_relativsatze/04_relativsatze_mit_lequel.xml" />
+                    <section id="section_gram_14_05" title="Relativsätze mit où" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_14_relativsatze/05_relativsatze_mit_ou.xml" />
+                    <section id="section_gram_14_06" title="Relativsätze mit ce qui, ce que und ce dont" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_14_relativsatze/06_relativsatze_mit_ce_qui_ce_que_und_ce_dont.xml" />
+                    <section id="section_gram_14_07" title="Umschreibung von Relativsätzen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_14_relativsatze/07_umschreibung_von_relativsatzen.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_15_bedingungssatze" title="🎲 15 Bedingungssätze">
+                    <section id="section_gram_15_01" title="Bedingungssätze mit si" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_15_bedingungssatze/01_bedingungssatze_mit_si.xml" />
+                    <section id="section_gram_15_02" title="Weitere Bedingungssätze" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_15_bedingungssatze/02_weitere_bedingungssatze.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_16_prapositionen" title="📍 16 Präpositionen">
+                    <section id="section_gram_16_01" title="Präpositionen des Ortes" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_16_prapositionen/01_prapositionen_des_ortes.xml" />
+                    <section id="section_gram_16_02" title="Präpositionen der Zeit" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_16_prapositionen/02_prapositionen_der_zeit.xml" />
+                    <section id="section_gram_16_03" title="Modale Präpositionen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_16_prapositionen/03_modale_prapositionen.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_17_konjunktionen" title="⛓️ 17 Konjunktionen">
+                    <section id="section_gram_17_01" title="Beiordnende Konjunktionen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_17_konjunktionen/01_beiordnende_konjunktionen.xml" />
+                    <section id="section_gram_17_02" title="Unterordnende Konjunktionen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_17_konjunktionen/02_unterordnende_konjunktionen.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_18_verneinung" title="🚫 18 Verneinung">
+                    <section id="section_gram_18_01" title="Verneinungswörter" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_18_verneinung/01_verneinungsworter.xml" />
+                    <section id="section_gram_18_02" title="Verneinung mit Mengenangaben" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_18_verneinung/02_verneinung_mit_mengenangaben.xml" />
+                    <section id="section_gram_18_03" title="Einschränkungen durch ne ... que und seulement" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_18_verneinung/03_einschrankungen_durch_ne_que_und_seulement.xml" />
+                    <section id="section_gram_18_04" title="Verneinung ohne ne" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_18_verneinung/04_verneinung_ohne_ne.xml" />
+                    <section id="section_gram_18_05" title="Das nicht verneinende ne" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_18_verneinung/05_das_nicht_verneinende_ne.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_19_inversion" title="🔃 19 Inversion">
+                    <section id="section_gram_19_01" title="Inversion mit Pronomen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_19_inversion/01_inversion_mit_pronomen.xml" />
+                    <section id="section_gram_19_02" title="Inversion mit Nomen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_19_inversion/02_inversion_mit_nomen.xml" />
+                    <section id="section_gram_19_03" title="Inversion mit je" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_19_inversion/03_inversion_mit_je.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_20_indirekte_rede" title="🗨️ 20 Indirekte Rede">
+                    <section id="section_gram_20_01" title="Die indirekte Rede" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_20_indirekte_rede/01_die_indirekte_rede.xml" />
+                    <section id="section_gram_20_02" title="Der indirekte Aussagesatz" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_20_indirekte_rede/02_der_indirekte_aussagesatz.xml" />
+                    <section id="section_gram_20_03" title="Die Zeitenfolge in der indirekten Rede" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_20_indirekte_rede/03_die_zeitenfolge_in_der_indirekten_rede.xml" />
+                    <section id="section_gram_20_04" title="Die indirekte Frage" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_20_indirekte_rede/04_die_indirekte_frage.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_21_informelle_sprache" title="😎 21 Informelle Sprache">
+                    <section id="section_gram_21_01" title="Informelle Verneinung" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_21_informelle_sprache/01_informelle_verneinung.xml" />
+                    <section id="section_gram_21_02" title="Informelle Pronomen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_21_informelle_sprache/02_informelle_pronomen.xml" />
+                    <section id="section_gram_21_03" title="Informelle Fragen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_21_informelle_sprache/03_informelle_fragen.xml" />
+                    <section id="section_gram_21_04" title="Füllwörter" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_21_informelle_sprache/04_fullworter.xml" />
+                    <section id="section_gram_21_05" title="Verlan" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_21_informelle_sprache/05_verlan.xml" />
+                </subchapter>
+                <subchapter id="subchapter_gram_22_zahlen_und_zeitangaben" title="🔢 22 Zahlen und Zeitangaben">
+                    <section id="section_gram_22_01" title="Zahlen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_22_zahlen_und_zeitangaben/01_zahlen.xml" />
+                    <section id="section_gram_22_02" title="Die Ordnungszahlen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_22_zahlen_und_zeitangaben/02_die_ordnungszahlen.xml" />
+                    <section id="section_gram_22_03" title="Bruchzahlen" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_22_zahlen_und_zeitangaben/03_bruchzahlen.xml" />
+                    <section id="section_gram_22_04" title="Datumsangaben" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_22_zahlen_und_zeitangaben/04_datumsangaben.xml" />
+                    <section id="section_gram_22_05" title="Zeitangaben" type="lesson" exp="30" lesson="courses/course_french_de/lessons/gram_22_zahlen_und_zeitangaben/05_zeitangaben.xml" />
+                </subchapter>
+            </chapter>
+        </domain>
+    </course>
+</library>
