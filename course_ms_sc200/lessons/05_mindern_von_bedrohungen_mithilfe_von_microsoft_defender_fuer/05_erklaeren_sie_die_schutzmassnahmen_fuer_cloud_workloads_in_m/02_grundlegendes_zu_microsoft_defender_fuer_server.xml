@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_05_05_02" title="Grundlegendes zu Microsoft Defender für Server">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Grundlegendes zu Microsoft Defender für Server</div>
+<div class="section-content">
+<p>Microsoft Defender for Servers bietet eine Bedrohungserkennung und erweiterte Verteidigungsmechanismen für Windows- und Linux-Computer. Dabei spielt es keine Rolle, ob diese in Azure, AWS, GCP oder lokal ausgeführt werden. Zum Schutz von Rechnern in hybriden und Multicloud-Umgebungen verwendet Defender für Cloud Azure Arc.</p>
+<p>Es gibt zwei Pläne für Microsoft Defender for Servers:</p>
+<ul>
+<li><p>
+              <strong>Microsoft Defender for Servers-Plan 1:</strong> stellt Microsoft Defender for Endpoint auf Ihren Servern bereit und bietet die folgenden Funktionen:</p>
+<ul>
+<li>Microsoft Defender für Endpunkt-Lizenzen werden pro Stunde statt pro Gerät berechnet, was die Kosten für den Schutz virtueller Computer nur dann verringert, wenn sie verwendet werden.</li>
+<li>Microsoft Defender for Endpoint wird automatisch für alle Cloudworkloads bereitgestellt. So wissen Sie, dass diese beim Starten geschützt sind.</li>
+<li>Warnungen und Sicherheitsrisikodaten aus Microsoft Defender for Endpoint werden in Microsoft Defender for Cloud angezeigt.</li>
+</ul>
+</li>
+<li><p>
+              <strong>Microsoft Defender für Server Plan 2</strong> – umfasst die Vorteile von Plan 1 und Unterstützung für alle anderen Features von Microsoft Defender für Server.</p>
+</li>
+</ul>
+<p>So aktivieren Sie die Pläne für Microsoft Defender for Servers</p>
+<p>Navigieren Sie zu Umgebungseinstellungen, und wählen Sie Ihr Abonnement aus.</p>
+<p>Wenn Microsoft Defender for Servers nicht aktiviert ist, legen Sie die Option auf „Ein“ fest. Standardmäßig ist Plan 2 aktiviert.</p>
+<p>Wenn Sie den Defender for Servers-Plan ändern möchten:</p>
+<p>Wählen Sie in der Spalte „Plan/Preis“ die Option „Plan ändern“ aus.
+Wählen Sie den gewünschten Plan und dann „Bestätigen“ aus.</p>
+<h2 id="plan-features">Funktionen des Plans</h2>
+<p>Die Features der Pläne sind in der Tabelle zusammengefasst.</p>
+<table>
+<thead>
+<tr>
+<th>
+              <strong>Funktion</strong></th>
+<th>
+              <strong>Unterstützung des Plans</strong></th>
+<th>
+              <strong>Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+              <strong>Unterstützung für Multicloud- und Hybridumgebungen</strong></td>
+<td>In Plan 1 und 2 unterstützt</td>
+<td>Defender for Servers kann Azure-VMs, AWS/GCP-VMs und lokale Computer schützen, die mit Microsoft Defender for Cloud verbunden sind.</td>
+</tr>
+<tr>
+<td>
+              <strong>Automatisches Onboarding von Defender for Endpoint</strong></td>
+<td>In Plan 1 und 2 unterstützt</td>
+<td>Microsoft Defender für Cloud integriert Computer automatisch in Defender für Endpunkt, indem die Defender für Endpunkt-Erweiterung auf verbundenen Computern installiert wird.</td>
+</tr>
+<tr>
+<td>
+              <strong>Defender for Endpoint EDR</strong></td>
+<td>In Plan 1 und 2 unterstützt</td>
+<td>Unterstützte Endpunkte erhalten nahezu echtzeitbasierte Bedrohungserkennung mithilfe der EDR-Funktionen von Defender für Endpunkt.</td>
+</tr>
+<tr>
+<td>
+              <strong>Bedrohungserkennung (auf Betriebssystemebene)</strong></td>
+<td>In Plan 1 und 2 unterstützt</td>
+<td>Defender für Endpunkt-Integration bietet Bedrohungserkennung auf Betriebssystemebene.</td>
+</tr>
+<tr>
+<td>
+              <strong>Integrierte Warnungen und Vorfälle</strong></td>
+<td>In Plan 1 und 2 unterstützt</td>
+<td>Defender for Endpoint-Warnungen und Vorfälle für verbundene Computer werden in Microsoft Defender for Cloud angezeigt, mit detaillierten Informationen im Microsoft Defender-Portal.</td>
+</tr>
+<tr>
+<td>
+              <strong>Bedrohungserkennung (auf Azure-Netzwerkebene)</strong></td>
+<td>Nur in Plan 2 unterstützt</td>
+<td>Die agentlose Erkennung identifiziert Bedrohungen, die auf die Kontrollebene im Netzwerk gerichtet sind, einschließlich netzwerkbasierter Sicherheitswarnungen für Azure-VMs.</td>
+</tr>
+<tr>
+<td>
+              <strong>Softwareinventarermittlung</strong></td>
+<td>In Plan 1 und 2 unterstützt</td>
+<td>Die Softwareinventurermittlung (bereitgestellt von Defender Vulnerability Management) ist in Defender for Cloud integriert.</td>
+</tr>
+<tr>
+<td>
+              <strong>Überprüfung auf Sicherheitsrisiken (mit Agent)</strong></td>
+<td>In Plan 1 und 2 unterstützt</td>
+<td>Der Microsoft Defender for Endpoint-Agent ermöglicht Microsoft Defender for Servers, Maschinen auf Schwachstellen mit Microsoft Defender Vulnerability Management zu bewerten.</td>
+</tr>
+<tr>
+<td>
+              <strong>Überprüfung auf Sicherheitsrisiken (ohne Agent)</strong></td>
+<td>Nur in Plan 2 unterstützt</td>
+<td>Als Teil seiner agentlosen Scanfunktionen bietet Defender für Cloud eine agentlose Sicherheitsrisikobewertung mithilfe der Defender-Sicherheitsrisikoverwaltung. Die Bewertung ohne Agent ist eine Ergänzung zur Überprüfung auf Sicherheitslücken mit Agent.</td>
+</tr>
+<tr>
+<td>
+              <strong>Fehlkonfigurationen der Betriebssystembasis</strong></td>
+<td>Betriebssystemempfehlungen, die auf Linux- und Windows-Computesicherheitsgrundsätzen basieren, werden nur in Plan 2 unterstützt. Andere MCSB-Empfehlungen in Defender for Cloud sind weiterhin im kostenlosen Foundational Posture Management enthalten.</td>
+<td>Defender für Cloud bewertet und erzwingt Sicherheitskonfigurationen mithilfe integrierter Azure-Richtlinieninitiativen, einschließlich seiner standardmäßigen Microsoft Cloud Security Benchmark (MCSB)-Initiative. Defender für Server sammelt Computerinformationen mithilfe der Azure-Computerkonfigurationserweiterung.</td>
+</tr>
+<tr>
+<td>
+              <strong>Bewertung der Einhaltung gesetzlicher Bestimmungen</strong></td>
+<td>In Plan 1 und 2 unterstützt</td>
+<td>Im Rahmen des kostenlosen grundlegenden Status-Managements bietet Defender for Cloud einige Compliancestandards. Wenn Sie einen Defender für Server-Plan aktiviert haben (oder einen anderen kostenpflichtigen Plan), können Sie andere Compliancestandards aktivieren.</td>
+</tr>
+<tr>
+<td>
+              <strong>Betriebssystemupdates</strong></td>
+<td>Nur in Plan 2 unterstützt</td>
+<td>Defender for Servers bewertet den Computer, um zu überprüfen, ob Updates und Patches installiert sind. Er verwendet Azure Update Manager, um Updateinformationen zu sammeln. Um die Azure Update-Integration in Defender for Servers Plan 2 zu nutzen, sollten lokale, AWS- und GCP-Computer in Azure Arc integriert werden.</td>
+</tr>
+<tr>
+<td>
+              <strong>Premium-Features von Defender für Sicherheitsrisikomanagement</strong></td>
+<td>Nur in Plan 2 unterstützt</td>
+<td>Defender für Server Plan 2 enthält Premiumfeatures in Defender Vulnerability Management. Premium-Features umfassen Zertifikatbewertungen, Sicherheitsgrundwerte des Betriebssystems und vieles mehr und sind nur im Defender-Portal verfügbar.</td>
+</tr>
+<tr>
+<td>
+              <strong>Schadsoftwareüberprüfung (ohne Agent)</strong></td>
+<td>Nur in Plan 2 unterstützt</td>
+<td>Neben dem Schutz vor Antischadsoftware der nächsten Generation, der über die Integration mit Defender for Endpoint bereitgestellt wird, bietet Defender for Servers Plan&nbsp;2 auch die Überprüfung auf Schadsoftware als Teil seiner Überprüfungsfunktionen ohne Agents.</td>
+</tr>
+<tr>
+<td>
+              <strong>Überprüfung von Computern auf Geheimnisse (ohne Agent)</strong></td>
+<td>Nur in Plan 2 unterstützt</td>
+<td>Als Teil seiner Geheimnisüberprüfungsfunktionen ohne Agents bietet Defender for Cloud die Überprüfung von Computergeheimnissen, um auf Computern Nur-Text-Geheimnisse zu finden. Das Überprüfen von Geheimnissen ist auch mit dem Defender Cloud Security Posture Management-Plan (CSPM) verfügbar.</td>
+</tr>
+<tr>
+<td>
+              <strong>Dateiintegritätsüberwachung</strong></td>
+<td>Nur in Plan 2 unterstützt</td>
+<td>Bei der Änderungsüberwachung werden Dateien und Registrierungen auf Änderungen untersucht, die auf einen Angriff hinweisen könnten. Nachdem Sie Defender for Servers-Plan 2 aktiviert haben, aktivieren und konfigurieren Sie die Dateiintegritätsüberwachung. Die Überwachung der Dateiintegrität verwendet die Defender for Endpoint-Erweiterung, um Informationen zu sammeln. Die bisherige Erfassungsmethode, die MMA verwendete, ist jetzt veraltet.</td>
+</tr>
+<tr>
+<td>
+              <strong>Just-In-Time-Zugriff auf virtuelle Computer</strong></td>
+<td>Nur in Plan 2 unterstützt</td>
+<td>Just-In-Time-VM-Zugriff sperrt Computerports, um die Angriffsfläche zu verringern.</td>
+</tr>
+<tr>
+<td>
+              <strong>Netzwerkübersicht</strong></td>
+<td>Nur in Plan 2 unterstützt</td>
+<td>Die Netzwerkkarte bietet eine geografische Ansicht der Empfehlungen für die Härtung Ihrer Netzwerkressourcen.</td>
+</tr>
+<tr>
+<td>
+              <strong>Kostenlose Datenerfassung (500 MB)</strong></td>
+<td>Nur in Plan 2 unterstützt</td>
+<td>Die kostenlose Datenerfassung ist für bestimmte Datentypen in Log Analytics-Arbeitsbereichen verfügbar.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-are-the-benefits-of-defender-for-servers">Welche Vorteile bietet die Nutzung von Defender for Servers?</h2>
+<ul>
+<li>
+              <strong>Schützen Sie Multicloud- und lokale Computer</strong>: Defender für Server schützt Windows- und Linux-Computer in Multicloud-Umgebungen (Azure, Amazon Web Services (AWS), Google Cloud Platform (GCP)) und lokal.</li>
+<li>
+              <strong>Zentrale Verwaltung und Berichterstellung</strong>: Defender für Cloud bietet eine einzige Ansicht der überwachten Ressourcen, einschließlich Computer, die von Defender für Server geschützt sind. Filtern, sortieren und Querverweise auf Daten anbringen, um die Maschinensicherheit zu verstehen, zu untersuchen und zu analysieren.</li>
+<li>
+              <strong>Integration in Defender-Dienste</strong>: Defender für Server ist in Sicherheitsfunktionen integriert, die von Defender für Endpunkt und Microsoft Defender Vulnerability Management bereitgestellt werden.</li>
+<li>
+              <strong>Verbessern Sie den Status und verringern Sie das Risiko</strong>: Defender für Server bewertet den Sicherheitsstatus von Computern anhand von Compliancestandards und bietet Sicherheitsempfehlungen zur Behebung und Verbesserung des Sicherheitsstatus.</li>
+<li>
+              <strong>Vorteile der Überprüfung ohne Agent:</strong> Defender for Servers-Plan 2 bietet die Überprüfung von Computern ohne Agent. Ohne einen Agent auf Endpunkten scannen Sie Softwareinventar, bewerten Sie Computer für Sicherheitsrisiken, suchen Sie nach geheimen Computerschlüsseln, und erkennen Sie Schadsoftwarebedrohungen.</li>
+<li>
+              <strong>Schutz vor Bedrohungen in nahezu Echtzeit</strong>: Defender für Server identifiziert und analysiert Echtzeitbedrohungen und stellt Sicherheitswarnungen nach Bedarf aus.</li>
+<li>
+              <strong>Intelligente Bedrohungserkennung abrufen</strong>: Defender für Cloud wertet Ereignisse aus und erkennt Bedrohungen mithilfe erweiterter Sicherheitsanalysen und Machine-Learning-Technologien mit mehreren Bedrohungserkennungsquellen, einschließlich microsoft Security Response Center (MSRC).</li>
+</ul>
+<h2 id="how-does-defender-for-servers-collect-data">Wie sammelt Defender for Servers Daten?</h2>
+<p>Unter Windows wird Microsoft Defender for Cloud zur Überwachung und zum Schutz Ihrer Windows-basierten Computer in Azure-Dienste integriert. Defender for Cloud stellt Warnungen und Behebungsvorschläge aus allen diesen Diensten in einem benutzerfreundlichen Format dar.</p>
+<p>Unter Linux sammelt Defender for Cloud Überwachungsdatensätze von Linux-Computern mithilfe von auditd, einem der gängigsten Linux-Überwachungsframeworks.</p>
+<p>Für Hybrid- und Multicloudszenarien lässt sich Defender für Cloud in Azure Arc integrieren, um sicherzustellen, dass diese Nicht-Azure-Computer als Azure-Ressourcen angesehen werden.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

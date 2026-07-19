@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_05_06_02" title="Azure Security Center für IoT – Sicherheitswarnungen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Azure Security Center für IoT – Sicherheitswarnungen</div>
+<div class="section-content">
+<p>In Microsoft Defender für Cloud gibt es verschiedene Warnungen für viele verschiedene Ressourcentypen. Defender for Cloud generiert Warnungen für Ressourcen, die in Azure bereitgestellt werden, und für Ressourcen, die in lokalen und hybriden Cloudumgebungen bereitgestellt werden.  Sicherheitswarnungen werden durch erweiterte Erkennungen ausgelöst und sind nur für Defender für Cloud verfügbar.</p>
+<h2 id="respond-to-todays-threats">Reagieren auf die heutigen Bedrohungen</h2>
+<p>In den letzten 20 Jahren gab es erhebliche Veränderungen in der Bedrohungslandschaft. In der Vergangenheit mussten sich Unternehmen in der Regel nur um die Webseitenverunstaltung von einzelnen Angreifern kümmern, die hauptsächlich daran interessiert waren, zu sehen, "was sie tun können". Die heutigen Angreifer sind viel komplexer und organisierter. Sie haben oft spezifische finanzielle und strategische Ziele. Sie haben auch mehr Ressourcen zur Verfügung, da sie von Nationalstaaten oder organisierter Kriminalität finanziert werden können.</p>
+<p>Diese sich ändernden Realitäten haben zu einem beispiellosen Maß an Professionalität im Rang des Angreifers geführt. Sie sind nicht mehr daran interessiert, nur Websites zu verunstalten. Sie sind jetzt daran interessiert, Informationen, Finanzkonten und private Daten zu stehlen – alle, die sie verwenden können, um Bargeld auf dem offenen Markt zu generieren oder eine bestimmte geschäftliche, politische oder militärische Position zu verwenden. Noch besorgniserregender als Angreifer mit finanziellen Zielen sind diejenigen, die Netzwerke kompromittieren, um Infrastruktur und Menschen zu schädigen.</p>
+<p>Als Reaktion stellen Organisationen häufig verschiedene Punktlösungen bereit, die sich auf die Verteidigung des Unternehmensperimeters oder der Endpunkte konzentrieren, indem sie nach bekannten Angriffssignaturen suchen. Diese Lösungen generieren in der Regel eine hohe Anzahl von Warnungen mit geringer Genauigkeit, die einen Sicherheitsanalysten zum Triagen und Untersuchen erfordern. In den meisten Organisationen fehlt es an Zeit und Know-how, die erforderlich sind, um auf diese Warnungen zu reagieren – so viele gehen unaddressiert.</p>
+<p>Darüber hinaus haben Angreifer ihre Methoden weiterentwickelt, um viele signaturbasierte Abwehrmaßnahmen zu subvertieren und sich an Cloudumgebungen anzupassen. Neue Ansätze sind erforderlich, um neue Bedrohungen schneller zu identifizieren und Erkennung und Reaktion zu beschleunigen.</p>
+<h2 id="what-are-security-alerts-and-security-incidents">Was sind Sicherheitswarnungen und Sicherheitsvorfälle?</h2>
+<p>Warnungen sind die Benachrichtigungen, die Defender for Cloud generiert, wenn Bedrohungen für Ihre Ressourcen erkannt werden. Defender für Cloud priorisiert und listet die Warnungen zusammen mit den für Sie benötigten Informationen auf, um das Problem schnell zu untersuchen. Defender for Cloud stellt außerdem Empfehlungen zur Reaktion auf einen Angriff bereit.</p>
+<p>Ein Sicherheitsvorfall ist eine Sammlung verwandter Warnungen, anstatt jede Warnung einzeln aufzulisten. Defender für Cloud verwendet die Cloud Smart Alert Correlation, um verschiedene Warnungen und Signale mit geringer Genauigkeit in Sicherheitsvorfälle zu korrelieren.</p>
+<p>Mit Sicherheitsvorfällen bietet Ihnen Defender für Cloud eine einzige Ansicht einer Angriffskampagne und aller zugehörigen Warnungen. Mit dieser Ansicht können Sie schnell verstehen, welche Aktionen der Angreifer ausgeführt hat und welche Ressourcen betroffen waren. Weitere Informationen finden Sie unter Cloud smart alert correlation.</p>
+<h2 id="how-does-defender-for-cloud-detect-threats">Wie erkennt Defender for Cloud Bedrohungen?</h2>
+<p>Microsoft-Fachkräfte im Bereich „Sicherheit“ suchen ständig nach neuen Bedrohungen. Aufgrund der globalen Präsenz in der Cloud und in lokalen Umgebungen haben wir Zugriff auf umfassende Telemetriedaten. Die breite und vielfältige Sammlung von Datasets ermöglicht es uns, neue Angriffsmuster und Trends in unseren lokalen Consumer- und Unternehmensprodukten sowie unseren Onlinediensten zu entdecken. Auf diese Weise können die Erkennungsalgorithmen von Defender for Cloud schnell aktualisiert werden, wenn angreifende Personen neue und immer anspruchsvollere Exploit-Verfahren nutzen. So können Sie mit der rasanten Entwicklung von Bedrohungen Schritt halten.</p>
+<p>Um echte Bedrohungen zu erkennen und falsch positive Ergebnisse zu reduzieren, sammelt, analysiert und integriert Defender für Cloud Protokolldaten aus Ihren Azure-Ressourcen und dem Netzwerk. Es funktioniert auch mit verbundenen Partnerlösungen, z. B. Firewall- und Endpunktschutzlösungen. Defender für Cloud analysiert diese Informationen, die häufig Informationen aus mehreren Quellen korrelieren, um Bedrohungen zu identifizieren.</p>
+<p>Für Defender for Cloud werden professionelle Sicherheitsanalysen genutzt, die weit über signaturbasierte Ansätze hinausgehen. Durchbrüche in Big Data- und Machine Learning-Technologien werden verwendet, um Ereignisse in der gesamten Cloud-Fabric auszuwerten – Bedrohungen zu erkennen, die mit manuellen Ansätzen nicht identifiziert und die Entwicklung von Angriffen vorhergesagt werden können. Zu diesen Sicherheitsanalysen gehört Folgendes:</p>
+<ul>
+<li><p>
+              <strong>Integrierte Bedrohungserkennung</strong>: Microsoft verfügt über eine immense Menge an globaler Bedrohungserkennung. Die Telemetriedaten stammen aus mehreren Quellen, z. B. Azure, Microsoft 365, Microsoft CRM Online, Microsoft Dynamics AX, outlook.com, MSN.com, Microsoft Digital Crimes Unit (DCU) und Microsoft Security Response Center (MSRC). Forscher erhalten auch Bedrohungsinformationen, die unter großen Clouddienstanbietern und anderen Drittanbietern ausgetauscht werden. Defender für Cloud kann diese Informationen verwenden, um Sie auf Bedrohungen bekannter schlechter Akteure hinzuweisen.</p>
+</li>
+<li><p>
+              <strong>Verhaltensanalysen</strong>: Verhaltensanalysen sind eine Technik, die Daten mit einer Sammlung bekannter Muster analysiert und vergleicht. Bei diesen Mustern handelt es sich aber nicht nur um einfache Signaturen. Sie werden anhand von komplexen Algorithmen für maschinelles Lernen bestimmt, die auf große Datasets angewandt werden. Sie werden auch durch sorgfältige Analyse bösartiger Verhaltensweisen durch Expertenanalysten bestimmt. Defender for Cloud kann Verhaltensanalysen verwenden, um kompromittierte Ressourcen basierend auf der Analyse von Protokollen virtueller Computer, Protokollen für virtuelle Netzwerke, Fabric-Protokollen und anderen Quellen zu identifizieren.</p>
+</li>
+<li><p>
+              <strong>Anomalieerkennung</strong>: Defender für Cloud verwendet auch anomaliebasierte Erkennung, um Bedrohungen zu identifizieren. Im Gegensatz zu Verhaltensanalysen (die von bekannten Mustern abhängig sind, die von großen Datasets abgeleitet sind), ist die Anomalieerkennung "personalisiert" und konzentriert sich auf Basispläne, die für Ihre Bereitstellungen spezifisch sind. Maschinelles Lernen wird angewendet, um normale Aktivitäten für Ihre Deployments zu ermitteln. Anschließend werden Regeln generiert, um Ausreißerbedingungen zu definieren, die ein Sicherheitsereignis darstellen könnten.</p>
+</li>
+</ul>
+<h2 id="how-are-alerts-classified">Wie werden Warnungen klassifiziert?</h2>
+<p>Defender für Cloud weist Warnungen einen Schweregrad zu, damit Sie die Reihenfolge priorisieren können, in der Sie auf jede Warnung reagieren, sodass Sie, wenn eine Ressource kompromittiert wird, sofort darauf gelangen können. Der Schweregrad basiert darauf, wie hoch die Zuverlässigkeit in den folgenden Bereichen von Defender für Cloud eingestuft wird: ermitteltes Ergebnis bzw. genutzte Analyse für die Auslösung der Warnung und Konfidenz in Bezug auf die böswillige Absicht der zugrunde liegenden Aktivität.</p>
+<ul>
+<li><p>Hoch: Es gibt eine hohe Wahrscheinlichkeit, dass Ihre Ressource kompromittiert ist. Sie sollten dies sofort überprüfen. Von Defender for Cloud werden sowohl die böswillige Absicht als auch die ermittelten Ergebnisse zur Ausgabe der Warnung als hoch eingestuft. Beispielsweise erkennt eine Warnung die Ausführung eines bekannten bösartigen Tools wie Mimikatz, ein gängiges Tool für den Diebstahl von Anmeldeinformationen.</p>
+</li>
+<li><p>Mittel: Dieser Schweregrad gibt an, dass es sich wahrscheinlich um eine verdächtige Aktivität handelt, die darauf hindeutet, dass eine Ressource kompromittiert ist. Defender for Cloud hat mittelgroßes Vertrauen in die Analyse oder Entdeckung, und das Vertrauen hinsichtlich böswilliger Absichten ist mittel bis hoch. Hierbei handelt es sich in der Regel um maschinelles Lernen oder anomaliebasierte Erkennungen. Beispiel: Ein Anmeldeversuch von einem anomalen Ort.</p>
+</li>
+<li><p>Niedrig: Dieser Schweregrad deutet darauf hin, dass es sich um ein gutartiges Positiv oder einen blockierten Angriff handeln könnte.</p>
+<ul>
+<li><p>Defender für Cloud ist nicht sicher genug, dass die Absicht böswillig ist, und die Aktivität kann unschuldig sein. Beispielsweise ist die Protokolllöschung eine Aktion, die auftreten kann, wenn ein Angreifer versucht, seine Spuren auszublenden, aber in vielen Fällen handelt es sich um einen Routinevorgang, der von Administratoren ausgeführt wird.</p>
+</li>
+<li><p>Defender für Cloud informiert Sie normalerweise nicht darüber, wann Angriffe blockiert wurden, es sei denn, es handelt sich um einen bemerkenswerten Fall, den wir Ihnen vorschlagen, genauer zu betrachten.</p>
+</li>
+</ul>
+</li>
+<li><p>Informational: Sie sehen nur Informationen, wenn Sie einen Drilldown zu einem Sicherheitsvorfall ausführen oder die REST-API mit einer bestimmten Warnungs-ID verwenden. Ein Vorfall besteht in der Regel aus vielen Warnungen, von denen einige allein erscheinen, nur informativ zu sein, aber im Kontext der anderen Warnungen sind sie unter Umständen einen genaueren Blick wert.</p>
+</li>
+</ul>
+<h2 id="continuous-monitoring-and-assessments">Kontinuierliche Überwachung und Bewertungen</h2>
+<p>Defender for Cloud profitiert von sicherheitsrelevanten Forschungs- und Data Science-Teams in Microsoft, die kontinuierlich auf Änderungen in der Bedrohungslandschaft überwachen. Dies umfasst Folgendes:</p>
+<ul>
+<li><p>
+              <strong>Threat Intelligence-Überwachung</strong>: Informationen zu Bedrohungen (Threat Intelligence) umfassen Mechanismen, Indikatoren, Auswirkungen und nützliche Hinweise zu vorhandenen oder neuen Bedrohungen. Diese Informationen werden in der Sicherheitscommunity bereitgestellt, und Microsoft überwacht fortlaufend Threat Intelligence-Feeds von internen und externen Quellen.</p>
+</li>
+<li><p>
+              <strong>Signalaustausch</strong>: Die Erkenntnisse der Sicherheitsteams aus dem großen Microsoft-Portfolio mit Clouddiensten und lokalen Diensten, Servern und Clientendpunkt-Geräten werden ausgetauscht und analysiert.</p>
+</li>
+<li><p>
+              <strong>Microsoft-Sicherheitsexperten</strong>: Ständiger Austausch mit Teams von Microsoft, die sich mit speziellen Sicherheitsfeldern beschäftigen, z.B. Forensik und Erkennung von Webangriffen.</p>
+</li>
+<li><p>
+              <strong>Erkennungsoptimierung</strong>: Algorithmen werden für echte Kundendatasets ausgeführt, und Sicherheitsexperten arbeiten mit der Kundschaft zusammen, um die Ergebnisse auszuwerten. Richtige und falsche Positivmeldungen werden verwendet, um Machine Learning-Algorithmen zu verfeinern.</p>
+</li>
+</ul>
+<h2 id="understand-alert-types">Grundlegendes zu Warnungstypen</h2>
+<p>Die aktuelle Warnungsreferenzliste enthält mehr als 500 Arten von Warnungen.  Die Referenzliste kann überprüft werden unter: <a href="https://learn.microsoft.com/de-de/azure/security-center/alerts-reference?azure-portal=true" data-linktype="absolute-path">Sicherheitswarnungen – ein Referenzhandbuch</a></p>
+<p>Jeder Warnungstyp verfügt über eine Beschreibung, einen Schweregrad und eine MITRE ATT&amp;CK-Taktik.</p>
+<h3 id="mitre-attck-tactics">
+              <strong>MITRE ATT&amp;CK-Taktiken</strong></h3>
+<p>Das Verständnis der Absicht eines Angriffs kann Ihnen helfen, das Ereignis leichter zu untersuchen und zu melden. Um diese Bemühungen zu unterstützen, enthalten Defender for Cloud-Warnungen die MITRE-Taktiken in vielen Warnmeldungen.  Die Reihe der Schritte, die den Fortschritt eines Cyberangriffs von der Erkennung bis zur Datenexfiltration beschreiben, wird häufig als „Kill Chain“ bezeichnet.</p>
+<p>Die von Defender für Cloud unterstützten Kill-Chain-Absichten basieren auf Version 7 der MITRE ATT&amp;CK-Matrix (siehe Beschreibung in der Tabelle unten).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Taktik</th>
+<th style="text-align: left;">BESCHREIBUNG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">PreAttack</td>
+<td style="text-align: left;">PreAttack könnte entweder ein Versuch sein, auf eine bestimmte Ressource zuzugreifen, unabhängig von böswilliger Absicht oder ein fehlgeschlagener Versuch, Zugriff auf ein Zielsystem zu erhalten, um Informationen vor der Ausbeutung zu sammeln. Dieser Schritt wird normalerweise als Versuch von außerhalb des Netzwerks erkannt, das Zielsystem zu scannen und einen Einstiegspunkt zu identifizieren.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Erstzugriff</td>
+<td style="text-align: left;">InitialAccess ist die Phase, in der ein Angreifer auf der angegriffenen Ressource Fuß fasst. Diese Phase ist für Computehosts und Ressourcen wie Benutzerkonten, Zertifikate usw. relevant. Bedrohungsakteure können die Ressource häufig nach dieser Phase steuern.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ausdauer</td>
+<td style="text-align: left;">Als „Persistenz“ wird ein Zugriff, eine Aktion oder eine Konfigurationsänderung in einem System bezeichnet, der bzw. die einem Bedrohungsakteur dauerhafte Präsenz in diesem System ermöglicht. Bedrohungsakteure müssen den Zugriff häufig über Unterbrechungen (z. B. Systemneustarts, Verlust von Anmeldeinformationen oder andere Fehler, aufgrund derer ein Remotezugriffstool neu gestartet werden muss) hinweg beibehalten oder eine alternative Hintertür schaffen, um wieder Zugriff zu erhalten.</td>
+</tr>
+<tr>
+<td style="text-align: left;">PrivilegeEscalation</td>
+<td style="text-align: left;">„Rechteausweitung“ ist das Ergebnis von Aktionen, mit denen ein Angreifer eine höhere Berechtigungsebene für ein System oder ein Netzwerk erhält. Bestimmte Tools oder Aktionen erfordern eine höhere Berechtigungsebene und sind wahrscheinlich an vielen Punkten während eines Vorgangs erforderlich. Benutzerkonten, die über Berechtigungen für den Zugriff auf bestimmte Systeme verfügen oder bestimmte Funktionen ausführen, die für Angreifer erforderlich sind, um Ihr Ziel zu erreichen, können auch als „Rechteausweitung“ angesehen werden.</td>
+</tr>
+<tr>
+<td style="text-align: left;">DefenseEvasion</td>
+<td style="text-align: left;">„Umgehung von Abwehrmaßnahmen“ umfasst Techniken, die ein Angreifer zum Umgehen der Erkennung oder zum Vermeiden anderer Abwehrmaßnahmen verwenden kann. Manchmal sind diese Aktionen identisch mit (oder Variationen von) Techniken aus anderen Kategorien, die Angreifern den zusätzlichen Vorteil bieten, einen bestimmten Schutz oder eine bestimmte Abwehrmaßnahmen zu untergraben.</td>
+</tr>
+<tr>
+<td style="text-align: left;">CredentialAccess</td>
+<td style="text-align: left;">Der Zugriff auf Anmeldeinformationen stellt Techniken dar, die dazu führen, dass innerhalb einer Unternehmensumgebung auf System-, Domänen- oder Dienstanmeldeinformationen zugegriffen oder kontrolliert wird. Angreifende Personen versuchen mit hoher Wahrscheinlichkeit, in den Besitz legitimer Anmeldeinformationen von benutzenden Personen oder Administratorkonten (lokale Systemadministratoren oder Domänenbenutzer mit Administratorzugriff) zu gelangen, um diese im Netzwerk zu verwenden. Mit ausreichendem Zugriff innerhalb eines Netzwerks kann ein Angreifer Konten für die spätere Verwendung innerhalb der Umgebung erstellen.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ermittlung</td>
+<td style="text-align: left;">„Entdeckung“ umfasst Techniken, die es der angreifenden Person ermöglichen, Informationen über das System und das interne Netzwerk zu erlangen. Wenn Angreifer Zugang zu einem neuen System erhalten, müssen sie sich an dem ausrichten, was sie jetzt kontrollieren und welche Vorteile dieses Systems ihrem aktuellen Ziel oder ihren allgemeinen Zielen während des Angriffs geben. Das Betriebssystem stellt viele native Tools bereit, die in dieser Phase der Informationserfassung nach der Kompromittierung ausgenutzt werden können.</td>
+</tr>
+<tr>
+<td style="text-align: left;">LateralMovement</td>
+<td style="text-align: left;">Lateral Movement besteht aus Techniken, die es einem Angreifer ermöglichen, auf Remotesysteme im Netzwerk und in der Cloud zuzugreifen und sie zu steuern, ohne notwendigerweise die Ausführung von Tools auf Remotesystemen einzuschließen. Lateral Movement-Techniken könnten es einem Angreifer ermöglichen, Informationen über ein System zu sammeln, ohne dass er weitere Tools, wie z. B. ein Tool für den Remotezugriff, benötigt. Ein Angreifer kann die laterale Bewegung für viele Zwecke nutzen, unter anderem für die Remote-Ausführung von Tools, das Pivoting auf weitere Systeme, den Zugriff auf bestimmte Informationen oder Dateien, den Zugriff auf andere Anmeldeinformationen oder um eine Wirkung hervorzurufen.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ausführung</td>
+<td style="text-align: left;">„Ausführung“ repräsentiert Techniken, die zur Ausführung von durch den Angreifer kontrolliertem Code auf einem lokalen System oder einem Remotesystem führen. Diese Taktik wird häufig mit lateraler Bewegung verwendet, um den Zugriff auf Remotesysteme in einem Netzwerk zu erweitern.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sammlung</td>
+<td style="text-align: left;">Als „Sammlung“ werden Techniken bezeichnet, die vor der Exfiltration zur Identifizierung und Erfassung von Informationen, z. B. sensiblen Dateien, von einem Zielnetzwerk verwendet werden. Diese Kategorie deckt auch Speicherorte in einem System oder Netzwerk ab, in denen die angreifende Person nach Informationen für die Exfiltration suchen könnte.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Exfiltration</td>
+<td style="text-align: left;">„Extrafiltration“ bezieht sich auf Techniken und Attribute, die der angreifenden Person das Entfernen von Dateien und Informationen aus einem Zielnetzwerk ermöglichen oder dies unterstützen. Diese Kategorie deckt auch Speicherorte in einem System oder Netzwerk ab, in denen die angreifende Person nach Informationen für die Exfiltration suchen könnte.</td>
+</tr>
+<tr>
+<td style="text-align: left;">CommandAndControl</td>
+<td style="text-align: left;">„Command &amp; Control“ repräsentiert, wie angreifende Personen mit Systemen innerhalb eines Zielnetzwerks kommunizieren, die ihrer Kontrolle unterliegen.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Auswirkung</td>
+<td style="text-align: left;">Auswirkungenereignisse versuchen in erster Linie, die Verfügbarkeit oder Integrität eines Systems, Diensts oder Netzwerks direkt zu reduzieren, einschließlich der Manipulation von Daten, um sich auf einen Geschäfts- oder Betriebsprozess zu auswirken. Dies bezieht sich häufig auf Techniken wie Ransomware, Verunstaltung, Datenmanipulation und andere.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

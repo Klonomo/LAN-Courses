@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_09_06_05" title="Erstellen eines ASIM-Parsers">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Erstellen eines ASIM-Parsers</div>
+<div class="section-content">
+<p>Benutzer des Advanced Security Information Model (ASIM) verwenden vereinheitlichende Parser anstelle von Tabellennamen in ihren Abfragen, um Daten in einem normalisierten Format anzuzeigen und alle für das Schema relevanten Daten in die Abfrage einzuschließen. Vereinheitlichende Parser verwenden wiederum quellspezifische Parser, um die spezifischen Details jeder Quelle zu verarbeiten.</p>
+<p>Microsoft Sentinel bietet integrierte quellenspezifische Parser für viele Datenquellen. Sie können diese quellspezifischen Parser in den folgenden Situationen ändern oder entwickeln:</p>
+<p>Wenn Ihr Gerät Ereignisse bereitstellt, die in ein ASIM-Schema passen, aber ein quellspezifischer Parser für Ihr Gerät und das relevante Schema ist in Microsoft Sentinel nicht verfügbar.</p>
+<p>Wenn quellenspezifische ASIM-Parser für Ihr Gerät verfügbar sind, ihr Gerät jedoch Ereignisse mit einer Methode oder in einem Format sendet, die oder das nicht von den ASIM-Parsern erwartet wird. Beispiel:</p>
+<p>Ihr Quellgerät kann so konfiguriert sein, dass Ereignisse auf nicht standardmäßige Weise gesendet werden.</p>
+<p>Ihr Gerät hat möglicherweise eine andere Version als die vom ASIM-Parser unterstützte.</p>
+<p>Die Ereignisse werden möglicherweise von einem zwischengeschalteten System gesammelt, geändert und weitergeleitet.</p>
+<h2 id="custom-parser-development-process">Entwicklungsprozess für benutzerdefinierte Parser</h2>
+<p>Der folgende Workflow beschreibt auf hoher Ebene das Vorgehen bei der Entwicklung eines benutzerdefinierten quellenspezifischen ASIM-Parsers:</p>
+<ol>
+<li><p>Sammeln Sie Beispielprotokolle.</p>
+</li>
+<li><p>Identifizieren Sie die Schemata oder Schemas, die den von der Quelle gesendeten Ereignissen entsprechen.</p>
+</li>
+<li><p>Ordnen Sie die Quellereignisfelder dem identifizierten Schema oder den Schemata zu.</p>
+</li>
+<li><p>Entwickeln Sie einen oder mehrere ASIM-Parser für Ihre Quelle. Sie müssen für jedes Schema, das für die Quelle relevant ist, einen Parser für das Filtern und einen Parser ohne Parameter entwickeln.</p>
+</li>
+<li><p>Testen Sie Ihren Parser.</p>
+</li>
+<li><p>Stellen Sie die Parser in Ihren Microsoft Sentinel-Arbeitsbereichen bereit.</p>
+</li>
+<li><p>Aktualisieren Sie den relevanten vereinheitlichenden ASIM-Parser, sodass er auf den neuen benutzerdefinierten Parser verweist.</p>
+</li>
+<li><p>Möglicherweise möchten Sie auch Ihre Parser zur primären ASIM-Verteilung beitragen. Beigetragene Parser können auch in allen Arbeitsbereichen als integrierte Parser verfügbar gemacht werden.</p>
+</li>
+</ol>
+<h3 id="collect-sample-logs">Sammeln von Beispielprotokollen</h3>
+<p>Um effektive ASIM-Parser zu erstellen, benötigen Sie eine repräsentative Gruppe von Protokollen, die in den meisten Fällen das Einrichten des Quellsystems und die Verbindung mit Microsoft Sentinel erfordern. Wenn Sie nicht über das Quellgerät verfügen, können Sie mit cloudbasierten Pay-as-You-Go-Diensten viele Geräte für Entwicklung und Tests bereitstellen.</p>
+<p>Darüber hinaus können die Suche nach den Lieferantendokumentationen und Beispielen für die Protokolle dazu beitragen, die Entwicklung zu beschleunigen und Fehler zu verringern, indem sie eine breite Protokollformatabdeckung gewährleisten.</p>
+<p>Eine repräsentative Gruppe von Protokollen sollte Folgendes umfassen:</p>
+<ul>
+<li>Ereignisse mit unterschiedlichen Ereignisergebnissen.</li>
+<li>Ereignisse mit unterschiedlichen Antwortaktionen.</li>
+<li>Verschiedene Formate für Benutzername, Hostname und IDs und andere Felder, die eine Normalisierung des Werts erfordern.</li>
+</ul>
+<h3 id="mapping">Kartierung</h3>
+<p>Bevor Sie einen Parser entwickeln, ordnen Sie die im Quellereignis verfügbaren Informationen oder Ereignisse dem schema zu, das Sie identifiziert haben:</p>
+<ul>
+<li>Mappen Sie alle obligatorischen Felder und vorzugsweise auch empfohlene Felder zu.</li>
+<li>Versuchen Sie, alle Informationen, die von der Quelle verfügbar sind, normalisierten Feldern zuzuordnen. Wenn sie nicht als Teil des ausgewählten Schemas verfügbar ist, sollten Sie die Zuordnung zu Feldern in anderen Schemas in Betracht ziehen.</li>
+<li>Ordnen Sie Werte für Felder an der Quelle den normalisierten Werten zu, die ASIM erlaubt. Der ursprüngliche Wert wird in einem separaten Feld gespeichert, z. B. EventOriginalResultDetails.</li>
+</ul>
+<h3 id="developing-parsers">Entwickeln von Parsern</h3>
+<p>Entwickeln Sie sowohl einen Filter- als auch einen parameterlosen Parser für jedes relevante Schema.</p>
+<p>Ein benutzerdefinierter Parser ist eine KQL-Abfrage, die auf der Seite "Microsoft Sentinel Logs" entwickelt wurde. Die Parserabfrage besteht aus drei Teilen:</p>
+<p>Filtern &gt; Parsen &gt; Felder vorbereiten</p>
+<h3 id="filtering-the-relevant-records">Filterung der relevanten Datensätze</h3>
+<p>Tabellen in Microsoft Sentinel enthalten oft mehrere Ereignistypen. Beispiel:</p>
+<ul>
+<li>Die Syslog-Tabelle enthält Daten aus mehreren Quellen.</li>
+<li>Benutzerdefinierte Tabellen können Informationen aus einer einzelnen Quelle enthalten, die mehrere Ereignistypen umfasst und für verschiedene Schemas geeignet ist.</li>
+</ul>
+<p>Daher sollte ein Parser zunächst nur die für das Zielschema relevanten Datensätze herausfiltern.</p>
+<p>Das Filtern in KQL erfolgt mithilfe des <strong>Where-Operators</strong> . Beispiel: Das <strong>Sysmon-Ereignis&nbsp;1</strong> meldet die Prozesserstellung und wird daher mit dem Schema <strong>ProcessEvent</strong> normalisiert. Das <strong>Sysmon-Ereignis 1</strong> ist Teil der <strong>Ereignistabelle</strong> , sodass Sie den folgenden Filter verwenden würden:</p>
+<pre><code class="lang-KQL">Event | where Source == "Microsoft-Windows-Sysmon" and EventID == 1
+</code></pre>
+<div class="IMPORTANT">
+<p>Von Bedeutung</p>
+<p>Ein Parser sollte nicht nach Zeit filtern. Die Abfrage, die den Parser verwendet, wendet einen Zeitbereich an.</p>
+</div>
+<h3 id="filtering-by-source-type-using-a-watchlist">Filtern nach Quelltyp mithilfe einer Watchlist</h3>
+<p>In einigen Fällen enthält das Ereignis selbst keine Informationen, die das Filtern nach bestimmten Quelltypen ermöglichen.</p>
+<p>Beispielsweise werden Infoblox-DNS-Ereignisse als Syslog-Nachrichten gesendet und sind schwer von Syslog-Nachrichten zu unterscheiden, die von anderen Quellen gesendet werden. In solchen Fällen basiert der Parser auf einer Liste von Quellen, die die relevanten Ereignisse definiert. Diese Liste wird in der ASimSourceType-Watchlist verwaltet.</p>
+<p>So verwenden Sie die ASimSourceType-Watchlist in Ihren Parsern:</p>
+<ul>
+<li>Fügen Sie am Anfang des Parsers die folgende Zeile ein:</li>
+</ul>
+<pre><code class="lang-KQL">let Sources_by_SourceType=(sourcetype:string){_GetWatchlist('ASimSourceType') | where SearchKey == tostring(sourcetype) | extend Source=column_ifexists('Source','') | where isnotempty(Source)| distinct Source };
+</code></pre>
+<ul>
+<li>Fügen Sie einen Filter hinzu, der die Watchlist im Parserfilterabschnitt verwendet. Der Infoblox-DNS-Parser enthält z.&nbsp;B. Folgendes im Filterabschnitt:</li>
+</ul>
+<pre><code class="lang-KQL">| where Computer in (Sources_by_SourceType('InfobloxNIOS'))
+</code></pre>
+<p>So verwenden Sie dieses Beispiel in Ihrem Parser:</p>
+<ul>
+<li><p>Ersetzen Sie "Computer" durch den Namen des Felds, das die Quellinformationen für Ihre Quelle enthält. Sie können dies als „Computer“ für alle Parser beibehalten, die auf Syslog basieren.</p>
+</li>
+<li><p>Ersetzen Sie das InfobloxNIOS-Token durch einen Wert Ihrer Wahl für Ihren Parser. Informieren Sie Parserbenutzer darüber, dass sie die ASimSourceType-Watchlist mit Ihrem ausgewählten Wert aktualisieren müssen, und die Liste der Quellen, die Ereignisse dieses Typs senden.</p>
+</li>
+</ul>
+<h3 id="filtering-based-on-parser-parameters">Filtern anhand von Parser-Parametern</h3>
+<p>Stellen Sie beim Entwickeln von Filterparsern sicher, dass Ihr Parser die Filterparameter für das relevante Schema akzeptiert, wie im Referenzartikel für dieses Schema dokumentiert. Die Verwendung eines vorhandenen Parsers als Ausgangspunkt stellt sicher, dass Ihr Parser die richtige Funktionssignatur enthält. In den meisten Fällen ist der tatsächliche Filtercode auch für filternde Parser für dasselbe Schema ähnlich.</p>
+<p>Wenn Sie filtern, stellen Sie sicher, dass Sie:</p>
+<ul>
+<li><strong>Filtern Sie vor dem Parsen anhand der physischen Felder</strong>. Wenn die gefilterten Ergebnisse nicht genau genug sind, wiederholen Sie den Test nach der Analyse, um Ihre Ergebnisse zu optimieren. Weitere Informationen finden Sie unter Filteroptimierung.</li>
+<li><strong>Filtern Sie nicht, wenn der Parameter nicht definiert ist und trotzdem den Standardwert aufweist.</strong></li>
+</ul>
+<p>Die folgenden Beispiele zeigen, wie die Filterung für einen String-Parameter, dessen Standardwert normalerweise '*' ist, und für einen Listenparameter, dessen Standardwert normalerweise eine leere Liste ist, implementiert wird.</p>
+<pre><code class="lang-KQL">srcipaddr=='*' or ClientIP==srcipaddr
+array_length(domain_has_any) == 0 or Name has_any (domain_has_any)
+</code></pre>
+<h3 id="filtering-optimization">Filterungsoptimierung</h3>
+<p>Beachten Sie die folgenden Empfehlungen für die Filterung, um die Leistungsfähigkeit des Parsers zu gewährleisten:</p>
+<ul>
+<li><strong>Führen Sie die Filterung immer nach integrierten statt nach geparsten Feldern durch</strong>. Obwohl es manchmal einfacher ist, mithilfe analysierter Felder zu filtern, wirkt sich dies erheblich auf die Leistung aus.</li>
+<li><strong>Verwenden Sie Operatoren, die eine optimale Leistung liefern</strong>. Dies gilt insbesondere für „==“, „has“ und „startswith“. Die Verwendung von Operatoren wie "contains" oder "matches regex" wirkt sich auch erheblich auf die Leistung aus.</li>
+</ul>
+<p>Die Empfehlungen für die Filterung zur Leistungsoptimierung lassen sich nicht immer einfach umsetzen. Beispielsweise ist die Verwendung von „has“ weniger genau als die von „contains“. In anderen Fällen ist der Abgleich mit dem integrierten Feld, z. B. SyslogMessage, weniger genau als das Vergleichen eines extrahierten Felds, z. B. DvcAction. In diesen Fällen empfiehlt es sich, für ein integriertes Feld dennoch eine Vorabfilterung mithilfe eines leistungsoptimierenden Operators durchzuführen und die Filterung nach der Analyse mit genaueren Bedingungen erneut durchzuführen.</p>
+<p>Ein Beispiel finden Sie im folgenden Infoblox-DNS-Parserausschnitt. Der Parser überprüft zuerst, ob das SyslogMessage-Feld über den Wortclient verfügt. Der Begriff kann jedoch an einer anderen Stelle in der Nachricht verwendet werden. Nach der Analyse des Log_Type-Felds überprüft der Parser also erneut, dass das Wort 'client' tatsächlich der Wert des Felds ist.</p>
+<pre><code class="lang-KQL">Syslog | where ProcessName == "named" and SyslogMessage has "client"
+…
+      | extend Log_Type = tostring(Parser[1]),
+      | where Log_Type == "client"
+</code></pre>
+<h3 id="parsing">Parsen</h3>
+<p>Nachdem bei der Abfrage die relevanten Datensätze ausgewählt wurden, müssen sie möglicherweise analysiert werden. In der Regel ist das Parsen erforderlich, wenn mehrere Ereignisfelder in einem einzelnen Textfeld übermittelt werden.</p>
+<p>Die KQL-Operatoren, mit denen die Analyse durchgeführt wird, sind nachfolgend nach ihrer Leistungsoptimierung sortiert aufgeführt. Der erste bietet die am besten optimierte Leistung, während der letzte die am wenigsten optimierte Leistung bietet.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Bediener</th>
+<th style="text-align: left;">BESCHREIBUNG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">split</td>
+<td style="text-align: left;">Parsen Sie eine Zeichenfolge aus delimitierten Werten.</td>
+</tr>
+<tr>
+<td style="text-align: left;">CSV-Daten parsen</td>
+<td style="text-align: left;">Analysiert eine Zeichenfolge von Werten, die als CSV-Zeile (mit durch Trennzeichen getrennten Werten) formatiert sind</td>
+</tr>
+<tr>
+<td style="text-align: left;">parse</td>
+<td style="text-align: left;">Analysiert mehrere Werte aus einer beliebigen Zeichenfolge anhand eines Musters, das ein vereinfachtes Muster mit besserer Leistung oder ein regulärer Ausdruck sein kann</td>
+</tr>
+<tr>
+<td style="text-align: left;">extract_all</td>
+<td style="text-align: left;">Analysiert einzelne Werte aus einer beliebigen Zeichenfolge anhand eines regulären Ausdrucks. extract_all weist eine ähnliche Analyseleistung auf, wenn letztere einen regulären Ausdruck verwendet.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Auszug</td>
+<td style="text-align: left;">Extrahiert einen einzelnen Wert aus einer beliebigen Zeichenfolge anhand eines regulären Ausdrucks. Die Verwendung von extract bietet eine bessere Leistung als parsen oder extract_all, wenn ein einzelner Wert erforderlich ist. Die Verwendung mehrerer Extraktaktivierungen über dieselbe Quellzeichenfolge ist jedoch weniger effizient als eine einzelne Analyse oder extract_all und sollte vermieden werden.</td>
+</tr>
+<tr>
+<td style="text-align: left;">parse_json</td>
+<td style="text-align: left;">Analysiert die Werte in einer Zeichenfolge, die als JSON-Code formatiert ist. Wenn nur wenige Werte aus dem JSON-Code benötigt werden, bietet die Verwendung von Analyse, Extrakt oder extract_all eine bessere Leistung.</td>
+</tr>
+<tr>
+<td style="text-align: left;">parse_xml</td>
+<td style="text-align: left;">Analysiert die Werte in einer Zeichenfolge, die als XML-Code formatiert ist. Wenn nur wenige Werte aus dem XML-Code benötigt werden, bietet die Verwendung von Analyse, Extrakt oder extract_all eine bessere Leistung.</td>
+</tr>
+</tbody>
+</table>
+<p>Zusätzlich zum Parsen von Zeichenfolgen kann die Parsingphase eine weitere Verarbeitung der ursprünglichen Werte erfordern, einschließlich:</p>
+<ul>
+<li><p><strong>Formatierung und Typkonvertierung</strong>. Das Quellfeld muss möglicherweise nach dem Extrahieren so formatiert werden, dass es an das Zielschemafeld angepasst wird. Beispielsweise müssen Sie möglicherweise eine Zeichenfolge, die Datum und Uhrzeit darstellt, in ein datetime-Feld konvertieren. Funktionen wie Todatetime und Tohex sind in diesen Fällen hilfreich.</p>
+</li>
+<li><p><strong>Wertsuche</strong>. Der Wert des Quellfelds muss nach der Extraktion möglicherweise der für das Zielschemafeld angegebenen Gruppe von Werten zugeordnet werden. Beispielsweise melden einige Quellen numerische DNS-Antwortcodes, während das Schema die gängigeren Textantwortcodes anordnet. Die Funktionen iff und Case können hilfreich sein, um einige Werte zuzuordnen.</p>
+<p>Beispielsweise weist der Microsoft DNS-Parser das EventResult-Feld basierend auf der Ereignis-ID und dem Antwortcode mithilfe einer iff-Anweisung wie folgt zu:</p>
+<pre><code class="lang-KQL">extend EventResult = iff(EventId==257 and ResponseCode==0 ,'Success','Failure')
+</code></pre>
+<p>Verwenden Sie für mehrere Werte Datentabellen und -nachschlagevorgänge, wie im gleichen DNS-Parser veranschaulicht:</p>
+<pre><code class="lang-KQL">let RCodeTable = datatable(ResponseCode:int,ResponseCodeName:string) [ 0, 'NOERROR', 1, 'FORMERR'....];
+...
+ | lookup RCodeTable on ResponseCode
+ | extend EventResultDetails = case (
+ isnotempty(ResponseCodeName), ResponseCodeName,
+ ResponseCode between (3841 .. 4095), 'Reserved for Private Use',
+ 'Unassigned')
+</code></pre>
+</li>
+</ul>
+<h3 id="mapping-values">Zuordnen von Werten</h3>
+<p>In vielen Fällen muss der extrahierte Originalwert normalisiert werden. In ASIM verwendet eine MAC-Adresse beispielsweise Doppelpunkte als Trennzeichen, während die Quelle möglicherweise eine durch Bindestriche getrennte MAC-Adresse senden kann. Der primäre Operator zum Transformieren von Werten wird zusammen mit einer breiten Gruppe von KQL-Zeichenfolgen-, numerischen und Datumsfunktionen erweitert, wie im abschnitt "Analysieren" oben gezeigt.</p>
+<p>Verwenden Sie die Anweisungen „case“, „iff“ und „lookup“, wenn Sie eine Wertemenge den Werten zuordnen müssen, die für das Zielfeld zulässig sind.</p>
+<p>Wenn jeder Quellwert einem Zielwert zugeordnet wird, definieren Sie die Zuordnung mithilfe des Operators „datatable“ und mit „lookup“. Beispiel:</p>
+<pre><code class="lang-KQL">let NetworkProtocolLookup = datatable(Proto:real, NetworkProtocol:string)[
+        6, 'TCP',
+        17, 'UDP'
+   ];
+    let DnsResponseCodeLookup=datatable(DnsResponseCode:int,DnsResponseCodeName:string)[
+      0,'NOERROR',
+      1,'FORMERR',
+      2,'SERVFAIL',
+      3,'NXDOMAIN',
+      ...
+   ];
+   ...
+   | lookup DnsResponseCodeLookup on DnsResponseCode
+   | lookup NetworkProtocolLookup on Proto
+
+</code></pre>
+<p>Beachten Sie, dass die Suche auch dann nützlich und effizient ist, wenn die Zuordnung nur zwei mögliche Werte hat.</p>
+<p>Wenn die Zuordnungsbedingungen komplexer sind, verwenden Sie die <strong>iff</strong> - oder <strong>Fallfunktionen</strong> . Die <strong>iff-Funktion</strong> ermöglicht die Zuordnung von zwei Werten:</p>
+<pre><code class="lang-KQL">| extend EventResult = 
+      iff(EventId==257 and ResponseCode==0,'Success','Failure’)
+</code></pre>
+<p>Die <strong>case-Funktion</strong> unterstützt mehrere Zielwerte. Das folgende Beispiel zeigt, wie Sie <strong>lookup</strong> und <strong>case</strong> kombinieren können. Im obigen <strong>Nachschlagebeispiel</strong> wird ein leerer Wert im Feld DnsResponseCodeName zurückgegeben, wenn der Nachschlagewert nicht gefunden wird. Im folgenden <strong>Fallbeispiel</strong> wird es durch das Ergebnis des <strong>Nachschlagevorgangs</strong> erweitert, falls verfügbar, und es werden andernfalls zusätzliche Bedingungen angegeben.</p>
+<pre><code class="lang-KQL">| extend DnsResponseCodeName = 
+      case (
+        DnsResponseCodeName != "", DnsResponseCodeName,
+        DnsResponseCode between (3841 .. 4095), 'Reserved for Private Use',
+        'Unassigned'
+      )
+</code></pre>
+<h3 id="prepare-fields-in-the-result-set">Vorbereiten aller Felder im Resultset</h3>
+<p>Der Parser muss die Felder im Resultset vorbereiten, um sicherzustellen, dass die normalisierten Felder verwendet werden.</p>
+<p>Die folgenden KQL-Operatoren werden verwendet, um Felder in Ihrem Resultset vorzubereiten:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Bediener</th>
+<th style="text-align: left;">BESCHREIBUNG</th>
+<th style="text-align: left;">Wann in einem Parser verwenden?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Projektumbenennung</td>
+<td style="text-align: left;">Benennt Felder um.</td>
+<td style="text-align: left;">Wenn ein Feld im tatsächlichen Ereignis vorhanden ist und nur umbenannt werden muss, verwenden Sie die Projektumbenennung. Das umbenannte Feld verhält sich weiterhin wie ein integriertes Feld, und Vorgänge im Feld weisen eine wesentlich bessere Leistung auf.</td>
+</tr>
+<tr>
+<td style="text-align: left;">project-away</td>
+<td style="text-align: left;">Entfernt Felder.</td>
+<td style="text-align: left;">Verwenden Sie „project-away“ für bestimmte Felder, die Sie aus dem Resultset entfernen möchten. Es wird empfohlen, die ursprünglichen Felder nicht zu entfernen, die nicht aus dem Resultset normalisiert werden, es sei denn, sie erzeugen Verwirrung oder sind sehr groß und können Leistungsauswirkungen haben.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Projekt</td>
+<td style="text-align: left;">Wählt Felder aus, die vorher existierten oder als Teil der Anweisung erstellt wurden und entfernt alle anderen Felder.</td>
+<td style="text-align: left;">Nicht für die Verwendung in einem Parser empfohlen, da der Parser keine anderen Felder entfernen sollte, die nicht normalisiert sind. Wenn Sie bestimmte Felder entfernen müssen, z. B. temporäre Werte, die während des Parsens verwendet werden, verwenden Sie 'project-away', um sie aus den Ergebnissen zu löschen.</td>
+</tr>
+<tr>
+<td style="text-align: left;">extend</td>
+<td style="text-align: left;">Fügen Sie Aliase hinzu.</td>
+<td style="text-align: left;">Abgesehen von der Rolle beim Generieren berechneter Felder wird der Erweiterungsoperator auch zum Erstellen von Aliasen verwendet.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="handle-parsing-variants">Verarbeiten von Parsingvarianten</h3>
+<p>In vielen Fällen enthalten Ereignisse in einem Ereignisstream Varianten, die eine andere Analyselogik erfordern. Um verschiedene Varianten in einem einzelnen Parser zu parsen, verwenden Sie entweder Bedingungsanweisungen wie „iff“ und „case“, oder verwenden Sie eine union-Struktur.</p>
+<p>Um union zum Behandeln mehrerer Varianten zu verwenden, erstellen Sie für jede Variante eine separate Funktion, und verwenden Sie die Union-Anweisung, um die Ergebnisse zu kombinieren:</p>
+<pre><code class="lang-KQL">let AzureFirewallNetworkRuleLogs = AzureDiagnostics
+    | where Category == "AzureFirewallNetworkRule"
+    | where isnotempty(msg_s);
+let parseLogs = AzureFirewallNetworkRuleLogs
+    | where msg_s has_any("TCP", "UDP")
+    | parse-where
+        msg_s with           networkProtocol:string 
+        " request from "     srcIpAddr:string
+        ":"                  srcPortNumber:int
+    …
+    | project-away msg_s;
+let parseLogsWithUrls = AzureFirewallNetworkRuleLogs
+    | where msg_s has_all ("Url:","ThreatIntel:")
+    | parse-where
+        msg_s with           networkProtocol:string 
+        " request from "     srcIpAddr:string
+        " to "               dstIpAddr:string
+    …
+union parseLogs,  parseLogsWithUrls…
+
+</code></pre>
+<p>Um doppelte Ereignisse und übermäßige Verarbeitung zu vermeiden, stellen Sie sicher, dass jede Funktion zuerst die Ereignisse filtert, die sie analysieren soll, und dabei systemeigene Felder verwendet. Bei Bedarf können Sie auch vor „union“ in jeder Verzweigung die Anweisung „project-away“ verwenden.</p>
+<h3 id="deploy-parsers">Bereitstellen von Parsern</h3>
+<p>Sie können Parser manuell bereitstellen, indem Sie sie auf die Azure Monitor-Protokollseite kopieren und anschließend die Abfrage als Funktion speichern. Diese Methode empfiehlt sich bei Tests. Weitere Informationen finden Sie unter Erstellen einer Funktion.</p>
+<p>Um eine große Anzahl von Parsern bereitzustellen, empfehlen wir die Verwendung von Parser-ARM-Vorlagen wie folgt:</p>
+<ol>
+<li><p>Erstellen Sie eine YAML-Datei basierend auf der relevanten Vorlage für jedes Schema, und fügen Sie Ihre Abfrage in diese ein. Beginnen Sie mit der YAML-Vorlage, die für Ihren Schematyp und Parsertyp relevant ist, ob mit Filter oder ohne Parameter.</p>
+</li>
+<li><p>Verwenden Sie den ASIM Yaml zu ARM-Vorlagenkonverter, um Ihre YAML-Datei in eine ARM-Vorlage zu konvertieren.</p>
+</li>
+<li><p>Wenn Sie ein Update bereitstellen, löschen Sie ältere Versionen der Funktionen mithilfe des Portals oder des PowerShell-Tools zum Löschen von Funktionen.</p>
+</li>
+<li><p>Stellen Sie Ihre Vorlage über das Azure-Portal oder PowerShell bereit.</p>
+</li>
+</ol>
+<p>Sie können auch mehrere Vorlagen mit einem einzelnen Bereitstellungsprozess kombinieren, indem Sie verknüpfte Vorlagen verwenden.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

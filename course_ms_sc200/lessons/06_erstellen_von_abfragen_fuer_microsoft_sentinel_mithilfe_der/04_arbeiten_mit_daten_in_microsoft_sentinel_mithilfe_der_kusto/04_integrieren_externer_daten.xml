@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_06_04_04" title="Integrieren externer Daten">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Integrieren externer Daten</div>
+<div class="section-content">
+<p>Der externaldata-Operator gibt eine Tabelle zurück, deren Schema in der Abfrage selbst definiert ist. Und deren Daten aus einem externen Speicherobjekt gelesen werden, wie einem Blob in Azure Blob Storage oder einer Datei in Azure Data Lake Storage.</p>
+<p>Syntax</p>
+<pre><code> externaldata ( ColumnName : ColumnType [, ...] )
+  [ StorageConnectionString [, ...] ]
+  [with ( PropertyName = PropertyValue [, ...] )]
+</code></pre>
+<p>Argumente</p>
+<ul>
+<li><p>ColumnName, ColumnType: Die Argumente definieren das Schema der Tabelle. Die Syntax entspricht der Syntax, die beim Definieren einer Tabelle verwendet wird. Tabelle erstellen.</p>
+</li>
+<li><p>StorageConnectionString: Speicherverbindungszeichenfolgen, die die Speicherartefakte beschreiben, die die zurückzugebenden Daten enthalten.</p>
+</li>
+<li><p>PropertyName, PropertyValue, ...: Weitere Eigenschaften, die beschreiben, wie die aus dem Speicher abgerufenen Daten interpretiert werden, wie unter Aufnahmeeigenschaften aufgeführt.</p>
+</li>
+</ul>
+<p>Derzeit werden folgende Eigenschaften unterstützt:</p>
+<p>ARGUMENTE</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Eigentum</th>
+<th style="text-align: left;">Typ</th>
+<th style="text-align: left;">BESCHREIBUNG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Format</td>
+<td style="text-align: left;">Schnur</td>
+<td style="text-align: left;">Datenformat. Wenn nicht angegeben, wird versucht, das Datenformat aus der Dateierweiterung zu erkennen (Standardeinstellung für CSV). Alle Erfassungsdatenformate werden unterstützt.</td>
+</tr>
+<tr>
+<td style="text-align: left;">ignoreFirstRecord</td>
+<td style="text-align: left;">Boolesch</td>
+<td style="text-align: left;">Wenn dieser Wert auf "true" festgelegt ist, wird angegeben, dass der erste Datensatz in jeder Datei ignoriert wird. Diese Eigenschaft ist hilfreich beim Abfragen von CSV-Dateien mit Headern.</td>
+</tr>
+<tr>
+<td style="text-align: left;">ingestionMapping</td>
+<td style="text-align: left;">Schnur</td>
+<td style="text-align: left;">Ein Zeichenfolgenwert, der angibt, wie Daten aus der Quelldatei den tatsächlichen Spalten im Operatorergebnissatz zugeordnet werden. Weitere Informationen finden Sie unter „Datenzuordnungen“.</td>
+</tr>
+</tbody>
+</table>
+<p>Rückkehr</p>
+<p>Der externaldata-Operator gibt eine Datentabelle des angegebenen Schemas zurück, wobei Daten aus dem angegebenen Speicherartefakt analysiert werden, die durch die Speicherverbindungszeichenfolge angegeben sind.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Dieses Beispiel ist in der Demoumgebung nicht verfügbar.</p>
+</div>
+<pre><code class="lang-kusto">Users
+| where UserID in ((externaldata (UserID:string) [
+    @"https://storageaccount.blob.core.windows.net/storagecontainer/users.txt" 
+      h@"?...SAS..." // Secret token needed to access the blob
+    ]))
+| ...
+
+</code></pre>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

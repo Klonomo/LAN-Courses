@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_01_03_04" title="Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Microsoft Security Copilot Phishing Triage Agent in Microsoft Defender</div>
+<div class="section-content">
+<p>Phishing ist nach wie vor einer der häufigsten Einstiegspunkte für Cyberangriffe und eine anhaltende Betriebsbelastung für SoC-Teams (Security Operations Center). Analysten sehen sich einem kontinuierlichen Strom von vom Benutzer gemeldeten verdächtigen E-Mails gegenüber, die eine sorgfältige Überprüfung und Selektierung erfordern. Im großen Stil verlangsamt dieses Volumen die Reaktion, beansprucht Zeit für Analysten und erhöht das Risiko, dass echte Bedrohungen übersehen werden.</p>
+<p>Der Phishing Triage Agent in Microsoft Defender ist ein KI-Agent, der Sicherheitsteams dabei hilft, die Selektierung und Klassifizierung von von Benutzern gemeldeten Phishing-E-Mails zu skalieren, wodurch sich wiederholende Untersuchungsarbeiten reduziert und die Reaktion beschleunigt wird.</p>
+<h2 id="watch-introduction-to-the-phishing-triage-agent">Ansehen: Einführung in den Phishing-Selektierungs-Agent</h2>
+<p>Sehen Sie sich dieses Video an, um den Phishing-Triage-Agent zu demonstrieren:</p>
+<div class="embeddedvideo"><p><em>[Interaktiver Inhalt auf Microsoft Learn verfügbar]</em></p></div>
+<h2 id="how-the-phishing-triage-agent-works">Funktionsweise des Phishing-Selektierungs-Agents</h2>
+<p>Der Phishing-Triage-Agent ist ein Security Copilot-Agent in Microsoft Defender, der die Effizienz von Sicherheitsteams verbessert, indem von Benutzern übermittelte Phishingvorfälle klassifiziert und selektieren. Der Agent verwendet eine LLM-basierte Analyse (Large Language Model), um gemeldete E-Mails zu bewerten, die Absicht zu ermitteln und jede Übermittlung als echte Bedrohung oder falsch positiv zu klassifizieren.</p>
+<p>Anstatt sich auf statische Regeln oder vordefinierte Eingaben zu verlassen, wendet der Agent kontextbezogene Schlussfolgerungen an, um Übermittlungen dynamisch und im großen Stil auszuwerten. Durch das Herausfiltern falscher Alarme ermöglicht der Agent analysten, sich auf bestätigte Bedrohungen und Untersuchungen mit höheren Auswirkungen zu konzentrieren.</p>
+<h3 id="key-capabilities">Wichtige Funktionen</h3>
+<p>Zu den wichtigsten Funktionen des Agents gehören:</p>
+<ul>
+<li><p>
+              <strong>Autonome Selektierung</strong>: Verwendet erweiterte KI-Tools, um anspruchsvolle Bewertungen durchzuführen und zu bestimmen, ob eine Übermittlung eine echte Bedrohung oder ein falscher Alarm ist, ohne dass eine schrittweise Eingabe oder Code von Menschen erforderlich ist.</p>
+</li>
+<li><p>
+              <strong>Transparente Begründung</strong>: Bietet eine transparente Begründung für die Klassifizierungsurteile in natürlicher Sprache, in der die Schlussfolgerungen und die Beweise, die verwendet werden, um sie zu erreichen, detailliert erläutert werden. Es bietet auch eine visuelle Darstellung des Argumentationsprozesses.</p>
+</li>
+<li><p>
+              <strong>Lernen basierend auf Feedback</strong>: Analysten können Feedback zu Klassifizierungsergebnissen geben. Im Laufe der Zeit hilft dieses Feedback, das Verhalten des Agents zu verfeinern, um den Organisationskontext besser widerzuspiegeln und die manuelle Nachverfolgung zu reduzieren.</p>
+</li>
+</ul>
+<h3 id="security-tools-and-detection-capabilities">Sicherheitstools und Erkennungsfunktionen</h3>
+<p>Um Phishingversuche zu untersuchen, verwendet der Agent eine Kombination aus Microsoft Defender- und Microsoft Security Copilot-Funktionen sowie eine Reihe von Sicherheitstools, die sich ständig weiterentwickeln, wenn neue Erkennungstechniken und Integrationen verfügbar werden:</p>
+<ul>
+<li>
+              <strong>Email Inhaltsanalyse</strong>: Erkennt verdächtige Muster und Indikatoren in E-Mail-Texten</li>
+<li>
+              <strong>Datei- und URL-Detonation</strong>: Führt potenziell schädliche Dateien und Links mithilfe von Microsoft Deep Analysis-Tools sicher aus und analysiert sie.</li>
+<li>
+              <strong>Screenshotanalyse</strong>: Überprüft visuelle Inhalte aus E-Mails, URLs und unterstützten Dateitypen</li>
+<li>
+              <strong>Threat Intelligence-Tools</strong>: Verwendet Microsoft Threat Intelligence-Feeds, um einen erweiterten Erkennungskontext bereitzustellen</li>
+<li>
+              <strong>Erweiterte Suche über Datenquellen hinweg</strong>: Korreliert Signale in allen verfügbaren Sicherheitsdatenquellen, um verdächtige Aktivitäten zu kontextualisieren und fundierte Ermittlungsentscheidungen zu fördern</li>
+</ul>
+<h2 id="prerequisites-and-requirements">Voraussetzungen und Anforderungen</h2>
+<p>Zum Ausführen des Phishing-Selektierungs-Agents in Ihrer Umgebung benötigen Sie Folgendes:</p>
+<h3 id="products">Produkte</h3>
+<ul>
+<li>
+              <strong>Security Copilot</strong>: Bereitgestellte Kapazität in Security Compute Units (SCU)</li>
+<li>
+              <strong>Microsoft Defender für Office 365 Plan 2</strong>: Muss bereitgestellt werden</li>
+</ul>
+<h3 id="microsoft-defender-required-features">Microsoft Defender erforderlichen Features</h3>
+<ul>
+<li><p>
+              <strong>Einheitliche rollenbasierte Zugriffssteuerung (Unified Role-Based Access Control, URBAC):</strong> Muss für Defender für Office 365</p>
+<ul>
+<li>Aktivieren der Defender for Office 365-Workload in den Microsoft Defender XDR-Einstellungen</li>
+</ul>
+</li>
+<li><p>
+              <strong>Vom Benutzer gemeldete Einstellungen</strong>: Aktivieren Sie "Gemeldete Nachrichten in Outlook überwachen", um zu definieren, wie Benutzer potenziell schädliche Nachrichten melden.</p>
+<ul>
+<li>Wählen Sie eine der Optionen "Gemeldete Nachrichtenziele" aus.</li>
+<li>Wenn Sie ein E-Mail-Berichterstellungstool eines Drittanbieters verwenden, überprüfen Sie die Optionen für die Integration in Microsoft Defender XDR</li>
+</ul>
+</li>
+<li><p>
+              <strong>Warnungsrichtlinie</strong>: Stellen Sie sicher, dass die Warnungsrichtlinie "Email vom Benutzer als Schadsoftware oder Phish gemeldet" aktiviert ist.</p>
+<ul>
+<li>Der Agent klassifiziert keine Warnungen, die durch die Warnungsoptimierung unterdrückt wurden.</li>
+<li>Deaktivieren der integrierten Warnungsoptimierungsregel "Auto-Resolve – Email vom Benutzer als Schadsoftware oder Phish gemeldet"</li>
+</ul>
+</li>
+</ul>
+<h3 id="plugins">Plug-Ins</h3>
+<p>Der Phishing-Selektierungs-Agent aktiviert diese Security Copilot-Plug-Ins automatisch:</p>
+<ul>
+<li>Microsoft Defender XDR</li>
+<li>Microsoft Threat Intelligence</li>
+<li>Phishing-Selektierungs-Agent</li>
+</ul>
+<h2 id="permissions-required">Erforderliche Berechtigungen</h2>
+<p>Die Agent-Identität benötigt diese Berechtigungen, um auf E-Mails zuzugreifen, deren Inhalt zu analysieren und Warnungen zu verwalten:</p>
+<ul>
+<li>
+              <strong>Sicherheitsdatengrundlagen (lesen)</strong>: Zugreifen auf grundlegende Sicherheitsdaten wie Warnungen und Vorfälle</li>
+<li>
+              <strong>Warnungen (Verwalten)</strong>: Klassifizieren der Warnung und Überwachen des Status der Warnung</li>
+<li>
+              <strong>Security Copilot (Lesen)</strong>: Zugriff auf Security Copilot-Funktionen</li>
+<li>
+              <strong>Email &amp; Zusammenarbeitsmetadaten (lesen):</strong> Zugriff auf Metadaten für vom Benutzer gemeldete E-Mails</li>
+<li>
+              <strong>Email &amp; Zusammenarbeitsinhalte (Lesen):</strong>Lesen Sie den Inhalt der vom Benutzer gemeldeten E-Mails, die für die Analyse benötigt werden.</li>
+</ul>
+<p>Diese Berechtigungen befinden sich unter der Gruppe Berechtigungen für Sicherheitsvorgänge und müssen auf die Microsoft Defender für Office 365 Datenquelle festgelegt werden.</p>
+<h2 id="set-up-the-phishing-triage-agent">Einrichten des Phishing-Selektierungs-Agents</h2>
+<p>Der Setupprozess umfasst das Zuweisen einer Identität und der erforderlichen Berechtigungen für den Agent. Sie können den Setup-Assistenten für den Phishing-Triage-Agent auf eine von zwei Arten öffnen:</p>
+<ul>
+<li>Aus dem Sicherheitsspeicher im Microsoft Defender-Portal</li>
+<li>Wählen Sie in der Incidents-Warteschlange im Microsoft Defender-Portal <strong>Agent einrichten</strong> aus.</li>
+</ul>
+<h3 id="assign-the-agents-identity">Zuweisen der Identität des Agents</h3>
+<p>Für den Agent ist eine Identität erforderlich. Sie können einen von zwei Identitätstypen auswählen:</p>
+<ol>
+<li><p>
+              <strong>Erstellen einer neuen Agent-Identität (empfohlen):</strong> Erstellen Sie automatisch eine neue Microsoft Entra-Agent-ID. Microsoft Entra erstellt Agent-IDs speziell für KI-Agents. Die Verwendung von Agent-IDs sorgt für einen bereichsbezogenen, sicheren und einfacheren Zugriff.</p>
+</li>
+<li><p>
+              <strong>Verbinden eines vorhandenen Benutzerkontos</strong>: Weisen Sie ein vorhandenes Benutzerkonto als Agentidentität zu. Der Agent erbt den Zugriff und die Berechtigungen des Benutzerkontos.</p>
+<ul>
+<li>Wenn Sie diese Option verwenden, legen Sie ein langes Kontoablaufdatum fest, und überwachen Sie die Authentifizierung genau status</li>
+<li>Die Benutzeridentität des Agents ist nicht mit PIM oder TAP kompatibel.</li>
+</ul>
+</li>
+</ol>
+<div class="TIP">
+<p>Tipp</p>
+<p>Verwenden Sie ein dediziertes Identitätskonto mit den mindestens erforderlichen Berechtigungen für den Agent. Weisen Sie einen eindeutigen Anzeigenamen wie "Phishing Triage Agent" zu, um ihn einfach im Microsoft Defender-Portal zu identifizieren.</p>
+</div>
+<h3 id="assign-permissions">Berechtigungen zuweisen</h3>
+<p>Weisen Sie der Agent-Identität in Übereinstimmung mit dem Prinzip der geringsten Berechtigungen nur die Berechtigungen zu, die der Phishing-Selektierungs-Agent zum Ausführen seiner Aufgaben benötigt:</p>
+<ul>
+<li>Wenn Sie eine Agent-ID verwenden, werden in der Dropdownliste nur Rollen mit den erforderlichen Berechtigungen angezeigt.</li>
+<li>Wenn Sie ein vorhandenes Benutzerkonto verwenden, müssen Sie dieser Identität vor dem Setup die erforderlichen Berechtigungen zuweisen.</li>
+</ul>
+<div class="IMPORTANT">
+<p>Wichtig</p>
+<p>Nachdem Sie dem Agent seine Berechtigungen zugewiesen haben, stellen Sie sicher, dass die Benutzergruppe, die den Agent überwacht, über gleiche oder höhere Berechtigungen verfügt, um seine Aktivität und Ausgabe zu überwachen.</p>
+</div>
+<h2 id="enhance-incident-response">Verbessern der Reaktion auf Vorfälle</h2>
+<p>Der Phishing-Triage-Agent soll Sicherheitsteams dabei helfen, die überwältigende Menge verdächtiger E-Mails zu verwalten, die Organisationen täglich erhalten. Der Agent fungiert als Kraftmultiplikator für SOC-Teams und entlädt zeitaufwändige Selektierungsaufgaben, reduziert die Ermüdung von Warnungen und beschleunigt die Reaktion auf Vorfälle.</p>
+<h3 id="agent-trigger-and-workflow">Agent-Trigger und -Workflow</h3>
+<p>Nach der vollständigen Einrichtung und Ausführung wird der Phishing Triage-Agent automatisch ausgelöst, wenn ein Benutzer eine verdächtige Phishing-E-Mail meldet und eine Warnung erstellt wird. Der Agent analysiert die Warnung dann autonom mithilfe komplexer KI-Tools und des Kontexts Ihrer organization.</p>
+<p>
+              <strong>Klassifizierungsergebnisse:</strong></p>
+<ul>
+<li>
+              <strong>Falsch positiv</strong>: Wenn die Warnung als falscher Alarm ermittelt wird, klassifiziert der Agent sie und löst sie entsprechend auf.</li>
+<li>
+              <strong>True Positive</strong>: Wenn die Warnung als bösartig eingestuft wird, wird sie als solche klassifiziert, und die status des zugehörigen Incidents bleibt offen und wird von einem Analysten untersucht.</li>
+</ul>
+<p>Für jede Warnung, die er verarbeitet, liefert der Agent eine detaillierte Erläuterung seines Urteils, wodurch die Transparenz erhöht und das Vertrauen der Analysten gestärkt wird.</p>
+<h3 id="collaborate-with-the-agent">Zusammenarbeiten mit dem Agent</h3>
+<p>Um Transparenz zu gewährleisten, aktualisiert der Agent während des Selektierungsprozesses routinemäßig Incidentfelder:</p>
+<ul>
+<li>Wenn die Selektierung gestartet wird, weist der Agent die Warnung sich selbst zu.</li>
+<li>Fügt dem entsprechenden Incident ein Tag "Agent" hinzu.</li>
+<li>Analysten können die Incidentwarteschlange filtern, um nur Incidents anzuzeigen, die vom Agent gekennzeichnet wurden.</li>
+</ul>
+<p>Wenn eine Warnung als echte Phishingbedrohung identifiziert wird, markiert der Phishing-Triage-Agent sie als True Positive, sodass Analysten bestätigte Bedrohungen priorisieren und schneller reagieren können. Dies führt zu einer erheblichen Reduzierung der Warteschlangen und minimiert den Zeitaufwand für die Sortierung durch falsch positive Ergebnisse.</p>
+<h3 id="transparency-and-explainability">Transparenz und Erklärbarkeit</h3>
+<p>Der Phishing Triage Agent wurde entwickelt, um klar zu erklären, warum und wie er jede Entscheidung getroffen hat. Für jede Warnung, die verarbeitet wird, wird Folgendes bereitgestellt:</p>
+<ul>
+<li>Eine ausführliche Erläuterung in Nur-Text</li>
+<li>Vollständige grafische Darstellung des Entscheidungsworkflows</li>
+</ul>
+<p>Diese Transparenz ermöglicht es Analysten, Ergebnisse schnell zu interpretieren, Vertrauen in die Ergebnisse des Agenten aufzubauen und ihre Zeit auf fundierte Entscheidungen zu konzentrieren.</p>
+<p>
+              <strong>So überprüfen Sie die Ergebnisse des Agents:</strong></p>
+<ol>
+<li>Auswählen eines Incidents aus der Incidentwarteschlange</li>
+<li>Suchen Sie im Seitenbereich Copilot oder Tasks unter dem Abschnitt Guided Response Triage nach dem Karte Phishing Triage Agent.</li>
+<li>Die Karte präsentiert das Urteil des Agenten basierend auf seiner Klassifizierung und hebt wichtige Elemente belastender Beweise hervor.</li>
+<li>Wählen Sie <strong>Agent-Aktivität anzeigen</strong> aus, um die Schritte anzuzeigen, die der Agent vor dem Erreichen seiner Klassifizierung ausgeführt hat.</li>
+</ol>
+<h2 id="teach-the-agent-through-feedback">Unterrichten des Agenten durch Feedback</h2>
+<p>Der Phishing Triage Agent verbessert seine Entscheidungsfindung kontinuierlich basierend auf Feedback, das auf die Anforderungen Ihrer organization zugeschnitten ist. Analysten können Eingaben in einfacher, natürlicher Sprache bereitstellen, sodass das Verhalten des Agenten leicht zu steuern und zu gestalten ist.</p>
+<h3 id="provide-feedback">Feedback geben</h3>
+<p>So geben Sie Feedback und unterrichten den Agent:</p>
+<ol>
+<li>Suchen Sie auf der Seite "Incident" den Phishing-Selektierungs-Agent Karte</li>
+<li>Überprüfen der Klassifizierung und Argumentation des Agents</li>
+<li>Wenn die Entscheidung nicht mit den Klassifizierungskriterien Ihres organization übereinstimmt, wählen Sie <strong>Klassifizierung ändern</strong> aus.</li>
+<li>Wählen Sie im Bereich Warnung verwalten die neue Klassifizierung aus, und geben Sie Ihren Grund für die Änderung an.</li>
+<li>Wählen Sie <strong>Dieses Feedback verwenden aus, um dem Agent beizubringen</strong> , Ihr Feedback anzuwenden.</li>
+<li>Wählen Sie <strong>Feedback auswerten</strong> aus, um eine Vorschau anzuzeigen, wie der Agent Ihr Feedback in eine Lektion übersetzt.</li>
+<li>Wenn das Ergebnis Ihren Erwartungen entspricht, wählen <strong>Sie Speichern</strong> aus, um es als Lektion im Speicher des Agents zu speichern.</li>
+</ol>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Sie können dem Agent nur einmal pro Warnung Feedback geben, und es kann nur verwendet werden, um dem Agent beizubringen, wie Phishingwarnungen klassifiziert werden. Überprüfen Sie immer Ihr Feedback, bevor Sie die Lektion speichern.</p>
+</div>
+<h3 id="best-practices-for-writing-feedback">Bewährte Methoden zum Schreiben von Feedback</h3>
+<p>So stellen Sie sicher, dass der Agent Ihr Feedback effektiv einbezieht:</p>
+<ul>
+<li>
+              <strong>Sicherstellen, dass Feedback relevant und kontextbezogen ist</strong>: Feedback sollte sich nur auf die aktuell überprüfte E-Mail beziehen und der aktualisierten Klassifizierung entsprechen.</li>
+<li>
+              <strong>Beschreibend und spezifisch</strong>: Erläutern Sie Merkmale wie E-Mail-Betreff, Nachrichtentext, Absender oder Empfänger eindeutig.</li>
+<li>
+              <strong>Sorgen Sie für Klarheit und Entschlossenheit</strong>: Vermeiden Sie vage oder universelle Aussagen. Verwenden von klaren und umsetzbaren Begriffen</li>
+<li>
+              <strong>Mit vorherigem Feedback konsistent</strong> sein: Stellen Sie sicher, dass neues Feedback mit der zuvor bereitgestellten Eingabe übereinstimmt.</li>
+<li>
+              <strong>Überprüfen der Interpretation des Agents</strong>: Vergewissern Sie sich immer, dass das Feedback korrekt in eine Lektion übersetzt wird.</li>
+</ul>
+<h2 id="monitor-and-manage-the-agent">Überwachen und Verwalten des Agents</h2>
+<p>Sie können Agent-Metriken anzeigen und den Agent auf der Seite Phishing Triage Agent verwalten:</p>
+<ul>
+<li>Navigieren Sie zu <strong>Security Copilot &gt; Agents</strong>, suchen Sie unter Verwendete <strong>Agents</strong> nach dem Phishing-Selektierungs-Agent, und wählen Sie <strong>Zu Agent wechseln</strong> aus.</li>
+</ul>
+<h3 id="overview-tab">Registerkarte „Übersicht“</h3>
+<p>Die Registerkarte Übersicht bietet Folgendes:</p>
+<ul>
+<li>Details zur aktuellen status, Identität, Rolle und aktuellen Aktivitäten des Agents</li>
+<li>Eine Liste der letzten Aktivitäten mit der Möglichkeit, Untersuchungsdetails und den vollständigen Workflow anzuzeigen</li>
+</ul>
+<h3 id="performance-tab">Registerkarte "Leistung"</h3>
+<p>Auf der Registerkarte Leistung werden wichtige Metriken angezeigt, darunter:</p>
+<ul>
+<li>Tägliche Aktivität</li>
+<li>Mean Time to Triage (MTTT)</li>
+<li>SCU-Verbrauch</li>
+</ul>
+<h3 id="management-options">Verwaltungsoptionen</h3>
+<p>Auf der Agentseite haben Sie folgende Möglichkeiten:</p>
+<ul>
+<li>
+              <strong>Anhalten oder Ausführen</strong>: Vorübergehendes Beenden oder Neustarten der Aktivitäten des Agents</li>
+<li>
+              <strong>Identität und Rolle ändern</strong>: Bearbeiten der Identität und Berechtigungen des Agents</li>
+<li>
+              <strong>Anzeigen und Verwalten von Feedback</strong>: Greifen Sie auf die Feedbackseite des Agents zu, um das gesamte übermittelte Feedback zu überprüfen.</li>
+<li>
+              <strong>Entfernen des Agents</strong>: Beenden der Selektierung und Klassifizierung neuer Incidents (das gesamte Feedback wird gelöscht, aber der Verlauf wird beibehalten)</li>
+</ul>
+<h2 id="key-benefits">Hauptvorteile</h2>
+<p>Der Phishing-Triage-Agent bietet mehrere wichtige Vorteile:</p>
+<ul>
+<li>
+              <strong>Reduziert die manuelle Arbeitsauslastung</strong>: Automatisiert den zeitaufwändigen Prozess der Selektierung von vom Benutzer gemeldeten Phishing-E-Mails.</li>
+<li>
+              <strong>Verbessert die Effizienz</strong>: Filtert Falsche Alarme heraus, damit analysten sich auf bestätigte Bedrohungen konzentrieren können</li>
+<li>
+              <strong>Beschleunigte Reaktionszeiten</strong>: Autonome Selektierung bedeutet schnellere Identifizierung und Klassifizierung realer Bedrohungen</li>
+<li>
+              <strong>Verbessert die Genauigkeit</strong>: KI-gestützte Analyse in Kombination mit Organisationsfeedback verbessert die Erkennungsgenauigkeit im Laufe der Zeit.</li>
+<li>
+              <strong>Sorgt für Transparenz</strong>: Klare Erklärungen und visuelle Workflows schaffen Vertrauen in Agent-Entscheidungen</li>
+<li>
+              <strong>Skaliert mit Ihrem organization</strong>: Verarbeitet große Mengen gemeldeter E-Mails, ohne dass andere Analystenressourcen erforderlich sind.</li>
+</ul>
+<p>Durch die Reduzierung der Belastung durch reaktive Arbeit ermöglicht der Phishing-Triage-Agent Analysten, sich auf proaktive Sicherheitsmaßnahmen zu konzentrieren, was letztendlich den allgemeinen Sicherheitsstatus der organization stärkt.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

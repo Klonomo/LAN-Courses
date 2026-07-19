@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_08_03" title="Konfigurieren von Warnungsbenachrichtigungen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Konfigurieren von Warnungsbenachrichtigungen</div>
+<div class="section-content">
+<p>Sie können Defender für Endpunkt so konfigurieren, dass bei neuen Warnungen E-Mail-Benachrichtigungen an bestimmte Empfänger gesendet werden. Dank dieses Features können Sie eine Gruppe mit Benutzern festlegen, die umgehend informiert werden und abhängig vom Schweregrad auf Warnungen reagieren können.</p>
+<p>Nur Benutzer mit der Berechtigung „Sicherheitseinstellungen verwalten“ können E-Mail-Benachrichtigungen konfigurieren. Wenn Sie sich für die Verwaltung von grundlegenden Berechtigungen entschieden haben, können Benutzer mit den Rollen „Sicherheitsadministrator“ oder „Globaler Administrator“ E-Mail-Benachrichtigungen konfigurieren.</p>
+<p>Sie können Warnungsschweregrade festlegen, die Benachrichtigungen auslösen. Sie können der E-Mail-Benachrichtigung auch Empfänger hinzufügen bzw. Empfänger aus der Benachrichtigung entfernen. Neue Empfänger werden über Warnungen informiert, die auftreten, nachdem sie hinzugefügt wurden. Weitere Informationen zu Warnungen finden Sie unter Anzeigen und Organisieren der Alarmwarteschlange.</p>
+<p>Wenn Sie die rollenbasierte Zugriffssteuerung (RBAC) verwenden, erhalten die Empfänger nur Benachrichtigungen auf der Grundlage der Gerätegruppen, die in der Benachrichtigungsregel konfiguriert wurden. Benutzer mit der entsprechenden Berechtigung können nur Benachrichtigungen erstellen, bearbeiten oder löschen, die auf den Verwaltungsbereich ihrer Gerätegruppe beschränkt sind. Nur Benutzer mit der Rolle „Globaler Administrator“ können Benachrichtigungsregeln verwalten, die für alle Gerätegruppen konfiguriert wurden.</p>
+<p>Die E-Mail-Benachrichtigung enthält grundlegende Informationen zur Warnung und einen Link zum Portal, in dem Sie weitere Untersuchungen durchführen können.</p>
+<h2 id="create-rules-for-alert-notifications">Erstellen von Regeln für Warnungsbenachrichtigungen</h2>
+<p>Sie können Regeln erstellen, die die Geräte und Schweregrade von Warnungen für den Versand von E-Mail-Benachrichtigungen an Benachrichtigungsempfänger festlegen.</p>
+<ol>
+<li><p>Wählen Sie im Microsoft&nbsp;Defender-Portal <strong>Einstellungen</strong> aus, dann <strong>Endpunkte</strong> und schließlich <strong>E-Mail-Benachrichtigungen</strong>.</p>
+</li>
+<li><p>Klicken Sie auf <strong>+ Element hinzufügen</strong>.</p>
+</li>
+<li><p>Geben Sie die allgemeinen Informationen an:</p>
+<ul>
+<li><p>Regelname – Geben Sie einen Namen für die Benachrichtigungsregel an.</p>
+</li>
+<li><p>Organisationsname einschließen – Geben Sie den Kundennamen an, der in der E-Mail-Benachrichtigung angezeigt wird.</p>
+</li>
+<li><p>Mandantenspezifischen Portallink einbeziehen – Fügt einen Link mit der Mandanten-ID hinzu, um den Zugriff auf einen bestimmten Mandanten zu ermöglichen.</p>
+</li>
+<li><p>Geräteinformationen einschließen – Schließt den Gerätenamen in den E-Mail-Warnungstext ein.</p>
+</li>
+<li><p>Geräte: Wählen Sie aus, ob Empfänger hinsichtlich der Warnungen auf allen Geräten (nur globale Administratorrolle) oder ausgewählten Gerätegruppen benachrichtigt werden sollen. Weitere Informationen finden Sie unter „Erstellen und Verwalten von Gerätegruppen“.</p>
+</li>
+<li><p>Warnungsschweregrad – Wählen Sie den Warnungsschweregrad aus.</p>
+</li>
+</ul>
+</li>
+<li><p>Wählen Sie <strong>Weiter</strong> aus.</p>
+</li>
+<li><p>Geben Sie die E-Mail-Adresse des Empfängers ein, und wählen Sie dann <strong>Empfänger hinzufügen</strong> aus. Sie können mehrere E-Mail-Adressen hinzufügen.</p>
+</li>
+<li><p>Überprüfen Sie durch Auswahl von Send test email, ob E-Mail-Empfänger die E-Mail-Benachrichtigungen empfangen können.</p>
+</li>
+<li><p>Wählen Sie <strong>Benachrichtigungsregel speichern</strong> aus.</p>
+</li>
+</ol>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

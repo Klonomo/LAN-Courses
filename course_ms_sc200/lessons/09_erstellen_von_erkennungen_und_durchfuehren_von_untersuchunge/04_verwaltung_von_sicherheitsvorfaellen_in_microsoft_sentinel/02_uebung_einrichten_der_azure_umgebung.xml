@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_09_04_02" title="Übung: Einrichten der Azure-Umgebung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Übung: Einrichten der Azure-Umgebung</div>
+<div class="section-content">
+<p>Führen Sie die folgenden Schritte aus, um die Azure-Umgebung für die optionale Vorfallverwaltungsübung einzurichten.</p>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<p>Um diese optionale Übung abzuschließen, benötigen Sie Zugriff auf ein Azure-Abonnement. Sollten Sie noch kein Abonnement besitzen, <a href="https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn" data-linktype="external">erstellen Sie ein kostenloses Konto</a>.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Beachten Sie, dass diese Übung Ressourcen erstellt, die möglicherweise Kosten in Ihrem Azure-Abonnement verursachen. Informationen zum Schätzen der Kosten finden Sie in den <a href="https://azure.microsoft.com/pricing/details/azure-sentinel/" data-linktype="external">Preisen von Microsoft Sentinel</a>.</p>
+</div>
+<h2 id="deploy-the-azure-resource-manager-template">Bereitstellen der Azure Resource Manager-Vorlage</h2>
+<ol>
+<li><p>Wählen Sie die folgende Schaltfläche aus, um die Azure Resource Manager (ARM)-Vorlage bereitzustellen, die die Azure-Ressourcen erstellt. Melden Sie sich bei Azure an, wenn Sie dazu aufgefordert werden.</p>
+<p>
+              <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FMicrosoftDocs%2Fmslearn-security-ops-sentinel%2Fmain%2Fmslearn-incident-management-sentinel%2Fsentinel-template.json?azure-portal=true" data-linktype="external">
+              <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgd2lkdGg9IjE2NyIKICAgaGVpZ2h0PSIzNCIKICAgdmlld0JveD0iMCAwIDE2NyAzNCIKICAgZmlsbD0ibm9uZSIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0ic3ZnMTEzNTAiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImRlcGxveXRvYXp1cmUuc3ZnIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIxLjEgKGM2OGUyMmMzODcsIDIwMjEtMDUtMjMpIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMxMTM1NCIgLz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9Im5hbWVkdmlldzExMzUyIgogICAgIHBhZ2Vjb2xvcj0iIzUwNTA1MCIKICAgICBib3JkZXJjb2xvcj0iI2VlZWVlZSIKICAgICBib3JkZXJvcGFjaXR5PSIxIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjAiCiAgICAgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAiCiAgICAgaW5rc2NhcGU6cGFnZWNoZWNrZXJib2FyZD0iMCIKICAgICBzaG93Z3JpZD0iZmFsc2UiCiAgICAgaW5rc2NhcGU6em9vbT0iOC45NTIwOTU4IgogICAgIGlua3NjYXBlOmN4PSI4My41IgogICAgIGlua3NjYXBlOmN5PSIxNy4wMzUxMTciCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxNjY0IgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMzMiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjM4NjciCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjI1MCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIwIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9InN2ZzExMzUwIiAvPgogIDxyZWN0CiAgICAgd2lkdGg9IjE2NyIKICAgICBoZWlnaHQ9IjM0IgogICAgIHJ4PSI0IgogICAgIGZpbGw9IiMwMDc4RDQiCiAgICAgaWQ9InJlY3QxMTM0NCIgLz4KICA8cGF0aAogICAgIGQ9Ik01MC4yOTY0IDIzVjEyLjQ5NzFINTMuMzI4NkM1Ny4yMDA3IDEyLjQ5NzEgNTkuMTM2NyAxNC4yMDM2IDU5LjEzNjcgMTcuNjE2N0M1OS4xMzY3IDE5LjIzNzggNTguNTk5NiAyMC41NDE1IDU3LjUyNTQgMjEuNTI3OEM1Ni40NTEyIDIyLjUwOTMgNTUuMDEwNyAyMyA1My4yMDQxIDIzSDUwLjI5NjRaTTUyLjAzMjIgMTMuOTc2NlYyMS41Mjc4SDUzLjQyMzhDNTQuNjQ5NCAyMS41Mjc4IDU1LjYwMTYgMjEuMTkwOSA1Ni4yODAzIDIwLjUxNzFDNTYuOTYzOSAxOS44NDMzIDU3LjMwNTcgMTguODkxMSA1Ny4zMDU3IDE3LjY2MDZDNTcuMzA1NyAxNS4yMDQ2IDU2LjAzMzcgMTMuOTc2NiA1My40ODk3IDEzLjk3NjZINTIuMDMyMlpNNjcuMjIyNyAxOS43MTE0SDYyLjExMDRDNjIuMTI5OSAyMC40MDQ4IDYyLjM0MjMgMjAuOTM5NSA2Mi43NDc2IDIxLjMxNTRDNjMuMTU3NyAyMS42OTE0IDYzLjcxOTIgMjEuODc5NCA2NC40MzIxIDIxLjg3OTRDNjUuMjMyOSAyMS44Nzk0IDY1Ljk2NzggMjEuNjQwMSA2Ni42MzY3IDIxLjE2MTZWMjIuNTMxMkM2NS45NTMxIDIyLjk2MDkgNjUuMDQ5OCAyMy4xNzU4IDYzLjkyNjggMjMuMTc1OEM2Mi44MjMyIDIzLjE3NTggNjEuOTU2NSAyMi44MzY0IDYxLjMyNjcgMjIuMTU3N0M2MC43MDE3IDIxLjQ3NDEgNjAuMzg5MiAyMC41MTQ2IDYwLjM4OTIgMTkuMjc5M0M2MC4zODkyIDE4LjExMjMgNjAuNzMzNCAxNy4xNjI2IDYxLjQyMTkgMTYuNDMwMkM2Mi4xMTUyIDE1LjY5MjkgNjIuOTc0NiAxNS4zMjQyIDY0IDE1LjMyNDJDNjUuMDI1NCAxNS4zMjQyIDY1LjgxODggMTUuNjUzOCA2Ni4zODA0IDE2LjMxM0M2Ni45NDE5IDE2Ljk3MjIgNjcuMjIyNyAxNy44ODc3IDY3LjIyMjcgMTkuMDU5NlYxOS43MTE0Wk02NS41ODIgMTguNTEwM0M2NS41NzcxIDE3Ljg5OTkgNjUuNDMzMSAxNy40MjYzIDY1LjE0OTkgMTcuMDg5NEM2NC44NjY3IDE2Ljc0NzYgNjQuNDc2MSAxNi41NzY3IDYzLjk3OCAxNi41NzY3QzYzLjQ4OTcgMTYuNTc2NyA2My4wNzQ3IDE2Ljc1NDkgNjIuNzMyOSAxNy4xMTEzQzYyLjM5NiAxNy40Njc4IDYyLjE4ODUgMTcuOTM0MSA2Mi4xMTA0IDE4LjUxMDNINjUuNTgyWk03MC41Njk4IDIxLjg5NEg3MC41NDA1VjI2LjQ0OTdINjguODQxM1YxNS41SDcwLjU0MDVWMTYuODE4NEg3MC41Njk4QzcxLjE1MDkgMTUuODIyMyA3Mi4wMDA1IDE1LjMyNDIgNzMuMTE4NyAxNS4zMjQyQzc0LjA3MDggMTUuMzI0MiA3NC44MTMgMTUuNjU4NyA3NS4zNDUyIDE2LjMyNzZDNzUuODc3NCAxNi45OTY2IDc2LjE0MzYgMTcuODk1IDc2LjE0MzYgMTkuMDIyOUM3Ni4xNDM2IDIwLjI3MjkgNzUuODQzMyAyMS4yNzM5IDc1LjI0MjcgMjIuMDI1OUM3NC42NDIxIDIyLjc3NzggNzMuODIxOCAyMy4xNTM4IDcyLjc4MTcgMjMuMTUzOEM3MS44MjQ3IDIzLjE1MzggNzEuMDg3NCAyMi43MzM5IDcwLjU2OTggMjEuODk0Wk03MC41MjU5IDE4LjkzNTFWMTkuODY1MkM3MC41MjU5IDIwLjQxMjEgNzAuNjk5MiAyMC44NzYgNzEuMDQ1OSAyMS4yNTY4QzcxLjM5NzUgMjEuNjM3NyA3MS44NDE4IDIxLjgyODEgNzIuMzc4OSAyMS44MjgxQzczLjAwODggMjEuODI4MSA3My41MDIgMjEuNTg0IDczLjg1ODQgMjEuMDk1N0M3NC4yMTk3IDIwLjYwMjUgNzQuNDAwNCAxOS45MTY1IDc0LjQwMDQgMTkuMDM3NkM3NC40MDA0IDE4LjMwMDMgNzQuMjMxOSAxNy43MjQxIDczLjg5NSAxNy4zMDkxQzczLjU2MyAxNi44ODkyIDczLjExMTMgMTYuNjc5MiA3Mi41NCAxNi42NzkyQzcxLjkzNDYgMTYuNjc5MiA3MS40NDYzIDE2Ljg5NCA3MS4wNzUyIDE3LjMyMzdDNzAuNzA5IDE3Ljc1MzQgNzAuNTI1OSAxOC4yOTA1IDcwLjUyNTkgMTguOTM1MVpNNzkuNTg1OSAyM0g3Ny44Nzk0VjExLjg5NjVINzkuNTg1OVYyM1pNODUuMTMwNCAyMy4xNzU4QzgzLjk3MzEgMjMuMTc1OCA4My4wNDc5IDIyLjgyNjcgODIuMzU0NSAyMi4xMjg0QzgxLjY2NiAyMS40MjUzIDgxLjMyMTggMjAuNDk1MSA4MS4zMjE4IDE5LjMzNzlDODEuMzIxOCAxOC4wNzgxIDgxLjY4MDcgMTcuMDk0MiA4Mi4zOTg0IDE2LjM4NjJDODMuMTIxMSAxNS42NzgyIDg0LjA5MjggMTUuMzI0MiA4NS4zMTM1IDE1LjMyNDJDODYuNDg1NCAxNS4zMjQyIDg3LjM5ODQgMTUuNjY4NSA4OC4wNTI3IDE2LjM1NjlDODguNzA3IDE3LjA0NTQgODkuMDM0MiAxOCA4OS4wMzQyIDE5LjIyMDdDODkuMDM0MiAyMC40MTcgODguNjgwMiAyMS4zNzY1IDg3Ljk3MjIgMjIuMDk5MUM4Ny4yNjkgMjIuODE2OSA4Ni4zMjE4IDIzLjE3NTggODUuMTMwNCAyMy4xNzU4Wk04NS4yMTA5IDE2LjY3OTJDODQuNTQ2OSAxNi42NzkyIDg0LjAyMiAxNi45MTExIDgzLjYzNjIgMTcuMzc1QzgzLjI1MDUgMTcuODM4OSA4My4wNTc2IDE4LjQ3ODUgODMuMDU3NiAxOS4yOTM5QzgzLjA1NzYgMjAuMDgwMSA4My4yNTI5IDIwLjcwMDIgODMuNjQzNiAyMS4xNTQzQzg0LjAzNDIgMjEuNjAzNSA4NC41NTY2IDIxLjgyODEgODUuMjEwOSAyMS44MjgxQzg1Ljg3OTkgMjEuODI4MSA4Ni4zOTI2IDIxLjYwNiA4Ni43NDkgMjEuMTYxNkM4Ny4xMTA0IDIwLjcxNzMgODcuMjkxIDIwLjA4NSA4Ny4yOTEgMTkuMjY0NkM4Ny4yOTEgMTguNDM5NSA4Ny4xMTA0IDE3LjgwMjIgODYuNzQ5IDE3LjM1M0M4Ni4zOTI2IDE2LjkwMzggODUuODc5OSAxNi42NzkyIDg1LjIxMDkgMTYuNjc5MlpNOTcuMjY2NiAxNS41TDkzLjg4MjggMjQuMjAxMkM5My4xNzk3IDI1Ljc1MzkgOTIuMTkzNCAyNi41MzAzIDkwLjkyMzggMjYuNTMwM0M5MC41Njc0IDI2LjUzMDMgOTAuMjY5NSAyNi40OTg1IDkwLjAzMDMgMjYuNDM1MVYyNS4wMjE1QzkwLjI5ODggMjUuMTA5NCA5MC41NDMgMjUuMTUzMyA5MC43NjI3IDI1LjE1MzNDOTEuMzk3NSAyNS4xNTMzIDkxLjg3MTEgMjQuODQwOCA5Mi4xODM2IDI0LjIxNThMOTIuNjg5IDIyLjk4NTRMODkuNzA4IDE1LjVIOTEuNTkwM0w5My4zNzc0IDIwLjk0OTJDOTMuMzk3IDIxLjAxNzYgOTMuNDQwOSAyMS4xOTgyIDkzLjUwOTMgMjEuNDkxMkg5My41NDU5QzkzLjU3MDMgMjEuMzc4OSA5My42MTQzIDIxLjIwMzEgOTMuNjc3NyAyMC45NjM5TDk1LjU1MjcgMTUuNUg5Ny4yNjY2Wk0xMDYuMTA3IDIyLjkyNjhDMTA1LjgyNCAyMy4wODMgMTA1LjQ1IDIzLjE2MTEgMTA0Ljk4NiAyMy4xNjExQzEwMy42NzMgMjMuMTYxMSAxMDMuMDE2IDIyLjQyODcgMTAzLjAxNiAyMC45NjM5VjE2LjUyNTRIMTAxLjcyN1YxNS41SDEwMy4wMTZWMTMuNjY4OUwxMDQuMjE3IDEzLjI4MDhWMTUuNUgxMDYuMTA3VjE2LjUyNTRIMTA0LjIxN1YyMC43NTE1QzEwNC4yMTcgMjEuMjU0NCAxMDQuMzAzIDIxLjYxMzMgMTA0LjQ3NCAyMS44MjgxQzEwNC42NDUgMjIuMDQzIDEwNC45MjggMjIuMTUwNCAxMDUuMzIzIDIyLjE1MDRDMTA1LjYyNiAyMi4xNTA0IDEwNS44ODcgMjIuMDY3NCAxMDYuMTA3IDIxLjkwMTRWMjIuOTI2OFpNMTEwLjg0NiAyMy4xNzU4QzEwOS43MzcgMjMuMTc1OCAxMDguODUxIDIyLjgyNjcgMTA4LjE4NyAyMi4xMjg0QzEwNy41MjggMjEuNDI1MyAxMDcuMTk4IDIwLjQ5NTEgMTA3LjE5OCAxOS4zMzc5QzEwNy4xOTggMTguMDc4MSAxMDcuNTQyIDE3LjA5NDIgMTA4LjIzMSAxNi4zODYyQzEwOC45MTkgMTUuNjc4MiAxMDkuODUgMTUuMzI0MiAxMTEuMDIxIDE1LjMyNDJDMTEyLjE0IDE1LjMyNDIgMTEzLjAxMSAxNS42Njg1IDExMy42MzYgMTYuMzU2OUMxMTQuMjY2IDE3LjA0NTQgMTE0LjU4MSAxOCAxMTQuNTgxIDE5LjIyMDdDMTE0LjU4MSAyMC40MTcgMTE0LjI0MiAyMS4zNzY1IDExMy41NjMgMjIuMDk5MUMxMTIuODg5IDIyLjgxNjkgMTExLjk4MyAyMy4xNzU4IDExMC44NDYgMjMuMTc1OFpNMTEwLjkzNCAxNi4zMzVDMTEwLjE2MiAxNi4zMzUgMTA5LjU1MiAxNi41OTg2IDEwOS4xMDMgMTcuMTI2QzEwOC42NTMgMTcuNjQ4NCAxMDguNDI5IDE4LjM3MTEgMTA4LjQyOSAxOS4yOTM5QzEwOC40MjkgMjAuMTgyNiAxMDguNjU2IDIwLjg4MzMgMTA5LjExIDIxLjM5NkMxMDkuNTY0IDIxLjkwODcgMTEwLjE3MiAyMi4xNjUgMTEwLjkzNCAyMi4xNjVDMTExLjcxIDIyLjE2NSAxMTIuMzA2IDIxLjkxMzYgMTEyLjcyMSAyMS40MTA2QzExMy4xNDEgMjAuOTA3NyAxMTMuMzUxIDIwLjE5MjQgMTEzLjM1MSAxOS4yNjQ2QzExMy4zNTEgMTguMzI3MSAxMTMuMTQxIDE3LjYwNDUgMTEyLjcyMSAxNy4wOTY3QzExMi4zMDYgMTYuNTg4OSAxMTEuNzEgMTYuMzM1IDExMC45MzQgMTYuMzM1Wk0xMjguOTA3IDIzSDEyNy41NDVMMTI2LjQzMiAyMC4wNTU3SDEyMS45NzlMMTIwLjkzMSAyM0gxMTkuNTYyTDEyMy41OSAxMi40OTcxSDEyNC44NjRMMTI4LjkwNyAyM1pNMTI2LjAyOSAxOC45NDk3TDEyNC4zODEgMTQuNDc0NkMxMjQuMzI3IDE0LjMyODEgMTI0LjI3MyAxNC4wOTM4IDEyNC4yMiAxMy43NzE1SDEyNC4xOUMxMjQuMTQyIDE0LjA2OTMgMTI0LjA4NSAxNC4zMDM3IDEyNC4wMjIgMTQuNDc0NkwxMjIuMzg5IDE4Ljk0OTdIMTI2LjAyOVpNMTM1LjUyOCAxNS44NDQyTDEzMS4wOSAyMS45NzQ2SDEzNS40ODRWMjNIMTI5LjMyNVYyMi42MjY1TDEzMy43NjMgMTYuNTI1NEgxMjkuNzQyVjE1LjVIMTM1LjUyOFYxNS44NDQyWk0xNDMuMTQ2IDIzSDE0MS45NDRWMjEuODEzNUgxNDEuOTE1QzE0MS40MTcgMjIuNzIxNyAxNDAuNjQ2IDIzLjE3NTggMTM5LjYwMSAyMy4xNzU4QzEzNy44MTMgMjMuMTc1OCAxMzYuOTIgMjIuMTExMyAxMzYuOTIgMTkuOTgyNFYxNS41SDEzOC4xMTRWMTkuNzkyQzEzOC4xMTQgMjEuMzc0IDEzOC43MTkgMjIuMTY1IDEzOS45MyAyMi4xNjVDMTQwLjUxNiAyMi4xNjUgMTQwLjk5NyAyMS45NTAyIDE0MS4zNzMgMjEuNTIwNUMxNDEuNzU0IDIxLjA4NTkgMTQxLjk0NCAyMC41MTk1IDE0MS45NDQgMTkuODIxM1YxNS41SDE0My4xNDZWMjNaTTE0OS40ODggMTYuNzE1OEMxNDkuMjc4IDE2LjU1NDcgMTQ4Ljk3NiAxNi40NzQxIDE0OC41OCAxNi40NzQxQzE0OC4wNjcgMTYuNDc0MSAxNDcuNjM4IDE2LjcxNTggMTQ3LjI5MSAxNy4xOTkyQzE0Ni45NDkgMTcuNjgyNiAxNDYuNzc4IDE4LjM0MTggMTQ2Ljc3OCAxOS4xNzY4VjIzSDE0NS41NzdWMTUuNUgxNDYuNzc4VjE3LjA0NTRIMTQ2LjgwOEMxNDYuOTc5IDE2LjUxODEgMTQ3LjI0IDE2LjEwNzkgMTQ3LjU5MSAxNS44MTQ5QzE0Ny45NDMgMTUuNTE3MSAxNDguMzM2IDE1LjM2ODIgMTQ4Ljc3MSAxNS4zNjgyQzE0OS4wODMgMTUuMzY4MiAxNDkuMzIyIDE1LjQwMjMgMTQ5LjQ4OCAxNS40NzA3VjE2LjcxNThaTTE1Ni44MiAxOS41NTAzSDE1MS41MjRDMTUxLjU0NCAyMC4zODUzIDE1MS43NjkgMjEuMDI5OCAxNTIuMTk4IDIxLjQ4MzlDMTUyLjYyOCAyMS45MzggMTUzLjIxOSAyMi4xNjUgMTUzLjk3MSAyMi4xNjVDMTU0LjgxNSAyMi4xNjUgMTU1LjU5MiAyMS44ODY3IDE1Ni4zIDIxLjMzMDFWMjIuNDU4QzE1NS42NDEgMjIuOTM2NSAxNTQuNzY5IDIzLjE3NTggMTUzLjY4NSAyMy4xNzU4QzE1Mi42MjUgMjMuMTc1OCAxNTEuNzkzIDIyLjgzNjQgMTUxLjE4OCAyMi4xNTc3QzE1MC41ODIgMjEuNDc0MSAxNTAuMjc5IDIwLjUxNDYgMTUwLjI3OSAxOS4yNzkzQzE1MC4yNzkgMTguMTEyMyAxNTAuNjA5IDE3LjE2MjYgMTUxLjI2OCAxNi40MzAyQzE1MS45MzIgMTUuNjkyOSAxNTIuNzU1IDE1LjMyNDIgMTUzLjczNiAxNS4zMjQyQzE1NC43MTggMTUuMzI0MiAxNTUuNDc3IDE1LjY0MTYgMTU2LjAxNCAxNi4yNzY0QzE1Ni41NTEgMTYuOTExMSAxNTYuODIgMTcuNzkyNSAxNTYuODIgMTguOTIwNFYxOS41NTAzWk0xNTUuNTg5IDE4LjUzMjJDMTU1LjU4NCAxNy44Mzg5IDE1NS40MTYgMTcuMjk5MyAxNTUuMDg0IDE2LjkxMzZDMTU0Ljc1NyAxNi41Mjc4IDE1NC4zIDE2LjMzNSAxNTMuNzE0IDE2LjMzNUMxNTMuMTQ4IDE2LjMzNSAxNTIuNjY3IDE2LjUzNzYgMTUyLjI3MSAxNi45NDI5QzE1MS44NzYgMTcuMzQ4MSAxNTEuNjMyIDE3Ljg3NzkgMTUxLjUzOSAxOC41MzIySDE1NS41ODlaIgogICAgIGZpbGw9IndoaXRlIgogICAgIGlkPSJwYXRoMTEzNDYiIC8+CiAgPHBhdGgKICAgICBjbGFzcz0ic3QwIgogICAgIGQ9Im0gMjQuMTc4MSw2LjE4MjQyIHYgMCAwIGggNyBjIDAuNiwwIDEuMiwwLjQgMS40LDEgbCA2LjEsMTggYyAwLjMsMSAtMC40LDIgLTEuNCwyIGggLTYuOSB2IDAgYyAwLDAgLTAuMSwwIC0wLjEsMCB2IDAgYyAtMC4zLDAgLTAuNiwtMC4xIC0wLjksLTAuMyBsIC00LjYsLTMuNCAtMC45LDIuNyBjIC0wLjIsMC42IC0wLjgsMSAtMS40LDEgaCAtNC40IGMgLTEsMCAtMS43LC0xIC0xLjQsLTIgbCA2LC0xOCBjIDAuMywtMC42IDAuOCwtMSAxLjUsLTEgeiBtIC0yLjYsMTMuNyA4LjQsNi4yIGMgMC4xLDAuMSAwLjIsMC4xIDAuMywwLjEgdiAwIGMgMC4zLDAgMC42LC0wLjMgMC41LC0wLjcgbCAtMy40LC0xMCAtMS4zLDMuMyAtMC4xLDAuNCBoIC0wLjMgLTUgeiBtIDE1LjcsNi4zIGggLTUuNiBjIDAuMSwtMC4zIDAuMSwtMC42IDAsLTEgbCAtNiwtMTggdiAwIGggNS42IGMgMC4yLDAgMC40LDAuMSAwLjUsMC4zIGwgNi4xLDE4IGMgMCwwLjQgLTAuMywwLjcgLTAuNiwwLjcgeiIKICAgICBpZD0icGF0aDM3IgogICAgIHN0eWxlPSJjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOiNmZmZmZmY7ZmlsbC1ydWxlOmV2ZW5vZGQiIC8+Cjwvc3ZnPgo=" alt="Bereitstellung in Azure" data-linktype="external">
+              
+              </a>
+            </p>
+</li>
+<li><p>Geben Sie auf der Seite " <strong>Benutzerdefinierte Bereitstellung</strong> " die folgenden Informationen an:</p>
+<ul>
+<li>Abonnement: Wählen Sie Ihr <strong>Azure-Abonnement</strong> aus, wenn es noch nicht ausgewählt ist.</li>
+<li>
+              <strong>Ressourcengruppe</strong>: Wählen Sie <strong>"Neu erstellen"</strong> aus, und benennen Sie die Ressourcengruppe <em>"azure-sentinel-rg"</em>.</li>
+<li>
+              <strong>Standort</strong>: Wählen Sie die Azure-Region aus, in der Sie Microsoft Sentinel bereitstellen möchten.</li>
+<li>
+              <strong>Arbeitsbereichsname</strong>: Geben Sie einen eindeutigen Namen für den Microsoft Sentinel-Arbeitsbereich an, z. B. <em>&lt;yourName&gt;-Sentinel</em>.</li>
+</ul>
+</li>
+<li><p>Lassen Sie die anderen Einstellungen wie folgt, wählen Sie <strong>"Überprüfen" und "Erstellen</strong>" und dann " <strong>Erstellen"</strong> aus.</p>
+</li>
+</ol>
+<p>Warten Sie, bis die Bereitstellung abgeschlossen ist. Die Bereitstellung sollte weniger als fünf Minuten dauern.</p>
+<h2 id="verify-deployed-resources">Überprüfen der bereitgestellten Ressourcen</h2>
+<ol>
+<li><p>Wenn die Bereitstellung abgeschlossen ist, wählen Sie <strong>"Zur Ressourcengruppe wechseln</strong>" aus, oder suchen Sie im Portal nach <strong>Ressourcengruppen</strong> , und wählen Sie dann <strong>azure-sentinel-rg</strong> aus.</p>
+</li>
+<li><p>Sortieren Sie auf der <strong>Seite "azure-sentinel-rg</strong> " die Liste der Ressourcen nach <strong>Typ</strong>.</p>
+</li>
+<li><p>Vergewissern Sie sich, dass die Ressourcengruppe die folgenden Ressourcen enthält:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Typ</th>
+<th>BESCHREIBUNG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+              <strong>
+              &lt;IhrName&gt;-Sentinel</strong></td>
+<td>Log Analytics-Arbeitsbereich</td>
+<td>Log Analytics-Arbeitsbereich, den Microsoft Sentinel verwendet, mit dem Namen, den Sie für den Arbeitsbereich ausgewählt haben.</td>
+</tr>
+<tr>
+<td>
+              <strong>simple-vmNetworkInterface</strong></td>
+<td>Netzwerkschnittstelle</td>
+<td>Die Netzwerkschnittstelle für die VM.</td>
+</tr>
+<tr>
+<td>
+              <strong>SecurityInsights(&lt;IhrName&gt;-Sentinel)</strong></td>
+<td>Lösung</td>
+<td>Sicherheitserkenntnisse für Microsoft Sentinel</td>
+</tr>
+<tr>
+<td>
+              <strong>st1&lt;xxxxx&gt;</strong></td>
+<td>Speicherkonto</td>
+<td>Vom virtuellen Computer verwendete Speicherkonto, wobei <strong>&lt;xxxxx&gt;</strong> eine zufällige Zeichenfolge darstellt, die generiert wird, um einen eindeutigen Speicherkontonamen zu erstellen.</td>
+</tr>
+<tr>
+<td>
+              <strong>simple-vm</strong></td>
+<td>Virtueller Computer (VM)</td>
+<td>Die in der Demo zu verwendende VM.</td>
+</tr>
+<tr>
+<td>
+              <strong>vnet1</strong></td>
+<td>Virtuelles Netzwerk</td>
+<td>Das virtuelle Netzwerk der VM.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h2 id="configure-the-microsoft-sentinel-connector">Konfigurieren des Microsoft Sentinel-Connectors</h2>
+<p>Stellen Sie als Nächstes den Azure Activity Log Connector für Microsoft Sentinel bereit.</p>
+<ol>
+<li>Suchen Sie im <a href="https://portal.azure.com" data-linktype="external">Azure-Portal</a> nach <strong>Microsoft Sentinel</strong>, und wählen Sie sie aus.</li>
+<li>Wählen Sie auf der <strong>Microsoft Sentinel-Seite</strong> den von Ihnen erstellten Microsoft Sentinel-Arbeitsbereich aus.</li>
+<li>Wählen Sie auf der Arbeitsbereichsseite unter Konfiguration im linken Menü Datenkonnektoren aus.</li>
+<li>Suchen Sie auf der Seite <strong>Datenconnectors</strong> nach <strong>Azure-Aktivität</strong>, wählen Sie den Eintrag aus, und wählen Sie dann auf dem Bildschirm <strong>Azure-Aktivität</strong> die Option <strong>Connectorseite öffnen</strong> aus.</li>
+<li>Wählen Sie unten auf der <strong>Seite "Azure-Aktivität</strong> " die Option <strong>"Azure-Richtlinienzuweisungs-Assistent starten" aus</strong>.</li>
+<li>Wählen Sie auf der Registerkarte <strong>Grundlagen</strong> des Assistenten unter <strong>Bereich</strong> die Auslassungspunkte <strong><em>...</em></strong> aus. Wählen Sie im Bereich <strong>Bereiche</strong> Ihr Abonnement und dann <strong>Auswählen</strong> aus.</li>
+<li>Wählen Sie die Registerkarte <strong>"Parameter</strong> " und dann Ihren Microsoft Sentinel-Arbeitsbereich aus der Dropdownliste " <strong>Primary Log Analytics"</strong> .</li>
+<li>Wählen Sie die Registerkarte " <strong>Korrektur</strong> " und dann das Kontrollkästchen " <strong>Korrekturaufgabe erstellen</strong> " aus. Mit dieser Aktion wird die Abonnementkonfiguration angewendet, um die Informationen an den Log Analytics-Arbeitsbereich zu senden.</li>
+<li>Wählen Sie die Schaltfläche <strong>"Überprüfen + Erstellen</strong> " aus, um die Konfiguration zu überprüfen, und wählen Sie dann <strong>"Erstellen"</strong> aus.</li>
+</ol>
+<p>Der Azure Activity-Connector kann bis zu einer Stunde dauern, bis der Status <strong>"Verbunden"</strong> angezeigt wird. Fahren Sie während der Bereitstellung des Connectors mit den folgenden Lerneinheiten fort, um mehr über Incidents in Microsoft Sentinel zu erfahren.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

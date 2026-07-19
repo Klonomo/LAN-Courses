@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_06_05" title="Untersuchen einer Domäne">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Untersuchen einer Domäne</div>
+<div class="section-content">
+<p>Untersuchen Sie eine Domäne, um herauszufinden, ob Geräte und Server in Ihrem Unternehmensnetzwerk mit einer bekanntermaßen böswilligen Domäne kommuniziert haben.</p>
+<p>Sie können eine Domäne über die Suchfunktion untersuchen oder indem Sie in der Gerätezeitachse auf einen Domänenlink klicken.</p>
+<p>Die folgenden Abschnitte in der URL-Ansicht enthalten weitere Information:</p>
+<ul>
+<li><p>URL-Details, Kontakte, Nameserver</p>
+</li>
+<li><p>Warnungen im Zusammenhang mit dieser URL</p>
+</li>
+<li><p>URL in der Organisation</p>
+</li>
+<li><p>Zuletzt beobachtete Geräte mit URL</p>
+</li>
+</ul>
+<h3 id="url-worldwide">URL weltweit</h3>
+<p>In diesem Abschnitt werden die URL, ein Link zu weiteren Details, die Anzahl von zugehörigen offenen Incidents sowie die Anzahl von aktiven Warnungen angezeigt.</p>
+<h3 id="incident">Vorfall</h3>
+<p>Auf der Karte „Incident“ wird ein Balkendiagramm aller aktiven Warnungen bei Incidents in den letzten 180&nbsp;Tagen angezeigt.</p>
+<h3 id="prevalence">Verbreitung</h3>
+<p>Auf dieser Karte werden Details zur Verbreitung der URL innerhalb der Organisation für einen angegebenen Zeitraum angezeigt.</p>
+<p>Der Standardzeitraum beträgt 30&nbsp;Tage. Über den nach unten weisenden Pfeil in der Ecke der Karte können Sie diesen Zeitraum jedoch ändern. Der kürzeste Zeitraum für die Erfassung der Häufigkeit bezieht sich auf den vergangenen Tag, während der längste Zeitraum die vergangenen sechs Monate umfasst.</p>
+<h3 id="alerts">Warnungen</h3>
+<p>Die Registerkarte „Warnungen“ enthält eine Liste mit Warnungen, die im Zusammenhang mit der URL stehen. Bei der hier gezeigten Tabelle handelt es sich um eine gefilterte Version der Warnungen, die auf dem Bildschirm mit der Warnungswarteschlange angezeigt werden. Es werden lediglich Warnungen aufgeführt, in im Zusammenhang mit der Domäne stehen. Außerdem der Schweregrad, der Status, der verknüpfte Incident, die Klassifizierung, der Untersuchungsstatus usw.</p>
+<p>Die Registerkarte „Warnungen“ kann so angepasst werden, dass mehr oder weniger Informationen angezeigt werden. Wählen Sie dazu im Menü „Aktion“ oberhalb der Spaltenüberschriften die Option „Spalten anpassen“ aus. Die Anzahl von angezeigten Elementen kann ebenfalls angepasst werden. Wählen Sie dazu im selben Menü die Option „Elemente pro Seite“ aus.</p>
+<h3 id="observed-in-organization">In der Organisation beobachtet</h3>
+<p>Die Registerkarte „In der Organisation beobachtet“ enthält eine chronologische Ansicht der Ereignisse und zugehörigen Warnungen, die für die URL beobachtet wurden. Diese Registerkarte enthält eine Zeitachse und eine anpassbare Tabelle, in der die Ereignisdetails wie Uhrzeit, Gerät und eine kurze Beschreibung des Vorfalls aufgeführt werden.</p>
+<p>Sie können Ereignisse in unterschiedlichen Zeiträumen anzeigen. Geben Sie dazu die Datumsangaben in die Textfelder oberhalb der Tabellenüberschriften ein. Der Zeitbereich kann auch angepasst werden, indem Sie unterschiedliche Bereiche der Zeitachse auswählen.</p>
+<p>Untersuchen einer Domäne:</p>
+<ol>
+<li><p>Wählen Sie die Option <strong>URL</strong> aus dem Dropdownmenü der Suchleiste.</p>
+</li>
+<li><p>Geben Sie die URL in das Feld Suche ein.</p>
+</li>
+<li><p>Wählen Sie das Suchsymbol aus, und drücken Sie die EINGABETASTE. Ausführliche Informationen zur URL werden angezeigt. Suchergebnisse werden nur für URLs zurückgegeben, die in Kommunikationen von Geräten innerhalb der Organisation verwendet wurden.</p>
+</li>
+<li><p>Legen Sie die Suchkriterien mithilfe der Suchfilter fest. Sie können das Suchfeld für die Zeitachse auch verwenden, um die angezeigten Ergebnisse aller Geräte in der Organisation zu filtern, die mit der URL kommuniziert haben. Außerdem lassen sich die Datei aus dieser Kommunikation sowie das Datum der letzten Aktivität anzeigen.</p>
+</li>
+<li><p>Bei Auswahl der Gerätenamen werden Sie in die Ansicht des jeweiligen Geräts geleitet. Dort können Sie die gemeldeten Warnungen, Verhaltensweisen und Ereignisse näher untersuchen.</p>
+</li>
+</ol>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

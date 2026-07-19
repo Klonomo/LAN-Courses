@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_07_03_05" title="Grundlegendes zu Microsoft Defender XDR-Tabellen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Grundlegendes zu Microsoft Defender XDR-Tabellen</div>
+<div class="section-content">
+<p>Der Microsoft Defender XDR Sentinel Data Connector kann Tabellen mit Rohdaten füllen, die von den Microsoft Defender XDR-Lösungen gesammelt wurden.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tabellenname</th>
+<th style="text-align: left;">BESCHREIBUNG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>AlertEvidence</code></td>
+<td style="text-align: left;">Dateien, IP-Adressen, URLs, Benutzer oder Geräte, die mit Warnungen in Verbindung stehen</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>CloudAppEvents</code></td>
+<td style="text-align: left;">Ereignisse, die Konten und Objekte in Office&nbsp;365 und anderen Cloud-Apps und -Diensten betreffen</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DeviceEvents</code></td>
+<td style="text-align: left;">Mehrere Ereignistypen, einschließlich Ereignissen, die durch Sicherheitskontrollen wie Windows Defender Antivirus und Exploit-Schutz ausgelöst werden</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DeviceFileCertificateInfo</code></td>
+<td style="text-align: left;">Zertifikatsinformationen von signierten Dateien, die aus Zertifikatsüberprüfungsereignissen auf Endpunkten gewonnen werden</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DeviceFileEvents</code></td>
+<td style="text-align: left;">Dateierstellung, Änderung und andere Dateisystemereignisse</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DeviceImageLoadEvents</code></td>
+<td style="text-align: left;">DLL-Ladeereignisse</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DeviceInfo</code></td>
+<td style="text-align: left;">Maschineninformationen, einschließlich Betriebssysteminformationen</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DeviceLogonEvents</code></td>
+<td style="text-align: left;">Anmeldungen und andere Authentifizierungsereignisse auf Geräten</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DeviceNetworkEvents</code></td>
+<td style="text-align: left;">Netzwerkverbindung und zugehörige Ereignisse</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DeviceNetworkInfo</code></td>
+<td style="text-align: left;">Netzwerkeigenschaften von Geräten, einschließlich physischer Adapter, IP- und MAC-Adressen sowie verbundener Netzwerke und Domänen</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DeviceProcessEvents</code></td>
+<td style="text-align: left;">Prozesserstellung und zugehörige Ereignisse</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DeviceRegistryEvents</code></td>
+<td style="text-align: left;">Erstellen und Ändern von Registrierungseinträgen</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>EmailEvents</code></td>
+<td style="text-align: left;">Microsoft 365 E-Mail-Ereignisse, einschließlich E-Mail-Zustellungs- und Blockierungsereignisse</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>EmailPostDeliveryEvents</code></td>
+<td style="text-align: left;">Sicherheitsereignisse, die nach der Zustellung auftreten, nachdem Microsoft 365 die E-Mails an das Empfängerpostfach zugestellt hat</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>EmailUrlInfo</code></td>
+<td style="text-align: left;">Informationen über URLs in E-Mails</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>EmailAttachmentInfo</code></td>
+<td style="text-align: left;">Informationen zu Dateien, die an Office&nbsp;365-E-Mails angefügt sind</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>IdentityDirectoryEvents</code></td>
+<td style="text-align: left;">Ereignisse mit einem lokalen Domänencontroller, auf dem Active Directory (AD) ausgeführt wird Diese Tabelle enthält eine Reihe von identitätsbezogenen Ereignissen und Systemereignissen auf dem Domänencontroller.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>IdentityLogonEvents</code></td>
+<td style="text-align: left;">Authentifizierungsereignisse in Active Directory und Microsoft-Onlinediensten</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>IdentityQueryEvents</code></td>
+<td style="text-align: left;">Abfragen für Active Directory-Objekte wie Benutzer, Gruppen, Geräte und Domänen</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

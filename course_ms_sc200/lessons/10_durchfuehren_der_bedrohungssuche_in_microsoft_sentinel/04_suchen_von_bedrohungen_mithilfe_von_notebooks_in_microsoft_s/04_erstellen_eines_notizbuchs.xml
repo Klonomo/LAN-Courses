@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_10_04_04" title="Erstellen eines Notizbuchs">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Erstellen eines Notizbuchs</div>
+<div class="section-content">
+<p>Um mit Notebooks zu beginnen, verwenden Sie das <em>Notizbuch "Erste Schritte für Microsoft Sentinel ML-Notebooks"</em>.</p>
+<ol>
+<li><p>Erweitern Sie im Microsoft Sentinel-Navigationsmenü den Abschnitt <em>"Bedrohungsverwaltung</em>", und wählen Sie "<strong>Notizbücher"</strong> aus.</p>
+</li>
+<li><p>Sie müssen einen Azure Machine Learning (ML)-Arbeitsbereich erstellen. Wählen Sie im Menü " <strong>Azure Machine Learning konfigurieren</strong>" und dann " <strong>Neuen Azure ML-Arbeitsbereich erstellen" aus</strong>.</p>
+</li>
+<li><p>Wählen Sie im Feld „Abonnement“ Ihr Abonnement aus.</p>
+</li>
+<li><p>Wählen Sie <strong>"Neue Ressourcengruppe erstellen</strong> " und dann einen Namen für die neue Ressourcengruppe aus.</p>
+</li>
+<li><p>Im Abschnitt "Arbeitsbereichsdetails":</p>
+<ul>
+<li><p>Geben Sie einen eindeutigen Namen für den Arbeitsbereich ein.</p>
+</li>
+<li><p>Wählen Sie Ihre Region aus</p>
+</li>
+<li><p>Behalten Sie das Standardspeicherkonto, den Schlüsseltresor und die Application Insights-Informationen.</p>
+</li>
+<li><p>Die Option "Containerregistrierung" kann als "Keine" beibehalten werden.</p>
+</li>
+</ul>
+</li>
+<li><p>Wählen Sie unten auf der Seite <strong>"Überprüfen+ Erstellen"</strong> aus. Wählen Sie dann auf der nächsten Seite <strong>"Erstellen" aus</strong>. Die Bereitstellung des Arbeitsbereichs dauert einen Moment.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Es dauert ein paar Minuten, um den Machine Learning-Arbeitsbereich bereitzustellen.</p>
+</div>
+</li>
+<li><p>Nachdem <em>die Meldung "Ihre Bereitstellung abgeschlossen" angezeigt wird</em> , kehren Sie zu Microsoft Sentinel zurück.</p>
+</li>
+<li><p>Navigieren Sie zum Abschnitt "Bedrohungsverwaltung", und wählen Sie " <strong>Notizbücher"</strong> aus.</p>
+</li>
+<li><p>Wählen Sie die Registerkarte <strong>"Vorlagen" aus</strong> .</p>
+</li>
+<li><p>Wählen Sie in der Liste den <strong>Leitfaden für erste Schritte für Microsoft Sentinel ML-Notizbücher</strong> aus.</p>
+</li>
+<li><p>Wählen Sie unten im Detailbereich die Schaltfläche <strong>"Aus Vorlage erstellen</strong> " aus.</p>
+</li>
+<li><p>Überprüfen Sie die Standardoptionen, und wählen Sie dann <strong>Speichern</strong> aus.</p>
+</li>
+<li><p>Wählen Sie die Schaltfläche " <strong>Notizbuch starten</strong> " aus.</p>
+</li>
+<li><p>Wählen Sie <strong>Schließen</strong> aus, wenn im Microsoft Azure Machine Learning Studio ein Informationsfenster angezeigt wird.</p>
+</li>
+<li>
+<ol>
+<li>Wählen Sie in der Befehlsleiste rechts neben der <strong>Compute:</strong>-Auswahl das <strong>+</strong>-Symbol aus, um eine <em>Azure ML-Computeinstanz zu erstellen</em>. <strong>Hinweis:</strong> Er könnte  innerhalb des Auslassungspunktsymbols <strong>(...)</strong> verborgen sein.</li>
+</ol>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Sie können mehr Bildschirmfläche erhalten, indem Sie das linke Menü im Azure ML Studio ausblenden. Wählen Sie das <em>Hamburger-Menü</em> (drei horizontale Linien oben links) aus, und blenden Sie die Notebooks-Dateien aus, indem Sie das <strong>&lt;&lt;</strong>-Symbol auswählen.</p>
+</div>
+</li>
+<li><p>Geben Sie einen eindeutigen Namen in das Feld <em>Computename</em> ein. Dadurch wird Ihre Computeinstanz identifiziert.</p>
+</li>
+<li><p>Scrollen Sie nach unten, und wählen Sie die erste verfügbare Option aus.</p>
+<div class="TIP">
+<p>Tipp</p>
+<p>Workloadtyp: Entwicklung auf Notebooks (oder einer anderen IDE) und leichte Tests.</p>
+</div>
+</li>
+<li><p>Wählen Sie die Schaltfläche <strong>Überprüfen + erstellen</strong> unten auf dem Bildschirm aus. Scrollen Sie dann nach unten, und wählen Sie <strong>Erstellen</strong> aus. Schließen Sie alle angezeigten Feedbackfenster. Dies dauert ein paar Minuten. Sobald der Vorgang abgeschlossen ist, sehen Sie eine Benachrichtigung (Glockensymbol), und das Symbol der <em>Computeinstanz</em> links wechselt von Blau zu Grün.</p>
+</li>
+<li><p>Nachdem der Compute erstellt und ausgeführt wurde, überprüfen Sie, ob der zu verwendende Kernel <em>Python 3.10 - Pytorch und Tensorflow</em> ist.</p>
+<div class="TIP">
+<p>Tipp</p>
+<p>Dies wird rechts auf der Menüleiste angezeigt. Wenn dieser Kernel nicht ausgewählt ist, wählen Sie die <em>Python 3.10 - Pytorch- und Tensorflow-Option</em> aus der Dropdownliste aus. Sie können das <strong>Symbol "Aktualisieren"</strong> ganz rechts auswählen, um die Kerneloptionen anzuzeigen.</p>
+</div>
+</li>
+<li><p>Wählen Sie die Schaltfläche <strong>Authentifizieren</strong> aus, und warten Sie, bis die Authentifizierung abgeschlossen ist.</p>
+</li>
+<li><p>Löschen Sie alle Ergebnisse aus dem Notizbuch, indem Sie in der Menüleiste das Symbol <strong>"Alle Ausgaben</strong> löschen" (Radierersymbol) auswählen und dem Lernprogramm " <em>Erste Schritte</em> " folgen.</p>
+<div class="TIP">
+<p>Tipp</p>
+<p>Sie finden dies, indem Sie die Auslassungspunkte (...) in der Menüleiste auswählen.</p>
+</div>
+</li>
+<li><p>Lesen Sie Abschnitt <em>1 Einführung</em> im Notizbuch, und fahren Sie mit Abschnitt <em>2 fort, um das Notizbuch und MSTICPy zu initialisieren</em>.</p>
+<div class="TIP">
+<p>Tipp</p>
+<p>In Abschnitt 1.2 <em>Beim Ausführen von Code in Notizbüchern</em> können Sie die Ausführung kleiner Python-Codezeilen üben.</p>
+</div>
+</li>
+<li><p>Im Abschnitt <em>2 Initialisieren des Notizbuchs und MSTICPy</em> sollten Sie den Inhalt zum Initialisieren des Notizbuchs und zur Installation des MSTICPy-Pakets überprüfen.</p>
+</li>
+<li><p>Führen Sie den <em>Python-Code</em> aus, um die Zelle zu initialisieren, indem Sie die Schaltfläche <strong>Zelle ausführen</strong> (Wiedergabesymbol) links neben dem Code auswählen.</p>
+</li>
+<li><p>Die Ausführung sollte &gt;30&nbsp;Sekunden dauern. Überprüfen Sie nach Abschluss der Ausführung die Ausgabemeldungen, und <em>ignorieren Sie alle Warnungen über die Python-Kernelversion oder andere Fehlermeldungen</em> .</p>
+</li>
+<li><p>Der Code wurde erfolgreich ausgeführt, wenn <em>msticpyconfig.yaml</em> im Ordner <em>utils</em> im <em>Datei-Explorer</em>-Bereich auf der linken Seite erstellt wurde. Es kann weitere 30 Sekunden dauern, bis die Datei angezeigt wird. Wenn sie nicht angezeigt wird, wählen Sie im <strong>Datei-Explorer-Bereich</strong> das <em>Symbol "Aktualisieren"</em> aus.</p>
+<div class="TIP">
+<p>Tipp</p>
+<p>Sie können die Ausgabemeldungen löschen, indem Sie auf der linken Seite des Codefensters für das <em>Ausgabemenü</em> die Auslassungspunkte (...) auswählen und das Symbol für <em>Ausgabe löschen</em> (Quadrat mit einem x*) auswählen.</p>
+</div>
+</li>
+<li><p>Wählen Sie die <strong>msticpyconfig.yaml</strong>-Datei im <em>Datei-Explorer</em>-Bereich auf der linken Seite aus, um den Inhalt der Datei zu überprüfen und dann zu schließen.</p>
+</li>
+<li><p>Fahren Sie mit dem Abschnitt <em>3 Abfragen von Daten mit MSTICPy</em> fort, und lesen Sie die entsprechenden Inhalte. Führen Sie nicht die Codezelle <em>Mehrere Microsoft Sentinel-Arbeitsbereiche</em> aus, da sie fehlschlagen wird. Die anderen Codezellen können jedoch erfolgreich ausgeführt werden.</p>
+</li>
+</ol>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Wenn Sie die vorstehenden Schritte nicht ausführen können, um auf das Notizbuch zuzugreifen, können Sie sie stattdessen auf der GitHub-Viewerseite ausführen. <a href="https://nbviewer.org/github/Azure/Azure-Sentinel-Notebooks/blob/master/A%20Getting%20Started%20Guide%20For%20Azure%20Sentinel%20ML%20Notebooks.ipynb" data-linktype="external">Erste Schritte mit Azure ML-Notizbüchern und Microsoft Sentinel</a></p>
+</div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

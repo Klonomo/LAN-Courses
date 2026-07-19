@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_02_02_08" title="Zusammenfassung und Ressourcen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Zusammenfassung und Ressourcen</div>
+<div class="section-content">
+<p>Microsoft Security Copilot ist ein KI-gestütztes, cloudbasiertes Sicherheitsanalysetool, das Organisationen dabei helfen soll, die wachsenden Herausforderungen im Bereich der Cybersicherheit zu bewältigen, wie z.&nbsp;B. die zunehmende Raffinesse von Angriffen und den Mangel an qualifiziertem Personal. Es ermöglicht Sicherheitsanalysten, auf Bedrohungen mit Maschinengeschwindigkeit zu reagieren, Signale schnell zu verarbeiten und die Risikoexposition effizienter zu bewerten als herkömmliche Methoden. Copilot ist eine umfassende Lösung für die Verwaltung des Sicherheitsstatus, die Reaktion auf Vorfälle und das Generieren von sicherheitsrelevanten Berichten.</p>
+<p>Copilot bietet eine benutzerfreundliche Benutzeroberfläche, die Interaktionen über natürliche Sprachaufforderungen ermöglicht. Es wird nahtlos in Microsoft-Sicherheitsprodukte wie Microsoft Defender XDR und Microsoft Sentinel integriert und auch in Nicht-Microsoft-Lösungen über Plug-Ins, die eine einheitliche Ansicht für die Sicherheitsanalyse bieten. Die Verwendung von OpenAI-Modellen für die Verarbeitung natürlicher Sprache verbessert seine Fähigkeit, Benutzeranforderungen zu verstehen und zu verarbeiten, wodurch es sowohl für erfahrene als auch neue Sicherheitsanalysten zu einem effektiven Tool wird.</p>
+<p>Copilot hält hohe Standards für Datenschutz und Sicherheit ein. Durch die Prozessprotokollfunktion wird außerdem Transparenz hinzugefügt, sodass Benutzer die Quelle und Gültigkeit der vom Tool bereitgestellten Informationen nachverfolgen können.</p>
+<p>Nachdem Sie dieses Modul abgeschlossen haben, sollten Sie mit Folgendem vertraut sein:</p>
+<ul>
+<li>Beschreiben Sie, was Microsoft Security Copilot ist.</li>
+<li>Beschreiben Sie die Terminologie von Microsoft Security Copilot.</li>
+<li>Beschreiben Sie, wie Microsoft Security Copilot Eingabeaufforderungen verarbeitet.</li>
+<li>Beschreiben Sie die Elemente einer effektiven Eingabeaufforderung</li>
+<li>Beschreiben Sie, wie Sie Microsoft Security Copilot aktivieren.</li>
+</ul>
+<h3 id="learn-more">Weitere Informationen</h3>
+<ul>
+<li>
+              <a href="https://learn.microsoft.com/de-de/security-copilot/microsoft-security-copilot" data-linktype="absolute-path">Was ist Microsoft Security Copilot?</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/security-copilot/experiences-security-copilot" data-linktype="absolute-path">Microsoft Security Copilot-Erfahrungen</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/security-copilot/authentication" data-linktype="absolute-path">Verständnis der Authentifizierung in Microsoft Security Copilot</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/copilot/security/get-started-security-copilot" data-linktype="absolute-path">Beginnen Sie mit dem Onboarding zu Microsoft Security Copilot</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/copilot/security/security-copilot-inclusion" data-linktype="absolute-path">Erfahren Sie mehr über Security Copilot in Microsoft 365 E5 und E7</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/training/modules/security-copilot-describe-core-features/2b-describe-workspaces" data-linktype="absolute-path">Beschreiben von Arbeitsbereichen</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/copilot/security/agents-overview" data-linktype="absolute-path">Übersicht über Microsoft Security Copilot-Agents</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/copilot/security/manage-usage" data-linktype="absolute-path">Verwalten der Verwendung von Sicherheitsberechnungseinheiten in Security Copilot</a></li>
+<li>
+              <a href="https://azure.microsoft.com/pricing/details/microsoft-security-copilot/" data-linktype="external">Microsoft Security Copilot-Preise</a></li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_08_04" title="Verwalten der Warnungsunterdrückung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwalten der Warnungsunterdrückung</div>
+<div class="section-content">
+<p>Es kann Szenarien geben, in denen Sie <em>warnungsoptimierungen</em> ausführen müssen, um Benachrichtigungen zu unterdrücken, die im Portal angezeigt werden. Sie können Warnungsoptimierungsregeln für bestimmte Warnungen erstellen, die als harmlos gelten, etwa für bekannte Tools oder Prozesse in Ihrem Unternehmen.</p>
+<h3 id="view-existing-rules">Anzeigen vorhandener Regeln</h3>
+<p>Sie können eine Liste aller Warnungsoptimierungsregeln anzeigen und sie an einem Ort verwalten. Sie können eine Warnungsoptimierungsregel auch aktivieren oder deaktivieren, indem Sie die folgenden Aktionen ausführen:</p>
+<ol>
+<li><p>Wählen Sie im Microsoft Defender-Portal <strong>"Einstellungen"</strong>, dann <strong>"Microsoft Defender XDR</strong>" und dann unter "Regeln <strong>" die Option "Benachrichtigungsoptimierung"</strong> aus. Die Liste der <em>Warnungsoptimierungsregeln</em> , die Benutzer in Ihrer Organisation erstellt haben, werden angezeigt.</p>
+</li>
+<li><p>Wählen Sie eine Regel aus, indem Sie das Kontrollkästchen neben dem Regelnamen aktivieren.</p>
+</li>
+<li><p>Wählen Sie <strong>"Regel aktivieren</strong>", " <strong>Regel bearbeiten</strong>" oder <strong>"Regel löschen"</strong> aus. Wenn Sie Änderungen an einer Regel vornehmen, können Sie festlegen, dass Warnungen, die sie bereits unterdrückt hat, freigegeben werden, unabhängig davon, ob diese Warnungen den neuen Kriterien entsprechen.</p>
+</li>
+</ol>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_01_02_10" title="Grundlegendes zur Microsoft-Sicherheitsbewertung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Grundlegendes zur Microsoft-Sicherheitsbewertung</div>
+<div class="section-content">
+<p>Die <em>Sicherheitsbewertung</em> ist eine ganzheitliche Ansicht der <em>Microsoft-Sicherheitsbewertung (365),</em> die eine Messung des Sicherheitsstatus einer Organisation ist, mit einer höheren Zahl, die mehr empfohlene Aktionen angibt, und die <em>Cloud Secure Score (Risikobasiert)</em>, die eine Darstellung Ihrer Organisation Cloud-Sicherheitsstatus darstellt. Sie sind Teil der Tools für das <em>Expositionsmanagement</em> im Microsoft Defender-Portal.</p>
+<p>Durch die Umsetzung der Empfehlungen der Sicherheitsbewertung kann sich Ihre Organisation besser vor Bedrohungen schützen. Über ein zentrales Dashboard im Microsoft Defender-Portal können Organisationen die Sicherheit ihrer Microsoft 365-Identitäten, -Anwendungen und -Geräte überwachen und bearbeiten.</p>
+<p>Organisationen erhalten Zugriff auf aussagekräftige Visualisierungen von Kennzahlen und Trends, die Integration mit anderen Microsoft-Produkten, einen Vergleich zu den Bewertungen ähnlicher Unternehmen und vieles mehr. Die Bewertung kann auch widerspiegeln, wann Drittanbieterlösungen empfohlene Aktionen behandelt haben.</p>
+<h3 id="products-included-in-secure-score">In der Sicherheitsbewertung enthaltene Produkte</h3>
+<p>Derzeit gibt es Empfehlungen für die folgenden Produkte:</p>
+<ul>
+<li>Microsoft Defender für Office</li>
+<li>Exchange Online:</li>
+<li>Microsoft Entra&nbsp;ID</li>
+<li>Microsoft Defender für den Endpunkt</li>
+<li>Microsoft Defender for Identity</li>
+<li>Microsoft Defender für Cloud-Apps</li>
+<li>Microsoft Purview Informationsschutz</li>
+<li>Defender for Cloud-Apps</li>
+<li>Microsoft Teams</li>
+<li>App-Governance</li>
+<li>Citrix ShareFile</li>
+<li>DocuSign</li>
+<li>GitHub</li>
+<li>Okta</li>
+<li>Salesforce</li>
+<li>ServiceNow</li>
+<li>SharePoint Online</li>
+<li>Zoom</li>
+</ul>
+<p>Sie können die Verbesserungsmaßnahmen auch als von einem Drittanbieter abgedeckt oder als alternative Abhilfemaßnahmen kennzeichnen.</p>
+<h3 id="take-action-to-improve-your-score">Ergreifen von Maßnahmen zum Verbessern Ihrer Bewertung</h3>
+<p>Auf der Registerkarte <strong>"Empfohlene Aktionen</strong> " werden die Sicherheitsempfehlungen aufgeführt, die mögliche Angriffsflächen behandeln. Sie enthält auch den jeweiligen Status (zu beheben, geplant, Risiko akzeptiert, durch Drittanbieter gelöst, durch alternative Abhilfemaßnahmen gelöst und abgeschlossen). Sie können alle Verbesserungsaktionen suchen, filtern und gruppieren.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

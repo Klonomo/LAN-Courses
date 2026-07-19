@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_05_05_11" title="Verständnis der zusätzlichen Schutzmaßnahmen von Microsoft Defender">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verständnis der zusätzlichen Schutzmaßnahmen von Microsoft Defender</div>
+<div class="section-content">
+<h2 id="threat-protection-for-azure-network-layer">Bedrohungsschutz für die Azure-Netzwerkebene</h2>
+<p>Die Analyse von Microsoft Defender für Cloud-Netzwerkschicht basiert auf Beispiel-IPFIX-Daten, die von Azure-Core-Routern gesammelte Paketheader sind. Auf Grundlage dieses Datenfeeds werden schädliche Aktivitäten im Datenverkehr von Defender for Cloud mithilfe von Machine Learning-Modellen identifiziert und gekennzeichnet. Defender for Cloud nutzt zudem die Microsoft Threat Intelligence-Datenbank zur Anreicherung von IP-Adressen.</p>
+<p>Einige Netzwerkkonfigurationen schränken Defender for Cloud in der Erstellung von Warnungen bei verdächtiger Netzwerkaktivität ein. Damit Defender for Cloud Netzwerkwarnungen generiert, stellen Sie Folgendes sicher:</p>
+<ul>
+<li><p>Ihr virtueller Computer verfügt über eine öffentliche IP-Adresse (oder befindet sich auf einem Lastenausgleich mit einer öffentlichen IP-Adresse).</p>
+</li>
+<li><p>Der ausgehende Netzwerkdatenverkehr des virtuellen Computers wird nicht durch eine externe IDS-Lösung blockiert.</p>
+</li>
+</ul>
+<h2 id="threat-protection-for-azure-cosmos-db-preview">Bedrohungsschutz für Azure Cosmos DB (Vorschau)</h2>
+<p>Die Azure Cosmos DB-Warnungen werden durch ungewöhnliche und potenziell schädliche Versuche generiert, auf Azure Cosmos DB-Konten zuzugreifen oder sie auszunutzen.</p>
+<h2 id="display-azure-waf-alerts-in-microsoft-defender-for-cloud">Anzeigen von Azure WAF-Warnungen in Microsoft Defender für Cloud</h2>
+<p>Azure Application Gateway verfügt über eine Web Application Firewall (WAF), die den zentralisierten Schutz Ihrer Webanwendungen vor allgemeinen Exploits und Sicherheitsrisiken ermöglicht.  Webanwendungen sind zunehmend Ziele böswilliger Angriffe, die allgemein bekannte Sicherheitslücken ausnutzen. Das Anwendungsgateway WAF basiert auf dem Kernregelsatz 3.0 oder 2.2.9 aus dem Open Web Application Security Project. Die WAF wird automatisch aktualisiert, um Schutz vor neuen Sicherheitsrisiken zu bieten.</p>
+<p>Wenn Sie über eine Lizenz für Azure WAF verfügen, werden Ihre WAF-Warnungen ohne zusätzliche Konfiguration an Defender for Cloud gestreamt.</p>
+<h2 id="display-azure-ddos-protection-alerts-in-microsoft-defender-for-cloud">Anzeigen von Azure DDoS Protection-Warnungen in Microsoft Defender für Cloud</h2>
+<p>Verteilte Denial-of-Service-Angriffe (Distributed Denial of Service, DDoS) sind bekanntlich einfach durchführbar. Sie haben sich zu einem wichtigen Sicherheitsthema entwickelt, insbesondere wenn Sie Ihre Anwendungen zur Cloud migrieren.  Ein DDoS-Angriff hat das Ziel, die Ressourcen einer Anwendung zu verbrauchen, damit sie für berechtigte Benutzende nicht mehr verfügbar ist. DDoS-Angriffe können jeden beliebigen Endpunkt ins Visier nehmen, der über das Internet erreichbar ist.  Um sich vor DDoS-Angriffen zu schützen, erwerben Sie eine Lizenz für Azure DDoS Protection, und befolgen Sie unbedingt die bewährten Methoden für den Anwendungsentwurf. Azure DDoS Protection bietet verschiedene Dienstebenen.</p>
+<h2 id="display-azure-microsoft-defender-for-cloud-recommendations-in-microsoft-defender-for-cloud-apps">Anzeigen von Empfehlungen von Microsoft Defender für Cloud in Microsoft Defender für Cloud-Apps</h2>
+<p>Microsoft Defender für Cloud-Apps ist ein Cloud Access Security Broker (Broker für die Sicherheit beim Cloudzugriff, CASB), der verschiedene Bereitstellungsmodi unterstützt, darunter Protokollsammlung, API-Connectors und Reverseproxy. Er bietet umfassende Transparenz und Kontrolle bei der Datenübertragung, und modernste Analysen tragen dazu bei, Cyberbedrohungen in all Ihren Microsoft-Clouddiensten und Clouddiensten von Drittanbietern zu erkennen und abzuwehren.</p>
+<p>Wenn Sie Microsoft Defender für Cloud-Apps aktiviert und die Integration in den Einstellungen von Microsoft Defender für Cloud ausgewählt haben, werden Ihre Härteempfehlungen von Microsoft Defender für Cloud in Defender für Cloud-Apps ohne zusätzliche Konfiguration angezeigt.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

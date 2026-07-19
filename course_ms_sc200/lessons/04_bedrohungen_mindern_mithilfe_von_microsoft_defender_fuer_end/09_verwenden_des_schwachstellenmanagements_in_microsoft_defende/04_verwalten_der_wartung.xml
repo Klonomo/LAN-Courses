@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_09_04" title="Verwalten der Wartung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwalten der Wartung</div>
+<div class="section-content">
+<p>Mit dem Workflow für die Wartungsanforderung schließen die Funktionen des Sicherheitsrisikomanagements die Lücke zwischen Sicherheits- und IT-Administratoren. Als Sicherheitsadministrator können Sie auf der Seite „Empfehlungen“ eine Anforderung zur Wartung eines Sicherheitsrisikos in Intune an den IT-Administrator senden.</p>
+<h2 id="remediation-request-steps">Anleitung zum Senden einer Wartungsanforderung</h2>
+<ul>
+<li><p>Wechseln Sie im Microsoft Defender-Portal zum Navigationsmenü „Sicherheitsrisikomanagement“, und klicken Sie auf „Empfehlungen“.</p>
+</li>
+<li><p>Wählen Sie eine Sicherheitsempfehlung aus, für die Sie eine Wartung anfordern möchten, und klicken Sie dann auf „Wartungsoptionen“.</p>
+</li>
+<li><p>Geben Sie im Formular alle erforderlichen Informationen ein, etwa die gewünschte Wartung, vorhandene Gerätegruppen, Priorität, Fälligkeitsdatum sowie optionale Anmerkungen.
+Wenn Sie die Wartungsoption „Eingreifen erforderlich“ auswählen, ist die Angabe eines Fälligkeitsdatums nicht verfügbar, da es sich um keine bestimmte Aktion handelt.</p>
+</li>
+<li><p>Klicken Sie auf „Anforderung senden“. Durch das Senden einer Wartungsanforderung wird im Sicherheitsrisikomanagement ein Wartungsaktivitätselement erstellt, über das Sie den Fortschritt der Wartung für diese Empfehlung beobachten können. Dadurch wird weder eine Wartung ausgelöst noch werden Änderungen an Geräten vorgenommen.</p>
+</li>
+<li><p>Informieren Sie Ihren IT-Administrator über die neue Anforderung, damit er bzw. sie sich bei Intune anmelden kann, um die Anforderung zu genehmigen oder abzulehnen und eine Paketbereitstellung zu starten.</p>
+</li>
+<li><p>Wechseln Sie zur Seite „Wartung“, um den Status Ihrer Wartungsanforderung anzuzeigen.</p>
+</li>
+</ul>
+<h2 id="view-your-remediation-activities">Anzeigen Ihrer Wartungsaktivitäten</h2>
+<p>Wenn Sie auf der Seite „Sicherheitsempfehlungen“ eine Wartungsanforderung senden, wird eine Wartungsaktivität gestartet. Es wird eine Sicherheitsaufgabe erstellt, die Sie auf der Seite „Wartung“ nachverfolgen können, sowie ein Wartungsticket in Microsoft&nbsp;Intune.</p>
+<p>Wenn Sie die Wartungsoption „Eingreifen erforderlich“ ausgewählt haben, wird weder eine Statusleiste noch der Ticketstatus oder das Fälligkeitsdatum angezeigt, da es keine Aktion gibt, die überwacht werden kann.</p>
+<p>Wählen Sie auf der Seite „Wartung“ die Wartungsaktivität aus, die Sie anzeigen möchten. Sie können die Wartungsschritte ausführen, den Fortschritt nachverfolgen, die entsprechende Empfehlung anzeigen, in CSV exportieren oder als abgeschlossen markieren.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

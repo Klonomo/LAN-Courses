@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_03_02" title="Grundlagen der Angriffsflächenreduzierung verstehen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Grundlagen der Angriffsflächenreduzierung verstehen</div>
+<div class="section-content">
+<p>Durch die Verringerung der Angriffsfläche werden die Stellen besser geschützt (gehärtet), an denen eine Bedrohung am wahrscheinlichsten ist. Als Sicherheitsanalyst ist es Ihre Aufgabe, die Schutzoptionen zu verstehen und Empfehlungen bereitzustellen. Wenn Sie Warnungen untersuchen, sollten Sie die von der Verringerung der Angriffsfläche generierten Ereignisse auf dem Host kennen, da sie forensische Beweise liefern können.</p>
+<!--- [!VIDEO https://learn-video.azurefd.net/vod/player?id=06675c1f-cd4d-4c79-96f5-f695aee327e5] --->
+<p>Die folgenden Elemente stellen eine Liste der Komponenten zur Verringerung der Angriffsfläche dar:</p>
+<section class="row">
+<div class="column">
+<p>Lösung</p>
+</div>
+<div class="column">
+<p>Beschreibung</p>
+</div>
+</section>
+<section class="row">
+<div class="column">
+</div>
+</section>
+<section class="row">
+<div class="column">
+<p>Regeln zur Verringerung der Angriffsfläche</p>
+</div>
+<div class="column">
+<p>Reduzieren Sie Sicherheitsrisiken (Angriffsflächen) in Ihren Anwendungen mit intelligenten Regeln zum Aufhalten von Schadsoftware (Erfordert Microsoft Defender Antivirus.)</p>
+</div>
+</section>
+<section class="row">
+<div class="column">
+<p>Hardwarebasierte Isolation</p>
+</div>
+<div class="column">
+<p>Schützen und verwalten Sie die Integrität eines Systems, während es gestartet und ausgeführt wird. Überprüfen Sie die Systemintegrität über lokale und Remotenachweise. Verwendet Virtualization-Based Security (VBS), um vertrauliche Systemkomponenten wie Anmeldeinformationen zu isolieren.</p>
+</div>
+</section>
+<section class="row">
+<div class="column">
+<p>Anwendungssteuerung</p>
+</div>
+<div class="column">
+<p>Verwenden Sie die Anwendungssteuerung, damit Ihre Anwendungen als vertrauenswürdig eingestuft werden müssen, bevor sie ausgeführt werden dürfen.</p>
+</div>
+</section>
+<section class="row">
+<div class="column">
+<p>Exploit-Schutz</p>
+</div>
+<div class="column">
+<p>Schützen Sie Betriebssysteme und Apps, die in Ihrer Organisation verwendet werden, vor Angriffen. Der Exploit-Schutz funktioniert auch mit Antivirenprogrammen von Drittanbietern.</p>
+</div>
+</section>
+<section class="row">
+<div class="column">
+<p>Netzwerkschutz</p>
+</div>
+<div class="column">
+<p>Dehnen Sie den Schutz auf Ihren Netzwerkverkehr und auf die Konnektivität der Geräte Ihrer Organisation aus. (Erfordert Microsoft Defender Antivirus)</p>
+</div>
+</section>
+<section class="row">
+<div class="column">
+<p>Internetschutz</p>
+</div>
+<div class="column">
+<p>Schützen Sie Ihre Geräte vor Bedrohungen aus dem Web, und unterstützen Sie beim Regulieren unerwünschter Inhalte.</p>
+</div>
+</section>
+<section class="row">
+<div class="column">
+<p>Kontrollierter Ordnerzugriff</p>
+</div>
+<div class="column">
+<p>Verhindern Sie, dass böswillige oder verdächtige Apps (einschließlich Ransomware/Schadsoftware mit Dateiverschlüsselung) Änderungen an Dateien in wichtigen Systemordnern vornehmen (erfordert Microsoft Defender Antivirus).</p>
+</div>
+</section>
+<section class="row">
+<div class="column">
+<p>Gerätesteuerung</p>
+</div>
+<div class="column">
+<p>Schützt vor Datenverlusten, indem Medien, die auf Geräten wie Wechselmedien und USB-Laufwerken in Ihrer Organisation verwendet werden, überwacht und kontrolliert werden.</p>
+</div>
+</section>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

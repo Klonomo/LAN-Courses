@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_09_08_03" title="Verwenden von Repositorys für die Bereitstellung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwenden von Repositorys für die Bereitstellung</div>
+<div class="section-content">
+<p>Beim Erstellen von benutzerdefinierten Inhalten können Sie sie in Ihren eigenen Microsoft Sentinel-Arbeitsbereichen oder in einem externen Quellcodeverwaltungsrepository, einschließlich GitHub- und Azure DevOps-Repositorys, speichern und verwalten. Wenn Sie Ihre Inhalte in einem externen Repository verwalten, können Sie Aktualisierungen an diesen Inhalten außerhalb von Microsoft Sentinel vornehmen und diese automatisch in Ihren Arbeitsbereichen bereitstellen lassen.</p>
+<h2 id="prerequisites-and-scope">Voraussetzungen und Umfang</h2>
+<p>Bevor Sie Ihren Microsoft Sentinel-Arbeitsbereich mit einem externen Quellcodeverwaltungs-Repository verbinden, stellen Sie sicher, dass Sie folgendes haben:</p>
+<ul>
+<li><p>Zugriff auf ein GitHub- oder Azure DevOps-Repository mit allen benutzerdefinierten Inhaltsdateien, die Sie in Ihren Arbeitsbereichen bereitstellen möchten, in relevanten Azure Resource Manager (ARM)-Vorlagen.</p>
+<p>Microsoft Sentinel unterstützt derzeit nur Verbindungen mit GitHub- und Azure DevOps-Repositorys.</p>
+</li>
+<li><p>Eine Besitzerrolle in der Ressourcengruppe, die Ihren Microsoft Sentinel-Arbeitsbereich enthält. Diese Rolle ist erforderlich, um die Verbindung zwischen Microsoft Sentinel und Ihrem Quellcodeverwaltungs-Repository zu erstellen. Wenn Sie die Rolle "Besitzer" in Ihrer Umgebung nicht verwenden können, können Sie stattdessen die Kombination aus den Rollen "Benutzerzugriffsadministrator" und "Sentinel-Mitwirkender" verwenden, um die Verbindung zu erstellen.</p>
+</li>
+</ul>
+<h2 id="maximum-connections-and-deployments">Maximale Verbindungen und Bereitstellungen</h2>
+<p>Jeder Microsoft Sentinel-Arbeitsbereich ist derzeit auf fünf Verbindungen beschränkt.</p>
+<p>Jede Azure-Ressourcengruppe ist auf 800 Bereitstellungen im Bereitstellungsverlauf beschränkt. Wenn Ihre Ressourcengruppen sehr viele ARM-Vorlagenbereitstellungen enthalten, wird möglicherweise ein Deployment QuotaExceeded-Fehler zurückgegeben.</p>
+<h2 id="validate-your-content">Überprüfen Ihrer Inhalte</h2>
+<p>Wenn Sie Inhalte für Microsoft Sentinel über eine Repositoryverbindung bereitstellen, wird lediglich überprüft, ob die Daten im korrekten ARM-Vorlagenformat vorliegen, eine weitere Inhaltsvalidierung findet nicht statt.</p>
+<p>Es wird empfohlen, Ihre Inhaltsvorlagen mithilfe Ihres regulären Überprüfungsprozesses zu überprüfen. Sie können den Microsoft Sentinel GitHub-Validierungsprozess und -Tools verwenden, um Ihren eigenen Validierungsprozess einzurichten.</p>
+<h2 id="connect-a-repository">Verbinden eines Repositorys</h2>
+<p>In diesem Verfahren wird beschrieben, wie Sie ein GitHub- oder Azure DevOps-Repository mit Ihrem Microsoft Sentinel-Arbeitsbereich verbinden, in dem Sie Ihre benutzerdefinierten Inhalte speichern und verwalten können, statt in Microsoft Sentinel.</p>
+<p>Jede Verbindung kann mehrere Arten von benutzerdefinierten Inhalten unterstützen, einschließlich Analyseregeln, Automatisierungsregeln, Suchabfragen, Parser, Playbooks und Arbeitsmappen. Weitere Informationen finden Sie unter "Informationen zu Microsoft Sentinel-Inhalten und -Lösungen".</p>
+<p>So erstellen Sie Ihre Verbindung:</p>
+<ul>
+<li><p>Stellen Sie sicher, dass Sie bei Ihrer Quellcodeverwaltungs-App mit den Anmeldeinformationen angemeldet sind, die Sie für Ihre Verbindung verwenden möchten. Wenn Sie derzeit mit unterschiedlichen Anmeldeinformationen angemeldet sind, melden Sie sich zuerst ab.</p>
+</li>
+<li><p>Wählen Sie in Microsoft Sentinel links unter "Inhaltsverwaltung" die Option "Repositorys" aus.</p>
+</li>
+<li><p>Wählen Sie "Neu hinzufügen" aus, und geben Sie dann auf der Seite "Neue Verbindung erstellen" einen aussagekräftigen Namen und eine Beschreibung für Ihre Verbindung ein.</p>
+</li>
+<li><p>Wählen Sie im Dropdownmenü "Quellcodeverwaltung" den Typ des Repositorys aus, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann "Autorisieren" aus.</p>
+</li>
+<li><p>Wählen Sie je nach Verbindungstyp eine der folgenden Registerkarten aus:</p>
+</li>
+</ul>
+<h3 id="github">GitHub</h3>
+<ul>
+<li><p>Geben Sie Ihre GitHub-Anmeldeinformationen ein, wenn Sie dazu aufgefordert werden.</p>
+<p>Wenn Sie zum ersten Mal eine Verbindung hinzufügen, wird ein neues Browserfenster oder eine neue Registerkarte angezeigt, in dem Sie aufgefordert werden, die Verbindung mit Microsoft Sentinel zu autorisieren. Wenn Sie bereits in Ihrem GitHub-Konto im selben Browser angemeldet sind, werden Ihre GitHub-Anmeldeinformationen automatisch ausgefüllt.</p>
+</li>
+<li><p>Ein Repositorybereich wird jetzt auf der Seite "Neue Verbindung erstellen" angezeigt, auf der Sie ein vorhandenes Repository auswählen können, mit dem Eine Verbindung hergestellt werden soll. Wählen Sie Ihr Repository aus der Liste aus, und wählen Sie dann "Repository hinzufügen" aus.</p>
+<p>Wenn Sie zum ersten Mal eine Verbindung mit einem bestimmten Repository herstellen, wird ein neues Browserfenster oder eine neue Registerkarte angezeigt, in dem Sie aufgefordert werden, die Azure-Sentinel-App in Ihrem Repository zu installieren. Wenn Sie über mehrere Repositorys verfügen, wählen Sie die Repositorys aus, in denen Sie die Azure-Sentinel-App installieren möchten, und installieren Sie sie.</p>
+<p>Sie werden an GitHub weitergeleitet, um die App-Installation fortzusetzen.</p>
+</li>
+<li><p>Nachdem die Azure-Sentinel-App in Ihrem Repository installiert wurde, wird das Branch-Dropdown auf der Seite "Neue Verbindung erstellen" mit Ihren Branches aufgefüllt. Wählen Sie die Verzweigung aus, die Sie mit Ihrem Microsoft Sentinel-Arbeitsbereich verbinden möchten.</p>
+</li>
+<li><p>Wählen Sie im Dropdownmenü "Inhaltstypen" den Inhaltstyp aus, den Sie bereitstellen.</p>
+<ul>
+<li><p>Sowohl Parser als auch Suchabfragen verwenden die API für gespeicherte Suchvorgänge, um Inhalte in Microsoft Sentinel bereitzustellen. Wenn Sie einen dieser Inhaltstypen auswählen und auch Inhalte des anderen Typs in Ihrer Verzweigung haben, werden beide Inhaltstypen bereitgestellt.</p>
+</li>
+<li><p>Bei allen anderen Inhaltstypen stellt die Auswahl eines Inhaltstyps im Bereich "Neue Verbindung erstellen" nur diesen Inhalt in Microsoft Sentinel bereit. Inhalte anderer Art werden nicht bereitgestellt.</p>
+</li>
+</ul>
+</li>
+<li><p>Wählen Sie "Erstellen" aus, um Ihre Verbindung zu erstellen.</p>
+</li>
+</ul>
+<p>Nachdem die Verbindung erstellt wurde, wird ein neuer Workflow oder eine neue Pipeline in Ihrem Repository generiert, und der in Ihrem Repository gespeicherte Inhalt wird in Ihrem Microsoft Sentinel-Arbeitsbereich bereitgestellt.</p>
+<p>Die Bereitstellungszeit kann je nach Umfang der von Ihnen bereitgestellten Inhalte variieren.</p>
+<h3 id="azure-devops">Azure DevOps</h3>
+<ul>
+<li><p>Sie sind mit Ihren aktuellen Azure-Anmeldeinformationen automatisch für Azure DevOps autorisiert. Um eine gültige Konnektivität sicherzustellen, überprüfen Sie, ob Sie bei derselben Azure DevOps-Organisation authorisiert sind, zu der Sie von Microsoft Sentinel aus eine Verbindung herstellen, oder verwenden Sie ein InPrivate-Browserfenster, um Ihre Verbindung zu erstellen.</p>
+</li>
+<li><p>Wählen Sie in Microsoft Sentinel in den angezeigten Dropdownlisten Ihre Organisations-, Projekt-, Repository-, Zweig- und Inhaltstypen aus.</p>
+<ul>
+<li><p>Sowohl Parser als auch Suchabfragen verwenden die API für gespeicherte Suchvorgänge, um Inhalte in Microsoft Sentinel bereitzustellen. Wenn Sie einen dieser Inhaltstypen auswählen und auch Inhalte des anderen Typs in Ihrer Verzweigung haben, werden beide Inhaltstypen bereitgestellt.</p>
+</li>
+<li><p>Bei allen anderen Inhaltstypen stellt die Auswahl eines Inhaltstyps im Bereich "Neue Verbindung erstellen" nur diesen Inhalt in Microsoft Sentinel bereit. Inhalte anderer Art werden nicht bereitgestellt.</p>
+</li>
+</ul>
+</li>
+<li><p>Wählen Sie "Erstellen" aus, um Ihre Verbindung zu erstellen. Beispiel:</p>
+</li>
+</ul>
+<p>Nachdem die Verbindung erstellt wurde, wird ein neuer Workflow oder eine neue Pipeline in Ihrem Repository generiert, und der in Ihrem Repository gespeicherte Inhalt wird in Ihrem Microsoft Sentinel-Arbeitsbereich bereitgestellt.</p>
+<p>Die Bereitstellungszeit kann je nach Umfang der von Ihnen bereitgestellten Inhalte variieren.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_03_02_11" title="Übung – Untersuchen potenzieller Datendiebstahl mithilfe des Insider-Risikomanagements">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Übung – Untersuchen potenzieller Datendiebstahl mithilfe des Insider-Risikomanagements</div>
+<div class="section-content">
+<p>In dieser Übung untersuchen Sie Aktivitäten im Zusammenhang mit einem ausscheidenden Mitarbeiter, der vertrauliche Inhalte möglicherweise kopiert und archiviert hat, bevor sein Konto deaktiviert wurde. Sie überprüfen die Warnung, bewerten die Aktionen des Benutzers, eskalieren den Fall und untersuchen den breiteren Kontext in Microsoft Defender.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Die Umgebung für diese Übung ist eine Simulation, die aus dem Produkt generiert wird. Als eingeschränkte Simulation werden Links auf einer Seite möglicherweise nicht aktiviert, und textbasierte Eingaben, die außerhalb des angegebenen Skripts liegen, werden möglicherweise nicht unterstützt. Eine Popupmeldung zeigt an, dass "<strong>Dieses Feature ist in der Simulation nicht verfügbar".</strong> Wählen Sie in diesem Fall <strong>"OK</strong> " aus, und fahren Sie mit den Übungsschritten fort.</p>
+<p>
+              <span class="mx-imgBorder">
+              <img src="data:image/png;base64,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" alt="Screenshot des Popupbildschirms, der angibt, dass dieses Feature in der Simulation nicht verfügbar ist." data-linktype="relative-path">
+              
+              </span>
+            
+</p>
+</div>
+<p>
+              <strong>Aufgaben:</strong></p>
+<ol>
+<li>Untersuchen von Warnungsdetails und Benutzeraktivitäten</li>
+<li>Erstellen und Eskalieren eines Falls</li>
+<li>Korrelieren von Vorfalldaten in Microsoft Defender</li>
+</ol>
+<h2 id="task-1---investigate-alert-details-and-user-activity">Aufgabe 1 – Untersuchen von Warnungsdetails und Benutzeraktivitäten</h2>
+<p>In dieser Aufgabe öffnen Sie eine simulierte Version von Microsoft Purview, um eine Insider-Risikowarnung zu untersuchen. Sie überprüfen die Warnung, überprüfen die Benutzeraktivität und verwenden integrierte Tools, um wichtige Verhaltensweisen zusammenzufassen.</p>
+<p>Führen Sie diese Aufgabe in der Simulation aus: <strong><a href="https://app.highlights.guide/start/d3e09027-0dbb-40cf-a5b9-8a08308a7350?token=16d48b6c-eace-4a1f-8050-098d29d23a89&amp;link=0&amp;azure-portal=true" data-linktype="external">Öffnen Sie simuliertes Microsoft Purview-Portal</a></strong>.</p>
+<ol>
+<li><p>Wechseln Sie im <a href="https://app.highlights.guide/start/d3e09027-0dbb-40cf-a5b9-8a08308a7350?token=16d48b6c-eace-4a1f-8050-098d29d23a89&amp;link=0&amp;azure-portal=true" data-linktype="external">simulierten Microsoft Purview-Portal</a> zu <strong>Solutions</strong>&gt;<strong>Insider Risk Management</strong>&gt;<strong>Alerts</strong>.</p>
+</li>
+<li><p>Wählen Sie die Warnung mit dem Titel <em>"Potenzieller Datendiebstahl " – Mitarbeiterabgang</em> (Warnungs-ID <code>4bdf001f</code>) oben in der Liste aus.</p>
+</li>
+<li><p>Überprüfen Sie auf der Seite " <strong>Warnungsdetails</strong> " die Risikoindikatoren auf der Registerkarte <strong>"Alle Risikofaktoren</strong> ". Wählen Sie die Karten aus, um Aktivitäten im <strong>Aktivitäts-Explorer</strong> zu filtern und zu erkunden.</p>
+</li>
+<li><p>Wählen Sie die Registerkarte <strong>"Aktivitäts-Explorer" aus</strong> . Verwenden Sie Filter und die Aktivitätssequenz, um die Aktionen des Benutzers zu untersuchen, z. B. Das Kopieren von Dateien, das Archivieren von Daten oder den Zugriff auf persönliche Dienste.</p>
+</li>
+<li><p>Wählen Sie die Registerkarte " <strong>Benutzeraktivität" aus</strong> . Verwenden Sie die Zeitachsenfilter und Punktdiagramme, um zu bewerten, wann die Aktivität aufgetreten ist. Wählen Sie Aktivitätsblasen oder Ereignislinks aus, um die zugehörigen Aktionen im <strong>Aktivitäts-Explorer</strong> anzuzeigen.</p>
+</li>
+<li><p>Wählen Sie im Bereich "Copilot" Folgendes aus:</p>
+<ul>
+<li>
+              <strong>Anzeigen wichtiger Aktionen, die der Benutzer in den letzten 10 Tagen ausgeführt hat</strong></li>
+<li>
+              <strong>Zusammenfassung der letzten 30 Tage der Aktivität des Benutzers</strong></li>
+</ul>
+</li>
+</ol>
+<p>Sie haben die Warnung erfolgreich überprüft, die Benutzeraktivität untersucht und kontextbezogene Kontexte mit visuellen Tools und Copilot-Zusammenfassungen gesammelt.</p>
+<h2 id="task-2---create-and-escalate-a-case">Aufgabe 2 – Erstellen und Eskalieren eines Falls</h2>
+<p>In dieser Aufgabe organisieren Sie Ihre Ergebnisse, indem Sie einen Fall erstellen und eskalieren, um weitere Überprüfungen in eDiscovery zu erstellen.</p>
+<ol>
+<li><p>Wählen Sie auf der Benachrichtigungsseite <strong>"Alle Warnungen bestätigen" und "Fall erstellen</strong>" aus.</p>
+</li>
+<li><p>Geben Sie den Fallnamen ein: <code>Employee departure - Data exfiltration</code></p>
+</li>
+<li><p>Geben Sie die Fallbeschreibung ein: <code>Sensitive data copied and archived pre-departure. Theft suspected.</code></p>
+</li>
+<li><p>Wählen Sie <strong>"Fertig"</strong> aus, um den Fall zu erstellen.</p>
+</li>
+<li><p>Wechseln Sie zur Registerkarte <strong>"Fälle</strong> ", und wählen Sie den neuen Fall aus.</p>
+</li>
+<li><p>Überprüfen Sie auf der Seite <strong>"Fallübersicht</strong> " Die Details und den Warnungskontext.</p>
+</li>
+<li><p>Wählen Sie die <strong>Registerkarten "Benachrichtigungen</strong>", " <strong>Benutzeraktivität</strong>" und " <strong>Inhalt erkannt</strong> " aus, um Nachweise zu überprüfen. Diese Registerkarten zeigen die auslösende Aktivität, betroffene Dateien und erkannte Informationstypen an.</p>
+</li>
+<li><p>Wählen Sie <strong>"Fallaktionen</strong>&gt;<strong>zur Untersuchung eskalieren" aus</strong>.</p>
+</li>
+<li><p>Geben Sie den Namen des Eskalationsfalls ein: <code>Employee departure exfiltration investigation</code></p>
+</li>
+<li><p>Geben Sie die Eskalationsnotiz ein: <code>Sensitive data exfiltrated before departure. HR to review.</code></p>
+</li>
+<li><p>Wählen Sie <strong>"Speichern"</strong> und dann " <strong>Fertig</strong> " aus, um die Eskalation abzuschließen.</p>
+</li>
+<li><p>Wählen Sie <strong>"Groß-/Kleinschreibung auflösen" aus</strong>.</p>
+</li>
+<li><p>Legen Sie die Lösung auf <strong>bestätigten Richtlinienverstoß fest</strong>.</p>
+</li>
+<li><p>Geben Sie für <strong>ausgeführte Aktionen</strong> Folgendes ein: <code>Confirmed exfiltration before departure. HR notified.</code></p>
+</li>
+</ol>
+<p>Sie haben den Insider-Risikofall basierend auf Ihrer Untersuchung erfolgreich erstellt, eskaliert und gelöst.</p>
+<h2 id="task-3---correlate-incident-data-in-microsoft-defender">Aufgabe 3 – Korrelieren von Vorfalldaten in Microsoft Defender</h2>
+<p>In dieser Aufgabe wechseln Sie zu einer simulierten Version von Microsoft Defender, um zu überprüfen, wie die Insider-Risikowarnung mit einem größeren Vorfall verbunden ist. Sie werden die Angriffszeitachse, verwandte Warnungen und zusätzliche Nachweise für microsoft 365-Dienste erkunden.</p>
+<p>Führen Sie diese Aufgabe in der Simulation aus: <strong><a href="https://app.highlights.guide/start/d3e09027-0dbb-40cf-a5b9-8a08308a7350?token=16d48b6c-eace-4a1f-8050-098d29d23a89&amp;link=1&amp;azure-portal=true" data-linktype="external">Öffnen Sie das simulierte Microsoft Defender-Portal</a></strong>.</p>
+<ol>
+<li><p>Wechseln Sie im <a href="https://app.highlights.guide/start/d3e09027-0dbb-40cf-a5b9-8a08308a7350?token=16d48b6c-eace-4a1f-8050-098d29d23a89&amp;link=1&amp;azure-portal=true" data-linktype="external">simulierten Microsoft Defender-Portal</a> zu <strong>Vorfällen und Reaktionsvorfällen</strong>&gt;<strong>und Benachrichtigungsvorfällen</strong>&gt;.<strong></strong></p>
+</li>
+<li><p>Wählen Sie <strong>"Filterdienst</strong>&gt;<strong>-/Erkennungsquellen</strong> hinzufügen", wählen Sie <strong>"Microsoft Insider-Risikomanagement</strong>" und dann " <strong>Anwenden"</strong> aus.</p>
+</li>
+<li><p>Geben Sie in der Suchleiste die EINGABETASTE <code>4bdf001f</code> ein, und drücken <strong>Sie die EINGABETASTE</strong>.</p>
+</li>
+<li><p>Wählen Sie den Vorfall mit dem Titel <strong>"Exfiltrationsvorfall" aus, der eine Benutzerbenachrichtigung umfasst</strong>.</p>
+</li>
+<li><p>Wählen Sie auf der Registerkarte <strong>"Angriffsabschnitt</strong> " die Option " <strong>Wiedergeben"</strong> aus, um die Abfolge von Ereignissen anzuzeigen. Wählen Sie einzelne Schritte aus, um zu erfahren, wie der Vorfall vorangekommen ist.</p>
+</li>
+<li><p>Wählen Sie die Registerkarte <strong>"Warnungen</strong> " aus, um verwandte Warnungen zu überprüfen, die an diesen Benutzer gebunden sind.</p>
+</li>
+<li><p>Erkunden Sie die Registerkarten <strong>"Ressourcen</strong>", "<strong>Untersuchung</strong>", "<strong>Nachweis</strong>", "<strong>Antwort</strong>", "<strong>Zusammenfassung</strong><strong>" und "Ähnliche Vorfälle</strong>", um den Umfang und die Details des Vorfalls zu verstehen.</p>
+</li>
+</ol>
+<p>Sie haben die Insider-Risikowarnung erfolgreich mit einem umfassenderen Vorfall in Microsoft Defender korreliert, um Ihre Untersuchung zu validieren und Reaktionsaktionen in allen Teams zu unterstützen.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

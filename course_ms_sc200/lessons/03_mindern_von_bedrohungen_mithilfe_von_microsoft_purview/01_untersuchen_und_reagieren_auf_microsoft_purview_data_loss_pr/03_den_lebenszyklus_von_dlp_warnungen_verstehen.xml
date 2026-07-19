@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_03_01_03" title="Den Lebenszyklus von DLP-Warnungen verstehen.">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Den Lebenszyklus von DLP-Warnungen verstehen.</div>
+<div class="section-content">
+<p>Dlp-Warnungen (Data Loss Prevention, Verhinderung von Datenverlust) folgen einem strukturierten Pfad von der Erkennung über die Auflösung. Wenn Sie jeden Schritt im Warnungslebenszyklus verstehen, können Sie sicherstellen, dass potenzielle Datenrisiken konsistent behandelt werden und dass DLP-Richtlinien im Laufe der Zeit weiter verbessert werden.</p>
+<h2 id="trigger">Auslöser</h2>
+<p>Eine DLP-Warnung beginnt, wenn die Aktion eines Benutzers einer Bedingung in einer DLP-Richtlinie entspricht. Richtlinien sind in der Regel so konfiguriert, dass sie auf Aktivitäten achten, die zu Datenverlusten führen können, z. B.:</p>
+<ul>
+<li>Freigeben vertraulicher Daten für Personen außerhalb der Organisation</li>
+<li>Das Herunterladen vertraulicher Dateien auf tragbare Speichermedien</li>
+<li>Hochladen geschützter Inhalte in nicht genehmigte Cloud-Apps</li>
+</ul>
+<p>Wenn diese Art von Aktivität auftritt, kann die Richtlinie Aktionen ergreifen, z. B. die Aktivität blockieren, den Benutzer warnen und wenn dies konfiguriert ist, eine Warnung generieren.</p>
+<h2 id="notify">Benachrichtigen</h2>
+<p>Wenn eine Richtlinie für die Generierung einer Warnung konfiguriert ist, wird diese Warnung an zwei Stellen angezeigt:</p>
+<ul>
+<li>
+              <strong>Microsoft Defender-Portal</strong>: Wo Warnungen zusammen mit anderen Sicherheitssignalen in Vorfälle gruppiert werden</li>
+<li>
+              <strong>Microsoft Purview-Warnungsdashboard</strong>: Wo Sie den Benachrichtigungsverlauf nachverfolgen, Warnungsdetails überprüfen und grundlegende Aktionen ausführen können</li>
+</ul>
+<p>E-Mail-Benachrichtigungen können je nach Richtlinieneinrichtung auch an Benutzer, Administratoren oder Sicherheitsteams gesendet werden. Diese Benachrichtigungen informieren Sie, dass etwas passiert ist, das möglicherweise einen genaueren Blick erfordert.</p>
+<p>In dieser Phase können Sie auch den Aktivitäts-Explorer verwenden, um die Details der Geschehenen anzuzeigen. Wenn Ihr Team die MICROSOFT-APIs verwendet, können Sie Aktivitätsdaten für einen langfristigen Speicher oder benutzerdefinierte Berichte exportieren.</p>
+<h2 id="triage">Triage</h2>
+<p>Triage geht es darum, neue Warnungen zu überprüfen und zu entscheiden, was als Nächstes zu tun ist. Sie entscheiden, ob es sich bei der Warnung um ein falsch positives Ergebnis handelt oder eine tiefergehende Untersuchung erforderlich ist. Wenn sie gültig ist, weisen Sie sie einer Prioritätsstufe zu, und legen Sie eine Person fest, die die Antwort besitzt.</p>
+<p>Das Microsoft Defender-Portal gruppiert verwandte Warnungen in Vorfälle. Dadurch erhalten Sie eine umfassendere Ansicht der Aktionen des Benutzers. Wenn ein Benutzer beispielsweise eine Datei aus SharePoint herunterlädt, sie auf ein persönliches OneDrive hochlädt und diese dann extern teilt, werden diese Ereignisse in einem Vorfall gruppiert. Dies erleichtert es, sich auf das Wesentliche zu konzentrieren.</p>
+<p>Sie können Tags, Kommentare und Filter verwenden, um die Vorfallwarteschlange zu verwalten. Um sich nur auf DLP-bezogene Warnungen zu konzentrieren, filtern Sie nach <strong>Dienstquelle: Verhinderung von Datenverlust</strong>.</p>
+<p>Wenn Ihre Organisation Insider-Risikomanagement-Signale mit Defender teilt, können Sie auch den Schweregrad des Insider-Risikos des Benutzers neben den DLP-Warnungen sehen. Dadurch können Sie priorisieren, welche Warnungen möglicherweise sofortige Maßnahmen erfordern.</p>
+<p>Microsoft Security Copilot ist auch in einigen Mandanten verfügbar und kann dabei helfen, den Warnungskontext zu analysieren und die nächsten Schritte vorzuschlagen. Dieses Feature ist im <a href="https://learn.microsoft.com/de-de/purview/dlp-alerts-dashboard-get-started?azure-portal=true#investigate-a-dlp-alert" data-linktype="absolute-path">DLP-Benachrichtigungsdashboard</a> und in die <a href="https://learn.microsoft.com/de-de/purview/data-security-posture-management-copilot?azure-portal=true#use-microsoft-security-copilot-with-data-security-posture-management-preview" data-linktype="absolute-path">Datensicherheitsstatusverwaltung (Vorschau)</a> eingebettet.</p>
+<h2 id="investigate">Untersuchen</h2>
+<p>Sobald ein Verantwortlicher für die Triage zugewiesen wurde, ist der nächste Schritt, die Warnung näher zu untersuchen. Dies bedeutet, dass Nachweise gesammelt, Aktivitätsprotokolle überprüft und ein Wartungsplan festgelegt wird.</p>
+<p>Sie können hierfür mehrere Tools verwenden:</p>
+<ul>
+<li>
+              <strong>Microsoft Defender-Portal</strong>: Um Vorfälle anzuzeigen, Warnungen zu korrelieren, Benutzer zu kategorisieren und sofortige Maßnahmen zu ergreifen.</li>
+<li>
+              <strong>Microsoft Purview-Warnungsdashboard</strong>: Um den vollständigen Kontext der Warnung zu überprüfen, den Status zu aktualisieren und mit anderen personen zu teilen.</li>
+<li>
+              <strong>Aktivitäts-Explorer</strong>: Zum Filtern und Anzeigen von Benutzeraktionen.</li>
+<li>
+              <strong>Inhalts-Explorer</strong>: Eine tiefere Überprüfung der Datei oder der Inhalte, die die Warnung ausgelöst haben.</li>
+</ul>
+<p>Wenn diese Option aktiviert ist, können Sie auch auf eine <strong>Benutzeraktivitätszusammenfassung</strong> zugreifen, die bis zu 120 Tage des Benutzerverhaltens anzeigt, einschließlich riskanter Aktionen wie Exfiltrieren von Dateien oder Umgehen von Richtlinienwarnungen.</p>
+<h2 id="remediate">Beheben</h2>
+<p>Nach der Untersuchung entscheidet der Verantwortliche für den Alarm, welche Maßnahmen ergreifen sollte. Die Korrekturoptionen variieren je nach Behandlung von Risiken in Ihrer Organisation. Einige häufige Aktionen umfassen:</p>
+<ul>
+<li>Kennzeichnen der Warnung als informational und ohne Aktion</li>
+<li>Folgen Sie dem Benutzer, um zu erklären, warum die Aktion riskant war</li>
+<li>Blockieren der Dateifreigabe oder Widerrufen des Zugriffs</li>
+<li>Entfernen der Datei aus dem Cloudspeicher oder Anwenden einer Vertraulichkeitsbezeichnung</li>
+<li>Zurücksetzen von Kennwörtern, Deaktivieren von Konten oder Isolieren von Geräten</li>
+</ul>
+<p>In Defender können Sie viele dieser Aktionen direkt über das Portal ausführen, darunter:</p>
+<ul>
+<li>Datei entfernen oder unter Quarantäne stellen</li>
+<li>Widerrufen von Freigabeberechtigungen</li>
+<li>Deaktivieren von Benutzerkonten</li>
+<li>Kennwörter zurücksetzen</li>
+<li>Herunterladen oder Löschen von E-Mails</li>
+<li>Verwenden der erweiterten Bedrohungssuche zum Suchen nach verwandten Ereignissen</li>
+</ul>
+<h2 id="tune">Optimieren</h2>
+<p>Der letzte Schritt im Warnungslebenszyklus ist die Optimierung Ihrer DLP-Richtlinie. Nachdem Sie auf die Warnung geantwortet haben, fragen Sie, ob die Richtlinie wie beabsichtigt funktioniert hat. Möglicherweise müssen Sie Folgendes anpassen:</p>
+<ul>
+<li>Die Empfindlichkeitsstufe der Bedingungen, die eine Warnung auslösen</li>
+<li>Der Umfang der Richtlinie (Benutzer, Speicherorte oder Gruppen)</li>
+<li>Benachrichtigungseinstellungen</li>
+<li>Gibt an, ob bestimmte Aktionen mit geringem Risiko Warnungen überhaupt auslösen sollen.</li>
+</ul>
+<p>Optimierung hilft dabei, falsch positive Ergebnisse zu reduzieren und die Erkennung im Laufe der Zeit zu verbessern. Sie können Ihre Richtlinienabsicht erneut überprüfen und mit tatsächlichen Ergebnissen vergleichen, um zu entscheiden, welche Änderungen erforderlich sind.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_02_05" title="Zugriff verwalten">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Zugriff verwalten</div>
+<div class="section-content">
+<p>Mithilfe der rollenbasierten Zugriffssteuerung (RBAC) können Sie Rollen und Gruppen in Ihrem SecOps-Team erstellen, um den entsprechenden Zugriff auf das Portal zu gewähren. Basierend auf den von Ihnen erstellten Rollen und Gruppen können Sie genau steuern, was Benutzende mit Zugriff auf das Portal sehen und welche Aktionen sie ausführen können.  Im folgenden Video wird die Verwendung der rollenbasierten Zugriffssteuerung (RBAC) und von Gerätegruppen (Computergruppen) erläutert.</p>
+<div class="IMPORTANT">
+<p>Wichtig</p>
+<p>Ab dem 16. Februar 2025 haben neue Kunden von Microsoft Defender for Endpoint nur Zugriff auf URBAC (Unified Role-Based Access Control, einheitliche rollenbasierte Zugriffssteuerung).
+Bestehende Kunden behalten ihre aktuellen Rollen und Berechtigungen. Weitere Informationen finden Sie unter URBAC – <a href="https://learn.microsoft.com/de-de/defender-xdr/manage-rbac" data-linktype="absolute-path">Unified Role-Based Access Control (URBAC) für Microsoft Defender for Endpoint</a>.</p>
+</div>
+<div class="embeddedvideo"><p><em>[Interaktiver Inhalt auf Microsoft Learn verfügbar]</em></p></div>
+<p>Die rollenbasierte Zugriffssteuerung (RBAC) von Defender für Endpunkt ist so konzipiert, dass sie Ihre Ebene oder Ihr rollenbasiertes Modell der Wahl unterstützen. Sie erhalten dadurch präzisere Kontrolle darüber, was Rollen einsehen können, auf welche Geräte sie zugreifen und welche Aktionen sie durchführen können. Das RBAC-Framework basiert auf den folgenden Steuermechanismen:</p>
+<ul>
+<li><p>Steuern, wer bestimmte Aktionen ausführen kann</p>
+<ul>
+<li>Erstellen Sie benutzerdefinierte Rollen, und steuern Sie, auf welche Microsoft Defender für Endpunkt-Funktionen diese genau zugreifen können.</li>
+</ul>
+</li>
+<li><p>Steuern, wer Informationen zu einer bestimmten Gerätegruppe oder zu Gruppen anzeigen kann</p>
+<ul>
+<li>Erstellen Sie Gerätegruppen nach bestimmten Kriterien wie beispielsweise Namen, Tags oder Domänen, und gewähren Sie diesen mithilfe einer bestimmten Microsoft Entra-Benutzergruppe Rollenzugriff.</li>
+</ul>
+</li>
+</ul>
+<p>Zum Implementieren des rollenbasierten Zugriffs müssen Sie Administrationsrollen definieren, entsprechende Berechtigungen zuweisen und Microsoft Entra-Benutzergruppen zuweisen, die den Rollen zugewiesen sind.</p>
+<p>Vor der Verwendung der RBAC sollten Sie die Rollen verstehen, die Berechtigungen gewähren können. Außerdem sollten Sie wissen, welche Auswirkungen das Aktivieren der RBAC haben kann. Wenn Sie sich zum ersten Mal bei Microsoft Defender XDR anmelden, erhalten Sie entweder Vollzugriff oder schreibgeschützten Zugriff. Vollzugriffsrechte werden Benutzer*innen mit den Rollen „Sicherheitsadministrator*in“ oder „Globale*r Administrator*in“ in Microsoft Entra ID erteilt. Benutzer*innen mit der Rolle „Sicherheitsleseberechtigte*r“ in Microsoft Entra ID wird der schreibgeschützte Zugriff gewährt. Eine Person mit der Microsoft Defender für Endpunkt-Rolle „Globale*r Administrator*in“ hat uneingeschränkten Zugriff auf alle Geräte, unabhängig von deren Gerätegruppenzuordnung und den Microsoft Entra-Benutzergruppenzuweisungen.</p>
+<div class="IMPORTANT">
+<p>Wichtig</p>
+<p>Microsoft empfiehlt die Verwendung von Rollen mit den wenigsten Berechtigungen. Dies trägt zur Verbesserung der Sicherheit für Ihre Organisation bei. Die globale Administrationsfachkraft ist eine Rolle mit umfassenden Rechten, die auf Notfallszenarien beschränkt werden sollte, in denen Sie keine vorhandene Rolle verwenden können.</p>
+</div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

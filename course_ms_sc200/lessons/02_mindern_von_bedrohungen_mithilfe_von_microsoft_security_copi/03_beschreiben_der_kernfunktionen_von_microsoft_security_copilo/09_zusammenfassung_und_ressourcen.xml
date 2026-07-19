@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_02_03_09" title="Zusammenfassung und Ressourcen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Zusammenfassung und Ressourcen</div>
+<div class="section-content">
+<p>In diesem Modul haben Sie mehr über die Kernfunktionen von Microsoft Security Copilot erfahren. Zu diesen Features gehören Promptbooks und die Erstellung benutzerdefinierter Promptbooks, die standardisierte Prompts für Sicherheitsanalysten enthalten, die als Rahmen für die Durchführung von Untersuchungen dienen. Sie haben gelernt, welche Arten von Plug-Ins für die Integration mit verschiedenen Quellen verfügbar sind, um domänenspezifische Funktionen für Ihre Untersuchungen bereitzustellen.</p>
+<p>Nachdem Sie dieses Modul abgeschlossen haben, sind Sie zu Folgendem in der Lage:</p>
+<ul>
+<li>Beschreiben der in der eigenständigen Copilot-Umgebung verfügbaren Features.</li>
+<li>Beschreiben Sie die in Copilot verfügbaren Plug-Ins.</li>
+<li>Beschreiben von benutzerdefinierten Promptbooks.</li>
+<li>Beschreiben von Wissensbasisverbindungen.</li>
+</ul>
+<h4 id="learn-more">Weitere Informationen</h4>
+<ul>
+<li>
+              <a href="https://learn.microsoft.com/de-de/copilot/security/authentication" data-linktype="absolute-path">Verstehen der Authentifizierung in Microsoft Security Copilot</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/security-copilot/experiences-security-copilot" data-linktype="absolute-path">Microsoft Security Copilot-Erfahrungen</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/copilot/security/plugin-overview" data-linktype="absolute-path">Plugins – Übersicht über Microsoft Security Copilot</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/copilot/security/agents-overview" data-linktype="absolute-path">Übersicht über Microsoft Security Copilot-Agents</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/copilot/security/custom-plugins" data-linktype="absolute-path">Erstellen Eigener benutzerdefinierter Plug-Ins</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/azure/external-attack-surface-management/" data-linktype="absolute-path">Defender EASM –Übersicht</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/azure/external-attack-surface-management/easm-copilot" data-linktype="absolute-path">Microsoft Security Copilot und Defender EASM</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/mem/intune/fundamentals/what-is-intune" data-linktype="absolute-path">Microsoft Intune</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/mem/intune/fundamentals/security-copilot" data-linktype="absolute-path">Microsoft Security Copilot und Intune</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/microsoft-365/security/defender/microsoft-365-defender" data-linktype="absolute-path">Was ist Microsoft Defender XDR?</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/microsoft-365/security/defender/security-copilot-in-microsoft-365-defender" data-linktype="absolute-path">Microsoft Copilot in Microsoft Defender XDR</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti" data-linktype="absolute-path">Was ist Microsoft Defender Threat Intelligence (Defender TI)?</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/azure/sentinel/overview" data-linktype="absolute-path">Was ist Microsoft Sentinel?</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/entra/" data-linktype="absolute-path">Microsoft Entra</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/azure/search/search-what-is-azure-search" data-linktype="absolute-path">Was ist Azure AI Search?</a></li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

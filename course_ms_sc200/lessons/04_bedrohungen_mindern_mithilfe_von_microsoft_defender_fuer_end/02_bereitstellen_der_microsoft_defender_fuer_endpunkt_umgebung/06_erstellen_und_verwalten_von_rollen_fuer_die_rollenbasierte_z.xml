@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_02_06" title="Erstellen und Verwalten von Rollen für die rollenbasierte Zugriffssteuerung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Erstellen und Verwalten von Rollen für die rollenbasierte Zugriffssteuerung</div>
+<div class="section-content">
+<p>Die folgenden Schritte führen Sie durch den Erstellungsprozess von Rollen im Microsoft Defender-Portal. Es wird davon ausgegangen, dass Sie bereits Microsoft Entra-Benutzergruppen erstellt haben.</p>
+<div class="IMPORTANT">
+<p>Wichtig</p>
+<p>Microsoft empfiehlt die Verwendung von Rollen mit den wenigsten Berechtigungen. Dies trägt zur Verbesserung der Sicherheit für Ihre Organisation bei. Globaler Administrator ist eine hoch privilegierte Rolle, die auf Notfallszenarien beschränkt werden sollte, wenn Sie keine vorhandene Rolle verwenden können.</p>
+</div>
+<ol>
+<li>Greifen Sie mithilfe eines Kontos auf das Microsoft Defender-Portal zu, dem die Rolle des Sicherheitsadministrators zugewiesen ist.</li>
+<li>Wählen Sie im Navigationsbereich <strong>Einstellungen</strong> und dann <strong>Endpunkte</strong> aus. Wählen Sie in der Kategorie <strong>Berechtigungen</strong> die Option <strong>Rollen</strong> aus.</li>
+<li>Wählen Sie die Schaltfläche <strong>Rollen aktivieren</strong> aus.</li>
+<li>Klicken Sie auf <strong>+ Element hinzufügen</strong>.</li>
+<li>Geben Sie den Rollennamen, eine Beschreibung und die Berechtigungen ein, die Sie der Rolle zuweisen möchten.</li>
+<li>Wählen Sie <strong>Weiter</strong> aus, um die Rolle einer Microsoft Entra-Sicherheitsgruppe zuzuweisen.</li>
+<li>Wählen Sie über den Filter die Microsoft Entra-Gruppe aus, der Sie diese Rolle zuweisen möchten.</li>
+<li>Wählen Sie <strong>Speichern</strong> aus.</li>
+</ol>
+<div class="IMPORTANT">
+<p>Wichtig</p>
+<p>Nachdem Sie Rollen erstellt haben, müssen Sie eine Gerätegruppe erstellen und den Zugriff auf die Gerätegruppe gewähren, indem Sie sie einer soeben erstellten Rolle zuweisen.</p>
+</div>
+<h2 id="permission-options">Berechtigungsoptionen</h2>
+<p>Im Folgenden finden Sie die Berechtigungsoptionen:</p>
+<ul>
+<li><p>Anzeigen von Daten</p>
+<ul>
+<li><p>Sicherheitsvorgänge: Anzeigen aller Daten zu Sicherheitsvorgängen im Portal</p>
+</li>
+<li><p>Bedrohungs- und Sicherheitsrisikomanagement: Anzeigen von Daten zum Bedrohungs- und Sicherheitsrisikomanagement im Portal</p>
+</li>
+</ul>
+</li>
+<li><p>Aktive Wartungsaktionen</p>
+<ul>
+<li><p>Sicherheitsvorgänge: Durchführen von Aktionen als Reaktion, Genehmigen oder Ablehnen ausstehender Wartungsaktionen, Verwalten zulässiger oder blockierter Listen für die Automatisierung und Indikatoren</p>
+</li>
+<li><p>Bedrohungs- und Sicherheitsrisikomanagement – Ausnahmebehandlung: Erstellen neuer Ausnahmen und Verwalten aktiver Ausnahmen</p>
+</li>
+<li><p>Bedrohungs- und Sicherheitsrisikomanagement – Wartungsablauf: Übermitteln neuer Wartungsanforderungen, Erstellen von Tickets und Verwalten vorhandener Wartungsaktivitäten</p>
+</li>
+<li><p>Bedrohungs- und Sicherheitsrisikomanagement – Anwendungsbehandlung – Anwenden sofortiger Abhilfemaßnahmen durch Blockieren anfälliger Anwendungen und Verwalten der blockierten Apps durch Aufheben der Blockierung nach Genehmigung</p>
+</li>
+</ul>
+</li>
+<li><p>Bedrohungs- und Sicherheitsrisikoverwaltung – Verwalten von Bewertungsprofilen für Sicherheitsbaselines – Erstellen und Verwalten von Profilen, um zu bewerten, ob Ihre Geräte den Branchenbaselines in Bezug auf Sicherheit entsprechen</p>
+</li>
+<li><p>Untersuchung von Warnungen: Verwalten von Warnungen, Starten automatisierter Untersuchungen, Ausführen von Scanvorgängen, Sammeln von Untersuchungspaketen, Verwalten von Gerätetags und Herunterladen nur von portierbaren, ausführbaren Dateien (PE-Dateien)</p>
+</li>
+<li><p>Verwalten der Sicherheitseinstellungen im Security Center: Konfigurieren von Warnungsunterdrückungseinstellungen, Verwalten von Ordnerausschlüssen für die Automatisierung, Geräte ein- und ausbinden, E-Mail-Benachrichtigungen verwalten sowie das Testlabor verwalten.</p>
+</li>
+<li><p>Verwalten von Endpunktsicherheitseinstellungen in Microsoft Intune – Vollzugriff auf den Bereich "Endpunktsicherheit" in Microsoft Intune, Intune "Endpoint Security Manager"-Rollenberechtigungen, Konfigurieren von Endpunktsicherheits- und Compliancefeatures, einschließlich Microsoft Defender für Endpunkt-Onboarding und der Möglichkeit, die Seite "Konfigurationsverwaltung" im Security Center anzuzeigen</p>
+</li>
+<li><p>Livereaktionsfunktionen</p>
+<ul>
+<li><p>Grundlegende Befehle:</p>
+<ul>
+<li><p>Starten einer Livereaktionssitzung</p>
+</li>
+<li><p>Ausführen von schreibgeschützten Livereaktionsbefehlen auf Remotegeräten (ohne Kopieren und Ausführen von Dateien)</p>
+</li>
+</ul>
+</li>
+<li><p>Erweiterte Befehle:</p>
+<ul>
+<li><p>Herunterladen einer Datei vom Remotegerät über die Livereaktion</p>
+</li>
+<li><p>Herunterladen von PE- und Nicht-PE-Dateien von der Dateiseite</p>
+</li>
+<li><p>Hochladen einer Datei auf das Remotegerät</p>
+</li>
+<li><p>Anzeigen eines Skripts aus der Dateibibliothek</p>
+</li>
+<li><p>Ausführen eines Skripts auf dem Remotegerät aus der Dateibibliothek</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

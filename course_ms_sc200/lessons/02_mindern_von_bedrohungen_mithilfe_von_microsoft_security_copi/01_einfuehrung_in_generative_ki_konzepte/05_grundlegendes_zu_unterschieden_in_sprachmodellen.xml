@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_02_01_05" title="Grundlegendes zu Unterschieden in Sprachmodellen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Grundlegendes zu Unterschieden in Sprachmodellen</div>
+<div class="section-content">
+<p>Heute müssen Entwickler modelle nicht von Grund auf neu trainieren. Um eine generative KI-Anwendung zu erstellen, können Sie vortrainierte Modelle verwenden. Einige Sprachmodelle sind Open Source und öffentlich verfügbar. Andere werden in proprietären Katalogen angeboten. Heute existieren unterschiedliche Modelle, die sich größtenteils durch die spezifischen Daten unterscheiden, die zu ihrem Training verwendet werden, oder durch die Art und Weise, wie sie Aufmerksamkeit in ihren Architekturen implementieren.</p>
+<h2 id="large-and-small-language-models">Große und kleine Sprachmodelle</h2>
+<p>Im Allgemeinen können Sprachmodelle in zwei Kategorien berücksichtigt werden: <em>Large Language Models</em> (LLMs) und <em>Small Language Models</em> (SLMs).</p>
+<table>
+<thead>
+<tr>
+<th>Große Sprachmodelle (LLMs)</th>
+<th>Kleine Sprachmodelle (SLMs)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLMs werden mit großen Textmengen geschult, die eine breite Palette von allgemeinen Themen darstellen – in der Regel durch Beschaffung von Daten aus dem Internet und anderen allgemein verfügbaren Publikationen.</td>
+<td>SLMs werden mit kleineren, themenorientierten Datasets trainiert.</td>
+</tr>
+<tr>
+<td>Bei der Schulung verfügen LLMs über viele Milliarden (sogar Billionen) von Parametern (Gewichtungen, die auf Vektoreinbettungen angewendet werden können, um vorhergesagte Tokensequenzen zu berechnen).</td>
+<td>In der Regel haben weniger Parameter als LLMs.</td>
+</tr>
+<tr>
+<td>In der Lage, umfassende Sprachgenerierungsfunktionen in einem breiten Spektrum von Unterhaltungskontexten zu präsentieren.</td>
+<td>Dieses fokussierte Vokabular macht sie effektiv in bestimmten Unterhaltungsthemen, aber weniger effektiv bei allgemeinerer Sprachgenerierung.</td>
+</tr>
+<tr>
+<td>Ihre große Größe kann sich auf ihre Leistung auswirken und die Lokale Bereitstellung auf Geräten und Computern erschweren.</td>
+<td>Die kleinere Größe von SLMs kann mehr Optionen für die Bereitstellung bieten, einschließlich der lokalen Bereitstellung auf Geräten und lokalen Computern; und macht sie schneller und einfacher zu optimieren.</td>
+</tr>
+<tr>
+<td>Die Feinabstimmung des Modells mit zusätzlichem Datenmaterial zur Anpassung seiner Fachkompetenz kann zeitaufwändig sein und erhebliche Rechenleistung erfordern, um das zusätzliche Training durchzuführen.</td>
+<td>Feinabstimmungen können möglicherweise weniger zeitaufwendig und teuer sein.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

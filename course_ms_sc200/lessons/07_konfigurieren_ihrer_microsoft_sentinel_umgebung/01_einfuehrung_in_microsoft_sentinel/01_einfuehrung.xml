@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_07_01_01" title="Einführung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Einführung</div>
+<div class="section-content">
+<p>Stellen Sie sich vor, Sie arbeiten als Analyst in einem Security Operations Center (Sicherheitsleitstelle, SOC). Ihre Organisation möchte ihre Fähigkeiten beim Sicherheitsmanagement weiterentwickeln. Das Unternehmen hat bereits damit begonnen, einige Workloads in die öffentliche Cloud zu verschieben.</p>
+<p>Sie wurden aufgefordert, <em>Sicherheitsinformations- und Ereignisverwaltungslösungen</em> (SIEM) auszuwerten, die sowohl in einer lokalen als auch in einer Multicloud-Umgebung helfen können. Sie haben von Microsoft Sentinel gehört und möchten herausfinden, ob es sich um die passende SIEM-Lösung für Ihr Unternehmen handeln könnte.</p>
+<p>Im Idealfall wählen Sie einen Dienst mit minimalem Verwaltungsaufwand und einem flexiblen Preismodell aus, der die Features und Funktionen bereitstellt, die Sie benötigen.</p>
+<p>Microsoft Sentinel bietet genau diese Vorteile.</p>
+<p>In diesem Modul erkunden Sie Microsoft Sentinel und erfahren, warum und wann Sie diese Lösung einsetzen sollten. Außerdem untersuchen Sie die wichtigsten Features und Funktionen von Microsoft Sentinel und erfahren, wie und wann Sie diese bereitstellen sollten.</p>
+<h2 id="learning-objectives">Lernziele</h2>
+<p>Nach Abschluss dieses Moduls können Sie Folgendes:</p>
+<ul>
+<li>Identifizieren der verschiedenen Komponenten und Funktionen von Microsoft Sentinel</li>
+<li>Identifizieren von Anwendungsfällen für Microsoft Sentinel</li>
+</ul>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<ul>
+<li>Kenntnisse über die Sicherheitsvorgänge in einer Organisation</li>
+<li>Grundlegende Erfahrung mit Microsoft Defender- und Azure-Diensten</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

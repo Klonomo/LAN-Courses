@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_02_01_08" title="Übung – Erkunden eines generativen KI-Agent-Szenarios">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Übung – Erkunden eines generativen KI-Agent-Szenarios</div>
+<div class="section-content">
+<p>Jetzt ist es Ihre Chance, ein generatives KI-Szenario zu erkunden.</p>
+<p>Starten Sie die Übung, und folgen Sie den Anweisungen.</p>
+<p>
+              <a href="https://go.microsoft.com/fwlink/?linkid=2334224&amp;azure-portal=true" data-linktype="external">
+              <img src="data:image/png;base64,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" alt="Schaltfläche zum Starten der Übung." data-linktype="relative-path">
+              
+              </a>
+            </p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

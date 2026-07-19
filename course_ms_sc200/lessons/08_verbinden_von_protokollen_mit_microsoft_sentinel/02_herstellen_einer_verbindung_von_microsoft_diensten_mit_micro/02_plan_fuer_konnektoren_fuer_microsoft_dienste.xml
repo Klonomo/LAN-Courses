@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_08_02_02" title="Plan für Konnektoren für Microsoft-Dienste">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Plan für Konnektoren für Microsoft-Dienste</div>
+<div class="section-content">
+<p>Nachdem Sie die Content Hub-Lösungen installiert haben, können Sie Microsoft 365 und Azure zugehörigen Dienste im Konfigurationsabschnitt "Data Connector" in nur wenigen Mausklicks verbinden.  Es ist leicht, spezifische Aspekte bei jedem Connector zu übersehen. In diesem Modul wird das Verbinden von vier Diensten veranschaulicht. Jeder dieser Dienste sendet Daten an einen anderen Datentyp (Tabelle).</p>
+<p>Der erste ist der Microsoft&nbsp;365-Connector. Über die Konfigurationsoption können Exchange-, SharePoint- und Teams-Daten gesendet werden. Je nach den spezifischen Anforderungen Ihres Unternehmens können Sie entscheiden, welche Daten erfasst werden sollen. Die Datentypen zeigen, dass sich die Daten in der OfficeActivity-Tabelle befinden.</p>
+<p>Die zweite ist Microsoft Entra ID, die mehrere Protokolltypen unterstützt. Sie können unabhängig auswählen, welche Protokolltypen an Microsoft Sentinel gestreamt werden, und jeder Typ wird in eine separate Log Analytics-Tabelle geschrieben. Zu den verfügbaren Protokolltypen gehören interaktive und nicht interaktive Benutzeranmeldungsprotokolle, Dienstprinzipalanmeldungsprotokolle, Anmeldeprotokolle für verwaltete Identitäten, Bereitstellungsprotokolle, AD FS-Anmeldeprotokolle und Überwachungsprotokolle.</p>
+<p>Der dritte ist Microsoft Entra ID Protection. Dieser Connector sendet Daten an die Tabelle „SecurityAlert“. Die Tabelle „SecurityAlert“ enthält nur die Warnungsdaten und nicht die zugrunde liegenden Daten, die die Warnung verursacht haben. Eine zweite Option ist „Incidents erstellen“, was dringend empfohlen wird. Dieser Prozess erstellt automatisch einen Vorfall auf Grundlage von und in Verbindung mit der Warnung, die in der Tabelle „SecurityAlert“ in Microsoft Entra ID Protection erfasst wurde. Auf der Seite „Analytics“ können Sie auch die Regel zur Erstellung von Incidents aktivieren.</p>
+<p>Der letzte Connector ist: Azure Activity. Das Azure-Aktivitätsprotokoll ist ein Abonnementprotokoll, das Erkenntnisse zu Ereignissen auf Abonnementebene in Azure liefert. Dies schließt Ereignisse aus Azure&nbsp;Resource&nbsp;Manager-Betriebsdaten, Dienstintegritätsereignisse, Schreibvorgänge für die Ressourcen in Ihrem Abonnement sowie den Status von Aktivitäten ein, die in Azure ausgeführt werden.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_09_04_01" title="Einführung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Einführung</div>
+<div class="section-content">
+<p>Nehmen wir an, Sie arbeiten als Sicherheitstechniker bei Contoso Ltd., einem mittelgroßen Finanzdienstleistungsunternehmen in London mit einer Zweigniederlassung in New York. Contoso verwendet die folgenden Microsoft-Produkte zur Sicherheitsverwaltung:</p>
+<ul>
+<li>Microsoft 365</li>
+<li>Microsoft Entra ID</li>
+<li>Microsoft Entra&nbsp;ID-Schutz</li>
+<li>Microsoft Defender for Cloud-Apps</li>
+<li>Microsoft Defender for Identity</li>
+<li>Microsoft Defender für den Endpunkt</li>
+<li>Microsoft Defender für Office 365</li>
+<li>Intune Endpoint Protection</li>
+<li>Azure Information Protection</li>
+</ul>
+<p>Contoso verwendet Microsoft Defender für Cloud als Bedrohungsschutz für Ressourcen, die in Azure und lokal ausgeführt werden. Das Unternehmen überwacht und schützt auch andere nicht von Microsoft stammende Ressourcen.</p>
+<p>Kürzlich hat das Azure-Aktivitätsprotokoll des Unternehmens gezeigt, dass eine beträchtliche Anzahl von VMs aus dem Azure-Abonnement gelöscht wurde. Sie müssen dieses Vorkommnis analysieren und gewarnt werden, wenn eine ähnliche Aktivität in Zukunft auftritt.</p>
+<p>Microsoft Sentinel ist eine Cloudanwendung, die Sie beim Schutz von Contoso-Ressourcen unterstützen kann. In diesem Modul erfahren Sie, wie Sie mithilfe von Microsoft Sentinel einen Incident erstellen und untersuchen, wenn ein Contoso-Benutzer einen vorhandenen virtuellen Computer löscht.</p>
+<h2 id="learning-objectives">Lernziele</h2>
+<ul>
+<li>Lernen über Sicherheitsincidens und die Verwaltung von Incidents durch Microsoft Sentinel.</li>
+<li>Erkunden Sie Beweise und Entitäten zu Vorfällen in Microsoft Sentinel.</li>
+<li>Verwenden Sie Microsoft Sentinel, um Sicherheitsvorfälle zu untersuchen und die Lösung von Vorfällen zu verwalten.</li>
+</ul>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<ul>
+<li>Kenntnisse über die Sicherheitsvorgänge in einer Organisation</li>
+<li>Grundlegende Kenntnisse über Azure-Dienste</li>
+<li>Kenntnisse zu operativen Konzepten, wie z.&nbsp;B. Überwachung, Protokollierung und Warnungen.</li>
+<li>Grundlegende Kenntnisse über Microsoft Sentinel-Regeln.</li>
+</ul>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Wenn Sie sich entscheiden, die optionale Übung in diesem Modul durchzuführen, können Kosten in Ihrem Azure-Abonnement anfallen. Informationen zum Schätzen der Kosten finden Sie unter <a href="https://azure.microsoft.com/pricing/details/azure-sentinel" data-linktype="external">Azure Sentinel&nbsp;– Preise</a>.</p>
+</div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

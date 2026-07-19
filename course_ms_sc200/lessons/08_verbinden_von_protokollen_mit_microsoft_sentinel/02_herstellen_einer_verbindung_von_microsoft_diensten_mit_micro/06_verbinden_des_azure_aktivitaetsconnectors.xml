@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_08_02_06" title="Verbinden des Azure-Aktivitätsconnectors">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verbinden des Azure-Aktivitätsconnectors</div>
+<div class="section-content">
+<p>Das Azure-Aktivitätsprotokoll ist ein Abonnementprotokoll, das Erkenntnisse zu Ereignissen auf Abonnementebene in Azure liefert. Die enthaltenen Ereignisse stammen aus Azure&nbsp;Resource&nbsp;Manager-Betriebsdaten, Dienstintegritätsereignissen, Schreibvorgängen für die Ressourcen in Ihrem Abonnement sowie aus dem Status von Aktivitäten, die in Azure ausgeführt werden. Der Azure Activity Data-Connector verwendet Azure Policy, um eine Protokollstreamingpipeline für Azure-Abonnements anzuwenden, die die Ereignisdaten an Log Analytics sendet.</p>
+<div class="IMPORTANT">
+<p>Wichtig</p>
+<p>Voraussetzungen erfordern, dass dem*der Benutzer*in die Rolle „Besitzer“ für das entsprechende Abonnement zugewiesen wird.</p>
+</div>
+<h2 id="install-the-solution">Installieren der Lösung</h2>
+<p>Installieren Sie zunächst die Lösung, die den Datenconnector enthält.</p>
+<ol>
+<li>Wählen Sie für Microsoft Sentinel im Azure-Portal unter<strong>Content Management</strong> die Option <strong>Inhaltshub</strong> aus. <br>Wählen Sie für Microsoft Sentinel im Defender-Portal <strong>Microsoft Sentinel</strong>&gt;<strong>Content Management</strong>&gt;<strong>Inhaltshub</strong> aus.</li>
+<li>Suchen Sie nach <strong>Azure-Aktivität</strong>, und wählen Sie diese Option aus.</li>
+<li>Wählen Sie im rechten Seitenbereich <strong>Installieren</strong> aus.</li>
+</ol>
+<h2 id="configure-the-data-connector">Konfigurieren des Datenconnectors</h2>
+<p>Nachdem die Lösung installiert wurde, verbinden Sie den Datenconnector.</p>
+<ol>
+<li><p>Erweitern Sie im linken Navigationsmenü von Microsoft Sentinel <strong>Konfiguration</strong>, und wählen Sie <strong>Datenconnectors</strong> aus.</p>
+</li>
+<li><p>Wählen sie den Datenconnector <strong>Azure-Aktivität</strong> aus.</p>
+</li>
+<li><p>Wählen Sie <strong>Connectorseite öffnen</strong> aus.</p>
+</li>
+<li><p>Scrollen Sie im Bereich <em>Anweisungen/Konfiguration</em> nach unten, und wählen Sie unter <em>2.&nbsp;Abonnements verbinden...</em> die Option <strong>Azure Policy-Zuweisungs-Assistenten starten</strong> aus.</p>
+</li>
+<li><p>Wählen Sie auf der Registerkarte <strong>Grundlagen</strong> unter <strong>Bereich</strong> die Schaltfläche mit den Auslassungspunkten (…) aus, wählen Sie in der Dropdownliste Ihr „Azure-Abonnement“ aus, und wählen Sie dann <strong>Auswählen</strong> aus.</p>
+</li>
+<li><p>Wählen Sie auf der Registerkarte <strong>Parameter</strong> Ihren Workspace <em>yourName-sentinel</em> aus der Dropdownliste <strong>Primärer Log Analytics-Arbeitsbereich</strong> aus.</p>
+</li>
+<li><p>Wählen Sie die Registerkarte <strong>Wartung</strong> aus, und aktivieren Sie dann das Kontrollkästchen <strong>Korrekturtask erstellen</strong>. Mit dieser Aktion wird die Abonnementkonfiguration angewendet, um die Informationen an den Log Analytics-Arbeitsbereich zu senden.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Um die Richtlinie auf Ihre vorhandenen Ressourcen anzuwenden, müssen Sie einen Wartungstask erstellen.</p>
+</div>
+</li>
+<li><p>Wählen Sie die Schaltfläche <strong>Überprüfen + erstellen</strong> aus, um die Konfiguration zu überprüfen.</p>
+</li>
+<li><p>Wählen Sie <strong>Erstellen</strong> aus, um den Vorgang abzuschließen.</p>
+</li>
+</ol>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

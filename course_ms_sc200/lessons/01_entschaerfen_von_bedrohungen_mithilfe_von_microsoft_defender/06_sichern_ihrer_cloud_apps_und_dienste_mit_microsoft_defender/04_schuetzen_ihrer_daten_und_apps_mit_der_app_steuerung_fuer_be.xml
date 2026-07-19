@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_01_06_04" title="Schützen Ihrer Daten und Apps mit der App-Steuerung für bedingten Zugriff">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Schützen Ihrer Daten und Apps mit der App-Steuerung für bedingten Zugriff</div>
+<div class="section-content">
+<p>Cloud Discovery hilft Ihnen im Nachhinein zu verstehen, was in Ihrer Cloudumgebung passiert. Dieser Prozess ist zwar wichtig, aber Ihr primäres Ziel ist es, Sicherheitsverletzungen und Lecks in Echtzeit zu stoppen, bevor sie Ihr Unternehmen gefährden. Sie benötigen auch einen Weg, den Benutzern zu ermöglichen, ihre eigenen Geräte mit zur Arbeit zu bringen, Ihr Unternehmen aber gleichzeitig vor Datenlecks und Datendiebstahl zu schützen. Microsoft Defender for Cloud Apps lässt sich mit Identitätsanbietern (Identity Providers, IdPs) integrieren, um Ihre Daten und Geräte mit Zugriffskontrollen und Sitzungssteuerelementen durch die <strong>App-Steuerung für bedingten Zugriff</strong> zu schützen. Wenn Sie Microsoft Entra ID als IdP verwenden, werden diese Steuerelemente direkt in Defender for Cloud Apps integriert.</p>
+<p>Mit App-Steuerung für bedingten Zugriff können Sie den Zugriff auf Benutzer-Apps und Sitzungen in Echtzeit überwachen und steuern. Durch die Integration in Microsoft Entra bedingten Zugriff ist es einfach, Apps für die Verwendung mit der App-Steuerung für bedingten Zugriff zu konfigurieren. Sie können die Zugriffskontrollen und Sitzungssteuerelemente für die Apps Ihrer Organisation basierend auf beliebigen Bedingungen in den Einstellungen für den bedingten Zugriff selektiv erzwingen. Sie können Bedingungen verwenden, die definieren, auf den (Benutzer oder Benutzergruppe), auf was (welche Cloud-Apps) und wo (welche Standorte und Netzwerke) eine Richtlinie für bedingten Zugriff angewendet wird. Nachdem Sie die Bedingungen festgelegt haben, können Sie Benutzer an Defender for Cloud Apps weiterleiten, wo die Daten mit der App-Steuerung für bedingten Zugriff durch Anwendung von Zugriffskontrollen und Sitzungssteuerelementen geschützt werden.</p>
+<p>Microsoft Entra ID enthält integrierte Richtlinien, die Sie für eine einfache Bereitstellung konfigurieren können. Nachdem Sie die Bedingungen einer Richtlinie für bedingten Zugriff in Microsoft Entra ID konfiguriert haben, wählen Sie unter <strong>Zugriffssteuerungen</strong><strong>die Option Sitzung</strong> aus, und klicken Sie auf <strong>App-Steuerung für bedingten Zugriff verwenden</strong>. Wenn Sie <strong>Benutzerdefinierte Steuerelementen verwenden</strong> auswählen, definieren Sie diese im Defender for Cloud Apps-Portal.</p>
+<p>Mit Zugriffs- und Sitzungsrichtlinien im Defender for Cloud Apps-Portal können Sie Filter weiter verfeinern und Aktionen festlegen, die für einen Benutzer ausgeführt werden sollen. Mit den Zugriffs- und Sitzungsrichtlinien haben Sie folgende Möglichkeiten:</p>
+<ul>
+<li>
+              <strong>Datenexfiltration verhindern</strong>: Blockieren Sie das Herunterladen, Ausschneiden, Kopieren und Drucken vertraulicher Dokumente auf z.&nbsp;B. nicht verwalteten Geräten.</li>
+<li>
+              <strong>Beim Download schützen</strong>: Anstatt das Herunterladen vertraulicher Dokumente zu blockieren, können Sie verlangen, dass sie mit Azure Information Protection bezeichnet und geschützt werden. Durch diese Aktion wird sichergestellt, dass das Dokument geschützt und der Benutzerzugriff in einer potenziell riskanten Sitzung eingeschränkt wird.</li>
+<li>
+              <strong>Upload nicht bezeichneter Dateien verhindern</strong>: Erzwingen Sie die Verwendung von Bezeichnungen. Bevor eine vertrauliche Datei hochgeladen, verteilt und von anderen Personen verwendet wird, ist es wichtig sicherzustellen, dass sie über die richtige Bezeichnung und angemessenen Schutz verfügt. Sie können einen Dateiupload blockieren, bis der Inhalt klassifiziert wurde.</li>
+<li>
+              <strong>Benutzersitzungen auf Konformität überwachen</strong>: Überwachen Sie riskante Benutzer, wenn sie sich bei Apps anmelden, und protokollieren Sie deren Aktionen innerhalb der Sitzung. Sie können das Benutzerverhalten untersuchen und analysieren, um zu verstehen, wo und unter welchen Bedingungen Sitzungsrichtlinien künftig angewendet werden sollen.</li>
+<li>
+              <strong>Zugriff blockieren</strong>: Sie können den Zugriff für bestimmte Apps und Benutzer abhängig von mehreren Risikofaktoren blockieren. Beispielsweise können Sie einen Benutzer blockieren, wenn ein Clientzertifikat als Form der Geräteverwaltung verwendet wird.</li>
+<li>
+              <strong>Benutzerdefinierte Aktivitäten blockieren</strong>: Einige Apps bieten spezielle Szenarien, die Risiken mit sich bringen; beispielsweise das Senden von Nachrichten mit vertraulichen Inhalten in Apps wie Microsoft Teams oder Slack. In diesen Szenarien können Sie Nachrichten auf vertrauliche Inhalte überprüfen und in Echtzeit blockieren.</li>
+</ul>
+<p>Erstellen wir beispielsweise eine Sitzungsrichtlinie in Microsoft Teams, die Chatnachrichten blockiert, die vertrauliche Inhalte enthalten. Angenommen, dass wir zuvor eine Richtlinie für bedingten Zugriff mit der Einstellung <strong>Benutzerdefinierte Steuerelemente verwenden</strong> unter <strong>App-Steuerung für bedingten Zugriff verwenden</strong> erstellt haben, dann beginnen wir mit der Erstellung einer neuen Sitzungsrichtlinie in Microsoft Defender for Cloud Apps.</p>
+<p>Wir verwenden eine vorhandene Vorlage für unsere neue Sitzungsrichtlinie. Wählen Sie die Richtlinienvorlage <strong>Senden von Nachrichten basierend auf Echtzeit-Inhaltsüberprüfung blockieren</strong> aus.</p>
+<p>Wählen Sie unter <strong>Aktivitätsquelle</strong> für die Sitzungsrichtlinie die Option <strong>Teams-Nachricht senden</strong> als Anwendung aus.</p>
+<p>Anschließend aktivieren Sie <strong>Inhaltsuntersuchung</strong>, wo Sie die vertraulichen Informationen so definieren, dass sie mit einem vorhandenen Ausdruck, einem benutzerdefinierten Ausdruck oder einem beliebigen regulären Ausdruck übereinstimmen. Wenn die Ausdrücke definiert sind, wählen Sie unter <strong>Aktionen</strong> die Option <strong>Blockieren</strong> aus, um die Nachricht zu blockieren und Warnungen zur Benachrichtigung von Administratoren zu erstellen.</p>
+<p>Wenn ein Benutzer nun versucht, eine vertrauliche Nachricht in Teams zu senden, wird eine Benachrichtigung angezeigt.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

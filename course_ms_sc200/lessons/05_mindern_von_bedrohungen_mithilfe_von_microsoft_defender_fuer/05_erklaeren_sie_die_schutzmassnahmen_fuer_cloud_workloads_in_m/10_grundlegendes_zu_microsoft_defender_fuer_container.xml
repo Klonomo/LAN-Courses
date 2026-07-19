@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_05_05_10" title="Grundlegendes zu Microsoft Defender für Container">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Grundlegendes zu Microsoft Defender für Container</div>
+<div class="section-content">
+<p>Microsoft Defender for Containers ist die cloudnative Lösung zum Schützen Ihrer Container.</p>
+<h2 id="defender-for-containers-features">Funktionen von Defender for Containers</h2>
+<ul>
+<li><p>
+              <strong>Umgebungshärtung</strong> – Defender für Container schützt Ihre Kubernetes-Cluster, unabhängig davon, ob sie auf Azure Kubernetes Service, Kubernetes lokal/IaaS oder Amazon EKS ausgeführt werden. Durch die kontinuierliche Bewertung von Clustern bietet Defender für Container Einblicke in Fehlkonfigurationen und Richtlinien, um identifizierte Bedrohungen zu mindern.</p>
+</li>
+<li><p>
+              <strong>Sicherheitsrisikobewertung</strong> – Tools zur Sicherheitsrisikobewertung und -verwaltung für Bilder, die in ACR-Registrierungen gespeichert sind und in Azure Kubernetes Service ausgeführt werden.</p>
+</li>
+<li><p>
+              <strong>Laufzeitbedrohungsschutz für Knoten und Cluster – Bedrohungsschutz für Cluster und Linux-Knoten</strong> generiert Sicherheitswarnungen für verdächtige Aktivitäten.</p>
+</li>
+</ul>
+<h2 id="architecture">Architektur</h2>
+<p>Die Architektur der Elemente, die für den vollständigen Schutz von Defender für Container benötigt werden, variiert je nachdem, wo Ihre Kubernetes-Cluster gehostet werden.</p>
+<p>Defender for Containers schützt Ihre Cluster, unabhängig davon, in welcher der folgenden Umgebungen sie ausgeführt werden:</p>
+<ul>
+<li><p>
+              <strong>Azure Kubernetes Service (AKS)</strong> – Der verwaltete Dienst von Microsoft zum Entwickeln, Bereitstellen und Verwalten von containerisierten Anwendungen.</p>
+</li>
+<li><p>
+              <strong>Amazon Elastic Kubernetes Service (EKS)</strong> in einem verbundenen Amazon Web Services (AWS)-Konto – Der verwaltete Dienst von Amazon für die Ausführung von Kubernetes auf AWS, ohne Ihre eigenen Kubernetes-Steuerungsebenen oder Knoten installieren, betreiben und verwalten zu müssen.</p>
+</li>
+<li><p>
+              <strong>Eine nicht verwaltete Kubernetes-Verteilung (mit Azure Arc-fähigen Kubernetes)</strong> – Cloud Native Computing Foundation (CNCF) zertifizierte Kubernetes-Cluster, die lokal oder auf IaaS gehostet werden.</p>
+</li>
+</ul>
+<p>Defender für Cloud bewertet kontinuierlich die Konfigurationen Ihrer Cluster und vergleicht sie mit den Initiativen, die auf Ihre Abonnements angewendet werden. Wenn sie Fehlkonfigurationen findet, generiert Defender für Cloud Sicherheitsempfehlungen. Verwenden Sie die Seite "Empfehlungen" von Defender für Cloud, um Empfehlungen anzuzeigen und Probleme zu beheben.</p>
+<p>Für Kubernetes-Cluster auf EKS müssen Sie Ihr AWS-Konto über die Einstellungsseite der Umgebung mit Microsoft Defender for Cloud verbinden (wie unter Verbinden Ihrer AWS-Konten mit Microsoft Defender for Cloud beschrieben). Stellen Sie dann sicher, dass Sie den CSPM-Plan aktiviert haben.</p>
+<h3 id="environment-hardening">Umgebungshärtung</h3>
+<p>Um ein Bündel von Empfehlungen zum Schutz der Workloads Ihrer Kubernetes-Container zu erhalten, installieren Sie die Azure-Richtlinie für Kubernetes. Standardmäßig ist die automatische Bereitstellung aktiviert, wenn Sie Defender für Container aktivieren.</p>
+<p>Mit dem Add-On auf Ihrem AKS-Cluster wird jede Anforderung an den Kubernetes-API-Server anhand der vordefinierten bewährten Methoden überwacht, bevor sie im Cluster beibehalten werden. Anschließend können Sie das Erzwingen der bewährten Methoden konfigurieren und sie auf zukünftige Workloads anwenden.</p>
+<p>Beispielsweise können Sie vorschreiben, dass keine privilegierten Container erstellt werden sollen und dass zukünftige Anforderungen für diese Aktion blockiert werden sollen.</p>
+<h3 id="view-vulnerabilities-for-running-images">Anzeigen von Sicherheitsrisiken für ausgeführte Images</h3>
+<p>Defender for Containers erweitert die Funktionen zum Scannen der Registrierung des Plans Defender for Containers-Registrierungen durch die Einführung einer Vorschaufunktion für die Sichtbarkeit von Schwachstellen während der Laufzeit, die durch das Defender-Profil oder eine Erweiterung unterstützt wird.</p>
+<p>Die neue Empfehlung „laufende Containerimages sollten Schwachstellen behoben haben“ zeigt nur Schwachstellen für laufende Images an. Die Empfehlung stützt sich auf das Defender-Sicherheitsprofil oder die Erweiterung, um herauszufinden, welche Images derzeit ausgeführt werden. Diese Empfehlung gruppiert laufende Images, die Schwachstellen aufweisen, und enthält Details zu den ermittelten Problemen und wie man sie beheben kann. Das Defender-Profil oder die Erweiterung wird verwendet, um Einblicke in anfällige Container zu erhalten, die aktiv sind.</p>
+<p>Diese Empfehlung zeigt laufende Images und deren Schwachstellen basierend auf ACR-Images. Bilder, die aus einer Nicht-ACR-Registrierung bereitgestellt werden, werden nicht gescannt und werden auf der Registerkarte "Nicht zutreffend" angezeigt.</p>
+<h3 id="run-time-protection-for-kubernetes-nodes-and-clusters">Laufzeitschutz für Kubernetes-Knoten und -Cluster</h3>
+<p>Defender für Cloud bietet Echtzeit-Bedrohungsschutz für Ihre containerisierten Umgebungen und generiert Warnungen für verdächtige Aktivitäten. Sie können diese Informationen verwenden, um Sicherheitsprobleme schnell zu beheben und die Sicherheit Ihrer Container zu verbessern.</p>
+<p>Der Bedrohungsschutz auf Clusterebene wird vom Defender-Profil und der Analyse der Kubernetes-Überwachungsprotokolle bereitgestellt. Beispiele für Ereignisse auf dieser Ebene sind verfügbar gemachte Kubernetes-Dashboards und die Erstellung von Rollen mit hohen Berechtigungen und von sensiblen Einbindungen.</p>
+<p>Darüber hinaus geht unsere Bedrohungserkennung über die Kubernetes-Verwaltungsebene hinaus. Defender für Container umfasst die Bedrohungserkennung auf Hostebene mit über 60 Kubernetes-fähigen Analysen, KI und Anomalieerkennungen basierend auf Ihrer Laufzeitworkload. Unser globales Team von Sicherheitsforschungsfachkräften überwacht ständig die Bedrohungslandschaft. Sie fügen containerspezifische Warnungen und Sicherheitsrisiken hinzu, sobald sie entdeckt werden. Gemeinsam überwacht diese Lösung die wachsende Angriffsfläche von Multi-Cloud Kubernetes-Bereitstellungen und verfolgt die MITRE ATT&amp;CK-Matrix® für Container. Ein Framework, das vom Center for Threat-Informed Defense in enger Partnerschaft mit Microsoft und anderen Partnern entwickelt wurde.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

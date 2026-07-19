@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_07_06_03" title="Erkunden der Funktionsunterschiede zwischen dem Microsoft Defender XDR-Portal und dem Microsoft Sentinel-Portal">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Erkunden der Funktionsunterschiede zwischen dem Microsoft Defender XDR-Portal und dem Microsoft Sentinel-Portal</div>
+<div class="section-content">
+<p>Die meisten Microsoft Sentinel-Funktionen sind sowohl im Azure- als auch im Defender-Portal verfügbar. Im Defender-Portal öffnen sich einige Microsoft Sentinel-Oberflächen im Azure-Portal, damit Sie eine Aufgabe abschließen können.</p>
+<p>In diesem Abschnitt werden die Microsoft Sentinel-Funktionen oder -Integrationen in Microsoft Defender behandelt, die nur im Azure-Portal oder im Defender-Portal oder anderen wichtigen Unterschieden zwischen den Portalen verfügbar sind. Dies schließt die Microsoft Sentinel-Oberflächen aus, die das Azure-Portal über das Defender-Portal öffnen.</p>
+<h3 id="capability-differences-between-portals">Funktionsunterschiede zwischen den Portalen</h3>
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Verfügbarkeit</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Erweiterte Bedrohungssuche mit Lesezeichen</td>
+<td>Nur Azure-Portal</td>
+<td>Lesezeichen werden im Microsoft Defender-Portal für die erweiterte Bedrohungssuche nicht unterstützt. Im Defender-Portal können Sie sie unter <strong>Microsoft Sentinel &gt; Berohungsmanagement &gt; Hunting</strong> verwenden.</td>
+</tr>
+<tr>
+<td>Angriffsunterbrechung für SAP</td>
+<td>Nur Defender-Portal</td>
+<td>Diese Funktionalität ist im Azure-Portal nicht verfügbar.</td>
+</tr>
+<tr>
+<td>Automatisierung</td>
+<td>Einige Automatisierungsverfahren sind nur im Azure-Portal verfügbar. Und andere Automatisierungsverfahren sind im Defender- und Azure-Portal identisch.</td>
+<td>Die Unterschiede im Azure-Portal sind zwischen Arbeitsbereichen, die in das Microsoft Defender-Portal integriert sind, und Arbeitsbereiche, die nicht vorhanden sind.</td>
+</tr>
+<tr>
+<td>Datenconnectors: Sichtbarkeit von Connectors, die von Microsoft Defender verwendet werden</td>
+<td>Nur Azure-Portal</td>
+<td>Nach dem Onboarding von Microsoft Sentinel werden im Defender-Portal die folgenden Datenconnectors, die Teil der einheitlichen Microsoft Defender sind, nicht auf der Seite <strong>Datenconnectors</strong> angezeigt:<li>Microsoft Defender for Cloud-Apps</li><li>Microsoft Defender für den Endpunkt</li><li>Microsoft Defender for Identity</li><li>Microsoft Defender für Office 365 (Vorschau)</li><li>Microsoft Defender XDR</li><li>Abonnementbasiertes Microsoft Defender for Cloud (Legacy)</li><li>Mandantenbasiertes Microsoft Defender for Cloud (Vorschau)<br><br>Im Azure-Portal werden diese Datenconnectors weiterhin mit den installierten Datenconnectors in Microsoft Sentinel aufgeführt.</li></td>
+</tr>
+<tr>
+<td>Entitäten: Hinzufügen von Entitäten zur Threat Intelligence von Vorfällen</td>
+<td>Nur Azure-Portal</td>
+<td>Diese Funktionalität ist im Microsoft Defender-Portal nicht verfügbar. <br><br></td>
+</tr>
+<tr>
+<td>Fusion: Erweiterte Erkennung von mehrstufigen Angriffen</td>
+<td>Nur Azure-Portal</td>
+<td>Die Fusion-Analyseregel, die Vorfälle basierend auf Warnungskorrelationen erstellt, die vom Fusion-Korrelationsmodul erstellt werden, wird deaktiviert, wenn Sie Microsoft Sentinel in Microsoft Defender integrieren. <br><br>Microsoft Defender verwendet die Vorfallerstellungs- und Korrelationsfunktionen von Microsoft Defender XDR, um die Funktionen des Fusion-Moduls zu ersetzen. <br><br></td>
+</tr>
+<tr>
+<td>Vorfälle: Hinzufügen von Warnungen zu Vorfällen/<br>Entfernen von Warnungen aus Vorfällen</td>
+<td>Nur Defender-Portal</td>
+<td>Nach dem Onboarding von Microsoft Sentinel im Microsoft Defender-Portal können Sie keine Warnungen mehr hinzufügen oder Warnungen aus Vorfällen im Azure-Portal entfernen. <br><br>Sie können eine Warnung aus einem Vorfall im Defender-Portal entfernen, aber nur, indem Sie die Warnung mit einem anderen Vorfall (vorhanden oder neu) verknüpfen.</td>
+</tr>
+<tr>
+<td>Vorfälle: Bearbeiten von Kommentaren</td>
+<td>Nur Azure-Portal</td>
+<td>Nach dem Onboarding von Microsoft Sentinel im Microsoft Defender-Portal können Sie Vorfällen in beiden Portalen Kommentare hinzufügen, vorhandene Kommentare können jedoch nicht bearbeitet werden. <br><br>An Kommentaren im Azure-Portal vorgenommene Änderungen werden nicht mit dem Microsoft Defender-Portal synchronisiert.</td>
+</tr>
+<tr>
+<td>Vorfälle: Programmgesteuerte und manuelle Erstellung von Vorfällen</td>
+<td>Nur Azure-Portal</td>
+<td>Vorfälle, die in Microsoft Sentinel über die API erstellt wurden, von einem Logic App-Playbook oder manuell aus dem Azure-Portal stammen, werden nicht mit dem Microsoft Defender-Portal synchronisiert. Diese Vorfälle werden weiterhin im Azure-Portal und in der API unterstützt.</td>
+</tr>
+<tr>
+<td>Vorfälle: Erneutes Öffnen geschlossener Vorfälle</td>
+<td>Nur Azure-Portal</td>
+<td>Im Microsoft Defender-Portal können Sie keine Warnungsgruppierung in Microsoft Sentinel-Analyseregeln festlegen, um geschlossene Vorfälle erneut zu öffnen, wenn neue Warnungen hinzugefügt werden. <br>Geschlossene Vorfälle werden in diesem Fall nicht erneut geöffnet, und neue Warnungen lösen neue Vorfälle aus.</td>
+</tr>
+<tr>
+<td>Vorfälle: Aufgaben</td>
+<td>Nur Azure-Portal</td>
+<td>Aufgaben sind im Microsoft Defender-Portal nicht verfügbar. <br><br></td>
+</tr>
+<tr>
+<td>Verwaltung mehrerer Arbeitsbereiche für Microsoft Sentinel</td>
+<td>Defender-Portal: Auf einen primären Microsoft Sentinel-Arbeitsbereich beschränkt <br><br>Azure-Portal: Zentrales Verwalten mehrerer Microsoft Sentinel-Arbeitsbereiche für Mandanten</td>
+<td>Im Microsoft Defender-Portal kann nur ein primärer Microsoft Sentinel-Arbeitsbereich verbunden werden. Daher unterstützt die Microsoft Defender-Mehrinstanzenverwaltung einen primären Microsoft Sentinel-Arbeitsbereich pro Mandant.<br><br></td>
+</tr>
+</tbody>
+</table>
+<p>Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/azure/sentinel/microsoft-sentinel-defender-portal?toc=%2Fdefender-xdr%2Ftoc.json&amp;bc=%2Fdefender-xdr%2Fbreadcrumb%2Ftoc.json" data-linktype="absolute-path">Funktionsunterschiede zwischen den Portalen</a>.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

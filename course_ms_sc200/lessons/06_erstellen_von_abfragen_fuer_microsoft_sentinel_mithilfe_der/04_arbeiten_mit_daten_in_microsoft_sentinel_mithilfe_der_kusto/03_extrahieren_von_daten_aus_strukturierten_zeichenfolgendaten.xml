@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_06_04_03" title="Extrahieren von Daten aus strukturierten Zeichenfolgendaten">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Extrahieren von Daten aus strukturierten Zeichenfolgendaten</div>
+<div class="section-content">
+<p>Zeichenfolgenfelder können auch strukturierte Daten wie JSON oder Key-Value Paare enthalten.  KQL bietet einfachen Zugriff auf diese Werte zur weiteren Analyse.</p>
+<h2 id="dynamic-fields">Dynamische Felder</h2>
+<p>Innerhalb einer Log Analytics-Tabelle sind Feldtypen als "Dynamisch" definiert. Dynamische Felder enthalten ein Schlüssel-Wert-Paar, z. B.:</p>
+<pre><code>{"eventCategory":"Autoscale","eventName":"GetOperationStatusResult","operationId":"xxxxxxxx-6a53-4aed-bab4-575642a10226","eventProperties":"{\"OldInstancesCount\":6,\"NewInstancesCount\":5}","eventDataId":" xxxxxxxx -efe3-43c2-8c86-cd84f70039d3","eventSubmissionTimestamp":"2020-11-30T04:06:17.0503722Z","resource":"ch-appfevmss-pri","resourceGroup":"CH-RETAILRG-PRI","resourceProviderValue":"MICROSOFT.COMPUTE","subscriptionId":" xxxxxxxx -7fde-4caf-8629-41dc15e3b352","activityStatusValue":"Succeeded"}
+</code></pre>
+<p>Verwenden Sie die Punktnotation, um auf die Zeichenfolgen in einem dynamischen Feld zuzugreifen. Das DeviceDetail-Feld aus der Tabelle "SigninLogs" ist vom Typ "dynamisch". In diesem Beispiel können Sie auf das Betriebssystem mit dem Feldnamen DeviceDetail.operatingSystem zugreifen.</p>
+<pre><code class="lang-kusto">SigninLogs 
+| extend OS = DeviceDetail.operatingSystem
+
+</code></pre>
+<p>Das folgende Abfragebeispiel zeigt die Verwendung dynamischer Felder mit der Tabelle "SigninLogs".</p>
+<pre><code class="lang-kusto">// Example query for SigninLogs showing how to break out packed fields.
+
+SigninLogs 
+|&nbsp;extend&nbsp;OS&nbsp;=&nbsp;DeviceDetail.operatingSystem,&nbsp;Browser&nbsp;=&nbsp;DeviceDetail.browser 
+|&nbsp;extend&nbsp;StatusCode&nbsp;=&nbsp;tostring(Status.errorCode),&nbsp;StatusDetails&nbsp;=&nbsp;tostring(Status.additionalDetails) 
+|&nbsp;extend&nbsp;Date&nbsp;=&nbsp;startofday(TimeGenerated) 
+|&nbsp;summarize&nbsp;count()&nbsp;by&nbsp;Date,&nbsp;Identity,&nbsp;UserDisplayName,&nbsp;UserPrincipalName,&nbsp;IPAddress, ResultType,&nbsp;ResultDescription,&nbsp;StatusCode,&nbsp;StatusDetails&nbsp;
+|&nbsp;sort&nbsp;by&nbsp;Date
+
+</code></pre>
+<h2 id="json">JSON</h2>
+<p>KQL stellt Funktionen zum Bearbeiten von JSON bereit, die in Zeichenfolgenfeldern gespeichert sind. Viele Protokolle übermitteln Daten im JSON-Format. Dies erfordert, dass Sie wissen müssen, wie JSON-Daten in abfragbare Felder transformiert werden.</p>
+<p>Das folgende Beispiel ist eine Liste mit JSON-bezogenen Funktionen und Operatoren.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">
+              <strong>Funktion</strong></th>
+<th style="text-align: left;">
+              <strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">parse_json() oder todynamic()</td>
+<td style="text-align: left;">Interpretiert eine Zeichenfolge als JSON-Wert und gibt den Wert als dynamischen Datentyp zurück. Verwenden Sie eine dieser Funktionen, um auf ein Feld zu verweisen: JsonField.Key oder JsonField["Key"]</td>
+</tr>
+<tr>
+<td style="text-align: left;">mv-expand</td>
+<td style="text-align: left;">wird auf eine Array- oder Eigenschaftenbehälterspalte des Typs „Dynamisch“ angewendet, sodass jeder Wert in der Sammlung eine gesonderte Zeile erhält. Alle anderen Spalten in einer erweiterten Zeile werden dupliziert. mv_expand ist die einfachste Möglichkeit, JSON-Arrays zu verarbeiten.</td>
+</tr>
+<tr>
+<td style="text-align: left;">mv-apply</td>
+<td style="text-align: left;">Wendet eine Unterabfrage auf jeden Datensatz an und gibt die Vereinigung der Ergebnisse aller Unterabfragen zurück. Wenden Sie eine Abfrage auf jeden Wert in einem Array an.</td>
+</tr>
+</tbody>
+</table>
+<p>Führen Sie jede Abfrage separat aus, um die Ergebnisse anzuzeigen.</p>
+<pre><code class="lang-kusto">SigninLogs 
+| extend AuthDetails =  parse_json(AuthenticationDetails) 
+| extend AuthMethod =  AuthDetails[0].authenticationMethod 
+| extend AuthResult = AuthDetails[0].["authenticationStepResultDetail"] 
+| project AuthMethod, AuthResult, AuthDetails 
+
+
+SigninLogs 
+| mv-expand AuthDetails = parse_json(AuthenticationDetails) 
+| project AuthDetails
+
+SigninLogs 
+| mv-apply AuthDetails = parse_json(AuthenticationDetails) on
+(where AuthDetails.authenticationMethod == "Password")
+
+</code></pre>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

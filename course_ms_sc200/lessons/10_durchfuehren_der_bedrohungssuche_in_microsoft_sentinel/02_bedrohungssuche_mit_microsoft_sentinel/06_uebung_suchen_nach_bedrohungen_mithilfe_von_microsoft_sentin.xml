@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_10_02_06" title="Übung – Suchen nach Bedrohungen mithilfe von Microsoft Sentinel">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Übung – Suchen nach Bedrohungen mithilfe von Microsoft Sentinel</div>
+<div class="section-content">
+<p>Als Sicherheitstechniker, der für Contoso arbeitet, haben Sie kürzlich bemerkt, dass eine erhebliche Anzahl virtueller Computer (VMs) aus Ihrem Azure-Abonnement gelöscht wurden. Sie möchten einen gelöschten virtuellen Computer simulieren, dieses Vorkommen analysieren und die wichtigsten Elemente der potenziellen Bedrohung in Microsoft Sentinel verstehen.</p>
+<p>In dieser Übung löschen Sie einen virtuellen Computer, verwalten Abfragen zur Bedrohungssuche und speichern wichtige Ergebnisse mit Lesezeichen.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Um diese Übung abzuschließen, müssen Sie die Einrichtungsübung weiter oben im Modul abgeschlossen haben. Wenn Sie dies noch nicht getan haben, tun Sie es bitte jetzt.</p>
+</div>
+<h2 id="delete-a-vm">Löschen einer VM</h2>
+<p>In dieser Aufgabe löschen Sie eine virtuelle Maschine, um die Erkennung von Regeln und die Erstellung von Vorfällen zu testen.</p>
+<ol>
+<li>Suchen Sie im Azure-Portal nach <strong>Virtuelle Computer</strong>, und klicken Sie darauf.</li>
+<li>Aktivieren Sie auf der Seite <strong>"Virtuelle Computer</strong> " das Kontrollkästchen neben dem virtuellen Computer mit der Bezeichnung <strong>"Simple-vm"</strong>, und wählen Sie dann " <strong>Löschen</strong> " aus der Symbolleiste aus.</li>
+<li>Bestätigen Sie im Bereich <strong>"Ressourcen löschen</strong> " den Löschvorgang, und wählen Sie dann <strong>"Löschen" aus</strong>.</li>
+</ol>
+<h2 id="manage-microsoft-sentinel-threat-hunting-queries">Verwalten von Abfragen zur Bedrohungssuche in Microsoft Sentinel</h2>
+<p>In dieser Aufgabe erstellen und verwalten Sie Abfragen zur Bedrohungssuche, um Ereignisse im Zusammenhang mit dem Löschen der VM in der vorherigen Aufgabe zu überprüfen. Es kann bis zu 5 Minuten dauern, bis das Ereignis in Microsoft Sentinel angezeigt wird, nachdem Sie die VM gelöscht haben.</p>
+<ol>
+<li><p>Suchen Sie im Azure-Portal nach <strong>Microsoft Sentinel</strong>, und wählen Sie sie aus, und wählen Sie dann den zuvor erstellten Sentinel-Arbeitsbereich aus.</p>
+</li>
+<li><p>Wählen Sie auf der <strong>Microsoft Sentinel-Seite</strong> auf der Menüleiste im Abschnitt <strong>"Bedrohungsverwaltung</strong> " die Option <strong>"Suchen"</strong> aus.</p>
+</li>
+<li><p>Wählen Sie auf der Seite <strong>"Suche</strong> " die Registerkarte <strong>"Abfragen" aus</strong> . Wählen Sie dann <strong>"Neue Abfrage"</strong> aus.</p>
+</li>
+<li><p>Geben Sie auf der Seite <strong>"Benutzerdefinierte Abfrage erstellen</strong> " die folgenden Eingaben ein, und wählen Sie dann <strong>"Erstellen"</strong> aus.</p>
+<ul>
+<li><p>
+              <strong>Name</strong>: Geben Sie <strong>gelöschte virtuelle Computer</strong> ein.</p>
+</li>
+<li><p>
+              <strong>Beschreibung</strong>: Geben Sie eine detaillierte Beschreibung ein, die anderen Sicherheitsanalysten hilft, zu verstehen, was die Regel tut.</p>
+</li>
+<li><p>
+              <strong>Benutzerdefinierte Abfrage</strong>: Geben Sie den folgenden Code ein.</p>
+<pre><code class="lang-kusto">  AzureActivity
+  | where OperationName == 'Delete Virtual Machine'
+  | where ActivityStatus == 'Accepted'
+  | extend AccountCustomEntity = Caller
+  | extend IPCustomEntity = CallerIpAddress
+</code></pre>
+</li>
+<li><p>
+              <strong>Taktiken</strong>: <strong>Wählen Sie "Auswirkung</strong>" aus.</p>
+</li>
+</ul>
+</li>
+<li><p>Geben Sie auf der <strong>Hunting</strong>-Seite auf der Registerkarte <strong>Abfragen</strong><strong>Gelöschte VMs</strong> in das Feld <strong>Suchabfragen</strong> ein.</p>
+</li>
+<li><p>Wählen Sie in der Liste der Abfragen das Sternsymbol neben <strong>"Gelöschte VMs</strong> " aus, um die Abfrage als Favoriten zu markieren.</p>
+</li>
+<li><p>Wählen Sie die <strong>Abfrage "Gelöschte virtuelle Computer</strong> " aus. Wählen Sie im Detailbereich <strong>"Ergebnisse anzeigen"</strong> aus.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Es kann bis zu 15 Minuten dauern, bis das gelöschte VM-Ereignis an Microsoft Sentinel gesendet wird. Sie können die Abfrage in regelmäßigen Abständen auf der Registerkarte " <strong>Ergebnisse</strong> " ausführen, wenn das VM-Löschereignis nicht angezeigt wird.</p>
+</div>
+</li>
+<li><p>Wählen Sie auf der <strong>Seite "Protokolle</strong> " im Abschnitt <strong>"Ergebnisse</strong> " das aufgelistete Ereignis aus. Es sollte <code>"action": "Microsoft.Compute/virtualMachines/delete"</code> in der Spalte <strong>Autorisierung</strong> stehen. Dies ist das Ereignis aus dem Azure-Aktivitätsprotokoll, das angibt, dass der virtuelle Computer gelöscht wurde.</p>
+</li>
+<li><p>Bleiben Sie auf dieser Seite für die nächste Aufgabe.</p>
+</li>
+</ol>
+<h2 id="save-key-findings-with-bookmarks">Speichern wichtiger Ergebnisse mit Lesezeichen</h2>
+<p>In dieser Aufgabe verwenden Sie Lesezeichen, um Ereignisse zu speichern und weitere Suchaktionen zu erledigen.</p>
+<ol>
+<li>Aktivieren Sie auf der <strong>Seite "Protokolle</strong> " im Abschnitt <strong>"Ergebnisse</strong> " das Kontrollkästchen neben dem aufgelisteten Ereignis. Wählen Sie dann <strong>"Textmarke hinzufügen" aus</strong>.</li>
+<li>Wählen Sie im Bereich <strong>"Textmarke hinzufügen</strong> " die Option <strong>"Erstellen"</strong> aus.</li>
+<li>Wählen Sie oben auf der Seite <strong>Microsoft Sentinel</strong> auf dem Breadcrumb trail aus.</li>
+<li>Wählen Sie auf der Seite <strong>"Suche</strong> " die Registerkarte <strong>"Lesezeichen" aus</strong> .</li>
+<li>Wählen Sie in der Liste der Lesezeichen die Textmarke aus, die mit <strong>"Gelöschte VMs</strong>" beginnt.</li>
+<li>Wählen Sie auf der Detailseite " <strong>Untersuchen" aus</strong>.</li>
+<li>Wählen Sie auf der Seite <strong>"Untersuchung</strong> " <strong>die Option "Gelöschte VMs</strong> " aus, und beobachten Sie die Details des Vorfalls.</li>
+<li>Wählen Sie auf der Seite <strong>"Untersuchung</strong> " die Entität im Diagramm aus, die einen Benutzer darstellt. Dies ist Ihr Benutzerkonto, das angibt, dass Sie den virtuellen Computer gelöscht haben.</li>
+</ol>
+<h2 id="results">Ergebnisse</h2>
+<p>In dieser Übung haben Sie eine virtuelle Maschine (VM) gelöscht, Abfragen zur Bedrohungssuche verwaltet und wichtige Ergebnisse mit Lesezeichen gespeichert.</p>
+<h2 id="clean-up-azure-resources">Bereinigen von Azure-Ressourcen</h2>
+<p>Wenn Sie die in dieser Übung erstellten Azure-Ressourcen nicht mehr benötigen, löschen Sie sie, um Kosten zu vermeiden:</p>
+<ol>
+<li>Suchen Sie im Azure-Portal nach <strong>Ressourcengruppen</strong>.</li>
+<li>Wählen Sie Ihre Ressourcengruppe aus.</li>
+<li>Wählen Sie in der Kopfzeile die <strong>Option "Ressourcengruppe löschen</strong>" aus.</li>
+<li>Geben Sie im Feld <strong>"TYP DER RESSOURCEGRUPPE NAME</strong> " den Namen der Ressourcengruppe ein, und wählen Sie <strong>"Löschen"</strong> aus.</li>
+</ol>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

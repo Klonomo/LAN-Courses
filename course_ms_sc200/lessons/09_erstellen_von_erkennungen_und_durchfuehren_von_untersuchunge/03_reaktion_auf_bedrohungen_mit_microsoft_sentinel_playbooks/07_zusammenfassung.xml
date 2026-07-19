@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_09_03_07" title="Zusammenfassung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Zusammenfassung</div>
+<div class="section-content">
+<h2 id="resolution-of-module-problem">Auflösung des Modulproblems</h2>
+<p>Contoso SecOps wollte ihre Reaktionszeit auf Sicherheitsvorfälle verbessern und zukünftige Vorfälle verhindern. Contoso entscheidet sich für die Verwendung von Microsoft Sentinel-Playbooks, die auf Logic Apps mit einem Microsoft Sentinel-Connector basieren, um nahezu Echtzeitantworten bereitzustellen.
+In diesem Modul haben Sie gelernt, wie Sie Azure Sentinel-Playbooks erstellen können, die in Echtzeit auf eine Sicherheitsbedrohung reagieren können. Außerdem haben Sie erfahren, wie Sie ein Playbook bei Bedarf als Reaktion auf die Untersuchung einer Sicherheitswarnung starten können.</p>
+<h2 id="learn-more">Erfahren Sie mehr</h2>
+<p>Weitere Informationen finden Sie in den folgenden Dokumenten.</p>
+<h3 id="getting-started">Erste Schritte</h3>
+<ul>
+<li><a href="https://learn.microsoft.com/de-de/azure/sentinel?azure-portal=true" data-linktype="absolute-path">Microsoft Sentinel-Dokumentation</a></li>
+<li><a href="https://learn.microsoft.com/de-de/azure/sentinel/quickstart-onboard?azure-portal=true" data-linktype="absolute-path">Schnellstart: Einführung in Microsoft Sentinel</a></li>
+<li><a href="https://azure.microsoft.com/pricing/details/azure-sentinel?azure-portal=true" data-linktype="external">Microsoft Sentinel-Preise</a></li>
+<li><a href="https://learn.microsoft.com/de-de/azure/sentinel/roles?azure-portal=true" data-linktype="absolute-path">Berechtigungen in Microsoft Sentinel</a></li>
+<li><a href="https://learn.microsoft.com/de-de/azure/sentinel/tutorial-monitor-your-data?azure-portal=true" data-linktype="absolute-path">Tutorial: Visualisieren und Überwachen Ihrer Daten</a></li>
+<li><a href="https://learn.microsoft.com/de-de/azure/sentinel/quickstart-get-visibility?azure-portal=true" data-linktype="absolute-path">Schnellstart: Erste Schritte mit Microsoft Sentinel</a></li>
+<li><a href="https://learn.microsoft.com/de-de/azure/lighthouse/overview?azure-portal=true" data-linktype="absolute-path">Was ist Azure Lighthouse?</a></li>
+<li><a href="https://learn.microsoft.com/de-de/azure/sentinel/extend-sentinel-across-workspaces-tenants#cross-workspace-monitoring?azure-portal=true" data-linktype="absolute-path">Erweitern von Microsoft Sentinel auf Arbeitsbereiche und Mandanten</a></li>
+<li><a href="https://learn.microsoft.com/de-de/azure/azure-resource-manager/management/overview?azure-portal=true" data-linktype="absolute-path">Was ist Azure Resource Manager?</a></li>
+<li><a href="https://azuremarketplace.microsoft.com/marketplace/consulting-services/servent.servent-azure-foundation?azure-portal=true" data-linktype="external">Azure Foundation: Vierwöchige Implementierung</a></li>
+</ul>
+<h3 id="microsoft-sentinel-agent">Microsoft Sentinel-Agent</h3>
+<ul>
+<li><a href="https://learn.microsoft.com/de-de/azure/sentinel/tutorial-detect-threats-built-in?azure-portal=true" data-linktype="absolute-path">Tutorial: Standardmäßig verfügbare Erkennung von Bedrohungen</a></li>
+<li><a href="https://learn.microsoft.com/de-de/azure/sentinel/connect-data-sources?azure-portal=true" data-linktype="absolute-path">Herstellen einer Verbindung mit Datenquellen</a></li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

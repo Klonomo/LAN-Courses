@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_06_03" title="Untersuchen eines Benutzerkontos">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Untersuchen eines Benutzerkontos</div>
+<div class="section-content">
+<p>Ermitteln Sie die Benutzerkonten mit den meisten aktiven Warnungen – auf dem Dashboard als „Gefährdete Benutzer“ angezeigt – und untersuchen Sie Fälle mit eventuell kompromittierten Anmeldeinformationen. Sie können sich auch mit dem zugehörigen Benutzerkonto befassen, wenn Sie eine Warnung oder ein Gerät untersuchen, um eventuelle Lateral Movements zwischen Geräten mit diesem Benutzerkonto zu ermitteln.</p>
+<p>Informationen zu Benutzerkonten finden Sie in den folgenden Ansichten:</p>
+<ul>
+<li><p>Dashboard</p>
+</li>
+<li><p>Warnungswarteschlage</p>
+</li>
+<li><p>Seite „Gerätedetails“</p>
+</li>
+</ul>
+<p>In diesen Ansichten ist ein anklickbarer Link zum Benutzerkonto verfügbar. Wenn Sie den Link auswählen, gelangen Sie zur Seite mit den Benutzerkontodetails, auf der weitere Details zum Benutzerkonto angezeigt werden.</p>
+<p>Wenn Sie eine Benutzerkontoentität untersuchen, wird Folgendes angezeigt:</p>
+<ul>
+<li><p>Benutzerkontodetails und angemeldete Geräte, Rolle, Anmeldetyp und andere Informationen</p>
+</li>
+<li><p>Übersicht über Incidents und Geräte des Benutzers</p>
+</li>
+<li><p>Warnungen im Zusammenhang mit diesem Benutzer</p>
+</li>
+<li><p>Beobachtete Speicherorte innerhalb der Organisation (Geräte, bei denen sich ein Benutzer angemeldet hat)</p>
+</li>
+</ul>
+<h3 id="user-details">Benutzerdetails</h3>
+<p>Im Detailbereich „Benutzer“ auf der linken Seite finden Sie Informationen zum Benutzer. Dazu zählen z. B. offene Incidents, aktive Warnungen, der SAM-Name, die SID, die Anzahl von Geräten, bei denen der Benutzer oder die Benutzerin angemeldet ist, der Zeitpunkt der ersten und letzten Aktivität des Benutzers oder der Benutzerin, die Rolle und die Anmeldetypen. Je nachdem, welche Integrationsfeatures Sie aktiviert haben, werden weitere Details angezeigt.</p>
+<p>Wenn die Integration von Microsoft Defender for Identity oder Microsoft Entra ID in den Defender-Portaleinstellungen konfiguriert ist, werden im Bereich "Benutzerdetails" auch Identitätserweiterungsdaten angezeigt, einschließlich Anmelderisikostufe, MFA-Registrierungsstatus (Multifactor Authentication), letzte Anmeldedetails und Active Directory-Gruppenmitgliedschaften. Dieser andere Kontext ist bei der Untersuchung potenzieller Kontokompromittierung oder lateraler Bewegung hilfreich.</p>
+<h3 id="overview">Übersicht</h3>
+<p>Auf der Registerkarte „Übersicht“ werden die Incidentdetails sowie eine Liste der Geräte angezeigt, bei denen der Benutzer sich angemeldet hat. Sie können die Geräteliste aufklappen, um für jedes Gerät Details zu den Anmeldeereignissen anzuzeigen.</p>
+<h3 id="alerts">Warnungen</h3>
+<p>Auf der Registerkarte „Warnungen“ wird eine Liste mit Warnungen angezeigt, die im Zusammenhang mit dem Benutzerkonto stehen. Diese Liste ist eine gefilterte Ansicht der Warnungswarteschlange und zeigt Warnungen an, bei denen der Benutzerkontext das ausgewählte Benutzerkonto ist, das Datum, an dem die letzte Aktivität erkannt wurde, eine kurze Beschreibung der Warnung, das gerät, das der Warnung zugeordnet ist, der Schweregrad der Warnung, der Status der Warnung in der Warteschlange und wer der Warnung zugewiesen ist.</p>
+<h3 id="observed-in-organization">In der Organisation beobachtet</h3>
+<p>Auf der Registerkarte "Beobachtet" in der Organisation können Sie einen Datumsbereich angeben, um eine Liste der Geräte anzuzeigen, auf denen dieser Benutzer angemeldet war, das am häufigsten und am häufigsten angemeldete Benutzerkonto für jedes dieser Geräte sowie die Gesamtzahl beobachteter Benutzer auf jedem Gerät. Wenn Sie ein Element in der Tabelle 'Beobachtet in der Organisation' auswählen, wird dieses erweitert, und es werden weitere Details zum Gerät angezeigt. Durch die direkte Auswahl eines Links innerhalb eines Elements gelangen Sie zur entsprechenden Seite.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

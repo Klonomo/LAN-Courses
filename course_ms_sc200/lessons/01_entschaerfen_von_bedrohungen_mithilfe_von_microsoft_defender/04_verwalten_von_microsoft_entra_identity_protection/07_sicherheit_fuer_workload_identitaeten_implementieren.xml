@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_01_04_07" title="Sicherheit für Workload-Identitäten implementieren">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Sicherheit für Workload-Identitäten implementieren</div>
+<div class="section-content">
+<p>Microsoft Entra ID Identity Protection hat Benutzer*innen in der Vergangenheit bei der Erkennung, Untersuchung und Behebung identitätsbasierter Risiken geschützt. Der Identitätsschutz hat diese Funktionen auf Workload-Identitäten ausgeweitet, um Anwendungen, Dienstprinzipale und verwaltete Identitäten zu schützen.</p>
+<p>Eine Workload-Identität ist eine Identität, die einer Anwendung oder einem Diensthauptobjekt den Zugriff auf die Ressourcen ermöglicht, manchmal im Kontext eines Benutzers. Diese Workloadidentitäten unterscheiden sich in folgenden Punkten von herkömmlichen Benutzerkonten:</p>
+<ul>
+<li>Die Multi-Faktor-Authentifizierung kann nicht durchgeführt werden.</li>
+<li>Sie verfügen oft über keinen formalen Lebenszyklusprozess.</li>
+<li>Sie müssen ihre Anmeldeinformationen oder Geheimnisse irgendwo speichern.</li>
+</ul>
+<p>Diese Unterschiede erschweren die Verwaltung von Workload-Identitäten und erhöhen das Risiko ihrer Kompromittierung.</p>
+<h3 id="requirements-to-use-workload-identity-protection">Voraussetzungen zur Nutzung des Workload-Identitätsschutzes</h3>
+<p>Um die Funktion „Risiken bei Workloadidentitäten“ nutzen zu können, einschließlich des Bereichs „Risikobehaftete Workloadidentitäten“ und der Registerkarte „Erkennung von Workloadidentitäten“ im Bereich „Risikoerkennungen“, müssen im Microsoft Entra Admin Center folgende Voraussetzungen erfüllt sein.</p>
+<ul>
+<li><p>Microsoft Entra ID Premium P2-Lizenzierung</p>
+</li>
+<li><p>Der angemeldete Benutzer muss einer der folgenden Optionen zugewiesen werden.</p>
+<ul>
+<li>Sicherheitsadministrator</li>
+<li>Sicherheitsoperator</li>
+<li>Sicherheitslesegerät</li>
+</ul>
+</li>
+</ul>
+<h3 id="what-types-of-risks-are-detected">Welche Arten von Risiken werden erkannt?</h3>
+<table>
+<thead>
+<tr>
+<th>
+              <strong>Erkennungsname</strong></th>
+<th>
+              <strong>Erkennungstyp</strong></th>
+<th>
+              <strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bedrohungsintelligenz von Microsoft Entra</td>
+<td>Offline</td>
+<td>Diese Risikoerkennung weist auf einige Aktivitäten hin, die mit bekannten Angriffsmustern auf der Grundlage der internen und externen Bedrohungserkennungsquellen Microsoft konsistent sind.</td>
+</tr>
+<tr>
+<td>Verdächtige Anmeldungen</td>
+<td>Offline</td>
+<td>Diese Risikoerkennung weist auf Anmeldeeigenschaften oder Muster hin, die für diesen Dienstprinzipal ungewöhnlich sind.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Die Erkennung erlernt das Basis-Anmeldeverhalten für Workloadidentitäten in Ihrem Mandanten innerhalb von 2 bis 60 Tagen und wird ausgelöst, wenn eine oder mehrere der folgenden unbekannten Eigenschaften bei einer späteren Anmeldung auftreten: IP-Adresse/ASN, Zielressource, Benutzer-Agent, Änderung zwischen Hosting und Nicht-Hosting bei der IP, IP-Land, Anmeldeinformationstyp.</td>
+</tr>
+<tr>
+<td>Ungewöhnliche Hinzufügung von Anmeldeinformationen zu einer OAuth-App</td>
+<td>Offline</td>
+<td>Diese Erkennung wird von Microsoft Defender für Cloud Apps erkannt. Diese Erkennung identifiziert die verdächtige Hinzufügung von privilegierten Anmeldeinformationen zu einer OAuth-App. Dies kann darauf hindeuten, dass ein Angreifer die App kompromittiert hat und sie für böswillige Aktivitäten verwendet.</td>
+</tr>
+<tr>
+<td>Vom Administrator bestätigt, dass das Konto kompromittiert ist</td>
+<td>Offline</td>
+<td>Diese Erkennung weist darauf hin, dass ein Administrator auf der Benutzeroberfläche für riskante Workloadidentitäten oder mithilfe der riskyServicePrincipals-API die Option „Kompromittierung bestätigen“ ausgewählt hat. Überprüfen Sie den Risikoverlauf des Kontos (auf der Benutzeroberfläche oder über die API), um zu überprüfen, welcher Administrator diese Kontogefährdung bestätigt hat.</td>
+</tr>
+<tr>
+<td>Kompromittierte Anmeldeinformationen</td>
+<td>Offline</td>
+<td>Diese Risikoerkennung gibt an, dass die gültigen Anmeldeinformationen des Kontos kompromittiert wurden. Diese Leckage kann auftreten, wenn jemand Anmeldeinformationen in ein öffentliches Code-Artefakt auf GitHub eincheckt oder wenn die Anmeldeinformationen durch eine Datenpanne geleakt werden.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="add-conditional-access-protection">Hinzufügen des Schutzes für bedingten Zugriff</h3>
+<p>Mithilfe von <strong>bedingtem Zugriff für Workloadidentitäten</strong> können Sie den Zugriff für bestimmte Konten blockieren, die Sie auswählen, wenn der Identitätsschutz sie als „gefährdet“ kennzeichnet. Die Richtlinie kann auf Dienstprinzipale mit nur einem Mandanten angewendet werden, die in Ihrem Mandanten registriert wurden. SaaS von Drittanbietern, mehrinstanzenfähige Apps und verwaltete Identitäten können nicht verwendet werden.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

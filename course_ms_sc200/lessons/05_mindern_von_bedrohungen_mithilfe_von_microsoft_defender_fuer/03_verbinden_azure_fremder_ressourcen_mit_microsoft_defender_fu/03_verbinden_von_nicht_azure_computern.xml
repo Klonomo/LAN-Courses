@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_05_03_03" title="Verbinden von Nicht-Azure Computern">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verbinden von Nicht-Azure Computern</div>
+<div class="section-content">
+<p>Microsoft Defender for Cloud können den Sicherheitsstatus Ihrer Nicht-Azure-Computer überwachen, aber zuerst müssen Sie sie mit Azure verbinden.</p>
+<p>Es gibt verschiedene Möglichkeiten, wie Sie Ihre vorhandenen Windows und Linux-Computer mit Azure Arc verbinden können:</p>
+<ul>
+<li>Verwenden von Azure Arc aktivierten Servern (empfohlen)</li>
+<li>Azure Arc-fähiges VMware vSphere</li>
+<li>System Center Virtual Machine Manager (SCVMM) mit Azure Arc-Unterstützung</li>
+<li>Azure Local</li>
+</ul>
+<h2 id="add-non-azure-machines-with-azure-arc">Hinzufügen von Nicht-Azure Computern mit Azure Arc</h2>
+<p>Azure Arc aktivierte Server ist die bevorzugte Methode zum Hinzufügen Ihrer nicht-Azure-Computer zu Defender for Cloud. Ein Computer mit Azure Arc aktivierten Servern wird zu einer Azure Ressource und wird in Defender for Cloud mit Empfehlungen wie Ihren anderen Azure Ressourcen angezeigt. Darüber hinaus bieten Azure Arc aktivierte Server erweiterte Funktionen wie die Option zum Aktivieren von Gastkonfigurationsrichtlinien auf dem Computer, bereitstellen den Azure Monitor-Agent als Erweiterung, vereinfachen die Bereitstellung mit anderen Azure-Diensten und vieles mehr.</p>
+<h3 id="what-is-azure-arc-enabled-servers">Was ist ein Azure Arc aktivierter Server?</h3>
+<p>Azure Arc-aktivierte Server ermöglichen es Ihnen, Ihre Windows- und Linux-Computer zu verwalten, die außerhalb von Azure, in Ihrem Unternehmensnetzwerk oder bei anderen Cloudanbietern gehostet werden, genauso wie native Azure-virtuelle Maschinen. Wenn ein Hybridcomputer mit Azure verbunden ist, wird er zu einem verbundenen Computer und wird als Ressource in Azure behandelt. Jeder verbundene Computer verfügt über eine Ressourcen-ID, ist in einer Ressourcengruppe enthalten und profitiert von standardmäßigen Azure Konstrukten wie Azure Policy und Anwenden von Tags. Dienstanbieter, die die lokale Infrastruktur eines Kunden verwalten, können ihre Hybridcomputer genauso verwalten wie heute mit nativen Azure Ressourcen in mehreren Kundenumgebungen, indem sie Azure Lighthouse mit Azure Arc verwenden.</p>
+<p>Um diese Erfahrung mit Ihren hybriden Computern bereitzustellen, die außerhalb von Azure gehostet werden, muss der <em>Azure Connected Machine Agent</em> auf jedem Computer installiert werden, auf dem Sie eine Verbindung mit Azure planen. 
+              <strong>Dieser Agent ersetzt nicht den Azure Monitor Agent</strong>. Der Azure Monitor Agent für Windows und Linux ist erforderlich, wenn Sie das Betriebssystem und die Workloads, die auf dem Computer ausgeführt werden, proaktiv überwachen möchten. Anschließend können Sie die Computer mithilfe von Automatisierungsrunbooks, Lösungen wie UpdateVerwaltung oder anderen Azure-Diensten wie Defender for Cloud verwalten.</p>
+<h2 id="onboard-non-azure-machines-with-the-azure-connected-machine-agent">Onboarding von Nicht-Azure-Maschinen mit dem Azure Connected Machine-Agent</h2>
+<p>Wenn Sie Computer in Ihrer Hybridumgebung direkt mit Azure verbinden, können Sie je nach Ihren Anforderungen und den tools, die Sie verwenden möchten, verschiedene Methoden verwenden.</p>
+<h3 id="onboarding-methods">Onboarding-Methoden</h3>
+<p>In der folgenden Tabelle werden die einzelnen Methoden hervorgehoben, damit Sie bestimmen können, welche für Ihre Bereitstellung am besten geeignet sind. Ausführliche Informationen finden Sie unter den Links zum Anzeigen der Schritte für die einzelnen Artikel.</p>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>BESCHREIBUNG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interaktiv</td>
+<td>Manuelles Installieren des Agents auf einem einzelnen oder einer kleinen Anzahl von Computern durch <a href="https://learn.microsoft.com/de-de/azure/azure-arc/servers/onboard-portal" data-linktype="absolute-path">Verbinden der Computer mithilfe eines Bereitstellungsskripts</a>. Im Azure-Portal können Sie ein Skript generieren und auf dem Computer ausführen, um die Installations- und Konfigurationsschritte des Agents zu automatisieren.</td>
+</tr>
+<tr>
+<td>Interaktiv</td>
+<td>
+              <a href="https://learn.microsoft.com/de-de/azure/azure-arc/servers/onboard-windows-admin-center" data-linktype="absolute-path">Maschinen über das Windows Admin Center verbinden</a></td>
+</tr>
+<tr>
+<td>Interaktiv</td>
+<td>
+              <a href="https://learn.microsoft.com/de-de/azure/azure-arc/servers/onboard-windows-server" data-linktype="absolute-path">Connect Windows Servers machines to Azure through Azure Arc Setup</a></td>
+</tr>
+<tr>
+<td>Interaktiv oder im großen Stil</td>
+<td>
+              <a href="https://learn.microsoft.com/de-de/azure/azure-arc/servers/onboard-powershell" data-linktype="absolute-path">Verbinden von Computern mit PowerShell</a></td>
+</tr>
+<tr>
+<td>Skalierbar</td>
+<td>
+              <a href="https://learn.microsoft.com/de-de/azure/azure-arc/servers/onboard-service-principal" data-linktype="absolute-path">Verbinden von Computern mithilfe eines Dienstprinzipals</a>, um den Agent im großen Stil nicht-interaktiv zu installieren.</td>
+</tr>
+<tr>
+<td>Skalierbar</td>
+<td><c0>Verbinden Sie Computer, indem Sie PowerShell-Skripts mit Configuration Manager</c0></td>
+</tr>
+<tr>
+<td>Skalierbar</td>
+<td>
+              <a href="https://learn.microsoft.com/de-de/azure/azure-arc/servers/onboard-configuration-manager-custom-task" data-linktype="absolute-path"> Verbinden von Computern mit einer Configuration Manager benutzerdefinierten Tasksequenz</a></td>
+</tr>
+<tr>
+<td>Skalierbar</td>
+<td>
+              <a href="https://learn.microsoft.com/de-de/azure/azure-arc/servers/onboard-group-policy-powershell" data-linktype="absolute-path">Verbinden Windows Computer mithilfe von Gruppenrichtlinien</a></td>
+</tr>
+<tr>
+<td>Skalierbar</td>
+<td>
+              <a href="https://learn.microsoft.com/de-de/azure/azure-arc/servers/manage-agent?tabs=windows" data-linktype="absolute-path">Verbinden Sie Maschinen aus Azure Automation Updateverwaltung</a>, um einen Dienstprinzipal zu erstellen, der den Agent für mehrere Maschinen installiert und konfiguriert, welche mit der Azure Automation Updateverwaltung verwaltet werden, und so eine nicht-interaktive Verbindung der Maschinen ermöglicht.</td>
+</tr>
+<tr>
+<td>Skalierbar</td>
+<td>
+              <a href="https://learn.microsoft.com/de-de/azure/azure-arc/vmware-vsphere/enable-guest-management-at-scale" data-linktype="absolute-path">Installieren Sie den Arc-Agent auf VMware-VMs im großen Stil mithilfe von VMware vSphere mit Arc-Unterstützung</a>. Arc-aktivierte VMware vSphere ermöglicht es Ihnen, Ihren VMware vCenter-Server mit Azure zu verbinden, Ihre VMware-VMs automatisch zu ermitteln und den Arc Agent darauf zu installieren. Erfordert VMware-Tools auf VMs.</td>
+</tr>
+<tr>
+<td>Skalierbar</td>
+<td>
+              <a href="https://learn.microsoft.com/de-de/azure/azure-arc/system-center-virtual-machine-manager/enable-guest-management-at-scale" data-linktype="absolute-path">Installieren Sie den Arc-Agent auf SCVMM-VMs im großen Maßstab mithilfe von Arc-fähigen System Center Virtual Machine Manager</a>. Arc-fähiger System Center Virtual Machine Manager ermöglicht es Ihnen, Ihren SCVMM-Verwaltungsserver mit Azure zu verbinden, Ihre SCVMM-VMs automatisch zu ermitteln und den Arc-Agent darauf zu installieren.</td>
+</tr>
+<tr>
+<td>Skalierbar</td>
+<td>
+              <a href="https://learn.microsoft.com/de-de/azure/azure-arc/multicloud-connector/connect-to-aws" data-linktype="absolute-path">Verbinden Sie Ihre AWS-Cloud über den von Azure Arc aktivierten Multicloud-Connector</a> und <a href="https://learn.microsoft.com/de-de/azure/azure-arc/multicloud-connector/onboard-multicloud-vms-arc" data-linktype="absolute-path">aktivieren Sie die <strong>Arc-Onboarding</strong>-Lösung</a>, um EC2-VMs automatisch zu entdecken und einzubinden.</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Das Azure Arc Setupfeature gilt nur für Windows Server 2022 und höher. Es wurde im <a href="https://support.microsoft.com/topic/october-10-2023-kb5031364-os-build-20348-2031-7f1d69e7-c468-4566-887a-1902af791bbc" data-linktype="external">kumulativen Update vom 10.10.2023</a> veröffentlicht.</p>
+</div>
+<h2 id="supported-cloud-operations">Unterstützte Cloudvorgänge</h2>
+<p>Mit Azure Arc-fähigen Servern können Sie viele Betriebsfunktionen ausführen, genau wie bei systemeigenen Azure virtuellen Computern. Im Folgenden finden Sie einige der wichtigsten unterstützten Aktionen für verbundene Computer.</p>
+<ul>
+<li>
+              <strong>Regieren</strong>: <ul>
+<li>Zuweisen von <a href="https://learn.microsoft.com/de-de/azure/governance/machine-configuration/overview" data-linktype="absolute-path">Azure-Computerkonfigurationen</a> zu Überwachungseinstellungen innerhalb des Computers. Um die Kosten für die Verwendung von Azure Machine Configuration-Richtlinien mit Arc-fähigen Servern zu verstehen, lesen Sie den Azure Policy <a href="https://azure.microsoft.com/pricing/details/azure-policy/" data-linktype="external">Preisleitfaden</a>.</li>
+</ul>
+</li>
+<li>
+              <strong>Schützen:</strong><ul>
+<li>Schützen Sie Nicht-Azure-Server mit <a href="https://learn.microsoft.com/de-de/microsoft-365/security/defender-endpoint" data-linktype="absolute-path">Microsoft Defender for Endpoint</a>, das als Bestandteil von <a href="https://learn.microsoft.com/de-de/azure/security-center/defender-for-servers-introduction" data-linktype="absolute-path">Microsoft Defender for Cloud</a> enthalten ist, zur Bedrohungserkennung, zum Schwachstellenmanagement und zur proaktiven Überwachung potenzieller Sicherheitsbedrohungen. Microsoft Defender for Cloud stellt die Warnungen und Abhilfevorschläge aus den erkannten Bedrohungen dar.</li>
+<li>Verwenden Sie <a href="https://learn.microsoft.com/de-de/azure/azure-arc/servers/scenario-onboard-azure-sentinel" data-linktype="absolute-path">Microsoft Sentinel</a>, um sicherheitsbezogene Ereignisse zu sammeln und mit anderen Datenquellen zu korrelieren.</li>
+</ul>
+</li>
+<li>
+              <strong>Konfigurieren</strong>: <ul>
+<li>Verwenden Sie <a href="https://learn.microsoft.com/de-de/azure/automation/extension-based-hybrid-runbook-worker-install?tabs=windows" data-linktype="absolute-path">Azure Automation</a> für häufige und zeitaufwendige Verwaltungsaufgaben mit PowerShell und Python <a href="https://learn.microsoft.com/de-de/azure/automation/automation-runbook-execution" data-linktype="absolute-path">runbooks</a>. Bewerten von Konfigurationsänderungen für installierte Software, Microsoft-Dienste, der Windows-Registrierung und Dateien sowie Linux-Daemons mithilfe des Azure Monitor-Agent für <a href="https://learn.microsoft.com/de-de/azure/automation/change-tracking/overview-monitoring-agent?tabs=win-az-vm" data-linktype="absolute-path">Change Tracking und Inventarisierung</a>.</li>
+<li>Verwenden Sie <a href="https://learn.microsoft.com/de-de/azure/update-manager/overview" data-linktype="absolute-path">Azure Update Manager</a>, um Betriebssystemupdates für Ihre Windows- und Linux-Server zu verwalten. Automatisieren Sie das Onboarding und die Konfiguration einer Reihe von Azure Diensten, wenn Sie <a href="https://learn.microsoft.com/de-de/azure/automanage/automanage-arc" data-linktype="absolute-path">Azure Automanage</a> verwenden.</li>
+<li>Ausführen von Konfigurations- und Automatisierungsaufgaben nach der Bereitstellung mithilfe unterstützter <a href="https://learn.microsoft.com/de-de/azure/azure-arc/servers/manage-vm-extensions" data-linktype="absolute-path">Arc-fähige Server-VM-Erweiterungen</a> für Ihren Computer ohne Azure Windows oder Linux.</li>
+</ul>
+</li>
+<li>
+              <strong>Monitor:</strong><ul>
+<li>Überwachen Sie die Betriebssystemleistung, und ermitteln Sie Anwendungskomponenten, um Prozesse und Abhängigkeiten mit anderen Ressourcen über <a href="https://learn.microsoft.com/de-de/azure/azure-monitor/vm/vminsights-overview" data-linktype="absolute-path">Azure Insights</a> zu überwachen.</li>
+<li>Sammeln Sie andere Protokolldaten, z. B. Leistungsdaten und Ereignisse, vom Betriebssystem oder arbeitslasten, die auf dem Computer mit dem <a href="https://learn.microsoft.com/de-de/azure/azure-monitor/agents/azure-monitor-agent-overview" data-linktype="absolute-path">Azure Monitor Agent</a> ausgeführt werden. Diese Daten werden in einem <a href="https://learn.microsoft.com/de-de/azure/azure-monitor/logs/log-analytics-workspace-overview" data-linktype="absolute-path">Log Analytics-Arbeitsbereich</a> gespeichert.</li>
+</ul>
+</li>
+</ul>
+<p>Protokolldaten, die in einem Log Analytics Arbeitsbereich vom Hybridcomputer gesammelt und gespeichert werden, enthalten Eigenschaften, die für den Computer spezifisch sind, z. B. eine Ressourcen-ID, um <a href="https://learn.microsoft.com/de-de/azure/azure-monitor/logs/manage-access#access-mode" data-linktype="absolute-path">resource-context</a> Protokollzugriff zu unterstützen.</p>
+<p>Schauen Sie sich dieses Video an, um mehr über Azure Überwachung, Sicherheit und Updatedienste in Hybrid- und Multicloud-Umgebungen zu erfahren.</p>
+<div class="embeddedvideo"><p><em>[Interaktiver Inhalt auf Microsoft Learn verfügbar]</em></p></div>
+<p>Um Ihre Nicht-Azure-Computer mit Azure Arc-aktivierten Servern zu verbinden, folgen Sie diesem Schnellstartanleitung.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_08_06_02" title="Plan für die Syslog-Datensammlung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Plan für die Syslog-Datensammlung</div>
+<div class="section-content">
+<div class="CAUTION">
+<p>Achtung</p>
+<p>Dieser Artikel bezieht sich auf CentOS, eine Linux-Distribution, deren Dienstende (End-of-Life, EOL) ansteht. Berücksichtigen Sie Ihre Nutzung und planen Sie entsprechend. Weitere Informationen finden Sie in der <a href="https://learn.microsoft.com/de-de/azure/virtual-machines/workloads/centos/centos-end-of-life" data-linktype="absolute-path">Anleitung zum Ende des Lebenszyklus von CentOS</a>.</p>
+</div>
+<p>Sie können Ereignisse von Linux-basierten Computern oder Appliances mit Syslog-Unterstützung in Microsoft Sentinel streamen, indem Sie den Azure Monitor-Agent für Linux und die Datensammlungsregeln verwenden. Dieses Streaming kann für jeden Computer durchgeführt werden, auf dem Sie den Agent direkt auf dem Host installieren können. Der native Syslog-Daemon des Hosts sammelt lokale Ereignisse der angegebenen Typen und leitet diese lokal an den Agent weiter, der sie wiederum in Ihren Log Analytics-Arbeitsbereich streamt.</p>
+<p>Log Analytics unterstützt das Sammeln von Nachrichten, die von den <strong>rsyslog</strong> - oder <strong>syslog-ng-Daemons</strong> gesendet werden, wobei rsyslog die Standardeinstellung ist.</p>
+<h2 id="how-it-works">Funktionsweise</h2>
+<p>
+              <strong>Syslog</strong> ist ein Ereignisprotokoll, das für Linux üblich ist. Wenn der Agent auf Ihrer VM oder Appliance installiert ist, konfiguriert die Installationsroutine den lokalen Syslog-Daemon (rsyslog oder syslog-ng), um Nachrichten über einen lokalen Unix-Domänensocket an den Agent weiterzuleiten. Der Agent sendet die Nachrichten dann über HTTPS an Ihren Log Analytics-Arbeitsbereich, wo sie in der Syslog-Tabelle in den <strong>Microsoft Sentinel &gt;-Protokollen</strong> zu Ereignisprotokolleinträgen verarbeitet werden.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

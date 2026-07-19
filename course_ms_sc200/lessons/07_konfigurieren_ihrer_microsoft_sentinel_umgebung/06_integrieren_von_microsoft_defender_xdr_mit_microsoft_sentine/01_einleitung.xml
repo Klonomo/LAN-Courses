@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_07_06_01" title="Einleitung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Einleitung</div>
+<div class="section-content">
+<p>Dieses Modul behandelt das Thema der Integration von Microsoft Sentinel in das Microsoft Defender-Portal. Diese Integration vereinfacht Vorgänge, indem die Notwendigkeit für die Verwaltung mehrerer Tools reduziert und suchfunktionen verbessert werden, indem Abfragen über verschiedene Datensätze aus einem einzigen Portal hinweg zugelassen werden.</p>
+<p>Stellen Sie sich vor, Sie sind ein Security Operations Manager in einem großen multinationalen Unternehmen. Sie sind damit beauftragt, die Vorgänge Ihres Teams zu optimieren und deren Suchfunktionen zu verbessern. Ihr Team verwendet derzeit mehrere Tools für verschiedene Aufgaben, die häufig zu Komplexität und Fehlern führen. Sie möchten auch automatische Angriffsunterbrechungen für Ihre SAP-Anwendungen aktivieren und einheitliche Entitätsseiten für Geräte, Benutzer, IP-Adressen und Azure-Ressourcen bereitstellen. Die Lösung liegt in der Integration von Microsoft Sentinel in das Microsoft Defender-Portal.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Wenn Sie Microsoft Sentinel in das Defender-Portal integrieren und für Defender XDR lizenziert sind, wird Microsoft Sentinel automatisch mit Defender XDR verbunden. Der Datenconnector für Defender XDR wird automatisch für Sie eingerichtet.</p>
+</div>
+<p>Die in diesem Modul behandelten Themen umfassen:</p>
+<ul>
+<li>Grundlegendes zur Integration von Microsoft Sentinel und Defender XDR im Defender-Portal</li>
+<li>Grundlegendes zu Funktionsunterschieden zwischen Azure- und Defender-Portalen in Microsoft Sentinel</li>
+<li>Einrichtung von Microsoft Sentinel in Microsoft Defender XDR: Voraussetzungen und Schritte</li>
+<li>Navigieren durch Microsoft Sentinel-Features im Defender-Portal</li>
+</ul>
+<h2 id="learning-objectives">Lernziele</h2>
+<p>Am Ende dieses Moduls können Sie:</p>
+<ul>
+<li>Grundlegendes zu den Unterschieden zwischen den Microsoft Sentinel-Funktionen in Azure- und Defender-Portalen.</li>
+<li>Kennen Sie die Voraussetzungen für die Integration von Microsoft Defender XDR in Microsoft Sentinel.</li>
+<li>Verbinden Sie einen Microsoft Sentinel-Arbeitsbereich mit Microsoft Defender XDR.</li>
+</ul>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<ul>
+<li>Kenntnisse über die Sicherheitsvorgänge in einer Organisation</li>
+<li>Erfahrung beim Installieren und Konfigurieren von Microsoft Sentinel-Diensten</li>
+<li>Erfahrung mit der Verwendung und Navigation im Microsoft Defender-Portal</li>
+</ul>
+<h2 id="estimated-time-to-complete-this-module-30-minutes">Geschätzte Zeit zum Abschließen dieses Moduls: 30 Minuten</h2>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

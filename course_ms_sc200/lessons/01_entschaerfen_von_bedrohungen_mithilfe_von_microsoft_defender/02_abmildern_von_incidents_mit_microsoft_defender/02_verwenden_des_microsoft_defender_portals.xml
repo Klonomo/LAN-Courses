@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_01_02_02" title="Verwenden des Microsoft Defender-Portals">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwenden des Microsoft Defender-Portals</div>
+<div class="section-content">
+<p>Das Microsoft Defender-Portal (<a href="https://security.microsoft.com/?azure-portal=true" data-linktype="external">https://security.microsoft.com/</a>) ist ein spezialisierter Arbeitsbereich, der auf die Bedürfnisse von Sicherheitsteams zugeschnitten ist. Diese Lösungen sind in alle Microsoft 365-Dienste integriert und bieten handlungsrelevante Einblicke, um Risiken zu verringern und Ihre digitalen Ressourcen zu schützen.</p>
+<p>Sie können die Warnungen untersuchen, die sich auf Ihr Netzwerk auswirken, deren Bedeutung verstehen und Beweise sammeln, die mit Incidents im Zusammenhang stehen, damit Sie einen effektiven Korrekturplan entwickeln können.</p>
+<p>Auf der Startseite werden viele der gebräuchlichen Karten angezeigt, die Sicherheitsteams benötigen. Die Zusammenstellung von Karten und Daten hängt von der Rolle des Benutzers ab. Weil im Microsoft Defender-Portal die rollenbasierte Zugriffssteuerung verwendet wird, werden für verschiedene Rollen die Karten angezeigt, welche für ihre tägliche Arbeit von Bedeutung sind.</p>
+<p>Diese Übersichtsinformationen helfen Ihnen, über die neuesten Aktivitäten in Ihrer Organisation auf dem Laufenden zu bleiben. Im Microsoft Defender-Portal werden Signale aus unterschiedlichen Quellen zusammengeführt, um eine ganzheitliche Ansicht Ihrer Microsoft 365-Umgebung zu zeigen.</p>
+<p>Das Microsoft Defender-Portal kombiniert Schutz, Erkennung, Untersuchung und Reaktion auf E-Mail-, Zusammenarbeits-, Identitäts-, Geräte- und App-Bedrohungen an einem zentralen Ort.</p>
+<p>Dieser einzelne Glasbereich vereint Funktionen aus vorhandenen Microsoft-Sicherheitsportalen wie dem Microsoft Defender-Portal und dem Office 365 Security &amp; Microsoft Purview-Portal. Beim Microsoft Defender-Portal wird der Fokus auf den schnellen Zugriff auf Informationen, einfachere Layouts und das Zusammentragen verwandter Informationen zur einfacheren Verwendung gelegt. Dazu gehören:</p>
+<ul>
+<li>
+              <strong>Microsoft Defender für Office 365</strong>: Mit Microsoft Defender für Office 365 werden Organisationen dabei unterstützt, ihr Unternehmen mithilfe von Präventions-, Erkennungs-, Untersuchungs- und Huntingfeatures zu sichern, um E-Mail- und Office 365-Ressourcen zu schützen.</li>
+<li>
+              <strong>Microsoft Defender for Endpoint:</strong> Microsoft Defender for Endpoint bietet für Geräte in Ihrer Organisation vorbeugenden Schutz, die Erkennung nach Sicherheitsverletzungen, automatisierte Untersuchungen und Reaktionen auf Sicherheitsverletzungen.</li>
+<li>
+              <strong>Microsoft Defender XDR</strong>: Microsoft 365 Defender ist ein Teil der Extended Detection and Response-Lösung (XDR) von Microsoft, die das Microsoft 365-Sicherheitsportfolio nutzt, um Bedrohungsdaten domänenübergreifend automatisch zu analysieren und eine Übersicht eines Angriffs auf einem einzigen Dashboard zu erstellen.</li>
+<li>
+              <strong>Microsoft Defender for Cloud Apps:</strong> Microsoft Defender for Cloud Apps ist eine umfassende, SaaS- und PaaS-übergreifende Lösung, die große Sichtbarkeit, umfassende Datenkontrolle und verbesserten Bedrohungsschutz für Ihre Cloud-Apps bietet.</li>
+<li>
+              <strong>Microsoft Defender for Identity:</strong> Microsoft Defender for Identity ist eine cloudbasierte Sicherheitslösung, die Signale Ihrer lokalen Active Directory-Instanz verwendet, um komplexe Bedrohungen, gefährdete Identitäten und schädliche Insideraktionen gegen Ihre Organisation zu identifizieren, zu erkennen und zu untersuchen.</li>
+<li>
+              <strong>Microsoft Defender Vulnerability Management:</strong> Microsoft Defender Vulnerability Management bietet kontinuierliche Ressourcentransparenz, intelligente risikobasierte Bewertungen und integrierte Wartungstools, die Ihre Sicherheits- und IT-Teams bei der Priorisierung und Behandlung kritischer Sicherheitsrisiken und Fehlkonfigurationen in der gesamten Organisation unterstützen.</li>
+<li>
+              <strong>Microsoft Defender for IoT:</strong> Die operative Technologie (Operational Technology, OT) umfasst die spezielle Hardware und Software, die verwendet wird, um physische Prozesse in kritischen Sektoren wie der Fertigung, der Pharmaindustrie und in Versorgungsunternehmen zu überwachen und zu steuern. Microsoft Defender for IoT ist im Microsoft Defender-Portal verfügbar und zum Schützen von OT-Umgebungen konzipiert.</li>
+<li>
+              <strong>Microsoft Sentinel:</strong> Integrieren Sie Microsoft Defender XDR in Microsoft Sentinel, um alle Defender XDR-Incidents und Ereignisse der erweiterten Bedrohungssuche in Microsoft Sentinel zu streamen und die Incidents und Ereignisse zwischen dem Azure-Portal und dem Microsoft Defender-Portal zu synchronisieren.</li>
+</ul>
+<p>Unter der Option <strong>Weitere Ressourcen</strong> im Portal finden Sie eine Liste der folgenden zugehörigen Portale:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Portal</th>
+<th style="text-align: left;">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Microsoft Purview-Portal</td>
+<td style="text-align: left;">Verwalten Sie Ihre Complianceanforderungen für alle Microsoft 365-Dienste mithilfe integrierter Lösungen für Informationsgovernance, Klassifizierung, Fallmanagement und vieles mehr.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Microsoft Entra&nbsp;ID</td>
+<td style="text-align: left;">Verwalten Sie die Identitäten Ihrer Organisation. Richten Sie die Multi-Faktor-Authentifizierung ein, verfolgen Sie Benutzeranmeldungen, bearbeiten Sie das Unternehmensbranding und vieles mehr.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Microsoft Entra ID-Schutz</td>
+<td style="text-align: left;">Ermitteln Sie potenzielle Sicherheitsrisiken, die sich auf die Identitäten Ihrer Organisation auswirken. Untersuchen Sie verdächtige Incidents im Zusammenhang mit den Identitäten Ihrer Organisation, und richten Sie automatisierte Antworten ein, um sie aufzulösen.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Azure Informationsschutz</td>
+<td style="text-align: left;">Konfigurieren und verwalten Sie den Azure Information Protection-Client und -Scanner, um die E-Mails und Dokumente Ihrer Organisation automatisch zu klassifizieren und zu schützen. Verwenden Sie Berichte, um die Verwendung von Bezeichnungen zu überwachen und vertrauliche Informationen zu identifizieren, die geschützt werden sollen.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Microsoft Defender for Cloud</td>
+<td style="text-align: left;">Schützen Sie Ihre Rechenzentren, und erhalten Sie erweiterten Schutz vor Bedrohungen für Ihre Azure- und Nicht-Azure-Workloads in der Cloud und lokal. Sichern Sie Ihre Azure-Dienste schnell mit automatisch bereitgestelltem, nativem Schutz.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="map-microsoft-defender-xdr-unified-role-based-access-control-rbac-permissions">Zuordnen von Berechtigungen für die rollenbasierte Zugriffssteuerung (RBAC) von Microsoft Defender XDR Unified</h2>
+<p>Alle Berechtigungen, die im Microsoft Defender XDR Unified RBAC-Modell aufgeführt sind, richten sich an vorhandene Berechtigungen in den einzelnen RBAC-Modellen. Nachdem Sie das Microsoft Defender XDR Unified RBAC-Modell aktiviert haben, ersetzen die in Ihren importierten Rollen konfigurierten Berechtigungen und Zuweisungen die vorhandenen Rollen in den einzelnen RBAC-Modellen.</p>
+<p>In diesem Artikel wird beschrieben, wie vorhandene Rollen und Berechtigungen in Microsoft Defender for Endpoint, Microsoft Defender Vulnerability Management, Microsoft Defender for Office 365, Microsoft Defender for Identity und Microsoft Entra den Rollen und Berechtigungen im Microsoft Defender XDR Unified RBAC-Modell zugeordnet werden.</p>
+<div class="IMPORTANT">
+<p>Von Bedeutung</p>
+<p>Microsoft empfiehlt, Rollen mit den geringsten Berechtigungen zu verwenden. Dies trägt zur Verbesserung der Sicherheit für Ihre Organisation bei. Globaler Administrator ist eine hoch privilegierte Rolle, die auf Notfallszenarien beschränkt werden sollte, wenn Sie keine vorhandene Rolle verwenden können.</p>
+</div>
+<h2 id="map-microsoft-defender-xdr-unified-rbac-permissions-to-existing-rbac-permissions">Zuordnen von Microsoft Defender XDR Unified RBAC-Berechtigungen zu vorhandenen RBAC-Berechtigungen</h2>
+<div class="IMPORTANT">
+<p>Von Bedeutung</p>
+<p>Ab dem 16. Februar 2025 ist das Microsoft Defender XDR Unified RBAC-Modell das Standardberechtigungsmodell für neue Microsoft Defender Endpoint-Mandanten. Diese neuen Mandanten verfügen nicht über die Möglichkeit, Rollen und Berechtigungen aus dem aktuellen Modell zu exportieren. Defender for Endpoint-Mandanten mit Rollen und Berechtigungen, die vor diesem Datum zugewiesen oder exportiert wurden, behalten ihre aktuelle Rollen- und Berechtigungskonfiguration bei</p>
+<p>Ab dem 2. März 2025 verfügen neue Microsoft Defender for Identity-Mandanten auch über das Unified RBAC-Modell als Standardberechtigungsmodell. Sie können keine Rollen und Berechtigungen aus dem aktuellen Modell exportieren. Vorhandene Defender for Identity-Mandanten behalten ihre bestehende Rollen- und Berechtigungskonfiguration.</p>
+</div>
+<p>Verwenden Sie die Tabellen in den folgenden Abschnitten, um mehr darüber zu erfahren, wie Ihre vorhandenen individuellen RBAC-Rollendefinitionen Ihren neuen Microsoft Defender XDR Unified RBAC-Rollen zugeordnet werden:</p>
+<ol>
+<li>
+              <a href="https://learn.microsoft.com/de-de/defender-xdr/compare-rbac-roles#map-defender-for-endpoint-and-defender-vulnerability-management-permissions-to-the-microsoft-365-defender-rbac-permissions" data-linktype="absolute-path">Zuordnen von Defender for Endpoint- und Defender Vulnerability Management-Berechtigungen</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/defender-xdr/compare-rbac-roles#map-defender-for-office-365-permissions-to-the-microsoft-365-defender-unified-rbac-permissions" data-linktype="absolute-path">Zuordnen von Defender for Office 365-Berechtigungen zu den Microsoft Defender XDR Unified RBAC-Berechtigungen</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/defender-xdr/compare-rbac-roles#map-microsoft-defender-for-identity-permissions-to-the-microsoft-365-defender-unified-rbac-permissions" data-linktype="absolute-path">Zuordnen von Microsoft Defender for Identity-Berechtigungen</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/defender-xdr/compare-rbac-roles#azure-active-directory-global-roles-access" data-linktype="absolute-path">Zugriff auf globale Microsoft Entra-Rollen</a></li>
+</ol>
+<h3 id="map-defender-for-endpoint-and-defender-vulnerability-management-permissions-to-the-microsoft-defender-xdr-rbac-permissions">Zuordnen von Defender for Endpoint- und Defender Vulnerability Management-Berechtigungen zu den Microsoft Defender XDR RBAC-Berechtigungen</h3>
+<table>
+<thead>
+<tr>
+<th>Defender for Endpoint- und Defender Vulnerability Management-Berechtigungen</th>
+<th>Microsoft Defender XDR Unified RBAC-Berechtigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anzeigen von Daten – Sicherheitsvorgänge</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Grundlagen der Sicherheitsdaten (lesen)</td>
+</tr>
+<tr>
+<td>Anzeigen von Daten – Defender Vulnerability Management</td>
+<td>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsrisikoverwaltung (lesen)</td>
+</tr>
+<tr>
+<td>Untersuchung von Warnungen</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Warnungen (verwalten)</td>
+</tr>
+<tr>
+<td>Aktive Wartungsaktionen – Sicherheitsvorgänge</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Reaktion (verwalten)</td>
+</tr>
+<tr>
+<td>Aktive Wartungsaktionen – Defender Vulnerability Management – Ausnahmebehandlung</td>
+<td>Sicherheitsstatus \ Haltungsverwaltung \ Ausnahmebehandlung (verwalten)</td>
+</tr>
+<tr>
+<td>Aktive Wartungsaktionen – Defender Vulnerability Management – Behandlung von Korrekturen</td>
+<td>Sicherheitsstatus \ Haltungsverwaltung \ Behandlung von Korrekturen (verwalten)</td>
+</tr>
+<tr>
+<td>Aktive Wartungsaktionen – Defender Vulnerability Management – Anwendungsbehandlung</td>
+<td>Sicherheitsstatus \ Haltungsverwaltung \ Anwendungsbehandlung (verwalten)</td>
+</tr>
+<tr>
+<td>Defender Vulnerability Management – Verwalten von Bewertungsprofilen für Sicherheitsbaselines</td>
+<td>Sicherheitsstatus \ Haltungsverwaltung \ Bewertung von Sicherheitsbaselines (verwalten)</td>
+</tr>
+<tr>
+<td>Livereaktionsfunktionen</td>
+<td>Sicherheitsvorgänge \ Grundlegende Liveantwort (verwalten)</td>
+</tr>
+<tr>
+<td>Funktionen für Liveantworten – erweitert</td>
+<td>Sicherheitsvorgänge \ Erweiterte Liveantwort (verwalten) <br> Sicherheitsvorgänge \ Sicherheitsdaten \ Dateisammlung (verwalten)</td>
+</tr>
+<tr>
+<td>Verwalten von Sicherheitseinstellungen im Security Center</td>
+<td>Autorisierung und Einstellungen \ Sicherheitseinstellungen \ Kernsicherheitseinstellungen (verwalten) <br> Autorisierung und Einstellungen\Sicherheitseinstellungen \ Erkennungsoptimierung (verwalten)</td>
+</tr>
+<tr>
+<td>Verwalten von Portalsystemeinstellungen</td>
+<td>Autorisierung und Einstellungen \ Systemeinstellung (Lesen und Verwalten)</td>
+</tr>
+<tr>
+<td>Verwalten von Endpunktsicherheitseinstellungen in Microsoft Intune</td>
+<td>Nicht unterstützt – diese Berechtigung wird im Microsoft Intune Admin Center verwaltet</td>
+</tr>
+</tbody>
+</table>
+<h3 id="map-defender-for-office-365-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions">Zuordnen von Defender for Office 365-Berechtigungen zu den Microsoft Defender XDR Unified RBAC-Berechtigungen</h3>
+<p>In den folgenden Tabellen erfahren Sie, wie Ihre vorhandenen E-Mail- und Kollaborations- sowie schutzbezogenen Exchange Online-Berechtigungen für Defender for Office 365 den neuen Microsoft Defender XDR Unified RBAC-Berechtigungen zugeordnet sind:</p>
+<ul>
+<li>
+              <a href="#email--collaboration-permissions-mapping" data-linktype="self-bookmark">Zuordnen von E-Mail- und Zusammenarbeitsberechtigungen</a></li>
+<li>
+              <a href="#exchange-online-permissions-mapping" data-linktype="self-bookmark">Zuordnen von Exchange Online-Berechtigungen</a></li>
+</ul>
+<h4 id="email--collaboration-permissions-mapping">Zuordnen von E-Mail- und Zusammenarbeitsberechtigungen</h4>
+<p>Sie haben E-Mail- und Zusammenarbeitsberechtigungen im Defender-Portal unter <a href="https://security.microsoft.com/emailandcollabpermissions" data-linktype="external">https://security.microsoft.com/emailandcollabpermissions</a> konfiguriert.</p>
+<table>
+<thead>
+<tr>
+<th>E-Mail- und Zusammenarbeitsberechtigung</th>
+<th>Typ</th>
+<th>Microsoft Defender XDR Unified RBAC-Berechtigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Globaler Leser</td>
+<td>Rollengruppe</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen) <br> Sicherheitsvorgänge \ Rohdaten (E-Mail &amp; Zusammenarbeit) \ Metadaten für E-Mail &amp; Zusammenarbeit (lesen) <br> Sicherheitsvorgänge \ Sicherheitsdaten \ Antwort (verwalten) <br> Autorisierung und Einstellungen \ Sicherheitseinstellungen \ Kernsicherheitseinstellungen (lesen) <br> Autorisierung und Einstellungen \ Systemeinstellung (lesen)</td>
+</tr>
+<tr>
+<td>Organisationsverwaltung</td>
+<td>Rollengruppe</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen) <br> Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdaten (verwalten) <br> Sicherheitsvorgänge \ Unformatierte Daten (E-Mail &amp; Zusammenarbeit) \ Metadaten für E-Mail und Zusammenarbeit (lesen)<br> Sicherheitsvorgänge \ Sicherheitsdaten \ Reaktion (verwalten) <br> Sicherheitsvorgänge \ Sicherheitsdaten \ Erweiterte E-Mail-Aktionen (verwalten) <br> Sicherheitsvorgänge \ Sicherheitsdaten \ E-Mail-Quarantäne (verwalten) <br> Autorisierung und Einstellungen \ Autorisierung (Lesen und Verwalten) <br> Autorisierung und Einstellungen \ Sicherheitseinstellung (Alle Berechtigungen) <br> Autorisierung und Einstellungen \ Systemeinstellungen (Lesen und Verwalten)</td>
+</tr>
+<tr>
+<td>Sicherheitsadministrator</td>
+<td>Rollengruppe</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen) <br>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdaten (verwalten) <br> Sicherheitsvorgänge \ Rohdaten (E-Mail &amp; Zusammenarbeit) \ Metadaten für E-Mail &amp; Zusammenarbeit (lesen) <br> Sicherheitsvorgänge \ Sicherheitsdaten \ Reaktion (verwalten) <br> Sicherheitsvorgänge \ Sicherheitsdaten \ E-Mail-Quarantäne (verwalten) <br> Autorisierung und Einstellungen \ Autorisierung und Einstellungen \ Autorisierung <br> und Einstellungen \ Sicherheitseinstellung (Alle Berechtigungen) <br> Autorisierung und Einstellungen \ Systemeinstellungen (Lesen und Verwalten)</td>
+</tr>
+<tr>
+<td>Sicherheitsleser</td>
+<td>Rollengruppe</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \Sicherheitsdatengrundlagen (lesen) <br> Sicherheitsvorgänge \ Rohdaten (E-Mail &amp; Zusammenarbeit) \ Metadaten für E-Mail und Zusammenarbeit (lesen) <br> Sicherheitsvorgänge \ Sicherheitsdaten \ Antwort (verwalten) <br> Autorisierung und Einstellungen \ Sicherheitseinstellungen \ Kernsicherheitseinstellungen (lesen) <br> Autorisierung und Einstellungen \ Systemeinstellung (lesen)</td>
+</tr>
+<tr>
+<td>Überwachungsprotokolle</td>
+<td>Rolle</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Grundlagen der Sicherheitsdaten (lesen)</td>
+</tr>
+<tr>
+<td>Verwalten von Warnungen</td>
+<td>Rolle</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen) <br> Sicherheitsvorgänge \ Sicherheitsdaten \ Warnungen (verwalten)</td>
+</tr>
+<tr>
+<td>Vorschau</td>
+<td>Rolle</td>
+<td>Sicherheitsvorgänge\ Sicherheitsvorgänge \ Rohdaten (E-Mail &amp; Zusammenarbeit) \ Inhalt der E-Mail- und Zusammenarbeit (lesen)</td>
+</tr>
+<tr>
+<td>Quarantäne</td>
+<td>Rolle</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ E-Mail-Quarantäne (verwalten)</td>
+</tr>
+<tr>
+<td>Rollenverwaltung</td>
+<td>Rolle</td>
+<td>Autorisierung und Einstellungen \ Autorisierung (Lesen und Verwalten)</td>
+</tr>
+<tr>
+<td>Suchen und Löschen</td>
+<td>Rolle</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Erweiterte Aktionen per E-Mail senden (verwalten)</td>
+</tr>
+<tr>
+<td>Verwalten von Warnungen nur anzeigen</td>
+<td>Rolle</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Grundlagen der Sicherheitsdaten (lesen)</td>
+</tr>
+<tr>
+<td>Empfangende Personen nur anzeigen</td>
+<td>Rolle</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen) <br> Sicherheitsvorgänge \ Rohdaten (E-Mail &amp; Zusammenarbeit) \ Metadaten für E-Mail und Zusammenarbeit (lesen)</td>
+</tr>
+<tr>
+<td>Überwachungsprotokolle nur anzeigen</td>
+<td>Rolle</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Grundlagen der Sicherheitsdaten (lesen)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="exchange-online-permissions-mapping">Zuordnen von Exchange Online-Berechtigungen</h4>
+<p>Sie haben schutzbezogene Exchange Online-Berechtigungen im Exchange Admin Center (EAC) unter <a href="https://admin.exchange.microsoft.com/#/adminRoles" data-linktype="external">https://admin.exchange.microsoft.com/#/adminRoles</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Exchange Online-Berechtigung</th>
+<th>Typ</th>
+<th>Microsoft Defender XDR Unified RBAC-Berechtigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nachrichtenschutzverwaltung</td>
+<td>Rollengruppe</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ E-Mail-Quarantäne (verwalten) <br> Autorisierung und Einstellungen \ Sicherheitseinstellungen \ Kernsicherheitseinstellungen (verwalten) <br> Autorisierung und Einstellungen \ Sicherheitseinstellungen \ Erkennungsoptimierung (verwalten)</td>
+</tr>
+<tr>
+<td>Organisationsverwaltung</td>
+<td>Rollengruppe</td>
+<td>Sicherheitsvorgänge \ Rohdaten (E-Mail &amp; Zusammenarbeit) \ Metadaten für E-Mail und Zusammenarbeit (lesen) <br> Autorisierung und Einstellungen \ Sicherheitseinstellungen \ Kernsicherheitseinstellungen (verwalten) <br> Autorisierung und Einstellungen \ Sicherheitseinstellungen \ Erkennungsoptimierung (Verwalten) <br> Autorisierung und Einstellungen \ Systemeinstellungen (Lesen und Verwalten)</td>
+</tr>
+<tr>
+<td>Sicherheitsadministrator</td>
+<td>Rollengruppe</td>
+<td>Autorisierung und Einstellungen \ Sicherheitseinstellungen \ Erkennungsoptimierung (verwalten) <br> Autorisierung und Einstellungen \ Systemeinstellungen (Lesen und Verwalten)</td>
+</tr>
+<tr>
+<td>Organisationsverwaltung mit Leserechten</td>
+<td>Rollengruppe</td>
+<td>Autorisierung und Einstellungen \ Sicherheitseinstellungen (schreibgeschützt) <br> Autorisierung und Einstellungen \ Systemeinstellungen (schreibgeschützt)</td>
+</tr>
+<tr>
+<td>AllowBlockList-Manager für den Mandanten</td>
+<td>Rolle</td>
+<td>Autorisierung und Einstellungen \ Sicherheitseinstellungen \ Erkennungsoptimierung (verwalten)</td>
+</tr>
+<tr>
+<td>Empfänger nur anzeigen</td>
+<td>Rolle</td>
+<td>Sicherheitsvorgänge \ Rohdaten (E-Mail &amp; Zusammenarbeit) \ Metadaten für E-Mail und Zusammenarbeit (lesen)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="map-microsoft-defender-for-identity-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions">Zuordnen von Microsoft Defender for Identity-Berechtigungen zu den Microsoft Defender XDR Unified RBAC-Berechtigungen</h3>
+<table>
+<thead>
+<tr>
+<th>Defender for Identity-Berechtigung</th>
+<th>Defender XDR Unified RBAC-Berechtigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MDI-administrierende Person</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen)<br>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdaten \ Warnungen (verwalten)<br>Autorisierung und Einstellungen \ Autorisierung und Einstellungen \Autorisierung und Einstellungen \Sicherheitseinstellung (Alle Berechtigungen) <br>Autorisierung und Einstellungen \ Systemeinstellungen (Lesen und Verwalten <br>)</td>
+</tr>
+<tr>
+<td>MDI-benutzende Person</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen) <br>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdaten \ Warnungen (verwalten)<br>Autorisierung und Einstellungen \ Sicherheitseinstellung (Alle Berechtigungen) <br>Autorisierung und Einstellungen \ Systemeinstellung (lesen)</td>
+</tr>
+<tr>
+<td>MDI-zuschauende Person</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Grundlagen der Sicherheitsdaten (lesen)<br>Autorisierung und Einstellungen \ Sicherheitseinstellungen \ Kernsicherheitseinstellungen (Lesen) <br>Autorisierung und Einstellungen \ Systemeinstellung (lesen)</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Defender for Identity-Erfahrungen entsprechen auch den Berechtigungen von <a href="https://security.microsoft.com/cloudapps/permissions/roles" data-linktype="external">Microsoft Defender for Cloud-Apps</a>. Weitere Informationen finden Sie unter <a href="https://go.microsoft.com/fwlink/?linkid=2202729" data-linktype="external">Microsoft Defender for Identity-Rollengruppen</a>.
+Ausnahme: Wenn Sie die <a href="https://learn.microsoft.com/de-de/defender-cloud-apps/scoped-deployment" data-linktype="absolute-path">Bereichsbereitstellung</a> für Microsoft Defender for Identity-Warnungen in Microsoft Defender for Cloud-Apps konfiguriert haben, werden diese Berechtigungen nicht übernommen. Sie müssen explizit den Sicherheitsvorgängen \ Sicherheitsdaten \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (Leseberechtigungen) für die relevanten Portalbenutzer erteilen.</p>
+</div>
+<h3 id="map-microsoft-defender-for-cloud-apps-permissions-to-the-microsoft-defender-xdr-unified-rbac-permissions">Zuordnen von Microsoft Defender for Cloud Apps-Berechtigungen zu den Microsoft Defender XDR Unified RBAC-Berechtigungen</h3>
+<div class="IMPORTANT">
+<p>Von Bedeutung</p>
+<p>App-Governance unterstützt Microsoft Entra-Rollen, wie in <a href="https://learn.microsoft.com/de-de/defender-cloud-apps/app-governance-get-started#roles" data-linktype="absolute-path">Rollen in der App-Governance für Microsoft Defender for Cloud-Apps</a> beschrieben und unterstützt nicht die in der Integration von Defender for Cloud Apps mit einheitlichem RBAC definierten Rollen.
+              <br>
+              <br> Nachdem Sie die Integration von Defender for Cloud Apps mit Microsoft Defender XDR Unified RBAC aktiviert haben, werden die folgenden Rollen, die über <a href="https://learn.microsoft.com/de-de/defender-cloud-apps/manage-admins#roles-and-permissions" data-linktype="absolute-path">integrierte Rollen</a> in Defender for Cloud Apps konfiguriert sind, nicht mehr unterstützt: <strong>Administrierende Person für die App/Instanz</strong>, <strong>Administrierende Person für Benutzergruppen</strong>, <strong>Global administrierende Person für Cloud Discovery</strong> und <strong>Administrierende Person für Cloud Discovery-Berichte</strong>.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Defender for Cloud Apps-Berechtigung</th>
+<th>Defender XDR Unified RBAC-Berechtigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lokale global administrierende Person</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen)<br>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdaten \ Warnungen (verwalten)<br>Autorisierung und Einstellungen \ Autorisierung <br>und Einstellungen \ Autorisierung und Einstellungen \ Sicherheitseinstellungen (alle Berechtigungen) <br>Autorisierung und Einstellungen \ Systemeinstellungen (alle Berechtigungen)</td>
+</tr>
+<tr>
+<td>Lokale operative Fachkraft für die Sicherheit</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen) <br>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdaten \ Warnungen (verwalten)<br>Autorisierung und Einstellungen \ Autorisierung und Einstellungen \ Autorisierung <br>und Einstellungen \ Sicherheitseinstellung (alle Berechtigungen) <br>Autorisierung und Einstellungen \ Systemeinstellung (lesen)</td>
+</tr>
+<tr>
+<td>Lokal leseberechtigte Person für die Sicherheit</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Grundlagen der Sicherheitsdaten (lesen)<br>Autorisierung und Einstellungen \ Autorisierung und Einstellungen \ Autorisierung <br>und Einstellungen \ Sicherheitseinstellungen \ Sicherheitseinstellungen (lesen) Autorisierung und Einstellungen \ Systemeinstellungen (lesen) <br></td>
+</tr>
+<tr>
+<td>Lokale für Complianceadministration zuständige Person</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen)<br>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdaten \ Warnungen (verwalten)<br>Autorisierung und Einstellungen \ Autorisierung und Einstellungen \ Autorisierung <br>und Einstellungen \ Sicherheitseinstellungen \ Sicherheitseinstellungen (alle Berechtigungen) <br>Autorisierung und Einstellungen \ Systemeinstellungen (lesen)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="microsoft-entra-global-roles-access">Zugriff auf globale Microsoft Entra-Rollen</h3>
+<p>Benutzende Personen, denen globale Microsoft Entra-Rollen zugewiesen sind, haben möglicherweise auch Zugriff auf das <a href="https://security.microsoft.com" data-linktype="external">Microsoft Defender-Portal</a>.</p>
+<p>In dieser Tabelle erfahren Sie mehr über die standardmäßig für jede Workload zugewiesenen Berechtigungen (Defender for Endpunkt, Defender Vulnerability Management, Defender for Office und Defender for Identity) in Microsoft Defender XDR Unified RBAC für jede globale Microsoft Entra-Rolle.</p>
+<table>
+<thead>
+<tr>
+<th>Microsoft Entra-Rolle</th>
+<th>Microsoft Defender XDR Unified RBAC zugewiesene Berechtigungen für alle Workloads</th>
+<th>Microsoft Defender XDR Unified RBAC zugewiesene Berechtigungen – workloadspezifisch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Globaler Administrator</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen)<br>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdaten (verwalten) <br>Sicherheitsvorgänge \ Sicherheitsdaten \ Reaktion (verwalten)<br>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsstatusverwaltung <br> \Sicherheitsstatusverwaltung \Sicherheitsstatusverwaltung \ Sicherheitsbewertung (Verwalten)<br>Autorisierung und Einstellungen \ Autorisierung (Lesen und Verwalten)<br>Autorisierung und Einstellungen \ Sicherheitseinstellungen (Alle Berechtigungen)<br>Autorisierung und Einstellungen \ Systemeinstellungen (Lesen und Verwalten)</td>
+<td>
+              <em>
+              <strong>Nur Defender for Endpoint- und Defender Vulnerability Management-Berechtigungen</strong></em><br>Sicherheitsvorgänge \ Grundlegende Liveantwort (verwalten)<br>Sicherheitsvorgänge \ Erweiterte Liveantwort (verwalten) <br> Sicherheitsvorgänge \ Sicherheitsdaten \ Dateisammlung (verwalten) <br>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsstatusverwaltung (lesen)<br>Sicherheitsstatusverwaltung \ Haltungsverwaltung \ Verwaltung der Ausnahme (Verwalten)<br>Sicherheitsstatus \ Haltungsverwaltung \ Wartungsbehandlung (verwalten)<br>Sicherheitsstatus \ Haltungsverwaltung \ Anwendungsbehandlung (verwalten)<br>Sicherheitsstatus \Sicherheitsstatusverwaltung \ Haltungsverwaltung \ Sicherheitsbasisbewertung (verwalten)<br><br><em><strong>Nur Defender for Office-Berechtigungen</strong></em><br> Sicherheitsvorgänge \ Sicherheitsdaten \ E-Mail-Quarantäne (verwalten)<br>Sicherheitsvorgänge \ Sicherheitsdaten \ Erweiterte Aktionen per E-Mail senden (verwalten)<br>Sicherheitsvorgänge \ Rohdaten (E-Mail &amp; Zusammenarbeit) \ Metadaten für E-Mail und Zusammenarbeit (lesen)</td>
+</tr>
+<tr>
+<td>Sicherheitsadministrator</td>
+<td>Identisch mit der global administrierenden Person</td>
+<td>Identisch mit der global administrierenden Person</td>
+</tr>
+<tr>
+<td>Person mit globaler Leseberechtigung</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen)<br>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsbewertung (lesen) <br></td>
+<td>
+              <em>
+              <strong>Nur Defender for Endpoint- und Defender Vulnerability Management-Berechtigungen</strong></em><br>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsrisikomanagement (lesen)<br><br><em><strong>Defender für Office nur Berechtigungen</strong></em><br> Sicherheitsvorgänge \ Sicherheitsdaten \ Reaktion (verwalten)<br>Sicherheitsvorgänge \ Rohdaten (E-Mail &amp; Zusammenarbeit) \ E-Mail- und Zusammenarbeitsmetadaten (Lesen)<br>Autorisierung und Einstellungen \ Autorisierung (lesen) <br><br><em><strong>Nur Defender for Office- und Defender for Identity-Berechtigungen</strong></em><br>Autorisierung und Einstellungen \ Sicherheitseinstellungen \ Kernsicherheitseinstellungen (lesen)<br>Autorisierung und Einstellungen \ Systemeinstellungen (lesen)</td>
+</tr>
+<tr>
+<td>Sicherheitsleser</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen)<br>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsbewertung (lesen) <br></td>
+<td>
+              <em>
+              <strong>Nur Defender for Endpoint- und Defender Vulnerability Management-Berechtigungen</strong></em><br>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsrisikomanagement (lesen)<br><br><em><strong>Defender for Office nur Berechtigungen</strong></em><br> Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdaten verwalten<br>\Sicherheitsvorgänge \ Rohdaten (E-Mail und Zusammenarbeit) \ E-Mail- und Zusammenarbeitsmetadaten lesen (lesen) <br><br><em><strong>Nur Defender for Office- und Defender for Identity-Berechtigungen</strong></em><br>Autorisierung und Einstellungen \ Sicherheitseinstellungen \ Kernsicherheitseinstellungen (lesen)<br>Autorisierung und Einstellungen \ Systemeinstellungen (lesen)</td>
+</tr>
+<tr>
+<td>Sicherheitsoperator</td>
+<td>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen)<br>Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdaten (verwalten) <br>Sicherheitsvorgänge \ Sicherheitsdaten \ Reaktion (verwalten)<br>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsbewertung (Lesen)<br>Autorisierung und Einstellungen \ Sicherheitseinstellungen (Alle Berechtigungen)</td>
+<td>
+              <em>
+              <strong>Nur Defender for Endpoint- und Defender Vulnerability Management-Berechtigungen</strong></em><br>Sicherheitsvorgänge \ Sicherheitsdaten \ Grundlegende Liveantwort (verwalten)<br>Sicherheitsvorgänge \ Sicherheitsdaten \ Erweiterte Liveantwort (verwalten)<br> Sicherheitsvorgänge \ Sicherheitsdaten \ Dateisammlung (verwalten) <br>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsstatusverwaltung (lesen)<br>Sicherheitsstatus \ Haltungsverwaltung \ Haltungsverwaltung \ Verwaltung der Ausnahme (Verwalten)<br>Sicherheitsstatus \ Haltungsverwaltung \ Wartungsbehandlung (verwalten)<br><br><em><strong>Nur Defender for Office-Berechtigungen</strong></em><br>Sicherheitsvorgänge \ Rohdaten (E-Mail &amp; Zusammenarbeit) \ Metadaten für E-Mail &amp; Zusammenarbeit (lesen)<br>Autorisierung und Einstellungen \ Systemeinstellungen (Lesen und Verwalten)<br><br><em><strong>Nur Defender for Identity-Berechtigungen</strong></em><br> Autorisierung und Einstellungen \ Systemeinstellungen (lesen)</td>
+</tr>
+<tr>
+<td>Exchange-Administrator</td>
+<td>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsbewertung (lesen) <br> Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsbewertung (verwalten)</td>
+<td>
+              <em>
+              <strong>Nur Defender for Office-Berechtigungen</strong></em><br>Sicherheitsvorgänge \ Sicherheitsdaten \ Grundlegende Sicherheitsdaten (lesen) <br>Sicherheitsvorgänge \ Rohdaten (E-Mail &amp; Zusammenarbeit) \ E-Mail – Zusammenarbeitsmetadaten (Lesen) <br>Autorisierung und Einstellungen \ Systemeinstellungen (Lesen und Verwalten)</td>
+</tr>
+<tr>
+<td>SharePoint-Administrator</td>
+<td>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsbewertung (lesen) <br> Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsbewertung (verwalten)</td>
+<td>nicht zutreffend</td>
+</tr>
+<tr>
+<td>Administrator für Service-Support</td>
+<td>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsbewertung (gelesen)</td>
+<td>nicht zutreffend</td>
+</tr>
+<tr>
+<td>Benutzeradministrator</td>
+<td>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsbewertung (gelesen)</td>
+<td>nicht zutreffend</td>
+</tr>
+<tr>
+<td>Für Kennwortadministration zuständige Person</td>
+<td>Sicherheitsstatus \ Haltungsverwaltung \ Sicherheitsbewertung (gelesen)</td>
+<td>nicht zutreffend</td>
+</tr>
+<tr>
+<td>Complianceadministrator</td>
+<td>nicht zutreffend</td>
+<td>
+              <em>
+              <strong>Nur Defender for Office-Berechtigungen</strong></em><br> Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdatengrundlagen (lesen)<br> Sicherheitsvorgänge \ Sicherheitsdaten \ Sicherheitsdaten \ Warnungen (verwalten)</td>
+</tr>
+<tr>
+<td>Konformitätsdatenadministrator</td>
+<td>nicht zutreffend</td>
+<td>Identisch mit „Für Complianceadministration zuständige Person“</td>
+</tr>
+<tr>
+<td>Abrechnungsadministrator</td>
+<td>nicht zutreffend</td>
+<td>nicht zutreffend</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Durch aktivieren des Microsoft Defender XDR Unified RBAC-Modells können benutzende Personen mit Sicherheitsleseberechtigten- und Leser mit globaler Berechtigung-Rollen auf Defender for Endpoint-Daten zugreifen.</p>
+</div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

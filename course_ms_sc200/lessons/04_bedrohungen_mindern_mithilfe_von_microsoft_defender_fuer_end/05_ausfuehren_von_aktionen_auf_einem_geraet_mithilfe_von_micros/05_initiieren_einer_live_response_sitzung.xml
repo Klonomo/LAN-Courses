@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_05_05" title="Initiieren einer Live Response-Sitzung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Initiieren einer Live Response-Sitzung</div>
+<div class="section-content">
+<p>Die Funktion „Live-Antwort“ bietet Security Operations-Teams über eine Remoteshellverbindung sofortigen Zugriff auf ein Gerät. Die Live-Antwort bietet Ihnen die Leistung für ausführliche Untersuchungen und ermöglicht das sofortige Ergreifen von Maßnahmen, um ermittelte Bedrohungen sofort einzudämmen.</p>
+<p>Live Response ist zur Verbesserung von Untersuchungen gedacht, indem Ihrem Sicherheitsteam die Möglichkeit gegeben wird, forensische Daten zu sammeln, Skripts auszuführen, verdächtige Entitäten zur Analyse zu senden, Bedrohungen zu beheben und proaktiv nach neuen Bedrohungen zu suchen.</p>
+<div class="embeddedvideo"><p><em>[Interaktiver Inhalt auf Microsoft Learn verfügbar]</em></p></div>
+<p>Mit Live Response können Analysten alle folgenden Aufgaben ausführen:</p>
+<ul>
+<li><p>Ausführen grundlegender und erweiterter Befehle für Untersuchungen auf einem Gerät</p>
+</li>
+<li><p>Herunterladen von Dateien wie Beispiele für Schadsoftware und Ergebnisse von PowerShell-Skripts</p>
+</li>
+<li><p>Laden Sie Dateien im Hintergrund herunter.</p>
+</li>
+<li><p>Hochladen eines PowerShell-Skripts oder einer ausführbaren Datei in die Bibliothek und Ausführen auf einem Gerät auf Mandantenebene</p>
+</li>
+<li><p>Ausführen oder Rückgängigmachen von Korrekturmaßnahmen</p>
+</li>
+</ul>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<p>Bevor Sie auf einem Gerät eine Sitzung starten können, müssen Sie sicherstellen, dass die folgenden Anforderungen erfüllt sind:</p>
+<p>
+              <strong>Stellen Sie sicher, dass Sie eine unterstützte Version von Windows 10 oder höher ausführen</strong></p>
+<p>Sie müssen die Live-Antwort-Funktion auf der Seite mit den Einstellungen für „Erweiterte Features“ aktivieren.</p>
+<p>Nur Benutzer mit Berechtigungen " <strong>Portaleinstellungen</strong> verwalten" können diese Einstellungen aktivieren.</p>
+<p>
+              <strong>Stellen Sie sicher, dass dem Gerät eine Automatisierungsbehebungsstufe zugewiesen ist.</strong></p>
+<p>Sie müssen mindestens die Mindestwartungsstufe für eine bestimmte Gerätegruppe aktivieren. Andernfalls können Sie keine Live-Antwort-Sitzung mit einem Mitglied dieser Gruppe einrichten.</p>
+<p>
+              <strong>Aktivieren der Ausführung von nicht signierten Skripts für Liveantworten (optional)</strong></p>
+<p>Wenn Sie die Verwendung nicht signierter Skripts zulassen, kann sich das Risiko von Bedrohungen erhöhen. Das Ausführen nicht signierter Skripts wird nicht empfohlen, da dadurch das Bedrohungsrisiko steigen kann. Wenn Sie sie jedoch verwenden müssen, müssen Sie die Einstellung auf der Seite mit den Einstellungen für „Erweiterte Features“ aktivieren.</p>
+<p>
+              <strong>Stellen Sie sicher, dass Sie über die entsprechenden Berechtigungen verfügen</strong></p>
+<p>Nur Benutzer, die mit den entsprechenden Berechtigungen versehen wurden, können eine Sitzung initiieren. Die Option zum Hochladen einer Datei in die Bibliothek ist nur für Benutzer*innen mit den entsprechenden RBAC-Berechtigungen (rollenbasierte Zugriffssteuerung) verfügbar. Für Benutzer, die nur über delegierte Berechtigungen verfügen, ist die Schaltfläche abgeblendet. Je nach gewährter Rolle können Sie grundlegende oder erweiterte Live Response-Befehle ausführen.</p>
+<p>Defender für Endpunkt unterstützt zwei RBAC-Modelle:</p>
+<ul>
+<li>
+              <strong>Einheitliche RBAC für Microsoft Defender XDR</strong> (empfohlen): Weisen Sie die Berechtigung <strong>Security operations &gt; Security data &gt; Response (Verwalten)</strong> zu, um den Zugriff auf Live Response zu ermöglichen. Dies ist das bevorzugte Modell für Organisationen, die die vollständige Microsoft Defender XDR Suite verwenden.</li>
+<li>
+              <strong>Eigenständige RBAC für Defender for Endpoint</strong>: Berechtigungen werden über benutzerdefinierte Rollen in den Einstellungen von Defender for Endpoint zugewiesen. Benutzer können grundlegende oder erweiterte Befehle basierend auf der zugewiesenen Rolle ausführen.</li>
+</ul>
+<p>Wenden Sie sich an Ihren Sicherheitsadministrator, wenn Sie nicht sicher sind, welches RBAC-Modell Ihre Organisation verwendet.</p>
+<h2 id="live-response-dashboard-overview">Übersicht über das Live Response-Dashboard</h2>
+<p>Wenn Sie eine Live Response-Sitzung auf einem Gerät initiieren, wird ein Dashboard geöffnet. Das Dashboard enthält Informationen über die Sitzung. Diese umfassen Folgendes:</p>
+<ul>
+<li><p>Benutzer, der die Sitzung erstellt hat</p>
+</li>
+<li><p>Zeitpunkt, wann die Sitzung gestartet wurde</p>
+</li>
+<li><p>Dauer der Sitzung</p>
+</li>
+</ul>
+<p>Das Dashboard bietet außerdem Zugriff auf folgende Funktionen:</p>
+<ul>
+<li><p>Trennen der Sitzung</p>
+</li>
+<li><p>Hochladen von Dateien in die Bibliothek</p>
+</li>
+<li><p>Befehlskonsole</p>
+</li>
+<li><p>Befehlsprotokoll</p>
+</li>
+</ul>
+<h2 id="live-response-commands">Live Response-Befehle</h2>
+<p>Je nach gewährter Rolle können Sie grundlegende oder erweiterte Live Response-Befehle ausführen. Benutzerberechtigungen werden durch die benutzerdefinierte RBAC-Rolle gesteuert.   Die Liveantwort ist eine cloudbasierte interaktive Shell. Daher können bestimmte Befehle je nach Netzwerkqualität und Systemauslastung zwischen Endbenutzer*in und dem Zielgerät unterschiedliche Reaktionszeiten aufweisen.</p>
+<h3 id="basic-commands">Grundlegende Befehle</h3>
+<p>Die folgenden Befehle sind für Benutzerrollen verfügbar, die zur Ausführung grundlegender Live Response-Befehle berechtigt sind.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Befehl</th>
+<th style="text-align: left;">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">[cd]</td>
+<td style="text-align: left;">Ändert das aktuelle Verzeichnis.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[cls]</td>
+<td style="text-align: left;">Löscht den Konsolenbildschirm.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[connect]</td>
+<td style="text-align: left;">Startet eine Live-Antwort-Sitzung mit dem Gerät</td>
+</tr>
+<tr>
+<td style="text-align: left;">[Verbindungen]</td>
+<td style="text-align: left;">Zeigt alle aktiven Verbindungen an.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[dir]</td>
+<td style="text-align: left;">Zeigt eine Liste der Dateien und Unterverzeichnisse in einem Verzeichnis an.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[getfile] &lt;file_path&gt;</td>
+<td style="text-align: left;">Lädt eine Datei im Hintergrund herunter.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[drivers]</td>
+<td style="text-align: left;">Zeigt alle auf dem Gerät installierten Treiber an.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[fg] &lt;Befehls-ID&gt;</td>
+<td style="text-align: left;">Bringt einen Dateidownload in den Vordergrund zurück.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[fileinfo]</td>
+<td style="text-align: left;">Abrufen von Informationen über eine Datei.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[findfile]</td>
+<td style="text-align: left;">Sucht nach Dateien mit einem bestimmten Namen auf dem Gerät.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[Hilfe]</td>
+<td style="text-align: left;">Stellt Hilfeinformationen für Live Response-Befehle bereit.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[persistence]</td>
+<td style="text-align: left;">Zeigt alle bekannten Persistenzmethoden auf dem Gerät an.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[Prozesse]</td>
+<td style="text-align: left;">Zeigt alle auf dem Gerät ausgeführten Prozesse an.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[Registrierung]</td>
+<td style="text-align: left;">Zeigt Registrierungswerte an.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[geplante Vorgänge]</td>
+<td style="text-align: left;">Zeigt alle geplanten Aufgaben auf dem Gerät an.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[Dienste]</td>
+<td style="text-align: left;">Zeigt alle Dienste auf dem Gerät an.</td>
+</tr>
+<tr>
+<td style="text-align: left;">[trace]</td>
+<td style="text-align: left;">Legt den Protokollierungsmodus des Terminals auf Debuggen fest.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advanced-commands">Erweiterte Befehle</h3>
+<p>Die folgenden Befehle sind für Benutzerrollen verfügbar, die zur Ausführung erweiterter Live Response-Befehle berechtigt sind.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Befehl</th>
+<th style="text-align: left;">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">analyze</td>
+<td style="text-align: left;">Analysiert die Entität mit verschiedenen Einstufungs-Engines, um eine Bewertung zu erstellen.</td>
+</tr>
+<tr>
+<td style="text-align: left;">getfile</td>
+<td style="text-align: left;">Ruft eine Datei vom Gerät ab. Dieser Befehl erfordert einen anderen Befehl. Sie können den Befehl „-auto“ mit „getfile“ verwenden, um den erforderlichen Befehl automatisch auszuführen.</td>
+</tr>
+<tr>
+<td style="text-align: left;">run</td>
+<td style="text-align: left;">Führt ein PowerShell-Skript aus der Bibliothek auf dem Gerät aus.</td>
+</tr>
+<tr>
+<td style="text-align: left;">library</td>
+<td style="text-align: left;">Listet Dateien auf, die in die Live Response-Bibliothek hochgeladen wurden.</td>
+</tr>
+<tr>
+<td style="text-align: left;">putfile</td>
+<td style="text-align: left;">Legt eine Datei aus der Bibliothek auf dem Gerät ab. Dateien werden in einem Arbeitsordner gespeichert und beim Neustart des Geräts standardmäßig gelöscht.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Beheben</td>
+<td style="text-align: left;">Korrigiert eine Entität auf dem Gerät. Die Korrekturaktion ist je nach Entitätstyp verschieden. Dieser Befehl erfordert einen anderen Befehl. Sie können den Befehl „-auto“ mit „remediate“ verwenden, um den erforderlichen Befehl automatisch auszuführen.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rückgängig</td>
+<td style="text-align: left;">Stellt eine Entität, die korrigiert wurde, wieder her.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="use-live-response-commands">Verwenden von Live Response-Befehlen</h2>
+<p>Die Befehle, die Sie in der Konsole verwenden können, folgen ähnlichen Prinzipien wie Windows-Befehle. Die weiterführenden Befehle bieten erweiterte Funktionen, mit denen Sie leistungsfähigere Aktionen ausführen können. Zu den erweiterten Aktionen gehören das Herunterladen oder Hochladen einer Datei, das Ausführen von Skripts auf dem Gerät und das Durchführen von Wartungsaktionen auf einer Entität.</p>
+<h3 id="get-a-file-from-the-device">Abrufen einer Datei vom Gerät</h3>
+<p>Für Szenarien, in denen Sie eine Datei von einem untersuchten Gerät abrufen möchten, können Sie den Befehl [getfile] verwenden. Mit dem Befehl [getfile] können Sie die Datei vom Gerät für weitere Untersuchungen speichern.</p>
+<p>Es gelten die folgenden Dateigrößenbeschränkungen:</p>
+<ul>
+<li><p>Beschränkung für „getfile“: 3 GB</p>
+</li>
+<li><p>Beschränkung für „fileinfo“: 10 GB</p>
+</li>
+<li><p>Beschränkung für „library“: 250 MB</p>
+</li>
+</ul>
+<h3 id="download-a-file-in-the-background">Herunterladen einer Datei im Hintergrund</h3>
+<p>Damit Ihr Sicherheitsteam ein betroffenes Gerät weiter untersuchen kann, können Dateien jetzt im Hintergrund heruntergeladen werden.</p>
+<ul>
+<li><p>Um eine Datei im Hintergrund herunterzuladen, geben Sie in der Befehlskonsole für Liveantwort <strong>getfile &lt;file_path&gt;</strong> ein.</p>
+</li>
+<li><p>Wenn Sie warten, bis eine Datei heruntergeladen wird, können Sie sie mithilfe von <strong>STRG+Z</strong> in den Hintergrund verschieben.</p>
+</li>
+<li><p>Um einen Dateidownload in den Vordergrund zu bringen, geben Sie in der Liveantwortbefehlskonsole <strong>"fg &lt;command_id&gt;</strong>" ein.</p>
+</li>
+</ul>
+<p>Hier einige Beispiele:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Befehl</th>
+<th style="text-align: left;">Funktionsbeschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">getfile "C:\windows\some_file.exe"</td>
+<td style="text-align: left;">Startet das Herunterladen einer Datei mit dem Namen „some_file.exe“ im Hintergrund.</td>
+</tr>
+<tr>
+<td style="text-align: left;">fg 1234</td>
+<td style="text-align: left;">Bringt einen Download mit der Befehls-ID 1234 in den Vordergrund zurück.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="put-a-file-in-the-library">Ablegen einer Datei in der Bibliothek</h3>
+<p>Live Response verfügt über eine Bibliothek, in der Sie Dateien ablegen können. In der Bibliothek werden Dateien gespeichert (z. B. Skripts), die in einer Live Response-Sitzung auf Mandantenebene ausgeführt werden können. Live Response ermöglicht das Ausführen von PowerShell-Skripts. Die Dateien müssen jedoch vor dem Ausführen zunächst in der Bibliothek abgelegt werden. Sie können über eine Sammlung von PowerShell-Skripts verfügen, die auf Geräten ausgeführt werden können, mit denen Sie Live Response-Sitzungen initiieren.</p>
+<p>Zum Hochladen einer Datei in die Bibliothek führen Sie die folgenden Schritte aus:</p>
+<ol>
+<li><p>Wählen Sie <strong>"Datei in Bibliothek hochladen</strong>" aus.</p>
+</li>
+<li><p>Wählen Sie <strong>"Durchsuchen"</strong> und dann die Datei aus.</p>
+</li>
+<li><p>Geben Sie eine kurze Beschreibung an.</p>
+</li>
+<li><p>Geben Sie an, ob Sie eine Datei mit demselben Namen überschreiben möchten.</p>
+</li>
+<li><p>Wenn Sie wissen möchten, welche Parameter für das Skript erforderlich sind, aktivieren Sie das Kontrollkästchen für Skriptparameter. Geben Sie im Textfeld ein Beispiel und eine Beschreibung ein.</p>
+</li>
+<li><p>Wählen Sie <strong>"Bestätigen" aus</strong>.</p>
+</li>
+<li><p>(Optional) Um zu überprüfen, ob die Datei in die Bibliothek hochgeladen wurde, führen Sie den Befehl „library“ aus.</p>
+</li>
+</ol>
+<h3 id="cancel-a-command">Abbrechen eines Befehls</h3>
+<p>Sie können einen Befehl jederzeit während einer Sitzung abbrechen, indem Sie STRG+C drücken.</p>
+<h3 id="automatically-run-prerequisite-commands">Automatisches Ausführen erforderlicher Befehle</h3>
+<p>Für einige Befehle müssen erforderliche Befehle ausgeführt werden. Wenn Sie den erforderlichen Befehl nicht ausführen, wird eine Fehlermeldung angezeigt. Wenn Sie beispielsweise den Downloadbefehl ohne <em>Dateiinfo</em> ausführen, wird ein Fehler zurückgegeben. Sie können das Flag „auto“ verwenden, um erforderliche Befehle automatisch auszuführen. Hier ein Beispiel:</p>
+<pre><code class="lang-console">getfile c:\Users\user\Desktop\work.txt -auto
+
+</code></pre>
+<h3 id="run-a-powershell-script">Ausführen eines PowerShell-Skripts</h3>
+<p>Bevor Sie ein PowerShell-Skript ausführen können, müssen Sie es zuerst in die Bibliothek hochladen. Verwenden Sie nach dem Hochladen des Skripts in die Bibliothek den <strong>Befehl "Ausführen</strong> ", um das Skript auszuführen. Wenn Sie beabsichtigen, ein nicht signiertes Skript in der Sitzung zu verwenden, müssen Sie die Einstellung auf der Seite mit den Einstellungen für „Erweiterte Features“ aktivieren.</p>
+<h3 id="apply-command-parameters">Anwenden von Befehlsparametern</h3>
+<p>In der Konsolenhilfe finden Sie Informationen zu Befehlsparametern. Wenn Sie Informationen zu einem einzelnen Befehl erhalten möchten, führen Sie Folgendes aus:</p>
+<pre><code class="lang-PowerShell">help &lt;command name&gt;
+
+</code></pre>
+<p>Beim Anwenden von Parametern für Befehle werden die Parameter in einer bestimmten Reihenfolge verarbeitet:</p>
+<pre><code class="lang-PowerShell">&lt;command name&gt; param1 param2
+
+</code></pre>
+<p>Wenn Sie Parameter außerhalb der festgelegten Reihenfolge angeben, stellen Sie dem Namen des Parameters einen Bindestrich voran, bevor Sie den Wert angeben:</p>
+<pre><code class="lang-PowerShell">&lt;command name&gt; -param2_name param2
+
+</code></pre>
+<p>Wenn Sie Befehle verwenden, die erforderliche Befehle aufweisen, können Sie Flags verwenden:</p>
+<pre><code class="lang-PowerShell">&lt;command name&gt; -type file -id &lt;file path&gt; - auto or remediate file &lt;file path&gt; - auto.
+
+</code></pre>
+<h3 id="supported-output-types">Unterstützte Ausgabetypen</h3>
+<p>Live Response unterstützt als Ausgabetypen das Tabellen- und JSON-Format. Jeder Befehl weist ein standardmäßiges Ausgabeverhalten auf. Mithilfe der folgenden Befehle können Sie die Ausgabe in Ihr bevorzugtes Ausgabeformat ändern:</p>
+<ul>
+<li><p>-output json</p>
+</li>
+<li><p>-ausgabetabelle</p>
+</li>
+</ul>
+<h3 id="supported-output-pipes">Unterstützte Ausgabepipes</h3>
+<p>Live Response unterstützt die CLI und eine Datei als Ausgabepipes. Die CLI ist das standardmäßige Ausgabeverhalten. Mithilfe des folgenden Befehls können Sie die Pipeausgabe in eine Datei festlegen: [Befehl] &gt; [Dateiname].txt.</p>
+<h3 id="view-the-command-log">Anzeigen des Befehlsprotokolls</h3>
+<p>Wählen Sie die Registerkarte „Befehlsprotokoll“ aus, um die Befehle anzuzeigen, die während einer Sitzung auf dem Gerät verwendet wurden. Jeder Befehl wird mit vollständigen Details nachverfolgt. Dies umfasst Folgendes:</p>
+<ul>
+<li><p>ID</p>
+</li>
+<li><p>Befehlszeile</p>
+</li>
+<li><p>Dauer</p>
+</li>
+<li><p>Seitenleiste für Status und Eingabe oder Ausgabe</p>
+</li>
+</ul>
+<h2 id="command-examples">Beispielbefehle</h2>
+<p>Die folgenden Befehle sind Beispiele, die das Verwenden der Live-Antwortbefehle veranschaulichen.</p>
+<h3 id="analyze">Analysieren</h3>
+<pre><code class="lang-console"># Analyze the file malware.txt
+
+analyze file c:\Users\user\Desktop\malware.txt
+
+</code></pre>
+<pre><code class="lang-console"># Analyze the process by PID
+
+analyze process 1234
+
+</code></pre>
+<h2 id="limitations">Einschränkungen</h2>
+<p>Live Response weist die folgenden Einschränkungen auf:</p>
+<ul>
+<li><p>Live Response-Sitzungen sind auf 10 gleichzeitige Live Response-Sitzungen beschränkt.</p>
+</li>
+<li><p>Das Ausführen von Befehlen im großen Stil wird nicht unterstützt.</p>
+</li>
+<li><p>Der Timeoutwert für inaktive Live Response-Sitzung beträgt 5 Minuten.</p>
+</li>
+<li><p>Ein Benutzer kann nur jeweils eine Sitzung initiieren.</p>
+</li>
+<li><p>Ein Gerät kann jeweils nur in einer Sitzung enthalten sein.</p>
+</li>
+<li><p>Es gelten die folgenden Dateigrößenbeschränkungen:</p>
+<ul>
+<li><p>Beschränkung für „getfile“: 3 GB</p>
+</li>
+<li><p>Beschränkung für „fileinfo“: 10 GB</p>
+</li>
+<li><p>Beschränkung für „library“: 250 MB</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

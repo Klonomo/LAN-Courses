@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_06_01_10" title="Zusammenfassung und Ressourcen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Zusammenfassung und Ressourcen</div>
+<div class="section-content">
+<p>Sie sollten gelernt haben, wie die grundlegende KQL-Anweisungsstruktur als Grundlage dient, um komplexere Anweisungen zu erstellen.</p>
+<p>Sie sollten nun in der Lage sein:</p>
+<ul>
+<li>Erstellen von KQL-Anweisungen</li>
+<li>Durchsuchen von Protokolldateien nach Sicherheitsereignissen mithilfe von KQL</li>
+<li>Filtern von Suchergebnissen basierend auf der Ereigniszeit, dem Schweregrad, der Domäne und anderen relevanten Daten mithilfe von KQL</li>
+</ul>
+<h2 id="learn-more">Weitere Informationen</h2>
+<p>Weitere Informationen finden Sie in den folgenden Artikeln.</p>
+<p><a href="https://learn.microsoft.com/de-de/azure/data-explorer/kql-quick-reference?azure-portal=true" data-linktype="absolute-path">Kurzreferenz zu KQL | Microsoft Learn</a></p>
+<p><a href="https://techcommunity.microsoft.com/t5/microsoft-security-and/security-community-webinars/ba-p/927888?azure-portal=true" data-linktype="external">Microsoft Tech Community Security-Webinare</a></p>
+<p><a href="https://techcommunity.microsoft.com/t5/azure-sentinel/become-an-azure-sentinel-ninja-the-complete-level-400-training/ba-p/1246310?azure-portal=true" data-linktype="external">Microsoft Sentinel-Experte werden</a></p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

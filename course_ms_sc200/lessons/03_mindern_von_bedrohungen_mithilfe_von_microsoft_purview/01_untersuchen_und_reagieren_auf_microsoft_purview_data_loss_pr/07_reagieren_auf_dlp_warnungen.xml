@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_03_01_07" title="Reagieren auf DLP-Warnungen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Reagieren auf DLP-Warnungen</div>
+<div class="section-content">
+<p>Nachdem Sie eine DLP-Warnung (Data Loss Prevention, Verhinderung von Datenverlust) untersucht haben, besteht der nächste Schritt darin, entsprechend zu reagieren. Dazu gehört das Dokumentieren Ihrer Ergebnisse, das Zuweisen des Besitzes bei Bedarf, das Ergreifen von Abhilfemaßnahmen und das Schließen der Warnung oder des Vorfalls. Microsoft Purview und Microsoft Defender XDR bieten verschiedene, aber ergänzende Funktionen zur Unterstützung dieses Antwortprozesses.</p>
+<h2 id="response-actions-in-microsoft-purview">Antwortaktionen in Microsoft Purview</h2>
+<p>In Microsoft Purview reagieren Sie direkt über das <strong>Dashboard "Warnungen</strong>" auf DLP-Warnungen. Diese Warnungen gelten in der Regel für Benutzeraktionen, die einer DLP-Richtlinie entsprechen.</p>
+<p>Zu den wichtigsten Aktionen gehören:</p>
+<ul>
+<li>
+              <strong>Setzen des Alarmstatus</strong> zur Nachverfolgung des Fortschritts, z.&nbsp;B. „Wird untersucht“ oder „Behoben“.</li>
+<li>
+              <strong>Weisen Sie die Warnung einem Prüfer zur Überprüfung zu</strong></li>
+<li>
+              <strong>Hinzufügen von Kommentaren</strong> zum Erfassen interner Notizen oder Beobachtungen</li>
+<li>
+              <strong>Freigeben von Warnungsdetails</strong> mithilfe eines generierten schreibgeschützten Links</li>
+<li>
+              <strong>Anzeigen der Benutzeraktivitätszusammenfassung</strong> (wenn das Insider-Risikomanagement integriert ist)</li>
+</ul>
+<p>Mit diesen Schritten wird sichergestellt, dass Warnungen konsistent behandelt werden und dass ein wichtiger Kontext für zukünftige Audits oder Nachverfolgungen aufgezeichnet wird.</p>
+<h2 id="response-actions-in-microsoft-defender-xdr">Antwortaktionen in Microsoft Defender XDR</h2>
+<p>In Microsoft Defender XDR werden Warnungen in Vorfälle gruppiert, sodass Analysten eine umfassendere Ansicht korrelierter Aktivitäten über Endpunkte, E-Mails, Cloud-Apps und Identitäten hinweg erhalten.</p>
+<p>Aus den Vorfall- und Warnungsansichten können Sie folgende Aktionen ausführen:</p>
+<ul>
+<li>
+              <strong>Aktualisieren des Vorfallstatus</strong>, Zuweisen des Vorfalls zu einem Teammitglied und Hinzufügen von Notizen</li>
+<li>
+              <strong>Wenden Sie Klassifizierungen</strong> wie <strong>"True Positive"</strong> oder " <strong>False Positive</strong> " an, und geben Sie einen Grund an.</li>
+<li>
+              <strong>Ergreifen Sie Abhilfemaßnahmen</strong> direkt, z. B.: <ul>
+<li>Deaktivieren eines Benutzerkontos</li>
+<li>Entfernen des Dateizugriffs</li>
+<li>Anwenden einer Vertraulichkeits- oder Aufbewahrungsbezeichnung</li>
+</ul>
+</li>
+</ul>
+<p>Sie können <strong>die DLP-Warnung</strong> auch mit anderen Sicherheitssignalen korrelieren, um festzustellen, ob sie Teil einer größeren Bedrohung oder eines isolierten Vorfalls ist.</p>
+<p>Das Reagieren auf Warnungen geht nicht nur darum, sie zu schließen; Es geht darum, Rechenschaft zu schaffen und sicherzustellen, dass potenzielle Datenrisiken berücksichtigt werden. Ganz gleich, ob Sie eine Übereinstimmung mit einer Richtlinie mit geringem Risiko beheben oder eine breitere Insiderbedrohung eskalieren, unterstützen gut dokumentierte Antworten die Einhaltung von Unternehmensrichtlinien und verringern die Wahrscheinlichkeit von wiederholten Vorfällen.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

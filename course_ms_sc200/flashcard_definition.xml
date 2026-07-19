@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flashcard-definition>
+    <front>
+        <field id="question" label="Frage" type="text" display="primary" />
+        <field id="choices" label="Optionen" type="text" display="secondary" />
+    </front>
+    <back>
+        <field id="answer" label="Antwort" type="text" display="primary" />
+        <field id="explanation" label="Erklärung" type="text" display="quote" />
+    </back>
+</flashcard-definition>

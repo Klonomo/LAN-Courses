@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_01_02_12" title="Analysieren von Berichten">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Analysieren von Berichten</div>
+<div class="section-content">
+<p>Das Blatt "Berichte" im Microsoft Defender-Portal bietet Zugriff auf alle verfügbaren Berichte für Microsoft Defender für Endpunkt und Microsoft Defender für Office 365.</p>
+<h2 id="general">Allgemein</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">BESCHREIBUNG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Sicherheitsbericht</td>
+<td style="text-align: left;">Zeigen Sie Informationen zu Sicherheitstrends an, und verfolgen Sie den Schutzstatus Ihrer Identitäten, Daten, Geräte, Apps und Infrastruktur nach.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="endpoints">Endpunkte</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">BESCHREIBUNG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Bedrohungsschutz</td>
+<td style="text-align: left;">Weitere Informationen zu den Sicherheitserkennungen und -warnungen in Ihrer Organisation finden Sie unter .See details about the security detections and alerts in your organization.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Geräteintegrität und -compliance</td>
+<td style="text-align: left;">Überwachen Sie den Integritätsstatus, den Antivirenstatus, die Betriebssystemplattformen und Windows 10-Versionen für Geräte in Ihrer Organisation.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gefährdete Geräte</td>
+<td style="text-align: left;">Zeigen Sie Informationen zu den gefährdeten Geräten in Ihrer Organisation an, einschließlich ihrer Gefährdung durch Sicherheitsrisiken nach Schweregrad, Exploitability, Alter und mehr.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Webschutz</td>
+<td style="text-align: left;">Erhalten Sie Informationen zu den Webaktivitäten und Webbedrohungen, die in Ihrer Organisation erkannt wurden.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Brandmauer</td>
+<td style="text-align: left;">Anzeigen von Verbindungen, die von Ihrer Firewall blockiert wurden, einschließlich verwandter Geräte, warum sie blockiert wurden und welche Ports verwendet wurden</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gerätesteuerung</td>
+<td style="text-align: left;">Dieser Bericht zeigt die Mediennutzungsdaten Ihrer Organisation.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Regeln zur Verringerung der Angriffsfläche</td>
+<td style="text-align: left;">Zeigen Sie Informationen zu Erkennungen, Fehlkonfigurationen und vorgeschlagenen Ausschlüssen in Ihrer Umgebung an.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="email--collaboration">E-Mails und Zusammenarbeit</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">BESCHREIBUNG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Berichte zu E-Mail und Zusammenarbeit</td>
+<td style="text-align: left;">Überprüfen Sie die von Microsoft empfohlenen Aktionen, um die Sicherheit von E-Mails und zusammenarbeiten zu verbessern.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Verwalten von Zeitplänen</td>
+<td style="text-align: left;">Verwalten Sie den Zeitplan für Berichte, die Sicherheitsteams verwenden, um Bedrohungen für Ihre Organisation zu beheben und zu mindern.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Berichte zum Download</td>
+<td style="text-align: left;">Laden Sie einen oder mehrere Ihrer Berichte herunter.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Exchange-Nachrichtenflussberichte</td>
+<td style="text-align: left;">Deep-Link zum Exchange-Nachrichtenflussbericht im Exchange Admin Center.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

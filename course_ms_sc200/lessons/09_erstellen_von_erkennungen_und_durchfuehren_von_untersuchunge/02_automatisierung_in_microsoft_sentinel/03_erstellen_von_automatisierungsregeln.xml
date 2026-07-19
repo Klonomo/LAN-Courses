@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_09_02_03" title="Erstellen von Automatisierungsregeln">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Erstellen von Automatisierungsregeln</div>
+<div class="section-content">
+<p>Automatisierungsregeln sind eine Möglichkeit, die Automatisierung der Vorfallbehandlung zentral zu verwalten, sodass Sie einfache Automatisierungsaufgaben ausführen können, ohne Playbooks zu verwenden. Mit Automatisierungsregeln können Sie beispielsweise Vorfälle automatisch dem richtigen Personal zuweisen, Vorfälle kategorisieren, um sie zu klassifizieren, den Status von Vorfällen zu ändern und sie zu schließen. Automatisierungsregeln können auch Antworten auf mehrere Analyseregeln gleichzeitig automatisieren, die Reihenfolge der ausgeführten Aktionen steuern und Playbooks für fälle ausführen, in denen komplexere Automatisierungsaufgaben erforderlich sind. Kurz gesagt, Automatisierungsregeln optimieren die Verwendung der Automatisierung in Microsoft Sentinel, sodass Sie komplexe Workflows für Ihre Vorfall-Orchestrierungsprozesse vereinfachen können.</p>
+<h2 id="creating-and-managing-automation-rules">Erstellen und Verwalten von Automatisierungsregeln</h2>
+<p>Sie können Automatisierungsregeln aus verschiedenen Punkten in der Microsoft Sentinel-Oberfläche erstellen und verwalten, je nach Bedarf und Anwendungsfall.</p>
+<div class="NOTE">
+<p>Note</p>
+<p>Navigationspfade unterscheiden sich je nach Portal. Wechseln Sie im <strong>Azure-Portal</strong> zu Ihrem Microsoft Sentinel Arbeitsbereich, und wählen Sie "<strong>Automatisierung</strong>" unter <strong>"Konfiguration"</strong> aus. Wählen Sie <strong>im Defender-Portal</strong> im linken Navigationsbereich <strong>Microsoft Sentinel</strong> aus, und wählen Sie dann <strong>"Automatisierung"</strong> aus.</p>
+</div>
+<h3 id="automation-page">Automatisierungsseite</h3>
+<p>Automatisierungsregeln können zentral auf der <strong>Automatisierungsseite</strong> unter der Registerkarte <strong>"Automatisierungsregeln</strong> " verwaltet werden. (Sie können auch Playbooks auf dieser Seite unter der Registerkarte " <strong>Playbooks</strong> " verwalten.) Von dort aus können Sie neue Automatisierungsregeln erstellen und die vorhandenen bearbeiten. Sie können auch Automatisierungsregeln verschieben, um die Reihenfolge der Ausführung zu ändern, und sie aktivieren oder deaktivieren.</p>
+<p>Auf der Seite <strong>"Automatisierung</strong> " werden alle Regeln angezeigt, die im Arbeitsbereich definiert sind, sowie deren Status (Aktiviert/Deaktiviert) und welche Analyseregeln angewendet werden.</p>
+<p>Wenn Sie eine Automatisierungsregel benötigen, die für viele Analyseregeln gilt, erstellen Sie sie direkt auf der <strong>Automatisierungsseite</strong> . Wählen Sie im oberen Menü "Neue Regel erstellen" und "Neue Regel hinzufügen" aus, wodurch der Bereich "Neue Automatisierungsregel erstellen" geöffnet wird. Von hier aus haben Sie vollständige Flexibilität beim Konfigurieren der Regel: Sie können sie auf alle Analyseregeln (einschließlich zukünftiger Regeln) anwenden und die breiteste Palette von Bedingungen und Aktionen definieren.</p>
+<h3 id="analytics-rule-wizard">Analyseregel-Assistent</h3>
+<p>Auf der Registerkarte "Automatisierte Antwort" des Assistenten für Analyseregel können Sie Automatisierungsregeln anzeigen, verwalten und erstellen, die für die jeweilige Analyseregel gelten, die im Assistenten erstellt oder bearbeitet wird.</p>
+<p>Wenn Sie "Erstellen" und einen der Regeltypen (Geplante Abfrageregel oder Microsoft Vorfallerstellungsregel) im oberen Menü im Blatt "Analyse" auswählen oder eine vorhandene Analyseregel auswählen und "Bearbeiten" auswählen, öffnen Sie den Regel-Assistenten. Wenn Sie die Registerkarte "Automatisierte Antwort" auswählen, wird ein Abschnitt namens "Vorfallautomatisierung" angezeigt, unter dem die Automatisierungsregeln angezeigt werden, die derzeit für diese Regel gelten. Sie können eine vorhandene Automatisierungsregel zum Bearbeiten auswählen oder "Neu hinzufügen" auswählen, um eine neue zu erstellen.</p>
+<p>Sie werden feststellen, dass beim Erstellen der Automatisierungsregel hier im Bereich "Neue Automatisierungsregel erstellen" die Analyseregelbedingung als nicht verfügbar angezeigt wird, da diese Regel bereits so festgelegt ist, dass sie nur auf die Analyseregel angewendet wird, die Sie im Assistenten bearbeiten. Alle anderen Konfigurationsoptionen sind weiterhin verfügbar.</p>
+<h3 id="incidents-blade">Blatt für Incidents</h3>
+<p>Sie können auch eine Automatisierungsregel über das Blatt "Vorfälle" erstellen, um auf einen einzelnen, wiederkehrenden Vorfall zu reagieren. Dies ist hilfreich beim Erstellen einer Unterdrückungsregel zum automatischen Schließen von "lauten" Vorfällen. Wählen Sie einen Vorfall aus der Warteschlange aus, und wählen Sie "Automatisierungsregel erstellen" im oberen Menü aus.</p>
+<p>Sie stellen fest, dass im Bereich "Neue Automatisierungsregel erstellen" alle Felder mit Werten aus dem Vorfall aufgefüllt wurden. Sie benennt die Regel mit demselben Namen wie den Vorfall, wendet sie auf die Analyseregel an, die den Vorfall erzeugt hat, und verwendet alle verfügbaren Entitäten im Incident als Bedingungen der Regel. Außerdem wird standardmäßig eine Unterdrückungsaktion (Schließen) vorgeschlagen, und es wird ein Ablaufdatum für die Regel vorgeschlagen. Sie können Bedingungen und Aktionen hinzufügen oder entfernen und das Ablaufdatum ändern, wie Sie möchten.</p>
+<h2 id="components-of-an-automation-rule">Komponenten einer Automatisierungsregel</h2>
+<p>Automatisierungsregeln bestehen aus mehreren Komponenten:</p>
+<ul>
+<li><p>
+              <strong>Trigger:</strong> Automatisierungsregeln unterstützen drei Triggertypen:</p>
+<ul>
+<li>
+              <strong>Wenn ein Vorfall erstellt wird</strong> – der häufigste Trigger; wird für die anfängliche Triage, Zuordnung und Markierung verwendet.</li>
+<li>
+              <strong>Wenn ein Vorfall aktualisiert wird</strong> – wird ausgelöst, wenn sich der Status, die Schwere, der Verantwortliche oder andere Eigenschaften eines Vorfalls ändern; nützlich für Eskalations- und Synchronisierungsabläufe.</li>
+<li>
+              <strong>Wenn eine Warnung erstellt wird</strong> – wird ausgelöst, wenn eine geplante oder NRT-Analyseregel eine Warnung generiert; wird verwendet, wenn auf Warnungen reagiert wird, die keine Vorfälle erzeugen, oder in Defender-Portal-Arbeitsbereichen, in denen die Vorfallserstellung von Defender XDR verwaltet wird.</li>
+</ul>
+<div class="NOTE">
+<p>Note</p>
+<p>Im Defender-Portal werden vorfallausgelöste Automatisierungsregeln sowohl bei Microsoft Sentinel-Vorfällen als auch bei Defender XDR-Vorfällen ausgeführt. Warnungsausgelöste Regeln werden nur für Microsoft Sentinel-Warnungen ausgeführt.</p>
+</div>
+</li>
+<li><p>
+              <strong>Bedingungen:</strong> Komplexe Sätze von Bedingungen können definiert werden, um zu steuern, wann Aktionen ausgeführt werden sollen (siehe unten). Diese Bedingungen basieren in der Regel auf den Zuständen oder Werten von Attributen von Vorfällen und deren Entitäten, und sie können AND/OR/NOT/CONTAINS-Operatoren enthalten.</p>
+</li>
+<li><p>
+              <strong>Aktionen:</strong> Aktionen können so definiert werden, dass sie ausgeführt werden, wenn die Bedingungen (siehe oben) erfüllt sind. Sie können viele Aktionen in einer Regel definieren, und Sie können die Reihenfolge wählen, in der sie ausgeführt werden (siehe unten). Die folgenden Aktionen können mithilfe von Automatisierungsregeln definiert werden, ohne dass die erweiterten Funktionen eines Playbook erforderlich sind:</p>
+<ul>
+<li><p>
+              <strong>Ändern des Status eines Vorfalls</strong> und Aktualisieren des Workflows.</p>
+<pre><code>When changing to “closed,” specifying the closing reason and adding a comment. This helps you keep track of your performance and effectiveness, and fine-tune to reduce false positives.
+</code></pre>
+</li>
+<li><p>
+              <strong>Ändern des Schweregrads eines Vorfalls</strong> – Sie können anhand des Vorhandenseins, Fehlens, der Werte oder Attribute der an dem Vorfall beteiligten Entitäten eine Neubewertung vornehmen und die Priorität neu festlegen.</p>
+</li>
+<li><p>
+              <strong>Das Zuweisen eines Vorfalls zu einem Besitzer</strong> – dies hilft Ihnen, Typen von Vorfällen an das Personal zu leiten, das am besten geeignet ist, um sie zu bewältigen, oder den verfügbarsten Mitarbeitern.</p>
+</li>
+<li><p>
+              <strong>Hinzufügen eines Tags zu einem Vorfall</strong> – dies ist nützlich, um Vorfälle nach Betreff, Angreifer oder einem anderen gemeinsamen Nenner zu klassifizieren.</p>
+<p>Darüber hinaus können Sie eine Aktion zum <strong>Ausführen eines Playbook</strong> definieren, um komplexere Antwortaktionen zu ergreifen, einschließlich aller, die externe Systeme betreffen. Nur durch den Incidenttrigger aktivierte Playbooks sind für Automatisierungsregeln verfügbar. Sie können eine Aktion definieren, die mehrere Playbooks oder Kombinationen aus Playbooks und anderen Aktionen sowie deren Ausführungsreihenfolge umfasst.</p>
+<p>Playbooks, die eine der Versionen von Logic Apps (Standard oder Verbrauch) verwenden, stehen zur Ausführung aufgrund von Automatisierungsregeln zur Verfügung.</p>
+</li>
+</ul>
+</li>
+<li><p>
+              <strong>Verfallsdatum:</strong> Sie können ein Ablaufdatum für eine Automatisierungsregel definieren. Die Regel wird nach diesem Datum deaktiviert. Dies ist nützlich für die Behandlung (d. h. das Schließen) von "Rausch"-Incidents, die durch geplante, zeitlich begrenzte Aktivitäten wie Penetrationstests verursacht werden.</p>
+</li>
+<li><p>
+              <strong>Bestellung:</strong> Sie können die Reihenfolge definieren, in der Automatisierungsregeln ausgeführt werden. Spätere Automatisierungsregeln bewerten die Merkmale des Vorfalls anhand seines Zustands, nachdem vorherige Automatisierungsregeln auf ihn angewendet wurden.</p>
+<p>Wenn beispielsweise "Erste Automatisierungsregel" den Schweregrad eines Vorfalls von "Mittel" in "Niedrig" geändert hat und "Zweite Automatisierungsregel" nur für Vorfälle mit mittlerem oder höherem Schweregrad definiert ist, wird sie für diesen Vorfall nicht ausgeführt.</p>
+</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

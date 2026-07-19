@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_01_06_03" title="Erkunden Ihrer Cloud-Apps mit Cloud Discovery">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Erkunden Ihrer Cloud-Apps mit Cloud Discovery</div>
+<div class="section-content">
+<p>Sie können Cloud Discovery verwenden, um zu sehen, was in Ihrem Netzwerk geschieht. Es werden sowohl die von Ihnen erwarteten als auch unerwartete Cloud-Apps angezeigt, Anzeichen von Schatten-IT sowie nicht genehmigte Apps, die Ihren Sicherheits- und Compliancerichtlinien nicht entsprechen. Bei der Cloud Discovery werden Ihre Datenverkehrsprotokolle anhand eines Katalogs von mehr als 16.000 Apps analysiert. Cloud Discovery legt den Rang jeder einzelnen App fest und weist ihr Punkte auf der Grundlage von mehr als 80 Risikofaktoren zu, um Ihnen Einblicke in die Cloudnutzung, Schatten-IT und die damit verbundenen Risiken in Ihrer Organisation zu bieten.</p>
+<p>Das Cloud Discovery-Dashboard bietet einen Überblick über die Arten von Apps, die derzeit verwendet werden, unerledigte Warnungen und die Risikostufen der Apps in Ihrer Organisation. Sie können auch sehen, wer Ihre wichtigsten App-Benutzer sind und woher die einzelnen Apps stammen (auf einer Karte der App-Hauptstandorte). Sie können die von Cloud Discovery gesammelten Daten filtern, damit je nachdem, was Sie am meisten interessiert, bestimmte Ansichten generiert werden.</p>
+<h2 id="review-the-cloud-discovery-dashboard">Das Cloud Discovery-Dashboard kennenlernen</h2>
+<p>Verschaffen Sie sich zunächst ein allgemeines Bild Ihrer Cloud-Apps. Starten Sie im Cloud Discovery-Dashboard, und bewegen Sie sich von dort durch seine verschiedenen Elemente in der folgenden Reihenfolge, um zu verstehen, was in Ihrer Organisation geschieht.</p>
+<ol>
+<li>Beginnen Sie mit der <strong>Übersicht über die allgemeine Nutzung</strong>, um die Gesamtnutzung von Cloud-Apps einzusehen. Es werden die <strong>Top-Benutzer</strong> und <strong>Quell-IP-Adressen</strong> angezeigt. Ermitteln Sie anhand dieser Informationen, welche Benutzer in Ihrer Organisation Cloud-Apps am meisten nutzen. Auf diese Benutzer sollte in Zukunft besonders geachtet werden.</li>
+<li>Begeben Sie sich eine Ebene tiefer, um zu sehen, welche Kategorie von Apps in Ihrer Organisation am häufigsten verwendet wird. Sehen Sie sich an, welcher Anteil dieser Nutzung auf <strong>nicht genehmigte</strong> Apps fällt.</li>
+<li>Gehen Sie sich noch weiter ins Detail auf der Registerkarte <strong>Ermittelte Apps</strong>, wo alle Apps einer bestimmten Kategorie aufgeführt sind.</li>
+<li>Überprüfen Sie die Risikobewertung für die entdeckten Apps in der <strong>Übersicht über das App-Risiko</strong>. Jede ermittelte App wird anhand von Risikofaktoren wie Sicherheit und Compliance sowie behördlichen Maßnahmen bewertet. Apps erhalten eine Risikobewertung zwischen 1 und 10.</li>
+<li>Auf der <strong>Karte der App-Hauptstandorte</strong> können Sie sehen, wo sich die ermittelten Apps befinden (basierend auf ihren Hauptstandorten).</li>
+<li>Wenn Sie eine App finden, die ein Risiko für Ihre Organisation darstellt, können Sie sie im Bereich <strong>Ermittelte Apps</strong> als <strong>nicht genehmigt</strong> kennzeichnen.</li>
+</ol>
+<p>Wenn in Ihrer Organisation Microsoft Defender für Endpunkt (oder eine ähnliche Lösung) verwendet wird, wird jede nicht genehmigte App automatisch blockiert.</p>
+<p>Wenn Sie über keine Lösung für den Bedrohungsschutz verfügen, können Sie ein Skript für die Datenquelle ausführen, damit die App blockiert wird. Anschließend wird Benutzern bei dem Versuch, auf die Anwendung zuzugreifen, eine Benachrichtigung angezeigt, dass diese gesperrt ist.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

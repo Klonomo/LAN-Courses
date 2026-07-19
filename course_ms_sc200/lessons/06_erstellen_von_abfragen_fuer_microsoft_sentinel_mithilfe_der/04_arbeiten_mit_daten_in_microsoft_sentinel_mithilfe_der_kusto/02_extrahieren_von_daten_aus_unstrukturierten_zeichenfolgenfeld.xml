@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_06_04_02" title="Extrahieren von Daten aus unstrukturierten Zeichenfolgenfeldern">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Extrahieren von Daten aus unstrukturierten Zeichenfolgenfeldern</div>
+<div class="section-content">
+<p>Sicherheitsprotokolldaten sind häufig in unstrukturierten Zeichenfolgenfeldern enthalten und erfordern eine Analyse zum Extrahieren von Daten. Es gibt mehrere Möglichkeiten, Informationen aus Zeichenfolgenfeldern in KQL abzurufen.  Die beiden verwendeten primären Operatoren werden extrahiert und analysiert.</p>
+<h2 id="extract">Auszug</h2>
+<p>Extrahieren ruft eine Übereinstimmung für einen regulären Ausdruck aus einer Textzeichenfolge ab. Optional können Sie die extrahierte Teilzeichenfolge in den angegebenen Typ konvertieren.</p>
+<pre><code class="lang-kusto">print extract("x=([0-9.]+)", 1, "hello x=45.6|wo") == "45.6"
+
+</code></pre>
+<p>Argumente</p>
+<ul>
+<li><p>regex: Ein regulärer Ausdruck.</p>
+</li>
+<li><p>captureGroup: Eine positive Int-Konstante, die die zu extrahierende Aufnahmegruppe angibt. Ein "0" steht für die gesamte Übereinstimmung, ein "1" für den Wert, der mit der ersten '('Klammer')' im regulären Ausdruck übereinstimmt, 2 oder mehr für nachfolgende Klammern.</p>
+</li>
+<li><p>text: Eine zu durchsuchende Zeichenfolge.</p>
+</li>
+<li><p>typeLiteral: Ein optionales Typliteral (z. B. typeof(long)). Die extrahierte Teilzeichenfolge wird, sofern angegeben, in diesen Typ konvertiert.</p>
+</li>
+</ul>
+<p>Rückkehr</p>
+<p>Wenn regex eine Übereinstimmung im Text findet: Die Teilzeichenfolge, die mit der angegebenen Capture Group captureGroup übereinstimmt, optional in typeLiteral konvertiert.</p>
+<p>Wenn keine Übereinstimmung vorhanden ist oder die Typkonvertierung fehlschlägt: null.</p>
+<p>Im folgenden Beispiel wird die Extraktfunktion verwendet, um den Kontonamen aus dem Feld "Konto" der Tabelle "SecurityEvent" abzurufen.</p>
+<pre><code class="lang-kusto">SecurityEvent
+| where EventID == 4672 and AccountType == 'User'
+| extend Account_Name = extract(@"^(.*\\)?([^@]*)(@.*)?$", 2, tolower(Account))
+| summarize LoginCount = count() by Account_Name
+| where Account_Name != ""
+| where LoginCount &lt; 10
+
+</code></pre>
+<h2 id="parse">Parse</h2>
+<p>Die Analyse wertet einen Zeichenfolgenausdruck aus und analysiert den Wert in einer oder mehreren berechneten Spalten. Die berechneten Spalten weisen Nullen für nicht analysierte Zeichenfolgen auf.</p>
+<p>Syntax</p>
+<p><code>T | parse [kind=regex [flags=regex_flags] |simple|relaxed] Expression with * (StringConstant ColumnName [: ColumnType]) *</code></p>
+<p>Argumente</p>
+<ul>
+<li><p>T: Die Eingabetabelle.</p>
+</li>
+<li><p>Art:</p>
+<ul>
+<li><p>einfach (Standard): StringConstant ist ein regulärer Zeichenfolgenwert, und die Übereinstimmung ist streng. Alle Zeichenfolgentrennzeichen sollten in der analysierten Zeichenfolge vorkommen, und alle erweiterten Spalten müssen mit den erforderlichen Typen übereinstimmen.</p>
+</li>
+<li><p>regex: StringConstant kann ein regulärer Ausdruck sein und die Übereinstimmung ist streng. Alle Zeichenfolgentrennzeichen, die für diesen Modus reguläre Ausdrücke sein können, sollten in der analysierten Zeichenfolge vorkommen, und alle erweiterten Spalten müssen mit den erforderlichen Typen übereinstimmen.</p>
+</li>
+<li><p>Flags: Flags, die im regex-Modus wie U (Ungreedy), m (mehrzeiligen Modus), s (übereinstimmung mit der neuen Zeile \n), i (Groß-/Kleinschreibung) in RE2-Flags verwendet werden sollen.</p>
+</li>
+<li><p>entspannt: StringConstant ist ein regulärer Zeichenfolgenwert, und die Übereinstimmung ist entspannt. Alle Zeichenfolgentrennzeichen sollten in der analysierten Zeichenfolge angezeigt werden, aber erweiterte Spalten entsprechen möglicherweise teilweise den erforderlichen Typen. Erweiterte Spalten, die nicht mit den erforderlichen Typen übereinstimmen, erhalten den Wert NULL.</p>
+</li>
+</ul>
+</li>
+<li><p>Ausdruck: Ein Ausdruck, der zu einer Zeichenfolge ausgewertet wird.</p>
+</li>
+<li><p>ColumnName: Der Name einer Spalte, der ein Wert zugewiesen werden soll, extrahiert aus dem Zeichenfolgenausdruck.</p>
+</li>
+<li><p>ColumnType: Optional. Der Skalarwert, der den Typ angibt, in den der Wert konvertiert werden soll. Der Standardwert ist der Zeichenfolgentyp.</p>
+</li>
+</ul>
+<p>Rückkehr</p>
+<p>Die Eingabetabelle, erweitert gemäß der Liste der Spalten, die für den Operator bereitgestellt werden.</p>
+<p>Die folgende Anweisung veranschaulicht den Analyseoperator, der einen Zeichenfolgenausdruck auswertet und seinen Wert in eine oder mehrere berechnete Spalten analysiert. Ermöglicht die Strukturierung unstrukturierter Daten.</p>
+<pre><code class="lang-kusto">let Traces = datatable(EventText:string)
+[
+"Event: NotifySliceRelease (resourceName=PipelineScheduler, totalSlices=27, sliceNumber=23, lockTime=02/17/2016 08:40:01, releaseTime=02/17/2016 08:40:01, previousLockTime=02/17/2016 08:39:01)",
+"Event: NotifySliceRelease (resourceName=PipelineScheduler, totalSlices=27, sliceNumber=15, lockTime=02/17/2016 08:40:00, releaseTime=02/17/2016 08:40:00, previousLockTime=02/17/2016 08:39:00)",
+"Event: NotifySliceRelease (resourceName=PipelineScheduler, totalSlices=27, sliceNumber=20, lockTime=02/17/2016 08:40:01, releaseTime=02/17/2016 08:40:01, previousLockTime=02/17/2016 08:39:01)",
+"Event: NotifySliceRelease (resourceName=PipelineScheduler, totalSlices=27, sliceNumber=22, lockTime=02/17/2016 08:41:01, releaseTime=02/17/2016 08:41:00, previousLockTime=02/17/2016 08:40:01)",
+"Event: NotifySliceRelease (resourceName=PipelineScheduler, totalSlices=27, sliceNumber=16, lockTime=02/17/2016 08:41:00, releaseTime=02/17/2016 08:41:00, previousLockTime=02/17/2016 08:40:00)"
+];
+Traces  
+| parse EventText with * "resourceName=" resourceName ", totalSlices=" totalSlices:long * "sliceNumber=" sliceNumber:long * "lockTime=" lockTime ", releaseTime=" releaseTime:date "," * "previousLockTime=" previousLockTime:date ")" *  
+| project resourceName, totalSlices, sliceNumber, lockTime, releaseTime, previousLockTime
+</code></pre>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

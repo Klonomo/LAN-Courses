@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_09_08_02" title="Verwenden von Lösungen aus dem Inhaltshub">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwenden von Lösungen aus dem Inhaltshub</div>
+<div class="section-content">
+<p>Verwenden Sie den Microsoft Sentinel Content Hub, um out-of-the-box (integrierte) Inhalte zentral zu ermitteln und zu installieren.</p>
+<p>Der Microsoft Sentinel Content Hub bietet produktinterne Auffindbarkeit, Einzelschrittbereitstellung und Aktivierung von End-to-End-Produkten, Domänen und/oder vertikalen sofort einsatzbereiten Lösungen und Inhalten in Microsoft Sentinel.</p>
+<p>Filtern Sie im Inhaltshub nach Kategorien und anderen Parametern, oder verwenden Sie die leistungsstarke Textsuche, um die Inhalte zu finden, die für die Anforderungen Ihrer Organisation am besten geeignet sind. Der Inhaltshub gibt auch das Supportmodell an, das auf jeden Teil von Inhalten angewendet wird, da einige Inhalte von Microsoft verwaltet werden und andere von Partnern oder der Community verwaltet werden.</p>
+<p>Verwalten Sie Updates für sofort einsatzbereite Inhalte über den Microsoft Sentinel Content Hub und für benutzerdefinierte Inhalte über die Repository-Seite.</p>
+<p>Passen Sie vordefinierte Inhalte für Ihre eigenen Anforderungen an, oder erstellen Sie benutzerdefinierte Inhalte, einschließlich Analyseregeln, Suchabfragen, Notizbücher, Arbeitsmappen und mehr. Verwalten Sie Ihre benutzerdefinierten Inhalte direkt in Ihrem Microsoft Sentinel-Arbeitsbereich, über die Microsoft Sentinel-API oder in Ihrem eigenen Quellcodeverwaltungsrepository, über die Seite "Microsoft Sentinel-Repositorys".</p>
+<h2 id="solutions">Solutions</h2>
+<p>Microsoft Sentinel-Lösungen sind verpackte Inhalte oder Integrationen, die End-to-End-Produktwert für ein oder mehrere Domänen- oder vertikale Szenarien liefern.</p>
+<p>Die Lösungserfahrung wird von Azure Marketplace für die Auffindbarkeit und Bereitstellung von Lösungen unterstützt.</p>
+<p>Microsoft Sentinel-Lösungen bieten produktinterne Auffindbarkeit, Einzelschrittbereitstellung und Aktivierung von End-to-End-Produkten, Domänen und/oder vertikalen Szenarien in Microsoft Sentinel. Diese Erfahrung wird durch die Auffindbarkeit, Bereitstellung und Aktivierung von Lösungen sowie durch die Erstellung und Veröffentlichung von Lösungen unterstützt.</p>
+<ul>
+<li><p>
+              <strong>Verpackte Inhalte</strong> sind Sammlungen von mindestens einem Teil von Microsoft Sentinel-Inhalten, z. B. Datenconnectors, Arbeitsmappen, Analyseregeln, Playbooks, Suchabfragen, Watchlists, Parsern und mehr.</p>
+</li>
+<li><p>
+              <strong>Integrationen</strong> umfassen Dienste oder Tools, die mit Microsoft Sentinel- oder Azure Log Analytics-APIs erstellt wurden, die Integrationen zwischen Azure und vorhandenen Kundenanwendungen unterstützen oder Daten, Abfragen und vieles mehr aus diesen Anwendungen in Microsoft Sentinel migrieren.</p>
+</li>
+</ul>
+<p>Sie können auch Lösungen verwenden, um Pakete von sofort einsatzbereiten Inhalten in einem einzigen Schritt zu installieren, in dem der Inhalt häufig sofort verwendet werden kann. Anbieter und Partner können Lösungen verwenden, um Investitionen zu produktieren, indem sie kombiniertes Produkt, eine Domäne oder einen vertikalen Wert liefern.</p>
+<p>Verwenden Sie den Inhaltshub, um Lösungen und sofort einsatzbereite Inhalte zentral zu ermitteln und bereitzustellen.</p>
+<h3 id="find-a-solution">Suchen einer Lösung</h3>
+<ul>
+<li><p>Wählen Sie im Microsoft Sentinel-Navigationsmenü unter "Inhaltsverwaltung" den Inhaltshub aus.</p>
+</li>
+<li><p>Auf der Inhaltshubseite wird ein durchsuchbares und filterbares Raster von Lösungen angezeigt.</p>
+</li>
+<li><p>Filtern Sie die angezeigte Liste, indem Sie bestimmte Werte aus den Filtern auswählen oder einen Teil eines Lösungsnamens oder einer Beschreibung in das Suchfeld eingeben.</p>
+<p>Jede Lösung im Raster zeigt die Kategorien an, die auf die Lösung angewendet werden, sowie Inhaltstypen, die in der Lösung enthalten sind.</p>
+<p>In der Cisco Umbrella-Lösung wird beispielsweise eine Kategorie "Sicherheit - Andere" angezeigt, und diese Lösung umfasst 10 Analyseregeln, 11 Suchabfragen, einen Parser, drei Playbooks und mehr.</p>
+</li>
+</ul>
+<h2 id="install-or-update-a-solution">Installieren oder Aktualisieren einer Lösung</h2>
+<ul>
+<li><p>Wählen Sie im Inhaltshub eine Lösung aus, um weitere Informationen auf der rechten Seite anzuzeigen. Wählen Sie dann "Installieren" oder "Aktualisieren" aus, wenn Sie Updates benötigen. Beispiel:</p>
+</li>
+<li><p>Wählen Sie auf der Seite "Lösungsdetails" die Option "Erstellen" oder "Aktualisieren" aus, um den Lösungs-Assistenten zu starten. Geben Sie auf der Registerkarte "Grundlagen" des Assistenten das Abonnement, die Ressourcengruppe und den Arbeitsbereich ein, für das Sie die Lösung bereitstellen möchten.</p>
+</li>
+<li><p>Wählen Sie "Weiter" aus, um die verbleibenden Registerkarten zu durchlaufen (entsprechend den komponenten, die in der Lösung enthalten sind), wo Sie mehr über die einzelnen Inhaltskomponenten erfahren und in einigen Fällen konfigurieren können.</p>
+</li>
+<li><p>Warten Sie abschließend auf der Registerkarte "Überprüfen+ Erstellen" auf die Nachricht "Überprüfung bestanden", und wählen Sie dann "Erstellen" oder "Aktualisieren" aus, um die Lösung bereitzustellen. Sie können auch die Vorlage zum Herunterladen einer Vorlage für den Automatisierungslink auswählen, um die Lösung als Code bereitzustellen.</p>
+</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

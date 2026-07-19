@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_05_06_06" title="Reagieren auf Warnungen von Azure-Ressourcen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Reagieren auf Warnungen von Azure-Ressourcen</div>
+<div class="section-content">
+<h2 id="respond-to-defender-for-cloud-for-key-vault-alerts">Reagieren auf Warnungen von Defender für Key Vault</h2>
+<p>Wenn Sie eine Warnung von Defender für Key Vault erhalten, empfehlen wir Ihnen, die Warnung wie unten beschrieben zu untersuchen und zu behandeln. Mit Defender für Key Vault werden Anwendungen und Anmeldeinformationen geschützt. Daher ist es wichtig, die Situation bei jeder Warnung auch dann genau zu überprüfen, wenn Sie mit den Anwendungen oder Benutzern vertraut sind, von denen die Warnung ausgelöst wurde.</p>
+<p>Jede Warnung von Defender für Key Vault enthält die folgenden Elemente:</p>
+<ul>
+<li><p>ObjectID</p>
+</li>
+<li><p>Benutzerprinzipalname oder IP-Adresse der verdächtigen Ressource</p>
+</li>
+</ul>
+<h3 id="contact">Kontakt</h3>
+<ul>
+<li><p>Überprüfen Sie, ob der Datenverkehr aus Ihrem Azure-Mandanten stammt. Wenn die Key Vault-Firewall aktiviert ist, haben Sie wahrscheinlich dem Benutzer oder der Anwendung, der bzw. die diese Warnung ausgelöst hat, den Zugriff gewährt.</p>
+</li>
+<li><p>Wenn Sie die Quelle des Datenverkehrs nicht überprüfen können, fahren Sie fort mit Schritt&nbsp;2: Sofortige Risikominderung. Sofortige Risikominderung.</p>
+</li>
+<li><p>Wenn Sie die Quelle des Datenverkehrs in Ihrem Mandanten ermitteln können, wenden Sie sich an den Benutzer oder den Besitzer der Anwendung.</p>
+</li>
+</ul>
+<h3 id="immediate-mitigation">Sofortige Risikominderung</h3>
+<p>Wenn Sie den Benutzer oder die Anwendung nicht erkannt haben oder wenn Sie der Ansicht sind, dass der Zugriff nicht autorisiert werden sollte:</p>
+<ul>
+<li><p>Wenn der Datenverkehr von einer unbekannten IP-Adresse stammt:</p>
+<ul>
+<li><p>Aktivieren Sie die Azure Key Vault-Firewall, wie unter Konfigurieren von Azure Key Vault-Firewalls und virtuellen Netzwerken beschrieben.</p>
+</li>
+<li><p>Konfigurieren Sie die Firewall mit vertrauenswürdigen Ressourcen und virtuellen Netzwerken.</p>
+</li>
+</ul>
+</li>
+<li><p>Wenn die Quelle der Warnung eine nicht autorisierte Anwendung oder ein verdächtiger Benutzer war:</p>
+<ul>
+<li><p>Öffnen Sie die Einstellungen für die Zugriffsrichtlinien des Schlüsseltresors.</p>
+</li>
+<li><p>Entfernen Sie den zugehörigen Sicherheitsprinzipal, oder schränken Sie die Vorgänge ein, die der Sicherheitsprinzipal ausführen darf.</p>
+</li>
+</ul>
+</li>
+<li><p>Wenn die Quelle der Warnung eine Microsoft Entra-Rolle in Ihrem Mandanten hat:</p>
+<ul>
+<li><p>Wenden Sie sich an den Administrator.</p>
+</li>
+<li><p>Bestimmen Sie, ob Microsoft Entra-Berechtigungen reduziert oder widerrufen werden müssen.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="identify-impact">Ermitteln der Auswirkungen</h3>
+<p>Nachdem die Auswirkungen behoben wurden, untersuchen Sie die betroffenen Geheimnisse in Ihrem Schlüsseltresor:</p>
+<ol>
+<li><p>Öffnen Sie die Seite „Sicherheit“ für Ihre Azure Key Vault-Instanz, und zeigen Sie die ausgelöste Warnung an.</p>
+</li>
+<li><p>Wählen Sie die genaue ausgelöste Warnung aus. Überprüfen Sie die Liste der Geheimnisse, auf die zugegriffen wurde, und den Zeitstempel.</p>
+</li>
+<li><p>Wenn Sie Key Vault-Diagnoseprotokolle aktiviert haben, überprüfen Sie optional die vorherigen Vorgänge für die entsprechende IP-Adresse, den Benutzerprinzipal oder die Objekt-ID des Aufrufers.</p>
+</li>
+</ol>
+<h3 id="take-action">Ausführen einer Aktion</h3>
+<p>Wenn Sie Ihre Liste der Geheimnisse, Schlüssel und Zertifikate zusammengestellt haben, auf die der verdächtige Benutzer oder die verdächtige Anwendung zugegriffen hat, sollten Sie diese Objekte sofort rotieren.</p>
+<ul>
+<li><p>Betroffene Geheimnisse sollten deaktiviert oder aus Ihrem Schlüsseltresor gelöscht werden.</p>
+</li>
+<li><p>Wenn die Anmeldeinformationen für eine bestimmte Anwendung verwendet wurden:</p>
+<ul>
+<li><p>Wenden Sie sich an den Administrator der Anwendung, und bitten Sie ihn, die Umgebung auf die Verwendung der kompromittierten Anmeldeinformationen seit der Kompromittierung zu überprüfen.</p>
+</li>
+<li><p>Wenn die kompromittierten Anmeldeinformationen verwendet wurden, sollte der Besitzer der Anwendung ermitteln, auf welche Informationen zugegriffen wurde, und die Auswirkungen minimieren.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="respond-to-defender-for-dns-alerts">Reagieren auf Warnungen von Defender für DNS</h2>
+<p>Wenn Sie eine Warnung von Defender für DNS erhalten, empfehlen wir Ihnen, die Warnung wie unten beschrieben zu untersuchen und zu behandeln. Mit Defender für DNS werden alle verbundenen Ressourcen geschützt. Daher ist es wichtig, die Situation bei jeder Warnung auch dann genau zu überprüfen, wenn Sie mit den Anwendungen oder Benutzern vertraut sind, von denen die Warnung ausgelöst wurde.</p>
+<h3 id="contact-1">Kontakt</h3>
+<p>Wenden Sie sich an den Ressourcenbesitzer, um zu bestimmen, ob das Verhalten erwartet oder beabsichtigt war.</p>
+<ul>
+<li><p>Wenn die Aktivität erwartet wird, schließen Sie die Warnung.</p>
+</li>
+<li><p>Wenn die Aktivität unerwartet ist, behandeln Sie die Ressource als potenziell kompromittiert und mindern Sie das Risiko, wie im nächsten Schritt beschrieben.</p>
+</li>
+</ul>
+<h3 id="immediate-mitigation-1">Sofortige Risikominderung</h3>
+<p>Isolieren Sie die Ressource vom Netzwerk, um Lateral Movement zu verhindern.</p>
+<ul>
+<li><p>Führen Sie eine vollständige Antischadsoftwareüberprüfung für die Ressource aus, und befolgen Sie dabei alle resultierenden Korrekturanweisungen.</p>
+</li>
+<li><p>Überprüfen Sie die installierte und laufende Software auf der Ressource, und entfernen Sie alle unbekannten oder unerwünschten Pakete.</p>
+</li>
+<li><p>Setzen Sie den Computer auf einen bekannten fehlerfreien Zustand zurück, installieren Sie bei Bedarf das Betriebssystem neu, und stellen Sie die Software über eine verifizierte Quelle ohne Schadsoftware wieder her.</p>
+</li>
+<li><p>Führen Sie die Schritte aller Defender für Cloud-Empfehlungen für den Computer aus, und beheben Sie die aufgeführten Sicherheitsprobleme, um zukünftige Sicherheitsverletzungen zu verhindern.</p>
+</li>
+</ul>
+<h2 id="respond-to-defender-for-resource-manager-alerts">Reagieren auf Warnungen von Defender für Resource Manager</h2>
+<p>Wenn Sie eine Warnung von Defender für Resource Manager erhalten, empfehlen wir Ihnen, die Warnung wie unten beschrieben zu untersuchen und zu behandeln. Mit Defender für Resource Manager werden alle verbundenen Ressourcen geschützt. Daher ist es wichtig, die Situation bei jeder Warnung auch dann genau zu überprüfen, wenn Sie mit den Anwendungen oder Benutzern vertraut sind, von denen die Warnung ausgelöst wurde.</p>
+<h3 id="contact-2">Kontakt</h3>
+<p>Wenden Sie sich an den Ressourcenbesitzer, um zu bestimmen, ob das Verhalten erwartet oder beabsichtigt war.</p>
+<ul>
+<li><p>Wenn die Aktivität erwartet wird, schließen Sie die Warnung.</p>
+</li>
+<li><p>Wenn die Aktivität unerwartet ist, behandeln Sie die betroffenen Benutzerkonten, Abonnements und virtuellen Computer als kompromittiert und mindern Sie das Risiko, wie im nächsten Schritt beschrieben.</p>
+</li>
+</ul>
+<h3 id="immediate-mitigation-2">Sofortige Risikominderung</h3>
+<ul>
+<li><p>Risikominderung für kompromittierte Benutzerkonten:</p>
+<ul>
+<li><p>Wenn sie nicht bekannt sind, löschen Sie sie, da sie möglicherweise von einem Angreifer erstellt wurden.</p>
+</li>
+<li><p>Wenn sie bekannt sind, ändern Sie ihre Anmeldeinformationen für die Authentifizierung.</p>
+</li>
+<li><p>Verwenden Sie Azure-Aktivitätsprotokolle, um alle von dem Benutzer ausgeführten Aktivitäten zu überprüfen und dabei alle verdächtigen Aktionen zu identifizieren.</p>
+</li>
+</ul>
+</li>
+<li><p>Risikominderung für kompromittierte Abonnements:</p>
+<ul>
+<li><p>Entfernen Sie alle unbekannten Runbooks aus dem kompromittierten Automation-Konto.</p>
+</li>
+<li><p>Überprüfen Sie die IAM-Berechtigungen für das Abonnement, und entfernen Sie Berechtigungen für alle unbekannten Benutzerkonten.</p>
+</li>
+<li><p>Überprüfen Sie alle Azure-Ressourcen im Abonnement, und löschen Sie alle unbekannten.</p>
+</li>
+<li><p>Ansehen und Untersuchen aller Sicherheitswarnungen für das Abonnement in Defender für Cloud</p>
+</li>
+<li><p>Verwenden Sie Azure-Aktivitätsprotokolle, um alle in dem Abonnement ausgeführten Aktivitäten zu überprüfen und dabei alle verdächtigen Aktionen zu identifizieren.</p>
+</li>
+</ul>
+</li>
+<li><p>Korrigieren Sie die kompromittierten virtuellen Computer.</p>
+<ul>
+<li><p>Ändern Sie die Kennwörter für alle Benutzer.</p>
+</li>
+<li><p>Führen Sie eine vollständige Antischadsoftwareüberprüfung auf dem Computer aus.</p>
+</li>
+<li><p>Führen Sie ein Reimaging der Computer aus einer schadsoftwarefreien Quelle durch.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

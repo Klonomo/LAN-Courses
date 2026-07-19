@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_04_03" title="Untersuchen des Geräts">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Untersuchen des Geräts</div>
+<div class="section-content">
+<p>Untersuchen Sie die Details einer Warnung, die auf einem bestimmten Gerät ausgelöst wurde, um andere Verhaltensweisen oder Ereignisse zu identifizieren, die möglicherweise mit der Warnung oder dem potenziellen Umfang der Sicherheitsverletzung zusammenhängen.</p>
+<p>Sie können betroffene Geräte auswählen, wenn sie im Portal angezeigt werden, um einen detaillierten Bericht zu diesem Gerät zu öffnen. Betroffene Geräte sind in den folgenden Bereichen angegeben:</p>
+<ul>
+<li><p>Geräteliste</p>
+</li>
+<li><p>Warnungswarteschlange</p>
+</li>
+<li><p>Dashboard für Sicherheitsvorgänge</p>
+</li>
+<li><p>Jede einzelne Warnung</p>
+</li>
+<li><p>Detailansicht jeder Datei</p>
+</li>
+<li><p>Detailansicht jeder IP-Adresse oder Domäne</p>
+</li>
+</ul>
+<p>Wenn Sie ein bestimmtes Gerät untersuchen, sehen Sie Folgendes:</p>
+<ul>
+<li><p>Gerätedetails</p>
+</li>
+<li><p>Antwortaktionen</p>
+</li>
+<li><p>Registerkarten: Übersicht, Warnungen, Zeitachse, Sicherheitsempfehlungen, Softwareinventur, erkannte Sicherheitsrisiken, fehlende KBs (Knowledge Base-IDs)</p>
+</li>
+<li><p>Karten (aktive Warnungen, angemeldete Benutzer, Sicherheitsbewertung)</p>
+</li>
+</ul>
+<h2 id="device-details">Gerätedetails</h2>
+<p>Der Abschnitt "Gerätedetails" enthält Informationen wie die Domäne, das Betriebssystem und den Integritätszustand des Geräts. Wenn auf dem Gerät ein Untersuchungspaket verfügbar ist, wird ein Link angezeigt, über den Sie das Paket herunterladen können.</p>
+<h2 id="response-actions">Antwortaktionen</h2>
+<p>Antwortaktionen sind am oberen Rand der Seite für ein bestimmtes Gerät aufgeführt und umfassen Folgendes:</p>
+<ul>
+<li><p>Tags verwalten</p>
+</li>
+<li><p>Gerät isolieren</p>
+</li>
+<li><p>App-Ausführung einschränken</p>
+</li>
+<li><p>Antivirenüberprüfung ausführen</p>
+</li>
+<li><p>Untersuchungspaket erfassen</p>
+</li>
+<li><p>Live Response-Sitzung initiieren</p>
+</li>
+<li><p>Automatisierte Untersuchung initiieren</p>
+</li>
+<li><p>Fragen Sie die Defender-Experten</p>
+</li>
+<li><p>Aktionszentrum</p>
+</li>
+</ul>
+<p>Sie können Antwortaktionen im Info-Center, auf einer bestimmten Geräteseite oder auf einer bestimmten Dateiseite ausführen.</p>
+<h2 id="tabs">Tabstoppzeichen</h2>
+<h3 id="overview">Überblick</h3>
+<p>Auf der Registerkarte "Übersicht" werden die Karten für aktive Warnungen, angemeldete Benutzer und Sicherheitsbewertungen angezeigt.</p>
+<p>
+              <strong>Aktive Warnungen</strong></p>
+<p>Sie können die Gesamtanzahl der aktiven Warnungen aus den letzten 30 Tagen in Ihrem Netzwerk über die Kachel anzeigen. Warnungen werden in "Neu" und "In Bearbeitung" gruppiert. Jede Gruppe wird weiter in die entsprechenden Warnungsschweregrade unterteilt. Wählen Sie die Anzahl der Warnungen in jedem Warnungsring aus, um eine sortierte Ansicht der Warteschlange dieser Kategorie anzuzeigen (neu oder in Bearbeitung).</p>
+<p>
+              <strong>Angemeldete Benutzer</strong></p>
+<p>Die Karte "Angemeldete Benutzer" zeigt, wie viele Benutzer sich in den letzten 30 Tagen angemeldet haben, sowie die Benutzer, die sich am häufigsten und am seltensten anmelden. Wenn Sie den Link "Alle Benutzer anzeigen" auswählen, wird der Detailbereich geöffnet, in dem Benutzertyp, Anmeldetyp und Zeitpunkt der ersten und letzten Anzeige des Benutzers angezeigt werden.</p>
+<p>
+              <strong>Sicherheitsbewertungen</strong></p>
+<p>Die Karte "Sicherheitsbewertungen" zeigt die allgemeine Expositionsstufe, Sicherheitsempfehlungen, installierte Software und ermittelte Sicherheitsrisiken an. Die Gefährdungsstufe eines Geräts wird anhand der kumulativen Auswirkungen der ausstehenden Sicherheitsempfehlungen bestimmt.</p>
+<h3 id="alerts">Alarmsignale</h3>
+<p>Auf der Registerkarte "Warnungen" finden Sie eine Liste der Warnungen, die dem Gerät zugeordnet sind. Diese Liste ist eine gefilterte Version der Warnungswarteschlange und zeigt eine kurze Beschreibung der Warnung, des Schweregrads (hoch, mittel, niedrig, informativ), des Status in der Warteschlange (neu, in Bearbeitung, aufgelöst), Klassifizierung (nicht festgelegt, falsche Warnung, echte Warnung), Untersuchungsstatus, Warnungskategorie, wer die Warnung bearbeitet, und die letzte Aktivität. Sie können die Warnungen auch filtern.</p>
+<h3 id="timeline">Zeitachse</h3>
+<p>Die Registerkarte "Zeitachse" bietet eine chronologische Ansicht der Ereignisse und zugehörigen Warnungen, die auf dem Gerät beobachtet wurden. Auf diese Weise können Sie Ereignisse, Dateien und IP-Adressen im Zusammenhang mit dem Gerät korrelieren.</p>
+<p>Die Zeitachse ermöglicht es Ihnen auch, einen selektiven Drilldown in Ereignisse auszuführen, die innerhalb eines bestimmten Zeitraums aufgetreten sind. Sie können die zeitliche Abfolge von Ereignissen anzeigen, die auf einem Gerät während eines ausgewählten Zeitraums aufgetreten sind. Um die Ansicht weiter zu verfeinern, können Sie nach Ereignisgruppen filtern oder die Spalten anpassen.</p>
+<p>Einige der Funktionen umfassen Folgendes:</p>
+<ul>
+<li><p>Suchen nach bestimmten Ereignissen</p>
+<ul>
+<li>Verwenden Sie die Suchleiste, um nach bestimmten Zeitachsenereignissen zu suchen.</li>
+</ul>
+</li>
+<li><p>Filtern von Ereignissen aus einem bestimmten Datum</p>
+<ul>
+<li><p>Wählen Sie das Kalendersymbol oben links in der Tabelle aus, um Ereignisse in den letzten Tagen, Wochen, 30 Tagen oder einem benutzerdefinierten Bereich anzuzeigen. Standardmäßig ist die Gerätezeitachse so festgelegt, dass die Ereignisse der letzten 30 Tage angezeigt werden.</p>
+</li>
+<li><p>Verwenden Sie die Zeitachse, um zu einem bestimmten Zeitpunkt zu springen, indem Sie den Abschnitt markieren. Die Pfeile auf der Zeitleiste zeigen automatisierte Untersuchungen an.</p>
+</li>
+</ul>
+</li>
+<li><p>Detaillierte Ereignisse der Geräte-Zeitleiste exportieren</p>
+<ul>
+<li>Exportieren Sie die Gerätezeitachse für das aktuelle Datum oder einen angegebenen Datumsbereich von bis zu sieben Tagen.</li>
+</ul>
+</li>
+</ul>
+<p>Weitere Details zu bestimmten Ereignissen werden bereitgestellt und variieren je nach Ereignistyp, z. B.:</p>
+<ul>
+<li><p>In Application Guard enthalten: Das Webbrowserereignis wurde durch einen isolierten Container eingeschränkt.</p>
+</li>
+<li><p>Aktive Bedrohung erkannt: Die Bedrohungserkennung hat während der aktiven Bedrohung stattgefunden.</p>
+</li>
+<li><p>Korrektur nicht erfolgreich: Ein Versuch, die erkannte Bedrohung zu beheben, wurde unternommen, war jedoch nicht erfolgreich.</p>
+</li>
+<li><p>Korrektur erfolgreich: Die erkannte Bedrohung wurde beendet und bereinigt.</p>
+</li>
+<li><p>Vom Benutzer übersprungene Warnung – die Microsoft Defender SmartScreen-Warnung wurde ignoriert und von einem Benutzer außer Kraft gesetzt.</p>
+</li>
+<li><p>Verdächtiges Skript erkannt: Die Ausführung eines potenziell schädlichen Skripts wurde entdeckt.</p>
+</li>
+<li><p>Die Alarmkategorie – Wenn das Ereignis zur Generierung eines Alarms geführt hat, wird die Alarmkategorie (z. B. "Lateral Movement") bereitgestellt.</p>
+</li>
+</ul>
+<p>
+              <strong>Kennzeichnen eines Ereignisses</strong></p>
+<p>Beim Navigieren in der Gerätezeitachse können Sie nach bestimmten Ereignissen suchen und filtern. Ereignisflags können wie folgt festgelegt werden:</p>
+<ul>
+<li><p>Hervorheben der wichtigsten Ereignisse</p>
+</li>
+<li><p>Markieren von Ereignissen, die einen tiefen Tauchgang erfordern</p>
+</li>
+<li><p>Erstellen einer bereinigten Zeitachse für eine Sicherheitsverletzung</p>
+</li>
+</ul>
+<p>Suchen Sie das Ereignis, das Sie kennzeichnen möchten. Wählen Sie in der Spalte „Flag“ das Kennzeichnungssymbol aus.</p>
+<p>
+              <strong>Anzeigen gekennzeichneter Ereignisse</strong></p>
+<p>Aktivieren Sie nur gekennzeichnete Ereignisse im Abschnitt "Zeitachsenfilter". Wählen Sie „Übernehmen“ aus. Nur gekennzeichnete Ereignisse werden angezeigt. Sie können weitere Filter anwenden, indem Sie auf die Zeitleiste klicken. Dadurch werden nur Ereignisse vor dem gekennzeichneten Ereignis angezeigt.</p>
+<h3 id="event-details">Ereignisdetails</h3>
+<p>Wählen Sie ein Ereignis aus, um relevante Details zu diesem Ereignis anzuzeigen. Es wird ein Bereich mit allgemeinen Informationen zum Ereignis angezeigt. Wenn zutreffend und Daten verfügbar sind, wird außerdem ein Diagramm mit verwandten Entitäten und deren Beziehungen angezeigt.</p>
+<p>Um das Ereignis und die zugehörigen Ereignisse weiter zu untersuchen, können Sie schnell eine erweiterte Suchabfrage ausführen, indem Sie Hunt für verwandte Ereignisse auswählen. Die Abfrage gibt das ausgewählte Ereignis und die Liste anderer Ereignisse zurück, die ungefähr zur gleichen Zeit auf demselben Endpunkt aufgetreten sind.</p>
+<h3 id="security-recommendations">Sicherheitsempfehlungen</h3>
+<p>Sicherheitsempfehlungen werden aus der Microsoft Defender Vulnerability Management-Funktion Microsoft Defender for Endpoint generiert. Wenn Sie eine Empfehlung auswählen, wird ein Panel angezeigt, in dem Sie relevante Details anzeigen können, z. B. die Beschreibung der Empfehlung und die potenziellen Risiken, die damit verbunden sind, dass sie nicht erlassen werden.</p>
+<h3 id="software-inventory">Softwarebestand</h3>
+<p>Auf der Registerkarte "Softwarebestand" können Sie Software auf dem Gerät zusammen mit Schwachstellen oder Bedrohungen anzeigen. Wenn Sie den Namen der Software auswählen, gelangen Sie zur Seite mit den Softwaredetails, auf der Sie Sicherheitsempfehlungen, erkannte Sicherheitsrisiken, installierte Geräte und Versionsverteilung anzeigen können.</p>
+<h3 id="discovered-vulnerabilities">Erkannte Sicherheitsrisiken</h3>
+<p>Auf der Registerkarte "Ermittelte Sicherheitsanfälligkeiten" werden der Name, der Schweregrad und die Bedrohungserkenntnisse erkannter Sicherheitsrisiken auf dem Gerät angezeigt. Die Auswahl bestimmter Sicherheitsrisiken zeigt eine Beschreibung und Details an.</p>
+<h3 id="missing-knowledge-bases">Fehlende Wissensdatenbanken</h3>
+<p>Auf der Registerkarte "Fehlende KBs" werden die fehlenden Sicherheitsupdates für das Gerät aufgelistet.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

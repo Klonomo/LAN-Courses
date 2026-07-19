@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_06_02_02" title="Verwenden des „summarize“-Operators">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwenden des „summarize“-Operators</div>
+<div class="section-content">
+<p>Sie verwenden den Zusammenfassen-Operator mit anderen Operatoren wie dem Zähloperator. Der Count-Operator mit seinen Variationen erstellt eine neue Spalte mit dem berechneten Ergebnis für die angegebenen Felder.</p>
+<p>Die erste Anweisung unten gibt eine Spalte zurück, bei der es sich um eine eindeutige Liste von Aktivitätsspaltenwerten handelt.</p>
+<p>Die zweite Anweisung gibt eine Anzahl von SecurityEvent-Zeilen zurück, wobei EventID gleich 4688 ist und die Anzahl nach Process und Computer gruppiert wird. Aufgrund der By-Klausel enthält das Resultset drei Spalten: Prozess, Computer, Anzahl.</p>
+<p>Führen Sie jede Abfrage separat aus, um die Ergebnisse anzuzeigen.</p>
+<pre><code class="lang-kusto">SecurityEvent | summarize by Activity
+
+SecurityEvent
+| where EventID == "4688"
+| summarize count() by Process, Computer
+
+</code></pre>
+<p>Das folgende Beispiel ist eine Teilliste der am häufigsten verwendeten einfachen Aggregatfunktionen, die mit dem Zusammenfassungsoperator verwendet werden.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Funktion(en)</th>
+<th style="text-align: left;">BESCHREIBUNG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">count(), countif()</td>
+<td style="text-align: left;">Gibt die Anzahl der Datensätze pro Zusammenfassungsgruppe zurück.</td>
+</tr>
+<tr>
+<td style="text-align: left;">dcount(), dcountif()</td>
+<td style="text-align: left;">Gibt eine Schätzung für die Anzahl der unterschiedlichen Werte zurück, die von einem skalaren Ausdruck in der Zusammenfassungsgruppe entnommen wurden.</td>
+</tr>
+<tr>
+<td style="text-align: left;">avg(), avgif()</td>
+<td style="text-align: left;">Berechnet den Durchschnitt von Expr in der Gruppe.</td>
+</tr>
+<tr>
+<td style="text-align: left;">max(), maxif()</td>
+<td style="text-align: left;">Gibt den Maximalwert für die gesamte Gruppe zurück.</td>
+</tr>
+<tr>
+<td style="text-align: left;">min(), minif()</td>
+<td style="text-align: left;">Gibt den Minimalwert für die gesamte Gruppe zurück.</td>
+</tr>
+<tr>
+<td style="text-align: left;">percentile()</td>
+<td style="text-align: left;">Gibt eine Schätzung für das angegebene Perzentil des nächsten Rangs der durch <em>Expr</em> definierten Population zurück. Die Genauigkeit hängt von der Bevölkerungsdichte in der Region des Perzentils ab.</td>
+</tr>
+<tr>
+<td style="text-align: left;">stdev(), stdevif()</td>
+<td style="text-align: left;">Berechnet die Standardabweichung von Expr für die gesamte Gruppe, wobei die Gruppe als Stichprobe betrachtet wird.</td>
+</tr>
+<tr>
+<td style="text-align: left;">sum(), sumif()</td>
+<td style="text-align: left;">Berechnet die Summe von Expr in der Gruppe.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Varianz(), VarianzIf()</td>
+<td style="text-align: left;">Berechnet die Varianz von Expr über die Gruppe, wobei die Gruppe als Stichprobe betrachtet wird.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="count-function-example">Beispiel für eine Zählen-Funktion</h2>
+<p>Eine Aggregatfunktionsspalte kann explizit benannt werden, indem "fieldname=" vor der Aggregatfunktion eingeschlossen wird.</p>
+<p>Die KQL-Anweisung gibt drei Spalten zurück: "cnt", "AccountType" und "Computer". Der Name des Felds "cnt" ersetzt den Standardnamen "count_".</p>
+<pre><code class="lang-kusto">SecurityEvent
+| where TimeGenerated &gt; ago(1h)
+| where EventID == 4624
+| summarize cnt=count() by AccountType, Computer
+
+</code></pre>
+<h2 id="dcount-function-example">&lt;Beispiel für die dcount-Funktion&gt;</h2>
+<p>Im folgenden Beispiel wird die Anzahl eindeutiger IP-Adressen zurückgegeben.</p>
+<pre><code class="lang-kusto">SecurityEvent
+| summarize dcount(IpAddress)
+
+</code></pre>
+<h2 id="lets-take-a-look-at-a-real-world-example">Sehen wir uns ein Beispiel für eine praxisnahe Betrachtung an.</h2>
+<p>Die folgende Anweisung ist eine Regel zum Erkennen ungültiger Kennwortfehler in mehreren Anwendungen für dasselbe Konto.</p>
+<p>Der Where-Operator für ResultDescription filtert das Resultset nach Ergebnissen, einschließlich "Ungültiges Kennwort". Als Nächstes erzeugt die Anweisung "summarize" eine eindeutige Anzahl von Anwendungsnamen und Gruppen nach Benutzer- und IP-Adresse. Schließlich gibt es eine Überprüfung auf eine Variable, die erstellt wurde (Schwellenwert), um festzustellen, ob die Zahl den zulässigen Betrag überschreitet.</p>
+<pre><code class="lang-kusto">let timeframe = 30d;
+let threshold = 1;
+SigninLogs
+| where TimeGenerated &gt;= ago(timeframe)
+| where ResultDescription has "Invalid password"
+| summarize applicationCount = dcount(AppDisplayName) by UserPrincipalName, IPAddress
+| where applicationCount &gt;= threshold
+
+</code></pre>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

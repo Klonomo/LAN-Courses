@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_01_02_13" title="Konfigurieren des Microsoft Defender-Portals">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Konfigurieren des Microsoft Defender-Portals</div>
+<div class="section-content">
+<p>Auf der Seite „Einstellungen“ können Sie zugehörige Microsoft&nbsp;Defender-Produkte konfigurieren. Die spezifischen Einstellungen für die Defender-Produkte werden in den zugehörigen Lerninhalten erläutert. Die primäre Einstellung für Microsoft&nbsp;Defender XDR ist die E-Mail-Konfiguration für Benachrichtigungen.</p>
+<h2 id="types-of-microsoft-defender-portal-email-notifications">Arten von E-Mail-Benachrichtigungen im Microsoft&nbsp;Defender-Portal</h2>
+<p>Bei der Einrichtung von E-Mail-Benachrichtigungen stehen zwei Typen zur Auswahl. Diese werden in der folgenden Tabelle beschrieben:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Benachrichtigungstyp</th>
+<th style="text-align: left;">BESCHREIBUNG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Vorfälle</td>
+<td style="text-align: left;">Wenn neue Incidents erstellt werden</td>
+</tr>
+<tr>
+<td style="text-align: left;">Bedrohungsanalyse</td>
+<td style="text-align: left;">Bei Erstellung neuer Bedrohungsanalyseberichte</td>
+</tr>
+</tbody>
+</table>
+<h3 id="manage-incident-email-notifications">E-Mail-Benachrichtigungen für Vorfälle verwalten</h3>
+<p>Gehen Sie wie folgt vor, um Einstellungen für E-Mail-Benachrichtigungen zu Incidents für Ihre Organisation anzuzeigen, hinzuzufügen oder zu bearbeiten:</p>
+<p>Wählen Sie im Navigationsbereich die Option „Einstellungen“ und anschließend „Microsoft&nbsp;Defender XDR“ aus. Wählen Sie „E-Mail-Benachrichtigungen“ aus.</p>
+<p>Wählen Sie als Nächstes „Incidents“ aus.</p>
+<p>So fügen Sie eine neue Benachrichtigung hinzu</p>
+<ul>
+<li>Wählen Sie „Incident-E-Mail-Benachrichtigung hinzufügen“ aus.</li>
+<li>Geben Sie einen Namen und eine Beschreibung ein, und wählen Sie „Weiter“ aus.</li>
+<li>Wählen Sie Geräte- und Warnungskriterien und anschließend „Weiter“ aus.</li>
+<li>Geben Sie die E-Mail-Adressen der Empfänger ein, und wählen Sie anschließend „Weiter“ aus.</li>
+<li>Wählen Sie die Schaltfläche „Regel erstellen“ aus.</li>
+</ul>
+<h3 id="manage-threat-analytics-email-notifications">Verwalten von E-Mail-Benachrichtigungen der Bedrohungsanalyse</h3>
+<p>Gehen Sie wie folgt vor, um Einstellungen für E-Mail-Benachrichtigungen der Bedrohungsanalyse für Ihre Organisation anzuzeigen, hinzuzufügen oder zu bearbeiten:</p>
+<p>Wählen Sie im Navigationsbereich die Option „Einstellungen“ und anschließend „Microsoft&nbsp;Defender XDR“ aus. Wählen Sie „E-Mail-Benachrichtigungen“ aus.</p>
+<p>Wählen Sie als Nächstes „Bedrohungsanalyse“ aus.</p>
+<p>So fügen Sie eine neue Benachrichtigung hinzu</p>
+<ul>
+<li>Wählen Sie „Benachrichtigungsregel erstellen“ aus.</li>
+<li>Geben Sie einen Namen und eine Beschreibung ein, und wählen Sie „Weiter“ aus.</li>
+<li>Wählen Sie Kriterien für die Bedrohungsanalyse und anschließend „Weiter“ aus.</li>
+<li>Geben Sie die E-Mail-Adressen der Empfänger ein, und wählen Sie anschließend „Weiter“ aus.</li>
+<li>Wählen Sie die Schaltfläche „Regel erstellen“ aus.</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

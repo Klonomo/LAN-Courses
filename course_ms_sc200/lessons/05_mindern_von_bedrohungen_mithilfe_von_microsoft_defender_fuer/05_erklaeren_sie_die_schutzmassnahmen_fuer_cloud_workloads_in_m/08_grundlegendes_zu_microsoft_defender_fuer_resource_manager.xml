@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_05_05_08" title="Grundlegendes zu Microsoft Defender für Resource Manager">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Grundlegendes zu Microsoft Defender für Resource Manager</div>
+<div class="section-content">
+<p>Azure Resource Manager ist der Bereitstellungs- und Verwaltungsdienst für Azure. Es bietet eine Verwaltungsebene, mit der Sie Ressourcen in Ihrem Azure-Konto erstellen, aktualisieren und löschen können. Mithilfe von Verwaltungsfeatures wie Zugriffssteuerung, Sperren und Tags können Sie Ihre Ressourcen nach der Bereitstellung schützen und organisieren.</p>
+<p>Die Cloudverwaltungsebene ist ein wichtiger Dienst, der mit allen Ihren Cloudressourcen verbunden ist. Aufgrund dieser Integration ist es auch ein potenzielles Ziel für Angreifer. Daher empfehlen wir Sicherheitsteams, die Verwaltungsebene der Ressourcen genau zu überwachen.</p>
+<p>Microsoft Defender für Ressourcen-Manager überwacht automatisch die Ressourcenverwaltungsvorgänge in Ihrer Organisation. Unabhängig davon, ob sie über das Azure-Portal, Azure REST-APIs, Azure CLI oder andere programmgesteuerte Azure-Clients Defender für Cloud ausgeführt werden, führt erweiterte Sicherheitsanalysen aus, um Bedrohungen zu erkennen und Sie über verdächtige Aktivitäten zu benachrichtigen.</p>
+<h2 id="what-are-the-benefits-of-microsoft-defender-for-resource-manager">Welche Vorteile bietet Microsoft Defender for Resource Manager?</h2>
+<p>Defender für Ressourcen-Manager schützt vor Problemen, einschließlich:</p>
+<ul>
+<li><p>
+              <strong>Verdächtige Ressourcenverwaltungsvorgänge</strong>, z. B. Vorgänge aus verdächtigen IP-Adressen, Deaktivieren von Antischadsoftware und verdächtigen Skripts, die in VM-Erweiterungen ausgeführt werden</p>
+</li>
+<li><p>
+              <strong>Verwendung von Ausbeutungs-Toolkits</strong> wie Microburst oder PowerZure</p>
+</li>
+<li><p>
+              <strong>Laterale Verschiebung</strong> von der Azure-Verwaltungsebene zur Azure-Ressourcendatenebene</p>
+</li>
+</ul>
+<h2 id="how-to-investigate-alerts-from-microsoft-defender-for-resource-manager">Wie man Warnungen von Microsoft Defender für den Ressourcenmanager untersucht</h2>
+<p>Sicherheitswarnungen von Defender für Resource Manager basieren auf Bedrohungen, die bei der Überwachung von Azure Resource Manager-Vorgängen erkannt werden. Defender für Cloud verwendet interne Protokollquellen von Azure Resource Manager und Azure Activity Log, einer Plattformanmeldung in Azure, die Einblicke in Ereignisse auf Abonnementebene bietet.</p>
+<p>So untersuchen Sie Sicherheitswarnungen von Defender für Resource Manager</p>
+<ol>
+<li><p>Öffnen Sie das Azure-Aktivitätsprotokoll.</p>
+</li>
+<li><p>Filtern Sie die Ereignisse nach Folgendem:</p>
+<ul>
+<li><p>In der Warnung erwähntes Abonnement</p>
+</li>
+<li><p>Zeitrahmen der erkannten Aktivität</p>
+</li>
+<li><p>Zugehöriges Benutzerkonto (sofern relevant)</p>
+</li>
+</ul>
+</li>
+<li><p>Suchen Sie nach verdächtigen Aktivitäten.</p>
+</li>
+</ol>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

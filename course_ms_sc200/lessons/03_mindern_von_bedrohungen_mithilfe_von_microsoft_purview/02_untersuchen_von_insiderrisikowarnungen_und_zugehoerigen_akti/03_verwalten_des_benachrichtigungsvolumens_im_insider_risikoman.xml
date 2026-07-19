@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_03_02_03" title="Verwalten des Benachrichtigungsvolumens im Insider-Risikomanagement">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwalten des Benachrichtigungsvolumens im Insider-Risikomanagement</div>
+<div class="section-content">
+<p>Das Ausgleichen des Warnungsvolumens ist ein wichtiger Bestandteil der Aufrechterhaltung eines effizienten Insider-Risikoprogramms. Wenn Ihre Richtlinien zu wenige Warnungen generieren, verpassen Sie möglicherweise aussagekräftige Signale. Wenn sie zu viele generieren, werden Die Ermittler möglicherweise überwältigt, wodurch es schwieriger wird, sich auf aktivitäten mit hohem Risiko zu konzentrieren. Das Microsoft Purview Insider-Risikomanagement enthält mehrere Tools und Einstellungen, mit denen Sie das Benachrichtigungsvolumen optimieren und sicherstellen können, dass Ihre Umgebung konsistente, fokussierte Untersuchungen unterstützt.</p>
+<h2 id="when-youre-receiving-too-few-alerts">Wenn Sie zu wenige Benachrichtigungen erhalten</h2>
+<p>Wenn Sie weniger Warnungen erhalten als erwartet erhalten, kann dies darauf hindeuten, dass Ihre Richtlinien zu schmal sind oder dass Schwellenwerte zu hoch festgelegt sind. So erhöhen Sie das Benachrichtigungsvolumen:</p>
+<ul>
+<li>
+              <strong>Aktivieren Sie in</strong> den <strong>Richtlinienindikatoreneinstellungen weitere Risikoindikatoren</strong> . Dadurch werden die Arten von Aktivitäten erweitert, die von Richtlinien erkannt werden.</li>
+<li>
+              <strong>Fügen Sie weitere Benutzer</strong> in den Richtlinienbereich ein, indem Sie den Abschnitt " <strong>Benutzer und Gruppen</strong> " der Richtlinie bearbeiten.</li>
+<li>
+              <strong>Niedrigere Triggerschwellenwerte</strong> , um benutzer früher basierend auf bestimmten Ereignissen zu bewerten, z. B. Rücktritt oder Zugriff auf vertrauliche Inhalte.</li>
+<li>
+              <strong>Niedrigere Indikatorschwellenwerte, um Warnungen</strong> basierend auf weniger häufigen oder weniger schweren Aktivitäten zu generieren.</li>
+<li>
+              <strong>Passen Sie den Schieberegler für die Warnungslautstärke</strong> unter " <strong>Einstellungen &gt; intelligente Erkennungen"</strong> an. Wenn Sie den Schieberegler in Richtung "Weitere Warnungen" verschieben, erhöht sich die gesamte Warnungsgenerierung, einschließlich mittlerer und niedriger Schweregrad warnungen.</li>
+</ul>
+<div class="TIP">
+<p>Tipp</p>
+<p>Richtlinien, die auf bestimmten Vorlagen basieren, z. B. <em>Datenlecks</em> und <em>riskante Browsernutzung</em>, ermöglichen benutzerdefinierte Schwellenwerte, die verringert werden können, um mehr Warnungen zu generieren.</p>
+</div>
+<h2 id="when-youre-receiving-too-many-alerts">Wenn Sie zu viele Benachrichtigungen erhalten</h2>
+<p>Das hohe Warnvolumen kann Analysten überwältigen und die Effektivität Ihres Untersuchungsprozesses verringern. So reduzieren Sie das Benachrichtigungsvolumen:</p>
+<ul>
+<li>
+              <strong>Aktivieren Sie Analysen</strong> in <strong>Settings &gt; Analytics</strong> , um Risikobereiche zu identifizieren und Ihren Ansatz entsprechend anzupassen.</li>
+<li>
+              <strong>Verwenden Sie Echtzeiteinblicke</strong> , um Schwellenwerte und Indikatorauswahlen basierend auf empfohlenen Werten zu aktualisieren.</li>
+<li>
+              <strong>Verfeinern Sie Richtlinienbereich und Inhalte</strong> , indem Sie die Liste der In-Scope-Benutzer einschränken oder nur die vertraulichsten Dateien und Kommunikationskanäle priorisieren.</li>
+<li>
+              <strong>Aktivieren Sie die Anpassung von Inlinewarnungen</strong> , damit Analysten Schwellenwerte während der Triage anpassen können.</li>
+<li>
+              <strong>Schließen Sie mehrere Warnungen mit niedriger Priorität in massenweise, um Rauschen</strong> in der Warnungswarteschlange zu reduzieren.</li>
+</ul>
+<h2 id="configuration-options-for-alert-management">Konfigurationsoptionen für die Warnungsverwaltung</h2>
+<p>Über die grundlegende Optimierung hinaus bietet Microsoft Purview mehrere Konfigurationsoptionen, um die Benachrichtigungslautstärke effektiver zu verwalten:</p>
+<ul>
+<li>
+              <strong>Verwenden Sie geeignete Richtlinienvorlagen</strong> , um bestimmte Risikoszenarien abzuzielen.</li>
+<li>
+              <strong>Konfigurieren Sie globale Ausschlüsse</strong> , um zu verhindern, dass gutartige Aktivitäten Warnungen auslösen.</li>
+<li>
+              <strong>Definieren Sie Erkennungsgruppen</strong> , um unterschiedliche Richtlinien auf verschiedene Benutzerpopulationen anzuwenden.</li>
+<li>
+              <strong>Erstellen Sie Indikatorvarianten</strong> , um die Erkennungslogik zu verfeinern.</li>
+<li>
+              <strong>Passen Sie die Zeitrahmen von Richtlinien an</strong>, um zu steuern, wie weit Aktivitäten in der Vergangenheit ausgewertet werden.</li>
+<li>
+              <strong>Weisen Sie geeignete Rollen</strong> zu, um sicherzustellen, dass nur qualifizierte Benutzer vertrauliche Konfigurationsänderungen vornehmen können.</li>
+</ul>
+<p>Eine effektive Verwaltung des Warnungsvolumens erfordert sowohl die Vorabplanung als auch die fortlaufende Optimierung. Verwenden Sie integrierte Analyse- und Schwellenwertempfehlungen, um ein verwaltbares Signal-zu-Rausch-Verhältnis aufrechtzuerhalten. Wenn das Warnungsvolumen effektiv abgestimmt ist, wird Ihr Untersuchungsprozess stärker fokussiert, effizienter und an die Prioritäten des Unternehmensrisikos ausgerichtet.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

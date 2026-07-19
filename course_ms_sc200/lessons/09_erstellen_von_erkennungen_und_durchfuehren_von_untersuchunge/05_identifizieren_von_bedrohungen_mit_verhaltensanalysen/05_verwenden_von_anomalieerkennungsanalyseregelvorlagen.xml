@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_09_05_05" title="Verwenden von Anomalieerkennungsanalyseregelvorlagen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwenden von Anomalieerkennungsanalyseregelvorlagen</div>
+<div class="section-content">
+<p>Mit Angreifern und Verteidigern, die ständig um Vorteile im Wettrennen der Cybersicherheit kämpfen, finden Angreifer immer Möglichkeiten, die Erkennung zu umgehen. Zwangsläufig führen Angriffe jedoch immer noch zu einem ungewöhnlichen Verhalten in den Systemen, die angegriffen werden. Microsoft Sentinels anpassbare, machine learning-basierte Anomalien können dieses Verhalten mit Analyseregelvorlagen identifizieren, die sofort einsatzbereit sind. Anomalien zeigen zwar nicht unbedingt böswilliges oder sogar verdächtiges Verhalten selbst an, sie können jedoch verwendet werden, um Erkennungen, Untersuchungen und Bedrohungssuche zu verbessern:</p>
+<ul>
+<li><p><strong>Zusätzliche Signale zur Verbesserung der Erkennung:</strong> Sicherheitsanalysten können Anomalien verwenden, um neue Bedrohungen zu erkennen und vorhandene Erkennungen effektiver zu machen. Eine einzelne Anomalie ist kein starkes Signal von bösartigem Verhalten, aber wenn sie mit mehreren Anomalien kombiniert werden, die an verschiedenen Stellen in der Killchain auftreten, ist ihre kumulative Wirkung viel stärker. Sicherheitsanalysten können vorhandene Erkennungen verbessern, indem sie das ungewöhnliche Verhalten, das durch Anomalien identifiziert wird, zu einer Bedingung machen, dass Warnungen ausgelöst werden.</p>
+</li>
+<li><p><strong>Nachweise während der Untersuchungen:</strong> Sicherheitsanalysten können auch Anomalien bei Untersuchungen verwenden, um eine Verletzung zu bestätigen, neue Wege zur Untersuchung zu finden und ihre potenziellen Auswirkungen zu bewerten. Diese Effizienz reduziert die Zeit, die Sicherheitsanalysten für Untersuchungen aufwenden.</p>
+</li>
+<li><p><strong>Der Beginn proaktiver Bedrohungssuche:</strong> Bedrohungssucher können Anomalien als Kontext verwenden, um festzustellen, ob ihre Abfragen verdächtiges Verhalten entdeckt haben. Wenn das Verhalten verdächtig ist, zeigen die Anomalien auch auf potenzielle Pfade für die weitere Suche. Diese Hinweise von Anomalien reduzieren sowohl die Zeit, um eine Bedrohung zu erkennen als auch ihre Chance, Schaden zu verursachen.</p>
+</li>
+</ul>
+<p>Anomalien können kraftvolle Werkzeuge sein, verursachen aber bekanntermaßen viele Nebenergebnisse. Sie erfordern in der Regel viel mühsame Optimierungen für bestimmte Umgebungen oder komplexe Nachbearbeitungen. Anpassbare Microsoft Sentinel-Anomalievorlagen werden von unserem Data Science-Team optimiert und liefern einen sofort einsatzbereiten Wert. Wenn jedoch eine weitere Optimierung erforderlich ist, ist der Prozess einfach und erfordert keine Kenntnisse des maschinellen Lernens. Die Schwellenwerte und Parameter für viele der Anomalien können über die bereits vertraute Analyseregel-Benutzeroberfläche konfiguriert und optimiert werden. Die Performance der ursprünglichen Schwellenwerte und Parameter kann innerhalb der Benutzeroberfläche mit den neuen verglichen und bei Bedarf während einer Test- oder Flighting-Phase weiter angepasst werden. Sobald die Anomalie die Leistungsziele erfüllt, kann die Anomalie mit dem neuen Schwellenwert oder den neuen Parametern mit dem Klick auf eine Schaltfläche zur Produktion heraufgestuft werden. Microsoft Sentinel anpassbare Anomalien ermöglichen es Ihnen, von Anomalien zu profitieren, ohne viel Aufwand betreiben zu müssen.</p>
+<h2 id="work-with-anomaly-detection-analytics-rules">Arbeiten mit Anomalieerkennungsanalyseregeln</h2>
+<p>Die anpassbare Anomaliefunktion von Microsoft Sentinel bietet integrierte Anomalievorlagen für sofortigen Nutzen ohne zusätzliche Konfiguration. Diese Anomalievorlagen wurden entwickelt, um robust zu sein, indem Tausende von Datenquellen und Millionen von Ereignissen verwendet werden, aber dieses Feature ermöglicht es Ihnen auch, Schwellenwerte und Parameter für die Anomalien problemlos auf der Benutzeroberfläche zu ändern. Anomalieregeln müssen aktiviert werden, bevor sie Anomalien generieren, die Sie in der Tabelle "Anomalien" im Abschnitt "Protokolle" finden können.</p>
+<ol>
+<li><p>Wählen Sie im Microsoft Sentinel-Navigationsmenü "Analyse" aus.</p>
+</li>
+<li><p>Wählen Sie auf der Seite "Analyse" die Registerkarte "Regelvorlagen" aus.</p>
+</li>
+<li><p>Filtern Sie die Liste nach Anomalievorlagen:</p>
+<ul>
+<li><p>Wählen Sie den Regeltypfilter und dann die Dropdownliste aus, die unten angezeigt wird.</p>
+</li>
+<li><p>Heben Sie die Markierung „Alle auswählen“ auf, und markieren Sie dann „Anomalie“.</p>
+</li>
+<li><p>Wählen Sie bei Bedarf den Anfang der Dropdownliste aus, um sie zurückzuziehen, und wählen Sie dann "OK" aus.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="activate-anomaly-rules">Aktivieren von Anomalieregeln</h2>
+<p>Wenn Sie eine der Regelvorlagen auswählen, werden die folgenden Informationen im Detailbereich zusammen mit einer Schaltfläche "Regel erstellen" angezeigt:</p>
+<ul>
+<li><p><strong>In der Beschreibung</strong> wird erläutert, wie die Anomalie und die benötigten Daten funktionieren.</p>
+</li>
+<li><p><strong>Datenquellen</strong> geben den Typ der Protokolle an, die aufgenommen werden müssen, um analysiert zu werden.</p>
+</li>
+<li><p><strong>Taktiken und Techniken</strong> sind die MITRE ATT&amp;CK-Framework-Taktiken und -Techniken, die von der Anomalie abgedeckt werden.</p>
+</li>
+<li><p><strong>Parameter</strong> sind die konfigurierbaren Attribute für die Anomalie.</p>
+</li>
+<li><p><strong>Der Schwellenwert</strong> ist ein konfigurierbarer Wert, der den Grad angibt, in dem ein Ereignis ungewöhnlich sein muss, bevor eine Anomalie erstellt wird.</p>
+</li>
+<li><p><strong>Regelhäufigkeit</strong> ist die Zeit zwischen Protokollverarbeitungsprozessen, die Anomalien finden.</p>
+</li>
+<li><p><strong>Anomalieversion</strong> zeigt die Version der Vorlage an, die von einer Regel verwendet wird. Wenn Sie die von einer bereits aktiven Regel verwendete Version ändern möchten, müssen Sie die Regel neu erstellen.</p>
+</li>
+<li><p><strong>Die zuletzt aktualisierte Vorlage</strong> ist das Datum, an dem die Anomalieversion geändert wurde.</p>
+</li>
+</ul>
+<p>Führen Sie die folgenden Schritte aus, um eine Regel zu aktivieren:</p>
+<ul>
+<li><p>Wählen Sie eine Regelvorlage aus, die noch nicht als IN USE bezeichnet wurde. Wählen Sie die Schaltfläche "Regel erstellen" aus, um den Assistenten zum Erstellen von Regeln zu öffnen.</p>
+<p>Der Assistent für jede Regelvorlage unterscheidet sich geringfügig, verfügt jedoch über drei Schritte oder Registerkarten: "Allgemein", "Konfiguration", "Überprüfen und erstellen".</p>
+<p>Sie können keinen der Werte im Assistenten ändern; Sie müssen zuerst die Regel erstellen und aktivieren.</p>
+</li>
+<li><p>Durchlaufen Sie die Registerkarten, warten Sie auf die Meldung "Überprüfung bestanden" auf der Registerkarte "Überprüfen und Erstellen", und wählen Sie die Schaltfläche "Erstellen" aus.</p>
+<p>Sie können nur eine aktive Regel aus jeder Vorlage erstellen. Nachdem Sie den Assistenten abgeschlossen haben, wird eine aktive Anomalieregel auf der Registerkarte „Aktive Regeln“ erstellt, und die Vorlage (auf der Registerkarte „Regelvorlagen“) wird als IN VERWENDUNG markiert.</p>
+</li>
+</ul>
+<p>Sobald die Anomalieregel aktiviert wurde, werden erkannte Anomalien in der Tabelle "Anomalien" im Abschnitt "Protokolle" Ihres Microsoft Sentinel-Arbeitsbereichs gespeichert.</p>
+<p>Jede Anomalieregel weist einen Schulungszeitraum auf, und Anomalien werden erst nach diesem Schulungszeitraum in der Tabelle angezeigt. Sie finden den Schulungszeitraum in der Beschreibung jeder Anomalieregel.</p>
+<h3 id="assess-the-quality-of-anomalies">Die Qualität von Anomalien bewerten</h3>
+<p>Sie können sehen, wie gut eine Anomalieregel ausgeführt wird, indem Sie eine Stichprobe der Anomalien überprüfen, die von einer Regel über den letzten 24-Stunden-Zeitraum erstellt wurden.</p>
+<ul>
+<li><p>Wählen Sie im Microsoft Sentinel-Navigationsmenü "Analyse" aus.</p>
+</li>
+<li><p>Überprüfen Sie auf der Seite "Analyse", ob die Registerkarte "Aktive Regeln" aktiviert ist.</p>
+</li>
+<li><p>Filtern Sie die Liste nach Anomalieregeln (wie oben).</p>
+</li>
+<li><p>Wählen Sie die Regel aus, die Sie bewerten möchten, und kopieren Sie den Namen vom oberen Rand des Detailbereichs nach rechts.</p>
+</li>
+<li><p>Wählen Sie im Microsoft Sentinel-Navigationsmenü "Logdateien" aus.</p>
+</li>
+<li><p>Wenn ein Abfragekatalog oben angezeigt wird, schließen Sie ihn.</p>
+</li>
+<li><p>Wählen Sie im linken Bereich der Seite "Protokolle" die Registerkarte "Tabellen" aus.</p>
+</li>
+<li><p>Legen Sie den Filter für den Zeitraum auf "Letzte 24 Stunden" fest.</p>
+</li>
+<li><p>Kopieren Sie die Kusto-Abfrage unten und fügen Sie sie in das Abfragefenster ein (wo es heißt "Type your query here or...").</p>
+</li>
+</ul>
+<pre><code class="lang-KQL">Anomalies 
+| where AnomalyTemplateName contains "________________________________"
+</code></pre>
+<pre><code>Paste the rule name you copied above in place of the underscores between the quotation marks.
+</code></pre>
+<ul>
+<li>Wählen Sie "Ausführen" aus.</li>
+</ul>
+<p>Wenn Sie einige Ergebnisse haben, können Sie mit der Bewertung der Qualität der Anomalien beginnen. Wenn Sie keine Ergebnisse haben, versuchen Sie, den Zeitraum zu erhöhen.</p>
+<p>Erweitern Sie die Ergebnisse für jede Anomalie, und erweitern Sie dann das Feld "AnomalyReasons". So erfahren Sie, warum die Anomalie ausgelöst wurde.</p>
+<p>Die "Angemessenheit" oder "Nützlichkeit" einer Anomalie kann von den Bedingungen Ihrer Umgebung abhängen, aber ein häufiger Grund dafür, dass eine Anomalienregel zu viele Anomalien erzeugt, besteht darin, dass der Schwellenwert zu niedrig ist.</p>
+<h3 id="tune-anomaly-rules">Optimieren von Anomalieregeln</h3>
+<p>Obwohl Anomalieregeln so konzipiert sind, dass sie bei der Verwendung sofort die maximale Effektivität aufweisen, ist jede Situation einzigartig, und so müssen Anomalieregeln manchmal optimiert werden.</p>
+<p>Da Sie eine ursprüngliche aktive Regel nicht bearbeiten können, müssen Sie zuerst eine aktive Anomalieregel duplizieren und dann die Kopie anpassen.</p>
+<p>Die ursprüngliche Anomalieregel wird weiterhin ausgeführt, bis Sie sie entweder deaktivieren oder löschen.</p>
+<p>Dies ist beabsichtigt, um Ihnen die Möglichkeit zu geben, die ergebnisse zu vergleichen, die von der ursprünglichen Konfiguration und dem neuen generiert wurden. Doppelte Regeln sind standardmäßig deaktiviert. Sie können nur eine angepasste Kopie einer beliebigen Anomalieregel erstellen. Versuche, eine zweite Kopie zu erstellen, schlägt fehl.</p>
+<ul>
+<li><p>Um die Konfiguration einer Anomalieregel zu ändern, wählen Sie die Anomalieregel auf der Registerkarte "Aktive Regeln" aus.</p>
+</li>
+<li><p>Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle in der Zeile der Regel, oder klicken Sie mit der linken Maustaste auf die Auslassungspunkte (...) am Ende der Zeile, und wählen Sie dann "Duplizieren" aus.</p>
+</li>
+<li><p>Die neue Kopie der Regel hat das Suffix "- Angepasst" im Regelnamen. Um diese Regel tatsächlich anzupassen, wählen Sie diese Regel aus, und wählen Sie "Bearbeiten" aus.</p>
+</li>
+<li><p>Die Regel wird im Analyseregel-Assistenten geöffnet. Hier können Sie die Parameter der Regel und des zugehörigen Schwellenwerts ändern. Die Parameter, die geändert werden können, variieren je nach Anomalietyp und Algorithmus.</p>
+</li>
+<li><p>Sie können die Ergebnisse Ihrer Änderungen im Ergebnisvorschaufenster anzeigen. Wählen Sie in der Ergebnisvorschau eine Anomalie-ID aus, um zu sehen, warum das ML-Modell diese Anomalie identifiziert.</p>
+</li>
+<li><p>Aktivieren Sie die angepasste Regel, um Ergebnisse zu generieren. Einige Ihrer Änderungen erfordern möglicherweise, dass die Regel erneut ausgeführt wird. Daher müssen Sie warten, bis sie abgeschlossen ist, und kehren Sie zurück, um die Ergebnisse auf der Protokollseite zu überprüfen. Die angepasste Anomalieregel wird standardmäßig im Testmodus (Flighting) ausgeführt. Die ursprüngliche Regel wird standardmäßig im Produktionsmodus ausgeführt.</p>
+</li>
+<li><p>Um die Ergebnisse zu vergleichen, wechseln Sie zurück zur Tabelle "Anomalies" in Protokollen, um die neue Regel wie zuvor zu bewerten, suchen Sie nur nach Zeilen mit dem ursprünglichen Regelnamen und dem doppelten Regelnamen mit "- Angepasst", der in der Spalte "AnomalyTemplateName" angefügt wurde.</p>
+<p>Wenn Sie mit den Ergebnissen für die angepasste Regel zufrieden sind, können Sie zur Registerkarte "Aktive Regeln" zurückkehren, auf die angepasste Regel klicken, die Schaltfläche "Bearbeiten" auswählen und auf der Registerkarte "Allgemein" sie von "Flighting" zu "Produktion" wechseln. Die ursprüngliche Regel wird automatisch in Flighting geändert, da Sie nicht gleichzeitig über zwei Versionen derselben Regel in der Produktion verfügen können.</p>
+</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

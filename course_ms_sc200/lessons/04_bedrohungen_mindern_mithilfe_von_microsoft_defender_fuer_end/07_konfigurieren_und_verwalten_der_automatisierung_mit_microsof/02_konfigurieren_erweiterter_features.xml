@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_07_02" title="Konfigurieren erweiterter Features">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Konfigurieren erweiterter Features</div>
+<div class="section-content">
+<p>Die Seite „Erweiterte Funktionen“ im Bereich „Einstellungen“ &gt; „Allgemein“ bietet die folgenden Einstellungen für die Automatisierung:</p>
+<p>Der Bereich „Erweiterte Funktionen“ im Bereich „Allgemeine Einstellungen“ bietet viele Umschalter für Funktionen des Produkts. Die folgenden Einstellungen sind für die Automatisierung von Bedeutung.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Funktion</th>
+<th style="text-align: left;">BESCHREIBUNG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Automatisierte Untersuchung</td>
+<td style="text-align: left;">Ermöglicht die Automatisierungsfunktionen für die Untersuchung und Reaktion</td>
+</tr>
+<tr>
+<td style="text-align: left;">Enable EDR in block mode (EDR im Blockmodus aktivieren)</td>
+<td style="text-align: left;">Bei Aktivierung verwendet Microsoft Defender für Endpunkt Funktionen zur Blockierung und Eingrenzung nach Verhaltensmustern, indem schädliche Artefakte oder Verhaltensweisen über die EDR-Funktionen (Endpoint Detection and Response) nach einer Sicherheitsverletzung blockiert werden. Diese Funktion ändert nicht die Art und Weise, wie Microsoft Defender für Endpunkt die Erkennung, die Generierung von Warnungen und die Vorfallkorrelation ausführt.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Automatically resolve alerts (Warnungen automatisch auflösen)</td>
+<td style="text-align: left;">Löst eine Warnung auf, wenn die automatisierte Untersuchung keine Bedrohungen findet oder alle bösartigen Artefakte korrigiert werden konnten.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Allow or block file (Dateien zulassen oder blockieren)</td>
+<td style="text-align: left;">Sie müssen sicherstellen, dass Windows Defender Antivirus aktiviert ist und dass die Funktion für den cloudbasierten Schutz in Ihrer Organisation aktiviert ist, damit die Funktion zum Zulassen oder Blockieren von Dateien verwendet werden kann.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="automated-investigation">Automatisierte Untersuchung</h3>
+<p>Aktivieren Sie diese Funktion, um die Funktionen zur automatisierten Untersuchung und Wartung des Diensts zu nutzen.</p>
+<h3 id="autoresolve-remediated-alerts">Automatisches Auflösen von Warnungen nach der Wartung</h3>
+<p>Bei Mandanten, die ab Windows&nbsp;10, Version&nbsp;1809 oder höher erstellt wurden, ist die Funktion zur automatisierten Untersuchung und Wartung standardmäßig so konfiguriert, dass Warnungen gelöst werden, deren Ergebnisstatus bei der automatisierten Analyse „No threats found“ (Keine Bedrohungen gefunden) oder „Remediated“ (Behoben) lautet.  Wenn Warnungen nicht automatisch gelöst werden sollen, müssen Sie das Feature manuell deaktivieren.</p>
+<p>Das Ergebnis der Aktion zum automatischen Auflösen kann Einfluss auf die Berechnung der Risikostufe des Geräts haben, die auf den aktiven Warnungen auf einem Gerät beruht.  Wenn ein Security Operations Analyst den Status einer Warnung manuell auf „In Bearbeitung“ oder „Aufgelöst“ festlegt, wird dies von der Funktion für die automatische Auflösung nicht überschrieben.</p>
+<h3 id="allow-or-block-file">Allow or block file (Dateien zulassen oder blockieren)</h3>
+<p>Die Blockierung ist nur verfügbar, wenn Ihre Organisation diese Anforderungen erfüllt:</p>
+<ul>
+<li>Microsoft Defender Antivirus wird als aktive Antischadsoftware verwendet.</li>
+</ul>
+<p>Und</p>
+<ul>
+<li>Die Funktion für den cloudbasierten Schutz ist aktiviert.</li>
+</ul>
+<p>Diese Funktion ermöglicht Ihnen, potenziell schädliche Dateien in Ihrem Netzwerk zu blockieren. Das Blockieren einer Datei verhindert, dass sie auf Geräten in Ihrer Organisation gelesen, geschrieben oder ausgeführt wird.  Nachdem Sie diese Funktion aktiviert haben, können Sie Dateien über die Registerkarte „Indikator hinzufügen“ auf der Profilseite einer Datei blockieren.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

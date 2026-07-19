@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_06_03_02" title="Verwenden des Union-Operators">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwenden des Union-Operators</div>
+<div class="section-content">
+<p>Der Union-Operator verwendet mindestens zwei Tabellen und gibt die Zeilen aller Tabellen zurück. Es ist wichtig, dass Sie grundlegendes Verständnis darüber haben, wie Ergebnisse mit dem Pipezeichen übergeben und beeinflusst werden.</p>
+<p>Folgendes gilt basierend auf dem Zeitfenster, das im Abfragefenster festgelegt wurde:</p>
+<ul>
+<li><p>Abfrage&nbsp;1 gibt alle Zeilen von SecurityEvent und alle Zeilen von SigninLogs zurück.</p>
+</li>
+<li><p>Abfrage&nbsp;2 gibt eine einzelne Zeile und eine einzelne Spalte zurück. Hierbei handelt es sich um die Anzahl aller Zeilen von SecurityEvent und aller Zeilen von SigninLogs.</p>
+</li>
+<li><p>Abfrage&nbsp;3 gibt alle Zeilen von SecurityEvent und eine einzelne Zeile für SigninLogs zurück.</p>
+</li>
+</ul>
+<p>Führen Sie jede Abfrage separat aus, um die Ergebnisse anzuzeigen.</p>
+<pre><code class="lang-kusto">// Query 1
+
+SecurityEvent 
+| union SigninLogs  
+
+// Query 2
+
+SecurityEvent 
+| union SigninLogs  
+| summarize count() 
+| project count_
+
+// Query 3
+
+SecurityEvent 
+| union (SigninLogs | summarize count()| project count_)
+
+</code></pre>
+<p>Der Union-Operator unterstützt Platzhalter für mehrere Union-Tabellen. Der folgende KQL-Code erstellt eine Anzahl für die Zeilen in allen Tabellen mit Namen, die jeweils mit „Security“ beginnen.</p>
+<pre><code class="lang-kusto">union Security* 
+| summarize count() by Type
+
+</code></pre>
+<p>Bei Verwendung von Wildcard-Unions müssen Sie häufig wissen, aus welcher Quelltabelle jede Zeile kommt. Verwenden Sie den <code>withsource</code> Parameter, um eine Spalte hinzuzufügen, die die Quelltabelle für jede Zeile identifiziert.</p>
+<pre><code class="lang-kusto">union withsource=SourceTable Security*
+| summarize count() by SourceTable
+
+</code></pre>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

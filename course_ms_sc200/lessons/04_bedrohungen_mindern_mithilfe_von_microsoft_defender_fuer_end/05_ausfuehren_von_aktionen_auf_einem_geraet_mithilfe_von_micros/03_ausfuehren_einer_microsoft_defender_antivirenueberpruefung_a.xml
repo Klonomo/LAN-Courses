@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_05_03" title="Ausführen einer Microsoft Defender-Antivirenüberprüfung auf Geräten">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Ausführen einer Microsoft Defender-Antivirenüberprüfung auf Geräten</div>
+<div class="section-content">
+<p>Im Rahmen des Untersuchungs- oder Antwortprozesses können Sie eine Antivirenüberprüfung remote initiieren, um Schadsoftware, die auf einem gefährdeten Gerät vorhanden sein kann, zu identifizieren und zu entfernen.</p>
+<div class="IMPORTANT">
+<p>Wichtig</p>
+<p>Diese Aktion ist für Geräte mit Windows 10 Version 1709 oder höher oder Windows 11 verfügbar.
+Eine Microsoft Defender Antivirus-Überprüfung (Microsoft Defender AV) kann parallel zu anderen Antivirenlösungen ausgeführt werden, unabhängig davon, ob es sich bei Microsoft Defender&nbsp;AV um die aktive Antivirenlösung handelt. Microsoft Defender&nbsp;AV kann sich im passiven Modus befinden. Weitere Informationen finden Sie unter der Microsoft Defender Antivirus-Kompatibilität.</p>
+</div>
+<p>Nachdem Sie „Antivirenüberprüfung ausführen“ ausgewählt haben, wählen Sie den gewünschten Überprüfungstyp (schnell oder vollständig) aus, und fügen Sie einen Kommentar hinzu, bevor Sie die Überprüfung bestätigen.</p>
+<p>Im Aktionscenter werden die Scaninformationen angezeigt, und die Gerätezeitleiste enthält ein neues Ereignis, wodurch angezeigt wird, dass auf dem Gerät ein Scanvorgang gesendet wurde. Microsoft Defender AV-Warnungen spiegeln alle Erkennungen wider, die während des Scans angezeigt wurden.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Beim Auslösen einer Überprüfung mithilfe der Defender für Endpunkt-Antwortaktion gilt weiterhin der Wert „ScanAvgCPULoadFactor“ von Microsoft Defender Antivirus und schränkt die Auswirkungen der Überprüfung auf die CPU ein.
+Wenn ScanAvgCPULoadFactor nicht konfiguriert ist, ist der Standardwert ein Grenzwert von 50% maximale CPU-Auslastung während eines Scans.</p>
+</div>
+<h3 id="initiate-automated-investigations">Initiieren automatisierter Untersuchungen</h3>
+<p>Sie können bei Bedarf eine neue allgemeine automatisierte Untersuchung auf dem Gerät starten. Während einer Untersuchung wird jede weitere vom Gerät generierte Warnung einer laufenden automatisierten Untersuchung hinzugefügt, bis diese Untersuchung abgeschlossen ist. Wenn auf anderen Geräten dieselbe Bedrohung erkannt wird, werden diese Geräte der Untersuchung hinzugefügt.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

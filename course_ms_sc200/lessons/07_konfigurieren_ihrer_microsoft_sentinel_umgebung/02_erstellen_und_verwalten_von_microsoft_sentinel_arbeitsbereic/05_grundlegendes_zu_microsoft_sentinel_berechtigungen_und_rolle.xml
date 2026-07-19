@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_07_02_05" title="Grundlegendes zu Microsoft Sentinel-Berechtigungen und -Rollen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Grundlegendes zu Microsoft Sentinel-Berechtigungen und -Rollen</div>
+<div class="section-content">
+<p>Microsoft Sentinel verwendet die rollenbasierte Zugriffssteuerung in Azure (Azure Role-Based Access Control, Azure RBAC). Dabei werden integrierte Rollen bereitgestellt, die Benutzern, Gruppen und Diensten in Azure zugewiesen werden können.</p>
+<p>Verwenden Sie Azure RBAC, um Rollen innerhalb Ihres Security Operations-Teams zu erstellen und zuzuweisen und damit angemessenen Zugriff auf Microsoft Sentinel zu ermöglichen. Mithilfe der verschiedenen Rollen können Sie präzise steuern, was Benutzer von Microsoft Sentinel anzeigen und welche Aktionen sie ausführen können. Azure-Rollen können direkt im Microsoft Sentinel-Arbeitsbereich zugewiesen werden oder in einem Abonnement oder einer Ressourcengruppe, zu dem bzw. der der Arbeitsbereich gehört, der von Microsoft Sentinel geerbt wird.</p>
+<h2 id="microsoft-sentinel-specific-roles">Microsoft Sentinel-spezifische Rollen</h2>
+<p>Alle in Microsoft Sentinel integrierten Rollen gewähren Lesezugriff auf die Daten in Ihrem Microsoft Sentinel-Arbeitsbereich:</p>
+<ul>
+<li><p>
+              <strong>Microsoft Sentinel-Leser</strong>: können Daten, Incidents, Arbeitsmappen und andere Microsoft Sentinel-Ressourcen anzeigen.</p>
+</li>
+<li><p>
+              <strong>Microsoft Sentinel-Antwortberechtigte</strong>: können zusätzlich zu den oben genannten Aktionen auch Incidents verwalten (zuweisen, verwerfen usw.).</p>
+</li>
+<li><p>
+              <strong>Microsoft Sentinel-Mitwirkende</strong>: können zusätzlich zu den oben aufgeführten Aktionen Arbeitsmappen, Analyseregeln und andere Microsoft Sentinel-Ressourcen erstellen und bearbeiten.</p>
+</li>
+<li><p>
+              <strong>Microsoft Sentinel Automation Contributor</strong>: ermöglicht es Microsoft Sentinel, Playbooks zu Automatisierungsregeln hinzuzufügen. Es ist nicht für Benutzerkonten gedacht.</p>
+</li>
+</ul>
+<p>Diese Rollen sollten der Ressourcengruppe zugewiesen werden, die den Microsoft Sentinel-Arbeitsbereich enthält, um optimale Ergebnisse zu erzielen. Die Rollen gelten dann für alle Ressourcen, die zur Unterstützung von Microsoft Sentinel bereitgestellt werden, wenn sich diese Ressourcen in derselben Ressourcengruppe befinden.</p>
+<h2 id="additional-roles-and-permissions">Weitere Rollen und Berechtigungen</h2>
+<p>Benutzern mit besonderen Arbeitsanforderungen müssen möglicherweise andere Rollen oder spezifische Berechtigungen zugewiesen werden, um ihre Aufgaben erfüllen zu können.</p>
+<ul>
+<li><p>Arbeiten mit Playbooks zur Automatisierung von Reaktionen auf Bedrohungen</p>
+<p>Microsoft Sentinel verwendet Playbooks für automatische Reaktionen auf Bedrohungen. Playbooks nutzen Azure Logic Apps und sind eine separate Azure-Ressource. Sie können bestimmten Mitgliedern Ihres Security Operations-Teams die Option zuweisen, Logic Apps für SOAR-Vorgänge (Sicherheitsorchestrierung, Automatisierung und Reaktion) zu verwenden. Sie können die Rolle Mitwirkender für Logik-Apps verwenden, um eine explizite Berechtigung für die Verwendung von Playbooks zu erteilen.</p>
+</li>
+<li><p>Microsoft Sentinel-Berechtigungen zum Ausführen von Playbooks erteilen</p>
+<p>Microsoft Sentinel verwendet ein spezielles Dienstkonto, um Playbooks manuell auszuführen oder sie aus Automatisierungsregeln aufzurufen. Die Verwendung dieses Kontos (im Gegensatz zu Ihrem Benutzerkonto) erhöht die Sicherheitsstufe des Diensts.</p>
+<p>Damit eine Automatisierungsregel ein Playbook ausführen kann, muss diesem Konto explizit die Berechtigung für die Ressourcengruppe erteilt werden, in der sich das Playbook befindet. An diesem Punkt kann jede Automatisierungsregel jedes beliebige Playbook in dieser Ressourcengruppe ausführen. Um diese Berechtigungen für dieses Dienstkonto zu gewähren, muss Ihr Konto über Besitzer-Berechtigungen für die Ressourcengruppen verfügen, die die Playbooks enthalten.</p>
+</li>
+<li><p>Verbinden von Datenquellen mit Microsoft Sentinel</p>
+<p>Damit ein Benutzer Data Connectorshinzufügen kann, müssen Sie dem Benutzer Schreibberechtigungen im Microsoft Sentinel-Arbeitsbereich zuweisen. Beachten Sie außerdem die erforderlichen anderen Berechtigungen für jeden Connector, die auf der Seite zum jeweiligen Connector aufgeführt werden.</p>
+</li>
+<li><p>Gastbenutzer, die Incidents zuweisen</p>
+<p>Wenn ein Gastbenutzer in der Lage sein muss, Incidents zuzuweisen, muss dem Benutzer zusätzlich zur Rolle „Microsoft Sentinel-Antwortberechtigter“ auch die Rolle Verzeichnisleseberechtigte zugewiesen werden. Es handelt sich bei dieser Rolle nicht um eine Azure-Rolle, sondern um eine Microsoft Entra-Rolle, und regulären Benutzer*innen (keine Gastbenutzer*innen) ist diese Rolle standardmäßig zugewiesen.</p>
+</li>
+<li><p>Erstellen und Löschen von Arbeitsmappen</p>
+<p>Zum Erstellen und Löschen einer Microsoft Sentinel-Arbeitsmappe benötigt der Benutzer entweder die Rolle „Microsoft Sentinel-Mitwirkender“ oder eine niedrigere Microsoft Sentinel-Rolle mit der Azure Monitor-Rolle Arbeitsmappenmitwirkender. Diese Rolle ist nur zum Erstellen und Löschen von Arbeitsmappen erforderlich, nicht aber für ihre Verwendung.</p>
+</li>
+</ul>
+<h2 id="azure-roles-and-azure-monitor-log-analytics-roles">Azure-Rollen und Azure Monitor Log Analytics-Rollen</h2>
+<p>Zusätzlich zu den für Microsoft Sentinel dedizierten Azure RBAC-Rollen können andere RBAC-Rollen für Log Analytics und Azure weitere Berechtigungen bieten. Diese Rollen umfassen den Zugriff auf Ihren Microsoft Sentinel-Arbeitsbereich und andere Ressourcen.</p>
+<ul>
+<li><p>Azure-Rollen können den Zugriff auf all Ihre Azure-Ressourcen gewähren. Dazu gehören Log Analytics-Arbeitsbereiche und Microsoft Sentinel-Ressourcen:</p>
+<ul>
+<li><p>Besitzer</p>
+</li>
+<li><p>Mitwirkender</p>
+</li>
+<li><p>Leser</p>
+</li>
+</ul>
+</li>
+<li><p>Log Analytics-Rollen gewähren Zugriff auf alle Log Analytics-Arbeitsbereiche:</p>
+<ul>
+<li><p>Log Analytics-Mitwirkender</p>
+</li>
+<li><p>Log Analytics-Leser</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Beispielsweise kann ein Benutzer, der über die Microsoft Sentinel-Rolle „Leser“ und die Azure-Rolle „Mitwirkender“ (nicht die Microsoft Sentinel-Rolle „Mitwirkender“) verfügt, Daten in Microsoft Sentinel bearbeiten. Wenn Sie nur Berechtigungen für Microsoft Sentinel gewähren möchten, sollten Sie die vorherigen Berechtigungen der Benutzers sorgfältig entfernen. Stellen Sie sicher, dass Sie dabei keine erforderliche Berechtigungsrolle für eine andere Ressource ändern.</p>
+<h2 id="microsoft-sentinel-roles-and-allowed-actions">Microsoft Sentinel-Rollen und zulässige Aktionen</h2>
+<p>In der folgenden Tabelle sind die Rollen und zulässigen Aktionen in Microsoft Sentinel zusammengefasst.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Rollen</th>
+<th style="text-align: center;">Playbooks erstellen und ausführen</th>
+<th style="text-align: left;">Erstellen und Bearbeiten von Arbeitsmappen, Analyseregeln und anderen Microsoft Sentinel-Ressourcen</th>
+<th style="text-align: left;">Verwalten von Incidents (z.&nbsp;B. Verwerfen und Zuweisen)</th>
+<th style="text-align: left;">Anzeigen von Datenincidents, Arbeitsmappen und anderen Microsoft Sentinel-Ressourcen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Microsoft Sentinel-Leser</td>
+<td style="text-align: center;">Nein</td>
+<td style="text-align: left;">Nein</td>
+<td style="text-align: left;">Nein</td>
+<td style="text-align: left;">Ja</td>
+</tr>
+<tr>
+<td style="text-align: left;">Microsoft Sentinel-Antwortberechtigter</td>
+<td style="text-align: center;">Nein</td>
+<td style="text-align: left;">Nein</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">Ja</td>
+</tr>
+<tr>
+<td style="text-align: left;">Microsoft Sentinel-Mitwirkender</td>
+<td style="text-align: center;">Nein</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">Ja</td>
+</tr>
+<tr>
+<td style="text-align: left;">Microsoft Sentinel-Rolle „Mitwirkender“ und Logik-App-Rolle „Mitwirkender“</td>
+<td style="text-align: center;">Ja</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">Ja</td>
+</tr>
+</tbody>
+</table>
+<h2 id="custom-roles-and-advanced-azure-rbac">Benutzerdefinierte Rollen und erweiterte Azure RBAC-Rollen</h2>
+<p>Wenn die integrierten Azure-Rollen den besonderen Ansprüchen Ihrer Organisation nicht genügen, können Sie Ihre eigenen benutzerdefinierten Rollen erstellen. Sie können Benutzern, Gruppen und Dienstprinzipalen neben integrierten Rollen auch benutzerdefinierte Rollen für Verwaltungsgruppen-, Abonnement- und Ressourcengruppenbereiche zuweisen.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

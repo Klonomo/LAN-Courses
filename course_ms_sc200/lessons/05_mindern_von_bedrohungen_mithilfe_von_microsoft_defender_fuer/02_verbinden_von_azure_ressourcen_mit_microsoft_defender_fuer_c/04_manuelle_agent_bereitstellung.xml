@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_05_02_04" title="Manuelle Agent-Bereitstellung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Manuelle Agent-Bereitstellung</div>
+<div class="section-content">
+<h1 id="manual-azure-monitor-agent-deployment">Manuelle Azure Monitor-Agent-Bereitstellung</h1>
+<p>Azure Monitor Agent (AMA) ist der empfohlene moderne Agent zum Sammeln von Daten von virtuellen Computern. Im Gegensatz zum älteren Log Analytics-Agent verwendet AMA Datensammlungsregeln (Data Collection Rules, DCRs), um anzugeben, welche Daten erfasst werden sollen und wo sie gesendet werden sollen. Dieser Ansatz bietet mehr Flexibilität und bessere Leistung.</p>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<p>Stellen Sie vor der Installation des Azure Monitor-Agents mit Datensammlungsregeln folgendes sicher:</p>
+<ul>
+<li>Ein Log Analytics-Arbeitsbereich, in dem Sie mindestens über Mitwirkenderechte verfügen</li>
+<li>Berechtigungen zum Erstellen von DCR-Objekten im Arbeitsbereich</li>
+<li>Die virtuellen Computer, die Sie überwachen möchten (Azure VMs oder Azure Arc-fähige Computer)</li>
+</ul>
+<h2 id="create-a-data-collection-rule">Erstellen einer Datensammlungsregel</h2>
+<p>So installieren Sie den Azure Monitor-Agent mithilfe von Datensammlungsregeln manuell:</p>
+<ol>
+<li><p>
+              <strong>Erstellen sie die Datensammlungsregel</strong>:</p>
+<ul>
+<li>Wechseln Sie im Azure-Portal zu "<strong>Monitor</strong>&gt;<strong>Datensammlungsregeln</strong>"</li>
+<li>Wählen Sie <strong>"Erstellen"</strong> aus, um den Bereich "DCR-Erstellung" zu öffnen.</li>
+<li>Geben Sie auf der Registerkarte " <strong>Grundlagen"</strong> Folgendes an: <ul>
+<li>
+              <strong>Regelname</strong>: Ein beschreibender Name für den DCR</li>
+<li>
+              <strong>Abonnement</strong>: Das Abonnement zum Speichern des DCR</li>
+<li>
+              <strong>Ressourcengruppe: Eine Ressourcengruppe</strong> zum Speichern des DCR</li>
+<li>
+              <strong>Region</strong>: Muss dieselbe Region wie Ihr Log Analytics-Arbeitsbereich sein</li>
+<li>
+              <strong>Plattformtyp</strong>: Auswählen von <strong>Windows</strong>, <strong>Linux</strong> oder <strong>All</strong> basierend auf Ihren Zielcomputern</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>
+              <strong>Hinzufügen von Zielressourcen</strong>:</p>
+<ul>
+<li>Wählen Sie auf der Registerkarte "<strong>Ressourcen</strong>" die Option <strong>"Ressourcen hinzufügen" aus</strong>.</li>
+<li>Wählen Sie die virtuellen Computer aus, die diesen DCR verwenden.</li>
+<li>Der Azure Monitor-Agent wird automatisch auf ausgewählten virtuellen Computern installiert, die ihn noch nicht besitzen.</li>
+</ul>
+</li>
+<li><p>
+              <strong>Konfigurieren von Datenquellen</strong>:</p>
+<ul>
+<li>Wählen Sie auf der Registerkarte "<strong>Sammeln und Übermitteln</strong>" die Option <strong>"Datenquelle hinzufügen"</strong> aus.</li>
+<li>Wählen Sie aus den verfügbaren Datenquellentypen aus: <ul>
+<li>
+              <strong>Windows-Ereignisse</strong>: Für Windows-Ereignisprotokolle und Sicherheitsereignisse</li>
+<li>
+              <strong>Leistungsindikatoren</strong>: Für Systemleistungsmetriken</li>
+<li>
+              <strong>Syslog</strong>: Für Linux-Systemprotokolle</li>
+<li>
+              <strong>Textprotokolle</strong>: Für benutzerdefinierte Anwendungsprotokolle</li>
+<li>
+              <strong>IIS-Protokolle</strong>: Für Webserverprotokolle</li>
+</ul>
+</li>
+<li>Angeben des Ziel-Log Analytics-Arbeitsbereichs</li>
+</ul>
+</li>
+<li><p>
+              <strong>Speichern Sie die Konfiguration</strong>:</p>
+<ul>
+<li>Überprüfen Sie Ihre Einstellungen, und wählen Sie <strong>"Erstellen" aus.</strong></li>
+<li>Der DCR wird mit den ausgewählten virtuellen Computern erstellt.</li>
+</ul>
+</li>
+</ol>
+<h2 id="data-sources-for-security-monitoring">Datenquellen zur Sicherheitsüberwachung</h2>
+<p>Konfigurieren Sie für die Integration von Microsoft Defender für Cloud diese allgemeinen Datenquellen:</p>
+<h3 id="windows-machines">Windows-Computer</h3>
+<ul>
+<li>
+              <strong>Windows-Ereignisse</strong>: Sammeln von Sicherheitsereignissen aus Windows-Ereignisprotokollen</li>
+<li>
+              <strong>Leistungsindikatoren</strong>: Überwachen von Systemleistungsmetriken</li>
+<li>
+              <strong>Sicherheitsereignisse</strong>: Erfassen von Authentifizierungs- und Autorisierungsereignissen</li>
+</ul>
+<h3 id="linux-machines">Linux-Rechner</h3>
+<ul>
+<li>
+              <strong>Syslog</strong>: Sammeln von System- und Sicherheitsprotokollen</li>
+<li>
+              <strong>Leistungsindikatoren</strong>: Überwachen der Systemleistung</li>
+<li>
+              <strong>Authentifizierungsprotokolle</strong>: Nachverfolgen von Benutzerzugriffs- und Sicherheitsereignissen</li>
+</ul>
+<h2 id="deployment-methods">Bereitstellungsmethoden</h2>
+<p>Sie können Azure Monitor Agent mit DCRs mit mehreren Methoden bereitstellen:</p>
+<h3 id="azure-portal">Azure-Portal</h3>
+<p>Verwenden Sie die Azure-Portalschnittstelle, um DCRs zu erstellen und sie virtuellen Computern wie oben beschrieben zuzuordnen.</p>
+<h3 id="azure-resource-manager-templates">Azure Resource Manager-Vorlagen</h3>
+<p>Stellen Sie Agents mithilfe von ARM-Vorlagen für konsistente, wiederholbare Bereitstellungen auf mehreren Computern bereit.</p>
+<h3 id="powershell">PowerShell</h3>
+<p>Verwenden Sie Azure PowerShell-Cmdlets zum programmgesteuerten Erstellen und Verwalten von DCRs:</p>
+<pre><code class="lang-powershell"># Create a DCR association
+New-AzDataCollectionRuleAssociation -ResourceUri &lt;vm-resource-id&gt; -RuleId &lt;dcr-resource-id&gt;
+</code></pre>
+<h3 id="azure-cli">Azure-Befehlszeilenschnittstelle (Azure CLI)</h3>
+<p>Verwenden Sie Azure CLI-Befehle für skriptbasierte Bereitstellungen:</p>
+<pre><code class="lang-bash"># Associate a DCR with a VM
+az monitor data-collection rule association create --resource &lt;vm-resource-id&gt; --rule-id &lt;dcr-resource-id&gt;
+</code></pre>
+<h2 id="verify-installation">Überprüfen der Installation</h2>
+<p>Nach dem Erstellen des DCR und dem Zuordnen des DCR zu den VMs:</p>
+<ol>
+<li><p>
+              <strong>Agentstatus überprüfen</strong>:</p>
+<ul>
+<li>Überprüfen, ob der Azure Monitor-Agent auf Ziel-VMs installiert und ausgeführt wird</li>
+<li>Überprüfen Sie die <strong>Herzschlagtabelle</strong> in Ihrem Log Analytics-Arbeitsbereich</li>
+</ul>
+</li>
+<li><p>
+              <strong>Überprüfen der Datensammlung</strong>:</p>
+<ul>
+<li>Abfragen der entsprechenden Tabellen in Log Analytics, um zu bestätigen, dass Daten gesammelt werden</li>
+<li>Es kann bis zu 5 Minuten dauern, bis Daten nach der DCR-Erstellung angezeigt werden.</li>
+</ul>
+</li>
+<li><p>
+              <strong>Überwachen der Agentgesundheit</strong>:</p>
+<ul>
+<li>Verwenden Sie Azure Monitor, um die Agentintegrität und -konnektivität zu überwachen.</li>
+<li>Überprüfen Sie die Fehlermeldungen in den Agentprotokollen</li>
+</ul>
+</li>
+</ol>
+<h2 id="best-practices">Bewährte Methoden</h2>
+<ul>
+<li>
+              <strong>Vermeiden Sie doppelte Daten: Erstellen Sie</strong> nicht mehrere DCRs mit denselben Datenquellen für dieselben virtuellen Computer.</li>
+<li>
+              <strong>Verwenden Sie beschreibende Namen: Benennen Sie</strong> Ihre DCRs eindeutig, um ihren Zweck zu identifizieren</li>
+<li>
+              <strong>Regelmäßige Wartung</strong>: Überprüfen und Aktualisieren von DCRs, wenn sich ihre Überwachungsanforderungen ändern</li>
+<li>
+              <strong>Kostenoptimierung</strong>: Sammeln Sie nur Daten, die Sie benötigen, um unnötige Gebühren zu vermeiden</li>
+</ul>
+<p>Der Azure Monitor-Agent mit Datensammlungsregeln bietet einen modernen, flexiblen Ansatz für die Datensammlung, der nahtlos in die Sicherheitsüberwachungsfunktionen von Microsoft Defender für Cloud integriert wird.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_10_04_02" title="Zugreifen auf Azure-Sentinel-Daten mit externen Tools">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Zugreifen auf Azure-Sentinel-Daten mit externen Tools</div>
+<div class="section-content">
+<p>Vor dem Hunting mit Notebooks ist es von entscheidender Bedeutung zu wissen, dass Microsoft Sentinel auf dem Log Analytics-Datenspeicher beruht, der leistungsstarke Abfragen, ein dynamisches Schema sowie Skalierungsfunktionen für erhebliche Datenmengen bereitstellt.  Das Azure-Portal und alle Microsoft Sentinel-Tools verwenden eine Standard-API für den Zugriff auf diesen Datenspeicher. Dieselbe API steht auch für externe Tools wie Python und PowerShell zur Verfügung. Es gibt zwei Bibliotheken, mit deren Hilfe Sie den API-Zugriff vereinfachen können:</p>
+<ul>
+<li><p>Kqlmagic</p>
+</li>
+<li><p>msticpy</p>
+</li>
+</ul>
+<h3 id="kqlmagic">Kqlmagic</h3>
+<p>Die Kqlmagic-Bibliothek bietet einen einfach zu implementierenden API-Wrapper für die Ausführung von KQL-Abfragen.</p>
+<h3 id="msticpy">msticpy</h3>
+<p>Bei den Python-Sicherheitstools für Microsoft Threat Intelligence handelt es sich um eine Reihe von Python-Tools, die für Sicherheitsuntersuchungen und zur Bedrohungssuche verwendet werden. Viele der Tools entstanden als codebasierte Jupyter Notebook-Instanzen, die geschrieben wurden, um im Rahmen einer Sicherheitsuntersuchung ein Problem zu lösen. Einige der Tools sind nur in Notebooks nützlich (z.&nbsp;B. ein Großteil des nbtools-Teilpakets), aber viele andere können in der Python-Befehlszeile verwendet oder in Ihren Code importiert werden.</p>
+<p>Das Paket befasst sich mit drei zentralen Anforderungen für die Sicherheitsuntersuchung und die Bedrohungssuche:</p>
+<ul>
+<li><p>Erwerben und Anreichern von Daten</p>
+</li>
+<li><p>Analysieren von Daten</p>
+</li>
+<li><p>Visualisieren von Daten</p>
+</li>
+</ul>
+<p>msticpy kann über KQL Abfragen durchführen. Die Bibliothek bietet auch vordefinierte Abfragen für Microsoft Sentinel, Microsoft&nbsp;Defender XDR for Endpoint und Microsoft Security Graph.  Ein Beispiel für eine Funktion ist „list_logons_by_account“, durch die die Anmeldeereignisse für ein Konto abgerufen werden.  Weitere Informationen zu msticpy finden Sie unter <a href="https://msticpy.readthedocs.io/?azure-portal=true" data-linktype="external">https://msticpy.readthedocs.io/</a>.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

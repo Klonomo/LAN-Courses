@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_09_02" title="Grundlegendes zum Sicherheitsrisikomanagement">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Grundlegendes zum Sicherheitsrisikomanagement</div>
+<div class="section-content">
+<p>Eine effektive Erkennung, Bewertung und Wartung von Endpunktschwachstellen ist entscheidend für ein fehlerfreies Sicherheitsprogramm und die Verringerung der Risiken für eine Organisation. Das Bedrohungs- und Sicherheitsrisikomanagement dient als Infrastruktur zum Verringern der Gefährdung einer Organisation, zum Härten der Endpunktoberfläche und zum Steigern der Resilienz.</p>
+<p>Entdecken Sie Sicherheitsrisiken und Fehlkonfigurationen in Echtzeit, mithilfe von Sensoren und ohne Notwendigkeit von Agents oder regelmäßigen Scans. Die Sicherheitsrisiken werden dabei basierend auf der Bedrohungsumgebung, den Erkennungen in Ihrer Organisation, der Vertraulichkeit der Informationen auf anfälligen Geräten und dem geschäftlichen Kontext priorisiert.</p>
+<div class="embeddedvideo"><p><em>[Interaktiver Inhalt auf Microsoft Learn verfügbar]</em></p></div>
+<h2 id="bridging-the-workflow-gaps">Überbrücken der Workflowlücken</h2>
+<p>Das Schwachstellenmanagement ist integriert, in Echtzeit und cloud-basiert. Es ist vollständig mit dem Microsoft-Sicherheitsstapel für Endpunkte, mit Microsoft Intelligent Security Graph und mit der Wissensdatenbank für die Anwendungsanalyse integriert.</p>
+<p>Das Sicherheitsrisikomanagement ist die branchenweit erste Lösung, mit der die Lücke zwischen der Sicherheitsverwaltung und der IT-Verwaltung während des Wartungsvorgangs überbrückt wird. Erstellen Sie eine Sicherheitsaufgabe oder ein Ticket, indem Sie Microsoft Intune und Microsoft Configuration Manager integrieren.</p>
+<h2 id="real-time-discovery">Ermittlung in Echtzeit</h2>
+<p>Zum Ermitteln von Sicherheitsrisiken und Fehlkonfigurationen auf Endpunkten verwendet das Schwachstellenmanagement dieselben agentenlosen integrierten Defender für Endpunkt-Sensoren. Dadurch werden aufwändige Netzwerkscans und IT-Aufwand reduziert.</p>
+<p>Außerdem bietet der Dienst Folgendes:</p>
+<ul>
+<li><p>Echtzeitgerätebestand: Die in Defender für Endpunkt integrierte Geräte melden Sicherheitsrisiken automatisch und pushen ebenso Daten zur Sicherheitskonfiguration an das Dashboard.</p>
+</li>
+<li><p>Einblick in Software- und Sicherheitsrisiken: Erkenntnisse zum Softwarebestand der Organisation und zu Änderungen an der Software, z.&nbsp;B. Installationen, Deinstallationen und Patches. Neu erkannte Sicherheitsrisiken werden mit umsetzbaren Empfehlungen zur Entschärfung für eigene und Drittanbieteranwendungen gemeldet.</p>
+</li>
+<li><p>Laufzeitkontext von Anwendungen: Erkenntnisse zu Verwendungsmustern für Anwendungen zur besseren Priorisierung und Entscheidungsfindung</p>
+</li>
+<li><p>Konfigurationshaltung: Einblick in die Sicherheitskonfigurationen oder Fehlkonfigurationen innerhalb der Organisation. Probleme werden im Dashboard mit Handlungsempfehlungen für die Sicherheit gemeldet.</p>
+</li>
+</ul>
+<h2 id="intelligence-driven-prioritization">Intelligenz-gesteuerte Priorisierung</h2>
+<p>Mit dem Bedrohungs- und Sicherheitsrisikomanagement können Kunden Prioritäten festlegen und sich auf die Schwachstellen konzentrieren, die für ihre Organisation das dringendste und höchste Risiko darstellen. Dabei werden Sicherheitsempfehlungen mit dem dynamische Bedrohungs- und Geschäftskontext abgeglichen:</p>
+<ul>
+<li><p>Verfügbarmachen von tatsächlichen Angriffen: dynamische Anpassung der Priorisierung anhand von Sicherheitsempfehlungen. Der Fokus des Bedrohungs- und Sicherheitsrisikomanagements liegt auf Sicherheitsrisiken, die zurzeit in der Praxis ausgenutzt werden, sowie auf neuen Bedrohungen, die das höchste Risiko darstellen.</p>
+</li>
+<li><p>Erkennen von aktiven Sicherheitsverletzungen: Das Bedrohungs- und Sicherheitsrisikomanagement und die EDR-Erkenntnisse werden abgeglichen, um Sicherheitsrisiken zu priorisieren, die bei einer aktiven Verletzung innerhalb der Organisation ausgenutzt werden.</p>
+</li>
+<li><p>Schützen wertvoller Ressourcen: Identifizieren Sie gefährdete Geräte mit unternehmenskritischen Anwendungen, vertraulichen Daten oder wichtigen Benutzern.</p>
+</li>
+</ul>
+<h2 id="seamless-remediation">Nahtlose Wartung</h2>
+<p>Mit dem Bedrohungs- und Sicherheitsrisikomanagement können Sicherheits- und IT-Administrator*innen nahtlos bei der Problembehandlung zusammenarbeiten.</p>
+<ul>
+<li><p>Senden von Wartungsanforderungen an die IT: Erstellen Sie in Microsoft Intune eine Wartungsaufgabe aus einer bestimmten Sicherheitsempfehlung. Diese Funktion soll in Zukunft noch auf andere IT-Sicherheitsverwaltungsplattformen ausgeweitet werden.</p>
+</li>
+<li><p>Alternative Entschärfungen: Erhalten Sie Erkenntnisse zu weiteren Entschärfungen, z.&nbsp;B. Konfigurationsänderungen, mit denen das Risiko von Softwaresicherheitsrisiken reduziert werden kann.</p>
+</li>
+<li><p>Wartungsstatus in Echtzeit: Echtzeitüberwachung des Status von Wartungsaktivitäten innerhalb der Organisation.</p>
+</li>
+</ul>
+<h2 id="vulnerability-management-walk-through">Vorgehensweise beim Bedrohungs- und Sicherheitsrisikomanagement</h2>
+<p>Sehen Sie sich dieses Video für eine umfassende Einführung in das Schwachstellenmanagement an.</p>
+<div class="embeddedvideo"><p><em>[Interaktiver Inhalt auf Microsoft Learn verfügbar]</em></p></div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

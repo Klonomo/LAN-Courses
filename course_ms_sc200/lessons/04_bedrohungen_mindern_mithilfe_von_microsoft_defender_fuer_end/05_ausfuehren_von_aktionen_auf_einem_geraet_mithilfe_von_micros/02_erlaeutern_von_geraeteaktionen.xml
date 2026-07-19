@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_05_02" title="Erläutern von Geräteaktionen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Erläutern von Geräteaktionen</div>
+<div class="section-content">
+<p>Bei der Untersuchung eines Geräts können Sie Aktionen ausführen, Daten sammeln oder remote darauf zugreifen. Defender für Endpunkt bietet die erforderliche Kontrolle über das Gerät.</p>
+<p>Sie können die folgenden Eindämmungsmaßnahmen ausführen:</p>
+<ul>
+<li><p>Gerät isolieren</p>
+</li>
+<li><p>App-Ausführung einschränken</p>
+</li>
+<li><p>Antivirenüberprüfung ausführen</p>
+</li>
+<li><p>Gerät einschließen</p>
+</li>
+</ul>
+<p>Sie können die folgenden Untersuchungsaktionen ausführen:</p>
+<ul>
+<li><p>Automatisierte Untersuchung initiieren</p>
+</li>
+<li><p>Untersuchungspaket erfassen</p>
+</li>
+<li><p>Live Response-Sitzung initiieren</p>
+</li>
+</ul>
+<p>Im Info-Center finden Sie Informationen zu Aktionen, die für ein Gerät oder eine Datei ausgeführt wurden.</p>
+<h3 id="isolate-devices-from-networks">Isolieren von Geräten von Netzwerken</h3>
+<p>Je nach Schweregrad des Angriffs und Empfindlichkeit des Geräts können Sie es vom Netzwerk isolieren. Dadurch kann verhindert werden, dass der Angreifer das gefährdete Gerät kontrolliert und weitere Aktivitäten wie Datenexfiltration und Lateral Movement-Vorgänge ausführt.</p>
+<p>Mit dieser Funktion zur Geräteisolierung wird das gefährdete Gerät vom Netzwerk getrennt, während die Verbindung mit dem Defender für Endpunkt-Dienst aufrechterhalten und das Gerät weiterhin überwacht wird.</p>
+<p>Isolate Gerät unterstützt Windows-, macOS- und Linux-Endpunkte. Auf Windows 10 Version 1709 oder höher oder Windows 11 haben Sie eine zusätzliche Kontrolle über die Netzwerkisolationsstufe. Sie können auch Outlook-, Microsoft Teams- und Skype for Business-Konnektivität aktivieren (auch als „selektive Isolation“ bekannt).</p>
+<p>Nachdem Sie auf der Geräteseite die Option „Gerät isolieren“ ausgewählt haben, geben Sie einen Kommentar ein und klicken auf „Bestätigen“. Das Aktionscenter zeigt die Scaninformationen an, und die Zeitleiste des Geräts enthält ein neues Ereignis.</p>
+<p>Beim Isolieren eines Geräts wird der Benutzer in einer Benachrichtigung darüber informiert, dass das Gerät vom Netzwerk isoliert wird.</p>
+<h3 id="restrict-app-execution">App-Ausführung einschränken</h3>
+<p>Sie können nicht nur einen Angriff eindämmen, indem Sie bösartige Prozesse beenden, sondern auch ein Gerät sperren und nachfolgende Versuche zum Ausführen potenziell schädlicher Programme verhindern.</p>
+<div class="IMPORTANT">
+<p>Wichtig</p>
+<p>Diese Aktion ist für Geräte mit Windows 10 Version 1709 oder höher oder Windows 11 verfügbar. Sie wird unter macOS oder Linux nicht unterstützt.
+Diese Funktion steht dann zur Verfügung, wenn Ihre Organisation Microsoft Defender Antivirus verwendet.
+Diese Aktion muss den Formaten und Signaturanforderungen der Codeintegritätsrichtlinie von Windows Defender Application Control entsprechen.
+Um die Ausführung einer Anwendung zu beschränken, wird eine Codeintegritätsrichtlinie angewendet, die die Ausführung von Dateien nur zulässt, wenn sie von einem von Microsoft ausgestellten Zertifikat signiert sind. Mit dieser Einschränkungsmethode kann verhindert werden, dass ein Angreifer gefährdete Geräte kontrolliert und weitere schädliche Aktivitäten ausführt.</p>
+</div>
+<p>Sie können die Einschränkung der Ausführung von Anwendungen jederzeit rückgängig machen. Die Schaltfläche auf der Geräteseite ändert sich in "App-Einschränkungen entfernen", und Sie führen dann dieselben Schritte wie das Einschränken der App-Ausführung aus.</p>
+<p>Nachdem Sie auf der Geräteseite "App-Ausführung einschränken" ausgewählt haben, geben Sie einen Kommentar ein, und wählen Sie "Bestätigen" aus. Das Aktionscenter zeigt die Scan-Informationen an, und die Geräte-Zeitleiste enthält ein neues Ereignis.</p>
+<p>Wenn eine App eingeschränkt ist, wird der Benutzer in einer Benachrichtigung darüber informiert, dass die Ausführung der App eingeschränkt ist.</p>
+<h3 id="contain-device">Gerät einschließen</h3>
+<p>Die <strong>Aktion „Gerät isolieren“</strong> ist für nicht verwaltete oder unerwünschte Geräte vorgesehen, die im Netzwerk erkannt werden — Geräte, auf denen der Defender for Endpoint-Sensor nicht installiert ist. Im Gegensatz zu Isolate, wofür ein auf dem Zielgerät installierter Agent erforderlich ist, blockiert Contain den ein- und ausgehenden Netzwerkverkehr auf dem nicht verwalteten Gerät, indem es benachbarte verwaltete Endpunkte anweist, Verbindungen von diesem Gerät abzulehnen.</p>
+<p>Verwenden Sie diese Aktion, wenn Device Discovery ein verdächtiges nicht verwaltetes Gerät identifiziert, das laterale Bewegungen durchführt oder als Einstiegspunkt für einen Angreifer fungiert.</p>
+<p>Um ein nicht verwaltetes Gerät einzuschließen:</p>
+<ul>
+<li>Wählen Sie das Gerät auf der Seite " <strong>Geräteinventar"</strong> aus.</li>
+<li>Wählen Sie <strong>Gerät eindämmen</strong> aus den Antwortaktionen oben auf der Geräteseite.</li>
+<li>Geben Sie einen Kommentar ein, und wählen Sie <strong>"Bestätigen" aus</strong>.</li>
+</ul>
+<p>Das Info-Center zeigt den Eindämmungsstatus an. Um das Gerät freizugeben, wählen Sie <strong>"Aus Eindämmung</strong> freigeben" auf derselben Seite aus.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

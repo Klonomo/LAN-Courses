@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_03_01_02" title="Verständnis von DLP-Warnungen zur Verhinderung von Datenverlust">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verständnis von DLP-Warnungen zur Verhinderung von Datenverlust</div>
+<div class="section-content">
+<p>Durch die Überwachung von DLP-Warnungen (Data Loss Prevention) können Organisationen Risiken erkennen, bevor sie zu Sicherheitsvorfällen werden. In dieser Lektion wird erläutert, wie DLP-Warnungen funktionieren, wo sie zu finden sind und welche Rolle Microsoft Defender XDR und Microsoft Purview im Überwachungsprozess spielen.</p>
+<h2 id="what-is-a-dlp-alert">Was ist eine DLP-Warnung?</h2>
+<p>DLP-Warnungen sind Benachrichtigungen, die ausgelöst werden, wenn die Aktionen einer Person mit einer Bedingung in einer DLP-Richtlinie übereinstimmen. Diese Aktionen können das Freigeben vertraulicher Informationen wie Kreditkartennummern, Sozialversicherungsnummern oder Finanzdatensätze auf eine Weise umfassen, die Daten gefährdet.</p>
+<p>Einige Warnungen werden durch ein einzelnes Ereignis ausgelöst, z. B. wenn jemand ein Dokument, das vertrauliche Daten enthält, an ein persönliches Konto sendet. Andere Warnungen werden ausgelöst, wenn mehrere kleine Ereignisse im Laufe der Zeit addiert werden. Beispielsweise könnte das Senden mehrerer E-Mails mit einer Kreditkartennummer innerhalb eines Tages eine Warnung auslösen, auch wenn keine einzelne E-Mail die Richtlinie allein verletzt hat.</p>
+<p>Warnungen bedeuten nicht automatisch, dass etwas Bösartiges passiert ist. Sie teilen Ihnen lediglich mit, dass etwas den zu markierenden Kriterien entspricht. Ihre Aufgabe besteht darin, herauszufinden, ob die Warnung etwas ist, das eine Aktion oder etwas erfordert, das angibt, dass eine Richtlinie optimiert werden muss.</p>
+<h2 id="where-do-dlp-alerts-show-up">Wo werden DLP-Warnungen angezeigt?</h2>
+<p>DLP-Warnungen werden in zwei Tools angezeigt. Beide zeigen dieselben Warnungen an, dienen jedoch unterschiedlichen Zwecken:</p>
+<ul>
+<li><p>
+              <strong>Microsoft Defender XDR</strong> wird für Sicherheitsuntersuchungen verwendet. Es konsolidiert Vorfälle, damit Sie alles im Zusammenhang mit einer potenziellen Bedrohung an einem zentralen Ort sehen können. Wenn DLP-Warnungen Teil eines größeren Sicherheitsproblems sind, z. B. eine Person, die Daten exfiltriert, während sie auch Antivireneinstellungen deaktiviert, hilft Defender XDR Ihnen, diese Punkte zu verbinden.</p>
+</li>
+<li><p>
+              <strong>Microsoft Purview</strong> wird für compliance verwendet. Sie konzentriert sich mehr auf die Richtlinie selbst: was die Warnung ausgelöst hat, welche Regeln beteiligt waren und ob diese Regeln wie erwartet funktionieren. Wenn die Warnung von einem falsch positiven Ergebnis stammt, können Sie in Purview die Richtlinie so anpassen, dass das nicht mehr passiert.</p>
+</li>
+</ul>
+<h2 id="why-monitor-dlp-alerts">Warum DLP-Warnungen überwachen?</h2>
+<p>Die Überwachung von Warnungen hilft Sicherheitsteams:</p>
+<ul>
+<li>
+              <strong>Grundlegendes zu riskanten Aktivitäten</strong>: Sie können sehen, wie Personen mit vertraulichen Daten interagieren und welche Aktionen zu Datenverlust führen können.</li>
+<li>
+              <strong>Reagieren Sie schnell</strong>: Warnungen sollen eine Antwort anfordern. Wenn Sie sie frühzeitig überprüfen, können Sie verhindern, dass sich ein kleiner Fehler in eine große Verletzung verwandelt.</li>
+<li>
+              <strong>Verbessern Sie die Richtliniengenauigkeit</strong>: Im Laufe der Zeit erfahren Sie, welche Warnungen hilfreich sind und welche nicht. Diese Feedbackschleife hilft Ihnen, Ihre Richtlinien zu verfeinern und Rauschen zu reduzieren.</li>
+</ul>
+<h2 id="how-alerts-help-during-investigations">Wie Warnungen bei Untersuchungen helfen</h2>
+<p>Angenommen, Sie haben eine DLP-Richtlinie, die das Versenden von Kreditkartennummern per E-Mail blockiert. Eine Warnung zeigt, dass jemand in der Finanzabteilung diese Richtlinie ausgelöst hat. Sie öffnen die Warnung in Microsoft Purview und sehen, dass sie durch einen monatlichen Bericht verursacht wurde, der an einen externen Auftragnehmer gesendet wird. Nachdem Sie die Datei überprüft haben, erkennen Sie, dass sie maskierte Kreditkartennummern enthält, nicht reale. Dies kann ein falsch positives Ergebnis sein, daher entscheiden Sie sich, die Richtlinie so anzupassen, dass Zahlen ignoriert werden, die wie diese formatiert sind.</p>
+<p>Gleichzeitig überprüfen Sie jedoch Defender XDR. Sie bemerken, dass derselbe Benutzer auch viele Dateien früher am Morgen aus SharePoint heruntergeladen hat, und es gibt eine zweite Warnung, in der angezeigt wird, dass er versucht hat, eine Datei in ein persönliches Dropbox-Konto hochzuladen. Dadurch erhalten Sie ein vollständiges Bild. Vielleicht war dies doch kein falsch positives Ergebnis. Jetzt wissen Sie, wie Sie weiter vorgehen können.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

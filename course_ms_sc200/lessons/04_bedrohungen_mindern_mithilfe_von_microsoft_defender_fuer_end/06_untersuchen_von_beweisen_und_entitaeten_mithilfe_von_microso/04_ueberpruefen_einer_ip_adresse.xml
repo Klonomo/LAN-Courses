@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_06_04" title="Überprüfen einer IP-Adresse">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Überprüfen einer IP-Adresse</div>
+<div class="section-content">
+<p>Untersuchen Sie die mögliche Kommunikation zwischen Ihren Geräten und externen IP-Adressen (Internetprotokoll).</p>
+<p>Indem Sie alle Geräte innerhalb der Organisation untersuchen, die mit einer verdächtigen oder bekanntermaßen böswilligen IP-Adresse kommuniziert haben (z.&nbsp;B. Command-and-Control-Server), lassen sich der potenzielle Umfang der Sicherheitsverletzung ermitteln. Anschließend können Sie zugeordnete Dateien und infizierte Geräte unter Quarantäne stellen.</p>
+<p>Relevante Informationen finden sich in den folgenden Abschnitten der IP-Adresssicht:</p>
+<ul>
+<li><p>IP weltweit</p>
+</li>
+<li><p>Reverse-DNS-Namen</p>
+</li>
+<li><p>Warnungen im Zusammenhang mit dieser IP</p>
+</li>
+<li><p>IP in der Organisation</p>
+</li>
+<li><p>Verbreitung</p>
+</li>
+</ul>
+<h3 id="ip-worldwide-and-reverse-dns-names">IP weltweit und Reverse-DNS-Namen</h3>
+<p>Im Abschnitt mit den IP-Adressdetails werden Attribute der IP-Adresse wie die ASN und ihre Reverse-DNS-Namen aufgeführt.</p>
+<h3 id="alerts-related-to-this-ip">Warnungen im Zusammenhang mit dieser IP</h3>
+<p>In diesem Abschnitt wird eine Liste der Warnungen angezeigt, die der IP-Adresse zugeordnet sind.</p>
+<h3 id="ip-in-organization">IP in der Organisation</h3>
+<p>In diesem Abschnitt finden Sie Details zur Verbreitung der IP-Adresse innerhalb der Organisation.</p>
+<h3 id="prevalence">Verbreitung</h3>
+<p>Im Abschnitt zur Verbreitung wird angezeigt, wie viele Geräte eine Verbindung mit dieser IP-Adresse hergestellt haben und wann die IP-Adresse zum ersten und zum letzten Mal verwendet wurde. Sie können die Ergebnisse dieses Abschnitts für einen bestimmten Zeitraum filtern. Der Standardzeitraum beträgt 30&nbsp;Tage.</p>
+<h3 id="most-recent-observed-devices-with-ip">Zuletzt beobachtete Geräte mit IP</h3>
+<p>Dieser Abschnitt enthält eine chronologische Ansicht der Ereignisse und verknüpften Warnungen, die für die IP-Adresse beobachtet wurden.</p>
+<p>Untersuchen einer externen IP-Adresse:</p>
+<ol>
+<li><p>Wählen Sie im Dropdownmenü Suchleiste die Option <strong>IP</strong>.</p>
+</li>
+<li><p>Geben Sie die IP-Adresse in das Feld Suche ein.</p>
+</li>
+<li><p>Wählen Sie das Suchsymbol aus, und drücken Sie die EINGABETASTE.</p>
+</li>
+</ol>
+<p>Es werden Details zur IP-Adresse angezeigt. Dies umfasst Registrierungsdetails (falls verfügbar), Reverse-IPs (z.&nbsp;B. Domänen), die Verbreitung von Geräten in der Organisation, die mit dieser IP-Adresse kommuniziert haben (während des ausgewählten Zeitraums), sowie die Geräte in der Organisation, für die eine Kommunikation mit dieser IP-Adresse beobachtet wurde.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

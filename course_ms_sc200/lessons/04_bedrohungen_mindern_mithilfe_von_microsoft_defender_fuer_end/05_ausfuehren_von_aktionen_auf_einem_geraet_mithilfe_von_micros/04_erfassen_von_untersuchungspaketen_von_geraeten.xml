@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_05_04" title="Erfassen von Untersuchungspaketen von Geräten">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Erfassen von Untersuchungspaketen von Geräten</div>
+<div class="section-content">
+<p>Im Rahmen des Untersuchungs- oder Antwortvorgangs können Sie ein Untersuchungspaket von einem Gerät erfassen. Durch Erfassen des Untersuchungspakets können Sie den aktuellen Status des Geräts ermitteln und die vom Angreifer verwendeten Tools und Techniken besser verstehen.</p>
+<p>Zum Herunterladen des Pakets (ZIP-Datei) und Untersuchen der Ereignisse, die auf einem Gerät aufgetreten sind, gehen Sie folgendermaßen vor:</p>
+<ul>
+<li><p>Klicken Sie oben auf der Geräteseite in der Zeile der Antwortaktionen auf <strong>Untersuchungspaket erfassen</strong>.</p>
+</li>
+<li><p>Geben Sie im Textfeld an, warum Sie diese Aktion ausführen möchten. Wählen Sie <strong>"Bestätigen" aus</strong>.</p>
+</li>
+<li><p>Die ZIP-Datei wird heruntergeladen.</p>
+</li>
+</ul>
+<p>Alternative Methode:</p>
+<ul>
+<li><p>Wählen Sie im Abschnitt "Antwortaktionen" der Geräteseite das <strong>Aktionscenter</strong> aus.</p>
+</li>
+<li><p>Wählen Sie im Info-Center die Option „Paketsammlung: Paket verfügbar“ aus, um die ZIP-Datei herunterzuladen.</p>
+</li>
+</ul>
+<p>Das Paket enthält die folgenden Ordner:</p>
+<h2 id="autoruns">Autoruns</h2>
+<p>Enthält einen Satz von Dateien, die jeweils den Inhalt der Registrierung eines bekannten ASEP (Auto Start Entry Point, Einstiegspunkt für automatisches Starten) darstellen, um die Persistenz des Angreifers auf dem Gerät zu ermitteln.  Wenn der Registrierungsschlüssel nicht gefunden wird, enthält die Datei die folgende Meldung: „ERROR: The system was unable to find the specified registry key or value.“ (FEHLER: Der angegebene Registrierungsschlüssel bzw. Wert wurde nicht gefunden.)</p>
+<h2 id="installed-programs">Installierte Programme</h2>
+<p>Diese CSV-Datei enthält die Liste der installierten Programme, mit deren Hilfe die derzeit auf dem Gerät installierten Komponenten ermittelt werden können. Weitere Informationen finden Sie unter der Klasse „Win32_Product“.</p>
+<h2 id="network-connections">Netzwerkverbindungen</h2>
+<p>Dieser Ordner enthält eine Reihe von Datenpunkten im Zusammenhang mit den Konnektivitätsinformationen, die Ihnen helfen können, die Konnektivität mit verdächtigen URLs, die Befehls- und Steuerungsinfrastruktur (C&amp;C) des Angreifers, jegliche Lateral Movement-Vorgänge oder Remoteverbindungen zu erkennen.</p>
+<ul>
+<li><p>ActiveNetConnections.txt: Zeigt Protokollstatistiken und aktuelle TCP/IP-Netzwerkverbindungen an. Diese Datei bietet die Möglichkeit, nach verdächtigen Verbindungen zu suchen, die von einem Prozess hergestellt wurden.</p>
+</li>
+<li><p>Arp.txt: Zeigt die aktuellen ARP-Cachetabellen (Address Resolution Protocol) für alle Schnittstellen an.</p>
+</li>
+<li><p>Der ARP-Cache kann andere Hosts in einem Netzwerk offenlegen, die möglicherweise gefährdet sind, oder verdächtige Systeme im Netzwerk, die möglicherweise zum Ausführen eines internen Angriffs verwendet wurden.</p>
+</li>
+<li><p>DnsCache.txt: Zeigt den Inhalt des DNS-Clientauflösungscache an. Dieser enthält sowohl Einträge, die vorab aus der lokalen Hostdatei geladen wurden, als auch alle zuletzt erhaltenen Ressourceneinträge für Namensabfragen, die vom Computer aufgelöst wurden. Dies kann bei der Identifizierung verdächtiger Verbindungen helfen.</p>
+</li>
+<li><p>IpConfig.txt: Zeigt die vollständige TCP/IP-Konfiguration für alle Adapter an. Adapter können physische Schnittstellen darstellen, z. B. installierte Netzwerkadapter, oder logische Schnittstellen, z. B. DFÜ-Verbindungen.</p>
+</li>
+<li><p>FirewallExecutionLog.txt und pfirewall.log</p>
+</li>
+</ul>
+<h2 id="prefetch-files">Vorabrufdateien</h2>
+<p>Windows-Vorabrufdateien sind dazu gedacht, den Startvorgang von Anwendungen zu beschleunigen. Hiermit können alle zuletzt im System verwendeten Dateien verfolgt und Ablaufverfolgungen für Anwendungen gefunden werden, die möglicherweise gelöscht wurden, aber noch in der Liste der Vorabdateien zu finden sind.</p>
+<ul>
+<li><p>Vorabrufordner: Enthält eine Kopie der Vorabrufdateien aus „%Systemroot%\Prefetch“. Es wird empfohlen, einen Vorabrufdatei-Viewer herunterzuladen, um die Vorabrufdateien anzuzeigen.</p>
+</li>
+<li><p>PrefetchFilesList.txt: Enthält die Liste aller kopierten Dateien, mit der nachverfolgt werden kann, ob Fehler beim Kopieren in den Vorabrufordner aufgetreten sind.</p>
+</li>
+</ul>
+<h2 id="processes">Prozesse</h2>
+<p>Enthält eine CSV-Datei mit den laufenden Prozessen, die die Möglichkeit bietet, aktuell auf dem Gerät ausgeführte Prozesse zu identifizieren. Dies kann beim Identifizieren eines verdächtigen Prozesses und seines Status hilfreich sein.</p>
+<h2 id="scheduled-tasks">Geplante Vorgänge</h2>
+<p>Enthält eine CSV-Datei mit den geplanten Aufgaben. Diese kann zum Identifizieren von Routinen verwendet werden, die auf einem ausgewählten Gerät automatisch ausgeführt werden, um nach verdächtigem Code zu suchen, der für die automatische Ausführung festgelegt wurde.</p>
+<h2 id="security-event-log">Sicherheitsrelevantes Ereignisprotokoll</h2>
+<p>Enthält das Sicherheitsereignisprotokoll, in dem Datensätze für Anmelde- oder Abmeldeaktivitäten oder andere sicherheitsrelevante Ereignisse enthalten sind, die in der Überwachungsrichtlinie des Systems angegeben sind.  Sie können die Ereignisprotokolldatei in der Ereignisanzeige öffnen.</p>
+<h2 id="services">Dienste</h2>
+<p>Enthält eine CSV-Datei, in der Dienste und deren Status aufgelistet sind.</p>
+<h2 id="windows-server-message-block-smb-sessions">Windows SMB-Sitzungen (Server Message Block)</h2>
+<p>Listet den gemeinsamen Zugriff auf Dateien, Drucker, serielle Ports und verschiedene Kommunikationen zwischen Knoten in einem Netzwerk auf. Hiermit können Datenexfiltration oder Lateral Movement-Vorgänge identifiziert werden. Enthalten sind auch Dateien für „SMBInboundSessions“ and „SMBOutboundSession“.  Wenn keine Sitzungen (eingehend oder ausgehend) vorhanden sind, erhalten Sie eine Textdatei, in der Sie darüber informiert werden, dass keine SMB-Sitzungen gefunden wurden.</p>
+<h2 id="system-information">Systeminformationen</h2>
+<p>Enthält eine Datei vom Typ „SystemInformation.txt“, in der Systeminformationen wie die Betriebssystemversion und Netzwerkkarten aufgelistet sind.</p>
+<h2 id="temp-directories">Temporäre Verzeichnisse</h2>
+<p>Enthalten eine Reihe von Textdateien, in denen die in „%Temp%“ vorhanden Dateien für jeden Benutzer im System aufgelistet sind.  Hiermit können verdächtige Dateien verfolgt werden, die ein Angreifer möglicherweise im System abgelegt hat.  Wenn die Datei die Meldung „ERROR: The system was unable to find the specified registry key or value“ (Das System konnte den angegebenen Pfad nicht finden) enthält, ist für diesen Benutzer kein temporäres Verzeichnis vorhanden. Der Grund dafür kann sein, dass sich der Benutzer nicht beim System angemeldet hat.</p>
+<h2 id="users-and-groups">Benutzer und Gruppen</h2>
+<p>Stellt eine Liste von Dateien bereit, die jeweils eine Gruppe und ihre Mitglieder darstellen.</p>
+<h2 id="wdsupportlogs">WdSupportLogs</h2>
+<p>Stellt „MpCmdRunLog.txt“ und „MPSupportFiles.cab“ bereit.</p>
+<h2 id="collectionsummaryreportxls">CollectionSummaryReport.xls</h2>
+<p>Bei dieser Datei handelt es sich um eine Zusammenfassung der Untersuchungspaketsammlung, die die Liste der Datenpunkte, den zum Extrahieren der Daten verwendeten Befehl, den Ausführungsstatus und im Falle eines Fehlers den Fehlercode enthält. Mit diesem Bericht können Sie nachverfolgen, ob das Paket alle erwarteten Daten enthält, und feststellen, ob Fehler aufgetreten sind.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

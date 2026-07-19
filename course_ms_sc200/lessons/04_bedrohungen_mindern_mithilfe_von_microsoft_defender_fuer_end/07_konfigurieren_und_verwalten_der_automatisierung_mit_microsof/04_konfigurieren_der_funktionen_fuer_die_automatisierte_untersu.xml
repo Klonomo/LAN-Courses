@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_07_04" title="Konfigurieren der Funktionen für die automatisierte Untersuchung und Wartung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Konfigurieren der Funktionen für die automatisierte Untersuchung und Wartung</div>
+<div class="section-content">
+<p>Damit Sie die Funktionen für die automatisierte Untersuchung und Wartung konfigurieren können, müssen Sie sie zunächst aktivieren und dann Gerätegruppen einrichten.</p>
+<h2 id="turn-on-automated-investigation-and-remediation">
+              <strong>Aktivieren der automatisierten Untersuchung und Wartung</strong></h2>
+<p>Als globaler Administrator oder Sicherheitsadministrator:</p>
+<ol>
+<li><p>Klicken Sie im Navigationsbereich auf <strong>Einstellungen&nbsp;&gt; Endpunkte</strong>.</p>
+</li>
+<li><p>Wählen Sie im Abschnitt „Allgemein“ die Option <strong>Erweiterte Funktionen</strong> aus.</p>
+</li>
+<li><p>Aktivieren Sie <strong>"Benachrichtigungen automatisch auflösen"</strong>.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Die Option <strong>"Automatisierte Untersuchung</strong> " wurde von der Einstellung "Erweiterte Features" in Defender für Endpunkt entfernt. Die automatisierte Untersuchung ist jetzt standardmäßig aktiviert.</p>
+</div>
+</li>
+<li><p>Wählen Sie die Schaltfläche " <strong>Einstellungen speichern" aus</strong> .</p>
+</li>
+</ol>
+<h2 id="set-up-device-groups">Einrichten von Gerätegruppen</h2>
+<ol>
+<li><p>Klicken Sie im Navigationsbereich für „Endpunkte“ unter „Berechtigungen“ auf <strong>Gerätegruppen</strong>.</p>
+</li>
+<li><p>Wählen Sie <strong>+&nbsp;Gerätegruppe hinzufügen</strong> aus.</p>
+<ul>
+<li><p>Erstellen Sie wie folgt mindestens eine Gerätegruppe:</p>
+<ul>
+<li><p>Geben Sie einen Namen und eine Beschreibung für die Gerätegruppe an.</p>
+</li>
+<li><p>Wählen Sie in der Liste der Automatisierungsebenen eine Ebene aus, z.&nbsp;B. „Full – remediate threats automatically“ (Vollständig: Bedrohungen automatisch beheben). Die Automatisierungsebene bestimmt, ob Wartungsaktionen automatisch oder erst nach Genehmigung durchgeführt werden. Weitere Informationen finden Sie in der Beschreibung zur Behebung von Bedrohungen.</p>
+</li>
+<li><p>Verwenden Sie im Abschnitt „Geräte“ mindestens eine Bedingung, um Geräte zu ermitteln und einzuschließen.</p>
+</li>
+<li><p>Wählen Sie auf der Registerkarte "Benutzerzugriff" die Entra-ID-Gruppen aus, die Zugriff auf die Gerätegruppe haben sollen, die Sie erstellen.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Wählen Sie <strong>Fertig</strong> aus, wenn Sie mit dem Einrichten der Gerätegruppe fertig sind.</p>
+</li>
+</ol>
+<h3 id="automation-levels">Automatisierungsebenen</h3>
+<p>
+              <strong>Vollständig – Automatisches Beheben von Bedrohungen (auch als vollständige Automatisierung bezeichnet)</strong> Mit der vollständigen Automatisierung werden Wartungsaktionen automatisch ausgeführt. Alle ausgeführten Wiederherstellungsaktionen können im Info-Center auf der Registerkarte „Verlauf“ angezeigt werden. Bei Bedarf kann eine Korrekturaktion rückgängig gemacht werden.</p>
+<p>
+              <strong>Semi – Genehmigung für alle Korrekturen erforderlich (auch als Semiautomatisierung bezeichnet)</strong> Bei dieser Stufe der Halbautomatisierung ist eine Genehmigung für alle Abhilfemaßnahmen erforderlich. Die ausstehenden Aktionen können im Info-Center auf der Registerkarte „Ausstehend“ angezeigt und genehmigt werden.</p>
+<p>
+              <strong>Semi – Erfordern einer Genehmigung für die Wartung von Kernordnern (auch eine Art von Semiautomatisierung)</strong> Bei dieser Stufe der Halbautomatisierung ist eine Genehmigung für alle Korrekturaktionen erforderlich, die für Dateien oder ausführbare Dateien erforderlich sind, die sich in den Kernordnern befinden. Zu den Kernordnern gehören Betriebssystemverzeichnisse wie z.&nbsp;B. Windows (\windows*). Für Dateien oder ausführbare Dateien außerhalb dieser Kernordner können Wartungsaktionen aber automatisch ausgeführt werden. Ausstehende Aktionen für Dateien oder ausführbare Dateien in Kernordnern können im Wartungscenter auf der Registerkarte „Ausstehend“ angezeigt und genehmigt werden. Aktionen, die für Dateien oder ausführbare Dateien in anderen Ordnern ausgeführt wurden, können im Wartungscenter auf der Registerkarte „Verlauf“ überprüft werden.</p>
+<p>
+              <strong>Semi – Genehmigung für nicht temporäre Ordnerkorrekturen erforderlich (auch eine Art von Semiautomatisierung)</strong> Bei dieser Ebene der Halbautomatisierung ist die Genehmigung für alle Korrekturaktionen erforderlich, die für Dateien oder ausführbare Dateien erforderlich sind, die sich nicht in temporären Ordnern befinden.</p>
+<p>Zu den temporären Ordnern gehören z.&nbsp;B. die folgenden:</p>
+<ul>
+<li><p>\Benutzer*\appdata\local\temp*</p>
+</li>
+<li><p>\Dokumente und Einstellungen*\local settings\temp*</p>
+</li>
+<li><p>\Dokumente und Einstellungen*\local settings\temporary*</p>
+</li>
+<li><p>\windows\temp*</p>
+</li>
+<li><p>\Benutzer*\Downloads*</p>
+</li>
+<li><p>\Programme\</p>
+</li>
+<li><p>\Programme (x86)*</p>
+</li>
+<li><p>\Dokumente und Einstellungen*\Benutzer*</p>
+</li>
+</ul>
+<p>Für Dateien oder ausführbare Dateien in temporären Ordnern können Wartungsaktionen aber automatisch ausgeführt werden. Ausstehende Aktionen für Dateien oder ausführbare Dateien außerhalb der temporären Ordner können im Info-Center auf der Registerkarte „Ausstehend“ angezeigt und genehmigt werden. Aktionen, die für Dateien oder ausführbare Dateien in temporären Ordnern durchgeführt wurden, können im Info-Center auf der Registerkarte „Verlauf“ angezeigt und genehmigt werden.</p>
+<p>
+              <strong>Keine automatisierte Antwort (auch als "keine Automatisierung" bezeichnet)</strong> Ohne Automatisierung wird die automatisierte Untersuchung nicht auf den Geräten Ihrer Organisation ausgeführt. Entsprechend werden auch keine Wartungsaktionen als Ergebnis einer automatisierten Untersuchung durchgeführt oder als ausstehend gekennzeichnet. Andere Schutzfunktionen gegen Bedrohungen, z.&nbsp;B. der Schutz vor potenziell unerwünschten Anwendungen, können jedoch aktiv sein. Dies hängt von der Konfiguration der Schutzfunktionen wie Antivirensoftware oder Funktionen der nächsten Generation ab.</p>
+<p>Die Verwendung der Option ohne Automatisierung ist nicht empfehlenswert, da sich dadurch der Sicherheitsstatus der Geräte Ihrer Organisation verschlechtert. Es empfiehlt sich, die Automatisierungsebene auf vollständige Automatisierung (oder zumindest eine Teilautomatisierung) festzulegen.</p>
+<h2 id="quickly-configure-remediation-levels-on-device-groups">Schnelles Konfigurieren der Wartungsebenen für Gerätegruppen</h2>
+<p>Eine weitere Möglichkeit zum Festlegen oder Bearbeiten der Wartungsebenen für Gerätegruppen finden Sie unter „Einstellungen“ &gt; „Allgemein“ auf der Seite „Automatische Wartung“.  Die Seite enthält eine Liste der Gerätegruppen mit ihrer derzeitigen Wartungsebene.  Wenn Sie die Zeile auswählen, können Sie die Korrektureinstellung anpassen.</p>
+<p>
+              <strong>Weitere Informationen zur automatisierten Untersuchung und Behebung finden Sie in diesem kurzen Video:</strong></p>
+<div class="embeddedvideo"><p><em>[Interaktiver Inhalt auf Microsoft Learn verfügbar]</em></p></div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

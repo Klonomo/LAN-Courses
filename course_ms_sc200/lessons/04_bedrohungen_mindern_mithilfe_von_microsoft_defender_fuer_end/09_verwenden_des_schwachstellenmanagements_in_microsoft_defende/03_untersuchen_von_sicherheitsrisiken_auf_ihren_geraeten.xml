@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_09_03" title="Untersuchen von Sicherheitsrisiken auf Ihren Geräten">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Untersuchen von Sicherheitsrisiken auf Ihren Geräten</div>
+<div class="section-content">
+<p>Das Microsoft Defender-Sicherheitsrisikomanagement bietet je nach Lizenzierung folgende Features:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Kernfunktionen von Defender-Sicherheitsrisikomanagement als Teil von Defender für Endpunkt (Plan 2)</th>
+<th style="text-align: left;">Defender-Sicherheitsrisikomanagement-Add-On-Funktionen für Defender für Endpunkt (Plan 2)</th>
+<th style="text-align: left;">Defender-Sicherheitsrisikomanagement in Form von eigenständigen umfassenden Sicherheitsrisikomanagementfunktionen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Geräteermittlung</td>
+<td style="text-align: left;">Bewertung von Sicherheitsbaselines</td>
+<td style="text-align: left;">Geräteermittlung</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gerätebestand</td>
+<td style="text-align: left;">Blockieren von anfälligen Anwendungen</td>
+<td style="text-align: left;">Gerätebestand</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sicherheitsrisikobewertung</td>
+<td style="text-align: left;">Browsererweiterung</td>
+<td style="text-align: left;">Sicherheitsrisikobewertung</td>
+</tr>
+<tr>
+<td style="text-align: left;">Konfigurationsbewertung</td>
+<td style="text-align: left;">Bewertung digitaler Zertifikate</td>
+<td style="text-align: left;">Konfigurationsbewertung</td>
+</tr>
+<tr>
+<td style="text-align: left;">Risikobasierte Priorisierung</td>
+<td style="text-align: left;">Netzwerkfreigabeanalyse</td>
+<td style="text-align: left;">Risikobasierte Priorisierung</td>
+</tr>
+<tr>
+<td style="text-align: left;">Abwehrverfolgung</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Abwehrverfolgung</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ständige Überwachung</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Ständige Überwachung</td>
+</tr>
+<tr>
+<td style="text-align: left;">Softwarebewertung</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Softwarebewertung</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Bewertung von Sicherheitsbaselines</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Blockieren von anfälligen Anwendungen</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Browsererweiterung</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Bewertung digitaler Zertifikate</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Netzwerkfreigabeanalyse</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vulnerability-management-area">Bereich „Sicherheitsrisikomanagement“</h2>
+<p>Die folgenden Bereiche werden im Bereich „Sicherheitsrisikomanagement“ des Microsoft Defender-Portals angezeigt:</p>
+<h3 id="dashboard">Dashboard</h3>
+<p>Das Dashboard enthält mehrere Kacheln, auf denen Informationen zur Gefährdung insgesamt sowie zu Abwehrmaßnahmen angezeigt werden.</p>
+<h3 id="recommendations">Empfehlungen</h3>
+<p>Die Seite „Empfehlungen“ enthält eine Liste mit Sicherheitsempfehlungen.</p>
+<h3 id="remediation">Fehlerbehebung</h3>
+<p>Auf der Seite "Korrektur" können Sicherheitsadministratoren den Fortschritt von Korrekturaktivitäten nachverfolgen, die von der Seite "Sicherheitsempfehlungen" übermittelt wurden, einschließlich Ticketstatus, Priorität, Fälligkeitsdatum und Abschlussstatus.</p>
+<h3 id="inventories">Bestände</h3>
+<p>Die Seite „Inventories“ (Bestände) enthält eine Liste mit den im Netzwerk installierten Softwareprodukten mit den jeweiligen Herstellernamen, den erkannten Schwachstellen, den damit verbundenen Gefährdungen, den gefährdeten Geräten, den Auswirkung auf den Gefährdungsscore und den Tags. Sie können die Listenansicht basierend auf den in der Software gefundenen Schwachstellen, den damit verbundenen Bedrohungen und den Tags filtern, die z. B. anzeigen können, ob eine Software das Ende ihres Supports erreicht hat.</p>
+<h3 id="weaknesses">Schwächen</h3>
+<p>Auf der Seite „Schwächen“ werden die Sicherheitsrisiken der Software aufgelistet, denen Ihre Geräte ausgesetzt sind. Die Auflistung erfolgt nach der CVE-ID (Common Vulnerabilities and Exposures). Sie können auch den Schweregrad, die CVSS-Bewertung (Common Vulnerability Scoring System), die Verbreitung in Ihrer Organisation, die zugehörige Sicherheitsverletzung, Erkenntnisse zur Bedrohung u. v. m. anzeigen.</p>
+<h3 id="event-timeline">Ereigniszeitachse</h3>
+<p>Die „Ereigniszeitachse“ ist ein Newsfeed zu Risiken, mit dem Sie sich ein Bild darüber verschaffen können, wie Risiken durch neue Bedrohungen oder Exploits in Ihre Organisation eingeführt werden. Sie können Ereignisse anzeigen, die sich möglicherweise auf das Risiko Ihrer Organisation auswirken. Beispielsweise können Sie so neu aufgetauchte Sicherheitsrisiken ermitteln oder Sicherheitsrisiken, die bereits ausgenutzt werden oder einem Exploit-Kit hinzugefügt wurden, und vieles mehr. Die Ereigniszeitachse zeigt auch den Verlauf Ihres Gefährdungsscores und der Microsoft-Sicherheitsbewertung für Geräte, mit dem Sie die Ursache für große Änderungen ermitteln können. Ereignisse können sich auf Ihre Geräte oder Ihren Score für Geräte auswirken. Verringern Sie die Gefährdung, indem Sie die Risiken anhand der priorisierten Sicherheitsempfehlungen beheben.</p>
+<h3 id="baseline-assessments">Baselinebewertungen</h3>
+<p>Statt endlose Konformitätsüberprüfungen durchzuführen, können Sie mithilfe der Bewertung von Sicherheitsbaselines die Compliance der Sicherheitsbaselines in Ihrer Organisation kontinuierlich und ohne großen Aufwand überwachen und Änderungen in Echtzeit erkennen.</p>
+<p>Bei einem Sicherheitsbaselineprofil handelt es sich um ein angepasstes Profil, das Sie erstellen können, um Endpunkte in Ihrer Organisation anhand von Sicherheitsbenchmarks zu bewerten und zu überwachen. Wenn Sie ein Sicherheitsbaselineprofil erstellen, erstellen Sie damit eine Vorlage, die aus mehreren Einstellungen für die Gerätekonfiguration und aus einer Basisbenchmark zum Vergleich besteht.</p>
+<h2 id="vulnerable-devices-report">Bericht zu gefährdeten Geräten</h2>
+<p>Der Bereich „Berichte“ im Microsoft Defender-Portal enthält einen Bericht über gefährdete Geräte. Der Bericht zeigt Graphen und Balkendiagramme mit Trends und aktuellen Statistiken zu gefährdeten Geräten. Er dient dazu, den Umfang der Gefährdung Ihrer Geräte zu verstehen.</p>
+<p>Die Graphen und Diagramme umfassen Folgendes:</p>
+<ul>
+<li><p>
+              <strong>Graphen zum Schweregrad:</strong> Jedes Gerät wird nur einmal gezählt, und zwar nach dem schwerwiegendsten Sicherheitsrisiko, das auf diesem Gerät gefunden wurde.</p>
+</li>
+<li><p>
+              <strong>Graphen zur Verfügbarkeit von Exploits:</strong> Jedes Gerät wird nur einmal basierend auf der höchsten Ebene eines bekannten Exploits gezählt.</p>
+</li>
+<li><p>
+              <strong>Graphen zum Alter eines Sicherheitsrisikos:</strong> Jedes Gerät wird nur einmal unter dem ältesten Veröffentlichungsdatum eines Sicherheitsrisikos gezählt. Bei älteren Sicherheitsrisiken besteht eine höhere Wahrscheinlichkeit, dass sie ausgenutzt werden.</p>
+</li>
+<li><p>
+              <strong>Graphen zu gefährdeten Geräten nach Betriebssystemplattform:</strong> Die Anzahl der Geräte pro Betriebssystem, die aufgrund von Softwaresicherheitsrisiken gefährdet sind.</p>
+</li>
+<li><p>
+              <strong>Graphen zu gefährdeten Geräten nach Windows-Version:</strong> Die Anzahl der Geräte pro Windows-Version, die durch anfällige Anwendungen oder Betriebssysteme gefährdet sind.</p>
+</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

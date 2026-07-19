@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_04_05" title="Erkennen von Geräten mit Geräteermittlung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Erkennen von Geräten mit Geräteermittlung</div>
+<div class="section-content">
+<p>Der Schutz Ihrer Umgebung erfordert eine Bestandsaufnahme der Geräte, die sich in Ihrem Netzwerk befinden. Die Zuordnung von Geräten in einem Netzwerk kann jedoch häufig teuer, schwierig und zeitaufwendig sein.</p>
+<p>Microsoft Defender for Endpoint bietet eine Geräteermittlungsfunktion, die Ihnen hilft, nicht verwaltete Geräte zu finden, die mit Ihrem Unternehmensnetzwerk verbunden sind, ohne dass zusätzliche Geräte oder schwerfällige Prozessänderungen erforderlich sind. Die Geräteermittlung verwendet integrierte Endpunkte in Ihrem Netzwerk, um Ihr Netzwerk zu erfassen, zu untersuchen oder zu überprüfen, um nicht verwaltete Geräte zu ermitteln. Mit der Geräteermittlungsfunktion können Sie Folgendes ermitteln:</p>
+<ul>
+<li>Unternehmensendpunkte (Arbeitsstationen, Server und mobile Geräte), die noch nicht in Microsoft Defender for Endpoint integriert sind</li>
+<li>Netzwerkgeräte wie Router und Switches</li>
+<li>IoT-Geräte wie Drucker und Kameras</li>
+</ul>
+<p>Unbekannte und nicht verwaltete Geräte stellen erhebliche Risiken für Ihr Netzwerk dar – unabhängig davon, ob es sich um einen nicht gepatchten Drucker, Netzwerkgeräte mit schwachen Sicherheitskonfigurationen oder einen Server ohne Sicherheitskontrollen handelt. Sobald Geräte entdeckt werden, können Sie folgendes tun:</p>
+<ul>
+<li>Nicht verwaltete Endpunkte in den Dienst einbinden, um die Sicherheitsübersicht darüber zu erhöhen.</li>
+<li>Die Angriffsfläche reduzieren, indem die Sicherheitsrisiken identifiziert und bewertet werden und Konfigurationslücken erkannt werden.</li>
+</ul>
+<p>Um Geräte zu entdecken, schauen Sie sich Folgendes an: <a href="https://www.youtube.com/watch?v=TCDxICrZQa8" data-linktype="external">Video "Geräte entdecken</a>".</p>
+<p>So bewerten und integrieren Sie nicht verwaltete Geräte:</p>
+<div class="embeddedvideo"><p><em>[Interaktiver Inhalt auf Microsoft Learn verfügbar]</em></p></div>
+<p>Mit dieser Funktion ist eine Sicherheitsempfehlung für das Onboarding von Geräten in Microsoft Defender for Endpoint als Teil der vorhandenen Microsoft Defender Vulnerability Management-Erfahrung verfügbar.</p>
+<p>Ermittlungsmethoden Sie können den Ermittlungsmodus auswählen, der von Ihren integrierten Geräten verwendet werden soll. Der Modus steuert das Maß an Sichtbarkeit, das Sie für nicht verwaltete Geräte in Ihrem Unternehmensnetzwerk abrufen können.</p>
+<p>Es stehen zwei Erkennungsmodi zur Verfügung:</p>
+<ul>
+<li><p>Grundlegende Ermittlung: In diesem Modus sammeln Endpunkte Ereignisse in Ihrem Netzwerk passiv und extrahieren Geräteinformationen von ihnen. Die grundlegende Ermittlung verwendet die „SenseNDR.exe“-Binärdatei für die Sammlung passiver Netzwerkdaten, und kein Netzwerkdatenverkehr wird initiiert. Endpunkte extrahieren Daten aus jedem Netzwerkdatenverkehr, der von einem integrierten Gerät angezeigt wird. Mit der grundlegenden Ermittlung erhalten Sie nur eingeschränkte Sichtbarkeit von nicht verwalteten Endpunkten in Ihrem Netzwerk.</p>
+</li>
+<li><p>Standardermittlung (empfohlen): Dieser Modus ermöglicht Endpunkten, Geräte in Ihrem Netzwerk aktiv zu finden, um gesammelte Daten zu erweitern und weitere Geräte zu ermitteln. So können Sie einen zuverlässigen und kohärenten Gerätebestand erstellen. Zusätzlich zu Geräten, die mit der passiven Methode überwacht wurden, verwendet der Standardmodus auch allgemeine Ermittlungsprotokolle, die Multicastabfragen im Netzwerk verwenden, um noch mehr Geräte zu finden. Der Standardmodus verwendet intelligente, aktive Tests, um zusätzliche Informationen zu überwachten Geräten zu ermitteln, um vorhandene Geräteinformationen zu erweitern. Wenn der Standardmodus aktiviert ist, können minimale und vernachlässigbare Netzwerkaktivitäten, die vom Ermittlungssensor generiert werden, von Netzwerküberwachungstools in Ihrer Organisation überwacht werden.</p>
+</li>
+</ul>
+<p>Geräte, die erkannt wurden, aber noch nicht integriert und durch Microsoft Defender for Endpoint gesichert wurden, werden im Gerätebestand auf der Registerkarte „Computer und mobile Geräte“ aufgeführt.</p>
+<p>Um diese Geräte zu bewerten, können Sie einen Filter in der Gerätebestandsliste namens „Onboardingstatus“ verwenden, der über einen der folgenden Werte verfügen kann:</p>
+<ul>
+<li>Integriert: Der Endpunkt wird in Microsoft Defender for Endpoint integriert.</li>
+<li>Kann integriert werden: Der Endpunkt wurde im Netzwerk erkannt, und das Betriebssystem wurde als eines identifiziert, das von Microsoft Defender for Endpoint unterstützt wird, aber derzeit nicht integriert ist. Es wird dringend empfohlen, diese Geräte zu integrieren.</li>
+<li>Nicht unterstützt: Der Endpunkt wurde im Netzwerk zwar erkannt, wird jedoch von Microsoft Defender for Endpoint nicht unterstützt.</li>
+<li>Unzureichende Informationen: Das System konnte die Unterstützung des Geräts nicht ermitteln. Das Aktivieren der Standardermittlung auf weiteren Geräten im Netzwerk kann die ermittelten Attribute anreichern.</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_09_08_01" title="Einleitung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Einleitung</div>
+<div class="section-content">
+<p>Microsoft <strong>Sentinel-Inhalte</strong> sind Siem-Inhalte (Security Information and Event Management), mit denen Kunden Daten erfassen, überwachen, warnen, suchen, untersuchen, reagieren und mit verschiedenen Produkten, Plattformen und Diensten in Microsoft Sentinel in Verbindung treten können.</p>
+<p>Inhalte in Microsoft Sentinel umfassen einen der folgenden Typen:</p>
+<ul>
+<li><strong>Datenconnectors</strong> bieten Protokollaufnahme aus verschiedenen Quellen in Microsoft Sentinel</li>
+<li><strong>Parser</strong> bieten Protokollformatierung/Transformation in ASIM-Formate und unterstützen die Verwendung in verschiedenen Microsoft Sentinel-Inhaltstypen und -Szenarien.</li>
+<li><strong>Arbeitsmappen</strong> bieten Überwachung, Visualisierung und Interaktivität mit Daten in Microsoft Sentinel, die aussagekräftige Einblicke für Benutzer hervorheben</li>
+<li><strong>Analyseregeln</strong> bieten Warnungen, die auf relevante SOC-Maßnahmen in Form von Vorfällen hinweisen.</li>
+<li><strong>Suchabfragen</strong> werden von SOC-Teams verwendet, um proaktiv nach Bedrohungen in Microsoft Sentinel zu suchen.</li>
+<li><strong>Notizbücher</strong> helfen SOC-Teams, erweiterte Suchfunktionen in Jupyter und Azure-Notizbüchern zu verwenden</li>
+<li><strong>Watchlists</strong> unterstützen die Erfassung bestimmter Daten für die erweiterte Bedrohungserkennung und verringerte Ermüdung von Warnungen</li>
+<li><strong>Playbooks</strong> und benutzerdefinierte Connectors für Azure Logic Apps bieten Funktionen für automatisierte Untersuchungen, Abhilfemaßnahmen und Antwortszenarien in Microsoft Sentinel.</li>
+</ul>
+<p>Verwenden Sie folgende Ressourcen, um <strong>Inhalt</strong> für die Verwendung von Microsoft Sentinel zu verwalten:</p>
+<ul>
+<li><strong>Content Hub</strong>: - Microsoft <strong>Sentinel-Lösungen</strong> sind Pakete von Microsoft Sentinel-Inhalten oder Microsoft Sentinel-API-Integrationen, die ein End-to-End-Produkt, eine Domäne oder ein branchenspezifisches Szenario in Microsoft Sentinel erfüllen.</li>
+<li><strong>Repositorys: - Repositorys</strong> helfen Ihnen, die Bereitstellung und Verwaltung Ihrer Microsoft Sentinel-Inhalte über zentrale Repositorys zu automatisieren.</li>
+<li><strong>Community</strong>: Integrieren Sie Communityinhalte bedarfsgesteuert, um Ihre Szenarien zu aktivieren.  Das GitHub-Repository unter <a href="https://github.com/Azure/Azure-Sentinel" data-linktype="external">https://github.com/Azure/Azure-Sentinel</a> enthält Inhalte von Microsoft und der Community, die getestet und verfügbar sind, um sie in Ihrem Sentinel-Arbeitsbereich zu implementieren.</li>
+</ul>
+<p>Sie sind als Security Operations Analyst für ein Unternehmen tätig, das Microsoft Sentinel implementiert hat. Sie müssen Verbinder und analytische Regeln von einem Anbieter installieren. Außerdem haben Sie eine Bibliothek mit Suchabfragen erstellt, die in mehreren Umgebungen verwaltet werden müssen.</p>
+<p>Am Ende dieses Moduls können Sie <em>Inhalte</em> in Microsoft Sentinel verwalten.</p>
+<p>Nach Abschluss dieses Moduls werden Sie zu Folgendem in der Lage sein:</p>
+<ul>
+<li>Installieren einer Inhaltshublösung in Microsoft Sentinel</li>
+<li>Verbinden eines GitHub-Repositorys mit Microsoft Sentinel</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

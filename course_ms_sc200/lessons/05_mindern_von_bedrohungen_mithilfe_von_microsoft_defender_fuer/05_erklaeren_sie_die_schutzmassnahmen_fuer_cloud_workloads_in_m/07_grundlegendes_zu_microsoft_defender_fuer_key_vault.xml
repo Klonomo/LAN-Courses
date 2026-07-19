@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_05_05_07" title="Grundlegendes zu Microsoft Defender für Key Vault">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Grundlegendes zu Microsoft Defender für Key Vault</div>
+<div class="section-content">
+<p>Der Azure Key Vault-Clouddienst schützt Verschlüsselungsschlüssel und Geheimnisse (wie Zertifikate, Verbindungszeichenfolgen und Kennwörter).</p>
+<p>Aktivieren Sie Microsoft Defender für Key Vault, um einen azure-nativen, erweiterten Bedrohungsschutz für Azure Key Vault bereitzustellen. Dies bietet eine zusätzliche Ebene von Sicherheitsinformationen.</p>
+<h2 id="what-are-the-benefits-of-microsoft-defender-for-key-vault">Welche Vorteile bietet Microsoft&nbsp;Defender für Key Vault?</h2>
+<p>Microsoft Defender für Cloud erkennt ungewöhnliche und potenziell schädliche Versuche, auf Key Vault-Konten zuzugreifen oder auszunutzen. Diese Schutzebene ermöglicht es Ihnen, Bedrohungen zu behandeln, ohne Sicherheitsexperten zu sein und ohne die Notwendigkeit, Sicherheitsüberwachungssysteme von Drittanbietern zu verwalten.</p>
+<p>Wenn anomale Aktivitäten auftreten, zeigt Defender für Cloud Warnungen an und sendet sie optional per E-Mail an relevante Mitglieder Ihrer Organisation. Diese Warnungen enthalten Details zu verdächtigen Aktivitäten und Empfehlungen zur Untersuchung und Eindämmung von Bedrohungen.</p>
+<h2 id="microsoft-defender-for-key-vault-alerts">Microsoft&nbsp;Defender für Key Vault-Warnungen</h2>
+<p>Wenn Sie eine Benachrichtigung von Defender für Key Vault erhalten, empfehlen wir, die Warnung zu untersuchen und darauf zu reagieren, wie unter "Antworten auf Defender für Key Vault" beschrieben. Defender für Key Vault schützt Anwendungen und Anmeldeinformationen. Selbst wenn Sie mit der Anwendung oder dem Benutzer vertraut sind, die die Warnung ausgelöst haben, ist es wichtig, die Situation zu überprüfen, die jede Warnung umgibt.</p>
+<p>Die Warnungen werden auf der Sicherheitsseite von Key Vault, dem Defender für Cloud-Dashboard, angezeigt.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

@@ -1,0 +1,1718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vocabulary>
+    <entry id="fc_sc200_01_01_01">
+        <field ref="question">Welche Microsoft Defender XDR-Lösung kann eine Kompromittierung einer Active Directory-Domäne erkennen?</field>
+        <field ref="choices">A. Microsoft Defender for Identity
+B. Microsoft Defender für den Endpunkt
+C. Microsoft Defender für Office 365</field>
+        <field ref="answer">Microsoft Defender for Identity</field>
+        <field ref="explanation">Correct. Domain compromise is detected with Microsoft Defender for Identity.</field>
+    </entry>
+    <entry id="fc_sc200_01_01_02">
+        <field ref="question">Welche Microsoft Defender XDR-Lösung kann eine Phishing-E-Mail erkennen?</field>
+        <field ref="choices">A. Microsoft Defender for Identity
+B. Microsoft Defender für den Endpunkt
+C. Microsoft Defender für Office 365</field>
+        <field ref="answer">Microsoft Defender für Office 365</field>
+        <field ref="explanation">Correct. Phishing email is detected by Microsoft Defender for Office 365.</field>
+    </entry>
+    <entry id="fc_sc200_01_01_03">
+        <field ref="question">Welche Microsoft Defender XDR-Lösung kann eine Installation von Schadsoftware erkennen?</field>
+        <field ref="choices">A. Microsoft Defender for Identity
+B. Microsoft Defender für den Endpunkt
+C. Microsoft Defender für Office 365</field>
+        <field ref="answer">Microsoft Defender für den Endpunkt</field>
+        <field ref="explanation">Correct. Malware installation is detected by Microsoft Defender for Endpoint.</field>
+    </entry>
+    <entry id="fc_sc200_01_02_01">
+        <field ref="question">Wenn Sie einen bestimmten Vorfall überprüfen, welche Registerkarte befindet sich auf der Vorfallsseite?</field>
+        <field ref="choices">A. Netzwerke
+B. Nicht-Azure-Computer
+C. Ressourcen</field>
+        <field ref="answer">Ressourcen</field>
+        <field ref="explanation">Correct. The incident page has a tab for Assets.</field>
+    </entry>
+    <entry id="fc_sc200_01_02_02">
+        <field ref="question">Als was können Sie einen Incident klassifizieren?</field>
+        <field ref="choices">A. Richtig positiv
+B. Hohe Warnung
+C. Testwarnung</field>
+        <field ref="answer">Richtig positiv</field>
+        <field ref="explanation">Correct. True positive is an option.</field>
+    </entry>
+    <entry id="fc_sc200_01_02_03">
+        <field ref="question">Von welchem Defender-Produkt stammen die Informationen, die auf der Seite „Geräte“ angezeigt werden?</field>
+        <field ref="choices">A. Microsoft Cloud App Security
+B. Microsoft Defender for Identity
+C. Microsoft Defender für den Endpunkt</field>
+        <field ref="answer">Microsoft Defender für den Endpunkt</field>
+        <field ref="explanation">Correct.  Devices are based on Defender for Endpoint.</field>
+    </entry>
+    <entry id="fc_sc200_01_03_01">
+        <field ref="question">Wahr oder falsch? Microsoft Defender für Office 365 setzt voraus, dass für alle Windows 10-Geräte in Ihrer Organisation ein Agent bereitgestellt wird, um optimalen Schutz zu gewährleisten.</field>
+        <field ref="choices">A. Wahr
+B. Falsch</field>
+        <field ref="answer">Falsch</field>
+        <field ref="explanation">Correct. Microsoft Defender for Office 365 is a cloud-based email filtering service; no agents are deployed.</field>
+    </entry>
+    <entry id="fc_sc200_01_03_02">
+        <field ref="question">Was zeichnet „Sichere Anlagen“ in Microsoft Defender für Office 365 aus?</field>
+        <field ref="choices">A. Nachrichten und Anlagen werden an eine spezielle Umgebung weitergeleitet, in der Microsoft Defender for Office 365 verschiedene Machine Learning- und Analysetechniken verwendet, um böswillige Absichten zu erkennen.
+B. Schützt Ihre Benutzer vor böswilligen URLs in einer Nachricht oder in einem Office-Dokument.
+C. Ein leistungsstarker Bericht, der es Ihrem Sicherheitsteam ermöglicht, Bedrohungen zu untersuchen und effektiv und effizient darauf zu reagieren.</field>
+        <field ref="answer">Nachrichten und Anlagen werden an eine spezielle Umgebung weitergeleitet, in der Microsoft Defender for Office 365 verschiedene Machine Learning- und Analysetechniken verwendet, um böswillige Absichten zu erkennen.</field>
+        <field ref="explanation">Correct. Safe Attachments reroutes messages/attachments and uses ML analysis to detect malicious intent.</field>
+    </entry>
+    <entry id="fc_sc200_01_03_03">
+        <field ref="question">Welches der folgenden Szenarien ist kein Angriffssimulatorszenario?</field>
+        <field ref="choices">A. Spear-Phishing
+B. Kennwort-Spray
+C. Bitcoin-Mining</field>
+        <field ref="answer">Bitcoin-Mining</field>
+        <field ref="explanation">Correct. Bitcoin mining is not an Attack Simulator scenario.</field>
+    </entry>
+    <entry id="fc_sc200_01_04_01">
+        <field ref="question">Welche Aufgabe kann ein Benutzer mit der Rolle „Sicherheitsoperator“ ausführen?</field>
+        <field ref="choices">A. Konfigurieren von Warnungen
+B. Bestätigen der Anmeldung als sicher
+C. Zurücksetzen eines Kennworts für einen Benutzer</field>
+        <field ref="answer">Bestätigen der Anmeldung als sicher</field>
+        <field ref="explanation">Correct. Security Operators can view all Identity Protection reports and the Overview screen, dismiss user risk, confirm safe sign-in, and confirm compromise.</field>
+    </entry>
+    <entry id="fc_sc200_01_04_02">
+        <field ref="question">Es gibt zwei Risikorichtlinien, die im Verzeichnis aktiviert werden können. Eine davon ist die Benutzerrisiko-Richtlinie. Welche ist die andere Risikorichtlinie?</field>
+        <field ref="choices">A. Risikorichtlinie für den Zugriff über mobile Geräte
+B. Anmelderisiko-Richtlinie
+C. Richtlinie zum Anmelderisiko für Hybrididentitäten</field>
+        <field ref="answer">Anmelderisiko-Richtlinie</field>
+        <field ref="explanation">Correct. Sign-in risk policy: The sign-in risk policy detects suspicious actions that come along with the sign-in. It&apos;s focused on the sign-in activity directly. Sign-in risk policy analyzes the probability that the sign-in was performed by someone other than the user.</field>
+    </entry>
+    <entry id="fc_sc200_01_04_03">
+        <field ref="question">Welche drei APIs in Microsoft Graph bieten Informationen zu Risikobenutzern und -anmeldungen?</field>
+        <field ref="choices">A. riskDetection, riskyUsers, signIns
+B. riskDetection, itemActivity, signIns
+C. riskyUsers, signIns, IdentitySet</field>
+        <field ref="answer">riskDetection, riskyUsers, signIns</field>
+        <field ref="explanation">Correct. There are three APIs that expose information about risky users and sign-ins. RiskDetection allows you to query Microsoft Graph for a list of user and sign-in linked risk detections. You also get associated information about the detection. The second API, `riskyUsers`, allows you to query Microsoft Graph for information about users that Identity Protection detected as being risky. The API, `signIns`, allows you to query Microsoft Graph for information on Microsoft Entra ID sign-ins. The information contains specific properties related to risk state, detail, and level.</field>
+    </entry>
+    <entry id="fc_sc200_01_05_01">
+        <field ref="question">Microsoft Defender for Identity erfordert eine lokale Active Directory-Umgebung.</field>
+        <field ref="choices">A. Wahr
+B. False</field>
+        <field ref="answer">Wahr</field>
+        <field ref="explanation">Correct. Microsoft Defender for Identity is a cloud-based solution that leverages on-premises Active Directory.</field>
+    </entry>
+    <entry id="fc_sc200_01_05_02">
+        <field ref="question">Welche der folgenden Aussagen beschreibt erweiterte Bedrohungen, die von Microsoft Defender for Identity erkannt werden?</field>
+        <field ref="choices">A. Reconnaissance
+B. Vertikale Bewegungen
+C. Bitcoin-Mining</field>
+        <field ref="answer">Reconnaissance</field>
+        <field ref="explanation">Correct. Defender for Identity detects reconnaissance along the cyber-attack kill chain.</field>
+    </entry>
+    <entry id="fc_sc200_01_05_03">
+        <field ref="question">Welche der folgenden Integrationen wird von Microsoft Defender for Identity nicht unterstützt?</field>
+        <field ref="choices">A. Microsoft Defender für Endpunkt
+B. Microsoft Defender for Cloud Apps
+C. Intune</field>
+        <field ref="answer">Intune</field>
+        <field ref="explanation">Correct. There is no supported integration between Microsoft Defender for Identity and Microsoft Intune.</field>
+    </entry>
+    <entry id="fc_sc200_01_06_01">
+        <field ref="question">Wie können Sie sich auf einen Blick einen Überblick über die Arten von Apps verschaffen, die in Ihrer Organisation verwendet werden?</field>
+        <field ref="choices">A. Verwenden von Azure Information Protection
+B. Verwenden von bedingtem Zugriff
+C. Verwenden des Cloud Discovery-Dashboards</field>
+        <field ref="answer">Verwenden des Cloud Discovery-Dashboards</field>
+        <field ref="explanation">Correct. The Cloud Discovery dashboard gives an at-a-glance overview of apps in use.</field>
+    </entry>
+    <entry id="fc_sc200_01_06_02">
+        <field ref="question">Welches der folgenden Komponenten enthält das Defender for Cloud Apps-Framework?</field>
+        <field ref="choices">A. Entdecken und Steuern der Verwendung von Shadow IT
+B. Blockieren von externem Datenverkehr
+C. Schützen des Active Directory</field>
+        <field ref="answer">Entdecken und Steuern der Verwendung von Shadow IT</field>
+        <field ref="explanation">Correct. Discover and control Shadow IT is part of the Defender for Cloud Apps framework.</field>
+    </entry>
+    <entry id="fc_sc200_01_06_03">
+        <field ref="question">Welches der folgenden ist ein Feature von App-Steuerungsrichtlinien für bedingten Zugriff?</field>
+        <field ref="choices">A. Remotezugriff
+B. Anfordern mehrstufiger Authentifizierung
+C. Schutz beim Herunterladen</field>
+        <field ref="answer">Schutz beim Herunterladen</field>
+        <field ref="explanation">Correct. Protect on download is a Conditional Access App Control policy feature.</field>
+    </entry>
+    <entry id="fc_sc200_01_06_04">
+        <field ref="question">Wie können Sie sicherstellen, dass eine Datei zur Überprüfung durch einen Administrator unter Quarantäne gestellt wird?</field>
+        <field ref="choices">A. Beim Erstellen einer Dateirichtlinie wähle ich „Quarantäne für Administrator“ aus.
+B. Beim Erstellen einer Dateirichtlinie wähle ich „Unter Administratorquarantäne stellen“ aus.
+C. Beim Erstellen einer Dateirichtlinie wähle ich „Unter Administratorprüfung stellen“ aus.</field>
+        <field ref="answer">Beim Erstellen einer Dateirichtlinie wähle ich „Unter Administratorquarantäne stellen“ aus.</field>
+        <field ref="explanation">Correct. Select Put in admin quarantine when creating a file policy.</field>
+    </entry>
+    <entry id="fc_sc200_01_06_05">
+        <field ref="question">Welche Anomalieerkennungsrichtlinie löst eine Warnung aus, wenn dieselben Benutzeranmeldeinformationen innerhalb kurzer Zeit von zwei geografisch entfernten Standorten stammen?</field>
+        <field ref="choices">A. Unmöglicher Ortswechsel
+B. Unmögliche Distanz
+C. Unmögliche Zwillinge</field>
+        <field ref="answer">Unmöglicher Ortswechsel</field>
+        <field ref="explanation">Correct. Impossible travel triggers when the same credentials appear from distant locations too quickly.</field>
+    </entry>
+    <entry id="fc_sc200_02_01_01">
+        <field ref="question">Was sind zwei Schlüsselkomponenten der Transformatorarchitektur, die die heutige generative KI unterstützen?</field>
+        <field ref="choices">A. Wiederkehrende neurale Netzwerke (RNNs) und Speicheraufbewahrung
+B. Aufmerksamkeits- und Positionscodierung
+C. Prompt Engineering und Fundiertheit</field>
+        <field ref="answer">Wiederkehrende neurale Netzwerke (RNNs) und Speicheraufbewahrung</field>
+        <field ref="explanation">Correct! A large language model (LLM) is designed to generate human-like text based on the input it receives.</field>
+    </entry>
+    <entry id="fc_sc200_02_01_02">
+        <field ref="question">Was ist der Hauptunterschied zwischen großen Sprachmodellen und kleinen Sprachmodellen?</field>
+        <field ref="choices">A. Große Sprachmodelle werden mit großen Textmengen trainiert. Der Text stellt eine breite Palette von allgemeinen Themen dar, während kleine Sprachmodelle mit kleineren, stärker themenorientierten Datasets trainiert werden.
+B. Große Sprachmodelle werden trainiert, um ein Verständnis des Kontexts einzubeziehen, während kleine Sprachmodelle nicht.
+C. Große Sprachmodelle haben weniger Parameter als kleine Sprachmodelle.</field>
+        <field ref="answer">Große Sprachmodelle werden trainiert, um ein Verständnis des Kontexts einzubeziehen, während kleine Sprachmodelle nicht.</field>
+        <field ref="explanation">Correct! Tokenization is the process of converting text into individual tokens; which can be words, sub-words, or other meaningful elements.</field>
+    </entry>
+    <entry id="fc_sc200_02_01_03">
+        <field ref="question">Was sind die vier Stufen im Prozess der Entwicklung und Implementierung eines Plans für verantwortungsvolle KI bei der Verwendung von generativen Modellen gemäß den Anweisungen von Microsoft?</field>
+        <field ref="choices">A. Identifizieren sie potenzielle Vorteile, Messen Sie die Vorteile, verbessern Sie die Vorteile, betreiben Sie die Lösung verantwortungsbewusst
+B. Identifizieren sie potenzielle Schäden, messen Sie diese Schäden, mindern Sie die Schäden, führen Sie die Lösung verantwortungsbewusst aus.
+C. Definieren des Problems, Entwerfen der Lösung, Entwickeln der Lösung, Bereitstellen der Lösung</field>
+        <field ref="answer">Definieren des Problems, Entwerfen der Lösung, Entwickeln der Lösung, Bereitstellen der Lösung</field>
+        <field ref="explanation">Correct! Embeddings are vector-based representations of tokens that capture their semantic meaning.</field>
+    </entry>
+    <entry id="fc_sc200_02_02_01">
+        <field ref="question">Welche Schritte sind erforderlich, um das Onboarding von Organisationen und Benutzenden in Microsoft Copilot for Security durchzuführen?</field>
+        <field ref="choices">A. Aktivieren Sie Copilot-Plug-Ins, und beschaffen Sie die Microsoft Entra Premium 1-Lizenzierung.
+B. Beschaffen Sie die Microsoft Entra Premium 1-Lizenzierung.
+C. Stellen Sie SCUs bereit, richten Sie die Standardumgebung ein, und weisen Sie Rollenberechtigungen zu.</field>
+        <field ref="answer">Stellen Sie SCUs bereit, richten Sie die Standardumgebung ein, und weisen Sie Rollenberechtigungen zu.</field>
+        <field ref="explanation">Correct. The admin must provision and allocate security compute units (SCUs), set up the default environment, and assign role permissions to user.</field>
+    </entry>
+    <entry id="fc_sc200_02_02_02">
+        <field ref="question">Ein Sicherheitsanalyst erstellt eine Aufforderung zur Untersuchung eines Vorfalls mit dem Pearl Sleet-Akteur. Welche Eingabeaufforderung liefert die umfassendsten Ergebnisse?</field>
+        <field ref="choices">A. Können Sie mir Informationen über Pearl Sleet-Aktivitäten geben, einschließlich einer Liste bekannter Indikatoren für Kompromittierung und Tools, Taktiken und Verfahren (TTPs)?
+B. Beschreiben Sie Pearl Sleet.
+C. Pearl Sleet Aktivitäten auflisten.</field>
+        <field ref="answer">Können Sie mir Informationen über Pearl Sleet-Aktivitäten geben, einschließlich einer Liste bekannter Indikatoren für Kompromittierung und Tools, Taktiken und Verfahren (TTPs)?</field>
+        <field ref="explanation">Correct. This prompt is clear, specific, and includes elements such as goal and expectations for a detailed response.</field>
+    </entry>
+    <entry id="fc_sc200_02_02_03">
+        <field ref="question">Ein Administrierender ist mit der Einrichtung von Microsoft Security Copilot betraut und muss Kapazitäten bereitstellen. Nach der Überprüfung der Optionen, welche Methode sollte der Administrator wählen, um Kapazität für ihre Organisation bereitzustellen?</field>
+        <field ref="choices">A. Bereitstellen der Kapazität durch einen Anbieter ohne Microsoft
+B. Bereitstellung von Kapazitäten innerhalb von Security Copilot
+C. Bereitstellen der Kapazität durch direkten Kauf von SCUs von einem Softwarehändler</field>
+        <field ref="answer">Bereitstellung von Kapazitäten innerhalb von Security Copilot</field>
+        <field ref="explanation">Correct. Provisioning capacity within Security Copilot is recommended and guided by a wizard for ease of setup.</field>
+    </entry>
+    <entry id="fc_sc200_02_03_01">
+        <field ref="question">Ein Sicherheitsanalyst verwendet Microsoft Security Copilot und möchte Einblicke aus ihren Sicherheitsdaten generieren. Dazu wollen sie natürliche Sprache verwenden. Wo sollten sie ihre Anfrage eingeben?</field>
+        <field ref="choices">A. In der Eingabeaufforderungsleiste
+B. Im Abschnitt &quot;Aufforderungen zum Testen&quot;
+C. Im Abschnitt «Arbeitsbereiche»</field>
+        <field ref="answer">In der Eingabeaufforderungsleiste</field>
+        <field ref="explanation">Correct. The &apos;Prompt bar&apos; is where users can input their requests in natural language to generate insights from their security data.</field>
+    </entry>
+    <entry id="fc_sc200_02_03_02">
+        <field ref="question">Ein Teammitglied muss einen neuen Arbeitsbereich in Copilot für ein bestimmtes Projekt einrichten. Welche Rolle muss dieses Teammitglied haben, um einen neuen Arbeitsbereich zu erstellen?</field>
+        <field ref="choices">A. Sicherheitsleser
+B. Sicherheitsadministrator
+C. Abrechnungsadministrator</field>
+        <field ref="answer">Sicherheitsadministrator</field>
+        <field ref="explanation">Correct. A Security Administrator has the necessary permissions to create new workspaces in Copilot.</field>
+    </entry>
+    <entry id="fc_sc200_02_03_03">
+        <field ref="question">Eine Sicherheitsanalystin oder ein Sicherheitsanalyst muss frühere Sitzungen überprüfen, die in Microsoft Security Copilot erstellt wurden. Welche Option sollte nach dem Zugriff auf die eigenständige Oberfläche ausgewählt werden, um diese Sitzungen zu verwalten und zu überprüfen?</field>
+        <field ref="choices">A. Wählen Sie die Option &quot;Verlauf&quot; aus.
+B. Wählen Sie das Hilfesymbol aus.
+C. Wählen Sie Einstellungen aus.</field>
+        <field ref="answer">Wählen Sie die Option &quot;Verlauf&quot; aus.</field>
+        <field ref="explanation">Correct. History allows users to manage and review past sessions with options to search, filter, rename, duplicate, or delete.</field>
+    </entry>
+    <entry id="fc_sc200_02_03_04">
+        <field ref="question">Ein Teammitglied versucht, ein Nicht-Microsoft-Plug-In mit Microsoft Security Copilot zu verwenden, aber es wird abgeblendet und eingeschränkt angezeigt. Was könnte der mögliche Grund sein?</field>
+        <field ref="choices">A. Das Plug-In wird von Microsoft Security Copilot nicht unterstützt.
+B. Das Plug-In erfordert ein Konto und eine Lizenz für den jeweiligen Dienst.
+C. Der Copilot-Besitzer hat eingeschränkten Plugin-Zugriff.</field>
+        <field ref="answer">Der Copilot-Besitzer hat eingeschränkten Plugin-Zugriff.</field>
+        <field ref="explanation">Correct. If a Copilot owner has restricted plugin access, then those plugins that have been set to restricted will show greyed out.</field>
+    </entry>
+    <entry id="fc_sc200_02_03_05">
+        <field ref="question">Ein Sicherheitsanalyst wird beauftragt, in Copilot die Untersuchungsflüsse zu automatisieren, um sich wiederholende Schritte zu vereinfachen. Nachdem Sie relevante Eingabeaufforderungen aus einer vorhandenen Sitzung ausgewählt haben, möchte der Analyst ein Promptbook erstellen. Was sollte der Analyst als Nächstes tun, um diese Aufgabe auszuführen?</field>
+        <field ref="choices">A. Wählen Sie das Symbol &quot;Promptbook erstellen&quot; aus, um die Seite zu öffnen, auf der sie das Promptbook benennen, markieren und weiter anpassen können.
+B. Wählen Sie die Schaltfläche &quot;Eingabeaufforderungen exportieren&quot; aus, um die ausgewählten Aufforderungen zur manuellen Ausführung herunterzuladen.
+C. Wählen Sie die Option &quot;Sitzung speichern&quot; aus, um den aktuellen Zustand der Sitzung zur späteren Verwendung beizubehalten.</field>
+        <field ref="answer">Wählen Sie das Symbol &quot;Promptbook erstellen&quot; aus, um die Seite zu öffnen, auf der sie das Promptbook benennen, markieren und weiter anpassen können.</field>
+        <field ref="explanation">Correct. Select the &apos;Create promptbook&apos; icon to open the page where they can name, tag, and further customize the promptbook.</field>
+    </entry>
+    <entry id="fc_sc200_02_04_01">
+        <field ref="question">Ein Sicherheitsanalyst verwendet Copilot in Microsoft Defender XDR, um einen Vorfall zu überprüfen und die Abfolge von Ereignissen zu verstehen, die während des Angriffs aufgetreten sind. Welches Feature sollte er verwenden, um einen umfassenden Überblick zu erhalten?</field>
+        <field ref="choices">A. Skriptanalyse
+B. Zusammenfassung der Vorfälle
+C. Geführte Antworten</field>
+        <field ref="answer">Zusammenfassung der Vorfälle</field>
+        <field ref="explanation">Correct. The Summarize incidents feature provides an overview of the attack, including the timeline and assets involved.</field>
+    </entry>
+    <entry id="fc_sc200_02_04_02">
+        <field ref="question">Das Complianceteam einer Organisation verwendet Microsoft Purview-eDiscovery-Tools für interne und externe Untersuchungen und plant, Security Copilot zu verwenden, um sie produktiver zu machen und ihre Untersuchungen zu unterstützen. Welche der folgenden Aussagen gilt für die Verwendung von Copilot mit eDiscovery?</field>
+        <field ref="choices">A. Die Copilot-Funktionalität wird mit Microsoft Purview-eDiscovery nicht unterstützt.
+B. Die Organisation muss lizenziert sein, um Microsoft Purview-eDiscovery (Premium) zu verwenden.
+C. Die Organisation muss mindestens für Microsoft Purview-eDiscovery (Standard) lizenziert sein.</field>
+        <field ref="answer">Die Organisation muss lizenziert sein, um Microsoft Purview-eDiscovery (Premium) zu verwenden.</field>
+        <field ref="explanation">Correct. To use Security Copilot functionality with Microsoft Purview eDiscovery, the organization must be licensed for Microsoft Purview eDiscovery (Premium).</field>
+    </entry>
+    <entry id="fc_sc200_02_04_03">
+        <field ref="question">Nachdem sie das Microsoft Entra-Plug-In in Copilot aktiviert und die entsprechenden Rollenberechtigungen zugewiesen haben, navigiert ein Administrator zum Bericht &quot;Riskante Benutzer&quot;, um die riskanten Anmeldungen eines Benutzers zu untersuchen. Was sollte der Administrator als Nächstes tun, um die Copilot generierte Zusammenfassung anzuzeigen?</field>
+        <field ref="choices">A. Wählen Sie die Option „Exportieren“ aus, um die Risikodetails des Benutzers herunterzuladen.
+B. Überprüfen Sie das Protokoll „Benutzeraktivität“ auf aktuelle Anmeldeversuche.
+C. Wählen Sie im Fenster „Riskante Benutzerdetails“ die Registerkarte „Zusammenfassung“ aus.</field>
+        <field ref="answer">Wählen Sie im Fenster „Riskante Benutzerdetails“ die Registerkarte „Zusammenfassung“ aus.</field>
+        <field ref="explanation">Correct. The &apos;Summarize&apos; tab displays the Copilot generated summary of the user&apos;s risk level.</field>
+    </entry>
+    <entry id="fc_sc200_02_04_04">
+        <field ref="question">Welche Informationen können durch die Nutzung von Copilot in Intune erhalten werden, wenn Sie eine neue Richtlinie erstellen?</field>
+        <field ref="choices">A. Datum und Uhrzeit der letzten Aktualisierung einer Richtlinie
+B. Anzahl der benutzenden Personen, die auf eine Richtlinie zugegriffen haben.
+C. Informationen zu einzelnen Einstellungen, ihren Auswirkungen und empfohlenen Werten</field>
+        <field ref="answer">Informationen zu einzelnen Einstellungen, ihren Auswirkungen und empfohlenen Werten</field>
+        <field ref="explanation">Correct. When creating a new policy, Copilot can be used to learn more about individual settings, their impact, and recommended values.</field>
+    </entry>
+    <entry id="fc_sc200_02_04_05">
+        <field ref="question">Copilot in Defender for Cloud ist für alle Benutzer verfügbar, wenn Sie Defender for Cloud in Ihrer Umgebung aktivieren, Zugriff auf Azure Copilot haben und Sicherheits-Compute-Einheiten (SCUs) für Security Copilot zugewiesen sind. Welche zusätzliche Anforderung muss erfüllt werden, um Code mit Security Copilot zu korrigieren?</field>
+        <field ref="choices">A. Sie müssen alle Pläne für den Cloudworkloadschutz (CWP) aktivieren.
+B. Sie müssen Ihre Azure DevOps-Umgebung mit Defender für Cloud verbinden, die Microsoft Security DevOps Azure DevOps-Erweiterung konfigurieren und die Anforderungen an den DevOps-Sicherheitssupport und die Voraussetzungen erfüllen.
+C. Sie müssen den Defender for Cloud Security Posture Management (DCSPM)-Plan aktivieren.</field>
+        <field ref="answer">Sie müssen Ihre Azure DevOps-Umgebung mit Defender für Cloud verbinden, die Microsoft Security DevOps Azure DevOps-Erweiterung konfigurieren und die Anforderungen an den DevOps-Sicherheitssupport und die Voraussetzungen erfüllen.</field>
+        <field ref="explanation">Correct. To use the capability to remediate code with Security Copilot, you must connect your Azure DevOps environment to Defender for Cloud, configure the Microsoft Security DevOps Azure DevOps extension, and meet the DevOps security support and prerequisites requirements.</field>
+    </entry>
+    <entry id="fc_sc200_02_05_01">
+        <field ref="question">Ein Sicherheitsanalyst führt häufig dieselbe Reihe von Eingabeaufforderungen aus, um fehlgeschlagene Anmeldeversuche in Microsoft Entra zu untersuchen. Was sollte der Analyst erstellen, um zu vermeiden, dass diese Eingabeaufforderungen jedes Mal manuell eingegeben werden müssen?</field>
+        <field ref="choices">A. Ein benutzerdefiniertes Plug-In
+B. Ein angepasstes Promptbook
+C. Ein neuer Arbeitsbereich</field>
+        <field ref="answer">Ein angepasstes Promptbook</field>
+        <field ref="explanation">A custom promptbook saves a sequence of prompts from a previous session so the analyst can reuse the workflow in future investigations.</field>
+    </entry>
+    <entry id="fc_sc200_02_05_02">
+        <field ref="question">Eine Insider-Risikowarnung in Microsoft Purview gibt an, dass ein Benutzer vertrauliche Daten auf ein USB-Gerät kopiert hat. Welche Funktion bietet Security Copilot, um diese Warnung zu untersuchen?</field>
+        <field ref="choices">A. Das USB-Gerät wird automatisch von der weiteren Verwendung blockiert.
+B. Fasst die Aktivität des Benutzers zusammen und identifiziert wichtige Risikomuster.
+C. Generiert einen Compliancebericht für den Vorgesetzten des Benutzers.</field>
+        <field ref="answer">Fasst die Aktivität des Benutzers zusammen und identifiziert wichtige Risikomuster.</field>
+        <field ref="explanation">Security Copilot summarizes user activity, identifies risk patterns, and helps the analyst assess the potential impact of the insider risk alert.</field>
+    </entry>
+    <entry id="fc_sc200_02_05_03">
+        <field ref="question">Ein Sicherheitsanalyst untersucht einen komplexen Vorfall in Microsoft Defender XDR, der Dutzende von Warnungen auf mehreren Geräten umfasst. Wie unterstützt Security Copilot bei dieser Untersuchung?</field>
+        <field ref="choices">A. Er löst den Vorfall automatisch und schließt alle zugehörigen Warnungen.
+B. Er schränkt den Zugriff auf die betroffenen Geräte ein, bis die Untersuchung abgeschlossen ist.
+C. Es fasst Vorfallaktivitäten zusammen, verbindet verwandte Ereignisse und stellt geführte Antworten bereit.</field>
+        <field ref="answer">Es fasst Vorfallaktivitäten zusammen, verbindet verwandte Ereignisse und stellt geführte Antworten bereit.</field>
+        <field ref="explanation">Security Copilot helps analysts understand complex incidents by summarizing activity, connecting related events, and providing guided responses to focus the investigation.</field>
+    </entry>
+    <entry id="fc_sc200_02_05_04">
+        <field ref="question">Eine Organisation muss nicht bezeichnete Dokumente vor einer Cloudmigration identifizieren. Welches Microsoft Purview Feature, das durch Security Copilot erweitert wird, hilft, eDiscovery-Suchergebnisse zu analysieren, um das Compliancerisiko zu bewerten?</field>
+        <field ref="choices">A. Aktivitätsexplorer
+B. Dlp-Warnungen (Data Loss Prevention, Verhinderung von Datenverlust)
+C. eDiscovery-Inhaltssuche mit Zusammenfassung durch Security Copilot</field>
+        <field ref="answer">eDiscovery-Inhaltssuche mit Zusammenfassung durch Security Copilot</field>
+        <field ref="explanation">Security Copilot in eDiscovery analyzes search results, summarizes findings, identifies sensitive information types, and reviews content distribution across workloads.</field>
+    </entry>
+    <entry id="fc_sc200_02_05_05">
+        <field ref="question">Was bestimmt die Sicherheitsdaten, auf die ein Copilot Mitwirkender innerhalb Security Copilot zugreifen kann?</field>
+        <field ref="choices">A. Die Plugins, die im Arbeitsbereich aktiviert sind
+B. Die Microsoft Entra und Azure RBAC-Rollen des Mitwirkenden
+C. Die für den Arbeitsbereich konfigurierten Besitzereinstellungen</field>
+        <field ref="answer">Die Microsoft Entra und Azure RBAC-Rollen des Mitwirkenden</field>
+        <field ref="explanation">A contributor&apos;s Microsoft Entra and Azure role-based access control roles determine what security data they can access in Security Copilot, regardless of which plugins are enabled.</field>
+    </entry>
+    <entry id="fc_sc200_03_01_01">
+        <field ref="question">Sie untersuchen eine DLP-Warnung (Data Loss Prevention, Verhinderung von Datenverlust), bei der ein Benutzer eine Datei mit dem Namen &quot;Budget_2025.xlsx&quot; in ein persönliches Cloudspeicherkonto hochgeladen hat. Um zu verstehen, welche Richtlinie die Warnung ausgelöst hat und ob es sich um ein falsch positives Ergebnis handelt, wo sollten Sie Ihre Untersuchung starten?</field>
+        <field ref="choices">A. Microsoft Sentinel
+B. Microsoft Defender XDR
+C. Microsoft Purview</field>
+        <field ref="answer">Microsoft Purview</field>
+        <field ref="explanation">Correct: Microsoft Purview focuses on DLP policy matches and is the best place to validate what triggered the alert.</field>
+    </entry>
+    <entry id="fc_sc200_03_01_02">
+        <field ref="question">Während Ihrer Untersuchung stellen Sie fest, dass derselbe Benutzer mehrere Dateien vor diesem Tag aus SharePoint heruntergeladen hat. Welches Tool bietet Ihnen die übersichtlichste Ansicht aller zugehörigen Aktivitäten an einem Ort?</field>
+        <field ref="choices">A. Aktivitäten-Explorer
+B. Microsoft Defender XDR
+C. Microsoft Purview-Portal</field>
+        <field ref="answer">Microsoft Defender XDR</field>
+        <field ref="explanation">Correct: Defender XDR groups related alerts and user activity into incidents for a consolidated view.</field>
+    </entry>
+    <entry id="fc_sc200_03_01_03">
+        <field ref="question">Sie möchten sicherstellen, dass ein anderer Analyst auf diese DLP-Warnung folgt. Was sollten Sie in Microsoft Defender XDR tun?</field>
+        <field ref="choices">A. Zuweisen des Vorfalls und Aktualisieren des Status
+B. Hinzufügen der Warnung zu einer SharePoint-Liste
+C. Festlegen der Warnung auf den Simulationsmodus</field>
+        <field ref="answer">Zuweisen des Vorfalls und Aktualisieren des Status</field>
+        <field ref="explanation">Correct: Assigning the incident and updating the status ensures accountability and tracking through resolution.</field>
+    </entry>
+    <entry id="fc_sc200_03_01_04">
+        <field ref="question">Sie bestätigen, dass der Benutzer sensible Finanzdaten nicht ordnungsgemäß verarbeitet hat. Welche Abhilfemaßnahmen sind in Microsoft Defender XDR geeignet?</field>
+        <field ref="choices">A. Deaktivieren des Benutzerkontos oder Entfernen des Dateizugriffs
+B. Passen Sie die DLP-Richtlinie sofort an
+C. Löschen der Warnung aus der Vorfallwarteschlange</field>
+        <field ref="answer">Deaktivieren des Benutzerkontos oder Entfernen des Dateizugriffs</field>
+        <field ref="explanation">Correct: Disabling the account or removing file access protects organizational data after a confirmed incident.</field>
+    </entry>
+    <entry id="fc_sc200_03_01_05">
+        <field ref="question">Welcher Schritt trägt nach der Lösung des Vorfalls dazu bei, Ihre DLP-Richtlinie zu verbessern und zukünftige Fehlalarme zu reduzieren?</field>
+        <field ref="choices">A. Passen Sie die DLP-Richtlinien basierend auf den Untersuchungsergebnissen an
+B. Zurücksetzen des Richtlinienübereinstimmungszählers
+C. Archivierung des Vorfalls in Microsoft Sentinel</field>
+        <field ref="answer">Passen Sie die DLP-Richtlinien basierend auf den Untersuchungsergebnissen an</field>
+        <field ref="explanation">Correct: Policy tuning ensures that detection rules are optimized based on real-world investigations.</field>
+    </entry>
+    <entry id="fc_sc200_03_02_01">
+        <field ref="question">Wo befinden Sie sich in Microsoft Purview Insider Risk Management, um alle von Richtlinien generierten Warnungen anzuzeigen?</field>
+        <field ref="choices">A. Fälle Dashboard
+B. Aktivitäten-Explorer
+C. Warnungen Dashboard</field>
+        <field ref="answer">Warnungen Dashboard</field>
+        <field ref="explanation">Correct: The Alerts dashboard is the centralized queue for reviewing all policy-triggered alerts.</field>
+    </entry>
+    <entry id="fc_sc200_03_02_02">
+        <field ref="question">Wie hilft das Punktdiagramm auf der Registerkarte &quot;Benutzeraktivität&quot; den Ermittlern?</field>
+        <field ref="choices">A. Sie ordnet das Benutzerverhalten den Microsoft Entra-ID-Rollen zu.
+B. Es visualisiert risikobezogene Ereignisse im Laufe der Zeit, um Sequenzen und Muster zu identifizieren.
+C. Sie bietet direkten Zugriff auf Copilot-Zusammenfassungen für jede Aktivität.</field>
+        <field ref="answer">Es visualisiert risikobezogene Ereignisse im Laufe der Zeit, um Sequenzen und Muster zu identifizieren.</field>
+        <field ref="explanation">Correct: The scatter plot helps surface trends and clusters of risky behavior.</field>
+    </entry>
+    <entry id="fc_sc200_03_02_03">
+        <field ref="question">Was ist ein empfohlener nächster Schritt, wenn eine Warnung mehrere schwerwiegende Aktivitäten in verschiedenen Diensten umfasst?</field>
+        <field ref="choices">A. Schließen Sie die Warnung, um Duplizierungen zu vermeiden.
+B. Erstellen Sie einen Fall, um Folgeaktionen und Zusammenarbeit zu verwalten.
+C. Löschen Sie die Warnung, um die Übersichtlichung des Dashboards zu reduzieren.</field>
+        <field ref="answer">Erstellen Sie einen Fall, um Folgeaktionen und Zusammenarbeit zu verwalten.</field>
+        <field ref="explanation">Correct: Creating a case is best for managing serious or multi-layered incidents.</field>
+    </entry>
+    <entry id="fc_sc200_03_02_04">
+        <field ref="question">Welche Rolle spielen Fälle bei Insider-Risikountersuchungen?</field>
+        <field ref="choices">A. Sie verfolgen die Lizenzierung für jede Warnung.
+B. Sie ermöglichen das Gruppieren und Verwalten von Warnungsuntersuchungen für einen bestimmten Benutzer.
+C. Sie speichern Power Automate-Protokolle zur Compliancenachverfolgung.</field>
+        <field ref="answer">Sie ermöglichen das Gruppieren und Verwalten von Warnungsuntersuchungen für einen bestimmten Benutzer.</field>
+        <field ref="explanation">Correct: Cases are created per user and help manage multiple alerts and related activity.</field>
+    </entry>
+    <entry id="fc_sc200_03_02_05">
+        <field ref="question">Welche Rolle ist erforderlich, um die erweiterte Suche für Insider-Risikoereignisse zu verwenden?</field>
+        <field ref="choices">A. Microsoft 365 Compliance-Administrator
+B. Insider-Risikomanagementanalyst oder Prüfer
+C. Sicherheitsoperator</field>
+        <field ref="answer">Insider-Risikomanagementanalyst oder Prüfer</field>
+        <field ref="explanation">Correct: Only users with these roles can access insider risk data in Advanced hunting.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_02_01">
+        <field ref="question">Welches Feature gibt es sowohl bei Microsoft Purview Audit (Standard) und Audit (Premium)?</field>
+        <field ref="choices">A. Aufbewahrung der Überwachungsprotokolle: 10&amp;nbsp;Jahre.
+B. Search-UnifiedAuditLog Cmdlet.
+C. Anpassbare Aufbewahrungsrichtlinien für Überwachungsprotokolle.</field>
+        <field ref="answer">Search-UnifiedAuditLog Cmdlet.</field>
+        <field ref="explanation">Correct: Both versions offer the Search-UnifiedAuditLog cmdlet, allowing for detailed searches within the audit logs.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_03_01">
+        <field ref="question">Was ist der Hauptunterschied zwischen den Abonnementanforderungen zwischen Microsoft Purview Audit (Standard) und Audit (Premium)?</field>
+        <field ref="choices">A. Die Überwachung (Premium) erfordert Pläne höherer Ebene, z. B. Microsoft 365 E5 oder Office 365 E5.
+B. Beide Versionen erfordern dieselben Arten von Abonnements.
+C. Für Audit (Standard) ist ein Office&amp;nbsp;365&amp;nbsp;E1-Abonnement erforderlich, während dies für Audit (Premium) nicht erforderlich ist.</field>
+        <field ref="answer">Die Überwachung (Premium) erfordert Pläne höherer Ebene, z. B. Microsoft 365 E5 oder Office 365 E5.</field>
+        <field ref="explanation">Correct: Audit (Premium) requires subscriptions to higher-tier plans like Microsoft 365 E5 to access its advanced features.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_04_01">
+        <field ref="question">Was ist die maximale Anzahl von Suchaufträgen, die ein Benutzer im Microsoft Purview-Complianceportal gleichzeitig ausführen kann?</field>
+        <field ref="choices">A. Unbegrenzt, solange die Systemressourcen das zulassen
+B. Bis zu fünf Suchaufträge
+C. Bis zu zehn Suchaufträge</field>
+        <field ref="answer">Bis zu zehn Suchaufträge</field>
+        <field ref="explanation">Correct: A user can run up to 10 search jobs at the same time, which is the system limit.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_06_01">
+        <field ref="question">Was macht Microsoft Purview Audit (Premium) mit doppelten Überwachungsdatensätzen, um die Protokollverwaltung zu vereinfachen?</field>
+        <field ref="choices">A. Alle Duplikate sofort löschen
+B. Duplikate innerhalb einer Stunde herausfiltern, wenn bestimmte Eigenschaften sich nicht ändern
+C. Alle Duplikate zulassen, um Datenintegrität zu gewährleisten</field>
+        <field ref="answer">Duplikate innerhalb einer Stunde herausfiltern, wenn bestimmte Eigenschaften sich nicht ändern</field>
+        <field ref="explanation">Correct: Duplicate records for the same bind operations within an hour are filtered out unless key properties change.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_07_01">
+        <field ref="question">Wie hoch ist die maximale Anzahl von Einträgen, die aus einer einzelnen Überwachungsprotokollsuche in Microsoft Purview Audit in eine CSV-Datei exportiert werden können?</field>
+        <field ref="choices">A. 10.000&amp;nbsp;Einträge.
+B. 50.000&amp;nbsp;Einträge.
+C. 100.000&amp;nbsp;Einträge.</field>
+        <field ref="answer">50.000&amp;nbsp;Einträge.</field>
+        <field ref="explanation">Correct: Up to 50,000 entries can be downloaded to a CSV file from a single audit log search.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_08_01">
+        <field ref="question">Was ist der maximale Aufbewahrungszeitraum, den Microsoft Purview Audit (Premium) für Überwachungsprotokolle zulässt?</field>
+        <field ref="choices">A. 180&amp;nbsp;Tage
+B. 5&amp;nbsp;Jahre
+C. 10&amp;nbsp;Jahre</field>
+        <field ref="answer">10&amp;nbsp;Jahre</field>
+        <field ref="explanation">Correct: Audit (Premium) allows organizations to set retention periods up to 10 years with the appropriate add-on license.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_01">
+        <field ref="question">Was ist der Hauptunterschied zwischen Audit (Standard) und Audit (Premium) in Bezug auf die Aufbewahrungszeiträume von Überwachungsprotokollen?</field>
+        <field ref="choices">A. Audit (Standard) erlaubt einen maximalen Aufbewahrungszeitraum von 180&amp;nbsp;Tagen.
+B. Audit (Standard) unterstützt Aufbewahrungsrichtlinien von 10&amp;nbsp;Jahren.
+C. Beide Versionen bieten eine unbegrenzte Aufbewahrung.</field>
+        <field ref="answer">Audit (Standard) erlaubt einen maximalen Aufbewahrungszeitraum von 180&amp;nbsp;Tagen.</field>
+        <field ref="explanation">Correct: Audit (Standard) supports a retention period of 180 days by default.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_02">
+        <field ref="question">Welcher Schritt sollte zuerst ausgeführt werden, bevor das Überwachungsprotokoll in Microsoft Purview durchsucht werden kann?</field>
+        <field ref="choices">A. Installation der neuesten Updates für Microsoft&amp;nbsp;365
+B. Überprüfung der Aktivierung der Überwachungsprotokollsuche
+C. Exportieren vorhandener Überwachungsprotokolle in eine CSV-Datei für die Sicherung</field>
+        <field ref="answer">Überprüfung der Aktivierung der Überwachungsprotokollsuche</field>
+        <field ref="explanation">Correct: Confirm audit log search is enabled with the Get-AdminAuditLogConfig command.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_03">
+        <field ref="question">Welches Feature von Microsoft Purview Audit (Premium) ist für die sichere Verwaltung vertraulicher Kommunikationsabläufe unerlässlich?</field>
+        <field ref="choices">A. Standard-Datenaufbewahrung
+B. Basic-Überwachungsprotokolle
+C. MailItemsAccessed</field>
+        <field ref="answer">MailItemsAccessed</field>
+        <field ref="explanation">Correct: MailItemsAccessed is important for providing detailed records of how and when email items are accessed, essential for managing sensitive communications.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_04">
+        <field ref="question">Was ist der Hauptzweck des Exportierens von Überwachungsprotokollen in CSV-Dateien in Microsoft Purview Audit?</field>
+        <field ref="choices">A. Für die Durchführung detaillierter Datenanalysen und die Einhaltung der Anforderungen an die Complianceberichterstellung
+B. Zum Reduzieren des auf Servern verwendeten Speicherplatzes
+C. Zur Verbesserung der visuellen Darstellung von Daten</field>
+        <field ref="answer">Für die Durchführung detaillierter Datenanalysen und die Einhaltung der Anforderungen an die Complianceberichterstellung</field>
+        <field ref="explanation">Correct: Exporting audit logs to CSV enables extensive data manipulation and deeper insights, essential for compliance and detailed analysis.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_05">
+        <field ref="question">Wie werden Aufbewahrungsrichtlinien für Überwachungsprotokolle in Microsoft Purview Audit (Premium) priorisiert, wenn Konflikte auftreten?</field>
+        <field ref="choices">A. Basierend auf dem Datum, an dem die Richtlinie erstellt wurde
+B. Alphabetisch nach Richtlinienname
+C. Nach einer von den Administrator:innen festgelegten Prioritätsstufe</field>
+        <field ref="answer">Nach einer von den Administrator:innen festgelegten Prioritätsstufe</field>
+        <field ref="explanation">Correct: Administrators set a priority level to determine which policy takes precedence if there are conflicts.</field>
+    </entry>
+    <entry id="fc_sc200_03_04_01">
+        <field ref="question">Warum ist jede eDiscovery-Suche in Microsoft Purview einem Fall zugeordnet?</field>
+        <field ref="choices">A. Um die Speicherkosten in Microsoft 365 zu reduzieren.
+B. So gruppieren Sie Suchvorgänge nach Arbeitsauslastung (z. B. E-Mail oder Teams).
+C. Um den Zugriff zu steuern und einen auditierbaren Untersuchungsarbeitsbereich bereitzustellen.</field>
+        <field ref="answer">Um den Zugriff zu steuern und einen auditierbaren Untersuchungsarbeitsbereich bereitzustellen.</field>
+        <field ref="explanation">Correct: Cases help enforce access controls and auditing during investigations.</field>
+    </entry>
+    <entry id="fc_sc200_03_04_02">
+        <field ref="question">Welche Rollen sind für den Zugriff auf und die Verwaltung von eDiscovery-Fällen in Microsoft Purview erforderlich?</field>
+        <field ref="choices">A. Globaler oder Complianceadministrator
+B. eDiscovery-Manager oder eDiscovery-Administrator
+C. Security Reader oder Microsoft 365 Reader</field>
+        <field ref="answer">eDiscovery-Manager oder eDiscovery-Administrator</field>
+        <field ref="explanation">Correct: These roles are required to access and manage eDiscovery cases.</field>
+    </entry>
+    <entry id="fc_sc200_03_04_03">
+        <field ref="question">Was ermöglicht Ihnen das Feature &quot;Nach Datei suchen&quot; in eDiscovery?</field>
+        <field ref="choices">A. Erstellen Sie Suchabfragen nur mit PowerShell-Skripts.
+B. Automatisches Exportieren von Suchergebnissen in einen Prüfdatensatz.
+C. Laden Sie Beispielinhalte hoch, um ähnliche oder referenzierte Elemente zu finden.</field>
+        <field ref="answer">Laden Sie Beispielinhalte hoch, um ähnliche oder referenzierte Elemente zu finden.</field>
+        <field ref="explanation">Correct: You can upload .txt or .csv files to guide the search.</field>
+    </entry>
+    <entry id="fc_sc200_03_04_04">
+        <field ref="question">Was ist der Zweck des Ergebnistyps &quot;Statistik&quot; in der eDiscovery-Suche?</field>
+        <field ref="choices">A. So zeigen Sie an, wie viele Elemente mit Ihrer Abfrage übereinstimmen und wo sie gefunden wurden.
+B. So zeigen Sie jedes Element im Detail für den sofortigen Export an.
+C. So überwachen Sie den Suchstatus während der Ausführung in Echtzeit.</field>
+        <field ref="answer">So zeigen Sie an, wie viele Elemente mit Ihrer Abfrage übereinstimmen und wo sie gefunden wurden.</field>
+        <field ref="explanation">Correct: Statistics provides an overview of matched items, locations, and data volume.</field>
+    </entry>
+    <entry id="fc_sc200_03_04_05">
+        <field ref="question">Was geschieht, wenn Sie Suchergebnisse in Microsoft Purview eDiscovery exportieren?</field>
+        <field ref="choices">A. Elemente werden nach dem Export automatisch von ihrem ursprünglichen Speicherort gelöscht.
+B. Die Ergebnisse werden mit Berichten verpackt und zum Download zur Verfügung gestellt.
+C. Suchergebnisse werden sofort einem Prüfdateisatz zur weiteren Analyse hinzugefügt.</field>
+        <field ref="answer">Die Ergebnisse werden mit Berichten verpackt und zum Download zur Verfügung gestellt.</field>
+        <field ref="explanation">Correct: Exporting creates a downloadable package of content and summary reports.</field>
+    </entry>
+    <entry id="fc_sc200_04_01_01">
+        <field ref="question">Was ist erforderlich, um Microsoft Defender für Endpunkt auf Windows-Geräten in Ihrem Unternehmen bereitzustellen?</field>
+        <field ref="choices">A. Abonnement für den Online-Dienst Microsoft Defender für Endpunkt.
+B. Es ist keine Aktion erforderlich. Microsoft Defender für Endpunkt ist im Windows 10-Betriebssystem enthalten.
+C. Lizenz für Microsoft Intune.</field>
+        <field ref="answer">Abonnement für den Online-Dienst Microsoft Defender für Endpunkt.</field>
+        <field ref="explanation">Correct. Deploying Defender for Endpoint requires a subscription to the online service.</field>
+    </entry>
+    <entry id="fc_sc200_04_01_02">
+        <field ref="question">Welche der folgenden Aussagen beschreibt die Bedrohungserkennung mit Microsoft Defender für Endpunkt?</field>
+        <field ref="choices">A. Mit einem leistungsstarken Such- und Abfragetool können Sie Ereignisse in Ihrem Netzwerk proaktiv untersuchen.
+B. Es werden Apps erkannt und blockiert, die als unsicher eingestuft wurden, aber möglicherweise nicht als Schadsoftware erkannt werden.
+C. Mit intelligenten Regeln, die dazu beitragen, Schadsoftware anzuhalten, werden Sicherheitsrisiken (Angriffsflächen) in Ihren Anwendungen reduziert.</field>
+        <field ref="answer">Mit einem leistungsstarken Such- und Abfragetool können Sie Ereignisse in Ihrem Netzwerk proaktiv untersuchen.</field>
+        <field ref="explanation">Correct. Advanced hunting is a powerful search/query tool for proactive investigation.</field>
+    </entry>
+    <entry id="fc_sc200_04_01_03">
+        <field ref="question">Welche der folgenden Funktionen ist keine Komponente von Microsoft Defender for Endpoint?</field>
+        <field ref="choices">A. Schutz der nächsten Generation
+B. Endpunkterkennung und -reaktion
+C. Cloudgeräteverwaltung</field>
+        <field ref="answer">Cloudgeräteverwaltung</field>
+        <field ref="explanation">Correct. Cloud device management is not a component of Microsoft Defender for Endpoint.</field>
+    </entry>
+    <entry id="fc_sc200_04_02_01">
+        <field ref="question">Wie lautet die Standarddatenaufbewahrungsdauer in Microsoft Defender XDR for Endpoint?</field>
+        <field ref="choices">A. Einen Monat
+B. Sechs Monate
+C. Drei Monate</field>
+        <field ref="answer">Sechs Monate</field>
+        <field ref="explanation">Correct. The default is six months.</field>
+    </entry>
+    <entry id="fc_sc200_04_02_02">
+        <field ref="question">Welche der folgenden Optionen ist eine gültige Microsoft Defender XDR for Endpoint-Onboarding-Option für Windows 10-Geräte?</field>
+        <field ref="choices">A. Gruppenrichtlinie
+B. Microsoft Store
+C. Allgemeines Installationspaket</field>
+        <field ref="answer">Gruppenrichtlinie</field>
+        <field ref="explanation">Correct. Group policy is a valid deployment option.</field>
+    </entry>
+    <entry id="fc_sc200_04_02_03">
+        <field ref="question">Welche Sicherheitsberechtigung ermöglicht die Konfiguration von Speichereinstellungen?</field>
+        <field ref="choices">A. Verwalten von Sicherheitseinstellungen in Security Center
+B. Verwalten von Portalsystemeinstellungen
+C. Erweiterte Befehle</field>
+        <field ref="answer">Verwalten von Portalsystemeinstellungen</field>
+        <field ref="explanation">Correct. This permission allows the configuration of storage settings.</field>
+    </entry>
+    <entry id="fc_sc200_04_03_01">
+        <field ref="question">Mit welcher Lösung werden die Anwendungen gesteuert, für die zur Ausführung die Vertrauenswürdigkeit belegt werden muss?</field>
+        <field ref="choices">A. Exploit-Schutz
+B. Überwachter Ordnerzugriff
+C. Anwendungssteuerung</field>
+        <field ref="answer">Anwendungssteuerung</field>
+        <field ref="explanation">Correct. Application control is used for trust.</field>
+    </entry>
+    <entry id="fc_sc200_04_03_02">
+        <field ref="question">Welche der folgenden Option ist eine Regel zur Verringerung der Angriffsfläche, die konfiguriert werden kann?</field>
+        <field ref="choices">A. Ausführung von PowerShell blockieren
+B. Prozesserstellungen über PSExec- und WMI-Befehle blockieren
+C. Inhalte von mobilen Geräten blockieren</field>
+        <field ref="answer">Prozesserstellungen über PSExec- und WMI-Befehle blockieren</field>
+        <field ref="explanation">Correct.  Blocking process creation from PSExec is an attack surface reduction rule that can be configured.</field>
+    </entry>
+    <entry id="fc_sc200_04_03_03">
+        <field ref="question">Welche der folgenden Optionen ist eine Bereitstellungsoption?</field>
+        <field ref="choices">A. PowerShell
+B. ASRConfig.exe
+C. Microsoft-Bereitstellungssystem</field>
+        <field ref="answer">PowerShell</field>
+        <field ref="explanation">Correct. PowerShell is a valid deployment option.</field>
+    </entry>
+    <entry id="fc_sc200_04_04_01">
+        <field ref="question">Der Security Operations Analyst hat ein interessantes Ereignis entdeckt. Wie kann es für die weitere Überprüfung markiert werden?</field>
+        <field ref="choices">A. Tag
+B. Hervorheben
+C. Flagge</field>
+        <field ref="answer">Flagge</field>
+        <field ref="explanation">Correct. You can Flag events.</field>
+    </entry>
+    <entry id="fc_sc200_04_04_02">
+        <field ref="question">Welches verhaltensbasierte Blockieren kann für ein Antivirenprogramm eines Drittanbieters verwendet werden?</field>
+        <field ref="choices">A. Clientseitiges verhaltensbasiertes Blockieren
+B. EDR im Blockmodus
+C. Blockieren durch Feedbackschleifen</field>
+        <field ref="answer">EDR im Blockmodus</field>
+        <field ref="explanation">Correct. EDR in Block allows for blocking even when third party AV is used.</field>
+    </entry>
+    <entry id="fc_sc200_04_04_03">
+        <field ref="question">Ein Windows Gerät wird nicht in der Geräteliste angezeigt, was könnte das Problem sein?</field>
+        <field ref="choices">A. Das Gerät wurde umbenannt.
+B. Auf dem Gerät fehlen die neuesten Wissensdatenbanken.
+C. Für das Gerät wurden in den letzten 30&amp;nbsp;Tagen keine Warnungen gemeldet.</field>
+        <field ref="answer">Für das Gerät wurden in den letzten 30&amp;nbsp;Tagen keine Warnungen gemeldet.</field>
+        <field ref="explanation">Correct. You can adjust the time setting to find the device.</field>
+    </entry>
+    <entry id="fc_sc200_04_05_01">
+        <field ref="question">Welche Art von Informationen wird in einem Untersuchungspaket erfasst?</field>
+        <field ref="choices">A. Befehlsverlauf
+B. Vorabrufdateien
+C. Netzwerktransaktionen</field>
+        <field ref="answer">Vorabrufdateien</field>
+        <field ref="explanation">Correct. Prefetch files are collected.</field>
+    </entry>
+    <entry id="fc_sc200_04_05_02">
+        <field ref="question">Bei welcher der folgenden Aktionen handelt es sich um eine Geräteaktion?</field>
+        <field ref="choices">A. Neustart
+B. Gerät neu formatieren
+C. Gerät isolieren</field>
+        <field ref="answer">Gerät isolieren</field>
+        <field ref="explanation">Correct. You can isolate a device.</field>
+    </entry>
+    <entry id="fc_sc200_04_06_01">
+        <field ref="question">Welcher der folgenden Artefakttypen verfügt über eine Untersuchungsseite?</field>
+        <field ref="choices">A. Domäne
+B. Suchender
+C. Bedrohungsakteur</field>
+        <field ref="answer">Domäne</field>
+        <field ref="explanation">Correct. There&apos;s an investigation page for Domain.</field>
+    </entry>
+    <entry id="fc_sc200_04_06_02">
+        <field ref="question">Welche Informationen werden bei einer umfassenden Dateianalyse bereitgestellt?</field>
+        <field ref="choices">A. Befehlsverlauf
+B. Registrierungsänderungen
+C. Änderungsgeschichte des Codes</field>
+        <field ref="answer">Registrierungsänderungen</field>
+        <field ref="explanation">Correct. Registry modifications are reported.</field>
+    </entry>
+    <entry id="fc_sc200_04_06_03">
+        <field ref="question">Welche Informationen werden auf der Seite des Benutzerkontos bereitgestellt?</field>
+        <field ref="choices">A. Zugeordnete Warnungen
+B. Sicherheitsgruppen
+C. ID der Bedrohungsjagd</field>
+        <field ref="answer">Zugeordnete Warnungen</field>
+        <field ref="explanation">Correct. The associated alerts are provided.</field>
+    </entry>
+    <entry id="fc_sc200_04_07_01">
+        <field ref="question">Was ist eine gültige Wartungsebene?</field>
+        <field ref="choices">A. Teilweise: Genehmigung für jede Wartung erforderlich
+B. Teilweise: nur Benutzerkonten
+C. Teilweise: nur Dateien</field>
+        <field ref="answer">Teilweise: Genehmigung für jede Wartung erforderlich</field>
+        <field ref="explanation">Correct. This is a valid remediation level.</field>
+    </entry>
+    <entry id="fc_sc200_04_07_02">
+        <field ref="question">Ein Security Operations Analyst muss die benutzerdefinierte ausführbare Datei „C:\myapp\myapp.exe“ ausschließen. Welcher Ausschlusstyp muss dazu verwendet werden?</field>
+        <field ref="choices">A. Datei
+B. Erweiterung
+C. Ordner</field>
+        <field ref="answer">Datei</field>
+        <field ref="explanation">Correct. File excludes this specific file from automation</field>
+    </entry>
+    <entry id="fc_sc200_04_07_03">
+        <field ref="question">Welche Einstellung muss in „Erweiterte Funktionen“ aktiviert werden, um Dateien auch dann zu blockieren, wenn ein Antivirenprogramm eines Drittanbieters verwendet wird?</field>
+        <field ref="choices">A. Enable EDR in block mode (EDR im Blockmodus aktivieren)
+B. Allow or block file (Dateien zulassen oder blockieren)
+C. Automatisierte Untersuchung</field>
+        <field ref="answer">Enable EDR in block mode (EDR im Blockmodus aktivieren)</field>
+        <field ref="explanation">Correct. EDR in block mode is used with third party antivirus</field>
+    </entry>
+    <entry id="fc_sc200_04_08_01">
+        <field ref="question">Welcher Dateityp kann zum Hochladen von Indikatoren verwendet werden?</field>
+        <field ref="choices">A. JSON
+B. XML
+C. CSV</field>
+        <field ref="answer">CSV</field>
+        <field ref="explanation">Correct.  CSV file format is supported.</field>
+    </entry>
+    <entry id="fc_sc200_04_08_02">
+        <field ref="question">Welcher Typ ist ein akzeptierter Indikatortyp?</field>
+        <field ref="choices">A. Zertifikate
+B. E-Mail-Betreffzeile
+C. Codedaten</field>
+        <field ref="answer">Zertifikate</field>
+        <field ref="explanation">correct.  Certificates are an indicator type.</field>
+    </entry>
+    <entry id="fc_sc200_04_08_03">
+        <field ref="question">Welcher Filter ist Teil einer Warnungsbenachrichtigungsregel?</field>
+        <field ref="choices">A. Warnungsschweregrad
+B. Konto
+C. Betreff-IDs</field>
+        <field ref="answer">Warnungsschweregrad</field>
+        <field ref="explanation">Correct. Alert Severity is a filter option for the rule.</field>
+    </entry>
+    <entry id="fc_sc200_04_09_01">
+        <field ref="question">In welchen Graphen des Berichts zu bedrohten Geräten wird jedes Gerät nur einmal basierend auf der höchsten Ebene eines bekannten Exploits gezählt?</field>
+        <field ref="choices">A. Graphen zum Alter eines Sicherheitsrisikos
+B. Graphen zur Verfügbarkeit von Exploits
+C. Schweregraddiagramme</field>
+        <field ref="answer">Graphen zur Verfügbarkeit von Exploits</field>
+        <field ref="explanation">Correct. The exploit graphs show this information</field>
+    </entry>
+    <entry id="fc_sc200_04_09_02">
+        <field ref="question">In welchem Bericht werden die Sicherheitsrisiken der Software, denen Ihre Geräte ausgesetzt sind, nach der CVE-ID (Common Vulnerabilities and Exposures) aufgelistet?</field>
+        <field ref="choices">A. Veranstaltungszeitplan
+B. Schwächen
+C. Softwarebestand</field>
+        <field ref="answer">Schwächen</field>
+        <field ref="explanation">Correct. This report is listed by the CVE ID.</field>
+    </entry>
+    <entry id="fc_sc200_04_09_03">
+        <field ref="question">Ein Sicherheitsadministrator sendet eine Korrekturanforderung von der Seite &quot;Sicherheitsempfehlungen&quot;. Wo kann der Administrator den Fortschritt dieser Anforderung nachverfolgen?</field>
+        <field ref="choices">A. Die Seite &quot;Sicherheitsempfehlungen&quot;
+B. Die Seite &quot;Korrektur&quot;
+C. Die Seite &quot;Schwächen&quot;</field>
+        <field ref="answer">Die Seite &quot;Korrektur&quot;</field>
+        <field ref="explanation">Correct. Submitted remediation requests become remediation activity items tracked on the Remediation page.</field>
+    </entry>
+    <entry id="fc_sc200_05_01_01">
+        <field ref="question">Welche der folgenden Aussagen beschreibt die primäre Rolle von Microsoft Defender für Cloud?</field>
+        <field ref="choices">A. Vereinfachung von Cloudsicherheit
+B. Cloudworkloadschutz
+C. Cloudkonfigurationsverwaltung</field>
+        <field ref="answer">Cloudworkloadschutz</field>
+        <field ref="explanation">Correct. Microsoft Defender for Cloud is for Cloud workload protection.</field>
+    </entry>
+    <entry id="fc_sc200_05_01_02">
+        <field ref="question">Mit welchem Feature von Microsoft Defender für Cloud können Sie die Topologie Ihrer Workloads sehen?</field>
+        <field ref="choices">A. Bestand
+B. Sicherheitsbewertung
+C. Netzwerkübersicht</field>
+        <field ref="answer">Netzwerkübersicht</field>
+        <field ref="explanation">Correct.  Network map is a visualization of your workloads.</field>
+    </entry>
+    <entry id="fc_sc200_05_01_03">
+        <field ref="question">Welche Option aktivieren Sie, um sicherzustellen, dass Microsoft Defender für Cloud alle Ressourcen in einem Abonnement abdeckt?</field>
+        <field ref="choices">A. Automatische Bereitstellung
+B. Fortlaufende Bewertungen
+C. Abdeckungstyp</field>
+        <field ref="answer">Automatische Bereitstellung</field>
+        <field ref="explanation">Correct.  Automatic provisioning will install the required agent for the resources.</field>
+    </entry>
+    <entry id="fc_sc200_05_02_01">
+        <field ref="question">Bei welcher der folgenden handelt es sich um eine Konfiguration für sicherheitsrelevante Windows-Ereignisse?</field>
+        <field ref="choices">A. Vernünftig
+B. Höchstwert
+C. Wenig</field>
+        <field ref="answer">Wenig</field>
+        <field ref="explanation">Correct. Minimal is a configuration option.</field>
+    </entry>
+    <entry id="fc_sc200_05_02_02">
+        <field ref="question">Was sollten Sie auf einer neuen Azure-Windows-VM installieren, wenn Sie nicht die automatische Bereitstellung verwenden?</field>
+        <field ref="choices">A. Log Analytics-Agent
+B. Sysmon
+C. Windows-Firewall</field>
+        <field ref="answer">Log Analytics-Agent</field>
+        <field ref="explanation">Correct.  You need to install the Log Analytics Agent.</field>
+    </entry>
+    <entry id="fc_sc200_05_02_03">
+        <field ref="question">Welche dieser Auswahlen ist eine Erweiterung für die automatische Bereitstellung?</field>
+        <field ref="choices">A. Policy-Add-On für Kubernetes
+B. Windows-Ereignisse
+C. Policy für Azure Policy</field>
+        <field ref="answer">Policy-Add-On für Kubernetes</field>
+        <field ref="explanation">Correct.  Policy Add-on for Kubernetes is an extension.</field>
+    </entry>
+    <entry id="fc_sc200_05_03_01">
+        <field ref="question">Mit welcher Option können Sie Ihre Nicht-Azure-Computer verbinden?</field>
+        <field ref="choices">A. Windows Store
+B. Server mit Azure Arc-Unterstützung
+C. Aus einer Excel-Tabelle</field>
+        <field ref="answer">Server mit Azure Arc-Unterstützung</field>
+        <field ref="explanation">Correct. Using Azure Arc enabled servers is an option to connect.</field>
+    </entry>
+    <entry id="fc_sc200_05_03_02">
+        <field ref="question">Welche Ressource kann Microsoft Defender für Cloud in einer Hybridumgebung schützen?</field>
+        <field ref="choices">A. Word-Dokumente
+B. SQL-Datenbanken
+C. Cosmos DB</field>
+        <field ref="answer">SQL-Datenbanken</field>
+        <field ref="explanation">Correct. SQL Databases can be protected by Microsoft Defender for Cloud.</field>
+    </entry>
+    <entry id="fc_sc200_05_03_03">
+        <field ref="question">Welcher Cloudanbieter verfügt über einen Cloudconnector in Security Center?</field>
+        <field ref="choices">A. IBM Cloud
+B. GCP
+C. Orakel</field>
+        <field ref="answer">GCP</field>
+        <field ref="explanation">Correct.  GCP has a cloud connector.</field>
+    </entry>
+    <entry id="fc_sc200_05_04_01">
+        <field ref="question">Um eine Empfehlung automatisch zu korrigieren, wählen Sie welche Option?</field>
+        <field ref="choices">A. Reagieren
+B. Korrigieren
+C. Reparatur</field>
+        <field ref="answer">Reparatur</field>
+        <field ref="explanation">Correct. The fix option will start the process to automatically remediate.</field>
+    </entry>
+    <entry id="fc_sc200_05_04_02">
+        <field ref="question">Welche Sicherheitsrichtlinie wird standardmäßig jedem Abonnement zugewiesen?</field>
+        <field ref="choices">A. SOC&amp;nbsp;TSP
+B. Vergleichstest für die Azure-Sicherheit
+C. ISO 27001:2013</field>
+        <field ref="answer">Vergleichstest für die Azure-Sicherheit</field>
+        <field ref="explanation">Correct.  Azure Security Benchmark is the default.</field>
+    </entry>
+    <entry id="fc_sc200_05_04_03">
+        <field ref="question">Defender für Cloud-Initiativen werden in wo definiert?</field>
+        <field ref="choices">A. Azure-Richtlinie
+B. Sicherheitsbewertung
+C. Arbeitsmappen</field>
+        <field ref="answer">Azure-Richtlinie</field>
+        <field ref="explanation">Correct.  Azure Policy is used to define initiatives.</field>
+    </entry>
+    <entry id="fc_sc200_05_05_01">
+        <field ref="question">Was ist eine Schutzmaßnahme, die von Microsoft Defender für DNS bereitgestellt wird?</field>
+        <field ref="choices">A. Schadsoftware, die mit dem C&amp;amp;C-Server kommuniziert
+B. Schadsoftware, die Daten auf einem Gerät verschlüsselt
+C. Schadsoftware, die Benutzer*innen auf einem Gerät auflistet</field>
+        <field ref="answer">Schadsoftware, die mit dem C&amp;amp;C-Server kommuniziert</field>
+        <field ref="explanation">Correct.  Command and Control detection over DNS is detected.</field>
+    </entry>
+    <entry id="fc_sc200_05_05_02">
+        <field ref="question">Welche der folgenden Aufgaben übernimmt Microsoft Defender für Container?</field>
+        <field ref="choices">A. Umgebungshärtung, Sicherheitsrisikobewertung und Endpunktverwaltung
+B. Umgebungshärtung, Benutzerrisikomanagement und Bedrohungsschutz zur Laufzeit
+C. Umgebungshärtung, Sicherheitsrisikobewertung und Bedrohungsschutz zur Laufzeit</field>
+        <field ref="answer">Umgebungshärtung, Sicherheitsrisikobewertung und Bedrohungsschutz zur Laufzeit</field>
+        <field ref="explanation">Correct. It performs all three of these services.</field>
+    </entry>
+    <entry id="fc_sc200_05_05_03">
+        <field ref="question">Welches Feature von Microsoft Defender für Server prüft Dateien und Registrierungen des Betriebssystems, der Anwendungssoftware und anderer Ressourcen auf Änderungen, die auf einen Angriff hindeuten können?</field>
+        <field ref="choices">A. Adaptive Anwendungssteuerungen
+B. Adaptives Erhöhen des Netzwerkschutzes
+C. Überwachung der Dateiintegrität</field>
+        <field ref="answer">Überwachung der Dateiintegrität</field>
+        <field ref="explanation">Correct. File integrity monitoring examines files.</field>
+    </entry>
+    <entry id="fc_sc200_05_06_01">
+        <field ref="question">Welche Sicherheitsanalysen werden in Defender für Cloud genutzt?</field>
+        <field ref="choices">A. Biometrische Analysen
+B. Power BI
+C. Verhaltensanalysen</field>
+        <field ref="answer">Verhaltensanalysen</field>
+        <field ref="explanation">Correct. Behavior analytics is used to detect threats.</field>
+    </entry>
+    <entry id="fc_sc200_05_06_02">
+        <field ref="question">Welche Azure-Technologie wird zum Automatisieren der Behebung verwendet?</field>
+        <field ref="choices">A. Azure Functions
+B. Azure Batch
+C. Azure Logic Apps</field>
+        <field ref="answer">Azure Logic Apps</field>
+        <field ref="explanation">Correct.  Logic Apps is the automation engine.</field>
+    </entry>
+    <entry id="fc_sc200_05_06_03">
+        <field ref="question">Welcher Bericht bietet, sofern verfügbar, Taktiken, Tools und Verfahren von Angreifern?</field>
+        <field ref="choices">A. Threat Intelligence
+B. Sicherheitsbewertung
+C. Vorfall</field>
+        <field ref="answer">Threat Intelligence</field>
+        <field ref="explanation">Correct.  The threat intelligence report contains attacker information if available.</field>
+    </entry>
+    <entry id="fc_sc200_06_01_01">
+        <field ref="question">Was macht der Suchoperator?</field>
+        <field ref="choices">A. Sucht tabellenübergreifend und ist nicht spaltenbezogen.
+B. Der Suchoperator führt nur Suchvorgänge nach Daten der letzten Stunde aus.
+C. Er führt Suchvorgänge in den angegebenen Spalten aus.</field>
+        <field ref="answer">Sucht tabellenübergreifend und ist nicht spaltenbezogen.</field>
+        <field ref="explanation">Correct. The search will search across all columns in tables specified</field>
+    </entry>
+    <entry id="fc_sc200_06_01_02">
+        <field ref="question">Was sind project-Operatoren?</field>
+        <field ref="choices">A. Project-Operatoren filtern eine Tabelle auf die Teilmenge der Zeilen, die einem Prädikat entsprechen.
+B. Project-Operatoren erstellen zusammengefasste Spalten und fügen sie an das Resultset an.
+C. Project-Operatoren fügen Spalten in einem Resultset hinzu, entfernen sie oder benennen sie um.</field>
+        <field ref="answer">Project-Operatoren fügen Spalten in einem Resultset hinzu, entfernen sie oder benennen sie um.</field>
+        <field ref="explanation">Correct. project operators control what columns to include, add, remove or rename in the result set of a statement.</field>
+    </entry>
+    <entry id="fc_sc200_06_02_01">
+        <field ref="question">Welche der folgenden Aktionen wird von der dcount()-Funktion ausgeführt?</field>
+        <field ref="choices">A. Zurückgeben einer Anzahl von Tagen für die Ausdrucksdifferenz, die an die Funktion übergeben wurde.
+B. Zurückgeben einer Anzahl von Differenzen im Ausdruck, der an die Funktion übergeben wurde.
+C. Zurückgeben einer eindeutigen Anzahl im Ausdruck, der an die Funktion übergeben wurde.</field>
+        <field ref="answer">Zurückgeben einer eindeutigen Anzahl im Ausdruck, der an die Funktion übergeben wurde.</field>
+        <field ref="explanation">Correct. `dcount` provides a distinct count.</field>
+    </entry>
+    <entry id="fc_sc200_06_02_02">
+        <field ref="question">Welche der folgenden Aktionen wird von der arg_max()-Funktion ausgeführt?</field>
+        <field ref="choices">A. Gibt den Maximalwert für jede an die Funktion übergebene Spalte zurück.
+B. Gibt ein JSON-Array der Maximalwerte für jede an die Funktion übergebene Spalte zurück.
+C. Gibt eine Zeile zurück, die basierend auf der Zeile mit dem Maximalwert für einen Ausdruck ausgewählt wurde.</field>
+        <field ref="answer">Gibt eine Zeile zurück, die basierend auf der Zeile mit dem Maximalwert für einen Ausdruck ausgewählt wurde.</field>
+        <field ref="explanation">Correct. The `arg_max` function returns a row selected based on the row having the max value for an expression.</field>
+    </entry>
+    <entry id="fc_sc200_06_02_03">
+        <field ref="question">Für welche Art von Diagramm bietet die bin()-Funktion den größten Nutzen?</field>
+        <field ref="choices">A. scatterchart
+B. timechart
+C. barchart</field>
+        <field ref="answer">timechart</field>
+        <field ref="explanation">Correct. `Bin()` will round down values to an integer multiple of the given bin size.  The `timechart` displays a time series based on the bin size.</field>
+    </entry>
+    <entry id="fc_sc200_06_03_01">
+        <field ref="question">Welche Verknüpfungsvariante enthält eine Zeile in der Ausgabe für jede Kombination von übereinstimmenden Zeilen von der linken und rechten Seite?</field>
+        <field ref="choices">A. kind=leftouter
+B. kind=inner
+C. kind=fullouter</field>
+        <field ref="answer">kind=inner</field>
+        <field ref="explanation">Correct. Inner contains a row in the output for every combination of matching rows from left and right.</field>
+    </entry>
+    <entry id="fc_sc200_06_03_02">
+        <field ref="question">Wenn Sie den Verknüpfungsoperator verwenden, wie geben Sie dann Felder aus jeder Tabelle an?</field>
+        <field ref="choices">A. $1.columname und $2.columnname
+B. $left.columname und $right.columnname
+C. $inner.columname und $outer.columnname</field>
+        <field ref="answer">$left.columname und $right.columnname</field>
+        <field ref="explanation">Correct. The $left and $right preceding the field name specifies the table.</field>
+    </entry>
+    <entry id="fc_sc200_06_03_03">
+        <field ref="question">Wenn Sie Union für zwei Tabellen verwenden, müssen die beiden Tabellen dann übereinstimmende Spalten haben?</field>
+        <field ref="choices">A. Nr.
+B. Ja.
+C. Nur, wenn der Projektoperator verwendet wird.</field>
+        <field ref="answer">Nr.</field>
+        <field ref="explanation">Correct. The results contain all columns from both tables.</field>
+    </entry>
+    <entry id="fc_sc200_06_04_01">
+        <field ref="question">Mit welcher KQL-Anweisung sollten Sie externe Daten in eine virtuelle Tabelle analysieren?</field>
+        <field ref="choices">A. parse_json (JSON analysieren)
+B. Auszug
+C. externe Daten</field>
+        <field ref="answer">externe Daten</field>
+        <field ref="explanation">Correct.  Use the externaldata operator to create a virtual table from an external source.</field>
+    </entry>
+    <entry id="fc_sc200_06_04_02">
+        <field ref="question">Ein dynamisches Feld enthält welche der folgenden Elemente?</field>
+        <field ref="choices">A. Berechnete Daten.
+B. Schlüssel-Wert-Paardaten.
+C. Externe Daten.</field>
+        <field ref="answer">Schlüssel-Wert-Paardaten.</field>
+        <field ref="explanation">Correct.  The properties in the field are accessed with the dot notation.</field>
+    </entry>
+    <entry id="fc_sc200_06_04_03">
+        <field ref="question">Um eine virtuelle Tabelle zu erstellen, speichern Sie Ihre KQL als welchen Typ?</field>
+        <field ref="choices">A. Modul
+B. Funktion.
+C. Definition.</field>
+        <field ref="answer">Funktion.</field>
+        <field ref="explanation">Correct.  Functions then can be referenced in other KQL statements.</field>
+    </entry>
+    <entry id="fc_sc200_07_01_01">
+        <field ref="question">Was bietet Microsoft Sentinel?</field>
+        <field ref="choices">A. Eine Lösung zum Überprüfen Ihres Sicherheitsstatus in der Cloud
+B. Eine vollumfassende Lösung für sicherheitsrelevante Vorgänge
+C. Eine Lösung zum sicheren Speichern von Schlüsseln und Geheimnissen in der Cloud</field>
+        <field ref="answer">Eine vollumfassende Lösung für sicherheitsrelevante Vorgänge</field>
+        <field ref="explanation">Yes, Microsoft Sentinel gives you an end-to-end solution for security operations. The solution includes visibility, analytics, hunting, incident management, and automation.</field>
+    </entry>
+    <entry id="fc_sc200_07_01_02">
+        <field ref="question">Welche Sprache wird zum Abfragen von Daten in Microsoft Sentinel verwendet?</field>
+        <field ref="choices">A. SQL
+B. GraphQL
+C. KQL</field>
+        <field ref="answer">KQL</field>
+        <field ref="explanation">Kusto Query Language (KQL) is a language used for querying data in Log Analytics, which is where Microsoft Sentinel holds its data.</field>
+    </entry>
+    <entry id="fc_sc200_07_01_03">
+        <field ref="question">Welcher Azure-Dienst speichert die Protokolldaten, die in Microsoft Sentinel erfasst werden?</field>
+        <field ref="choices">A. Azure Data Factory
+B. Protokolldatenanalyse
+C. Azure Monitor</field>
+        <field ref="answer">Protokolldatenanalyse</field>
+        <field ref="explanation">Log Analytics is the underlying service that stores the log data for Microsoft Sentinel.</field>
+    </entry>
+    <entry id="fc_sc200_07_02_01">
+        <field ref="question">Wo werden die Protokolldaten gespeichert?</field>
+        <field ref="choices">A. Microsoft Sentinel-Arbeitsbereich
+B. Azure Lighthouse
+C. Log Analytics-Arbeitsbereich</field>
+        <field ref="answer">Log Analytics-Arbeitsbereich</field>
+        <field ref="explanation">Correct.  Log Analytics workspace is where the data resides</field>
+    </entry>
+    <entry id="fc_sc200_07_02_02">
+        <field ref="question">Welche Microsoft Sentinel-Sicherheitsrolle kann Arbeitsmappen erstellen?</field>
+        <field ref="choices">A. Microsoft Sentinel-Antwortberechtigter
+B. Microsoft Sentinel-Leser
+C. Microsoft Sentinel-Mitwirkender</field>
+        <field ref="answer">Microsoft Sentinel-Mitwirkender</field>
+        <field ref="explanation">Correct. The Contributor role can create workbooks.</field>
+    </entry>
+    <entry id="fc_sc200_07_02_03">
+        <field ref="question">Warum ist es wichtig, beim Erstellen des Log Analytics-Arbeitsbereichs die Region festzulegen?</field>
+        <field ref="choices">A. Die Region gibt an, wo die Protokolldaten gespeichert werden sollen.
+B. Die Region gibt die Zeitzone an, in der die Daten angezeigt werden.
+C. Die Region gibt die Beibehaltungsdauer für Protokolle an.</field>
+        <field ref="answer">Die Region gibt an, wo die Protokolldaten gespeichert werden sollen.</field>
+        <field ref="explanation">Correct.  Region is the data center where your log data is stored</field>
+    </entry>
+    <entry id="fc_sc200_07_03_01">
+        <field ref="question">Welche Tabelle speichert Anmeldeereignisse für Defender für Endpunkt?</field>
+        <field ref="choices">A. DeviceLogonEvents
+B. Büroaktivitäten
+C. SigninLogs</field>
+        <field ref="answer">DeviceLogonEvents</field>
+        <field ref="explanation">Correct.  The Defender for Endpoint data is stored in tables starting with Device</field>
+    </entry>
+    <entry id="fc_sc200_07_03_02">
+        <field ref="question">Welche Tabelle enthält Protokolle von Windows-Hosts, die direkt in Microsoft Sentinel erfasst werden?</field>
+        <field ref="choices">A. Sicherheitsereignis
+B. Prüfprotokolle
+C. Sicherheitswarnung</field>
+        <field ref="answer">Sicherheitsereignis</field>
+        <field ref="explanation">Correct.  Logs from Windows events are stored in this table.</field>
+    </entry>
+    <entry id="fc_sc200_07_03_03">
+        <field ref="question">Welche Tabelle speichert Warnungen von Microsoft Defender für Endpunkt?</field>
+        <field ref="choices">A. Sicherheitsvorfall
+B. DeviceEvents
+C. Sicherheitswarnung</field>
+        <field ref="answer">Sicherheitswarnung</field>
+        <field ref="explanation">Correct.  The Alerts will reside in the SecurityAlert table.</field>
+    </entry>
+    <entry id="fc_sc200_07_04_01">
+        <field ref="question">Welcher der folgenden Vorgänge ist für die Nutzung einer Microsoft Sentinel-Watchlist typisch?</field>
+        <field ref="choices">A. Erstellen weiterer Warnungen, um Probleme besser identifizieren zu können.
+B. Exportieren von Geschäftsdaten als Watchlist.
+C. Schnelles Reagieren auf Incidents durch den schnellen Import von IP-Adressen.</field>
+        <field ref="answer">Schnelles Reagieren auf Incidents durch den schnellen Import von IP-Adressen.</field>
+        <field ref="explanation">Correct. This is a typical scenario for using Microsoft Sentinel watchlist.</field>
+    </entry>
+    <entry id="fc_sc200_07_04_02">
+        <field ref="question">Mit welcher Funktion können Sie in KQL auf eine neue Watchlist namens „MyList“ zugreifen?</field>
+        <field ref="choices">A. _Watchlist(&apos;MyList &apos;)
+B. _GetWatchlist(&apos;MeineListe&apos;)
+C. _Getlist(&apos;MyList &apos;)</field>
+        <field ref="answer">_GetWatchlist(&apos;MeineListe&apos;)</field>
+        <field ref="explanation">Correct. This is the proper function.</field>
+    </entry>
+    <entry id="fc_sc200_07_05_01">
+        <field ref="question">Als was werden Indikatoren in Threat Intelligence betrachtet?</field>
+        <field ref="choices">A. Strategisch
+B. Bei Betrieb
+C. Taktisch</field>
+        <field ref="answer">Taktisch</field>
+        <field ref="explanation">Correct.  Indicators are considered Tactical Threat Intelligence.</field>
+    </entry>
+    <entry id="fc_sc200_07_05_02">
+        <field ref="question">Welches dieser Elemente ist ein Beispiel für einen Bedrohungsindikator?</field>
+        <field ref="choices">A. Name des Bedrohungsakteurs
+B. Domänenname
+C. Bedrohungskampagne</field>
+        <field ref="answer">Domänenname</field>
+        <field ref="explanation">Correct. This indicator can be used to query against your log data.</field>
+    </entry>
+    <entry id="fc_sc200_07_05_03">
+        <field ref="question">Welche Tabelle fragen Sie in KQL ab, um die Indikatoren anzuzeigen?</field>
+        <field ref="choices">A. Indikator
+B. TI-Indikator
+C. Bedrohungsintelligenzindikator</field>
+        <field ref="answer">Bedrohungsintelligenzindikator</field>
+        <field ref="explanation">Correct. This is the proper table.</field>
+    </entry>
+    <entry id="fc_sc200_07_06_01">
+        <field ref="question">Was ist einer der Vorteile der Integration von Microsoft Sentinel und Defender&amp;nbsp;XDR im Defender-Portal?</field>
+        <field ref="choices">A. Sie erhöht die Komplexität des Verwaltens und Wechselns zwischen mehreren Tools.
+B. Sie optimiert Vorgänge und reduziert das Risiko von Fehlern, die beim Wechseln zwischen verschiedenen Systemen auftreten können.
+C. Es ist ein Kontextwechsel erforderlich, wenn eine Abfrage über verschiedene Datasets hinweg abfragt wird.</field>
+        <field ref="answer">Sie optimiert Vorgänge und reduziert das Risiko von Fehlern, die beim Wechseln zwischen verschiedenen Systemen auftreten können.</field>
+        <field ref="explanation">Correct. By integrating security solutions, operations can be streamlined and the risk of errors reduced.</field>
+    </entry>
+    <entry id="fc_sc200_07_06_02">
+        <field ref="question">Welches Portal unterstützt die Funktionalität des Hinzufügens von Entitäten zur Bedrohungserkennung von Vorfällen in Microsoft Sentinel?</field>
+        <field ref="choices">A. Sowohl Azure- als auch Defender-Portale
+B. Azure-Portal
+C. Defender-Portal</field>
+        <field ref="answer">Azure-Portal</field>
+        <field ref="explanation">Correct. The Azure portal supports the functionality of adding entities to threat intelligence from incidents in Microsoft Sentinel.</field>
+    </entry>
+    <entry id="fc_sc200_07_06_03">
+        <field ref="question">Was ist eine der Produktänderungen im Zusammenhang mit der Verbindung eines Arbeitsbereichs mit Defender&amp;nbsp;XDR?</field>
+        <field ref="choices">A. Die Microsoft Sentinel Reader-Rolle wird den Microsoft Threat Protection- und WindowsDefenderATP-Apps innerhalb des Abonnements zugewiesen.
+B. Alle Regeln zur Erstellung von Sicherheitsincidents von Microsoft werden aktiviert, um doppelte Vorfälle zu vermeiden.
+C. Protokolltabellen, Abfragen und Funktionen im Microsoft Sentinel-Arbeitsbereich stehen auch in der erweiterten Suche in Defender&amp;nbsp;XDR zur Verfügung.</field>
+        <field ref="answer">Protokolltabellen, Abfragen und Funktionen im Microsoft Sentinel-Arbeitsbereich stehen auch in der erweiterten Suche in Defender&amp;nbsp;XDR zur Verfügung.</field>
+        <field ref="explanation">Correct. When a workspace is connected to Defender XDR, log tables, queries, and functions in the Microsoft Sentinel workspace become available in advanced hunting within Defender XDR.</field>
+    </entry>
+    <entry id="fc_sc200_07_06_04">
+        <field ref="question">Was geschieht, wenn ein Arbeitsbereich vom Defender-Portal in Microsoft Sentinel getrennt wird?</field>
+        <field ref="choices">A. Der Microsoft Sentinel-Abschnitt wird aus der linken Navigation des Defender-Portals entfernt.
+B. Der Arbeitsbereich wird aus Microsoft Sentinel gelöscht.
+C. Daten von Microsoft Sentinel sind weiterhin auf der Übersichtsseite enthalten.</field>
+        <field ref="answer">Der Microsoft Sentinel-Abschnitt wird aus der linken Navigation des Defender-Portals entfernt.</field>
+        <field ref="explanation">Correct. When a workspace is disconnected, the Microsoft Sentinel section is removed from the navigation of the Defender portal.</field>
+    </entry>
+    <entry id="fc_sc200_08_01_01">
+        <field ref="question">Wo können Sie die Anzahl von verbundenen Windows-Hosts anzeigen?</field>
+        <field ref="choices">A. Auf der Seite „CEF-Connector“
+B. Auf der Seite „Agents“ in der Protokollanalyse
+C. Auf der Seite „Datenconnectors“</field>
+        <field ref="answer">Auf der Seite „Agents“ in der Protokollanalyse</field>
+        <field ref="explanation">Correct. This page displays the hosts connected.</field>
+    </entry>
+    <entry id="fc_sc200_08_01_02">
+        <field ref="question">Welcher Connector stellt die Protokolldaten in einem nicht analysierten Feld bereit?</field>
+        <field ref="choices">A. Microsoft Entra ID
+B. Syslog
+C. CEF</field>
+        <field ref="answer">Syslog</field>
+        <field ref="explanation">Correct. The data is stored in the SyslogMessage</field>
+    </entry>
+    <entry id="fc_sc200_08_01_03">
+        <field ref="question">Welcher der folgenden Connectors wird primär von Connectors verwendet, die von Anbietern bereitgestellt werden?</field>
+        <field ref="choices">A. Azure-Aktivitätsconnector
+B. Sicherheitsereignis-Verbindungsmodul
+C. CEF-Connector</field>
+        <field ref="answer">CEF-Connector</field>
+        <field ref="explanation">Correct. Most Vendor-provided connectors use the CEF connector.</field>
+    </entry>
+    <entry id="fc_sc200_08_02_01">
+        <field ref="question">Welche Tabelle (Datentyp) würden Sie nach den Microsoft Entra-Daten abfragen?</field>
+        <field ref="choices">A. Büroaktivitäten
+B. SigninLogs
+C. Sicherheitswarnung</field>
+        <field ref="answer">SigninLogs</field>
+        <field ref="explanation">Correct.  The connector writes to SigninLogs.</field>
+    </entry>
+    <entry id="fc_sc200_08_02_02">
+        <field ref="question">Welche Tabelle (Datentyp) würden Sie nach den Microsoft 365-Daten abfragen?</field>
+        <field ref="choices">A. Büroaktivitäten
+B. Sicherheitswarnung
+C. SigninLogs</field>
+        <field ref="answer">Büroaktivitäten</field>
+        <field ref="explanation">Correct.  This connector writes to the OfficeActivity table.</field>
+    </entry>
+    <entry id="fc_sc200_08_02_03">
+        <field ref="question">Welche Tabelle (Datentyp) würden Sie nach den Microsoft Entra&amp;nbsp;ID Protection-Daten abfragen?</field>
+        <field ref="choices">A. Büroaktivitäten
+B. SigninLogs
+C. Sicherheitswarnung</field>
+        <field ref="answer">Sicherheitswarnung</field>
+        <field ref="explanation">Correct.  This connector writes to the SecurityAlert table.</field>
+    </entry>
+    <entry id="fc_sc200_08_03_01">
+        <field ref="question">Welchen Connector würden Sie verwenden, um die Rohdaten aus Microsoft Defender für Endpunkt zu verbinden?</field>
+        <field ref="choices">A. Microsoft Defender für Office 365
+B. Microsoft Defender for Endpoint
+C. Microsoft Defender XDR</field>
+        <field ref="answer">Microsoft Defender XDR</field>
+        <field ref="explanation">Correct. The connector can be configured to send the raw data from Defender for Endpoint.</field>
+    </entry>
+    <entry id="fc_sc200_08_03_02">
+        <field ref="question">Welches Microsoft-Sicherheitsprodukt gehört zur Microsoft Defender XDR-Produktfamilie?</field>
+        <field ref="choices">A. Microsoft Defender für Cloud-Apps
+B. Microsoft Purview Informationsschutz
+C. Microsoft Entra ID</field>
+        <field ref="answer">Microsoft Defender für Cloud-Apps</field>
+        <field ref="explanation">Correct. Microsoft Defender for Cloud Apps is part of the Microsoft Defender XDR suite of products.</field>
+    </entry>
+    <entry id="fc_sc200_08_03_03">
+        <field ref="question">In welche Tabelle (Datentyp) schreibt der Microsoft Defender XDR-Connector Daten?</field>
+        <field ref="choices">A. Sicherheitswarnung
+B. CommonSecurityLog
+C. Sicherheitsereignis</field>
+        <field ref="answer">Sicherheitswarnung</field>
+        <field ref="explanation">Correct. The connect ingests alerts.</field>
+    </entry>
+    <entry id="fc_sc200_08_04_01">
+        <field ref="question">Welchen Connector verwenden Sie, um Windows-Sicherheitsereignisse zu erfassen?</field>
+        <field ref="choices">A. Windows-Sicherheitsereignisse über AMA
+B. Common Event Format
+C. syslog</field>
+        <field ref="answer">Windows-Sicherheitsereignisse über AMA</field>
+        <field ref="explanation">Correct.  This connector will collect Windows security events.</field>
+    </entry>
+    <entry id="fc_sc200_08_04_02">
+        <field ref="question">Wie lautet der Protokollname in den erweiterten Einstellungen zum Sammeln von Sysmon-Ereignissen mit dem Connector für sicherheitsrelevante Ereignisse?</field>
+        <field ref="choices">A. Microsoft-Windows-Sysmon/Operational
+B. Microsoft-Windows-Sysmon/Events
+C. Microsoft-Windows-Sysmon/Logs</field>
+        <field ref="answer">Microsoft-Windows-Sysmon/Operational</field>
+        <field ref="explanation">Correct. This is the log name to enter.</field>
+    </entry>
+    <entry id="fc_sc200_08_04_03">
+        <field ref="question">Welche Tabelle enthält die erfassten Sysmon-Ereignisse?</field>
+        <field ref="choices">A. Ereignis
+B. CommonSecurityLog
+C. SecurityEvents</field>
+        <field ref="answer">Ereignis</field>
+        <field ref="explanation">Correct. The Event table contains the ingested logs.</field>
+    </entry>
+    <entry id="fc_sc200_08_05_01">
+        <field ref="question">In welche Tabelle schreibt der CEF-Connector?</field>
+        <field ref="choices">A. CommonSecurityLog
+B. Sicherheitsereignis
+C. Syslog</field>
+        <field ref="answer">CommonSecurityLog</field>
+        <field ref="explanation">Correct. The connector writes to the CommonSecurityLog</field>
+    </entry>
+    <entry id="fc_sc200_08_05_02">
+        <field ref="question">Welcher Weiterleitungstyp wird vom CEF-Connector bereitgestellt?</field>
+        <field ref="choices">A. Syslog
+B. Ereignis
+C. Sysmon</field>
+        <field ref="answer">Syslog</field>
+        <field ref="explanation">Correct.  The CEF connector deploys a Syslog forwarder</field>
+    </entry>
+    <entry id="fc_sc200_08_05_03">
+        <field ref="question">Auf welcher Plattform kann der CEF-Connector bereitgestellt werden?</field>
+        <field ref="choices">A. Azure-Windows-VM
+B. Lokaler Windows-Host
+C. Azure-Linux-VM</field>
+        <field ref="answer">Azure-Linux-VM</field>
+        <field ref="explanation">Correct. Linux is required.</field>
+    </entry>
+    <entry id="fc_sc200_08_06_01">
+        <field ref="question">Welches Feld enthält die unstrukturierten Ereignisdaten?</field>
+        <field ref="choices">A. Syslog-Daten
+B. Syslog-Ereignis
+C. SyslogMessage</field>
+        <field ref="answer">SyslogMessage</field>
+        <field ref="explanation">Correct. This field contains unstructured data.</field>
+    </entry>
+    <entry id="fc_sc200_08_06_02">
+        <field ref="question">Wie müssen Sie die Abfrage speichern, wenn Sie einen Parser im Protokollabfragefenster erstellen möchten?</field>
+        <field ref="choices">A. Modul
+B. Funktion
+C. Tabelle</field>
+        <field ref="answer">Funktion</field>
+        <field ref="explanation">Correct.  A Function is a named KQL query that is access like a regular table.</field>
+    </entry>
+    <entry id="fc_sc200_08_06_03">
+        <field ref="question">Auf welcher Plattform kann der Syslog-Connector bereitgestellt werden?</field>
+        <field ref="choices">A. Azure-Windows-VM
+B. Lokaler Windows-Host
+C. Azure-Linux-VM</field>
+        <field ref="answer">Azure-Linux-VM</field>
+        <field ref="explanation">Correct. Linux is required.</field>
+    </entry>
+    <entry id="fc_sc200_08_07_01">
+        <field ref="question">Welche Tabelle fragen Sie in KQL ab, um die Indikatoren anzuzeigen?</field>
+        <field ref="choices">A. „Indikator“
+B. „TIIndicator“
+C. „ThreatIntelligenceIndicator“</field>
+        <field ref="answer">„ThreatIntelligenceIndicator“</field>
+        <field ref="explanation">Correct. This is the proper table.</field>
+    </entry>
+    <entry id="fc_sc200_08_07_02">
+        <field ref="question">Welche TAXII-Serverversion wird unterstützt?</field>
+        <field ref="choices">A. 1.1
+B. 1,0
+C. 2.1</field>
+        <field ref="answer">2.1</field>
+        <field ref="explanation">Correct. TAXII version 2.0 and 2.1 are supported.</field>
+    </entry>
+    <entry id="fc_sc200_08_07_03">
+        <field ref="question">Die Threat Intelligence-Upload-API verwendet welche Technologie für die Authentifizierung mit der Microsoft Entra-ID?</field>
+        <field ref="choices">A. Von Microsoft Azure verwaltete Identitäten
+B. Mehrstufige Authentifizierung
+C. OAuth 2.0-Authentifizierung</field>
+        <field ref="answer">OAuth 2.0-Authentifizierung</field>
+        <field ref="explanation">Correct. OAuth 2.0 authentication is utilized.</field>
+    </entry>
+    <entry id="fc_sc200_09_01_03_01">
+        <field ref="question">Welche der folgenden Fälle sind keine gängigen Anwendungsfälle von Analyseregeln?</field>
+        <field ref="choices">A. Identifizieren kompromittierter Konten.
+B. Erkennen von Insiderbedrohungen.
+C. Visualisieren von Daten aus Microsoft Sentinel Connectors.</field>
+        <field ref="answer">Visualisieren von Daten aus Microsoft Sentinel Connectors.</field>
+        <field ref="explanation">You cannot visualize the data with analytics rules. You can use Microsoft Sentinel Workbook to present and visualize the data collected from the security connectors.</field>
+    </entry>
+    <entry id="fc_sc200_09_01_03_02">
+        <field ref="question">Sie möchten zusätzliche Informationen finden, die die Analysevorlage und die Regel erläutern, die bei der Erkennung der Bedrohungen verwendet wird. Welcher Abschnitt auf der Seite &quot;Analyseregeln&quot; enthält diese Informationen?</field>
+        <field ref="choices">A. Detailbereich
+B. Kopfzeile
+C. Abschnitt &quot;Regeln und Vorlagen&quot;</field>
+        <field ref="answer">Detailbereich</field>
+        <field ref="explanation">The detailed view pane contains additional information that explains the template and the rule that is used in detection.</field>
+    </entry>
+    <entry id="fc_sc200_09_01_04_01">
+        <field ref="question">Welche Analyseregeln können Sie mit Ihren eigenen Abfrageregeln anpassen?</field>
+        <field ref="choices">A. Fusion
+B. Machine Learning Behavior Analytics
+C. Analyseregeln des Typs „Scheduled“</field>
+        <field ref="answer">Analyseregeln des Typs „Scheduled“</field>
+        <field ref="explanation">Scheduled Analytic rules provide the highest level of customization.</field>
+    </entry>
+    <entry id="fc_sc200_09_01_04_02">
+        <field ref="question">Welcher Typ von Vorlagenregeln kann Incidents basierend auf allen in Microsoft Defender für Cloud generierten Warnungen erstellen?</field>
+        <field ref="choices">A. Machine Learning Behavioral Analytics
+B. Fusion
+C. Microsoft Security</field>
+        <field ref="answer">Microsoft Security</field>
+        <field ref="explanation">Microsoft security template rules can create incidents based on all alerts generated in Microsoft Defender for Cloud.</field>
+    </entry>
+    <entry id="fc_sc200_09_01_05_01">
+        <field ref="question">Welche der Vorlagentypen sollten Sie verwenden, um einen Vorfall basierend auf allen warnungen zu erstellen, die in Microsoft Defender for Cloud generiert wurden?</field>
+        <field ref="choices">A. Verschmelzung
+B. Machine Learning Behavior Analytics
+C. Microsoft Security</field>
+        <field ref="answer">Microsoft Security</field>
+        <field ref="explanation">Template rules based on the Microsoft security type create incidents based on all alerts generated in Microsoft Defender for Cloud.</field>
+    </entry>
+    <entry id="fc_sc200_09_01_05_02">
+        <field ref="question">Welche der folgenden Vorlagenregeln werden in Microsoft Sentinel Analytics vorkonfiguriert?</field>
+        <field ref="choices">A. Vorlagenregeln des Typs „Geplant“
+B. Verschmelzung
+C. Vorlagen für Machine Learning-Verhaltensanalysen</field>
+        <field ref="answer">Verschmelzung</field>
+        <field ref="explanation">By default, an alert rule is created by using the Fusion rule template.</field>
+    </entry>
+    <entry id="fc_sc200_09_01_06_01">
+        <field ref="question">Sie möchten neuen KQL-Code konfigurieren, um verdächtige Aktivitäten in Azure-Aktivitätsprotokollen zu erkennen. In welchem Abschnitt können Sie Ihren benutzerdefinierten KQL-Code eingeben?</field>
+        <field ref="choices">A. Regellogik festlegen
+B. Incidenteinstellungen
+C. Automatisierte Antwort</field>
+        <field ref="answer">Regellogik festlegen</field>
+        <field ref="explanation">In the Set rule logic section, you can define the detection method by specifying the KQL code that will run against the Microsoft Sentinel workspace.</field>
+    </entry>
+    <entry id="fc_sc200_09_01_06_02">
+        <field ref="question">Welche der folgenden Aussagen über geplante Abfrageregeln trifft zu?</field>
+        <field ref="choices">A. Sie werden standardmäßig vorab erstellt.
+B. Sie können nur ohne Anpassung aktiviert werden.
+C. Sie können eine eigene Abfrage erstellen, um die Erkennung der Bedrohung zu definieren.</field>
+        <field ref="answer">Sie können eine eigene Abfrage erstellen, um die Erkennung der Bedrohung zu definieren.</field>
+        <field ref="explanation">You can use either a predefined or a custom query to detect threats.</field>
+    </entry>
+    <entry id="fc_sc200_09_01_07_01">
+        <field ref="question">Aufgrund laufender Wartungsmaßnahmen müssen Sie das Empfangen von Warnungen von Analyseregeln vorübergehend aussetzen. Welche Aktion sollte für die Regel aktiviert werden, um diese Konfiguration umzusetzen?</field>
+        <field ref="choices">A. Löschen
+B. Deaktivieren
+C. Duplizieren</field>
+        <field ref="answer">Deaktivieren</field>
+        <field ref="explanation">Disabled rules retain all the configuration and will temporary stop creating the alerts from the configured detections, while the rule is disabled.</field>
+    </entry>
+    <entry id="fc_sc200_09_01_07_02">
+        <field ref="question">Was ist die effizienteste Methode zum Bearbeiten einer vorhandenen Analyseregel?</field>
+        <field ref="choices">A. Die Warnung löschen und mit der neuen Logik neu erstellen.
+B. Die Regel duplizieren und modifizieren, um die notwendigen Änderungen zu erreichen.
+C. Eine neue Regel erstellen.</field>
+        <field ref="answer">Die Regel duplizieren und modifizieren, um die notwendigen Änderungen zu erreichen.</field>
+        <field ref="explanation">When you duplicate the rule, you have a startup configuration provided from the original rule, which you can further modify.</field>
+    </entry>
+    <entry id="fc_sc200_09_02_01">
+        <field ref="question">Welche dieser Antworten ist ein gültiger Triggertyp für eine Automatisierungsregel in Microsoft Sentinel?</field>
+        <field ref="choices">A. Wenn ein Vorfall aktualisiert wird
+B. Wenn ein Verbinder hinzugefügt wird
+C. Wenn eine Watchlist geändert wird</field>
+        <field ref="answer">Wenn ein Vorfall aktualisiert wird</field>
+        <field ref="explanation">Correct. Automation rules support three trigger types: when an incident is created, when an incident is updated, and when an alert is created.</field>
+    </entry>
+    <entry id="fc_sc200_09_02_02">
+        <field ref="question">Was erstellen Sie mit Logic Apps?</field>
+        <field ref="choices">A. Automatisierungsregel
+B. Playbook
+C. Arbeitsmappe</field>
+        <field ref="answer">Playbook</field>
+        <field ref="explanation">Correct. Playbooks are created with Logic Apps.</field>
+    </entry>
+    <entry id="fc_sc200_09_02_03">
+        <field ref="question">Welche Aktionen können mit Automatisierungsregeln ausgeführt werden?</field>
+        <field ref="choices">A. Aktualisieren des Incidenttitels
+B. Löschen des Incidents
+C. Den Incidentstatus ändern</field>
+        <field ref="answer">Den Incidentstatus ändern</field>
+        <field ref="explanation">Correct. Automation rules can change the incident status.</field>
+    </entry>
+    <entry id="fc_sc200_09_03_03_01">
+        <field ref="question">Microsoft Sentinel-Playbooks müssen von Administratoren erstellt werden. Der Administrator erstellt eine Logik-App und startet den Designer für Logik-Apps. Welchen der folgenden Connectors sollte der Administrator als Trigger für Ihr Playbook verwenden?</field>
+        <field ref="choices">A. Office 365-Connector
+B. Microsoft Sentinel-Connector
+C. Microsoft Entra Connector</field>
+        <field ref="answer">Microsoft Sentinel-Connector</field>
+        <field ref="explanation">Microsoft Sentinel playbooks use a Microsoft Sentinel Logic Apps connector to trigger logic app actions.</field>
+    </entry>
+    <entry id="fc_sc200_09_03_03_02">
+        <field ref="question">Welche der folgenden Aussagen beschreibt eine Funktion von Microsoft Sentinel-Playbooks?</field>
+        <field ref="choices">A. Microsoft Sentinel-Playbooks enthalten aufeinander folgende Aktivitäten, die immer als Reaktion auf Warnungen ausgeführt werden.
+B. Der Game Catalog enthält die neuesten Microsoft-Spiele.
+C. Sammlungen von Prozeduren, die auf Azure Logic Apps basieren, die als Reaktion auf eine Warnung ausgeführt werden.</field>
+        <field ref="answer">Sammlungen von Prozeduren, die auf Azure Logic Apps basieren, die als Reaktion auf eine Warnung ausgeführt werden.</field>
+        <field ref="explanation">Microsoft Sentinel Playbooks contain logic apps action that are collections of procedures that run in response to an alert</field>
+    </entry>
+    <entry id="fc_sc200_09_03_04_01">
+        <field ref="question">Was ist dynamischer Inhalt in einer Logik-App?</field>
+        <field ref="choices">A. Eine Liste der dynamisch ausgewählten Bedrohungen
+B. Eine Liste dynamischer Eingaben für die aktuelle Aktion
+C. Eine Liste dynamischer Benutzer</field>
+        <field ref="answer">Eine Liste dynamischer Eingaben für die aktuelle Aktion</field>
+        <field ref="explanation">Dynamic Content displays any available outputs from the previous step, which you can use as inputs for the current action.</field>
+    </entry>
+    <entry id="fc_sc200_09_03_04_02">
+        <field ref="question">Ein Administrator erstellt ein neues Playbook, um benachrichtigt zu werden, wenn ein Benutzer die Rolle des globalen Administrators delegiert. Welcher Connector soll vom Administrator in der Logik-App ausgewählt werden?</field>
+        <field ref="choices">A. Microsoft Entra Connector.
+B. Der Connector für Office 365
+C. Microsoft Sentinel-Connector.</field>
+        <field ref="answer">Microsoft Sentinel-Connector.</field>
+        <field ref="explanation">Microsoft Sentinel playbooks start with a trigger from Microsoft Sentinel Connector.</field>
+    </entry>
+    <entry id="fc_sc200_09_03_05_01">
+        <field ref="question">Ein Administrator möchte ein Playbook an einen bestehenden Vorfall anfügen und mit der Untersuchung des Vorfalls beginnen. Welche Option sollte der Administrator auswählen, um das Playbook anzufügen?</field>
+        <field ref="choices">A. Neu
+B. Nicht zugewiesen
+C. Name des Vorfalls</field>
+        <field ref="answer">Name des Vorfalls</field>
+        <field ref="explanation">Yes. When you select the name of the incident, you can start the process to run a playbook on demand in response to an existing incident.</field>
+    </entry>
+    <entry id="fc_sc200_09_03_05_02">
+        <field ref="question">Sie möchten nach einer passenden Bedrohungserkennungsabfrage oder einer Arbeitsmappe suchen, die Sie für Ihre Anforderungen verwenden können. Wo können Sie nach solchen Elementen suchen?</field>
+        <field ref="choices">A. Azure Architecture Center
+B. Microsoft Learn
+C. Microsoft Sentinel-Repository auf GitHub</field>
+        <field ref="answer">Microsoft Sentinel-Repository auf GitHub</field>
+        <field ref="explanation">Microsoft Sentinel repository on GitHub contains out of the box detections, exploration queries, hunting queries, workbooks, and playbooks that will help you to secure your environment and hunt for threats.</field>
+    </entry>
+    <entry id="fc_sc200_09_04_03_01">
+        <field ref="question">Welche Microsoft Sentinel-Komponente generiert Warnungen?</field>
+        <field ref="choices">A. Vorfälle.
+B. Analyseregeln.
+C. Datenverbindungen.
+D. Ereignisse.</field>
+        <field ref="answer">Analyseregeln.</field>
+        <field ref="explanation">You can configure analytics rules to generate alerts in Microsoft Sentinel.</field>
+    </entry>
+    <entry id="fc_sc200_09_04_03_02">
+        <field ref="question">Was ist das Hauptziel der Vorfallverwaltung in Microsoft Sentinel?</field>
+        <field ref="choices">A. Um den Status der Sicherheitsintegrität in Azure zu verstehen.
+B. So verfolgen und verwalten Sie alle Azure-Probleme.
+C. Um Sicherheitsprobleme in der gesamten Umgebung Ihrer Organisation nachzuverfolgen und zu beheben.
+D. So verwalten Sie Sicherheitsrollen in Ihrer Umgebung.</field>
+        <field ref="answer">Um Sicherheitsprobleme in der gesamten Umgebung Ihrer Organisation nachzuverfolgen und zu beheben.</field>
+        <field ref="explanation">Microsoft Sentinel incident management helps you track and resolve security issues across your organization, including on-premises, Azure, and other cloud environments.</field>
+    </entry>
+    <entry id="fc_sc200_09_04_04_01">
+        <field ref="question">Welche der folgenden Optionen stellt in einem Microsoft Sentinel-Incident einen Nachweis dar?</field>
+        <field ref="choices">A. IP-Adresse.
+B. Benutzername.
+C. Ereignis
+D. Hostname.</field>
+        <field ref="answer">Ereignis</field>
+        <field ref="explanation">An event is evidence.</field>
+    </entry>
+    <entry id="fc_sc200_09_04_05_01">
+        <field ref="question">Welchen Incidentparameter sollten Sie ändern, um einen Incident an das Sicherheitsteam der nächsten Stufe zu eskalieren?</field>
+        <field ref="choices">A. Schweregrad.
+B. Der Status
+C. Besitzer
+D. Benutzername.</field>
+        <field ref="answer">Besitzer</field>
+        <field ref="explanation">You should change the owner parameter to a user account for a member of the next tier security team.</field>
+    </entry>
+    <entry id="fc_sc200_09_04_05_02">
+        <field ref="question">Welche Microsoft Sentinel-Schnittstelle ermöglicht es Benutzer*innen, Zeitachsen und Beziehungen zwischen Incidentressourcen anzuzeigen?</field>
+        <field ref="choices">A. Untersuchungsdiagramm
+B. Seite &quot;Vorfalldetails&quot;.
+C. Seite &quot;Ressourcenbeziehungen&quot;.
+D. Incidentstatus</field>
+        <field ref="answer">Untersuchungsdiagramm</field>
+        <field ref="explanation">The investigation graph lets you view timelines and relationships between incident resources.</field>
+    </entry>
+    <entry id="fc_sc200_09_05_01">
+        <field ref="question">Um was handelt es sich bei Entitäten?</field>
+        <field ref="choices">A. Datenelemente
+B. Tabellen
+C. Alarmsignale</field>
+        <field ref="answer">Datenelemente</field>
+        <field ref="explanation">Correct. The data elements include such things as Accounts, IP Addresses, Hosts</field>
+    </entry>
+    <entry id="fc_sc200_09_05_02">
+        <field ref="question">Bei welchen Elementtypen auf der Zeitachse der Entitätsseite handelt es sich um eine Aggregation relevanter Ereignisse im Zusammenhang mit der Entität?</field>
+        <field ref="choices">A. Alarmsignale
+B. Aktivitäten
+C. Lesezeichen</field>
+        <field ref="answer">Aktivitäten</field>
+        <field ref="explanation">Correct. Activities are the aggregation of events.</field>
+    </entry>
+    <entry id="fc_sc200_09_05_03">
+        <field ref="question">Welche Funktion zeigt Informationen über das Entitätsverhalten an, wenn Sie das Untersuchungsdiagramm anzeigen?</field>
+        <field ref="choices">A. Entitäten
+B. Zeitachse
+C. Einblicke</field>
+        <field ref="answer">Einblicke</field>
+        <field ref="explanation">Correct. Insights display Entity Behavior information.</field>
+    </entry>
+    <entry id="fc_sc200_09_06_01">
+        <field ref="question">Beim Erstellen einer Arbeitsbereichstransformations-DCR.  Wie lautet der Name der virtuellen Tabelle, die abgefragt werden soll?</field>
+        <field ref="choices">A. Quelle
+B. Eingabe
+C. Ziel</field>
+        <field ref="answer">Quelle</field>
+        <field ref="explanation">Correct.  source is the name of the virtual table.</field>
+    </entry>
+    <entry id="fc_sc200_09_06_02">
+        <field ref="question">Was ist ein ASIM-Parser in KQL?</field>
+        <field ref="choices">A. Variable
+B. Funktion
+C. Aggregieren</field>
+        <field ref="answer">Funktion</field>
+        <field ref="explanation">Correct. A Parser is a KQL Function.</field>
+    </entry>
+    <entry id="fc_sc200_09_06_03">
+        <field ref="question">Welcher Parameter wird von jedem Schema mindestens unterstützt, das Filterparameter unterstützt?</field>
+        <field ref="choices">A. createdon
+B. Aufnahmezeit
+C. Startzeit</field>
+        <field ref="answer">Startzeit</field>
+        <field ref="explanation">Correct. starttime and endtime parameters are the supported filtering parameters.</field>
+    </entry>
+    <entry id="fc_sc200_09_07_03_01">
+        <field ref="question">Ein Administrator möchte eine zuvor gespeicherte Abfrage öffnen. Welche der folgenden Optionen müssen Administrator*innen nach dem Öffnen der Seite „Protokolle“ in Microsoft Sentinel auswählen?</field>
+        <field ref="choices">A. Fragen
+B. Abfrage-Explorer
+C. Bereich „Tabellen“</field>
+        <field ref="answer">Abfrage-Explorer</field>
+        <field ref="explanation">The Query Explorer link in the page header helps you access your previously saved queries.</field>
+    </entry>
+    <entry id="fc_sc200_09_07_03_02">
+        <field ref="question">Der Administrator möchte aus der erstellten Abfrage eine Analyseregel erstellen. Welche Option im Bereich „Abfragen“ sollte der Administrator auswählen?</field>
+        <field ref="choices">A. Azure Monitor-Warnung
+B. Microsoft Sentinel-Warnung
+C. Link kopieren</field>
+        <field ref="answer">Microsoft Sentinel-Warnung</field>
+        <field ref="explanation">A new Microsoft Sentinel alert creates an analytics rule.</field>
+    </entry>
+    <entry id="fc_sc200_09_07_04_01">
+        <field ref="question">Welche der folgenden Tools können Administrator*innen zum Abfragen von Daten in Microsoft Sentinel verwenden?</field>
+        <field ref="choices">A. Strukturierte Abfragesprache (SQL)
+B. PowerShell
+C. Azure-Daten-Explorer</field>
+        <field ref="answer">Azure-Daten-Explorer</field>
+        <field ref="explanation">Azure Data Explorer, which is also known as Kusto, is a log analytics cloud platform optimized for ad-hoc big data queries.</field>
+    </entry>
+    <entry id="fc_sc200_09_07_04_02">
+        <field ref="question">Welches der folgenden Zeichen kann ein Administrator zum Trennen der Befehle in der Abfrage verwenden?</field>
+        <field ref="choices">A. Senkrechter Strich (|)
+B. Bindestrich (-)
+C. Unterstrich (_)</field>
+        <field ref="answer">Senkrechter Strich (|)</field>
+        <field ref="explanation">You can use the pipe (|) character to separate commands.</field>
+    </entry>
+    <entry id="fc_sc200_09_07_05_01">
+        <field ref="question">Welches der folgenden Elemente kann nicht Teil der Arbeitsmappe sein?</field>
+        <field ref="choices">A. Diagramme
+B. Tabellen
+C. Videoaufnahmen</field>
+        <field ref="answer">Videoaufnahmen</field>
+        <field ref="explanation">A workbook cannot contain videos.</field>
+    </entry>
+    <entry id="fc_sc200_09_07_05_02">
+        <field ref="question">In welchem Abschnitt der Arbeitsmappe für die Microsoft Entra ID-Anmeldeprotokolle findet ein Administrator die Information, dass Benutzer zum Überprüfen ihrer Identität die mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) durchführen müssen?</field>
+        <field ref="choices">A. Standort der Anmeldung
+B. Status des bedingten Zugriffs
+C. Anmeldungen nach Gerät.</field>
+        <field ref="answer">Status des bedingten Zugriffs</field>
+        <field ref="explanation">The Conditional Access status table shows which users are required to perform MFA to validate their identity.</field>
+    </entry>
+    <entry id="fc_sc200_09_07_06_01">
+        <field ref="question">Welche Formatierung verwendet Microsoft Sentinel, um den Text in der Arbeitsmappe mit Textvisualisierung zu formatieren?</field>
+        <field ref="choices">A. Microsoft Word
+B. HTML-Textformatierung
+C. Markdown</field>
+        <field ref="answer">Markdown</field>
+        <field ref="explanation">The text is edited through a Markdown formatting, which provides different heading and font styles, hyperlinks, tables.</field>
+    </entry>
+    <entry id="fc_sc200_09_07_06_02">
+        <field ref="question">Ein Administrator erstellt eine benutzerdefinierte Arbeitsmappe und möchte die Daten in der Tabelle anzeigen. Welche Visualisierungsschritte sollten vom Administrator in der Arbeitsmappe verwendet werden?</field>
+        <field ref="choices">A. Textvisualisierung
+B. Links/Registerkarten
+C. Rastervisualisierung</field>
+        <field ref="answer">Rastervisualisierung</field>
+        <field ref="explanation">You can use grids visualization to present the data in tables.</field>
+    </entry>
+    <entry id="fc_sc200_09_08_01">
+        <field ref="question">Mit welchen Repositorys können Sie Microsoft Sentinel verbinden?</field>
+        <field ref="choices">A. Nur Azure DevOps
+B. Nur GitHub
+C. GitHub und Azure DevOps</field>
+        <field ref="answer">GitHub und Azure DevOps</field>
+        <field ref="explanation">Correct. Both repository types are supported.</field>
+    </entry>
+    <entry id="fc_sc200_09_08_02">
+        <field ref="question">Welcher Inhaltstyp wird von Inhaltshublösungen unterstützt?</field>
+        <field ref="choices">A. Fusionregel für erweiterte mehrstufige Angriffserkennung
+B. Parser
+C. Auftrag suchen</field>
+        <field ref="answer">Parser</field>
+        <field ref="explanation">Correct. Parsers are supported in a content hub solution.</field>
+    </entry>
+    <entry id="fc_sc200_09_08_03">
+        <field ref="question">Wie groß ist die maximale Anzahl von zulässigen Repositoryverbindungen für jeden Microsoft Sentinel-Arbeitsbereich?</field>
+        <field ref="choices">A. drei
+B. Fünf
+C. Zehn</field>
+        <field ref="answer">Fünf</field>
+        <field ref="explanation">Correct. Five is the maximum connections for each workspace.</field>
+    </entry>
+    <entry id="fc_sc200_10_01_01">
+        <field ref="question">Welche der folgenden Aussagen beschreibt eine gute Hypothese am besten?</field>
+        <field ref="choices">A. Sie ist zeitlich beschränkt.
+B. Sie konzentriert sich auf bekannte Indikatoren.
+C. Sie konzentriert sich auf alle aktuellen Bedrohungen.</field>
+        <field ref="answer">Sie ist zeitlich beschränkt.</field>
+        <field ref="explanation">Correct.  The Hypothesis should be time-bound.</field>
+    </entry>
+    <entry id="fc_sc200_10_01_02">
+        <field ref="question">Welche Aussage trifft auf die Bedrohungssuche zu?</field>
+        <field ref="choices">A. Sie ist retroaktiv.
+B. Reaktiv.
+C. Proaktiv.</field>
+        <field ref="answer">Proaktiv.</field>
+        <field ref="explanation">Correct.  You are not waiting for detections to flag an anomaly.</field>
+    </entry>
+    <entry id="fc_sc200_10_01_03">
+        <field ref="question">„Wir möchten überprüfen, welche Konten cmd.exe ausgeführt haben.“ Warum ist diese Hypothese schlecht?</field>
+        <field ref="choices">A. „Cmd.exe“ ist kein Programm.
+B. Konten sind nicht mit der Ausführung von „cmd.exe“ verknüpft.
+C. Der Umfang ist zu breit.</field>
+        <field ref="answer">Der Umfang ist zu breit.</field>
+        <field ref="explanation">Correct.  Knowing which accounts have run cmd.exe doesn&apos;t prove a possible anomaly.</field>
+    </entry>
+    <entry id="fc_sc200_10_02_03_01">
+        <field ref="question">Welche Codesyntax wird für Microsoft Sentinel-Huntingabfragen verwendet?</field>
+        <field ref="choices">A. T-SQL (Transact-SQL)
+B. Kusto-Abfragesprache (KQL)
+C. JavaScript Object Notation (JSON)</field>
+        <field ref="answer">Kusto-Abfragesprache (KQL)</field>
+        <field ref="explanation">Microsoft Sentinel hunting queries are built using the Kusto Query Language (KQL) syntax.</field>
+    </entry>
+    <entry id="fc_sc200_10_02_04_01">
+        <field ref="question">Wie helfen Lesezeichen bei der Bedrohungssuche?</field>
+        <field ref="choices">A. Sie ermöglichen es dem Suchenden, Abfrageergebnisse für die spätere Verwendung zu speichern.
+B. Sie ermöglichen es dem Suchenden, den Incidentstatus und die Lösung nachzuverfolgen.
+C. Sie ermöglichen dem Suchenden das Erstellen von Arbeitsmappen aus Abfrageergebnissen.</field>
+        <field ref="answer">Sie ermöglichen es dem Suchenden, Abfrageergebnisse für die spätere Verwendung zu speichern.</field>
+        <field ref="explanation">This answer is correct.</field>
+    </entry>
+    <entry id="fc_sc200_10_02_05_01">
+        <field ref="question">Welcher der folgenden Punkte kann nicht in einer Livestreamabfrage verwendet werden?</field>
+        <field ref="choices">A. Zeitparameter
+B. Warnungsdatenparameter
+C. Ereignisentitäten</field>
+        <field ref="answer">Zeitparameter</field>
+        <field ref="explanation">Time parameters can&apos;t be used because livestream queries run continuously.</field>
+    </entry>
+    <entry id="fc_sc200_10_03_01">
+        <field ref="question">Wie lautet das Tabellensuffix, wenn Sie ein Archivprotokoll wiederherstellen?</field>
+        <field ref="choices">A. _RST
+B. _Wiederherstellen
+C. _RSTR</field>
+        <field ref="answer">_RST</field>
+        <field ref="explanation">Correct.  The table will have _RST as the suffix.</field>
+    </entry>
+    <entry id="fc_sc200_10_03_02">
+        <field ref="question">Wie lautet das Suffix für die Tabellen der Suchergebnisse?</field>
+        <field ref="choices">A. _SR
+B. _SRCH
+C. _SCH</field>
+        <field ref="answer">_SRCH</field>
+        <field ref="explanation">Correct.  The table will have _SRCH as the suffix.</field>
+    </entry>
+    <entry id="fc_sc200_10_03_03">
+        <field ref="question">Welche Protokolltypen werden von Suchaufträgen unterstützt?</field>
+        <field ref="choices">A. Nur Analyseprotokolle.
+B. Nur Basisprotokolle.
+C. Analyseprotokolle und Basisprotokolle.</field>
+        <field ref="answer">Analyseprotokolle und Basisprotokolle.</field>
+        <field ref="explanation">Correct.  Both log types are supported.</field>
+    </entry>
+    <entry id="fc_sc200_10_04_01">
+        <field ref="question">Welche der folgenden Funktionen werden vom msticpy-Paket bereitgestellt?</field>
+        <field ref="choices">A. Data Wrangling
+B. Analysieren von Daten
+C. Erstellen von Daten</field>
+        <field ref="answer">Analysieren von Daten</field>
+        <field ref="explanation">Correct. The msticpy package has several functions that help security investigators and hunters analyze data.</field>
+    </entry>
+    <entry id="fc_sc200_10_04_02">
+        <field ref="question">Wobei handelt es sich um eine Komponente von Notebooks in Microsoft Sentinel?</field>
+        <field ref="choices">A. Telemetrieanalyse
+B. Kernel
+C. Arbeitsmappe</field>
+        <field ref="answer">Kernel</field>
+        <field ref="explanation">Correct. Notebooks use the Kernel to parse and execute the code within the notebook</field>
+    </entry>
+    <entry id="fc_sc200_10_04_03">
+        <field ref="question">Welche Programmiersprache wird in den Beispiel-Notebooks am häufigsten verwendet?</field>
+        <field ref="choices">A. Python
+B. C#
+C. Java</field>
+        <field ref="answer">Python</field>
+        <field ref="explanation">Correct. Python is the most commonly used coding language in the sample notebooks.</field>
+    </entry>
+</vocabulary>

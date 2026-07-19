@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_06_02_03" title="Verwenden des summarize-Operators zum Filtern von Ergebnissen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwenden des summarize-Operators zum Filtern von Ergebnissen</div>
+<div class="section-content">
+<p>Die Funktionen „arg_max()“ und „arg_min()“ filtern die oberste bzw. unterste Zeile heraus.</p>
+<h2 id="arg_max-function">arg_max-Funktion</h2>
+<p>Die folgende Anweisung gibt die neueste Zeile aus der SecurityEvent-Tabelle für den Computer „SQL10.NA.contosohotels.com“ zurück.  Mit dem Sternchen (*) in der arg_max-Funktion werden alle Spalten für die Zeile angefordert.</p>
+<pre><code class="lang-kusto">SecurityEvent 
+| where Computer == "SQL10.na.contosohotels.com"
+| summarize arg_max(TimeGenerated,*) by Computer
+
+</code></pre>
+<h2 id="arg_min-function">arg_min-Funktion</h2>
+<p>In dieser Anweisung wird das älteste Sicherheitsereignis (SecurityEvent) für den Computer „SQL10.NA.contosohotels.com“ als Resultset zurückgegeben.</p>
+<pre><code class="lang-kusto">SecurityEvent 
+| where Computer == "SQL10.na.contosohotels.com"
+| summarize arg_min(TimeGenerated,*) by Computer
+
+</code></pre>
+<h2 id="revisiting-the-result-pipe">Noch einmal die Ergebnispipe</h2>
+<p>Die Reihenfolge, in der Ergebnisse das Pipezeichen passieren, ist wichtig. Sehen Sie sich die beiden folgenden KQL-Anweisungen an. Wie unterscheiden sich die Resultsets?</p>
+<p>Führen Sie jede Abfrage separat aus, um die Ergebnisse anzuzeigen.</p>
+<pre><code class="lang-kusto">// Statement 1
+
+SecurityEvent
+| summarize arg_max(TimeGenerated, *) by Account
+| where EventID == "4624"
+
+// Statement 2
+
+SecurityEvent
+| where EventID == "4624"
+| summarize arg_max(TimeGenerated, *) by Account
+
+</code></pre>
+<p>Die Anweisung&nbsp;1 enthält Konten, bei denen die letzte Aktivität eine Anmeldung war.</p>
+<p>Die SecurityEvent-Tabelle wird zusammengefasst und gibt die neueste Zeile für jedes Konto zurück. Dann werden nur Zeilen zurückgegeben, bei denen die Ereignis-ID (EventID) den Wert&nbsp;4624 (Anmeldung) hat.</p>
+<p>Die Anweisung&nbsp;2 verfügt über die neueste Anmeldung für Konten, die sich angemeldet haben.</p>
+<p>Die SecurityEvent-Tabelle wird nur nach „EventID&nbsp;=&nbsp;4624“ gefiltert. Anschließend werden diese Ergebnisse für die neueste Anmeldezeile nach Konto zusammengefasst.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

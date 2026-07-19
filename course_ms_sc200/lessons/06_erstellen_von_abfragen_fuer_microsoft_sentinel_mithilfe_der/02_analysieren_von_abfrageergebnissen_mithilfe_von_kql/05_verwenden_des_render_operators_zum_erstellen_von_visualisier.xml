@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_06_02_05" title="Verwenden des render-Operators zum Erstellen von Visualisierungen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwenden des render-Operators zum Erstellen von Visualisierungen</div>
+<div class="section-content">
+<p>Der Renderoperator generiert eine Visualisierung der Abfrageergebnisse.</p>
+<p>Die unterstützten Visualisierungen sind:</p>
+<ul>
+<li><code>areachart</code></li>
+<li><code>barchart</code></li>
+<li><code>columnchart</code></li>
+<li><code>piechart</code></li>
+<li><code>scatterchart</code></li>
+<li><code>timechart</code></li>
+</ul>
+<pre><code class="lang-kusto">SecurityEvent 
+| summarize count() by Account
+| render barchart
+
+</code></pre>
+<h2 id="use-the-summarize-operator-to-create-time-series">Verwenden des Zusammenfassungsoperators zum Erstellen von Zeitreihen</h2>
+<p>Die bin()-Funktion rundet Werte auf eine ganzzahliges Mehrfaches der angegebenen Intervallgröße ab.  Wird häufig in Kombination mit Zusammenfassungen verwendet. Wenn Sie ungleichmäßig verteilte Werte haben, werden diese in eine kleinere Gruppe mit spezifischen Werten eingeteilt.  Durch Kombinieren der generierten Zeitreihe und der Pipe zu einem render-Operator mit einem Zeitdiagrammtyp erhalten Sie eine Visualisierung der Zeitreihe.</p>
+<pre><code class="lang-kusto">SecurityEvent 
+| summarize count() by bin(TimeGenerated, 1d) 
+| render timechart
+
+</code></pre>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

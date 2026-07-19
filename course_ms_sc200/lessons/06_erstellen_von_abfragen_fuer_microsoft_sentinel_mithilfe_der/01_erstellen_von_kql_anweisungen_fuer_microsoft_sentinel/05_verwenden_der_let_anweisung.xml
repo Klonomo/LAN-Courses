@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_06_01_05" title="Verwenden der Let-Anweisung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwenden der Let-Anweisung</div>
+<div class="section-content">
+<p>Let-Anweisungen binden Namen an Ausdrücke. Für den Rest des Bereichs, in dem die let-Anweisung auftritt, bezieht sich der Name auf seinen gebundenen Wert. Let-Anweisungen verbessern die Modularität und Wiederverwendbarkeit, da sie einen potenziell komplexen Ausdruck in mehrere Teile zerlegen können. Jeder Teil ist durch die let-Anweisung an einen Namen gebunden, und zusammen bilden sie das Ganze. Let-Anweisungen ermöglichen die Erstellung benutzerdefinierter Funktionen und Ansichten. Die Ansichten sind Ausdrücke, deren Ergebnisse wie eine neue Tabelle aussehen.</p>
+<h2 id="declare-and-reuse-variables">Deklarieren und Wiederverwenden von Variablen</h2>
+<p>Anweisungen mit "let" ermöglichen die Erstellung von Variablen, die in späteren Anweisungen verwendet werden können. In diesem Beispiel werden timeOffSet und discardEventId erstellt und als Teil der SecurityEvent "where"-Klausel verwendet.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Möglicherweise müssen Sie das timeOffset und die Zeitbereiche erhöhen, damit in der Umgebung der <a href="https://aka.ms/lademo" data-linktype="external">Protokolldemo-Website</a> Ergebnisse angezeigt werden. Es wird empfohlen, 30 Tage zu verwenden &gt; , wenn keine Ergebnisse angezeigt werden.</p>
+</div>
+<pre><code class="lang-kusto">let timeOffset = 7d;
+let discardEventId = 4688;
+SecurityEvent
+| where TimeGenerated &gt; ago(timeOffset*2) and TimeGenerated &lt; ago(timeOffset)
+| where EventID != discardEventId
+
+</code></pre>
+<div class="TIP">
+<p>Tipp</p>
+<p>"ago()" ist eine Funktion, die das aktuelle Datum und die aktuelle Uhrzeit verwendet und den angegebenen Wert subtrahiert.</p>
+</div>
+<h2 id="declare-dynamic-tables-or-lists">Deklarieren dynamischer Tabellen oder Listen</h2>
+<p>Let-Anweisungen ermöglichen die Erstellung dynamischer Tabellen oder Listen.</p>
+<pre><code class="lang-kusto">let suspiciousAccounts = datatable(account: string) [
+    @"\administrator", 
+    @"NT AUTHORITY\SYSTEM"
+];
+SecurityEvent | where Account in (suspiciousAccounts)
+</code></pre>
+<pre><code class="lang-kusto">let LowActivityAccounts =
+    SecurityEvent 
+    | summarize cnt = count() by Account 
+    | where cnt &lt; 1000;
+LowActivityAccounts | where Account contains "SQL"
+</code></pre>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

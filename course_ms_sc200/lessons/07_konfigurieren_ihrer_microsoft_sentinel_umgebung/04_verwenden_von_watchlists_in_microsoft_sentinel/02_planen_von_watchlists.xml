@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_07_04_02" title="Planen von Watchlists">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Planen von Watchlists</div>
+<div class="section-content">
+<p>Microsoft Sentinel-Watchlists ermöglichen das Sammeln von Daten aus externen Datenquellen für die Korrelation mit den Ereignissen in Ihrer Microsoft Sentinel-Umgebung. Nach der Erstellung können Sie Watchlists in Ihren Such-, Erkennungsrichtlinien, zur Bedrohungssuche und in Reaktions-Playbooks verwenden. Watchlists werden in Ihrem Microsoft Sentinel-Arbeitsbereich als Name-Wert-Paare gespeichert und für eine optimale Abfrageleistung und niedrige Latenz zwischengespeichert.</p>
+<p>Häufige Szenarien für die Verwendung von Watchlists umfassen:</p>
+<ul>
+<li><p>Untersuchen von Bedrohungen und Reagieren auf Vorfälle schnell mit dem schnellen Import von IP-Adressen, Dateihashes und anderen Daten aus CSV-Dateien. Nach dem Importieren können Sie Watchlist-Name-Wert-Paare für Verknüpfungen und Filter in Warnungsregeln, Bedrohungssuche, Arbeitsmappen, Notizbüchern und allgemeinen Abfragen verwenden.</p>
+</li>
+<li><p>Importieren von Geschäftsdaten als Watchlist. Importieren Sie z. B. Benutzerlisten mit privilegiertem Systemzugriff oder beendeten Mitarbeitern, und verwenden Sie dann die Watchlist, um Zulassungslisten und Blocklisten zu erstellen, die verwendet werden, um zu erkennen oder zu verhindern, dass sich diese Benutzer beim Netzwerk anmelden.</p>
+</li>
+<li><p>Verringerung der Alarmmüdigkeit. Erstellen Sie Zulassungslisten, um Warnungen aus einer Gruppe von Benutzern zu unterdrücken, z. B. Benutzer von autorisierten IP-Adressen, die Aufgaben ausführen, die normalerweise die Warnung auslösen würden, und verhindern, dass gutartige Ereignisse warnungen werden.</p>
+</li>
+<li><p>Anreichern von Ereignisdaten. Verwenden Sie Watchlists, um Ihre Ereignisdaten mit Name-Wert-Kombinationen zu erweitern, die aus externen Datenquellen stammen.</p>
+</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

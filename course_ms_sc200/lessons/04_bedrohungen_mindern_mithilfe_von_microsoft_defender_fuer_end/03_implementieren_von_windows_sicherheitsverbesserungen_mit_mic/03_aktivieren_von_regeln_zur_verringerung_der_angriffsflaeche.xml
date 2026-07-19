@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_03_03" title="Aktivieren von Regeln zur Verringerung der Angriffsfläche">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Aktivieren von Regeln zur Verringerung der Angriffsfläche</div>
+<div class="section-content">
+<p>Die Angriffsfläche umfasst alle Stellen, an denen ein Angreifer Geräte oder Netzwerke Ihrer Organisation kompromittieren könnte. Das Reduzieren der Angriffsfläche bedeutet den Schutz der Geräte und Netzwerke Ihres Unternehmens, sodass Angreifer weniger Möglichkeiten für ihre Angriffe haben.</p>
+<p>Regeln zur Verringerung der Angriffsfläche zielen auf bestimmte Softwareverhaltensweisen ab, die häufig von Angreifern ausgenutzt werden. Zu diesen Verhaltensweisen gehören:</p>
+<ul>
+<li><p>Starten ausführbarer Dateien und Skripts, die zum Herunterladen oder Ausführen von Dateien verwendet werden</p>
+</li>
+<li><p>Ausführen von verschleierten oder auf andere Weise verdächtigen Skripts</p>
+</li>
+<li><p>Ausführen von Aktionen, die Apps in der Regel nicht während der normalen täglichen Arbeit initiieren</p>
+</li>
+</ul>
+<p>Solche Softwareverhaltensweisen werden manchmal auch von legitimen Anwendungen gezeigt, sie werden aber sehr oft als riskant eingestuft, da sie häufig von Schadsoftware missbraucht werden. Mithilfe von Regeln zur Verringerung der Angriffsfläche können riskante Verhaltensweisen eingeschränkt werden, um Ihre Organisation zu schützen.</p>
+<p>Jede Regel zur Verringerung der Angriffsfläche enthält eine von vier Einstellungen:</p>
+<ul>
+<li><p>
+              <strong>Nicht konfiguriert:</strong> Die Regel zur Verringerung der Angriffsfläche ist deaktiviert.</p>
+</li>
+<li><p>
+              <strong>Blockieren:</strong> Die Regel zur Verringerung der Angriffsfläche ist aktiviert.</p>
+</li>
+<li><p>
+              <strong>Überwachung</strong>: Bewerten Sie, welche Auswirkungen die Regel zur Reduzierung der Angriffsfläche auf Ihre Organisation hätte, wenn sie aktiviert würde.</p>
+</li>
+<li><p>
+              <strong>Warnen:</strong> Aktivieren Sie die Regel zur Verringerung der Angriffsfläche, aber geben Sie dem Endbenutzer die Möglichkeit, die Blockierung zu umgehen.</p>
+</li>
+</ul>
+<h2 id="attack-surface-reduction-rules">Regeln zur Verringerung der Angriffsfläche</h2>
+<p>Für die Regeln zur Verringerung der Angriffsfläche werden derzeit die folgenden Regeln unterstützt:</p>
+<ul>
+<li>Ausführbare Inhalte von E-Mail-Clients und Webmail blockieren</li>
+<li>Alle Office-Anwendungen am Erstellen von untergeordneten Prozessen hindern</li>
+<li>Erstellung ausführbarer Inhalte durch Office-Anwendungen blockieren</li>
+<li>Einschleusung von Code durch Office-Anwendungen in andere Prozesse blockieren</li>
+<li>Starten heruntergeladener ausführbarer Inhalte durch JavaScript oder VBScript blockieren</li>
+<li>Ausführung möglicherweise verschleierter Skripts blockieren</li>
+<li>Win32-API-Aufrufe über Office-Makros blockieren</li>
+<li>Erweiterten Schutz vor Ransomware verwenden</li>
+<li>Diebstahl von Anmeldeinformationen aus dem Subsystem für die lokale Sicherheitsautorität (lsass.exe) von Windows blockieren</li>
+<li>Prozesserstellungen über PSExec- und WMI-Befehle blockieren</li>
+<li>Ausführung nicht vertrauenswürdiger und nicht signierter Prozesse von einem USB-Datenträger blockieren</li>
+<li>Ausführung von ausführbaren Dateien blockieren, wenn diese bestimmte Kriterien hinsichtlich Verbreitung, Alter oder Vertrauenswürdigkeit nicht erfüllen</li>
+<li>Erstellung untergeordneter Prozesse durch Office-Anwendungen blockieren</li>
+<li>Adobe Reader daran hindern, untergeordnete Prozesse zu erstellen</li>
+<li>Persistenz durch WMI-Ereignisabonnement blockieren</li>
+<li>Missbrauch von ausgenutzten, anfälligen signierten Treibern verhindern</li>
+</ul>
+<h2 id="exclude-files-and-folders-from-attack-surface-reduction-rules">Ausschließen von Dateien und Ordner von den Regeln zur Verringerung der Angriffsfläche</h2>
+<p>Sie können Dateien und Ordner aus der Auswertung der meisten Regeln zur Verringerung der Angriffsfläche ausschließen. Selbst wenn eine Regel zur Verringerung der Angriffsfläche feststellt, dass die Datei oder der Ordner ein schädliches Verhalten aufweist, wird in diesem Fall die Ausführung der Datei nicht blockiert. Das bedeutet aber auch, dass potenziell unsichere Dateien ausgeführt werden dürfen und Ihre Geräte infizieren könnten.</p>
+<p>Sie verhindern das Auslösen von Regeln zur Verringerung der Angriffsfläche auf der Grundlage von Zertifikaten und Dateihashes, indem Sie bestimmte Datei- und Zertifikatsindikatoren von Defender für Endpunkt zulassen.</p>
+<p>Sie können einzelne Dateien oder Ordner angeben (mithilfe von Ordnerpfaden oder vollqualifizierten Ressourcennamen), aber Sie können nicht angeben, für welche Regeln die Ausschlüsse gelten. Ein Ausschluss wird nur angewandt, wenn die ausgeschlossene Anwendung oder der ausgeschlossene Dienst gestartet wird. Wenn Sie beispielsweise einen Ausschluss für einen bereits ausgeführten Updatedienst hinzufügen, löst der Updatedienst weiterhin Ereignisse aus, bis der Dienst beendet und neu gestartet wird.</p>
+<h2 id="audit-mode-for-evaluation">Prüfungsmodus zur Auswertung</h2>
+<p>Mithilfe des Überwachungsmodus können Sie auswerten, wie sich Regeln zur Verringerung der Angriffsfläche auf Ihre Organisation auswirken würden, wenn sie aktiviert werden. Sie sollten am besten alle Regeln zuerst im Überwachungsmodus ausführen, damit Sie die Auswirkungen auf Ihre Branchenanwendung verstehen. Bei vielen Branchenanwendungen spielen Sicherheitsbedenken bei der Entwicklung nur eine untergeordnete Rolle, während sie möglicherweise bestimmte Aufgaben auf ähnliche Weise wie Schadsoftware ausführen. Indem Sie die Überwachungsdaten im Auge behalten und Ausschlüsse für erforderliche Anwendungen hinzufügen, können Sie Regeln zur Verringerung der Angriffsfläche bereitstellen, ohne die Produktivität zu beeinträchtigen.</p>
+<h2 id="notifications-when-a-rule-is-triggered">Benachrichtigungen beim Auslösen einer Regel</h2>
+<p>Wenn eine Regel ausgelöst wird, wird eine Benachrichtigung auf dem Gerät angezeigt. Sie können die Benachrichtigung mit Details zu Ihrem Unternehmen und Kontaktinformationen anpassen. Die Benachrichtigung wird auch im Microsoft&nbsp;Defender-Portal angezeigt.</p>
+<h2 id="configure-attack-surface-reduction-rules">Konfigurieren von Regeln zur Verringerung der Angriffsfläche</h2>
+<p>Sie können diese Regeln für Geräte festlegen, auf denen eine der folgenden Editionen und Versionen von Windows ausgeführt wird:</p>
+<ul>
+<li>Windows&nbsp;10 Pro ab Version&nbsp;1709</li>
+<li>Windows&nbsp;10 Enterprise ab Version&nbsp;1709</li>
+<li>Windows&nbsp;11</li>
+<li>Windows Server&nbsp;2016</li>
+<li>Windows Server 2019</li>
+<li>Windows Server 2022</li>
+<li>Windows Server 2025</li>
+</ul>
+<p>Sie können Regeln zur Verringerung der Angriffsfläche mithilfe einer der folgenden Methoden aktivieren:</p>
+<ul>
+<li>Microsoft Intune</li>
+<li>Mobile Geräteverwaltung (MDM)</li>
+<li>Microsoft Configuration Manager</li>
+<li>Gruppenrichtlinie</li>
+<li>PowerShell</li>
+</ul>
+<p>Es wird eine Verwaltung auf Unternehmensebene wie Intune oder Microsoft Configuration Manager empfohlen. Die Verwaltung auf Unternehmensebene überschreibt alle widersprüchlichen Gruppenrichtlinien oder PowerShell-Einstellungen beim Start.</p>
+<h3 id="intune">Intune</h3>
+<h4 id="device-configuration-profiles">Gerätekonfigurationsprofile:</h4>
+<ol>
+<li><p>Klicken Sie auf <strong>Gerätekonfiguration&nbsp;&gt; Profile</strong>. Wählen Sie ein vorhandenes Schutzprofil für den Endpunkt aus, oder erstellen Sie ein neues. Wenn Sie ein neues erstellen möchten, wählen Sie <strong>Profil erstellen</strong> aus, und geben Sie die Informationen für dieses Profil ein. Wählen Sie als Profiltyp die Option <strong>Endpoint Protection</strong> aus. Wenn Sie ein vorhandenes Profil ausgewählt haben, wählen Sie <strong>Eigenschaften</strong> und dann <strong>Einstellungen</strong> aus.</p>
+</li>
+<li><p>Wählen Sie im Bereich „Endpoint Protection“ die Option <strong>Windows Defender Exploit Guard</strong> und dann <strong>Verringerung der Angriffsfläche</strong> aus. Wählen Sie die gewünschte Einstellung für die einzelnen Regeln aus.</p>
+</li>
+<li><p>Geben Sie unter „Ausnahmen“ für die Verringerung der Angriffsfläche einzelne Dateien und Ordner ein. Sie können auch „Importieren“ auswählen, um eine CSV-Datei mit Dateien und Ordnern zu importieren, die von den Regeln zur Verringerung der Angriffsfläche ausgeschlossen werden sollen. Jede Zeile in der CSV-Datei sollte wie folgt formatiert sein:</p>
+<p>C:\Ordner, %ProgramFiles%\Ordner\Datei, C:\Pfad</p>
+</li>
+<li><p>Wählen Sie in den drei Konfigurationsbereichen <strong>OK</strong> aus. Wählen Sie dann „Erstellen“ aus, wenn Sie eine neue Endpoint Protection-Datei erstellen möchten, oder „Speichern“, wenn Sie eine vorhandene bearbeiten.</p>
+</li>
+</ol>
+<h4 id="endpoint-security-policy">Endpunktsicherheitsrichtlinie:</h4>
+<ol>
+<li><p>Wählen Sie <strong>Endpunktsicherheit&nbsp;&gt; Verringerung der Angriffsfläche</strong> aus. Wählen Sie eine bereits vorhandene Regel aus, oder erstellen Sie eine neue. Wenn Sie eine neue erstellen möchten, wählen Sie <strong>Richtlinie erstellen</strong> aus, und geben Sie Informationen für dieses Profil ein. Wählen Sie für den Profiltyp die Option <strong>Regeln zur Verringerung der Angriffsfläche</strong> aus. Wenn Sie ein vorhandenes Profil ausgewählt haben, wählen Sie <strong>Eigenschaften</strong> und dann <strong>Einstellungen</strong> aus.</p>
+</li>
+<li><p>Wählen Sie im Bereich mit den Konfigurationseinstellungen die Option <strong>Verringerung der Angriffsfläche</strong> und anschließend die gewünschte Einstellung für die jeweilige Regel aus.</p>
+</li>
+<li><p>Geben Sie unter <strong>Liste zusätzlicher Ordner, die geschützt werden müssen</strong>, „Liste der Apps, die auf geschützte Ordner zugreifen können“ und „Dateien und Ordner, die von den Regeln zur Verringerung der Angriffsfläche ausgeschlossen werden sollen“ einzelne Dateien und Ordner ein. Sie können auch „Importieren“ auswählen, um eine CSV-Datei mit Dateien und Ordnern zu importieren, die von den Regeln zur Verringerung der Angriffsfläche ausgeschlossen werden sollen. Jede Zeile in der CSV-Datei sollte wie folgt formatiert sein:</p>
+<p>C:\Ordner, %ProgramFiles%\Ordner\Datei, C:\Pfad</p>
+</li>
+<li><p>Wählen Sie in den drei Konfigurationsbereichen die Option <strong>Weiter</strong> und anschließend <strong>Erstellen</strong> aus, wenn Sie eine neue Richtlinie erstellen, oder <strong>Speichern</strong>, wenn Sie eine bereits vorhandene Richtlinie bearbeiten.</p>
+</li>
+</ol>
+<h3 id="mobile-device-management">Verwaltung mobiler Geräte</h3>
+<p>So verwalten Sie die Regeln zur Verringerung der Angriffsfläche in der mobilen Geräteverwaltung</p>
+<ul>
+<li><p>Verwenden Sie den Konfigurationsdienstanbieter „./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules“, um den Modus für jede Regel einzeln zu aktivieren und festzulegen.</p>
+</li>
+<li><p>Beachten Sie den Verweis zur Verwaltung mobiler Geräte in <a href="https://learn.microsoft.com/de-de/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules?azure-portal=true" data-linktype="absolute-path">Regeln zur Verringerung der Angriffsfläche</a> für die Verwendung von GUID-Werten.</p>
+</li>
+<li><p>OMA-URI-Pfad: ./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules</p>
+</li>
+<li><p>Wert: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84=2|3B576869-A4EC-4529-8536-B80A7769E899=1|D4F940AB-401B-4EfC-AADC-AD5F3C50688A=2|D3E037E1-3EB8-44C8-A917-57927947596D=1|5BEB7EFE-FD9A-4556-801D-275E5FFC04CC=0|BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550=1</p>
+</li>
+<li><p>Die Werte zum Aktivieren, Deaktivieren oder Aktivieren im Überwachungsmodus lauten wie folgt:</p>
+<ul>
+<li><p>Deaktivieren = 0</p>
+</li>
+<li><p>Blockieren (Aktivieren der Regel zur Verringerung der Angriffsfläche) = 1</p>
+</li>
+<li><p>Überwachen = 2</p>
+</li>
+</ul>
+</li>
+<li><p>Verwenden Sie den Konfigurationsdienstanbieter „./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionOnlyExclusions“, um Ausschlüsse hinzuzufügen.</p>
+</li>
+</ul>
+<p>Beispiel:</p>
+<ul>
+<li><p>OMA-URI-Pfad: ./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionOnlyExclusions</p>
+</li>
+<li><p>Wert: c:\Pfad|e:\Pfad|c:\wlisted.exe</p>
+</li>
+</ul>
+<h3 id="microsoft-endpoint-configuration-manager">Microsoft Endpoint Configuration Manager</h3>
+<p>So verwalten Sie die Regeln zur Verringerung der Angriffsfläche in Microsoft Endpoint Configuration Manager</p>
+<ol>
+<li><p>Wechseln Sie in Microsoft Endpoint Configuration Manager zu <strong>Bestand und Kompatibilität &gt; Endpunktschutz &gt; Windows Defender Exploit Guard</strong>.</p>
+</li>
+<li><p>Klicken Sie auf <strong>Startseite&nbsp;&gt; Exploit Guard-Richtlinie erstellen</strong>.</p>
+</li>
+<li><p>Geben Sie einen Namen und eine Beschreibung ein, und wählen Sie <strong>Verringerung der Angriffsfläche</strong> und dann <strong>Weiter</strong> aus.</p>
+</li>
+<li><p>Wählen Sie aus, welche Regeln Aktionen blockieren oder überwachen sollen, und wählen Sie dann <strong>Weiter</strong> aus.</p>
+</li>
+<li><p>Überprüfen Sie die Einstellungen, und wählen Sie <strong>Weiter</strong> aus, um die Richtlinie zu erstellen.</p>
+</li>
+<li><p>Wählen Sie nach dem Erstellen der Richtlinie <strong>Schließen</strong> aus.</p>
+</li>
+</ol>
+<h3 id="group-policy">Gruppenrichtlinie</h3>
+<p>So verwalten Sie die Regeln zur Verringerung der Angriffsfläche in Gruppenrichtlinien</p>
+<div class="WARNING">
+<p>Warnung</p>
+<p>Wenn Sie Ihre Computer und Geräte mit Intune, Konfigurations-Manager oder einer anderen Verwaltungsplattform auf Unternehmensebene verwalten, überschreibt die Verwaltungssoftware beim Start alle widersprüchlichen Gruppenrichtlinieneinstellungen.</p>
+</div>
+<ol>
+<li><p>Öffnen Sie auf dem Computer, auf dem Sie Ihre Gruppenrichtlinien verwalten, die Gruppenrichtlinien-Verwaltungskonsole, klicken Sie mit der rechten Maustaste auf das Gruppenrichtlinienobjekt, das Sie konfigurieren möchten, und wählen Sie <strong>Bearbeiten</strong> aus.</p>
+</li>
+<li><p>Wechseln Sie im Gruppenrichtlinienverwaltungs-Editor zu „Computerkonfiguration“, und wählen Sie „Administrative Vorlagen“ aus.</p>
+</li>
+<li><p>Erweitern Sie die Struktur wie folgt: <strong>Windows-Komponenten&nbsp;&gt; Microsoft Defender Antivirus&nbsp;&gt; Windows Defender Exploit Guard&nbsp;&gt; Verringerung der Angriffsfläche</strong>.</p>
+</li>
+<li><p>Wählen Sie <strong>Regeln zur Verringerung der Angriffsfläche konfigurieren</strong> und dann <strong>Aktiviert</strong> aus. Anschließend können Sie im Abschnitt „Optionen“ einzeln den Status für jede Regel festlegen.</p>
+</li>
+<li><p>Wählen Sie „Anzeigen“ aus, und geben Sie wie folgt die Regel-ID in der Spalte „Wertname“ und den gewünschten Status in der Spalte „Wert“ ein:</p>
+<p>Deaktivieren = 0, Blockieren (Aktivieren der Regel zur Verringerung der Angriffsfläche) = 1, Überwachen = 2</p>
+</li>
+<li><p>Um Dateien und Ordner von den Regeln zur Verringerung der Angriffsfläche auszuschließen, wählen Sie die Einstellung <strong>Dateien und Pfade aus der Regel zur Verringerung der Angriffsfläche ausschließen</strong> aus und legen die Option auf <strong>Aktiviert</strong> fest. Wählen Sie <strong>Anzeigen</strong> aus, und geben Sie die einzelnen Dateien oder Ordner in der Spalte „Wertname“ ein. Geben Sie für jedes Element in der Spalte „Wert“ den Wert <strong>0</strong> ein.</p>
+</li>
+</ol>
+<h3 id="powershell">PowerShell</h3>
+<p>So verwalten Sie die Regeln zur Verringerung der Angriffsfläche mit PowerShell</p>
+<div class="WARNING">
+<p>Warnung</p>
+<p>Wenn Sie Ihre Computer und Geräte mit Intune, Konfigurations-Manager oder einer anderen Verwaltungsplattform auf Unternehmensebene verwalten, überschreibt die Verwaltungssoftware alle in Konflikt stehenden PowerShell-Einstellungen beim Start. Damit Benutzer den Wert mithilfe von PowerShell definieren können, verwenden Sie auf der Verwaltungsplattform die Option „Benutzerdefiniert“ für die Regel.</p>
+</div>
+<ol>
+<li><p>Geben Sie im Startmenü <em>PowerShell</em> ein, klicken Sie mit der rechten Maustaste auf Windows PowerShell, und wählen Sie „Als Administrator ausführen“ aus.</p>
+</li>
+<li><p>Geben Sie das folgende Cmdlet ein:</p>
+<pre><code class="lang-powershell">Set-MpPreference -AttackSurfaceReductionRules_Ids &lt;rule ID&gt; -AttackSurfaceReductionRules_Actions Enabled
+
+</code></pre>
+</li>
+<li><p>Verwenden Sie das folgende Cmdlet, um Regeln zur Verringerung der Angriffsfläche im Überwachungsmodus zu aktivieren:</p>
+<pre><code class="lang-powershell">Add-MpPreference -AttackSurfaceReductionRules_Ids &lt;rule ID&gt; -AttackSurfaceReductionRules_Actions AuditMode
+
+</code></pre>
+</li>
+<li><p>Verwenden Sie das folgende Cmdlet, um Regeln zur Verringerung der Angriffsfläche zu deaktivieren:</p>
+<pre><code class="lang-powershell">Add-MpPreference -AttackSurfaceReductionRules_Ids &lt;rule ID&gt; -AttackSurfaceReductionRules_Actions Disabled
+
+</code></pre>
+</li>
+<li><p>Sie müssen den Status für jede Regel einzeln angeben, Sie können aber Regeln und Zustände in einer durch Trennzeichen getrennten Liste zusammenfassen.</p>
+</li>
+<li><p>Im folgenden Beispiel werden die ersten beiden Regeln aktiviert, die dritte Regel ist deaktiviert, und die vierte Regel wird im Überwachungsmodus aktiviert:</p>
+<pre><code class="lang-powershell">Set-MpPreference -AttackSurfaceReductionRules_Ids &lt;rule ID 1&gt;,&lt;rule ID 2&gt;,&lt;rule ID 3&gt;,&lt;rule ID 4&gt; -AttackSurfaceReductionRules_Actions Enabled, Enabled, Disabled, AuditMode
+
+</code></pre>
+</li>
+<li><p>Sie können auch das PowerShell-Verb „Add-MpPreference“ verwenden, um der vorhandenen Liste neue Regeln hinzuzufügen.</p>
+</li>
+<li><p>Der vorhandene Regelsatz wird von „Set-MpPreference“ immer überschrieben. Wenn Sie der vorhandenen Menge Elemente hinzufügen möchten, sollten Sie stattdessen „Add-MpPreference“ verwenden. Mithilfe von „Get-MpPreference“ können Sie eine Liste der Regeln mit ihrem aktuellen Status abrufen.</p>
+</li>
+<li><p>Verwenden Sie das folgende Cmdlet, um Dateien und Ordner aus den Regeln zur Verringerung der Angriffsfläche auszuschließen:</p>
+<pre><code class="lang-powershell">Add-MpPreference -AttackSurfaceReductionOnlyExclusions "&lt;fully qualified path or resource&gt;"
+
+</code></pre>
+</li>
+<li><p>Verwenden Sie weiterhin „Add-MpPreference -AttackSurfaceReductionOnlyExclusions“, um der Liste weitere Dateien und Ordner hinzuzufügen.</p>
+</li>
+</ol>
+<div class="IMPORTANT">
+<p>Wichtig</p>
+<p>Verwenden Sie „Add-MpPreference“, um der Liste Apps an- oder hinzuzufügen. Mit dem Cmdlet Set-MpPreference wird die vorhandene Liste überschrieben.</p>
+</div>
+<h3 id="list-of-attack-surface-reduction-events">Liste der Ereignisse zur Verringerung der Angriffsfläche</h3>
+<p>Alle Ereignisse zur Verringerung der Angriffsfläche finden Sie in der Windows-Ereignisansicht unter „Anwendungs- und Dienstprotokolle“&nbsp;&gt; „Microsoft“&nbsp;&gt; „Windows“.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

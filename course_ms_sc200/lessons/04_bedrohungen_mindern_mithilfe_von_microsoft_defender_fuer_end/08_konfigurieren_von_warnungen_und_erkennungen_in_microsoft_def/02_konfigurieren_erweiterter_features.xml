@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_08_02" title="Konfigurieren erweiterter Features">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Konfigurieren erweiterter Features</div>
+<div class="section-content">
+<p>Die Seite <strong>"Erweiterte Features</strong>" im Bereich <strong>"Allgemein</strong><strong>" des Menüs "Einstellungen – Endpunkte</strong>" des Microsoft Defender-Portals bietet die folgenden Warnungs- und Erkennungseinstellungen:</p>
+<p>Der Bereich „Erweiterte Funktionen“ im Bereich „Allgemeine Einstellungen“ bietet viele Umschalter für Funktionen des Produkts. Die folgenden Einstellungen sind für Warnungen von Bedeutung.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Funktion</th>
+<th style="text-align: left;">BESCHREIBUNG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Live-Antwort</td>
+<td style="text-align: left;">Ermöglicht Benutzer*innen mit entsprechenden RBAC-Berechtigungen das Untersuchen von Geräten, für die sie zum Zugriff autorisiert sind, über eine Remoteshellverbindung.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Live Response: Ausführung nicht signierter Skripts</td>
+<td style="text-align: left;">Ermöglicht die Verwendung von nicht signierten Skripts in Live Response.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Benutzerdefinierte Netzwerkindikatoren</td>
+<td style="text-align: left;">Konfiguriert die Geräte so, dass sie Verbindungen mit IP-Adressen, Domänen oder URLs in Ihrer Liste benutzerdefinierter Indikatoren zulassen oder blockieren.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="live-response">Live Response</h3>
+<p>Aktivieren Sie dieses Feature, damit Benutzer mit den entsprechenden Berechtigungen eine Live Response-Sitzung auf Geräten starten können.</p>
+<h3 id="live-response-unsigned-script-execution">Live Response: Ausführung nicht signierter Skripts</h3>
+<p>Wenn Sie dieses Feature aktivieren, können Sie nicht signierte Skripts in einer Live Response-Sitzung ausführen.</p>
+<h3 id="custom-network-indicators">Benutzerdefinierte Netzwerkindikatoren</h3>
+<p>Wenn Sie dieses Feature aktivieren, können Sie Indikatoren für IP-Adressen, Domänen oder URLs erstellen, die bestimmen, ob sie basierend auf Ihrer Liste der benutzerdefinierten Indikatoren zugelassen oder blockiert werden.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

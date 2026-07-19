@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_02_03" title="Grundlegendes zu Kompatibilität und Features von Betriebssystemen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Grundlegendes zu Kompatibilität und Features von Betriebssystemen</div>
+<div class="section-content">
+<div class="CAUTION">
+<p>Achtung</p>
+<p>Dieser Artikel bezieht sich auf CentOS, eine Linux-Distribution, deren Dienstende (End-of-Life, EOL) ansteht. Sie sollten Ihre Nutzung entsprechend planen. Weitere Informationen finden Sie im <a href="https://learn.microsoft.com/de-de/azure/virtual-machines/workloads/centos/centos-end-of-life" data-linktype="absolute-path">CentOS End-of-Life-Leitfaden</a>.</p>
+</div>
+<p>Microsoft Defender für Endpunkt ist für die folgenden Betriebssysteme verfügbar:</p>
+<ul>
+<li>Fenster</li>
+<li>macOS</li>
+<li>Linux</li>
+<li>Android</li>
+<li>Ios</li>
+</ul>
+<h2 id="windows">Fenster</h2>
+<p>Unterstützte Windows-Versionen</p>
+<ul>
+<li>Windows&nbsp;7&nbsp;SP1&nbsp;Enterprise (erfordert ESU zur Unterstützung)</li>
+<li>Windows&nbsp;7&nbsp;SP1&nbsp;Pro (erfordert ESU zur Unterstützung)</li>
+<li>Windows 8.1 Enterprise</li>
+<li>Windows&nbsp;8.1 Pro</li>
+<li>Windows 11 Enterprise</li>
+<li>Windows 11 Education</li>
+<li>Windows 11 Pro</li>
+<li>Windows 11 Pro Education</li>
+<li>Windows 10 Enterprise</li>
+<li>Windows&nbsp;10 Enterprise&nbsp;LTSC&nbsp;2016 (oder höher)</li>
+<li>Windows&nbsp;10 Enterprise IoT</li>
+<li>Windows 10 Education</li>
+<li>Windows 10 Pro</li>
+<li>Windows 10 Pro Education</li>
+<li>Windows-Server</li>
+<li>Windows&nbsp;Server&nbsp;2008&nbsp;R2&nbsp;SP1 (erfordert ESU zur Unterstützung)</li>
+<li>Windows Server&nbsp;2012&nbsp;R2</li>
+<li>Windows Server&nbsp;2016</li>
+<li>Windows&nbsp;Server&nbsp;1803 (oder höher)</li>
+<li>Windows Server 2019</li>
+<li>Windows Server 2022</li>
+<li>Windows Virtual Desktop</li>
+</ul>
+<h2 id="microsoft-defender-for-endpoint-on-macos">Microsoft Defender für Endpunkt unter macOS</h2>
+<p>Microsoft Defender für Endpunkt unter macOS bietet Antivirus- und EDR-Funktionen (Endpunkterkennung und -antwort) sowie Sicherheitsrisikomanagement für die drei neuesten Releases von macOS. Kunden können die Lösung über Microsoft Intune und Jamf bereitstellen und verwalten. Wie bei Microsoft&nbsp;Office-Anwendungen unter macOS werden Updates für Microsoft Defender für Endpunkt unter macOS von Microsoft&nbsp;AutoUpdate verwaltet.</p>
+<h2 id="microsoft-defender-for-endpoint-on-linux">Microsoft Defender für Endpunkt unter Linux</h2>
+<p>Microsoft Defender für Endpunkt unter Linux bietet präventive Antivirus- und EDR-Funktionen (Endpunkterkennung und -antwort) sowie Sicherheitsrisikomanagement für Linux-Server. Dazu zählt eine vollständige Befehlszeilenumgebung zum Konfigurieren und Verwalten des Agents, Initiieren von Überprüfungen und Verwalten von Bedrohungen. Die aktuellen Versionen der sechs häufigsten Linux&nbsp;Server-Distributionen werden unterstützt: RHEL&nbsp;7.2 (oder höher), CentOS Linux&nbsp;7.2 (oder höher), Ubuntu&nbsp;16&nbsp;LTS (oder höher), SLES&nbsp;12 (oder höher), Debian&nbsp;9 (oder höher) und Oracle Linux&nbsp;7.2. Microsoft Defender für Endpunkt unter Linux kann mithilfe von Puppet, Ansible oder mit einem anderen Tool für die Linux-Konfigurationsverwaltung bereitgestellt und konfiguriert werden.</p>
+<h2 id="microsoft-defender-for-endpoint-on-android">Microsoft Defender für Endpunkt unter Android</h2>
+<p>Microsoft Defender für Endpoint auf Android ist unsere Mobile Threat Defense-Lösung für Geräte mit Android 6.0 und höher. Es werden die Modi „Android Enterprise“ (Arbeitsprofil) und „Geräteadministrator“ unterstützt. Für Android umfasst die Lösung Webschutz, einschließlich Antiphishing, Blockieren unsicherer Verbindungen und Festlegen von benutzerdefinierten Indikatoren. Die Lösung sucht nach Schadsoftware und potenziell unerwünschten Anwendungen (PUA) und bietet durch die Integration in Microsoft Intune und bedingten Zugriff mehr Funktionen zur Verhinderung von Sicherheitsverletzungen.</p>
+<h2 id="microsoft-defender-for-endpoint-on-ios">Microsoft Defender für Endpunkt unter iOS</h2>
+<p>Microsoft Defender für Endpoint auf iOS ist unsere Lösung zur mobilen Bedrohungsabwehr für Geräte mit iOS 11.0 und höher. Es werden Geräte im Mandanten eines Kunden unterstützt (registriert oder nicht registriert). Sowohl überwachte als auch nicht überwachte registrierte Geräte werden unterstützt. Für iOS umfasst die Lösung Webschutz, einschließlich Antiphishing, Blockieren unsicherer Verbindungen, Festlegen von benutzerdefinierten Indikatoren und Jailbreak-Erkennung.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

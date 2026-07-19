@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_02_04_01" title="Einführung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Einführung</div>
+<div class="section-content">
+<p>Microsoft Security Copilot ist direkt über einige Microsoft-Sicherheitsprodukte zugänglich. Diese Lösung wird als eingebettete Erfahrung bezeichnet. Copilot ist in Microsoft Defender XDR, Microsoft Purview, Microsoft Entra, Microsoft Intune, Microsoft Defender for Cloud und andere Microsoft Sicherheitslösungen eingebettet.</p>
+<p>Die Microsoft-Lösung, in die Copilot-Funktionen eingebettet sind, bestimmt die Szenarien, die über die eingebetteten Erfahrungen verfügbar sind. In Microsoft Purview-Kommunikationscompliance kann Copilot beispielsweise eine Zusammenfassung einer Nachricht und ihrer Anhänge im Kontext der Richtlinien- und Klassifizierungsbedingungen liefern, welche die Nachricht gekennzeichnet haben.</p>
+<p>In der eigenständigen Erfahrung führt Copilot einige Verarbeitungsschritte durch, um festzustellen, welche seiner zahlreichen Funktionen am besten geeignet ist, um auf Ihre Eingabeaufforderung zu reagieren. Da Copilot in das jeweilige Produkt eingebettet ist, kann Copilot die produktspezifischen Funktionen direkt aufrufen, was eine effiziente Verarbeitung ermöglicht.</p>
+<p>Die eingebettete Erfahrung ist auch ein großartiger Ort, um eine Sicherheitsuntersuchung zu starten. Als Analyst, der Microsoft Defender XDR verwendet, werden Sie wahrscheinlich viel Zeit auf der Seite mit den Vorfällen verbringen. Auf der Vorfallseite können Sie eine Warnung auswählen und sofort eine Zusammenfassung dieses Vorfalls erhalten. Je nachdem, was Sie erfahren, können Sie feststellen, dass eine tiefergehende Untersuchung erforderlich ist. In diesem Szenario können Sie ganz einfach zu einer unabhängigen Erfahrung wechseln, um eine detailliertere und produktübergreifende Untersuchung durchzuführen, bei der alle Copilot-Funktionen genutzt werden, die für Ihre Rolle aktiviert sind.</p>
+<p>In diesem Modul lernen Sie die Szenarien kennen, die von den eingebetteten Erfahrungen von Microsoft Security Copilot unterstützt werden.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Dieses Modul soll Ihnen einen Einblick in nur einige der eingebetteten Erlebnisse von Security Copilot geben. Die Liste der Microsoft Security-Lösungen, in die Copilot eingebettet ist, wächst kontinuierlich. Informationen zu Copilot, die in eine bestimmte Sicherheitslösung eingebettet sind, finden Sie in der Schulung für diese spezifische Lösung.</p>
+</div>
+<p>Nach Abschluss dieses Moduls werden Sie zu Folgendem in der Lage sein:</p>
+<ul>
+<li>Beschreiben Sie Copilot in Microsoft Defender XDR.</li>
+<li>Beschreiben Sie Copilot in Microsoft Purview.</li>
+<li>Beschreiben Sie Copilot in Microsoft Entra.</li>
+<li>Erläutern Sie den Copilot in Microsoft Intune.</li>
+<li>Beschreiben Sie Copilot in Microsoft Defender for Cloud.</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

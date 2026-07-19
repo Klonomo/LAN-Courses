@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_09_01_01" title="Einführung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Einführung</div>
+<div class="section-content">
+<p>Microsoft Sentinel Analytics bietet eine intelligente Lösung, mit der Sie potenzielle Bedrohungen und Sicherheitsrisiken in Ihren Organisationen ausmachen können.</p>
+<p>Stellen Sie sich vor, Sie arbeiten bei Contoso, Ltd. als Analyst im Security Operations Center (Sicherheitsleitstelle, SOC). Contoso ist ein mittelgroßer Finanzdienstleister in London mit einer Filiale in New York. Contoso setzt mehrere Microsoft-Produkte und -Dienste ein, um Datensicherheit und Bedrohungsschutz für seine Ressourcen zu gewährleisten. Dabei handelt es sich um diese Produkte:</p>
+<ul>
+<li>Microsoft 365</li>
+<li>Microsoft Entra ID</li>
+<li>Microsoft Entra&nbsp;ID-Schutz</li>
+<li>Microsoft Defender für Cloud-Apps</li>
+<li>Microsoft Defender for Identity</li>
+<li>Microsoft Defender für den Endpunkt</li>
+<li>Microsoft Defender für Office 365</li>
+<li>System Center Endpunktschutz</li>
+<li>Microsoft Azure Information Protection</li>
+</ul>
+<p>Contoso schützt seine Azure- und lokalen Ressourcen durch Nutzung der kostenpflichtigen Version von Microsoft Defender für Cloud vor Bedrohungen. Das Unternehmen überwacht und schützt auch andere nicht von Microsoft stammende Ressourcen.
+Die Sicherheitsanalysten bei Contoso tragen eine große Verantwortung bei der Selektierung. Sie behandeln eine große Anzahl von Warnungen von mehreren Produkten. Sie korrelieren Warnungen auf folgende Weisen:</p>
+<ul>
+<li>Manuell über verschiedene Dashboards</li>
+<li>Mithilfe einer herkömmlichen Korrelations-Engine</li>
+</ul>
+<p>Außerdem geht dem SOC-Team durch den Zeitaufwand für das Einrichten und Warten der IT-Infrastruktur wichtige Zeit für sicherheitsrelevante Aufgaben verloren.</p>
+<p>Der Leiter der IT-Abteilung ist der Meinung, dass Microsoft Sentinel Analytics den Sicherheitsanalysten helfen kann, komplexe Untersuchungen zu beschleunigen und das Security Operations Center (SOC) zu verbessern. Als leitender Systementwickler und Azure-Administrator von Contoso wurden Sie gebeten, Analyseregeln in Microsoft Sentinel einzurichten, damit das SecOps-Team Angriffe auf die Ressourcen von Contoso erkennen und analysieren kann.</p>
+<p>In diesem Modul machen Sie sich mit der Bedeutung von Microsoft Sentinel Analytics vertraut, erstellen und implementieren Analyseregeln anhand vorhandener Vorlagen, definieren neue Regeln und Abfragen mithilfe des Assistenten und verwalten Regeln mit Änderungen.</p>
+<p>Am Ende dieses Moduls sind Sie in der Lage, Analyseregeln in Microsoft Sentinel einzurichten, die dem SecOps-Team helfen, Cyberangriffe zu erkennen und abzuwehren.</p>
+<h2 id="learning-objectives">Lernziele</h2>
+<ul>
+<li>Erläutern der Bedeutung von Microsoft Sentinel Analytics.</li>
+<li>Erklären verschiedene Arten von Analyseregeln</li>
+<li>Erstellen von Regeln anhand von Vorlagen</li>
+<li>Erstellen neuer Analyseregeln und Abfragen mithilfe des Assistenten für Analyseregeln</li>
+<li>Verwalten von Regeln mit Änderungen</li>
+</ul>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<ul>
+<li>Grundkenntnisse zu Azure-Diensten</li>
+<li>Grundkenntnisse operativer Konzepte, wie z.&nbsp;B. Überwachung, Protokollierung und Warnungen</li>
+<li>Azure-Abonnement</li>
+<li>Eine Microsoft Sentinel-Instanz in Ihrem Azure-Abonnement</li>
+</ul>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Wenn Sie sich entscheiden, die Übung in diesem Modul durchzuführen, bedenken Sie, dass in Ihrem Azure-Abonnement Kosten anfallen können. Informationen zum Schätzen der Kosten finden Sie unter <a href="https://azure.microsoft.com/pricing/details/azure-sentinel/" data-linktype="external">Microsoft Sentinel&nbsp;– Preise</a>.</p>
+</div>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

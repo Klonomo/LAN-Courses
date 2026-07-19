@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_07_06_08" title="Zusammenfassung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Zusammenfassung</div>
+<div class="section-content">
+<p>In diesem Modul haben Sie die Integration von Microsoft Sentinel in das Microsoft Defender-Portal kennengelernt. Diese Integration vereinfacht Vorgänge, indem die Komplexität der Verwaltung mehrerer Tools verringert wird, die Suchfunktionen verbessert werden, automatische Angriffsunterbrechungen für SAP-Anwendungen ermöglicht und einheitliche Entitätsseiten bereitgestellt werden. Außerdem haben Sie die Unterschiede beim Verwalten mehrerer Microsoft Sentinel-Arbeitsbereiche zwischen den Azure- und Defender-Portalen kennengelernt. Darüber hinaus deckte das Modul die Voraussetzungen für die Integration von Microsoft Defender XDR in Microsoft Sentinel ab, einschließlich eines aktivierten Log Analytics-Arbeitsbereichs und Zugriff auf Microsoft Defender XDR im Defender-Portal.</p>
+<p>Die wichtigsten Vorteile dieses Moduls sind das Verständnis der Vorteile der Integration von Microsoft Sentinel in das Microsoft Defender-Portal, z.&nbsp;B. optimierte Vorgänge und erweiterte Suchfunktionen. Außerdem haben Sie mehr über die einzigartigen Features erfahren, die in jedem Portal verfügbar sind, und die Schritte zum Integrieren von Microsoft Defender XDR in Microsoft Sentinel. Darüber hinaus führte das Modul das Konzept eines Speicherkontos mit dem Beispiel eines Schokoladenherstellers ein, in dem erläutert wird, wie ein Speicherkonto erstellt wird, das für die Aufbewahrung unternehmenskritischer Geschäftsdaten geeignet ist.</p>
+<h2 id="additional-reading">Weiterführende Lektüre</h2>
+<ul>
+<li>
+              <a href="https://learn.microsoft.com/de-de/azure/sentinel/microsoft-sentinel-defender-portal" data-linktype="absolute-path">Microsoft Sentinel im Microsoft Defender-Portal</a></li>
+<li>
+              <a href="https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/frequently-asked-questions-about-the-unified-security-operations/ba-p/4212048" data-linktype="external">Häufig gestellte Fragen zur einheitlichen Sicherheitsbetriebsplattform</a></li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

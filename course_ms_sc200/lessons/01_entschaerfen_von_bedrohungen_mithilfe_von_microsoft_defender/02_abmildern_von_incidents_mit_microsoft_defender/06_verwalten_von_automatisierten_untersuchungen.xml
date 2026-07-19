@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_01_02_06" title="Verwalten von automatisierten Untersuchungen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwalten von automatisierten Untersuchungen</div>
+<div class="section-content">
+<h2 id="manage-automated-investigations">Verwalten von automatisierten Untersuchungen</h2>
+<p>Das Sicherheitsteam Ihrer Organisation erhält immer dann eine Warnung, wenn Microsoft Defender ein schädliches oder verdächtiges Element für den Endpunkt erkennt. Der Umgang mit der Vielzahl von Warnungen, die durch einen scheinbar unendlichen Fluss von Bedrohungen ausgelöst werden, stellt eine große Herausforderung für Sicherheitsteams dar. Microsoft Defender für Endpunkt umfasst automatisierte Untersuchungs- und Wiederherstellungsfunktionen (Automated Investigation and Remediation, AIR), mit denen das Sicherheitsteam Ihrer Organisation Bedrohungen effizienter und effektiver behandeln kann.</p>
+<div class="embeddedvideo"><p><em>[Interaktiver Inhalt auf Microsoft Learn verfügbar]</em></p></div>
+<p>Die Technologie bei der automatisierten Untersuchung verwendet verschiedene Überprüfungsalgorithmen und basiert auf Prozessen, die von Sicherheitsanalysten verwendet werden. Die AIR-Funktionen sind so konzipiert, dass Warnungen untersucht und sofort Maßnahmen ergriffen werden, um Sicherheitsverletzungen aufzulösen. Mit den AIR-Funktionen wird das Warnungsaufkommen erheblich reduziert, sodass sich Sicherheitsaktivitäten auf komplexere Bedrohungen und andere wichtige Maßnahmen konzentrieren können. Das Info-Center bietet einen Überblick über alle Untersuchungen, die automatisch initiiert wurden, sowie Details wie Untersuchungsstatus, Erkennungsquelle und ausstehende oder abgeschlossene Aktionen.</p>
+<h2 id="how-the-automated-investigation-starts">Start der automatisierten Untersuchung</h2>
+<p>Wenn eine Warnung ausgelöst wird, tritt ein Sicherheitsplaybook in Kraft. Je nach Sicherheitsplaybook kann eine automatisierte Untersuchung beginnen. Nehmen Sie beispielsweise an, dass sich eine schädliche Datei auf einem Gerät befindet. Wenn diese Datei erkannt wird, wird eine Warnung ausgelöst, und der automatisierte Untersuchungsprozess beginnt. Microsoft Defender für Endpunkt prüft, ob die schädliche Datei auch auf anderen Geräten in der Organisation vorhanden ist. Während und nach der automatisierten Untersuchung sind Details aus der Untersuchung verfügbar, u. a. die Bewertung („Bösartig“, „Verdächtig“ oder „Keine Bedrohungen gefunden“). Weitere Informationen dazu, was nach der Bewertung geschieht, nachdem ein Urteil erreicht wurde, finden Sie im Abschnitt zu automatisierten Untersuchungsergebnissen und Korrekturmaßnahmen.</p>
+<h3 id="details-of-an-automated-investigation">Details zu einer automatisierten Untersuchung</h3>
+<p>Während und nach einer automatisierten Untersuchung können Sie Details dazu anzeigen. Wählen Sie eine auslösende Warnung aus, um die Untersuchungsdetails zu sehen. Von dort aus können Sie die Registerkarten „Untersuchungsdiagramm“, „Benachrichtigungen“, „Geräte“, „Beweis“, „Entitäten“ und „Protokoll“ aufrufen.</p>
+<ul>
+<li><p>
+              <strong>Warnungen</strong> – Die Warnungen, die die Untersuchung gestartet haben.</p>
+</li>
+<li><p>
+              <strong>Geräte</strong> – Die Geräte, auf denen die Bedrohung angezeigt wurde.</p>
+</li>
+<li><p>
+              <strong>Beweismittel</strong> – Die Entitäten, die während einer Untersuchung als bösartig eingestuft wurden.</p>
+</li>
+<li><p>
+              <strong>Entitäten</strong> – Details zu jeder analysierten Entität, einschließlich einer Bestimmung für jeden Entitätstyp (Bösartig, verdächtig oder keine Bedrohungen gefunden).</p>
+</li>
+<li><p>
+              <strong>Protokoll</strong> – Die chronologische, detaillierte Ansicht aller Untersuchungsmaßnahmen, die im Zusammenhang mit dem Alarm ausgeführt wurden.</p>
+</li>
+<li><p>
+              <strong>Ausstehende Aktionen</strong> – Wenn aktionen vorhanden sind, die aufgrund der Untersuchung auf die Genehmigung warten, wird die Registerkarte "Ausstehende Aktionen" angezeigt. Auf der Registerkarte „Ausstehende Aktionen“ können Sie die einzelnen Aktionen genehmigen oder ablehnen.</p>
+</li>
+</ul>
+<h3 id="how-an-automated-investigation-expands-its-scope">Erweitern des Umfangs einer automatisierten Untersuchung</h3>
+<p>Während einer Untersuchung werden alle anderen vom Gerät generierten Warnungen einer laufenden automatisierten Untersuchung hinzugefügt, bis diese Untersuchung abgeschlossen ist. Wenn auf anderen Geräten dieselbe Bedrohung erkannt wird, werden diese Geräte ebenfalls der Untersuchung hinzugefügt.</p>
+<p>Wenn eine verdächtige Entität auf einem anderen Gerät gefunden wird, erweitert der automatisierte Untersuchungsprozess seinen Umfang, um dieses Gerät einzuschließen. Außerdem wird ein allgemeines Sicherheitsplaybook auf dem Gerät gestartet. Wenn während dieses Erweiterungsprozesses von derselben Entität 10 oder mehr Geräte gefunden werden, ist für diese Erweiterungsaktion eine Genehmigung erforderlich, und sie wird auf der Registerkarte „Ausstehende Aktionen“ angezeigt.</p>
+<h3 id="how-threats-are-remediated">Behebung von Bedrohungen</h3>
+<p>Wenn Warnungen ausgelöst werden und eine automatisierte Untersuchung ausgeführt wird, wird für jedes untersuchte Beweiselement eine Bewertung generiert. Die möglichen Bewertungen sind „Bösartig“, „Verdächtig“ und „Keine Bedrohungen gefunden“.</p>
+<p>Wenn die Bewertungen festgelegt wurden, können durch automatisierte Untersuchungen eine oder mehrere Korrekturmaßnahmen ausgeführt werden. Beispiele für Korrekturmaßnahmen sind das Senden einer Datei in die Quarantäne, das Beenden eines Diensts, das Entfernen einer geplanten Aufgabe usw. (Siehe Korrekturmaßnahmen.)</p>
+<p>Abhängig vom Grad der Automatisierung für Ihre Organisation und anderen Sicherheitseinstellungen können Korrekturmaßnahmen automatisch oder nur nach Genehmigung durch das Sicherheitsteam ausgeführt werden. Zu den anderen Sicherheitseinstellungen, die sich auf die automatische Korrektur auswirken können, zählt u. a. der Schutz vor möglicherweise unerwünschten Anwendungen (Potentially Unwanted Applications, PUA).</p>
+<p>Alle Korrekturmaßnahmen, ob ausstehend oder abgeschlossen, können im Info-Center (<a href="https://security.microsoft.com?azure-portal=true" data-linktype="external">https://security.microsoft.com</a>) angezeigt werden. Falls erforderlich, kann Ihr Sicherheitsteam eine Korrekturmaßnahme rückgängig machen.</p>
+<h2 id="automation-levels-in-automated-investigation-and-remediation-capabilities">Automatisierungsgrade bei der automatisierten Untersuchung und Korrektur</h2>
+<p>Die Funktionen für die automatisierte Untersuchung und Korrektur (AIR) in Microsoft Defender für Endpunkt können auf einen von mehreren Automatisierungsgraden festgelegt werden. Der Automatisierungsgrad wirkt sich darauf aus, ob Korrekturmaßnahmen nach AIR-Untersuchungen automatisch oder nur nach Genehmigung durchgeführt werden.</p>
+<ul>
+<li><p>Bei der vollständigen Automatisierung (empfohlen) werden für Artefakte, die als bösartig bewertet werden, automatisch Korrekturmaßnahmen durchgeführt.</p>
+</li>
+<li><p>Bei der teilweisen Automatisierung werden einige Aktionen automatisch ausgeführt, andere Korrekturmaßnahmen benötigen zuerst eine Genehmigung. (Weitere Informationen finden Sie in der Tabelle zu Automatisierungsgraden.)</p>
+</li>
+<li><p>Alle Korrekturmaßnahmen, ob ausstehend oder abgeschlossen, können im Info-Center angezeigt werden.</p>
+</li>
+</ul>
+<h3 id="levels-of-automation">Automatisierungsgrade</h3>
+<p>
+              <strong>Vollständig – Automatisches Beheben von Bedrohungen (auch als vollständige Automatisierung bezeichnet)</strong></p>
+<p>Bei dieser auch als vollständige Automatisierung bezeichneten Automatisierungsebene werden Wartungsaktionen automatisch ausgeführt. Alle ausgeführten Wiederherstellungsaktionen können im Info-Center auf der Registerkarte „Verlauf“ angezeigt werden. Bei Bedarf kann eine Korrekturaktion rückgängig gemacht werden.</p>
+<p>
+              <strong>Semi – Genehmigung für alle Korrekturen erforderlich (auch als Semiautomatisierung bezeichnet)</strong></p>
+<p>Diese Automatisierungsebene wird auch als Teilautomatisierung bezeichnet. Dabei ist für jede Wartungsaktion eine Genehmigung erforderlich. Die ausstehenden Aktionen können im Info-Center auf der Registerkarte „Ausstehend“ angezeigt und genehmigt werden.</p>
+<p>
+              <strong>Teilweise: Genehmigung für Wartung in Kernordnern erforderlich (auch eine Art von Halbautomatisierung)</strong></p>
+<p>Bei dieser Ebene mit Teilautomatisierung ist eine Genehmigung für alle Wartungsaktionen an Dateien oder ausführbare Dateien in Kernordnern erforderlich. Zu den Kernordnern gehören Betriebssystemverzeichnisse wie z. B. Windows (\windows*).</p>
+<p>Für Dateien oder ausführbare Dateien außerhalb dieser Kernordner können Wartungsaktionen aber automatisch ausgeführt werden.</p>
+<p>Ausstehende Aktionen für Dateien oder ausführbare Dateien in Kernordnern können im Info-Center auf der Registerkarte „Ausstehend“ angezeigt und genehmigt werden.</p>
+<p>Aktionen, die für Dateien oder ausführbare Dateien in anderen Ordnern ausgeführt wurden, können im Info-Center auf der Registerkarte „Verlauf“ überprüft werden.</p>
+<p>
+              <strong>Teilweise: Genehmigung für Wartung in nicht temporären Ordnern erforderlich auch eine Art von Halbautomatisierung</strong></p>
+<p>Bei dieser Teilautomatisierung ist eine Genehmigung aller Wartungsaktionen für Dateien oder ausführbare Dateien erforderlich, die sich nicht in temporären Ordnern befinden.</p>
+<p>Zu den temporären Ordnern gehören z. B. die folgenden:</p>
+<ul>
+<li><p>\Benutzer*\appdata\local\temp*</p>
+</li>
+<li><p>\Dokumente und Einstellungen*\local settings\temp*</p>
+</li>
+<li><p>\Dokumente und Einstellungen*\local settings\temporary*</p>
+</li>
+<li><p>\windows\temp*</p>
+</li>
+<li><p>\Benutzer*\Downloads*</p>
+</li>
+<li><p>\Programme\</p>
+</li>
+<li><p>\Programme (x86)*</p>
+</li>
+<li><p>\Dokumente und Einstellungen*\Benutzer*</p>
+</li>
+</ul>
+<p>Für Dateien oder ausführbare Dateien in temporären Ordnern können Wartungsaktionen aber automatisch ausgeführt werden.</p>
+<p>Ausstehende Aktionen für Dateien oder ausführbare Dateien außerhalb der temporären Ordner können im Info-Center auf der Registerkarte „Ausstehend“ angezeigt und genehmigt werden.</p>
+<p>Aktionen, die für Dateien oder ausführbare Dateien in temporären Ordnern ausgeführt wurden, können im Info-Center auf der Registerkarte „Verlauf“ überprüft werden.</p>
+<p>
+              <strong>Keine automatisierte Antwort (auch ohne Automatisierung bezeichnet)</strong></p>
+<p>Ohne Automatisierung wird auf den Geräten Ihrer Organisation keine automatisierte Untersuchung durchgeführt. Entsprechend werden auch keine Wartungsaktionen als Ergebnis einer automatisierten Untersuchung durchgeführt oder als ausstehend gekennzeichnet. Andere Schutzfunktionen gegen Bedrohungen, z. B. der Schutz vor potenziell unerwünschten Anwendungen, können jedoch aktiv sein. Dies hängt von der Konfiguration der Schutzfunktionen wie Antivirensoftware oder Funktionen der nächsten Generation ab.</p>
+<p>Die Verwendung der Option ohne Automatisierung ist nicht empfehlenswert, da sich dadurch der Sicherheitsstatus der Geräte Ihrer Organisation verschlechtert. Es empfiehlt sich, die Automatisierungsebene auf vollständige Automatisierung (oder zumindest eine Teilautomatisierung) festzulegen.</p>
+<h3 id="important-points-about-automation-levels">Wichtige Punkte zu Automatisierungsgraden</h3>
+<p>Die vollständige Automatisierung hat sich als zuverlässig, effizient und sicher erwiesen und wird für alle Kunden empfohlen. Durch die vollständige Automatisierung werden Ihre kritischen Sicherheitsressourcen freigegeben, sodass sie sich mehr auf strategische Initiativen konzentrieren können.  Wenn Ihr Sicherheitsteam Gerätegruppen mit einer Automatisierungsstufe definiert hat, werden diese Einstellungen nicht durch die neuen Standardeinstellungen geändert, die eingeführt werden.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

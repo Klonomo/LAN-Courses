@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_05_05_03" title="Grundlegendes zu Microsoft Defender for App Service">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Grundlegendes zu Microsoft Defender for App Service</div>
+<div class="section-content">
+<p>Azure App Service ist eine vollständig verwaltete Plattform zum Erstellen und Hosten Ihrer Web-Apps und APIs, ohne sich Gedanken darüber machen zu müssen, die Infrastruktur zu verwalten. Sie bietet Verwaltung, Überwachung sowie betriebliche Erkenntnisse und erfüllt die Anforderungen auf Unternehmensniveau hinsichtlich Leistung, Sicherheit und Konformität. Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/azure/app-service/overview?azure-portal=true" data-linktype="absolute-path">Azure App Service</a>.</p>
+<p>Microsoft Defender für App Service verwendet den Umfang der Cloud, um Angriffe auf Anwendungen zu identifizieren, die über App Service ausgeführt werden. Angreifer testen Webanwendungen, um Schwachstellen zu suchen und auszunutzen. Bevor Anforderungen für in Azure ausgeführte Anwendungen an bestimmte Umgebungen weitergeleitet werden, durchlaufen sie mehrere Gateways, wo sie jeweils überprüft und protokolliert werden. Diese Daten werden dann verwendet, um Exploits und Angreifer zu identifizieren und neue Muster zu erlernen, die später verwendet werden.</p>
+<p>Mit der Sichtbarkeit, die Azure als Cloudanbieter hat, analysiert Defender für Cloud interne Protokolle des App-Diensts, um die Angriffsmethode für mehrere Ziele zu identifizieren. Die Methodik umfasst z. B. weit verbreitete Scans und verteilte Angriffe. Dieser Angriffstyp stammt in der Regel aus einer kleinen Teilmenge von IPs und zeigt Muster der Durchforstung auf ähnliche Endpunkte auf mehreren Hosts an. Die Angriffe suchen nach einer anfälligen Seite oder einem Plug-In und können nicht aus der Sicht eines einzelnen Hosts identifiziert werden.</p>
+<h2 id="what-does-microsoft-defender-for-app-service-protect">Was schützt Microsoft Defender für App Service?</h2>
+<p>Mit aktivierter App Service-Planung bewertet Defender für Cloud die ressourcen, die von Ihrem App Service-Plan abgedeckt werden, und generiert Sicherheitsempfehlungen basierend auf seinen Ergebnissen. Defender für Cloud schützt die VM-Instanz, in der Ihr App Service ausgeführt wird, und die Verwaltungsschnittstelle. Außerdem werden Anforderungen und Antworten überwacht, die an und von Ihren Apps gesendet werden, die in Azure App Service ausgeführt werden.</p>
+<p>Wenn Sie einen Windows-basierten App Service-Plan ausführen, hat Defender für Cloud auch Zugriff auf die zugrunde liegenden Sandboxes und VMs. Zusammen mit den oben genannten Protokolldaten kann die Infrastruktur die Geschichte erzählen, von einem neuen Angriff, der in der Wildbahn zirkuliert, bis hin zu Kompromittierungen auf Kundencomputern. Selbst wenn Defender für Cloud bereitgestellt wird, nachdem eine Web-App ausgenutzt wurde, kann es möglicherweise laufende Angriffe erkennen.</p>
+<h2 id="protect-your-azure-app-service-web-apps-and-apis">Schützen Sie Ihre Azure App Service-Web-Apps und -APIs</h2>
+<p>So schützen Sie Ihren Azure App Service-Plan mit Microsoft Defender für App Service:</p>
+<ul>
+<li><p>Stellen Sie sicher, dass Sie über einen unterstützten App Service-Plan verfügen, der dedizierten Computern zugeordnet ist. Unterstützte Pläne werden <a href="https://learn.microsoft.com/de-de/azure/app-service/overview-hosting-plans?azure-portal=true" data-linktype="absolute-path">hier</a> aufgelistet.</p>
+</li>
+<li><p>Aktivieren Sie Defender für Cloud für Ihr Abonnement (Sie können optional nur den Defender für App Service-Plan aktivieren).</p>
+</li>
+</ul>
+<p>Defender für Cloud ist nativ in App Service integriert, wodurch Bereitstellungs- und Onboardingvorgänge entfallen – die Integration ist transparent.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

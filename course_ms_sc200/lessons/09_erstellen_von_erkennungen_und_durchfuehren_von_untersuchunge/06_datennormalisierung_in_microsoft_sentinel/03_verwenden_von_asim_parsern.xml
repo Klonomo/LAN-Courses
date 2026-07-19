@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_09_06_03" title="Verwenden von ASIM-Parsern">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwenden von ASIM-Parsern</div>
+<div class="section-content">
+<p>In Microsoft Sentinel erfolgt die Analyse und Normalisierung zur Abfragezeit. Parser werden als benutzerdefinierte KQL-Funktionen erstellt, die Daten in vorhandenen Tabellen wie CommonSecurityLog, benutzerdefinierte Protokolltabellen oder Syslog in das normalisierte Schema transformieren.</p>
+<p>Benutzer verwenden Advanced Security Information Model (ASIM)-Parser anstelle von Tabellennamen in ihren Abfragen, um Daten in einem normalisierten Format anzuzeigen und alle für das Schema relevanten Daten in Ihre Abfrage einzuschließen.</p>
+<h2 id="built-in-asim-parsers-and-workspace-deployed-parsers">Integrierte ASIM-Parser und im Arbeitsbereich bereitgestellte Parser</h2>
+<p>Viele ASIM-Parser sind in jedem Microsoft Sentinel-Arbeitsbereich integriert und standardmäßig verfügbar. ASIM unterstützt außerdem die Bereitstellung von Parsern für bestimmte Arbeitsbereiche aus GitHub mithilfe einer ARM-Vorlage oder manuell. Sowohl out-of-the-box- als auch vom Arbeitsbereich bereitgestellte Parser sind funktional gleichwertig, weisen jedoch geringfügig unterschiedliche Benennungskonventionen auf, sodass beide Parsersätze im selben Microsoft Sentinel Arbeitsbereich koexistieren können.</p>
+<p>Jede Methode hat Vorteile gegenüber der anderen:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Vergleichen</th>
+<th style="text-align: left;">Integriert</th>
+<th style="text-align: left;">Im Arbeitsbereich bereitgestellt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Vorteile</td>
+<td style="text-align: left;">In jeder Microsoft Sentinel Instanz vorhanden. Kann mit anderen integrierten Inhalten verwendet werden.</td>
+<td style="text-align: left;">Neue Parser werden häufig zuerst im Arbeitsbereich bereitgestellt.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Benachteiligungen</td>
+<td style="text-align: left;">Kann von Benutzern nicht direkt geändert werden. Weniger Parser verfügbar.</td>
+<td style="text-align: left;">Nicht von integrierten Inhalten verwendet.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Wann verwenden</td>
+<td style="text-align: left;">Verwendung in den meisten Fällen, in denen Sie ASIM-Parser benötigen.</td>
+<td style="text-align: left;">Verwendung beim Bereitstellen neuer Parser oder für Parser, die noch nicht sofort verfügbar sind.</td>
+</tr>
+</tbody>
+</table>
+<p>Es wird empfohlen, integrierte Parser für Schemas zu verwenden, für die integrierte Parser verfügbar sind.</p>
+<h2 id="parser-hierarchy">Parserhierarchie</h2>
+<p>ASIM umfasst zwei Parser-Ebenen: vereinheitlichender Parser und quellspezifische Parser. Der Benutzer verwendet in der Regel den vereinheitlichenden Parser für das entsprechende Schema, um sicherzustellen, dass alle für das Schema relevanten Daten abgefragt werden. Der vereinheitlichende Parser ruft wiederum quellspezifische Parser auf, um die tatsächliche Analyse und Normalisierung durchzuführen, die für jede Quelle spezifisch ist.</p>
+<p>Der einheitliche Parsername ist <strong>_Im_Schema</strong> für integrierte Parser und <strong>imSchema</strong> für Parser, die im Arbeitsbereich bereitgestellt wurden. Wo <strong>Schema</strong> steht für das spezifische Schema, das bedient wird. Quellenspezifische Parser können auch unabhängig voneinander verwendet werden. Verwenden Sie beispielsweise in einer Infoblox-spezifischen Arbeitsmappe den <strong>quellspezifischen Parser vimDnsInfobloxNIOS</strong> .</p>
+<h2 id="unifying-parsers">Vereinheitlichen von Parsern</h2>
+<p>Wenn Sie ASIM in Ihren Abfragen verwenden, verwenden Sie vereinheitlichende Parser, um alle Quellen zu kombinieren, die mit demselben Schema normalisiert sind, und abfragen Sie sie mithilfe normalisierter Felder.</p>
+<p>Beispielsweise verwendet die folgende Abfrage den integrierten vereinheitlichenden DNS-Parser, um DNS-Ereignisse mit den normalisierten Feldern ResponseCodeName, SrcIpAddr und TimeGenerated abzufragen.</p>
+<pre><code class="lang-KQL">_Im_Dns(starttime=ago(1d), responsecodename='NXDOMAIN')
+| summarize count() by SrcIpAddr, bin(TimeGenerated,15m)
+</code></pre>
+<p>Im Beispiel werden Filterparameter verwendet, wodurch die ASIM-Leistung verbessert wird. Dasselbe Beispiel ohne Filterparameter würde wie folgt aussehen:</p>
+<pre><code class="lang-KQL">_Im_Dns
+| where TimeGenerated &gt; ago(1d)
+| where ResponseCodeName =~ "NXDOMAIN"
+| summarize count() by SrcIpAddr, bin(TimeGenerated,15m)
+</code></pre>
+<p>In der folgenden Tabelle sind schlüsselvereinheitlichende Parser aufgeführt. Die vollständige aktuelle Liste finden Sie <a href="https://learn.microsoft.com/de-de/azure/sentinel/normalization-parsers-overview" data-linktype="absolute-path">unter ASIM Parsers overview</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Schema</th>
+<th style="text-align: left;">Integrierter Vereinheitlichender Parser</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Authentifizierung</td>
+<td style="text-align: left;"><code>_Im_Authentication</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Überwachungsereignis</td>
+<td style="text-align: left;"><code>_Im_AuditEvent</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">DHCP-Ereignis</td>
+<td style="text-align: left;"><code>_Im_Dhcp</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Domain Name System (DNS)</td>
+<td style="text-align: left;"><code>_Im_Dns</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Dateiereignis</td>
+<td style="text-align: left;"><code>_Im_FileEvent</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Netzwerksitzung</td>
+<td style="text-align: left;"><code>_Im_NetworkSession</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Prozessereignis</td>
+<td style="text-align: left;"><code>_Im_ProcessEvent</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Registrierungsereignis</td>
+<td style="text-align: left;"><code>_Im_RegistryEvent</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Benutzerverwaltung</td>
+<td style="text-align: left;"><code>_Im_UserManagement</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Websitzung</td>
+<td style="text-align: left;"><code>_Im_WebSession</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="optimizing-parsing-using-parameters">Optimieren der Analyse mithilfe von Parametern</h2>
+<p>Die Verwendung von Parsern wirkt sich möglicherweise auf die Abfrageleistung aus, hauptsächlich aus dem Filtern der Ergebnisse nach der Analyse. Aus diesem Grund verfügen viele Parser über optionale Filterparameter, mit denen Sie vor dem Analysieren und Verbessern der Abfrageleistung filtern können. Mit Abfrageoptimierung und Vorfilterung bieten ASIM-Parser häufig eine bessere Leistung im Vergleich zur nicht verwendeten Normalisierung.</p>
+<p>Verwenden Sie beim Aufrufen des Parsers immer verfügbare Filterparameter, indem Sie einen oder mehrere benannte Parameter hinzufügen, um eine optimale Leistung der ASIM-Parser sicherzustellen.</p>
+<p>Jedes Schema verfügt über einen Standardsatz von Filterparametern, die in der entsprechenden Schemadokumentation dokumentiert sind. Filterparameter sind vollständig optional. Die folgenden Schemas unterstützen Filterparameter:</p>
+<ul>
+<li>Authentifizierung</li>
+<li>Domain Name System (DNS)</li>
+<li>Netzwerksitzung</li>
+<li>Websitzung</li>
+</ul>
+<p>Jedes Schema, das Filterparameter unterstützt, unterstützt mindestens die Startzeit- und Endzeit-Parameter und deren Verwendung ist häufig entscheidend für die Leistungsoptimierung.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

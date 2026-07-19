@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_01_04_09" title="Erkunden des Identitätsrisikomanagement-Agents">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Erkunden des Identitätsrisikomanagement-Agents</div>
+<div class="section-content">
+<p>Der Identitätsrisikomanagement-Agent in Microsoft Entra ID Protection bietet proaktive Risikomanagementfunktionen, indem das Benutzerverhalten analysiert wird. Der Agent schlägt dann Aktionen vor, um potenzielle Identitätsrisiken zu mindern. Sie können die Einstellungen so konfigurieren, dass sie den Anforderungen Ihrer Organisation entsprechen. Mithilfe eines großen Sprachmodells hilft der Agent Sicherheitsadministratoren dabei, riskante Aktivitäten zu überprüfen und darauf zu reagieren, bevor sie zu Sicherheitsvorfällen führen.</p>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<ul>
+<li>Sie müssen mindestens über die Microsoft Entra ID P2-Lizenz verfügen.</li>
+<li>Sie müssen über verfügbare SCU (Security Compute Units) verfügen.</li>
+<li>Sie müssen über die entsprechende Microsoft Entra-Rolle verfügen.
+<ul>
+<li>
+              <strong>Der Sicherheitsadministrator</strong> – erforderlich, um den Agenten zum ersten Mal zu aktivieren, den Agenten anzuzeigen und Maßnahmen basierend auf den Vorschlägen zu ergreifen.</li>
+<li>
+              <strong>Security-Reader</strong> und <strong>Global-Reader</strong> – Der Agent und alle Vorschläge können angezeigt werden (keine Aktionen ausführen kann).</li>
+</ul>
+</li>
+</ul>
+<h2 id="how-the-agent-works">Funktionsweise des Agents</h2>
+<p>Der Agent sucht nach neuen riskanten Identitäten, die zuvor nicht identifiziert wurden. Wenn neue riskante Identitäten gefunden werden, werden die folgenden Schritte ausgeführt (keine SCUs verbraucht):</p>
+<ol>
+<li>Der Agent sucht nach neuen riskanten Benutzern in Ihrem Mandanten, die derzeit einen Risikostatus "Gefährdet" haben.</li>
+<li>Der Agent identifiziert riskante Benutzer, die sich innerhalb Ihrer definierten Bereichseinstellungen befinden.</li>
+</ol>
+<p>Wenn der Agent neue Vorschläge findet, werden die folgenden Schritte ausgeführt (SCUs verbraucht):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Schritt</th>
+<th style="text-align: left;">Agentaktivität</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Untersuchen des riskanten Benutzers</td>
+<td style="text-align: left;">Der Agent überprüft die riskanten Anmeldungen des Benutzers und Risikoerkennungen, um zu analysieren, was riskant für diesen Benutzer ist.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Generieren von Ergebnissen und einer Risikozusammenfassung</td>
+<td style="text-align: left;">Der Agent generiert Erkenntnisse basierend auf der Untersuchung, die eine gründliche Risikozusammenfassung zur Erläuterung des Vorschlags und die Definition der wichtigsten Risikofaktoren umfasst.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Eine empfohlene Korrekturmaßnahme generieren</td>
+<td style="text-align: left;">Der Agent schlägt eine Abhilfemaßnahme vor, wobei die während der Untersuchung gesammelten Informationen verwendet werden.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Beantworten von Fragen über Chat</td>
+<td style="text-align: left;">IT-Administratoren stellen die Agent-Fragen im Zusammenhang mit den riskanten Benutzern und der Risikozusammenfassung.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Speichern von benutzerdefinierten Anweisungen im Agentspeicher</td>
+<td style="text-align: left;">Kunden können dem Agent benutzerdefinierte Anweisungen über agent-Chats geben, die der Agent im Speicher speichert und für zukünftige Läufe gilt. Derzeit kann der Agentspeicher bevorzugte Wartungsaktionen speichern.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="using-the-agent">Verwendung des Agenten</h2>
+<ol>
+<li>Melden Sie sich mindestens als Sicherheitsadministrator beim <strong>Microsoft Entra Admin Center</strong> an.</li>
+<li>Navigieren Sie zu <strong>ID-Schutz</strong>&gt;<strong>Riskante Benutzer</strong>.</li>
+<li>Suchen Sie oben auf der Seite nach dem Banner.</li>
+<li>
+              <strong>Auswählen des Start-Agents</strong></li>
+</ol>
+<h3 id="configuring-agent-settings">Konfigurieren von Agenteinstellungen</h3>
+<p>Wählen Sie auf der Seite <strong>Risky Users</strong> die <strong>Ansicht "Agent"</strong> aus. Klicken Sie auf die Auslassungspunkte in der oberen rechten Ecke und wählen Sie dann Einstellungen.</p>
+<ul>
+<li>
+              <strong>Steuerelemente</strong> – Stellen Sie die Rollen und Berechtigungen bereit, die zum Ausführen des Agents erforderlich sind.</li>
+<li>
+              <strong>Trigger –</strong> Festlegen, wann und wie der Agent ausgeführt wird: <ul>
+<li>Kontinuierliche Überwachung – sucht alle 5 Minuten nach neuen riskanten Benutzern</li>
+<li>Täglicher Trigger - Agent wird einmal pro Tag ausgeführt</li>
+<li>Manuelle Ausführung – Agent wird nur ausgeführt, wenn manuell gestartet wird</li>
+</ul>
+</li>
+<li>
+              <strong>Bereich</strong> – Standardmäßig untersucht der Agent die letzten 100 riskanten Benutzer innerhalb der letzten 90 Tage. Sie können den Bereich für den Scan des Agents steuern, indem Sie mehrere Optionen einstellen.
+<ul>
+<li>Wählen Sie die Option "Benutzer und Gruppen" aus, nach den Benutzern und Gruppen zu suchen und auszuwählen, die der Agent überprüfen soll.</li>
+<li>Legen Sie fest, dass maximal 1-100 riskante Benutzer gescannt werden sollen.</li>
+<li>Wählen Sie aus, welche Risikostufen in die Überprüfung einbezogen werden sollen. Alle Risikostufen sind standardmäßig ausgewählt.</li>
+<li>Festlegen eines bestimmten Zeitrahmens für den Bereich: <ul>
+<li>Letzte 7 Tage</li>
+<li>Letzte 14 Tage</li>
+<li>Letzte 30 Tage</li>
+<li>Benutzerdefinierter Zeitrahmen bis zu 90 Tage</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+              <strong>Kommunikation</strong> – Geben Sie eine Gruppe von Benutzern ein, um Benachrichtigungen über die Ausführung des Agents zu erhalten.</li>
+<li>
+              <strong>Speicher</strong> – Liste der vom Benutzer bestätigten sicheren Elemente, die fälschlicherweise als positiv erkannt wurden.</li>
+</ul>
+<h2 id="explore-the-agent-findings-report">Untersuchung des Agentenberichts</h2>
+<h3 id="agent-summary">Zusammenfassung des Agenten</h3>
+<p>Oben in der Ansicht "Agent" wird eine Agentzusammenfassung mit den letzten Agentaktivitäten angezeigt. Diese Kachel bietet schnellen Zugriff auf das Feature "Chat mit Agent" und eine Schaltfläche "Agent verwalten", mit der Sie eine einmalige Ausführung oder offene Agent-Einstellungen auslösen können.</p>
+<h3 id="agent-suggestions">Vorschläge für Agents</h3>
+<p>Agentvorschläge werden unterhalb der Agentzusammenfassung angezeigt. Zeigen Sie auf einen Vorschlag, um betroffene Benutzer in der Tabelle hervorzuheben. Wenn Sie einen Vorschlag auswählen, wird die Tabelle so gefiltert, dass nur die Benutzer zur Überprüfung angezeigt werden. Jeder Vorschlag enthält eine Massenaktionsschaltfläche, sodass Sie die Aktion mit einer Schaltfläche anwenden können.</p>
+<p>Derzeit stehen die folgenden Abhilfemaßnahmen in Agentempfehlungen zur Verfügung:</p>
+<ul>
+<li>Risiko abweisen</li>
+<li>Kennwort zurücksetzen</li>
+</ul>
+<h3 id="risky-users-table-with-agent-suggestions">Tabelle der riskanten Benutzer mit Vorschlägen für Agents</h3>
+<p>In der unteren Hälfte des Berichts werden alle riskanten Benutzer aufgelistet. Wählen Sie einen Benutzer aus, um Agentergebnisse, Risikofaktoren und für diesen Benutzer spezifische Vorschläge anzuzeigen. In der Spalte "Agentenempfehlungen" werden auch empfohlene Behebungsmaßnahmen direkt in der Tabelle angezeigt. Wählen Sie die Schaltfläche aus, um eine Abhilfe für einzelne Benutzer anzuwenden.</p>
+<h3 id="risky-user-details">Riskante Benutzerdetails</h3>
+<p>Die Seite "Risky user details" bietet eine neue Agent-Ansicht, die Agent-Ergebnisse speziell für einen riskanten Benutzer darstellt. Diese Ansicht enthält die folgenden Informationen:</p>
+<ul>
+<li>
+              <strong>Grundlegende Benutzerinformationen</strong>: Benutzername, aktuelle Risikostufe und Benutzerprinzipalname (USER Principal Name, UPN)</li>
+<li>
+              <strong>Agent-Ergebnisse</strong>: Der Agent gibt basierend auf seiner Untersuchung ein Urteil von "kompromittiert" oder "nicht kompromittiert" ab.</li>
+<li>
+              <strong>Risikozusammenfassung</strong>: Eine detaillierte Erläuterung der Ergebnisse des Agenten basierend auf der Analyse der Anmeldungen und Verhaltensweisen des Benutzers</li>
+<li>
+              <strong>Risikofaktoren</strong>: Wichtige Risikoindikatoren, die für eine einfache Überprüfung zusammengefasst sind</li>
+<li>
+              <strong>Vorgeschlagene Wartungsaktion</strong>: Eine Interaktive Schaltfläche, mit der Sie schnell mit der Behebung des Risikos beginnen können.</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

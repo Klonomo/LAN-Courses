@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_03_04_02" title="Grundlegendes zu eDiscovery- und Inhaltssuchfunktionen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Grundlegendes zu eDiscovery- und Inhaltssuchfunktionen</div>
+<div class="section-content">
+<p>Die Suche nach Inhalten ist eine der häufigsten Aufgaben, die Informationssicherheitsadministratoren in Microsoft Purview ausführen. Unabhängig davon, ob Sie ein Datenleck untersuchen, auf eine rechtliche Anfrage reagieren oder Benutzeraktivitäten überprüfen, ist es wichtig, relevante Daten schnell zu finden und zu exportieren. eDiscovery bietet eine strukturierte, sichere Möglichkeit, über Microsoft 365-Dienste hinweg zu suchen und Sicherheits- und Compliance-Anstrengungen zu unterstützen.</p>
+<h3 id="what-is-ediscovery">Was ist eDiscovery?</h3>
+<p>eDiscovery ist ein Feature im Microsoft Purview-Portal, mit dem autorisierte Benutzer Fälle erstellen, nach Inhalten suchen, Haltebereiche zum Aufbewahren von Daten speichern und Ergebnisse exportieren können. Es wurde entwickelt, um interne Untersuchungen, rechtliche Verpflichtungen, behördliche Prüfungen und Reaktion auf Vorfälle zu unterstützen.</p>
+<p>Obwohl die Schnittstelle einfach als "eDiscovery" bezeichnet wird, hängen die verfügbaren Features von der Lizenzierung der Organisation ab. Wenn erweiterte Tools wie Überprüfungssätze oder Verwaltung von Verwahrern nicht aktiviert sind, ist die verfügbare Funktionalität in der Regel Teil des Standardfeaturesatzes, der in Enterprise-Pläne enthalten ist.</p>
+<h2 id="licensing-and-access">Lizenzierung und Zugriff</h2>
+<p>Um eDiscovery zu verwenden, müssen Benutzern die entsprechende Rolle in Microsoft Purview zugewiesen werden, z. B. <strong>eDiscovery-Manager</strong> oder <strong>eDiscovery-Administrator</strong>. Diese Rollen ermöglichen den Zugriff auf den <strong>eDiscovery-Fallbereich&gt;</strong>, in dem Fälle erstellt und verwaltet werden.</p>
+<p>Wichtige Lizenzierungshinweise:</p>
+<ul>
+<li>Kernfunktionen von eDiscovery sind in Microsoft 365 E3- und E5-Plänen enthalten.</li>
+<li>Erweiterte Features erfordern möglicherweise eine separate Lizenzierung.</li>
+</ul>
+<p>Bevor Sie eine Untersuchung oder Suche beginnen, ist es wichtig, sowohl die erforderlichen Berechtigungen als auch die richtige Lizenz zu bestätigen.</p>
+<h2 id="common-scenarios-for-using-ediscovery">Häufige Szenarien für die Verwendung von eDiscovery</h2>
+<p>eDiscovery wird in der Regel verwendet, wenn Sich Inhalte über Microsoft 365-Workloads hinweg befinden müssen, um Überprüfungen, Exporte oder Erhaltungen zu ermöglichen. Zu den häufigen Szenarios gehören:</p>
+<ul>
+<li>
+              <strong>Interne Untersuchungen</strong>: Durchsuchen von Nachrichten, Dokumenten und Dateien im Zusammenhang mit einem Personal- oder Sicherheitsvorfall.</li>
+<li>
+              <strong>Behördliche oder rechtliche Anforderungen</strong>: Suchen von Inhalten, die zur Einhaltung von Rechtsstreitigkeiten, Untersuchungen oder behördlichen Überprüfungen erforderlich sind.</li>
+<li>
+              <strong>Anträge betroffener Personen</strong>: Identifizieren und Sammeln personenbezogener Daten im Rahmen eines Antrages auf Betroffenerechte.</li>
+<li>
+              <strong>Reaktion auf Vorfälle</strong>: Überprüfen von Benutzeraktivitäten oder -kommunikationen nach einem potenziellen Verstoß oder Missbrauch von Daten.</li>
+</ul>
+<p>Verstehen, wann und warum eDiscovery verwendet werden soll, bildet die Grundlage für die Durchführung effektiver Suchvorgänge und die Unterstützung der Compliance- und Sicherheitsziele Ihrer Organisation.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

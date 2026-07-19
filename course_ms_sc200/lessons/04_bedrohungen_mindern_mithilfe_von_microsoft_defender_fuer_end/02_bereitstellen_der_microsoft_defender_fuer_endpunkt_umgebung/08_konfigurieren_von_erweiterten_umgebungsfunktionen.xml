@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_02_08" title="Konfigurieren von erweiterten Umgebungsfunktionen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Konfigurieren von erweiterten Umgebungsfunktionen</div>
+<div class="section-content">
+<p>Der Bereich „Erweiterte Features“ im Bereich „Allgemeine Einstellungen“ bietet viele Optionen zum Ein- bzw. Ausschalten von Features des Produkts.  Einige dieser Features lernen Sie in späteren Modulen kennen.</p>
+<p>Abhängig von den von Ihnen verwendeten Microsoft-Sicherheitsprodukten stehen möglicherweise einige erweiterte Features zur Verfügung, mit denen Sie Defender für Endpunkt integrieren können.</p>
+<p>Klicken Sie im Navigationsbereich auf „Einstellungen“&nbsp;&gt; „Endpunkte“&nbsp;&gt; „Erweiterte Features“.</p>
+<p>Wählen Sie das erweiterte Feature aus, das Sie konfigurieren möchten, und schalten Sie zwischen „Ein“ und „Aus“ um.</p>
+<p>Wählen Sie Voreinstellungen speichern aus.</p>
+<p>Verwenden Sie die folgenden erweiterten Features, um bei sicherheitsrelevanten Überprüfungen besser vor potenziell schädlichen Dateien geschützt zu werden und bessere Einblicke zu erhalten.</p>
+<h3 id="automated-investigation">Automatisierte Untersuchung</h3>
+<p>Aktivieren Sie diese Funktion, um die Funktionen zur automatisierten Untersuchung und Wartung des Diensts zu nutzen. Weitere Informationen finden Sie unter „Automatisierte Untersuchung“.</p>
+<h3 id="live-response">Live-Antwort</h3>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Die Livereaktion erfordert, dass „Automatisierte Untersuchung“ aktiviert wird, bevor Sie sie im Abschnitt für erweiterte Einstellungen im Portal aktivieren können.</p>
+</div>
+<p>Aktivieren Sie dieses Feature, damit Benutzer mit den entsprechenden Berechtigungen eine Live Response-Sitzung auf Geräten starten können.</p>
+<h3 id="live-response-for-servers">Livereaktion für Server</h3>
+<p>Aktivieren Sie dieses Feature, damit Benutzer*innen mit den entsprechenden Berechtigungen eine Livereaktionssitzung auf Servern starten können.</p>
+<h3 id="live-response-unsigned-script-execution">Live Response: Ausführung nicht signierter Skripts</h3>
+<p>Wenn Sie dieses Feature aktivieren, können Sie nicht signierte Skripts in einer Live Response-Sitzung ausführen.</p>
+<h3 id="always-remediate-pua">Beseitigen Sie immer PUA</h3>
+<p>Bei potenziell unerwünschten Anwendungen (Potentially unwanted applications, PUA) handelt es sich um eine Softwarekategorie, die dazu führen kann, dass Ihr Computer langsam ausgeführt, unerwartete Werbung angezeigt oder im schlimmsten Fall unerwartet oder unerwünscht andere Software installiert wird.</p>
+<p>Aktivieren Sie dieses Feature, sodass potenziell unerwünschte Anwendungen (PUA) auf allen Geräten in Ihrem Mandanten gelöscht werden, auch wenn der PUA-Schutz auf den Geräten nicht konfiguriert ist. Durch die Aktivierung des Features werden Benutzer*innen vor dem versehentlichen Installieren unerwünschter Anwendungen auf ihrem Gerät geschützt. Bei Deaktivierung hängt die Behebung von der Konfiguration des Geräts ab.</p>
+<h3 id="restrict-correlation-to-within-scoped-device-groups">Einschränken der Korrelation auf bereichsbezogene Gerätegruppen</h3>
+<p>Diese Konfiguration kann für Szenarios verwendet werden, in denen lokale SOC-Vorgänge Warnungskorrelationen nur auf Gerätegruppen beschränken möchten, auf die sie zugreifen können. Durch Aktivieren dieser Einstellung wird ein Vorfall, der aus Warnungen für mehrere Gruppen zusammengesetzt ist, nicht mehr als einzelner Vorfall betrachtet. Das lokale SOC-Team kann dann Maßnahmen für den Incident ergreifen, da es Zugriff auf eine der beteiligten Gerätegruppen hat. Globalen SOC-Teams werden jedoch mehrere verschiedene Incidents nach Gerätegruppe anstelle eines einzigen Incidents angezeigt. Es wird nicht empfohlen, diese Einstellung zu aktivieren, es sei denn, dies übertrifft die Vorteile der Incidentkorrelation in der gesamten Organisation.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Das Ändern dieser Einstellung wirkt sich nur auf zukünftige Warnungskorrelationen aus.</p>
+</div>
+<h3 id="enable-edr-in-block-mode">Enable EDR in block mode (EDR im Blockmodus aktivieren)</h3>
+<p>Erkennung und Reaktion am Endpunkt (EDR) im Blockmodus bietet Schutz vor schädlichen Artefakten, auch wenn Microsoft Defender Antivirus im passiven Modus ausgeführt wird. Wenn EDR aktiviert wird, blockt das Feature im Blockiermodus schädliche Artefakte oder Verhaltensweisen, die auf einem Gerät erkannt werden. EDR im Blockmodus arbeitet im Hintergrund, um schädliche Artefakte zu beheben, die nach einem Einbruch erkannt werden.</p>
+<h3 id="autoresolve-remediated-alerts">Automatisches Auflösen behobener Warnungen</h3>
+<p>Bei Mandanten, die unter Windows&nbsp;10 ab Version&nbsp;1809 erstellt wurden, ist die Funktion zur automatisierten Untersuchung und Wartung standardmäßig so konfiguriert, dass Warnungen aufgelöst werden, deren Status der automatisierten Analyse „Keine Bedrohungen gefunden“ oder „Behoben“ lautet. Wenn die Warnungen nicht automatisch aufgelöst werden sollen, müssen Sie das Feature manuell deaktivieren.</p>
+<div class="TIP">
+<p>Tipp</p>
+<p>Für Mandanten, die vor dieser Version erstellt wurden, müssen Sie dieses Feature manuell auf der Seite „Erweiterte Funktionen“ aktivieren.</p>
+</div>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Das Ergebnis der Aktion zum automatischen Auflösen kann Einfluss auf die Berechnung der Risikostufe des Geräts haben, die auf den aktiven Warnungen auf einem Gerät beruht.
+Wenn ein Security Operations-Analyst den Status einer Warnung manuell als „In Bearbeitung“ oder „Aufgelöst“ festlegt, wird er von der Funktion für die automatische Auflösung nicht überschrieben.</p>
+</div>
+<h3 id="allow-or-block-file">Zulassen oder Blockieren von Dateien</h3>
+<p>Die Blockierung ist nur verfügbar, wenn Ihre Organisation diese Anforderungen erfüllt:</p>
+<ul>
+<li>Microsoft Defender Antivirus wird als aktive Antischadsoftware verwendet.</li>
+<li>Die Funktion für den cloudbasierten Schutz ist aktiviert.</li>
+</ul>
+<p>Diese Funktion ermöglicht Ihnen, potenziell schädliche Dateien in Ihrem Netzwerk zu blockieren. Das Sperren einer Datei verhindert, dass sie auf Geräten in Ihrer Organisation gelesen, geschrieben oder ausgeführt wird.</p>
+<p>Nachdem Sie diese Funktion aktiviert haben, können Sie Dateien über die Registerkarte „Indikator hinzufügen“ auf der Profilseite einer Datei blockieren.</p>
+<h3 id="custom-network-indicators">Benutzerdefinierte Netzwerkindikatoren</h3>
+<p>Wenn Sie dieses Feature aktivieren, können Sie Indikatoren für IP-Adressen, Domänen oder URLs erstellen, die bestimmen, ob sie basierend auf Ihrer Liste der benutzerdefinierten Indikatoren zugelassen oder blockiert werden.</p>
+<p>Um dieses Feature verwenden zu können, muss auf den Geräten Windows&nbsp;10 Version&nbsp;1709 oder höher bzw. Windows&nbsp;11 ausgeführt werden. Zudem sollten sie Netzwerkschutz im Blockmodus haben und Version&nbsp;4.18.1906.3 oder höher der Antischadsoftwareplattform aufweisen (siehe KB4052623).</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Der Netzwerkschutz nutzt Reputationsdienste, die Anforderungen an Standorten verarbeiten, die außerhalb des von Ihnen ausgewählten Standorts für Ihre Defender for Endpoint-Daten liegen.</p>
+</div>
+<h3 id="tamper-protection">Manipulationsschutz</h3>
+<p>Bei einigen Arten von Cyberangriffen versuchen Angreifer*innen, Sicherheitsfeatures wie den Antischadsoftwareschutz auf Ihren Computern zu deaktivieren. Böse Akteure möchten Ihre Sicherheitsfunktionen deaktivieren, um leichter Zugriff auf Ihre Daten zu erhalten, Schadsoftware zu installieren oder Ihre Daten, Identität und Geräte anderweitig zu missbrauchen.</p>
+<p>Der Manipulationsschutz sperrt im Wesentlichen Microsoft Defender Antivirus und verhindert, dass Ihre Sicherheitseinstellungen über Apps und Methoden geändert werden.</p>
+<p>Dieses Feature ist verfügbar, wenn Ihr Unternehmen Microsoft Defender Antivirus verwendet und der cloudbasierte Schutz aktiviert ist.</p>
+<p>Lassen Sie den Manipulationsschutz aktiviert, um unerwünschte Änderungen an Ihrer Sicherheitslösung und den wesentlichen Features zu verhindern.</p>
+<h3 id="show-user-details">Anzeigen von Benutzerdetails</h3>
+<p>Aktivieren Sie diese Funktion, damit in Microsoft Entra ID gespeicherte Benutzerdetails angezeigt werden. Zu den Details gehören das Bild, der Name, die Berufsbezeichnung und Informationen zur Abteilung eines Benutzers, insbesondere wenn Benutzerkonten-Entitäten untersucht werden. Informationen zu Benutzerkonten finden Sie in den folgenden Ansichten:</p>
+<ul>
+<li>Dashboard für Sicherheitsvorgänge</li>
+<li>Warnungswarteschlage</li>
+<li>Seite mit Gerätedetails</li>
+</ul>
+<h3 id="skype-for-business-integration">Integration von Skype for Business</h3>
+<p>Durch die Aktivierung der Skype for Business-Integration haben Sie die Möglichkeit, über Skype for Business, E-Mails oder das Telefon mit Benutzern zu kommunizieren. Die Aktivierung kann hilfreich sein, wenn Sie mit den Benutzer*innen kommunizieren müssen und die Risiken minimieren möchten.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Wenn ein Gerät vom Netzwerk isoliert wird, wird ein Popupelement angezeigt, über das Sie die Outlook- und Skype-Kommunikation aktivieren können. Auf diese Weise können Sie mit den Benutzern kommunizieren, während diese vom Netzwerk getrennt sind. Diese Einstellung gilt für die Skype- und Outlook-Kommunikation, wenn sich Geräte im Isolationsmodus befinden.</p>
+</div>
+<h3 id="microsoft-defender-for-identity-integration">Integration von Microsoft Defender for Identity</h3>
+<p>Die Integration mit Microsoft Defender for Identity ermöglicht Ihnen das direkte Pivotieren in ein anderes Microsoft Defender for Identity-Sicherheitsprodukt. Microsoft Defender for Identity erweitert eine Untersuchung mit weiteren Erkenntnissen zu einem verdächtigen kompromittierten Konto und zugehörigen Ressourcen. Durch die Aktivierung dieses Features erweitern Sie die gerätebasierte Untersuchungsfunktion, indem Sie netzwerkübergreifend aus der Sicht einer Identität pivotieren können.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Sie müssen über die entsprechende Lizenz verfügen, um dieses Feature aktivieren zu können.</p>
+</div>
+<h3 id="office-365-threat-intelligence-connection">Office 365 Threat Intelligence-Verbindung</h3>
+<p>Dieses Feature ist nur verfügbar, wenn Sie über ein aktives Office&nbsp;365&nbsp;E5-Abonnement oder das Threat Intelligence-Add-On verfügen.</p>
+<p>Wenn Sie dieses Feature aktivieren, können Sie Daten aus Microsoft Defender für Office&nbsp;365 in Microsoft&nbsp;365 Defender integrieren, um eine umfassende Sicherheitsuntersuchung in Office&nbsp;365-Postfächern und auf Windows-Geräten durchzuführen.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Sie müssen über die entsprechende Lizenz verfügen, um dieses Feature aktivieren zu können.</p>
+</div>
+<p>Damit Sie kontextbezogene Informationen zur Geräteintegration in Office&nbsp;365 Threat Intelligence erhalten, müssen Sie die Microsoft Defender für Endpunkt-Einstellungen auf dem Dashboard „Sicherheit und Compliance“ aktivieren.</p>
+<h3 id="microsoft-threat-experts---targeted-attack-notifications">Microsoft-Bedrohungsexperten: Gezielte Angriffsbenachrichtigungen</h3>
+<p>Sie können die Funktion für die Zusammenarbeit mit Experten bei Bedarf nur dann nutzen, wenn Sie eine Vorschauversion beantragt haben und Ihre Anfrage genehmigt wurde. Wenn Sie diese Funktion konfigurieren, können Sie gezielte Angriffsbenachrichtigungen von Microsoft-Bedrohungsexperten über das Warnungsdashboard des Portals und per E-Mail erhalten.</p>
+<h3 id="microsoft-defender-for-cloud-apps">Microsoft Defender für Cloud-Anwendungen</h3>
+<p>Wenn Sie diese Einstellung aktivieren, werden Defender für Endpunkt-Signale an Microsoft Defender for Cloud Apps weitergeleitet, um einen tieferen Einblick in die Nutzung von Cloudanwendungen zu bieten. Weitergeleitete Daten werden am gleichen Speicherort wie die Daten von Defender for Cloud Apps gespeichert und verarbeitet.</p>
+<h3 id="enable-the-microsoft-defender-for-endpoint-integration-from-the-microsoft-defender-for-identity-portal">Aktivieren der Microsoft Defender für Endpunkt-Integration über das Microsoft Defender for Identity-Portal</h3>
+<p>Für die kontextbezogene Geräteintegration in Microsoft Defender for Identity müssen Sie das Feature auch im Microsoft Defender for Identity-Portal aktivieren.</p>
+<h3 id="web-content-filtering">Webinhaltsfilterung</h3>
+<p>Blockieren Sie den Zugriff auf Websites mit unerwünschten Inhalten, und verfolgen Sie Webaktivitäten in allen Domänen nach. Erstellen Sie eine Richtlinie für die Webinhaltsfilterung, um die zu blockierenden Webinhaltskategorien anzugeben. Stellen Sie sicher, dass sich der Netzwerkschutz beim Bereitstellen der Microsoft Defender for Endpoint-Sicherheitsbaseline im Blockmodus befindet.</p>
+<h3 id="share-endpoint-alerts-with-microsoft-purview-compliance-portal">Freigeben von Endpunktwarnungen mit dem Microsoft Purview-Complianceportal</h3>
+<p>Endpunktsicherheitswarnungen und deren Bearbeitungsstatus werden an das Microsoft Purview-Compliance-Portal weitergeleitet, wodurch Sie die Richtlinien für das Insiderrisikomanagement mit Warnungen verbessern und interne Risiken beheben können, bevor sie Schaden anrichten. Weitergeleitete Daten werden an demselben Ort verarbeitet und gespeichert wie Ihre Office&nbsp;365-Daten.</p>
+<p>Nach der Konfiguration der Indikatoren für Sicherheitsrichtlinienverstöße in den Einstellungen für das Insider-Risikomanagement werden die Warnungen von Defender for Endpoint für die entsprechenden Benutzer im Insider-Risikomanagement freigegeben.</p>
+<h3 id="microsoft-intune-connection">Microsoft Intune-Verbindung</h3>
+<p>Microsoft Defender für Endpunkt kann mit Microsoft Intune integriert werden, um den risikobasierten bedingten Zugriff auf Geräte zu ermöglichen. Wenn Sie dieses Feature aktivieren, können Sie Microsoft Defender für Endpoint-Geräteinformationen über Intune teilen, um die Durchsetzung von Richtlinien zu verbessern.</p>
+<div class="IMPORTANT">
+<p>Wichtig</p>
+<p>Sie müssen die Integration sowohl für Intune als auch für Microsoft Defender für Endpunkt aktivieren, um dieses Feature verwenden zu können.</p>
+</div>
+<p>Dieses Feature ist nur verfügbar, wenn die folgenden Voraussetzungen erfüllt sind:</p>
+<p>Lizenzierter Mandant für Enterprise Mobility + Security&nbsp;E3 und Windows&nbsp;E5 (oder Microsoft&nbsp;365 Enterprise&nbsp;E5)</p>
+<p>Aktive Microsoft Intune-Umgebung mit von Intune verwalteten Windows-Geräten, die in Microsoft Entra eingebunden sind.</p>
+<h3 id="conditional-access-policy">Richtlinie für bedingten Zugriff</h3>
+<p>Wenn Sie die Intune-Integration aktivieren, erstellt Intune automatisch eine klassische Richtlinie für bedingten Zugriff (Conditional Access, CA). Diese klassische CA-Richtlinie ist eine Voraussetzung für das Einrichten von Statusberichten in Intune. Sie sollte nicht gelöscht werden.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Die klassische Zertifizierungsstellenrichtlinie, die von Intune erstellt wird, unterscheidet sich von modernen Richtlinien für den bedingten Zugriff, die zum Konfigurieren von Endpunkten verwendet werden.</p>
+</div>
+<h3 id="device-discovery">Geräteermittlung</h3>
+<p>Dieses Feature hilft Ihnen dabei, nicht verwaltete Geräte zu ermitteln, die mit Ihrem Unternehmensnetzwerk verbunden sind, ohne dass zusätzliche Appliances erforderlich sind oder Änderungen an umständlichen Prozessen vorgenommen werden müssen. Mit integrierten Geräten können Sie nach nicht verwalteten Geräten in Ihrem Netzwerk suchen und Sicherheitsrisiken sowie Risiken bewerten.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Sie können immer Filter anwenden, um nicht verwaltete Geräte aus der Gerätebestandsliste auszuschließen. Zudem haben Sie die Möglichkeit, die Spalte für den Onboardingstatus für API-Abfragen zu verwenden, um nicht verwaltete Geräte herauszufiltern.</p>
+</div>
+<h3 id="preview-features">Previewfunktionen</h3>
+<p>Informieren Sie sich weiter über neue Features im Defender für Endpunkt-Vorschaurelease. Probieren Sie demnächst verfügbare Features aus, indem Sie die Vorschaufunktion aktivieren.</p>
+<p>Sie haben Zugriff auf zukünftig verfügbare Features, zu denen Sie Ihr Feedback übermitteln können. Auf diese Weise können Sie dabei helfen, vor der allgemeinen Verfügbarkeit die Nutzung zu verbessern.</p>
+<h3 id="download-quarantined-files">Herunterladen von unter Quarantäne gestellten Dateien</h3>
+<p>Sichern Sie die unter Quarantäne gestellten Dateien an einem sicheren und kompatiblen Speicherort, sodass sie direkt aus der Quarantäne heruntergeladen werden können. Die Schaltfläche „Datei herunterladen“ ist auf der Dateiseite immer verfügbar. Diese Einstellung ist standardmäßig aktiviert.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

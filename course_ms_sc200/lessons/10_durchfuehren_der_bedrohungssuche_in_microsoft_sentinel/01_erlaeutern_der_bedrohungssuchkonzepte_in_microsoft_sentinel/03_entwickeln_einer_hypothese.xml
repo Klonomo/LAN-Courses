@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_10_01_03" title="Entwickeln einer Hypothese">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Entwickeln einer Hypothese</div>
+<div class="section-content">
+<p>Die Suche beginnt mit einer Hypothese.  Die Idee, was wir jagen werden.  Die korrekte Umsetzung ist entscheidend, da sie bestimmt, worauf wir unseren Fokus richten werden. Was macht eine gute Hypothese?</p>
+<p>Es gibt viele Faktoren, aber hier sind die wichtigsten:</p>
+<p>
+              <strong>Halten Sie es erreichbar</strong>. Führen Sie keine Jagd durch, wo Sie wissen, dass Sie keine Hoffnung haben, Ergebnisse zu finden. Es könnte sein, dass Sie die Daten nicht verfügbar haben oder unzureichende Kenntnisse über die Bedrohung haben, um zu verstehen, wie Sie sie finden können.</p>
+<p>
+              <strong>Halten Sie den Bereich schmal</strong>.  Vermeiden Sie eine breite Hypothese wie "Ich werde nach seltsamen Anmeldungen suchen.". Eine solche Hypothese kann nicht definieren, was die Ergebnisse bedeuten könnten.</p>
+<p>
+              <strong>Halten Sie sie zeitgebunden</strong>.   Suchen Sie nach Anmeldungen ab dem Beginn Ihrer Protokolle?  Suchen Sie nach der letzten Woche? Der letzte Tag? Die zeitliche Begrenzung wird auch in der Dokumentation verwendet.  Sie möchten, dass die Bedrohungssuche ein kontinuierlicher Prozess ist.  Wenn Sie Ihre Jagd nicht zeitgebunden haben, besteht die Möglichkeit, dass Sie nur die gleiche Jagd auf demselben Dataset wiederholen.  Sie können sagen, dass Sie die Suche ab einem gewissen Zeitpunkt über einen bestimmten Zeitraum durchgeführt haben. Wenn Sie diese Information dokumentieren, wissen die Teammitglieder, welcher Zeitraum mit dieser Hypothese durchsucht wurde.</p>
+<p>
+              <strong>Halten Sie es nützlich und effizient</strong>.  Sie möchten auf Bedrohungen abzielen, die möglicherweise nicht über eine ausreichende Abdeckung für Ihre Erkennungen verfügen.You want to target threats that maybe don't have adequate coverage for your detections.  Dies können Dinge sein, die Sie kennen, die Sie zuvor verpasst haben oder die Sie nicht erkannt haben.  Ein gutes SOC-Team hat in der Regel eine gute Vorstellung davon, wo ihre Abdeckung gut ist und wo es schwächer sein kann und verbesserungswürdig ist.  Sie möchten auch sicherstellen, dass es sich auf realistische Bedrohungen bezieht.  Es gibt keinen Sinn bei der Suche nach einer erweiterten Bedrohung, die auf eine Branche ausgerichtet ist, in der Sie sich nicht befinden oder eine Plattform, die Sie nicht verwenden.</p>
+<p>
+              <strong>Halten Sie es im Zusammenhang mit dem Bedrohungsmodell, gegen das Sie sich verteidigen</strong>.  Andernfalls verbringen Sie möglicherweise viel Zeit damit, nach Bedrohungen zu suchen, die Sie nie finden und die keine tatsächliche Bedrohung darstellen.</p>
+<p>Beginnen Sie Ihre Threat Hunting-Reise nicht mit der Jagd nach den fortschrittlichsten Bedrohungen. Beginnen Sie mit den Grundlagen und entwickeln Sie schrittweise die Bedrohungsjagd-Fähigkeiten Ihrer Organisation.  Beginnen Sie mit einer einfachen Hunt-Hypothese.  Eine Beispielhypothese könnte sein, dass wir Threat Intel haben, dass ein Threat Actor automatisierte Angriffe hat, die den cmd.exe Prozess verwenden.</p>
+<p>Eine weitere Hypothese könnte sein; Wir möchten den letzten Tag überprüfen, an dem Konten cmd.exeausgeführt haben, aber nicht cmd.exe in der letzten Woche ausgeführt haben.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

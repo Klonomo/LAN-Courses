@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_01_04_02" title="Überprüfung der Grundlagen des Identitätsschutzes">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Überprüfung der Grundlagen des Identitätsschutzes</div>
+<div class="section-content">
+<p>Identity Protection ist ein Dienst, mit dem Organisationen den Sicherheitsstatus jedes beliebigen Kontos anzeigen können. Organisationen können drei wichtige Aufgaben erfüllen:</p>
+<ul>
+<li>Automatisieren der Erkennung und Behandlung identitätsbasierter Risiken</li>
+<li>Untersuchen von Risiken unter Verwendung von Daten im Portal</li>
+<li>Exportieren von Risikoerkennungsdaten in Hilfsprogramme von Drittanbietern zur weiteren Analyse</li>
+</ul>
+<p>Denken Sie immer daran, dass Microsoft&nbsp;Entra&nbsp;ID&nbsp;Protection, eine Microsoft&nbsp;Entra&nbsp;ID&nbsp;Premium P2-Lizenz erfordert, um zu funktionieren. Die Lizenzierung wird in einer späteren Einheit ausführlicher behandelt.</p>
+<p>Identity&nbsp;Protection nutzt das Wissen, das Microsoft dank seiner Position in Organisationen (Microsoft&nbsp;Entra&nbsp;ID), im Verbraucherbereich (Microsoft-Konten) und im Spielebereich (Xbox) gewonnen hat, um Ihre Benutzer*innen zu schützen. Microsoft analysiert 6,5&nbsp;Billionen Signale pro Tag, um Bedrohungen zu erkennen und Kunden vor Bedrohungen zu schützen.</p>
+<p>Die Signale, die von Identitätsschutz generiert und weitergeleitet werden, können in Werkzeuge wie den bedingten Zugriff eingebunden werden, um Zugriffsentscheidungen zu treffen, oder zur weiteren Untersuchung auf der Grundlage der durchgesetzten Richtlinien Ihrer Organisation an ein SIEM-Tool (Security Information and Event Management) zurückgeführt werden.</p>
+<h2 id="risk-detection-and-remediation">Risikoerkennung und -behandlung</h2>
+<p>Identity Protection identifiziert Risiken in folgenden Klassifizierungen:</p>
+<table>
+<thead>
+<tr>
+<th>
+              <strong>Risikoerkennungstyp</strong></th>
+<th>
+              <strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anonyme IP-Adresse</td>
+<td>Anmeldung von einer anonymen IP-Adresse (z.B. Tor-Browser, anonymisierte VPNs)</td>
+</tr>
+<tr>
+<td>Ungewöhnliches Reisen</td>
+<td>Anmeldung von einem ungewöhnlichen Standort aus (basierend auf den letzten Anmeldevorgängen des Benutzers).</td>
+</tr>
+<tr>
+<td>Schädliche IP-Adresse</td>
+<td>Melden Sie sich von einer böswilligen IP-Adresse an.</td>
+</tr>
+<tr>
+<td>Ungewöhnliche Anmeldeeigenschaften</td>
+<td>Anmeldung mit Eigenschaften, die für den angegebenen Benutzer in letzter Zeit nicht verwendet wurden.</td>
+</tr>
+<tr>
+<td>Kompromittierte Anmeldeinformationen</td>
+<td>Gibt an, dass die gültigen Anmeldeinformationen des Benutzers kompromittiert wurden.</td>
+</tr>
+<tr>
+<td>Kennwortspray</td>
+<td>Gibt an, dass für mehrere Benutzernamen unter Verwendung gängiger Kennwörter koordinierte Brute-Force-Angriffe ausgeführt werden.</td>
+</tr>
+<tr>
+<td>Microsoft Entra Threat Intelligence</td>
+<td>Auf der Grundlage der internen und externen Quellen für Bedrohungsdaten von Microsoft wurde ein bekanntes Angriffsmuster identifiziert</td>
+</tr>
+<tr>
+<td>Anomalietoken</td>
+<td>Erkennt ungewöhnliche Merkmale in einem Token, z. B. eine ungewöhnliche Tokenlebensdauer oder ein Token, das von einem unbekannten Speicherort wiedergegeben wird.</td>
+</tr>
+<tr>
+<td>Anomalie beim Tokenaussteller</td>
+<td>Erkennt, wann der SAML-Tokenherausgeber für das zugeordnete SAML-Token potenziell kompromittiert wird.</td>
+</tr>
+<tr>
+<td>Verdächtiger Browser</td>
+<td>Erkennt anomale Anmeldeaktivitäten über mehrere Mandanten aus demselben Browser.</td>
+</tr>
+<tr>
+<td>Überprüfte Bedrohungsakteur-IP</td>
+<td>Erkennt Anmeldeaktivitäten von IP-Adressen, die bekannt sind, mit überprüften Bedrohungsakteuren verknüpft sind.</td>
+</tr>
+<tr>
+<td>Neues Land/neue Region</td>
+<td>Diese Erkennung wird von Microsoft Defender für Cloud-Apps (MDCA) ermittelt.</td>
+</tr>
+<tr>
+<td>Aktivität über anonyme IP-Adresse</td>
+<td>Diese Erkennung wird von MDCA ermittelt.</td>
+</tr>
+<tr>
+<td>Verdächtige Weiterleitung des Posteingangs</td>
+<td>Diese Erkennung wird von MDCA ermittelt.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="permissions">Berechtigungen</h2>
+<p>Der Identitätsschutz erfordert, dass Benutzer ein Sicherheitsleser, Sicherheitsoperator, Sicherheitsadministrator, globaler Leseadministrator sein müssen, um darauf zuzugreifen.</p>
+<table>
+<thead>
+<tr>
+<th>
+              <strong>Rolle</strong></th>
+<th>
+              <strong>Möglich</strong></th>
+<th>
+              <strong>Nicht möglich</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sicherheitsadministrator</td>
+<td>Vollzugriff auf Identity Protection</td>
+<td>Zurücksetzen des Kennworts für einen Benutzer</td>
+</tr>
+<tr>
+<td>Sicherheitsoperator</td>
+<td>Anzeigen aller Identitätsschutzberichte und des Bildschirms „Übersicht“, Verwerfen von Benutzerrisiken, Bestätigen der sicheren Anmeldung und Bestätigen der Kompromittierung</td>
+<td>Konfigurieren oder Ändern von Richtlinien, Zurücksetzen des Kennworts für einen Benutzer, Konfigurieren von Warnungen</td>
+</tr>
+<tr>
+<td>Sicherheitsleseberechtigter</td>
+<td>Anzeigen aller Identitätsschutzberichte und des Bildschirms „Übersicht“</td>
+<td>Konfigurieren oder Ändern von Richtlinien, Zurücksetzen des Kennworts für einen Benutzer, Konfigurieren von Warnungen, Bereitstellen von Feedback zu Erkennungen</td>
+</tr>
+</tbody>
+</table>
+<p>Die Rolle "Sicherheitsoperator" kann nicht auf den Bericht "Riskante Anmeldungen" zugreifen. Administratoren für bedingten Zugriff können auch Richtlinien erstellen, bei denen das Anmelderisiko als Bedingung berücksichtigt wird.</p>
+<h2 id="license-requirements">Lizenzanforderungen</h2>
+<p>Für dieses Feature ist eine Microsoft&nbsp;Entra&nbsp;ID&nbsp;Premium P2-Lizenz erforderlich.</p>
+<table>
+<thead>
+<tr>
+<th>
+              <strong>Funktion</strong></th>
+<th>
+              <strong>Details</strong></th>
+<th>
+              <strong>Microsoft&nbsp;Entra&nbsp;ID&nbsp;Free / Microsoft&nbsp;365&nbsp;Apps</strong></th>
+<th>
+              <strong>Microsoft Entra ID Premium P1</strong></th>
+<th>
+              <strong>Microsoft Entra ID Premium P2</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Risikorichtlinien</td>
+<td>Benutzerrisiko-Richtlinie (über Identity Protection)</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Risikorichtlinien</td>
+<td>Anmelderisiko-Richtlinie (über Identity Protection oder bedingten Zugriff)</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Sicherheitsberichte</td>
+<td>Übersicht</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Sicherheitsberichte</td>
+<td>Riskante Benutzer</td>
+<td>Eingeschränkte Informationen. Nur Benutzer mit mittlerem und hohem Risiko werden angezeigt. Kein Drawer „Details“ oder Risikoverlauf.</td>
+<td>Eingeschränkte Informationen. Nur Benutzer mit mittlerem und hohem Risiko werden angezeigt. Kein Drawer „Details“ oder Risikoverlauf.</td>
+<td>Vollzugriff</td>
+</tr>
+<tr>
+<td>Sicherheitsberichte</td>
+<td>Riskante Anmeldungen</td>
+<td>Eingeschränkte Informationen. Es werden keine Risikodetails oder Risikostufen angezeigt.</td>
+<td>Eingeschränkte Informationen. Es werden keine Risikodetails oder Risikostufen angezeigt.</td>
+<td>Vollzugriff</td>
+</tr>
+<tr>
+<td>Sicherheitsberichte</td>
+<td>Risikoerkennungen</td>
+<td>Nein</td>
+<td>Eingeschränkte Informationen. Kein Drawer „Details“.</td>
+<td>Vollzugriff</td>
+</tr>
+<tr>
+<td>Benachrichtigungen</td>
+<td>Warnungen zu erkannten gefährdeten Benutzern</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Benachrichtigungen</td>
+<td>Wöchentliche Übersicht</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td></td>
+<td>MFA-Registrierungsrichtlinie</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Ja</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

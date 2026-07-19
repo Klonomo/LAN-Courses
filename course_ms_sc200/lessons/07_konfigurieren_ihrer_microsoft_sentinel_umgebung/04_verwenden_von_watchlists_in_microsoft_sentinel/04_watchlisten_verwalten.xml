@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_07_04_04" title="Watchlisten verwalten">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Watchlisten verwalten</div>
+<div class="section-content">
+<p>Es wird empfohlen, eine vorhandene Watchlist zu bearbeiten, anstatt eine Watchlist zu löschen und neu zu erstellen. Die Protokollanalyse verfügt über eine fünfminütige SLA (Service Level Agreement) für die Datenaufnahme. Wenn Sie eine Watchlist löschen und neu erstellen, werden während dieses fünfminütigen Fensters möglicherweise sowohl die gelöschten als auch neu erstellten Einträge in Log Analytics angezeigt. Wenn diese doppelten Einträge in Log Analytics für einen längeren Zeitraum angezeigt werden, senden Sie ein Supportticket.</p>
+<h2 id="edit-a-watchlist-item">Bearbeiten eines Überwachungslistenelements</h2>
+<p>Bearbeiten einer Watchlist zum Bearbeiten oder Hinzufügen eines Elements zur Watchlist.</p>
+<ol>
+<li><p>Wechseln Sie im Azure-Portal zu Microsoft Sentinel, und wählen Sie den entsprechenden Arbeitsbereich aus.</p>
+</li>
+<li><p>Wählen Sie unter "Konfiguration" die Option <strong>"Watchlist</strong>" aus.</p>
+</li>
+<li><p>Wählen Sie die Watchlist aus, die Sie bearbeiten möchten.</p>
+</li>
+<li><p>Wählen Sie im Detailbereich <strong>Watchlist aktualisieren &gt; Watchlist-Elemente bearbeiten</strong> aus.</p>
+</li>
+<li><p>So bearbeiten Sie ein vorhandenes Watchlist-Element</p>
+<ol>
+<li><p>Aktivieren Sie das Kontrollkästchen dieses Watchlist-Elements.</p>
+</li>
+<li><p>Bearbeiten Sie das Element.</p>
+</li>
+<li><p>Wählen Sie "Speichern" aus.</p>
+</li>
+<li><p>Wählen Sie auf der Bestätigungsaufforderung "Ja" aus.</p>
+</li>
+</ol>
+</li>
+<li><p>So fügen Sie Ihrer Watchlist ein neues Element hinzu</p>
+<ol>
+<li><p>Wählen Sie "Neu hinzufügen" aus.</p>
+</li>
+<li><p>Füllen Sie die Felder im Bereich "Watchlist-Element hinzufügen" aus.</p>
+</li>
+<li><p>Wählen Sie unten in diesem Bereich "Hinzufügen" aus.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="bulk-update-a-watchlist">Massenaktualisierung einer Watchlist</h2>
+<p>Wenn Sie viele Elemente zu einer Watchlist hinzufügen müssen, verwenden Sie Massenaktualisierungen. Eine Massenaktualisierung einer Watchlist fügt Elemente an die vorhandene Watchlist an. Anschließend werden die Elemente in der Watchlist dedupliziert, wobei alle Werte in den einzelnen Spalten übereinstimmen.</p>
+<p>Wenn Sie ein Element aus Ihrer Watchlist-Datei gelöscht haben und diese hochladen, wird das Element bei einem Massenupdate in der vorhandenen Überwachungsliste nicht gelöscht. Löschen Sie das Watchlist-Element einzeln. Oder wenn Sie viele Löschungen haben, löschen Sie die Watchlist, und erstellen Sie sie neu.</p>
+<p>Die aktualisierte Watchlist-Datei, die Sie hochladen, muss das Suchschlüsselfeld enthalten, das von der Watchlist verwendet wird und keine leeren Werte enthalten darf.</p>
+<p>Zum Durchführen einer Massenaktualisierung einer Watchlist:</p>
+<ol>
+<li><p>Wechseln Sie im Azure-Portal zu Microsoft Sentinel, und wählen Sie den entsprechenden Arbeitsbereich aus.</p>
+</li>
+<li><p>Wählen Sie unter "Konfiguration" die Option <strong>"Watchlist</strong>" aus.</p>
+</li>
+<li><p>Wählen Sie die Watchlist aus, die Sie bearbeiten möchten.</p>
+</li>
+<li><p>Wählen Sie im Detailbereich <strong>Watchlist aktualisieren &gt; Massenaktualisierung</strong> aus.</p>
+</li>
+<li><p>Wählen Sie unter „Datei hochladen“ die hochzuladende Datei aus, indem Sie Drag &amp; Drop verwenden oder zur Datei navigieren.</p>
+</li>
+<li><p>Wenn ein Fehler auftritt, beheben Sie das Problem in der Datei. Wählen Sie dann "Zurücksetzen" aus und versuchen Sie den Datei-Upload erneut.</p>
+</li>
+<li><p>Wählen Sie <strong>Weiter: Überprüfen und aktualisieren &gt; Aktualisieren</strong>.</p>
+</li>
+</ol>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

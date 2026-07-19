@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_03_03_10" title="Zusammenfassung">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Zusammenfassung</div>
+<div class="section-content">
+<p>Die Sicherung vertraulicher Daten und die Einhaltung der Complianceanforderungen erfordern klare Einblicke in Benutzer- und Administratoraktivitäten. In diesem Modul haben Sie erfahren, wie Die Microsoft Purview-Überwachung ungewöhnliche Zugriffsmuster identifizieren und die Einhaltung gesetzlicher Vorschriften gewährleisten kann.</p>
+<p>Hier erfahren Sie, was Sie gelernt haben:</p>
+<ul>
+<li>Die Unterschiede zwischen Microsoft Purview Audit (Standard) und Audit (Premium) wurden identifiziert, um die Complianceanforderungen zu erfüllen.</li>
+<li>Konfiguriert und verwaltete Microsoft Purview Audit zum Erstellen detaillierter Protokolle für die tiefgehende Analyse des Datenzugriffs.</li>
+<li>Audits wurden durchgeführt, um die Einhaltung von Compliance- und Sicherheitsstandards zu gewährleisten.</li>
+<li>Untersuchte ungewöhnliche Zugriffsmuster mit erweiterten Tools in Purview Audit (Premium) und PowerShell, um Ihr Verständnis potenzieller Sicherheitsrisiken zu verbessern.</li>
+<li>Gewährleistung der Einhaltung gesetzlicher Vorschriften mit proaktiven Datenverwaltungsstrategien, Schutz vertraulicher Informationen.</li>
+</ul>
+<p>Ohne microsoft Purview Audit wäre die Verwaltung von Überwachungsdaten in dieser Größenordnung zeitaufwändig und anfällig für Lücken, wodurch das Risiko verpasster Vorfälle erhöht wird. Durch die Implementierung werden Untersuchungen optimiert, der Datenschutz gestärkt und die Compliance in Ihrer Organisation unterstützt.</p>
+<h2 id="resources">Ressourcen</h2>
+<ul>
+<li>
+              <a href="https://learn.microsoft.com/de-de/purview/audit-solutions-overview?azure-portal=true" data-linktype="absolute-path">Erfahren Sie mehr über Überwachungslösungen in Microsoft Purview</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/purview/audit-get-started?azure-portal=true" data-linktype="absolute-path">Erste Schritte mit Überwachungslösungen</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/purview/audit-search?azure-portal=true" data-linktype="absolute-path">Suchen des Überwachungsprotokolls</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/purview/audit-log-retention-policies?azure-portal=true" data-linktype="absolute-path">Verwalten von Aufbewahrungsrichtlinien für Überwachungsprotokolle</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/purview/audit-log-export-records?azure-portal=true" data-linktype="absolute-path">Exportieren, Konfigurieren und Anzeigen von Datensätzen des Überwachungsprotokolls</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/purview/audit-log-enable-disable?azure-portal=true" data-linktype="absolute-path">Aktivieren oder Deaktivieren der Überwachung</a></li>
+</ul>
+<h2 id="use-cases-and-scenarios">Anwendungsfälle und -szenarien</h2>
+<p>Erfahren Sie, wie Die Microsoft Purview-Überwachung Sicherheit verbessern, Compliance verwalten und Bedrohungen mithilfe von Anwendungsfällen und Szenarien untersuchen kann:</p>
+<ul>
+<li>
+              <a href="https://learn.microsoft.com/de-de/purview/audit-troubleshooting-scenarios?azure-portal=true" data-linktype="absolute-path">Durchsuchen Sie das Prüfungsprotokoll, um häufige Supportprobleme zu ermitteln</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/purview/audit-teams-audit-log-events?azure-portal=true" data-linktype="absolute-path">Durchsuchung des Überwachungsprotokolls nach Ereignissen in Microsoft Teams</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/purview/audit-log-sharing?azure-portal=true" data-linktype="absolute-path">Verwenden der Freigabeüberwachung im Überwachungsprotokoll</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/purview/audit-log-investigate-accounts?azure-portal=true" data-linktype="absolute-path">Verwenden von Microsoft Purview Audit (Premium) zum Untersuchen kompromittierter Konten</a></li>
+<li>
+              <a href="https://learn.microsoft.com/de-de/purview/audit-log-search-script?azure-portal=true" data-linktype="absolute-path">Verwenden eines PowerShell-Skripts zum Durchsuchen des Überwachungsprotokolls</a></li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

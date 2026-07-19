@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_08_04_03" title="Herstellen einer Verbindung mit den Windows-Sicherheitsereignissen über AMA Connector">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Herstellen einer Verbindung mit den Windows-Sicherheitsereignissen über AMA Connector</div>
+<div class="section-content">
+<p>Die Windows-Sicherheitsereignisse über AMA Connector verwenden Datensammlungsregeln (Data Collection Rules, DCRs), um die Daten zu definieren, die von jedem Agent erfasst werden sollen. Datensammlungsregeln haben zwei Vorteile:</p>
+<ul>
+<li><p>Sie ermöglichen Ihnen das <strong>allgemeine Verwalten von Sammlungseinstellungen</strong>, während Sie gleichzeitig eindeutige, bereichsbezogene Konfigurationen für Untergruppen von Computern festlegen können. Sie sind unabhängig vom Arbeitsbereich und unabhängig vom virtuellen Computer, was bedeutet, dass sie einmal definiert und in allen Computern und Umgebungen wiederverwendet werden können.</p>
+</li>
+<li><p><strong>Erstellen Sie benutzerdefinierte Filter</strong>, um genau die Ereignisse auszuwählen, die Sie erfassen möchten. Der Azure Monitor-Agent verwendet diese Regeln, um die Daten an der Quelle zu filtern und nur die gewünschten Ereignisse aufzunehmen, während alles andere zurückgelassen wird.</p>
+</li>
+</ul>
+<h2 id="prerequisites">Voraussetzungen</h2>
+<ul>
+<li><p>Sie benötigen Lese- und Schreibberechtigungen für den Microsoft Sentinel-Arbeitsbereich.</p>
+</li>
+<li><p>Um Ereignisse von einem System zu sammeln, das kein virtueller Azure-Computer ist, muss das System <strong>Azure Arc</strong> installiert und aktiviert haben, bevor Sie den Azure Monitor Agent-basierten Connector aktivieren.</p>
+</li>
+</ul>
+<p>Dazu gehören:</p>
+<ul>
+<li>Auf physischen Computern installierte Windows-Server</li>
+<li>Auf lokalen virtuellen Computern installierte Windows-Server</li>
+<li>Auf virtuellen Computern in Nicht-Azure-Clouds installierte Windows-Server</li>
+</ul>
+<h2 id="connect-windows-hosts">Verbinden von Windows-Hosts</h2>
+<ol>
+<li><p>Wählen Sie im Microsoft Sentinel-Navigationsmenü "Datenverbinder" aus.</p>
+</li>
+<li><p>Wählen Sie die Windows-Sicherheitsereignisse über den AMA-Connector aus der Liste aus, und wählen Sie dann die Seite „Connector öffnen“ im Detailbereich aus.</p>
+</li>
+<li><p>Stellen Sie sicher, dass Sie über die entsprechenden Berechtigungen verfügen, wie im Abschnitt "Voraussetzungen" auf der Connectorseite beschrieben.</p>
+</li>
+<li><p>Wählen Sie unter "Konfiguration" die Option "+Datensammlungsregel hinzufügen" aus. Der Assistent zum Erstellen von Datensammlungsregeln wird geöffnet.</p>
+</li>
+<li><p>Geben Sie unter "Grundlagen" einen Regelnamen ein, und geben Sie eine Gruppe "Abonnement" und "Ressource" an, in der die Datensammlungsregel (Data Collection Rule, DCR) erstellt wird. Es muss nicht dieselbe Ressourcengruppe oder dasselbe Abonnement sein, in denen sich die überwachten Computer und ihre Zuordnungen befinden, solange sie sich im selben Mandanten befinden.</p>
+</li>
+<li><p>Wählen Sie auf der Registerkarte "Ressourcen" die Option "+Ressource hinzufügen" aus, um Computer hinzuzufügen, auf die die Datensammlungsregel angewendet wird. Das Dialogfeld "Bereich auswählen" wird geöffnet, und es wird eine Liste der verfügbaren Abonnements angezeigt. Erweitern Sie ein Abonnement, um seine Ressourcengruppen anzuzeigen, und erweitern Sie eine Ressourcengruppe, um die verfügbaren Computer anzuzeigen. In der Liste werden virtuelle Azure-Computer und Azure Arc-fähige Server angezeigt. Sie können die Kontrollkästchen von Abonnements oder Ressourcengruppen aktivieren, um alle darin enthaltenen Computer auszuwählen, oder Sie können einzelne Computer auswählen. Wählen Sie „Übernehmen“ aus, wenn Sie alle Ihre Computer ausgewählt haben. Am Ende dieses Prozesses wird der Azure Monitor-Agent auf allen ausgewählten Computern installiert, die noch nicht über den Agent verfügen.</p>
+</li>
+<li><p>Wählen Sie auf der Registerkarte "Sammeln" die Ereignisse aus, die Sie sammeln möchten. Wählen Sie Folgendes aus:</p>
+<ul>
+<li>Alle Sicherheitsereignisse</li>
+<li>Allgemein</li>
+<li>Wenig</li>
+<li>Kundenspezifisch</li>
+</ul>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Benutzerdefiniert ermöglicht es Ihnen, andere Protokolle anzugeben oder Ereignisse mithilfe von XPath-Abfragen zu filtern. Bei XPath-Abfragen können Sie bis zu 20 Ausdrücke in ein einzelnes Feld und bis zu 100 Felder in einer Regel eingeben. Der Azure Monitor-Agent unterstützt nur XPath-Abfragen für XPath, Version 1.0.</p>
+</div>
+</li>
+<li><p>Wenn Sie alle gewünschten Filterausdrücke hinzufügen, wählen Sie "Weiter" aus: Überprüfen und erstellen.</p>
+</li>
+<li><p>Wenn die Meldung "Überprüfung bestanden" angezeigt wird, wählen Sie "Erstellen" aus.</p>
+</li>
+</ol>
+<p>Auf der Connectorseite werden alle Ihre Datensammlungsregeln (einschließlich der regeln, die über die API erstellt wurden) unter "Konfiguration" angezeigt. Dort können Sie vorhandene Regeln bearbeiten oder löschen.</p>
+<h3 id="test-the-validity-of-an-xpath-query">Testen der Gültigkeit einer XPath-Abfrage</h3>
+<p>Verwenden Sie das PowerShell-Cmdlet Get-WinEvent mit dem parameter -FilterXPath, um die Gültigkeit einer XPath-Abfrage zu testen. Das folgende Skript ist ein Beispiel hierfür:</p>
+<pre><code class="lang-powershell">$XPath = '*[System[EventID=1035]]'
+Get-WinEvent -LogName 'Application' -FilterXPath $XPath
+</code></pre>
+<ul>
+<li>Werden Ereignisse zurückgegeben, ist die Abfrage gültig.</li>
+<li>Wenn Sie die Meldung „Es wurden keine Ereignisse gefunden, die mit den angegebenen Auswahlkriterien übereinstimmen“ erhalten, ist die Abfrage möglicherweise gültig, aber es sind keine übereinstimmenden Ereignisse auf dem lokalen Computer vorhanden.</li>
+<li>Wenn Sie die Meldung „Die angegebene Abfrage ist ungültig“ erhalten, ist die Abfragesyntax ungültig.</li>
+</ul>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

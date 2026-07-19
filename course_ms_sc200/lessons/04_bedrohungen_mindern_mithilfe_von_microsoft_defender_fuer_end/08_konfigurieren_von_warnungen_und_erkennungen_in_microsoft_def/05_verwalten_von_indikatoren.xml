@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_08_05" title="Verwalten von Indikatoren">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Verwalten von Indikatoren</div>
+<div class="section-content">
+<p>Ein IoC-Abgleich (Indicator of Compromise) ist ein wesentliches Feature in jeder Endpoint Protection-Lösung. Diese Funktion bietet SecOps die Möglichkeit, eine Liste von Indikatoren für die Erkennung und für die Blockierung (Prävention und Reaktion) festzulegen. Erstellen Sie Indikatoren, die die Erkennung, Vermeidung und den Ausschluss von Entitäten definieren. Sie können die auszuführende Aktion, die Dauer für die Anwendung der Aktion und den Bereich der Gerätegruppe, auf die sie angewendet werden soll, festlegen.</p>
+<div class="embeddedvideo"><p><em>[Interaktiver Inhalt auf Microsoft Learn verfügbar]</em></p></div>
+<p>Derzeit unterstützte Quellen sind die Engine für die Clouderkennung von Defender für Endpunkt, die Engine für automatisierte Untersuchung und Wartung sowie die Engine zur Endpunktverhinderung (Microsoft Defender AV).</p>
+<p>
+              <strong>Engine für die Clouderkennung</strong></p>
+<p>Die Engine für die Clouderkennung von Defender für Endpunkt prüft die gesammelten Daten regelmäßig und versucht, die von Ihnen festgelegten Indikatoren abzugleichen. Wenn eine Übereinstimmung vorhanden ist, wird die Aktion gemäß den von Ihnen angegebenen IoC-Einstellungen ausgeführt.</p>
+<p>
+              <strong>Engine zur Endpunktverhinderung</strong></p>
+<p>Dieselbe Liste von Indikatoren wird vom Präventions-Agent berücksichtigt. Wenn Microsoft Defender Antivirus die primäre AV-Konfiguration ist, werden die übereinstimmenden Indikatoren entsprechend den Einstellungen behandelt. Wenn die Aktion beispielsweise "Ausführung blockieren" oder "Blockieren und Beheben" lautet, verhindert Microsoft Defender Antivirus Dateiausführungen und eine entsprechende Warnung wird ausgelöst. Andernfalls wird die Datei von Microsoft Defender Antivirus weder erkannt noch an der Ausführung gehindert, wenn die Aktion auf "Zulassen" festgelegt wurde.</p>
+<p>
+              <strong>Engine für automatisierte Untersuchung und Wartung</strong></p>
+<p>Die automatisierte Untersuchung und Wartung verhält sich genauso. Wenn ein Indikator auf „Zulassen“ festgelegt ist, ignoriert die automatisierte Untersuchung und Wartung eine „schlechte“ Bewertung für ihn. Wenn sie auf "Blockieren und Beheben" festgelegt ist, behandeln automatisierte Untersuchungen und Korrekturen sie als "schlecht".</p>
+<p>Die aktuellen unterstützten Aktionen variieren je nach Indikatortyp:</p>
+<p>
+              <strong>Dateiindikatoren:</strong></p>
+<ul>
+<li>Zulassen</li>
+<li>Überwachung (generiert eine Warnung ohne Blockierung)</li>
+<li>Warnen (zeigt dem Benutzer eine Warnung mit der Option zum Umgehen an)</li>
+<li>Ausführung blockieren (verhindert die Ausführung der Datei)</li>
+<li>Blockieren und Korrigieren (Blockiert und entfernt die Datei)</li>
+</ul>
+<p>
+              <strong>IP-Adresse, URL und Domänenindikatoren:</strong></p>
+<ul>
+<li>Zulassen</li>
+<li>Überwachung</li>
+<li>Warnen</li>
+<li>Block</li>
+</ul>
+<p>
+              <strong>Zertifikatindikatoren:</strong></p>
+<ul>
+<li>Zulassen</li>
+<li>Block</li>
+</ul>
+<p>Sie können einen Indikator für Folgendes erstellen:</p>
+<ul>
+<li><p>Dateien</p>
+</li>
+<li><p>IP-Adressen, URLs/Domänen</p>
+</li>
+<li><p>Zertifikate</p>
+</li>
+</ul>
+<p>Es gibt einen Grenzwert von 15.000 Indikatoren pro Mandant.</p>
+<h2 id="manage-indicators">Verwalten von Indikatoren</h2>
+<p>So verwalten Sie Indikatoren</p>
+<ul>
+<li><p>Wählen Sie im Navigationsbereich <strong>Einstellungen &gt; Endpunkte</strong> und dann im Bereich „Regeln“ <strong>Indikatoren</strong> aus.</p>
+</li>
+<li><p>Wählen Sie die Registerkarte des Entitätstyps aus, den Sie verwalten möchten.</p>
+</li>
+<li><p>Aktualisieren Sie die Details des Indikators, und wählen Sie „Speichern“ oder die Schaltfläche „Löschen“ aus, wenn Sie die Entität aus der Liste entfernen möchten.</p>
+</li>
+</ul>
+<h2 id="create-indicators-for-files">Erstellen von Indikatoren für Dateien</h2>
+<p>Sie können die weitere Ausbreitung von Angriffen in Ihrer Organisation verhindern, indem Sie potenziell schädliche Dateien oder mutmaßliche Schadsoftware sperren. Wenn Sie eine potenziell schädliche PE-Datei (portierbare ausführbare Datei) kennen, können Sie sie blockieren. Dieser Vorgang verhindert, dass er auf Computern in Ihrer Organisation gelesen, geschrieben oder ausgeführt wird.</p>
+<p>Es gibt zwei Möglichkeiten, wie Sie Indikatoren für Dateien erstellen können:</p>
+<ul>
+<li><p>Durch Erstellen eines Indikators über die Seite „Einstellungen“</p>
+</li>
+<li><p>Durch Erstellen eines Kontextindikators mithilfe der Schaltfläche „Indikator hinzufügen“ auf der Seite „Dateidetails“</p>
+</li>
+</ul>
+<h3 id="prerequisites">Voraussetzungen</h3>
+<p>Bevor Sie Indikatoren für Dateien erstellen, sollten Sie die folgenden Voraussetzungen kennen:</p>
+<ul>
+<li><p>Diese Funktion ist verfügbar, wenn Ihr Unternehmen Windows Defender Antivirus verwendet und der cloudbasierte Schutz aktiviert ist. Weitere Informationen finden Sie unter „Verwalten des cloudbasierten Schutzes“.</p>
+</li>
+<li><p>Die Clientversion der Antischadsoftware muss 4.18.1901.x oder höher sein.</p>
+</li>
+<li><p>Es wird auf Computern unterstützt, auf denen Windows 10 (Version 1703 oder höher), Windows 11, Windows Server 2016, Windows Server 2019 oder Windows Server 2022 ausgeführt werden.</p>
+</li>
+<li><p>Um mit dem Blockieren von Dateien zu beginnen, müssen Sie zunächst das Feature „Blockieren“ oder „Zulassen“ in den Einstellungen aktivieren.</p>
+</li>
+<li><p>Dieses Feature soll verhindern, dass mutmaßliche Schadsoftware (oder potenziell schädliche Dateien) aus dem Internet heruntergeladen werden. Es unterstützt derzeit portierbare ausführbare Dateien (PE), einschließlich EXE- und DLL-Dateien. Die Abdeckung wird mit der Zeit erweitert.</p>
+</li>
+</ul>
+<div class="IMPORTANT">
+<p>Wichtig</p>
+<p>Die Allow- oder Block-Funktion kann für Dateien nicht ausgeführt werden, wenn die Klassifizierung der Datei im Cache des Geräts vor der Zulassungs- oder Blockaktion vorhanden ist.
+Vertrauenswürdige signierte Dateien werden anders behandelt. Defender für Endpunkt ist für die Behandlung schädlicher Dateien optimiert. Der Versuch, vertrauenswürdige signierte Dateien zu blockieren, kann in einigen Fällen Auswirkungen auf die Leistung haben.
+Normalerweise werden Dateisperren innerhalb von ein paar Minuten durchgesetzt, es kann aber auch bis zu 30 Minuten dauern.</p>
+</div>
+<h3 id="create-a-contextual-indicator-from-the-file-details-page">Erstellen eines kontextabhängigen Indikators auf der Seite mit den Dateidetails</h3>
+<p>Eine der Optionen beim Ausführen von Antwortaktionen auf eine Datei ist das Hinzufügen eines Indikators für die Datei. Wenn Sie einen Indikatorhash für eine Datei hinzufügen, können Sie eine Warnung auslösen und die Datei blockieren, sobald ein Computer in Ihrer Organisation versucht, sie auszuführen. Dateien, die automatisch durch einen Indikator blockiert werden, werden nicht im Wartungscenter der Datei angezeigt, aber die Warnungen sind weiterhin in der Warteschlange für Warnungen sichtbar.</p>
+<h2 id="create-indicators-for-ips-and-urlsdomains">Erstellen von Indikatoren für IP-Adressen und URLs/Domänen</h2>
+<p>Defender for Endpoint kann IPs/URLs blockieren, die Microsoft als bösartig einstuft – über Microsoft Defender SmartScreen für Microsoft-Browser und über den Netzwerkschutz für Browser, die nicht von Microsoft stammen, oder für Aufrufe außerhalb eines Browsers.</p>
+<p>Das Threat Intelligence-Dataset hierfür wurde von Microsoft verwaltet.</p>
+<p>Durch die Erstellung von Indikatoren für IP-Adressen und URLs oder Domänen können Sie nun IP-Adressen, URLs oder Domänen auf der Grundlage Ihrer eigenen Threat Intelligence zulassen oder blockieren. Sie dies über die Einstellungsseite oder nach Computergruppen vornehmen, wenn Sie bestimmte Gruppen für mehr oder weniger gefährdet halten als andere. Die CIDR-Notation (Classless Inter-Domain Routing) für IP-Adressen wird nicht unterstützt.</p>
+<h3 id="prerequisites-1">Voraussetzungen</h3>
+<p>Sie sollten die folgenden Voraussetzungen verstehen, bevor Sie Indikatoren für IP-Adressen, URLs oder Domänen erstellen:</p>
+<ul>
+<li><p>Das Zulassen und Blockieren einer URL/IP-Adresse setzt voraus, dass die Defender für Endpunkt-Komponente „Netzwerkschutz“ im Modus „Blockieren“ aktiviert ist. Weitere Informationen zum Netzwerkschutz und Anweisungen zur Konfiguration finden Sie unter „Aktivieren des Netzwerkschutzes“.</p>
+</li>
+<li><p>Die Clientversion der Antischadsoftware muss 4.18.1906.x oder höher sein.</p>
+</li>
+<li><p>Unterstützt auf Computern mit Windows 10, Version 1709 oder höher.</p>
+</li>
+<li><p>Stellen Sie sicher, dass <em>Custom-Netzwerkindikatoren</em> im Microsoft Defender-Portal aktiviert sind. Wählen Sie <strong>"Einstellungen &gt; Endpunkte &gt; erweiterte Features</strong> " aus, und aktivieren Sie <strong>benutzerdefinierte Netzwerkindikatoren</strong>.</p>
+</li>
+</ul>
+<p>Nur externe IP-Adressen können zur Indikatorliste hinzugefügt werden. Für interne IP-Adressen können keine Indikatoren erstellt werden. Für Webschutzszenarien empfehlen wir die Verwendung der integrierten Funktionen in Microsoft Edge. Microsoft Edge verwendet den Netzwerkschutz, um den Netzwerkverkehr zu untersuchen, und gestattet Sperren für TCP, HTTP und HTTPS (TLS). Für alle anderen Prozesse verwenden die Webschutzszenarien den Netzwerkschutz zur Überprüfung und Durchsetzung:</p>
+<ul>
+<li><p>IP-Adressen werden für alle drei Protokolle unterstützt.</p>
+</li>
+<li><p>Es werden nur einzelne IP-Adressen unterstützt (keine CIDR-Blöcke oder IP-Bereiche).</p>
+</li>
+<li><p>Verschlüsselte URLs (vollständiger Pfad) können nur auf Browsern von Erstanbietern gesperrt werden.</p>
+</li>
+<li><p>Verschlüsselte URLs (nur vollqualifizierter Domänenname) können außerhalb der Browser von Erstanbietern gesperrt werden.</p>
+</li>
+<li><p>Vollständige URL-Pfadsperren können auf Domänenebene und alle unverschlüsselten URLs angewendet werden.</p>
+</li>
+</ul>
+<p>Es kann eine Wartezeit von bis zu 2 Stunden (normalerweise weniger) zwischen dem Zeitpunkt der Aktion und der Sperrung der URL und IP-Adresse geben.</p>
+<h3 id="create-an-indicator-for-ips-urls-or-domains">Erstellen eines Indikators für IP-Adressen, URLs oder Domänen</h3>
+<ol>
+<li><p>Wählen Sie im Navigationsbereich <strong>Einstellungen &gt; Indikatoren</strong> aus.</p>
+</li>
+<li><p>Wählen Sie die Registerkarte für IP-Adressen oder URLs/Domänen aus.</p>
+</li>
+<li><p>Wählen Sie <strong>Element hinzufügen</strong> aus.</p>
+</li>
+<li><p>Geben Sie die folgenden Details an:</p>
+<ul>
+<li><p>Indikator – Geben Sie die Entitätsdetails an, und definieren Sie den Ablauf des Indikators.</p>
+</li>
+<li><p>Aktion – Legen Sie die zu ergreifende Aktion fest, und geben Sie eine Beschreibung an.</p>
+</li>
+<li><p>Bereich – Definieren Sie den Bereich der Computergruppe.</p>
+</li>
+</ul>
+</li>
+<li><p>Überprüfen Sie die Details auf der Registerkarte „Zusammenfassung“ und wählen Sie dann <strong>Speichern</strong> aus.</p>
+</li>
+</ol>
+<h2 id="create-indicators-based-on-certificates">Erstellen von Indikatoren auf Basis von Zertifikaten</h2>
+<p>Sie können Indikatoren für Zertifikate erstellen. Einige häufige Anwendungsfälle sind:</p>
+<ul>
+<li><p>Szenarios, in denen Sie Sperrtechnologien bereitstellen müssen, z. B. Regeln zur Verringerung der Angriffsfläche und kontrollierten Ordnerzugriff, aber das Verhalten von signierten Anwendungen zulassen müssen, indem Sie das Zertifikat zur Zulassungsliste hinzufügen</p>
+</li>
+<li><p>Blockieren der Verwendung einer bestimmten signierten Anwendung in Ihrer Organisation. Wenn ein Indikator zum Blockieren des Anwendungszertifikats erstellt wird, verhindert Windows Defender AV die Ausführung von Dateien (blockieren und beheben), und die Automatisierte Untersuchung und Behebung funktioniert genauso.</p>
+</li>
+</ul>
+<h3 id="prerequisites-2">Voraussetzungen</h3>
+<p>Vor dem Erstellen von Indikatoren für Zertifikate sollten Sie folgende Anforderungen verstehen:</p>
+<ul>
+<li><p>Diese Funktion ist verfügbar, wenn Ihr Unternehmen Windows Defender Antivirus verwendet und der cloudbasierte Schutz aktiviert ist. Weitere Informationen finden Sie unter „Verwalten des cloudbasierten Schutzes“.</p>
+</li>
+<li><p>Die Clientversion der Antischadsoftware muss 4.18.1901.x oder höher sein.</p>
+</li>
+<li><p>Sie wird auf Computern mit Windows 10, Version 1703 oder höher, Windows Server 2016 und 2019 unterstützt.</p>
+</li>
+<li><p>Die Definitionen des Viren- und Bedrohungsschutzes müssen auf dem neuesten Stand sein.</p>
+</li>
+<li><p>Dieses Feature unterstützt derzeit die Eingabe von CER- oder PEM-Dateierweiterungen.</p>
+</li>
+</ul>
+<p>Ein gültiges untergeordnetes Zertifikat ist ein Signaturzertifikat mit einem gültigen Zertifizierungspfad und muss mit der Stammzertifizierungsstelle verkettet sein, der Microsoft vertraut. Alternativ kann ein benutzerdefiniertes (selbstsigniertes) Zertifikat verwendet werden, solange es vom Client als vertrauenswürdig eingestuft wird (das Zertifikat der Stammzertifizierungsstelle wird unter „Lokaler Computer – Vertrauenswürdige Stammzertifizierungsstellen“ installiert).  Die untergeordneten oder übergeordneten Elemente des Zertifikat-IoCs für Zulassen/Blockieren sind nicht in der IoC-Funktion „Zulassen/Blockieren“ enthalten. Es werden nur untergeordnete Zertifikate unterstützt. Von Microsoft signierte Zertifikate können nicht blockiert werden.</p>
+<p>Es kann bis zu 3 Stunden dauern, ein Zertifikats-IoC zu erstellen und zu entfernen.</p>
+<h3 id="create-an-indicator-for-certificates">Erstellen Sie einen Indikator für Zertifikate:</h3>
+<ol>
+<li><p>Klicken Sie im Microsoft Defender-Portal auf <strong>Einstellungen &gt; Endpunkte &gt; Indikatoren</strong>.</p>
+</li>
+<li><p>Wählen Sie die Registerkarte „Zertifikat“ aus.</p>
+</li>
+<li><p>Klicken Sie auf <strong>+ Element hinzufügen</strong>.</p>
+</li>
+<li><p>Geben Sie die folgenden Details an:</p>
+<ul>
+<li><p>Indikator – Geben Sie die Entitätsdetails an, und definieren Sie den Ablauf des Indikators.</p>
+</li>
+<li><p>Aktion – Legen Sie die zu ergreifende Aktion fest, und geben Sie eine Beschreibung an.</p>
+</li>
+<li><p>Bereich – Definieren Sie den Bereich der Computergruppe.</p>
+</li>
+</ul>
+</li>
+<li><p>Überprüfen Sie die Details auf der Registerkarte „Zusammenfassung“ und wählen Sie dann <strong>Speichern</strong> aus.</p>
+</li>
+</ol>
+<h2 id="import-a-list-of-iocs">Importieren einer Liste von IoCs</h2>
+<p>Sie können auch eine CSV-Datei hochladen, die die Attribute der Indikatoren, die auszuführende Aktion und andere Details definiert.</p>
+<p>Laden Sie die CSV-Beispieldatei herunter, um die unterstützten Spaltenattribute kennenzulernen.</p>
+<ol>
+<li><p>Klicken Sie im Microsoft Defender-Portal auf <strong>Einstellungen &gt; Endpunkte &gt; Indikatoren</strong>.</p>
+</li>
+<li><p>Wählen Sie die Registerkarte des Entitätstyps aus, für den Sie Indikatoren importieren möchten.</p>
+</li>
+<li><p>Wählen Sie <strong>Importieren &gt; Datei auswählen</strong> aus.</p>
+</li>
+<li><p>Klicken Sie auf <strong>Importieren</strong>. Führen Sie diese Schritte für alle Dateien aus, die Sie importieren möchten.</p>
+</li>
+<li><p>Wählen Sie <strong>Fertig</strong> aus.</p>
+</li>
+</ol>
+<p>Die folgende Tabelle zeigt die unterstützten Parameter.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: left;">Typ</th>
+<th style="text-align: left;">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Indikatorart</td>
+<td style="text-align: left;">Enumeration</td>
+<td style="text-align: left;">Der Typ des Indikators. Mögliche Werte sind: "FileSha1", "FileSha256", "IpAddress", "DomainName" und "URL". Erforderlich</td>
+</tr>
+<tr>
+<td style="text-align: left;">Indikatorwert</td>
+<td style="text-align: left;">Schnur</td>
+<td style="text-align: left;">Die Identität der Indikatorentität. Erforderlich</td>
+</tr>
+<tr>
+<td style="text-align: left;">Aktion</td>
+<td style="text-align: left;">Enumeration</td>
+<td style="text-align: left;">Die Aktion, die ausgeführt wird, wenn der Indikator in der Organisation ermittelt wird. Mögliche Werte sind: "Alert," "AlertAndBlock" und "Allowed". Erforderlich</td>
+</tr>
+<tr>
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">Schnur</td>
+<td style="text-align: left;">Der Titel der Indikatorwarnung. Erforderlich</td>
+</tr>
+<tr>
+<td style="text-align: left;">Beschreibung</td>
+<td style="text-align: left;">Schnur</td>
+<td style="text-align: left;">Die Beschreibung des Indikators. Erforderlich</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ablaufzeit</td>
+<td style="text-align: left;">DateTimeOffset</td>
+<td style="text-align: left;">Die Ablaufzeit des Indikators im folgenden Format: JJJJ-MM-TTTHH:MM:SS.0Z. Wahlfrei</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schweregrad</td>
+<td style="text-align: left;">Enumeration</td>
+<td style="text-align: left;">Der Schweregrad des Indikators. Mögliche Werte sind: "Informational", "Niedrig", "Mittel" und "Hoch". Wahlfrei</td>
+</tr>
+<tr>
+<td style="text-align: left;">Empfohlene Maßnahmen</td>
+<td style="text-align: left;">Schnur</td>
+<td style="text-align: left;">Empfohlene Aktionen der TI-Indikatorwarnung. Wahlfrei</td>
+</tr>
+<tr>
+<td style="text-align: left;">rbacGroupNames</td>
+<td style="text-align: left;">Schnur</td>
+<td style="text-align: left;">Durch Trennzeichen getrennte Liste von RBAC-Gruppennamen, auf die der Indikator angewendet werden soll. Wahlfrei</td>
+</tr>
+<tr>
+<td style="text-align: left;">Kategorie</td>
+<td style="text-align: left;">Schnur</td>
+<td style="text-align: left;">Die Kategorie der Warnung. Beispiele hierfür sind: Ausführung und Zugriff auf Anmeldeinformationen. Wahlfrei</td>
+</tr>
+<tr>
+<td style="text-align: left;">MITRE-Techniken</td>
+<td style="text-align: left;">Schnur</td>
+<td style="text-align: left;">MITRE-Techniken: Code/ID (durch Trennzeichen getrennt). Weitere Informationen finden Sie unter „Enterprise Tactics“ (Taktiken im Unternehmen). Optional Es wird empfohlen, einen Wert in der Kategorie anzugeben, wenn es sich um eine MITRE-Technik handelt.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

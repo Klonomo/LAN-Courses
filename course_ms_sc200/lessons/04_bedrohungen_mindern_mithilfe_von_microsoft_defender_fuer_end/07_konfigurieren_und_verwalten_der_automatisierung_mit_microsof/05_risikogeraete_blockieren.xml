@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_04_07_05" title="Risikogeräte blockieren">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.IMPORTANT, .WARNING, .CAUTION { border-left-color: #e53935; background: #fff5f5; }
+.TIP { border-left-color: #43a047; background: #f3faf3; }
+</style>
+</head>
+<body>
+<div class="section-title">Risikogeräte blockieren</div>
+<div class="section-content">
+<p>Sie können eine Bedrohung eindämmen, indem Sie Risikogeräten mithilfe des bedingten Zugriffs den Zugriff auf Ihre Unternehmensressourcen verweigern.</p>
+<p>Sie benötigen eine Microsoft Intune-Umgebung mit Geräten unter Windows&nbsp;10 oder höher, die von Intune verwaltet und in Entra&nbsp;ID eingebunden sind.</p>
+<p>Erforderliche Rollen für den Zugriff auf diese Portale und die Implementierung des bedingten Zugriffs:</p>
+<ul>
+<li><p>Microsoft Defender-Portal – Um Rollen im Microsoft Defender-Portal zu konfigurieren, müssen Sie sich mit der Rolle "Sicherheitsadministrator" anmelden. Um die erweiterten Einstellungen des Portals zu verwalten, benötigen Sie die Rolle "Microsoft Defender für Endpunktadministrator".</p>
+</li>
+<li><p>Intune – Sie müssen sich mit Sicherheitsadministratorrechten und Verwaltungsberechtigungen beim Portal anmelden.</p>
+</li>
+<li><p>Entra-ID-Portal – Sie müssen sich als Sicherheitsadministrator oder Administrator für bedingten Zugriff anmelden.</p>
+</li>
+</ul>
+<!--- >:::image type="content" source="../media/mde-architecture.png" alt-text="Diagram of architecture for M D E conditional access."::: --->
+<p>Führen Sie die folgenden Schritte aus, um den bedingten Zugriff zu aktivieren:</p>
+<ol>
+<li><p>Aktivieren Sie die Microsoft Intune-Verbindung über Microsoft Defender XDR.</p>
+</li>
+<li><p>Aktivieren der Integration von Defender für Endpunkt in Endpoint Manager</p>
+</li>
+<li><p>Erstellen der Konformitätsrichtlinie in Intune</p>
+</li>
+<li><p>Zuweisen der Richtlinie</p>
+</li>
+<li><p>Erstellen einer Entra ID-Richtlinie für bedingten Zugriff</p>
+</li>
+</ol>
+<h3 id="turn-on-the-microsoft-intune-connection">Aktivieren der Microsoft Intune-Verbindung</h3>
+<ol>
+<li><p>Klicken Sie im Navigationsbereich von Microsoft Defender XDR auf <strong>Einstellungen&nbsp;&gt; Endpunkte</strong> und dann im Abschnitt „Allgemein“ auf <strong>Erweiterte Funktionen</strong>.</p>
+</li>
+<li><p>Schalten Sie die Microsoft Intune-Verbindungseinstellung auf <strong>Ein</strong> um.</p>
+</li>
+<li><p>Wählen Sie <strong>Voreinstellungen speichern</strong> aus.</p>
+</li>
+</ol>
+<h3 id="turn-on-the-defender-for-endpoint-integration-in-the-intune-admin-center">Aktivieren der Defender for Endpoint-Integration im Intune Admin Center</h3>
+<ol>
+<li><p>Melden Sie sich beim Microsoft Intune Admin Center <a href="https://intune.microsoft.com" data-linktype="external">https://intune.microsoft.com</a> an.</p>
+</li>
+<li><p>Klicken Sie auf <strong>Endpunktsicherheit&nbsp;&gt; Microsoft Defender für Endpunkt</strong>.</p>
+</li>
+<li><p>Legen Sie <strong>Microsoft Defender für Endpunkt das Erzwingen von Sicherheitskonfigurationen für Endpunkte erlauben</strong> auf <strong>Ein</strong> fest.</p>
+</li>
+<li><p>Wählen Sie <strong>Speichern</strong>.</p>
+</li>
+</ol>
+<h3 id="create-the-compliance-policy-in-the-intune-admin-center">Erstellen der Compliancerichtlinie im Intune Admin Center</h3>
+<ol>
+<li><p>Wählen Sie im Microsoft Intune Admin Center " <strong>Geräte"</strong> im Navigationsmenü aus, und erweitern Sie dann den Abschnitt " <strong>Geräte verwalten</strong> ".</p>
+</li>
+<li><p>Wählen Sie <strong>Compliance</strong> aus.</p>
+</li>
+<li><p>Klicken Sie auf <strong>+&nbsp;Richtlinie erstellen</strong>.</p>
+</li>
+<li><p>Wählen Sie in Plattform <strong>Windows 10 und höher</strong> aus und klicken Sie auf <strong>Erstellen</strong>.</p>
+</li>
+<li><p>Geben Sie einen Namen und eine Beschreibung ein, und klicken Sie auf <strong>Weiter</strong>.</p>
+</li>
+<li><p>Erweitern Sie auf der Registerkarte <em>Konformitätseinstellungen</em> die Option <strong>Microsoft Defender für Endpunkt</strong>, und legen Sie <strong>Anfordern, dass das Gerät höchstens das angegebene Computerrisiko aufweist</strong> auf den bevorzugten Wert fest:</p>
+<ul>
+<li>Löschen: Diese Stufe ist die sicherste. Ein Gerät darf keine vorhandenen Bedrohungen haben und trotzdem auf Unternehmensressourcen zugreifen. Wenn Bedrohungen gefunden werden, wird das Gerät als nicht kompatibel bewertet.</li>
+<li>Niedrig: Das Gerät ist konform, wenn nur Bedrohungen auf niedriger Stufe vorliegen. Geräte mit mittleren oder hohen Bedrohungsstufen sind nicht konform.</li>
+<li>Mittel: Das Gerät ist konform, wenn auf dem Gerät Bedrohungen niedriger oder mittlerer Stufe gefunden werden. Wenn auf dem Gerät Bedrohungen hoher Stufen erkannt werden, wird es als nicht kompatibel bewertet.</li>
+<li>Hoch: Dies ist die unsicherste Stufe, die alle Bedrohungsstufen zulässt. Also werden Geräte mit hohen, mittleren oder niedrigen Bedrohungsstufen als konform angesehen.</li>
+</ul>
+</li>
+<li><p>Wählen Sie <strong>"Weiter"</strong> aus, und wählen Sie auf der Registerkarte <strong>"Aktionen für Nichtcompliance</strong> " die auszuführenden Aktionen aus.</p>
+</li>
+<li><p>Wählen Sie <strong>Weiter</strong> und dann auf der Registerkarte <strong>Bereichstags</strong> die Option <em>Standard</em> oder andere Bereichstags aus.</p>
+</li>
+<li><p>Wählen Sie <strong>"Weiter"</strong> aus, und wählen Sie auf der Registerkarte " <strong>Aufgaben</strong> " die Gruppen, Benutzer oder Geräte aus, der die Richtlinie zugewiesen werden soll. Oder wählen Sie Gruppen aus, die aus der Richtlinie ausgeschlossen werden sollen.</p>
+</li>
+<li><p>Wählen Sie <strong>"Weiter"</strong> und dann " <strong>Erstellen"</strong> aus, um Ihre Änderungen zu speichern (und die Richtlinie zu erstellen).</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Sie können richtlinien auch im <em>Microsoft Intune Admin Center</em>, <strong>Endpoint Security</strong>, <em>Device Compliance</em> Section erstellen und zuweisen.</p>
+</div>
+</li>
+</ol>
+<h3 id="create-an-entra-id-conditional-access-policy">Erstellen einer Entra ID-Richtlinie für bedingten Zugriff</h3>
+<ol>
+<li><p>Wählen Sie im Azure-Portal im Menü „Dienstleistungen“ die Option <strong>Bedingter Entra&nbsp;ID-Zugriff</strong> aus, dann das Dropdownmenü <strong>+&nbsp;Neue Richtlinie</strong>, und klicken Sie anschließend auf <strong>Neue Richtlinie erstellen</strong>.</p>
+</li>
+<li><p>Geben Sie einen Namen für die Richtlinie ein, und wählen Sie <strong>Users or workload entities</strong> (Benutzer oder Workloadentitäten) aus. Verwenden Sie die Optionen „Einschließen“ oder „Ausschließen“, um Ihre Gruppen der Richtlinie hinzuzufügen.</p>
+</li>
+<li><p>Wählen Sie im Bereich „Cloud-Apps oder -aktionen“ aus, welche Apps geschützt werden sollen. Wählen Sie zum Beispiel die Option "Apps auswählen" und anschließend Office 365 SharePoint Online sowie Office 365 Exchange Online aus.</p>
+</li>
+<li><p>Legen Sie im Bereich „Bedingungen“ fest, dass die Richtlinie auf Client-Apps und Browser angewendet werden soll.  Klicken Sie zum Abschluss auf <strong>Fertig</strong>.</p>
+</li>
+<li><p>Wenden Sie den bedingten Zugriff im Bereich „Gewähren“ auf Basis der Gerätekonformität an. Wählen Sie beispielsweise <strong>Zugriff gewähren &gt; Erfordern, dass das Gerät als konform markiert wird</strong> aus. Wählen Sie <strong>OK</strong> aus, um die Änderungen zu speichern.</p>
+</li>
+<li><p>Wählen Sie <strong>Richtlinie aktivieren</strong> und dann <strong>Speichern</strong> aus, um Ihre Änderungen zu speichern.</p>
+</li>
+</ol>
+<p>Weitere Informationen finden Sie unter <a href="https://learn.microsoft.com/de-de/mem/intune/protect/advanced-threat-protection" data-linktype="absolute-path">Verwenden von Defender for Endpoint zum Erzwingen der Gerätecompliance mit Microsoft Intune</a>.</p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>
