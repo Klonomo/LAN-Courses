@@ -14,11 +14,11 @@
         encrypted="true"
         encryptionVersion="1"
         kdf="argon2id"
-        kdfSalt="8zoe6TNdHZ8CjCviGpkQhQ=="
+        kdfSalt="XTEj6AEKURxjMioLONrdDA=="
         kdfMemory="65536"
         kdfIterations="3"
         kdfParallelism="1"
-        contentFingerprint="puTNdIA7Uto1qYHhIGXvzWENvSMQ4U9Q7AiMsAZUrmlQtrE3VM9bKvoTe4maqOusjESUCf+F5IalgKXCerWA2Q0YL30XwDlTZs11iX+T">
+        contentFingerprint="Hl3eFlfzuq1Wz0of5CrOZZzG0y0bwx+Wo0iClv67d48J6+vSSChCYebxxK1z/ak0a8Y5gvbAKaMXQ2LimBYui91rfBxke+WNp04UbEZp">
         <domain id="domain_kurs" title="Kurs" icon="domain_kurs">
             <chapter id="chapter_01_entschaerfen_von_bedrohungen_mithilfe_von_microsoft_defender" title="Entschärfen von Bedrohungen mithilfe von Microsoft Defender XDR">
                 <subchapter id="subchapter_01_01_einfuehrung_in_den_microsoft_defender_xd" title="Einführung in den Microsoft Defender XDR-Bedrohungsschutz">
@@ -712,6 +712,35 @@
                 <section id="section_sg_05_02" title="Änderungsprotokoll" type="lesson" exp="10" lesson="lessons/11_study_guide/05_lernressourcen/02_aenderungsprotokoll.xml" />
             </chapter>
         </domain>
-    
-    </course>
+
+        <domain id="domain_inofficial" title="Inofficial Practice Questions" icon="domain_inofficial">
+            <chapter id="chapter_iq_topic_01" title="Topic 1 (66 Fragen)">
+                <section id="section_iq_topic_01_quiz" title="Übungsfragen" exp="15" />
+            </chapter>
+            <chapter id="chapter_iq_topic_02" title="Topic 2 (61 Fragen)">
+                <section id="section_iq_topic_02_quiz" title="Übungsfragen" exp="15" />
+            </chapter>
+            <chapter id="chapter_iq_topic_03" title="Topic 3 (108 Fragen)">
+                <section id="section_iq_topic_03_quiz" title="Übungsfragen" exp="15" />
+            </chapter>
+            <chapter id="chapter_iq_topic_04" title="Topic 4 (34 Fragen)">
+                <section id="section_iq_topic_04_quiz" title="Übungsfragen" exp="15" />
+            </chapter>
+            <chapter id="chapter_iq_topic_05" title="Topic 5 (32 Fragen)">
+                <section id="section_iq_topic_05_quiz" title="Übungsfragen" exp="15" />
+            </chapter>
+            <chapter id="chapter_iq_topic_06" title="Topic 6 (40 Fragen)">
+                <section id="section_iq_topic_06_quiz" title="Übungsfragen" exp="15" />
+            </chapter>
+            <chapter id="chapter_iq_topic_07" title="Topic 7 (37 Fragen)">
+                <section id="section_iq_topic_07_quiz" title="Übungsfragen" exp="15" />
+            </chapter>
+            <chapter id="chapter_iq_topic_08" title="Topic 8 (4 Fragen)">
+                <section id="section_iq_topic_08_quiz" title="Übungsfragen" exp="15" />
+            </chapter>
+            <chapter id="chapter_iq_topic_09" title="Topic 9 (6 Fragen)">
+                <section id="section_iq_topic_09_quiz" title="Übungsfragen" exp="15" />
+            </chapter>
+        </domain>
+</course>
 </library>
