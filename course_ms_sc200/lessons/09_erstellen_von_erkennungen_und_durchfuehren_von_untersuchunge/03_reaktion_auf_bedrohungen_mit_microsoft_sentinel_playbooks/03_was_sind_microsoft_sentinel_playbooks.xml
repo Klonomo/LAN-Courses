@@ -28,7 +28,116 @@ body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color:
 <body>
 <div class="section-title">Was sind Microsoft Sentinel-Playbooks?</div>
 <div class="section-content">
-<p><em>Kein Inhalt extrahiert.</em></p><p>Quelle: https://learn.microsoft.com/de-de/training/modules/threat-response-sentinel-playbooks/3-playbook-overview/</p>
+<p>Neben der Bewertung und Behandlung von Problemen mithilfe der Sicherheitskonfiguration muss Contoso auch eine Überwachung hinsichtlich neuer Probleme und Bedrohungen durchführen und auf diese reagieren.</p>
+<h2 id="microsoft-sentinel-as-a-siem-and-soar-solution">Microsoft Sentinel als SIEM-und SOAR-Lösung</h2>
+<p>Microsoft Sentinel ist sowohl eine SIEM- als auch eine SOAR-Lösung für Hybridumgebungen. SIEM steht in diesem Zusammenhang für „Security Information &amp; Event Management“ und SOAR für „Security Orchestration, Automation and Response“.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>SIEM-Lösungen ermöglichen die Speicherung und Analyse von Protokollen, Ereignissen und Warnungen, die von anderen Systemen generiert werden. Sie können diese Lösungen so konfigurieren, dass eigene Warnungen ausgegeben werden. SOAR-Lösungen unterstützen die Behebung von Sicherheitsrisiken und die gesamte Automatisierung von Sicherheitsprozessen.</p>
+</div>
+<p>Microsoft Sentinel verwendet integrierte und benutzerdefinierte Erkennungen, um Sie vor potenziellen Sicherheitsbedrohungen zu warnen, wie z. B. Versuche, von außerhalb der Infrastruktur auf die Ressourcen von Contoso zuzugreifen, oder wenn die Daten von Contoso an eine als bösartig bekannte IP-Adresse gesendet werden. Sie können auch Vorfälle basierend auf diesen Warnungen erstellen.</p>
+<h2 id="microsoft-sentinel-playbooks">Microsoft Sentinel-Playbooks</h2>
+<p>Sie können Sicherheitsplaybooks in Microsoft Sentinel erstellen, um auf Warnungen zu reagieren. 
+              <em>Sicherheitsplaybooks</em> sind Sammlungen von Prozeduren, die auf Azure Logic Apps basieren, die als Reaktion auf eine Warnung ausgeführt werden. Sie können diese Sicherheitsplaybooks manuell als Reaktion auf die Untersuchung eines Vorfalls ausführen, oder Sie können eine Warnung so konfigurieren, dass ein Playbook automatisch ausgeführt wird.</p>
+<p>Dank der Fähigkeit, automatisch auf Incidents zu reagieren, können Sie einige Ihrer sicherheitsrelevanten Vorgänge automatisieren und die Produktivität Ihres Security Operations Center (SOC) steigern.</p>
+<p>Um beispielsweise die Bedenken von Contoso zu beheben, können Sie einen Workflow mit definierten Schritten entwickeln, mit denen verhindert werden kann, dass ein verdächtiger Benutzername von einer unsicheren IP-Adresse auf Ressourcen zugreift. Alternativ können Sie das Playbook so konfigurieren, dass ein Vorgang durchgeführt wird, z. B., dass das SecOps-Team über eine allgemeine Sicherheitswarnung benachrichtigt wird.</p>
+<h2 id="azure-logic-apps">Azure Logic Apps</h2>
+<p>Azure Logic Apps ist ein Clouddienst, der die Ausführung von Geschäftsprozessen automatisiert. Mit dem grafischen Designtool <em>Designer für Logik-Apps</em> ordnen Sie vorkonfigurierte Komponenten in der erforderlichen Reihenfolge an. Sie können auch die Codeansicht verwenden und den automatisierten Prozess in der JSON-Datei schreiben.</p>
+<h2 id="logic-apps-connector">Logic Apps-Connector</h2>
+<p>Logic-Apps verwenden Connectors zum Herstellen einer Verbindung mit Hunderten von Diensten. Ein <em>Connector</em> ist eine Komponente, die eine Schnittstelle zu einem externen Dienst bereitstellt.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Ein Microsoft Sentinel-Datenconnector und ein Logic Apps-Connector sind nicht dasselbe. Ein Microsoft Sentinel-Datenconnector verbindet Microsoft Sentinel mit Microsoft-Sicherheitsprodukten und Sicherheitsökosystemen für Lösungen, die nicht von Microsoft stammen. Bei einem Logic Apps-Connector handelt es sich um eine Komponente, die eine API-Verbindung für einen externen Dienst bereitstellt und die Integration von Ereignissen, Daten und Aktionen in andere Apps, Dienste, Systeme, Protokolle und Plattformen ermöglicht.</p>
+</div>
+<h2 id="what-are-triggers-and-actions">Was sind Trigger und Aktionen?</h2>
+<p>Azure Logic Apps verwendet Trigger und Aktionen, die wie folgt definiert werden:</p>
+<ul>
+<li><p>Ein <em>Trigger</em> ist ein Ereignis, das auftritt, wenn bestimmte Bedingungen erfüllt sind. Dieser Vorgang erfolgt automatisch, Es kann z. B. sein, dass ein Sicherheitsincident in Microsoft Sentinel auftritt, der dann ein Trigger für eine automatisierte Aktion ist.</p>
+</li>
+<li><p>Eine <em>Aktion</em> ist ein Vorgang, der eine Aufgabe im Logic Apps-Workflow ausführt. Aktionen werden ausgeführt, wenn ein Trigger aktiviert wird, eine andere Aktion abgeschlossen wird oder wenn eine Bedingung erfüllt wird.</p>
+</li>
+</ul>
+<h2 id="microsoft-sentinel-logic-apps-connector">Microsoft Sentinel Logic Apps-Connector</h2>
+<p>Ein Microsoft Sentinel-Playbook verwendet einen Microsoft Sentinel-Logic Apps-Connector. Der Connector stellt die Trigger und Aktionen bereit, die das Playbook starten und definierte Aktionen ausführen können.</p>
+<p>Aktuell gibt es zwei Trigger des Microsoft Sentinel Logic Apps-Connectors:</p>
+<ul>
+<li><p>Wenn eine Reaktion auf eine Microsoft Sentinel-Warnung ausgelöst wird</p>
+</li>
+<li><p>Wenn die Regel zum Erstellen von Microsoft Sentinel-Incidents ausgelöst wird</p>
+</li>
+</ul>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Da sich der Microsoft Sentinel Logic App-Connector in der Vorschauphase befindet, können sich die in diesem Modul beschriebenen Features in Zukunft ändern.</p>
+</div>
+<p>In der folgenden Tabelle werden alle aktuellen Aktionen für den Microsoft Sentinel-Connector aufgeführt.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add comment to incident (Kommentar zu Vorfall hinzufügen)</td>
+<td>Fügt dem ausgewählten Vorfall Kommentare hinzu</td>
+</tr>
+<tr>
+<td>Add labels to Vorfall (Vorfall Bezeichnungen hinzufügen)</td>
+<td>Fügt dem ausgewählten Vorfall Bezeichnungen hinzu</td>
+</tr>
+<tr>
+<td>Alert - Get Vorfall (Warnung: Vorfall abrufen)</td>
+<td>Gibt den Vorfall zurück, der der ausgewählten Warnung zugeordnet ist</td>
+</tr>
+<tr>
+<td>Change incident description (Beschreibung des Vorfalls ändern)</td>
+<td>Ändert die Beschreibung für den ausgewählten Vorfall</td>
+</tr>
+<tr>
+<td>Change incident severity (Schweregrad des Vorfalls ändern)</td>
+<td>Ändert den Schweregrad für den ausgewählten Vorfall</td>
+</tr>
+<tr>
+<td>Change incident status (Status des Vorfalls ändern)</td>
+<td>Ändert den Status für den ausgewählten Vorfall</td>
+</tr>
+<tr>
+<td>Change incident title (Titel des Vorfalls ändern) (V2)</td>
+<td>Ändert den Titel für den ausgewählten Vorfall</td>
+</tr>
+<tr>
+<td>Entities - Get Accounts (Entitäten: Konten abrufen)</td>
+<td>Gibt eine Liste der Konten zurück, die der Warnung zugeordnet sind</td>
+</tr>
+<tr>
+<td>Entities - Get FileHashes (Entitäten: FileHashes abrufen)</td>
+<td>Gibt eine Liste der Dateihashes zurück, die der Warnung zugeordnet sind</td>
+</tr>
+<tr>
+<td>Entities - Get Hosts (Entitäten: Hosts abrufen)</td>
+<td>Gibt eine Liste von Hosts zurück, die der Warnung zugeordnet sind</td>
+</tr>
+<tr>
+<td>Entities - Get IPs (Entitäten: IP-Adressen abrufen)</td>
+<td>Gibt eine Liste der IP-Adressen zurück, die der Warnung zugeordnet sind</td>
+</tr>
+<tr>
+<td>Entities - Get URLs (Entitäten: URLs abrufen)</td>
+<td>Gibt eine Liste von URLs zurück, die der Warnung zugeordnet sind</td>
+</tr>
+<tr>
+<td>Remove labels from incident (Bezeichnungen aus Vorfall entfernen)</td>
+<td>Entfernt die Bezeichnungen für den ausgewählten Vorfall</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Bei Aktionen, die mit <strong>(v2)</strong> oder einer höheren Zahl gekennzeichnet sind, handelt es sich um neue Versionen der Aktion. Sie können von der alten Funktionalität der Aktion abweichen.</p>
+</div>
+<p>Für einige Aktionen ist eine Integration mit Aktionen von anderen Connectors erforderlich. Wenn Contoso z. B. möchte, dass alle verdächtigen Konten identifiziert werden sollen, die in der Warnung aus den definierten Entitäten zurückgegeben werden, müssen Sie die Aktion <strong>Entities - Get Accounts</strong> (Entitäten: Konten abrufen) mit der Aktion <strong>For Each</strong> (Für alle) kombinieren. Außerdem müssen Sie zum Abrufen aller Hosts in einem Incident, der verdächtige Hosts ermittelt, die Aktion <strong>Entities - Get Hosts</strong> (Entitäten – Hosts abrufen) mit der Aktion <strong>For Each</strong> (Für alle) kombinieren.</p>
 </div>
 </body>
 </html>

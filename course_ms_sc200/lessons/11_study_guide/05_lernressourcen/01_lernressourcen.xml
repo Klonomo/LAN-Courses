@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_sg_05_01" title="Lernressourcen">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.source { margin-top: 20px; font-size: 0.9em; color: #555; }
+</style>
+</head>
+<body>
+<div class="section-title">Lernressourcen</div>
+<div class="section-content">
+<p>Es wird empfohlen, dass Sie vor dem Ablegen der Prüfung üben und praktische Erfahrungen sammeln. Wir bieten Optionen für Selbststudium und Präsenzschulung sowie Links zu Dokumentationen, Community-Websites und Videos.</p>
+<table><thead><tr><th>Lernressource</th><th>Links</th></tr></thead><tbody>
+<tr><td>Bereiten Sie sich vor</td><td><a href="https://learn.microsoft.com/de-de/credentials/certifications/exams/sc-200#two-ways-to-prepare">Lernpfade, Module und instructor-led Kurse</a></td></tr>
+<tr><td>Zugehörige Dokumentation</td><td>
+<ul>
+<li><a href="https://learn.microsoft.com/de-de/security/">Microsoft-Dokumentation zur Sicherheit</a></li>
+<li><a href="https://learn.microsoft.com/de-de/microsoft-365/security/defender/">Microsoft 365 Defender-Dokumentation</a></li>
+<li><a href="https://learn.microsoft.com/de-de/azure/defender-for-cloud/">Dokumentation zu Microsoft Defender for Cloud</a></li>
+<li><a href="https://learn.microsoft.com/de-de/azure/sentinel/">Dokumentation zu Microsoft Sentinel</a></li>
+</ul>
+</td></tr>
+<tr><td>Frage stellen</td><td><a href="https://learn.microsoft.com/de-de/answers/products/">Microsoft Q&amp;A</a></td></tr>
+<tr><td>Communitysupport</td><td><a href="https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance">Community-Hub für Sicherheit, Compliance und Identität</a></td></tr>
+<tr><td>Microsoft Learn folgen</td><td><a href="https://techcommunity.microsoft.com/t5/microsoft-learn/ct-p/MicrosoftLearn">Microsoft Learn – Tech Community</a></td></tr>
+<tr><td>Video finden</td><td>
+<ul>
+<li><a href="https://learn.microsoft.com/de-de/shows/exam-readiness-zone/">Prüfungsbereitschaftszone</a></li>
+<li><a href="https://learn.microsoft.com/de-de/shows/browse">Weitere Microsoft Learn Shows</a></li>
+</ul>
+</td></tr>
+</tbody></table>
+<p class="source">Quelle: <a href="https://learn.microsoft.com/de-de/credentials/certifications/resources/study-guides/sc-200">Studienleitfaden für Examen SC-200 (Microsoft Learn)</a></p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

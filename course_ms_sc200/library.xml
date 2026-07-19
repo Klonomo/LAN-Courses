@@ -11,7 +11,7 @@
         flashcardDefinition="flashcard_definition.xml"
         vocabulary="vocabulary.xml"
         vocabularyListMap="vocabulary_list_map.xml">
-        <domain id="domain_sc200" title="SC-200" icon="domain_sc200">
+        <domain id="domain_kurs" title="Kurs" icon="domain_kurs">
             <chapter id="chapter_01_entschaerfen_von_bedrohungen_mithilfe_von_microsoft_defender" title="Entschärfen von Bedrohungen mithilfe von Microsoft Defender XDR">
                 <subchapter id="subchapter_01_01_einfuehrung_in_den_microsoft_defender_xd" title="Einführung in den Microsoft Defender XDR-Bedrohungsschutz">
                     <section id="section_01_01_01" title="Einführung" type="lesson" exp="10" lesson="lessons/01_entschaerfen_von_bedrohungen_mithilfe_von_microsoft_defender/01_einfuehrung_in_den_microsoft_defender_xdr_bedrohungsschutz/01_einfuehrung.xml" />
@@ -677,5 +677,33 @@
                 </subchapter>
             </chapter>
         </domain>
+        <domain id="domain_study_guide" title="Studienleitfaden" icon="domain_study_guide">
+            <chapter id="chapter_sg_01_ueberblick" title="Überblick">
+                <section id="section_sg_01_01" title="Zweck dieses Dokuments" type="lesson" exp="10" lesson="lessons/11_study_guide/01_ueberblick/01_zweck_dieses_dokuments.xml" />
+                <section id="section_sg_01_02" title="Aktualisierungen der Prüfung" type="lesson" exp="10" lesson="lessons/11_study_guide/01_ueberblick/02_aktualisierungen_der_pruefung.xml" />
+                <section id="section_sg_01_03" title="Zielgruppenprofil" type="lesson" exp="10" lesson="lessons/11_study_guide/01_ueberblick/03_zielgruppenprofil.xml" />
+                <section id="section_sg_01_04" title="Qualifikationen auf einen Blick" type="lesson" exp="10" lesson="lessons/11_study_guide/01_ueberblick/04_qualifikationen_auf_einen_blick.xml" />
+            </chapter>
+            <chapter id="chapter_sg_02_verwalten_einer_sicherheitsbetriebsumgebung_40_45" title="Verwalten einer Sicherheitsbetriebsumgebung (40–45%)">
+                <section id="section_sg_02_01" title="Konfigurieren der Automatisierung für Microsoft Defender XDR und Microsoft Sentinel" type="lesson" exp="15" lesson="lessons/11_study_guide/02_verwalten_einer_sicherheitsbetriebsumgebung_40_45/01_konfigurieren_der_automatisierung_fuer_microsoft_defend.xml" />
+                <section id="section_sg_02_02" title="Konfigurieren des Microsoft Sentinel SIEM und der Plattform" type="lesson" exp="15" lesson="lessons/11_study_guide/02_verwalten_einer_sicherheitsbetriebsumgebung_40_45/02_konfigurieren_des_microsoft_sentinel_siem_und_der_platt.xml" />
+                <section id="section_sg_02_03" title="Daten in die Microsoft Sentinel SIEM-Plattform aufnehmen" type="lesson" exp="15" lesson="lessons/11_study_guide/02_verwalten_einer_sicherheitsbetriebsumgebung_40_45/03_daten_in_die_microsoft_sentinel_siem_plattform_aufnehme.xml" />
+                <section id="section_sg_02_04" title="Konfigurieren von Erkennungen" type="lesson" exp="15" lesson="lessons/11_study_guide/02_verwalten_einer_sicherheitsbetriebsumgebung_40_45/04_konfigurieren_von_erkennungen.xml" />
+            </chapter>
+            <chapter id="chapter_sg_03_reagieren_auf_sicherheitsvorfaelle_35_40" title="Reagieren auf Sicherheitsvorfälle (35–40%)">
+                <section id="section_sg_03_01" title="Reagieren auf Warnungen und Vorfälle in Microsoft Defender XDR" type="lesson" exp="15" lesson="lessons/11_study_guide/03_reagieren_auf_sicherheitsvorfaelle_35_40/01_reagieren_auf_warnungen_und_vorfaelle_in_microsoft_defe.xml" />
+                <section id="section_sg_03_02" title="Reagieren auf Warnungen und Vorfälle in Microsoft Defender für Endpunkt" type="lesson" exp="15" lesson="lessons/11_study_guide/03_reagieren_auf_sicherheitsvorfaelle_35_40/02_reagieren_auf_warnungen_und_vorfaelle_in_microsoft_defe.xml" />
+                <section id="section_sg_03_03" title="Untersuchen von Microsoft 365-Aktivitäten zur Identifizierung von Bedrohungen" type="lesson" exp="15" lesson="lessons/11_study_guide/03_reagieren_auf_sicherheitsvorfaelle_35_40/03_untersuchen_von_microsoft_365_aktivitaeten_zur_identifi.xml" />
+            </chapter>
+            <chapter id="chapter_sg_04_durchfuehren_der_bedrohungssuche_20_25" title="Durchführen der Bedrohungssuche (20–25 %)">
+                <section id="section_sg_04_01" title="Erkennen von Bedrohungen mithilfe von Microsoft Defender XDR" type="lesson" exp="15" lesson="lessons/11_study_guide/04_durchfuehren_der_bedrohungssuche_20_25/01_erkennen_von_bedrohungen_mithilfe_von_microsoft_defende.xml" />
+                <section id="section_sg_04_02" title="Erkennen von Bedrohungen mithilfe der Microsoft Sentinel-Plattform" type="lesson" exp="15" lesson="lessons/11_study_guide/04_durchfuehren_der_bedrohungssuche_20_25/02_erkennen_von_bedrohungen_mithilfe_der_microsoft_sentine.xml" />
+            </chapter>
+            <chapter id="chapter_sg_05_lernressourcen" title="Lernressourcen">
+                <section id="section_sg_05_01" title="Lernressourcen" type="lesson" exp="10" lesson="lessons/11_study_guide/05_lernressourcen/01_lernressourcen.xml" />
+                <section id="section_sg_05_02" title="Änderungsprotokoll" type="lesson" exp="10" lesson="lessons/11_study_guide/05_lernressourcen/02_aenderungsprotokoll.xml" />
+            </chapter>
+        </domain>
+    
     </course>
 </library>

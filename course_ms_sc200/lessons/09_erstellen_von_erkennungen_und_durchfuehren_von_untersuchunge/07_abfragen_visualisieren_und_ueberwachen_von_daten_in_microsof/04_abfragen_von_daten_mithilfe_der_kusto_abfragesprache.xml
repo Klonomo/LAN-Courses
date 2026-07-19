@@ -28,7 +28,81 @@ body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color:
 <body>
 <div class="section-title">Abfragen von Daten mithilfe der Kusto-Abfragesprache</div>
 <div class="section-content">
-<p><em>Kein Inhalt extrahiert.</em></p><p>Quelle: https://learn.microsoft.com/de-de/training/modules/query-data-sentinel/4-query-data/</p>
+<p>Sie können in Microsoft Sentinel mit der Kusto-Abfragesprache (KQL) die gesammelten Daten durchsuchen und filtern.</p>
+<h2 id="kusto-query-language">Kusto-Abfragesprache</h2>
+<p>KQL ermöglicht Ihnen das Erstellen, Speichern und Ausführen interaktiver Analysen gesammelter Daten. In Microsoft Sentinel wird zum Visualisieren und Analysieren der wichtigen Daten KQL verwendet. Sie können mit KQL komplexe analytische Abfragen erstellen, die einige der folgenden Operatoren beinhalten:</p>
+<ul>
+<li>Berechnete Spalten</li>
+<li>Joinfunktionen</li>
+<li>Gruppieren nach Aggregaten</li>
+</ul>
+<h2 id="write-and-run-basic-queries">Schreiben und Ausführen einfacher Abfragen</h2>
+<p>Eine Abfrage ist eine schreibgeschützte Anforderung, die Daten verarbeitet und die Ergebnisse dieser Verarbeitung zurückgibt, ohne die Daten oder Metadaten zu ändern. KQL-Abfragen verwenden wie SQL-Abfragen Schemaentitäten, die in hierarchisch organisiert sind, z. B. Datenbanken, Tabellen und Spalten. Ein Schema ist eine Sammlung von Tabellen, die unter logischen Kategorien gruppiert sind. Die Abfragen bestehen aus Sequenzen von Abfrageanweisungen, die durch ein Semikolon (;) getrennt sind.</p>
+<p>Wenn Sie eine Abfrage erstellen, beginnen Sie entweder mit einem Tabellennamen oder einem Suchbefehl. Beispielsweise ruft die folgende Abfrage alle Datensätze aus der Tabelle <code>Event</code> ab:</p>
+<pre><code class="lang-kusto">Event
+</code></pre>
+<p>Sie können zum Trennen von Befehlen einen senkrechten Strich (|) verwenden. Die Ausgabe des ersten Befehls ist die Eingabe des nächsten Befehls. Sie können eine beliebige Anzahl von Befehlen zu einer einzelnen Abfrage hinzufügen. Die folgende Abfrage ruft die Datensätze aus der Tabelle <code>Event</code> ab und sucht dann nach Datensätzen, die den Begriff <code>error</code> in einer Eigenschaft enthalten:</p>
+<pre><code class="lang-kusto">Event
+
+| search error
+</code></pre>
+<p>Sie können die Abfrage mit tabellarischen und skalaren Operatoren erstellen, aus denen von KQL mehrere tabellarische Ausdrucksanweisungen generiert werden, die die Ergebnisse der Abfrage erzeugen.</p>
+<pre><code class="lang-kusto">source1 | operator1 | operator2
+</code></pre>
+<p>Im folgenden Beispiel lautet die Quelle <code>AzureActivity</code>. Der erste Operator ist <code>where</code>, der Datensätze basierend auf dem logischen Ausdruck herausfiltert. Der zweite Operator ist erneut <code>where</code>:</p>
+<pre><code class="lang-kusto">AzureActivity
+
+| where OperationName == 'Delete Virtual Machine'
+| where ActivityStatus == 'Accepted'
+</code></pre>
+<p>Standardmäßig beschränkt Log Analytics Abfragen auf die letzten 24 Stunden. Wenn Sie einen anderen Zeitbereich festlegen möchten, können Sie der Abfrage den expliziten Filter <code>TimeGenerated</code> hinzufügen oder das Steuerelement <code>Time range</code> verwenden. Beispielsweise gibt die folgende Abfrage Daten aus der vorherigen Stunde zurück:</p>
+<pre><code class="lang-kusto">
+AzureActivity
+
+| where OperationName == 'Delete Virtual Machine'
+| where ActivityStatus == 'Accepted'
+| where TimeGenerated &gt; ago (1h)
+</code></pre>
+<p>Sie können Ihre Abfragen mit einigen der am häufigsten verwendeten Operatoren kombinieren:</p>
+<ul>
+<li>
+              <code>count</code>. Gibt die Anzahl von Zeilen in der Tabelle zurück.</li>
+<li>
+              <code>take</code>. Gibt maximal die angegebene Anzahl von Zeilen zurück.</li>
+<li>
+              <code>project</code>. Wählt eine Teilmenge von Spalten aus.</li>
+<li>
+              <code>sort</code>. Sortiert die Zeilen der Eingabetabelle nach einer oder mehreren Spalten.</li>
+<li>
+              <code>top</code>. Gibt die ersten N Datensätze zurück, die nach den angegebenen Spalten sortiert sind.</li>
+<li>
+              <code>extend</code>. Berechnet abgeleitete Spalten.</li>
+<li>
+              <code>summarize</code>. Aggregiert Gruppen von Zeilen.</li>
+<li>
+              <code>render</code>. Rendert Ergebnisse als grafische Ausgabe.</li>
+</ul>
+<p>Um die Datensätze aus zwei Quellen (Tabellen) zu kombinieren, können Sie den <code>join</code>-Operator verwenden. Der <code>union</code>-Operator kombiniert zwei oder mehr Tabellen zu einer Tabelle.</p>
+<p>Weitere Informationen finden Sie im <a href="https://learn.microsoft.com/de-de/azure/azure-monitor/log-query/log-analytics-tutorial" data-linktype="absolute-path">Log Analytics-Tutorial</a> von Microsoft, in dem Features von Log Analytics zum Erstellen und Ausführen einer Abfrage verwendet werden, anstatt mit der Abfrage selbst zu arbeiten.</p>
+<p>Sie können sich auch im <a href="https://learn.microsoft.com/de-de/azure/data-explorer/kusto/query/tutorial?pivots=azuredataexplorer" data-linktype="absolute-path">Azure Data Explorer-Tutorial</a> mit KQL vertraut machen.</p>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Microsoft Sentinel Log Analytics unterstützt nicht die gesamte KQL-Syntax, die in Azure Data Explorer verwendet wird.</p>
+</div>
+<h2 id="microsoft-sentinel-repository-on-github">Microsoft Sentinel-Repository auf GitHub</h2>
+<p>Sie können auch im <a href="https://github.com/Azure/Azure-Sentinel" data-linktype="external">Microsoft Sentinel-Repository</a> auf GitHub nach speziellen Abfragen und Arbeitsmappen suchen, um Ihre Umgebung zu schützen und Bedrohungen zu ermitteln.
+Beispielsweise zeigt die folgende Abfrage aus dem Microsoft Sentinel-Repository auf GitHub die verdächtige Delegierung von Berechtigungen für Benutzerkonten an.</p>
+<pre><code class="lang-kusto">let timeframe = 7d;
+AzureActivity
+| where TimeGenerated &gt;= ago(timeframe)
+| where OperationName == "Create role assignment"
+| where ActivityStatus == "Succeeded"
+| project Caller, CallerIpAddress
+| evaluate basket()
+| extend AccountCustomEntity = Caller, IPCustomEntity = CallerIpAddress
+</code></pre>
+<p>Die Abfrage analysiert die IP-Adresse, von der aus der Administrator anderen Benutzern Zugriff auf Azure-Ressourcen gewährt. Wenn ein Vorgang nicht von einer gültigen IP-Adresse aus erfolgt, wird durch die Abfrage auf verdächtige Aktivitäten hingewiesen, die Sie weiter untersuchen können.</p>
+<p>Wenn Sie einige Beispiele ausprobieren möchten, verwenden Sie die <a href="https://ms.portal.azure.com/#blade/Microsoft_Azure_Monitoring_Logs/DemoLogsBlade" data-linktype="external">Demonstrationsumgebung im Azure-Portal</a>.</p>
 </div>
 </body>
 </html>

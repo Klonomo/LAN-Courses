@@ -406,54 +406,6 @@ C. Sicherheitsoperator</field>
         <field ref="answer">Insider-Risikomanagementanalyst oder Prüfer</field>
         <field ref="explanation">Correct: Only users with these roles can access insider risk data in Advanced hunting.</field>
     </entry>
-    <entry id="fc_sc200_03_03_02_01">
-        <field ref="question">Welches Feature gibt es sowohl bei Microsoft Purview Audit (Standard) und Audit (Premium)?</field>
-        <field ref="choices">A. Aufbewahrung der Überwachungsprotokolle: 10&amp;nbsp;Jahre.
-B. Search-UnifiedAuditLog Cmdlet.
-C. Anpassbare Aufbewahrungsrichtlinien für Überwachungsprotokolle.</field>
-        <field ref="answer">Search-UnifiedAuditLog Cmdlet.</field>
-        <field ref="explanation">Correct: Both versions offer the Search-UnifiedAuditLog cmdlet, allowing for detailed searches within the audit logs.</field>
-    </entry>
-    <entry id="fc_sc200_03_03_03_01">
-        <field ref="question">Was ist der Hauptunterschied zwischen den Abonnementanforderungen zwischen Microsoft Purview Audit (Standard) und Audit (Premium)?</field>
-        <field ref="choices">A. Die Überwachung (Premium) erfordert Pläne höherer Ebene, z. B. Microsoft 365 E5 oder Office 365 E5.
-B. Beide Versionen erfordern dieselben Arten von Abonnements.
-C. Für Audit (Standard) ist ein Office&amp;nbsp;365&amp;nbsp;E1-Abonnement erforderlich, während dies für Audit (Premium) nicht erforderlich ist.</field>
-        <field ref="answer">Die Überwachung (Premium) erfordert Pläne höherer Ebene, z. B. Microsoft 365 E5 oder Office 365 E5.</field>
-        <field ref="explanation">Correct: Audit (Premium) requires subscriptions to higher-tier plans like Microsoft 365 E5 to access its advanced features.</field>
-    </entry>
-    <entry id="fc_sc200_03_03_04_01">
-        <field ref="question">Was ist die maximale Anzahl von Suchaufträgen, die ein Benutzer im Microsoft Purview-Complianceportal gleichzeitig ausführen kann?</field>
-        <field ref="choices">A. Unbegrenzt, solange die Systemressourcen das zulassen
-B. Bis zu fünf Suchaufträge
-C. Bis zu zehn Suchaufträge</field>
-        <field ref="answer">Bis zu zehn Suchaufträge</field>
-        <field ref="explanation">Correct: A user can run up to 10 search jobs at the same time, which is the system limit.</field>
-    </entry>
-    <entry id="fc_sc200_03_03_06_01">
-        <field ref="question">Was macht Microsoft Purview Audit (Premium) mit doppelten Überwachungsdatensätzen, um die Protokollverwaltung zu vereinfachen?</field>
-        <field ref="choices">A. Alle Duplikate sofort löschen
-B. Duplikate innerhalb einer Stunde herausfiltern, wenn bestimmte Eigenschaften sich nicht ändern
-C. Alle Duplikate zulassen, um Datenintegrität zu gewährleisten</field>
-        <field ref="answer">Duplikate innerhalb einer Stunde herausfiltern, wenn bestimmte Eigenschaften sich nicht ändern</field>
-        <field ref="explanation">Correct: Duplicate records for the same bind operations within an hour are filtered out unless key properties change.</field>
-    </entry>
-    <entry id="fc_sc200_03_03_07_01">
-        <field ref="question">Wie hoch ist die maximale Anzahl von Einträgen, die aus einer einzelnen Überwachungsprotokollsuche in Microsoft Purview Audit in eine CSV-Datei exportiert werden können?</field>
-        <field ref="choices">A. 10.000&amp;nbsp;Einträge.
-B. 50.000&amp;nbsp;Einträge.
-C. 100.000&amp;nbsp;Einträge.</field>
-        <field ref="answer">50.000&amp;nbsp;Einträge.</field>
-        <field ref="explanation">Correct: Up to 50,000 entries can be downloaded to a CSV file from a single audit log search.</field>
-    </entry>
-    <entry id="fc_sc200_03_03_08_01">
-        <field ref="question">Was ist der maximale Aufbewahrungszeitraum, den Microsoft Purview Audit (Premium) für Überwachungsprotokolle zulässt?</field>
-        <field ref="choices">A. 180&amp;nbsp;Tage
-B. 5&amp;nbsp;Jahre
-C. 10&amp;nbsp;Jahre</field>
-        <field ref="answer">10&amp;nbsp;Jahre</field>
-        <field ref="explanation">Correct: Audit (Premium) allows organizations to set retention periods up to 10 years with the appropriate add-on license.</field>
-    </entry>
     <entry id="fc_sc200_03_03_01">
         <field ref="question">Was ist der Hauptunterschied zwischen Audit (Standard) und Audit (Premium) in Bezug auf die Aufbewahrungszeiträume von Überwachungsprotokollen?</field>
         <field ref="choices">A. Audit (Standard) erlaubt einen maximalen Aufbewahrungszeitraum von 180&amp;nbsp;Tagen.
@@ -1286,6 +1238,222 @@ C. OAuth 2.0-Authentifizierung</field>
         <field ref="answer">OAuth 2.0-Authentifizierung</field>
         <field ref="explanation">Correct. OAuth 2.0 authentication is utilized.</field>
     </entry>
+    <entry id="fc_sc200_09_02_01">
+        <field ref="question">Welche dieser Antworten ist ein gültiger Triggertyp für eine Automatisierungsregel in Microsoft Sentinel?</field>
+        <field ref="choices">A. Wenn ein Vorfall aktualisiert wird
+B. Wenn ein Verbinder hinzugefügt wird
+C. Wenn eine Watchlist geändert wird</field>
+        <field ref="answer">Wenn ein Vorfall aktualisiert wird</field>
+        <field ref="explanation">Correct. Automation rules support three trigger types: when an incident is created, when an incident is updated, and when an alert is created.</field>
+    </entry>
+    <entry id="fc_sc200_09_02_02">
+        <field ref="question">Was erstellen Sie mit Logic Apps?</field>
+        <field ref="choices">A. Automatisierungsregel
+B. Playbook
+C. Arbeitsmappe</field>
+        <field ref="answer">Playbook</field>
+        <field ref="explanation">Correct. Playbooks are created with Logic Apps.</field>
+    </entry>
+    <entry id="fc_sc200_09_02_03">
+        <field ref="question">Welche Aktionen können mit Automatisierungsregeln ausgeführt werden?</field>
+        <field ref="choices">A. Aktualisieren des Incidenttitels
+B. Löschen des Incidents
+C. Den Incidentstatus ändern</field>
+        <field ref="answer">Den Incidentstatus ändern</field>
+        <field ref="explanation">Correct. Automation rules can change the incident status.</field>
+    </entry>
+    <entry id="fc_sc200_09_05_01">
+        <field ref="question">Um was handelt es sich bei Entitäten?</field>
+        <field ref="choices">A. Datenelemente
+B. Tabellen
+C. Alarmsignale</field>
+        <field ref="answer">Datenelemente</field>
+        <field ref="explanation">Correct. The data elements include such things as Accounts, IP Addresses, Hosts</field>
+    </entry>
+    <entry id="fc_sc200_09_05_02">
+        <field ref="question">Bei welchen Elementtypen auf der Zeitachse der Entitätsseite handelt es sich um eine Aggregation relevanter Ereignisse im Zusammenhang mit der Entität?</field>
+        <field ref="choices">A. Alarmsignale
+B. Aktivitäten
+C. Lesezeichen</field>
+        <field ref="answer">Aktivitäten</field>
+        <field ref="explanation">Correct. Activities are the aggregation of events.</field>
+    </entry>
+    <entry id="fc_sc200_09_05_03">
+        <field ref="question">Welche Funktion zeigt Informationen über das Entitätsverhalten an, wenn Sie das Untersuchungsdiagramm anzeigen?</field>
+        <field ref="choices">A. Entitäten
+B. Zeitachse
+C. Einblicke</field>
+        <field ref="answer">Einblicke</field>
+        <field ref="explanation">Correct. Insights display Entity Behavior information.</field>
+    </entry>
+    <entry id="fc_sc200_09_06_01">
+        <field ref="question">Beim Erstellen einer Arbeitsbereichstransformations-DCR.  Wie lautet der Name der virtuellen Tabelle, die abgefragt werden soll?</field>
+        <field ref="choices">A. Quelle
+B. Eingabe
+C. Ziel</field>
+        <field ref="answer">Quelle</field>
+        <field ref="explanation">Correct.  source is the name of the virtual table.</field>
+    </entry>
+    <entry id="fc_sc200_09_06_02">
+        <field ref="question">Was ist ein ASIM-Parser in KQL?</field>
+        <field ref="choices">A. Variable
+B. Funktion
+C. Aggregieren</field>
+        <field ref="answer">Funktion</field>
+        <field ref="explanation">Correct. A Parser is a KQL Function.</field>
+    </entry>
+    <entry id="fc_sc200_09_06_03">
+        <field ref="question">Welcher Parameter wird von jedem Schema mindestens unterstützt, das Filterparameter unterstützt?</field>
+        <field ref="choices">A. createdon
+B. Aufnahmezeit
+C. Startzeit</field>
+        <field ref="answer">Startzeit</field>
+        <field ref="explanation">Correct. starttime and endtime parameters are the supported filtering parameters.</field>
+    </entry>
+    <entry id="fc_sc200_09_08_01">
+        <field ref="question">Mit welchen Repositorys können Sie Microsoft Sentinel verbinden?</field>
+        <field ref="choices">A. Nur Azure DevOps
+B. Nur GitHub
+C. GitHub und Azure DevOps</field>
+        <field ref="answer">GitHub und Azure DevOps</field>
+        <field ref="explanation">Correct. Both repository types are supported.</field>
+    </entry>
+    <entry id="fc_sc200_09_08_02">
+        <field ref="question">Welcher Inhaltstyp wird von Inhaltshublösungen unterstützt?</field>
+        <field ref="choices">A. Fusionregel für erweiterte mehrstufige Angriffserkennung
+B. Parser
+C. Auftrag suchen</field>
+        <field ref="answer">Parser</field>
+        <field ref="explanation">Correct. Parsers are supported in a content hub solution.</field>
+    </entry>
+    <entry id="fc_sc200_09_08_03">
+        <field ref="question">Wie groß ist die maximale Anzahl von zulässigen Repositoryverbindungen für jeden Microsoft Sentinel-Arbeitsbereich?</field>
+        <field ref="choices">A. drei
+B. Fünf
+C. Zehn</field>
+        <field ref="answer">Fünf</field>
+        <field ref="explanation">Correct. Five is the maximum connections for each workspace.</field>
+    </entry>
+    <entry id="fc_sc200_10_01_01">
+        <field ref="question">Welche der folgenden Aussagen beschreibt eine gute Hypothese am besten?</field>
+        <field ref="choices">A. Sie ist zeitlich beschränkt.
+B. Sie konzentriert sich auf bekannte Indikatoren.
+C. Sie konzentriert sich auf alle aktuellen Bedrohungen.</field>
+        <field ref="answer">Sie ist zeitlich beschränkt.</field>
+        <field ref="explanation">Correct.  The Hypothesis should be time-bound.</field>
+    </entry>
+    <entry id="fc_sc200_10_01_02">
+        <field ref="question">Welche Aussage trifft auf die Bedrohungssuche zu?</field>
+        <field ref="choices">A. Sie ist retroaktiv.
+B. Reaktiv.
+C. Proaktiv.</field>
+        <field ref="answer">Proaktiv.</field>
+        <field ref="explanation">Correct.  You are not waiting for detections to flag an anomaly.</field>
+    </entry>
+    <entry id="fc_sc200_10_01_03">
+        <field ref="question">„Wir möchten überprüfen, welche Konten cmd.exe ausgeführt haben.“ Warum ist diese Hypothese schlecht?</field>
+        <field ref="choices">A. „Cmd.exe“ ist kein Programm.
+B. Konten sind nicht mit der Ausführung von „cmd.exe“ verknüpft.
+C. Der Umfang ist zu breit.</field>
+        <field ref="answer">Der Umfang ist zu breit.</field>
+        <field ref="explanation">Correct.  Knowing which accounts have run cmd.exe doesn&apos;t prove a possible anomaly.</field>
+    </entry>
+    <entry id="fc_sc200_10_03_01">
+        <field ref="question">Wie lautet das Tabellensuffix, wenn Sie ein Archivprotokoll wiederherstellen?</field>
+        <field ref="choices">A. _RST
+B. _Wiederherstellen
+C. _RSTR</field>
+        <field ref="answer">_RST</field>
+        <field ref="explanation">Correct.  The table will have _RST as the suffix.</field>
+    </entry>
+    <entry id="fc_sc200_10_03_02">
+        <field ref="question">Wie lautet das Suffix für die Tabellen der Suchergebnisse?</field>
+        <field ref="choices">A. _SR
+B. _SRCH
+C. _SCH</field>
+        <field ref="answer">_SRCH</field>
+        <field ref="explanation">Correct.  The table will have _SRCH as the suffix.</field>
+    </entry>
+    <entry id="fc_sc200_10_03_03">
+        <field ref="question">Welche Protokolltypen werden von Suchaufträgen unterstützt?</field>
+        <field ref="choices">A. Nur Analyseprotokolle.
+B. Nur Basisprotokolle.
+C. Analyseprotokolle und Basisprotokolle.</field>
+        <field ref="answer">Analyseprotokolle und Basisprotokolle.</field>
+        <field ref="explanation">Correct.  Both log types are supported.</field>
+    </entry>
+    <entry id="fc_sc200_10_04_01">
+        <field ref="question">Welche der folgenden Funktionen werden vom msticpy-Paket bereitgestellt?</field>
+        <field ref="choices">A. Data Wrangling
+B. Analysieren von Daten
+C. Erstellen von Daten</field>
+        <field ref="answer">Analysieren von Daten</field>
+        <field ref="explanation">Correct. The msticpy package has several functions that help security investigators and hunters analyze data.</field>
+    </entry>
+    <entry id="fc_sc200_10_04_02">
+        <field ref="question">Wobei handelt es sich um eine Komponente von Notebooks in Microsoft Sentinel?</field>
+        <field ref="choices">A. Telemetrieanalyse
+B. Kernel
+C. Arbeitsmappe</field>
+        <field ref="answer">Kernel</field>
+        <field ref="explanation">Correct. Notebooks use the Kernel to parse and execute the code within the notebook</field>
+    </entry>
+    <entry id="fc_sc200_10_04_03">
+        <field ref="question">Welche Programmiersprache wird in den Beispiel-Notebooks am häufigsten verwendet?</field>
+        <field ref="choices">A. Python
+B. C#
+C. Java</field>
+        <field ref="answer">Python</field>
+        <field ref="explanation">Correct. Python is the most commonly used coding language in the sample notebooks.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_02_01">
+        <field ref="question">Welches Feature gibt es sowohl bei Microsoft Purview Audit (Standard) und Audit (Premium)?</field>
+        <field ref="choices">A. Aufbewahrung der Überwachungsprotokolle: 10&amp;nbsp;Jahre.
+B. Search-UnifiedAuditLog Cmdlet.
+C. Anpassbare Aufbewahrungsrichtlinien für Überwachungsprotokolle.</field>
+        <field ref="answer">Search-UnifiedAuditLog Cmdlet.</field>
+        <field ref="explanation">Correct: Both versions offer the Search-UnifiedAuditLog cmdlet, allowing for detailed searches within the audit logs.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_03_01">
+        <field ref="question">Was ist der Hauptunterschied zwischen den Abonnementanforderungen zwischen Microsoft Purview Audit (Standard) und Audit (Premium)?</field>
+        <field ref="choices">A. Die Überwachung (Premium) erfordert Pläne höherer Ebene, z. B. Microsoft 365 E5 oder Office 365 E5.
+B. Beide Versionen erfordern dieselben Arten von Abonnements.
+C. Für Audit (Standard) ist ein Office&amp;nbsp;365&amp;nbsp;E1-Abonnement erforderlich, während dies für Audit (Premium) nicht erforderlich ist.</field>
+        <field ref="answer">Die Überwachung (Premium) erfordert Pläne höherer Ebene, z. B. Microsoft 365 E5 oder Office 365 E5.</field>
+        <field ref="explanation">Correct: Audit (Premium) requires subscriptions to higher-tier plans like Microsoft 365 E5 to access its advanced features.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_04_01">
+        <field ref="question">Was ist die maximale Anzahl von Suchaufträgen, die ein Benutzer im Microsoft Purview-Complianceportal gleichzeitig ausführen kann?</field>
+        <field ref="choices">A. Unbegrenzt, solange die Systemressourcen das zulassen
+B. Bis zu fünf Suchaufträge
+C. Bis zu zehn Suchaufträge</field>
+        <field ref="answer">Bis zu zehn Suchaufträge</field>
+        <field ref="explanation">Correct: A user can run up to 10 search jobs at the same time, which is the system limit.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_06_01">
+        <field ref="question">Was macht Microsoft Purview Audit (Premium) mit doppelten Überwachungsdatensätzen, um die Protokollverwaltung zu vereinfachen?</field>
+        <field ref="choices">A. Alle Duplikate sofort löschen
+B. Duplikate innerhalb einer Stunde herausfiltern, wenn bestimmte Eigenschaften sich nicht ändern
+C. Alle Duplikate zulassen, um Datenintegrität zu gewährleisten</field>
+        <field ref="answer">Duplikate innerhalb einer Stunde herausfiltern, wenn bestimmte Eigenschaften sich nicht ändern</field>
+        <field ref="explanation">Correct: Duplicate records for the same bind operations within an hour are filtered out unless key properties change.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_07_01">
+        <field ref="question">Wie hoch ist die maximale Anzahl von Einträgen, die aus einer einzelnen Überwachungsprotokollsuche in Microsoft Purview Audit in eine CSV-Datei exportiert werden können?</field>
+        <field ref="choices">A. 10.000&amp;nbsp;Einträge.
+B. 50.000&amp;nbsp;Einträge.
+C. 100.000&amp;nbsp;Einträge.</field>
+        <field ref="answer">50.000&amp;nbsp;Einträge.</field>
+        <field ref="explanation">Correct: Up to 50,000 entries can be downloaded to a CSV file from a single audit log search.</field>
+    </entry>
+    <entry id="fc_sc200_03_03_08_01">
+        <field ref="question">Was ist der maximale Aufbewahrungszeitraum, den Microsoft Purview Audit (Premium) für Überwachungsprotokolle zulässt?</field>
+        <field ref="choices">A. 180&amp;nbsp;Tage
+B. 5&amp;nbsp;Jahre
+C. 10&amp;nbsp;Jahre</field>
+        <field ref="answer">10&amp;nbsp;Jahre</field>
+        <field ref="explanation">Correct: Audit (Premium) allows organizations to set retention periods up to 10 years with the appropriate add-on license.</field>
+    </entry>
     <entry id="fc_sc200_09_01_03_01">
         <field ref="question">Welche der folgenden Fälle sind keine gängigen Anwendungsfälle von Analyseregeln?</field>
         <field ref="choices">A. Identifizieren kompromittierter Konten.
@@ -1365,30 +1533,6 @@ B. Die Regel duplizieren und modifizieren, um die notwendigen Änderungen zu err
 C. Eine neue Regel erstellen.</field>
         <field ref="answer">Die Regel duplizieren und modifizieren, um die notwendigen Änderungen zu erreichen.</field>
         <field ref="explanation">When you duplicate the rule, you have a startup configuration provided from the original rule, which you can further modify.</field>
-    </entry>
-    <entry id="fc_sc200_09_02_01">
-        <field ref="question">Welche dieser Antworten ist ein gültiger Triggertyp für eine Automatisierungsregel in Microsoft Sentinel?</field>
-        <field ref="choices">A. Wenn ein Vorfall aktualisiert wird
-B. Wenn ein Verbinder hinzugefügt wird
-C. Wenn eine Watchlist geändert wird</field>
-        <field ref="answer">Wenn ein Vorfall aktualisiert wird</field>
-        <field ref="explanation">Correct. Automation rules support three trigger types: when an incident is created, when an incident is updated, and when an alert is created.</field>
-    </entry>
-    <entry id="fc_sc200_09_02_02">
-        <field ref="question">Was erstellen Sie mit Logic Apps?</field>
-        <field ref="choices">A. Automatisierungsregel
-B. Playbook
-C. Arbeitsmappe</field>
-        <field ref="answer">Playbook</field>
-        <field ref="explanation">Correct. Playbooks are created with Logic Apps.</field>
-    </entry>
-    <entry id="fc_sc200_09_02_03">
-        <field ref="question">Welche Aktionen können mit Automatisierungsregeln ausgeführt werden?</field>
-        <field ref="choices">A. Aktualisieren des Incidenttitels
-B. Löschen des Incidents
-C. Den Incidentstatus ändern</field>
-        <field ref="answer">Den Incidentstatus ändern</field>
-        <field ref="explanation">Correct. Automation rules can change the incident status.</field>
     </entry>
     <entry id="fc_sc200_09_03_03_01">
         <field ref="question">Microsoft Sentinel-Playbooks müssen von Administratoren erstellt werden. Der Administrator erstellt eine Logik-App und startet den Designer für Logik-Apps. Welchen der folgenden Connectors sollte der Administrator als Trigger für Ihr Playbook verwenden?</field>
@@ -1483,54 +1627,6 @@ D. Incidentstatus</field>
         <field ref="answer">Untersuchungsdiagramm</field>
         <field ref="explanation">The investigation graph lets you view timelines and relationships between incident resources.</field>
     </entry>
-    <entry id="fc_sc200_09_05_01">
-        <field ref="question">Um was handelt es sich bei Entitäten?</field>
-        <field ref="choices">A. Datenelemente
-B. Tabellen
-C. Alarmsignale</field>
-        <field ref="answer">Datenelemente</field>
-        <field ref="explanation">Correct. The data elements include such things as Accounts, IP Addresses, Hosts</field>
-    </entry>
-    <entry id="fc_sc200_09_05_02">
-        <field ref="question">Bei welchen Elementtypen auf der Zeitachse der Entitätsseite handelt es sich um eine Aggregation relevanter Ereignisse im Zusammenhang mit der Entität?</field>
-        <field ref="choices">A. Alarmsignale
-B. Aktivitäten
-C. Lesezeichen</field>
-        <field ref="answer">Aktivitäten</field>
-        <field ref="explanation">Correct. Activities are the aggregation of events.</field>
-    </entry>
-    <entry id="fc_sc200_09_05_03">
-        <field ref="question">Welche Funktion zeigt Informationen über das Entitätsverhalten an, wenn Sie das Untersuchungsdiagramm anzeigen?</field>
-        <field ref="choices">A. Entitäten
-B. Zeitachse
-C. Einblicke</field>
-        <field ref="answer">Einblicke</field>
-        <field ref="explanation">Correct. Insights display Entity Behavior information.</field>
-    </entry>
-    <entry id="fc_sc200_09_06_01">
-        <field ref="question">Beim Erstellen einer Arbeitsbereichstransformations-DCR.  Wie lautet der Name der virtuellen Tabelle, die abgefragt werden soll?</field>
-        <field ref="choices">A. Quelle
-B. Eingabe
-C. Ziel</field>
-        <field ref="answer">Quelle</field>
-        <field ref="explanation">Correct.  source is the name of the virtual table.</field>
-    </entry>
-    <entry id="fc_sc200_09_06_02">
-        <field ref="question">Was ist ein ASIM-Parser in KQL?</field>
-        <field ref="choices">A. Variable
-B. Funktion
-C. Aggregieren</field>
-        <field ref="answer">Funktion</field>
-        <field ref="explanation">Correct. A Parser is a KQL Function.</field>
-    </entry>
-    <entry id="fc_sc200_09_06_03">
-        <field ref="question">Welcher Parameter wird von jedem Schema mindestens unterstützt, das Filterparameter unterstützt?</field>
-        <field ref="choices">A. createdon
-B. Aufnahmezeit
-C. Startzeit</field>
-        <field ref="answer">Startzeit</field>
-        <field ref="explanation">Correct. starttime and endtime parameters are the supported filtering parameters.</field>
-    </entry>
     <entry id="fc_sc200_09_07_03_01">
         <field ref="question">Ein Administrator möchte eine zuvor gespeicherte Abfrage öffnen. Welche der folgenden Optionen müssen Administrator*innen nach dem Öffnen der Seite „Protokolle“ in Microsoft Sentinel auswählen?</field>
         <field ref="choices">A. Fragen
@@ -1595,54 +1691,6 @@ C. Rastervisualisierung</field>
         <field ref="answer">Rastervisualisierung</field>
         <field ref="explanation">You can use grids visualization to present the data in tables.</field>
     </entry>
-    <entry id="fc_sc200_09_08_01">
-        <field ref="question">Mit welchen Repositorys können Sie Microsoft Sentinel verbinden?</field>
-        <field ref="choices">A. Nur Azure DevOps
-B. Nur GitHub
-C. GitHub und Azure DevOps</field>
-        <field ref="answer">GitHub und Azure DevOps</field>
-        <field ref="explanation">Correct. Both repository types are supported.</field>
-    </entry>
-    <entry id="fc_sc200_09_08_02">
-        <field ref="question">Welcher Inhaltstyp wird von Inhaltshublösungen unterstützt?</field>
-        <field ref="choices">A. Fusionregel für erweiterte mehrstufige Angriffserkennung
-B. Parser
-C. Auftrag suchen</field>
-        <field ref="answer">Parser</field>
-        <field ref="explanation">Correct. Parsers are supported in a content hub solution.</field>
-    </entry>
-    <entry id="fc_sc200_09_08_03">
-        <field ref="question">Wie groß ist die maximale Anzahl von zulässigen Repositoryverbindungen für jeden Microsoft Sentinel-Arbeitsbereich?</field>
-        <field ref="choices">A. drei
-B. Fünf
-C. Zehn</field>
-        <field ref="answer">Fünf</field>
-        <field ref="explanation">Correct. Five is the maximum connections for each workspace.</field>
-    </entry>
-    <entry id="fc_sc200_10_01_01">
-        <field ref="question">Welche der folgenden Aussagen beschreibt eine gute Hypothese am besten?</field>
-        <field ref="choices">A. Sie ist zeitlich beschränkt.
-B. Sie konzentriert sich auf bekannte Indikatoren.
-C. Sie konzentriert sich auf alle aktuellen Bedrohungen.</field>
-        <field ref="answer">Sie ist zeitlich beschränkt.</field>
-        <field ref="explanation">Correct.  The Hypothesis should be time-bound.</field>
-    </entry>
-    <entry id="fc_sc200_10_01_02">
-        <field ref="question">Welche Aussage trifft auf die Bedrohungssuche zu?</field>
-        <field ref="choices">A. Sie ist retroaktiv.
-B. Reaktiv.
-C. Proaktiv.</field>
-        <field ref="answer">Proaktiv.</field>
-        <field ref="explanation">Correct.  You are not waiting for detections to flag an anomaly.</field>
-    </entry>
-    <entry id="fc_sc200_10_01_03">
-        <field ref="question">„Wir möchten überprüfen, welche Konten cmd.exe ausgeführt haben.“ Warum ist diese Hypothese schlecht?</field>
-        <field ref="choices">A. „Cmd.exe“ ist kein Programm.
-B. Konten sind nicht mit der Ausführung von „cmd.exe“ verknüpft.
-C. Der Umfang ist zu breit.</field>
-        <field ref="answer">Der Umfang ist zu breit.</field>
-        <field ref="explanation">Correct.  Knowing which accounts have run cmd.exe doesn&apos;t prove a possible anomaly.</field>
-    </entry>
     <entry id="fc_sc200_10_02_03_01">
         <field ref="question">Welche Codesyntax wird für Microsoft Sentinel-Huntingabfragen verwendet?</field>
         <field ref="choices">A. T-SQL (Transact-SQL)
@@ -1666,53 +1714,5 @@ B. Warnungsdatenparameter
 C. Ereignisentitäten</field>
         <field ref="answer">Zeitparameter</field>
         <field ref="explanation">Time parameters can&apos;t be used because livestream queries run continuously.</field>
-    </entry>
-    <entry id="fc_sc200_10_03_01">
-        <field ref="question">Wie lautet das Tabellensuffix, wenn Sie ein Archivprotokoll wiederherstellen?</field>
-        <field ref="choices">A. _RST
-B. _Wiederherstellen
-C. _RSTR</field>
-        <field ref="answer">_RST</field>
-        <field ref="explanation">Correct.  The table will have _RST as the suffix.</field>
-    </entry>
-    <entry id="fc_sc200_10_03_02">
-        <field ref="question">Wie lautet das Suffix für die Tabellen der Suchergebnisse?</field>
-        <field ref="choices">A. _SR
-B. _SRCH
-C. _SCH</field>
-        <field ref="answer">_SRCH</field>
-        <field ref="explanation">Correct.  The table will have _SRCH as the suffix.</field>
-    </entry>
-    <entry id="fc_sc200_10_03_03">
-        <field ref="question">Welche Protokolltypen werden von Suchaufträgen unterstützt?</field>
-        <field ref="choices">A. Nur Analyseprotokolle.
-B. Nur Basisprotokolle.
-C. Analyseprotokolle und Basisprotokolle.</field>
-        <field ref="answer">Analyseprotokolle und Basisprotokolle.</field>
-        <field ref="explanation">Correct.  Both log types are supported.</field>
-    </entry>
-    <entry id="fc_sc200_10_04_01">
-        <field ref="question">Welche der folgenden Funktionen werden vom msticpy-Paket bereitgestellt?</field>
-        <field ref="choices">A. Data Wrangling
-B. Analysieren von Daten
-C. Erstellen von Daten</field>
-        <field ref="answer">Analysieren von Daten</field>
-        <field ref="explanation">Correct. The msticpy package has several functions that help security investigators and hunters analyze data.</field>
-    </entry>
-    <entry id="fc_sc200_10_04_02">
-        <field ref="question">Wobei handelt es sich um eine Komponente von Notebooks in Microsoft Sentinel?</field>
-        <field ref="choices">A. Telemetrieanalyse
-B. Kernel
-C. Arbeitsmappe</field>
-        <field ref="answer">Kernel</field>
-        <field ref="explanation">Correct. Notebooks use the Kernel to parse and execute the code within the notebook</field>
-    </entry>
-    <entry id="fc_sc200_10_04_03">
-        <field ref="question">Welche Programmiersprache wird in den Beispiel-Notebooks am häufigsten verwendet?</field>
-        <field ref="choices">A. Python
-B. C#
-C. Java</field>
-        <field ref="answer">Python</field>
-        <field ref="explanation">Correct. Python is the most commonly used coding language in the sample notebooks.</field>
     </entry>
 </vocabulary>

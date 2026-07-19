@@ -28,7 +28,126 @@ body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color:
 <body>
 <div class="section-title">Übersicht über Microsoft Purview Audit</div>
 <div class="section-content">
-<p><em>Kein Inhalt extrahiert.</em></p><p>Quelle: https://learn.microsoft.com/de-de/training/modules/purview-audit-search-investigate/audit-overview/</p>
+<p>Datensicherheit und Compliance erfordern klare Einblicke in Benutzer- und Administratoraktivitäten. Microsoft Purview Audit zeichnet Aktivitäten in Microsoft 365-Diensten auf, damit Sie Ereignisse analysieren, Probleme untersuchen und behördliche Anforderungen erfüllen können.</p>
+<h2 id="microsoft-purview-auditing-solutions">Microsoft Purview-Überwachungslösungen</h2>
+<p>Die Überwachung (Standard) ist standardmäßig für die meisten Mandanten aktiviert und ermöglicht es Ihnen, Tausende von Aktivitäten in Microsoft 365 zu durchsuchen. Die Überwachung (Premium) basiert auf dieser Richtlinie mit Aufbewahrungsrichtlinien für Überwachungsprotokolle, längerer Aufbewahrung, intelligenten Erkenntnissen und höherer Bandbreite für die Office 365-Verwaltungsaktivitäts-API.</p>
+<h2 id="key-capabilities-at-a-glance">Wichtige Funktionen auf einen Blick</h2>
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Überwachung (Standard)</th>
+<th>Überwachung (Premium)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standardmäßig aktiviert</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Tausende von Aktivitäten durchsuchen</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Exportieren von Suchergebnissen in CSV</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>
+              <code>Search-UnifiedAuditLog</code> PowerShell-Cmdlet</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Office 365-Verwaltungsaktivitäts-API-Zugriff</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Höhere API-Bandbreitenzuweisung</td>
+<td></td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Standardaufbewahrung bis zu 180 Tage</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Standardmäßige Aufbewahrung von 1 Jahren für Microsoft Entra-ID, Exchange, SharePoint, OneDrive</td>
+<td></td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Aufbewahrungsrichtlinien für Überwachungsprotokolle (bis zu 10 Jahre mit Add-On)</td>
+<td></td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Intelligente Einblicke (für hochwertige Ereignisse wie den E-Mail-Zugriff)</td>
+<td></td>
+<td>✔</td>
+</tr>
+<tr>
+<td>Suchdiagramm-API überwachen</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+</tbody>
+</table>
+<h2 id="audit-standard-in-microsoft-purview">Überwachung (Standard) in Microsoft Purview</h2>
+<p>Überwachungsprotokolle (Standard) und ermöglicht eine breite Palette von Aktivitäten, die von Benutzern und Administratoren in allen Microsoft 365-Diensten ausgeführt werden. Dies unterstützt forensische Untersuchungen, IT-Problembehandlung und Complianceüberprüfungen.</p>
+<ul>
+<li>
+              <strong>Standardmäßig aktiviert</strong>: Für die Aktivitätsprotokollierung in Organisationen mit berechtigten Abonnements ist kein manuelles Setup erforderlich. Sie müssen benutzern nur Berechtigungen für den Zugriff auf das Überwachungssuchtool im Microsoft Purview-Portal zuweisen.</li>
+<li>
+              <strong>Tausende von durchsuchbaren Überwachungsereignissen</strong>: Umfasst Ereignisse aus mehreren Microsoft 365-Diensten, die eine umfassende Ansicht der Benutzer- und Administratoraktivitäten ermöglichen.</li>
+<li>
+              <strong>Durchsuchbarkeit</strong>: Überwachungsprotokolle können im Microsoft Purview-Portal nach Aktivität, Benutzer oder Zeitrahmen durchsucht werden. Sie können das <code>Search-UnifiedAuditLog</code> Cmdlet auch in Exchange Online PowerShell für erweiterte oder automatisierte Suchvorgänge verwenden.</li>
+<li>
+              <strong>In CSV exportieren</strong>: Suchergebnisse können für eine tiefere Analyse in Excel oder anderen Tools exportiert werden.</li>
+<li>
+              <strong>API-Zugriff</strong>: Die Office 365-Verwaltungsaktivitäts-API ermöglicht die Integration mit SIEM-Systemen oder langfristigem Speicher.</li>
+<li>
+              <strong>Aufbewahrung von 180 Tagen</strong>: Standardmäßig werden Überwachungsdatensätze 180 Tage lang aufbewahrt.</li>
+</ul>
+<h2 id="audit-premium-in-microsoft-purview">Überwachung (Premium) in Microsoft Purview</h2>
+<p>Die Überwachung (Premium) umfasst alle Funktionen von Audit (Standard) und fügt erweiterte Tools zum Verwalten von Überwachungsdaten und zur Durchführung detaillierter Untersuchungen hinzu.</p>
+<ul>
+<li>
+              <strong>Aufbewahrungsrichtlinien für Überwachungsprotokolle</strong>: Konfigurieren Sie Richtlinien für die Aufbewahrung von Datensätzen bis zu einem Jahr oder bis zu 10 Jahre mit der erforderlichen Add-On-Lizenz.</li>
+<li>
+              <strong>Längere Standardaufbewahrung</strong>: Datensätze von Microsoft Entra ID, Exchange, SharePoint und OneDrive werden standardmäßig für ein Jahr aufbewahrt. Andere Workloads folgen der standardmäßigen Aufbewahrung von 180 Tagen, es sei denn, sie werden von einer benutzerdefinierten Richtlinie abgedeckt.</li>
+<li>
+              <strong>Intelligente Einblicke</strong>: Umfasst hochwertige Ereignisse, die tieferen Kontext erfassen, z. B. wenn auf ein bezeichnetes E-Mail-Element zugegriffen wird oder wenn ein Benutzer Suchvorgänge in Exchange Online oder SharePoint Online durchführt.</li>
+<li>
+              <strong>Höhere API-Bandbreite</strong>: Premium-Benutzer erhalten ungefähr doppelt so viele Bandbreitenzuweisungen für die Office 365-Verwaltungsaktivitäts-API im Vergleich zu Standard.</li>
+</ul>
+<h3 id="long-term-retention-of-audit-logs">Langfristige Aufbewahrung von Überwachungsprotokollen</h3>
+<ul>
+<li>
+              <strong>Standardeinstellung für ein Jahr</strong>: Gilt automatisch für Microsoft Entra-ID- und Exchange-, SharePoint- und OneDrive-Überwachungsdatensätze.</li>
+<li>
+              <strong>Bis zu 10 Jahre Option</strong>: Mit der Add-On-Lizenz können Sie angegebene Überwachungsdatensätze für bis zu 10 Jahre aufbewahren. Diese Einstellung gilt ab dem Zeitpunkt der Erstellung der Richtlinie und erweitert nicht rückwirkend ältere Daten.</li>
+</ul>
+<h3 id="audit-log-retention-policies">Aufbewahrungsrichtlinien für Überwachungsprotokolle</h3>
+<p>Aufbewahrungsrichtlinien können nach Dienst, Aktivitätstyp oder Benutzer festgelegt werden. Richtlinien haben Prioritäten, um zu steuern, welche Bereiche gelten, wenn sich Bereiche überschneiden. Das Ändern einer Richtlinie wirkt sich nur auf die künftigen Daten aus; Zuvor protokollierte Daten behalten das ursprüngliche Ablaufdatum bei.</p>
+<h3 id="audit-premium-activities">Audit (Premium)-Aktivitäten</h3>
+<p>Die Überwachung (Premium) kann präzisere Aktivitäten aufzeichnen, z. B.:</p>
+<ul>
+<li>
+              <strong>Exchange Online</strong>: Protokolliert den Zugriff auf E-Mail-Elemente, einschließlich Details zu Elementen mit Vertraulichkeitsbezeichnungen.</li>
+<li>
+              <strong>Microsoft Teams</strong>: Erfasst Chatinteraktionen, Besprechungsteilnahmedetails und Nachrichtenänderungen oder Löschungen.</li>
+</ul>
+<h2 id="copilot-and-ai-application-auditing">Copilot und KI-Anwendungsüberwachung</h2>
+<p>Interaktionen mit <strong>Microsoft Copilot und unterstützten KI-Apps</strong> werden beim Aktivieren der Überwachung im einheitlichen Überwachungsprotokoll protokolliert. Sie können nach Anzeigenamen oder Vorgang suchen (z. B. das <strong>CopilotInteraction-Ereignis</strong> und verwandte Datensatztypen). Schemafelder enthalten Kontext wie Thread-IDs und zugriffe Ressourcen.</p>
+<h2 id="where-you-work">Wo Sie arbeiten</h2>
+<p>Verwenden Sie das <strong>Microsoft Purview-Portal</strong> , um gezielte Suchvorgänge auszuführen, sie zu speichern und Ergebnisse zu exportieren. Sie können PowerShell auch für Skriptabfragen und Automatisierung und die Unified Audit Log Retention Cmdlets verwenden, um Aufbewahrungsrichtlinien zu erstellen und zu verwalten.</p>
 </div>
 </body>
 </html>

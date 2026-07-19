@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lesson id="lesson_sg_01_03" title="Zielgruppenprofil">
+    <body><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color: #222; }
+.section-title { font-size: 1.35em; font-weight: bold; margin-bottom: 12px; }
+.section-content p { margin: 10px 0; }
+.section-content img { max-width: 100%; height: auto; margin: 12px 0; }
+.section-content pre, .section-content code { font-family: Consolas, monospace; }
+.section-content pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 6px; }
+.section-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+.section-content th, .section-content td { border: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+.section-content th { background: #f0f0f0; }
+.section-content ul, .section-content ol { padding-left: 20px; }
+.section-content li { margin: 6px 0; }
+.section-content h2, .section-content h3, .section-content h4 { margin-top: 18px; margin-bottom: 8px; }
+.section-content blockquote { border-left: 4px solid #1565c0; padding: 8px 12px; margin: 12px 0; background: #f5f9ff; }
+.section-content a { color: #1565c0; text-decoration: none; }
+.NOTE, .TIP, .IMPORTANT, .WARNING, .CAUTION { border-left: 4px solid #ff9800; padding: 8px 12px; margin: 12px 0; background: #fff8ef; }
+.source { margin-top: 20px; font-size: 0.9em; color: #555; }
+</style>
+</head>
+<body>
+<div class="section-title">Zielgruppenprofil</div>
+<div class="section-content">
+<p>Als Kandidat für diese Prüfung sind Sie ein Sicherheitsbetriebsanalyst, der das Organisationsrisiko reduziert, indem Sie Triage durchführen, auf Vorfälle reagieren, Bedrohungen suchen und technische Erkennungen durchführen.</p>
+<p>Als Sicherheitsanalyst überwachen, identifizieren, untersuchen und reagieren Sie auf Bedrohungen in Multi-Cloud- und lokalen Umgebungen mithilfe von Microsoft Defender XDR, Microsoft Sentinel, Microsoft Entra ID, Microsoft Purview und Microsoft Defender für Cloud-Workload-Schutz. Sie führen die Suche durch, indem Sie KQL verwenden und Reaktionen auf Bedrohungen automatisieren.</p>
+<p>Sie arbeiten mit der Geschäftsführung und Führungskräften im Sicherheitsbereich zusammen, um Sicherheitsstandards für die Organisation zu definieren. Sie arbeiten mit Personen in anderen Rollen im digitalen Unternehmen zusammen, um die Standards zu implementieren, den Sicherheitsstatus einer Organisation zu verbessern und das Sicherheitsbewusstsein zu erhöhen.</p>
+<p>Als Kandidat*in sollten Sie mit Folgendem vertraut sein:</p>
+<ul>
+<li>Microsoft-Sicherheits-, Compliance- und Identitätslösungen</li>
+<li>Microsoft 365</li>
+<li>Azure Cloud Services</li>
+<li>KI-Agenten und Copiloten</li>
+<li>Windows-, Linux- und mobile Betriebssysteme.</li>
+</ul>
+<p class="source">Quelle: <a href="https://learn.microsoft.com/de-de/credentials/certifications/resources/study-guides/sc-200">Studienleitfaden für Examen SC-200 (Microsoft Learn)</a></p>
+</div>
+</body>
+</html>
+]]></body>
+</lesson>

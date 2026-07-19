@@ -28,7 +28,115 @@ body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color:
 <body>
 <div class="section-title">Untersuchen von Aktivitäten mit Audit (Premium)</div>
 <div class="section-content">
-<p><em>Kein Inhalt extrahiert.</em></p><p>Quelle: https://learn.microsoft.com/de-de/training/modules/purview-audit-search-investigate/audit-premium-investigate/</p>
+<p>Microsoft Purview Audit (Premium) bietet erweiterte Features für die Durchführung detaillierter Untersuchungen von Benutzeraktivitäten innerhalb von Microsoft 365-Diensten. Diese Funktionen unterstützen forensische Analysen, helfen bei der Identifizierung von unregelmäßigen Zugriffsmustern und stellen die erforderlichen Details bereit, um effektiv auf Vorfälle zu reagieren.</p>
+<h2 id="audit-premium-overview">Übersicht über Audit (Premium)</h2>
+<p>Audit (Premium) baut auf Audit (Standard) auf, indem Funktionen hinzugefügt werden, die Untersuchungen gründlicher und effizienter machen, einschließlich:</p>
+<ul>
+<li>
+              <strong>Erweiterte Datenaufbewahrung</strong>: Standardmäßige einjährige Aufbewahrung für Microsoft Entra-ID, Exchange, OneDrive und SharePoint-Überwachungsdatensätze; bis zu 10 Jahre mit der entsprechenden Add-On-Lizenz.</li>
+<li>
+              <strong>Anpassbare Aufbewahrungsrichtlinien</strong>: Aufbewahren von Überwachungsdatensätzen für bestimmte Dienste, Aktivitäten oder Benutzer für definierte Zeiträume.</li>
+<li>
+              <strong>Erhöhte API-Bandbreite: Mehr</strong> Kapazität zum Abrufen von Daten über die Office 365-Verwaltungsaktivitäts-API.</li>
+<li>
+              <strong>Intelligente Einblicke</strong>: Detaillierte Einblicke in bestimmte Aktivitäten, z. B. den Zugriff auf bezeichnete E-Mail-Elemente und das Verhalten der Benutzersuche in Exchange Online und SharePoint Online.</li>
+</ul>
+<h2 id="investigate-compromised-accounts-with-mailitemsaccessed">Untersuchen kompromittierter Konten mit MailItemsAccessed</h2>
+<p>
+              <strong>MailItemsAccessed bietet detaillierte Aufzeichnungen</strong> darüber, wie und wann auf E-Mails zugegriffen wird, wodurch es zu einem kritischen Ereignistyp für Untersuchungen mit vertraulicher Kommunikation wird.</p>
+<h3 id="understand-sync-and-bind-access">Verstehen von Synchronisierungs- und Bindungszugriff</h3>
+<ul>
+<li>
+              <strong>Synchronisierungszugriff</strong>: Protokolliert ein einzelnes Ereignis, wenn mehrere E-Mails während einer Sitzung heruntergeladen werden, z. B. bei Verwendung von Outlook.</li>
+<li>
+              <strong>Bindungszugriff</strong>: Protokolliert jedes Mal, wenn eine einzelne E-Mail geöffnet oder mit dieser interagiert wird.</li>
+</ul>
+<h3 id="manage-audit-log-volume">Verwalten der Überwachungsprotokollgröße</h3>
+<p>Um die Leistung aufrechtzuerhalten, drosselt Exchange Online die MailItemsAccessed-Protokollierung, wenn ein Postfach mehr als 1.000 Bindungsereignisse in 24 Stunden protokolliert. Drosselnd:</p>
+<ul>
+<li>Wirkt sich auf weniger als 1% von Postfächern aus.</li>
+<li>Die Protokollierung für MailItemsAccessed-Ereignisse wird nur angehalten, nicht für andere Aktivitäten</li>
+<li>Gilt nur für Bindungsvorgänge; Synchronisierungsaktivitäten sind nicht betroffen</li>
+<li>Kann zu Lücken führen, bei denen Bindungsereignisse nicht aufgezeichnet wurden</li>
+</ul>
+<h3 id="scenario-investigate-using-mailitemsaccessed-in-a-healthcare-setting">Szenario: Untersuchung im Gesundheitswesen mithilfe von MailItemsAccessed</h3>
+<p>Als Reaktion auf ungewöhnliche Zugriffsmuster für elektronische Gesundheitsakten (EHR) in einem Netzwerk von Gesundheitseinrichtungen verwendet das Complianceteam Microsoft Purview Audit (Premium), um die Aktivität detailliert zu untersuchen. Sie möchten bestätigen, ob der Zugriff autorisiert wurde, und die Einhaltung der Gesundheitsdatenschutzgesetze sicherstellen. Dabei befolgt es diese Schritte:</p>
+<ol>
+<li><p>
+              <strong>Setup und Datensammlung</strong>:</p>
+<ul>
+<li>Identifizieren Sie zunächst die Postfächer, die mit Benutzern verknüpft sind, die Zugriff auf vertrauliche Patientendaten haben, und definieren Sie den Zeitraum, in dem verdächtige Aktivitäten erkannt wurden.</li>
+<li>Verwenden Sie das Cmdlet <code>Search-UnifiedAuditLog</code> oder <code>Search-MailboxAuditLog</code>, um Datensätze für MailItemsAccessed für den verdächtigen Zeitraum abzurufen.</li>
+</ul>
+<pre><code class="lang-powershell">Search-UnifiedAuditLog -StartDate "2020-01-06" -EndDate "2020-01-20" -UserIds "user1, user2" -Operations MailItemsAccessed -ResultSize 1000
+</code></pre>
+</li>
+<li><p>
+              <strong>Überprüfung auf Drosselung:</strong></p>
+<ul>
+<li>Führen Sie angesichts der hohen Vertraulichkeit der Daten eine Überprüfung auf Anzeichen für eine Drosselung durch. Diese können auf Zeiträume hindeuten, in denen die Protokollierung angehalten wurde und ein nicht autorisierter Zugriff möglicherweise nicht aufgezeichnet wurde.</li>
+</ul>
+<pre><code class="lang-powershell">Search-UnifiedAuditLog -StartDate "2020-01-06" -EndDate "2020-01-20" -UserIds "user1, user2" -Operations MailItemsAccessed -ResultSize 1000 | Where {$_.AuditData -like '*"IsThrottled","Value":"True"*'} | FL
+</code></pre>
+</li>
+<li><p>
+              <strong>Analysieren von Synchronisierungs- und Bindungsaktivitäten:</strong></p>
+<ul>
+<li>Untersuchen Sie den Umfang des Datenzugriffs. Konzentrieren Sie sich darauf, ob ganze Ordner, die vertrauliche Patienteninformationen enthalten, heruntergeladen wurden (Synchronisierung) oder ob bestimmte vertrauliche E-Mails geöffnet wurden (Binden).</li>
+<li>
+              <strong>Überprüfen der Synchronisierungsaktivitäten:</strong></li>
+</ul>
+<pre><code class="lang-powershell">Search-UnifiedAuditLog -StartDate "2020-01-06" -EndDate "2020-02-20" -UserIds "user1, user2" -Operations MailItemsAccessed -ResultSize 1000 | Where {$_.AuditData -like '*"MailAccessType","Value":"Sync"*'} | FL
+</code></pre>
+<ul>
+<li>
+              <strong>Überprüfen der Bindungsaktivitäten:</strong></li>
+</ul>
+<pre><code class="lang-powershell">Search-UnifiedAuditLog -StartDate "2020-01-06" -EndDate "2020-01-20" -UserIds "user1, user2" -Operations MailItemsAccessed -ResultSize 1000 | Where {$_.AuditData -like '*"MailAccessType","Value":"Bind"*'} | FL
+</code></pre>
+</li>
+<li><p>
+              <strong>Kontextanalyse für Zugriffe:</strong></p>
+<ul>
+<li>Vergleichen Sie IP-Adressen und Sitzungs-IDs, um reguläre Benutzeraktionen von ungewöhnlichen oder nicht autorisierten Zugriffen zu trennen. Dies hilft dabei, im Detail zu ermitteln, wie und potenziell auch warum eine Person sich Zugriff verschafft hat.</li>
+</ul>
+</li>
+<li><p>
+              <strong>Forensische Wiederherstellung und Berichterstellung:</strong></p>
+<ul>
+<li>Identifizieren Sie für jede Instanz, über die auf eine E-Mail zugegriffen wurde (Bindungszugriff), die betroffenen E-Mails mithilfe der jeweiligen InternetMessageId. Überprüfen Sie, ob diese E-Mails vertrauliche Patientendaten enthalten.</li>
+<li>Halten Sie alle Ergebnisse klar fest, um sicherzustellen, dass bei diesen die Complianceregeln für das Gesundheitswesen erfüllt sind. Verwenden Sie diese Dokumentation als Hilfestellung für den Umgang mit möglichen Folgen und die Verbesserung von Datenschutzmaßnahmen.</li>
+</ul>
+</li>
+</ol>
+<h3 id="manage-duplicate-audit-records">Verwalten doppelter Überwachungsdatensätze</h3>
+<p>In Umgebungen mit hoher Aktivität können doppelte Überwachungsdatensätze die Analyse von Protokollen unübersichtlich und kompliziert machen. Audit (Premium) filtert doppelte Datensätze für identische Bindungsvorgänge heraus, die innerhalb einer Stunde erfolgen, um Überwachungsprotokolle zu verbessern. So wird mit Duplikaten umgegangen:</p>
+<ul>
+<li><p>
+              <strong>Synchronisierungsvorgänge</strong> werden in Intervallen von je einer Stunde gefiltert, es sei denn, es werden unterschiedliche Änderungen bei Schlüsseleigenschaften erkannt.</p>
+</li>
+<li><p>Für <strong>Bindungsvorgänge</strong> wird nur dann ein neuer Überwachungsdatensatz generiert, wenn bestimmte Eigenschaften von denen zuvor innerhalb derselben Stunde protokollierter Vorgänge abweichen. Zu diesen Eigenschaften zählen folgende:</p>
+<ul>
+<li>
+              <strong>ClientIPAddress:</strong> Die IP-Adresse, von der aus auf das Postfach zugegriffen wurde</li>
+<li>
+              <strong>ClientInfoString:</strong> Details zum verwendeten Client und Protokoll</li>
+<li>
+              <strong>ParentFolder:</strong> Ort innerhalb des Postfachs</li>
+<li>
+              <strong>Logon_type:</strong> Unterscheidet zwischen dem Zugriff als Besitzer, Administrator und Stellvertretung</li>
+<li>
+              <strong>MailAccessType:</strong> Gibt an, ob der Vorgang eine Bindung oder Synchronisierung war</li>
+<li>
+              <strong>MailboxUPN</strong> und <strong>User</strong>: Identität des Postfachs und des Benutzers, der darauf zugreift</li>
+<li>
+              <strong>SessionId:</strong> Hilft bei der Unterscheidung zwischen verschiedenen Zugriffssitzungen und zeigt deutlich den zeitlichen Ablauf von Aktionen</li>
+</ul>
+</li>
+</ul>
+<p>Mit dieser Filterung wird sichergestellt, dass die Protokolle überschaubar und aussagekräftig bleiben, indem die Redundanz verringert wird, ohne dass die Granularität verloren geht, die für gründliche Untersuchungen erforderlich ist.</p>
+<h3 id="contextual-analysis-of-audit-records">Kontextanalyse für Überwachungsdatensätze</h3>
+<p>Um legitime Aktivitäten von möglichen Verstößen zu unterscheiden, überprüft das Complianceteam kontextbezogene Daten wie IP-Adressen, Sitzungs-IDs und Nachrichten-IDs. Auf diese Weise können sie überprüfen, ob der Zugriff auf etablierte Muster passt oder einen Vorfall anzeigt, der weitere Maßnahmen erfordert.</p>
 </div>
 </body>
 </html>

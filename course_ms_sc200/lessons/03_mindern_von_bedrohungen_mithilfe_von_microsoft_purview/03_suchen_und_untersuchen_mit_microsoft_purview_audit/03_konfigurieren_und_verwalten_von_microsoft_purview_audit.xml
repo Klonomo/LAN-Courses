@@ -28,7 +28,82 @@ body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color:
 <body>
 <div class="section-title">Konfigurieren und Verwalten von Microsoft Purview Audit</div>
 <div class="section-content">
-<p><em>Kein Inhalt extrahiert.</em></p><p>Quelle: https://learn.microsoft.com/de-de/training/modules/purview-audit-search-investigate/audit-configure-manage/</p>
+<p>Mit Microsoft Purview Audit (Standard) und Audit (Premium) können Sie nach Überwachungsdatensätzen von Benutzer- und Administratoraktivitäten in microsoft 365-Diensten suchen. Die Überwachung (Standard) ist standardmäßig aktiviert und bietet sofortigen Zugriff auf Überwachungsprotokolle. Die Überwachung (Premium) erfordert eine zusätzliche Konfiguration, um die erweiterten Funktionen zu entsperren.</p>
+<h2 id="configure-audit-in-microsoft-purview">Konfigurieren der Überwachung in Microsoft Purview</h2>
+<p>Um microsoft Purview Audit effektiv zu verwenden, müssen Sie bestätigen, dass Ihre Organisation die Lizenzierungs- und Berechtigungsanforderungen erfüllt, und dann alle zusätzlichen Features basierend auf Ihrer Edition konfigurieren. Die folgenden Schritte führen Sie durch den Prozess.</p>
+<h3 id="step-1-verify-subscription-and-licensing">Schritt 1: Überprüfen des Abonnements und der Lizenzierung</h3>
+<p>Vergewissern Sie sich, dass Ihre Organisation über die erforderlichen Abonnements und Lizenzen verfügt, bevor Sie Überwachungsfeatures verwenden.</p>
+<p>
+              <strong>Überwachung (Standard)</strong> ist in:</p>
+<ul>
+<li>
+              <strong>Microsoft&nbsp;365</strong>: E3, E5, F1, F3</li>
+<li>
+              <strong>Office&nbsp;365</strong>: E1, E3, E5, F3</li>
+</ul>
+<p>
+              <strong>Die Überwachung (Premium)</strong> erfordert Folgendes:</p>
+<ul>
+<li>
+              <strong>Microsoft&nbsp;365</strong>: E5, E5 Compliance, F5 Compliance, F5 Security&nbsp;+ Compliance</li>
+<li>
+              <strong>Office&nbsp;365</strong>: E5</li>
+</ul>
+<p>Audit (Premium) unterstützt erweiterte Features wie erweiterte Aufbewahrung und intelligente Einblicke für Complianceuntersuchungen.</p>
+<h3 id="step-2-assign-permissions-to-search-the-audit-log">Schritt 2: Zuweisen von Berechtigungen zum Durchsuchen des Überwachungsprotokolls</h3>
+<p>Berechtigungen sind für autorisierte Mitarbeiter wie Administratoren oder Untersuchungsteams erforderlich, um Überwachungsprotokolle anzuzeigen und zu verwalten.</p>
+<p>Weisen Sie die <strong>Rollen "Überwachungsprotokolle</strong> " oder <strong> "View-Only Überwachungsprotokolle</strong> " im Microsoft Purview-Portal zu. Diese Rollen sind in den Rollengruppen <strong>"Audit Reader</strong> " und <strong>"Audit Manager</strong> " enthalten.</p>
+<ul>
+<li>
+              <strong>Überwachungs-Manager</strong>: Mit dieser Rolle können Sie Überwachungsprotokolle durchsuchen und exportieren und Überwachungseinstellungen verwalten, einschließlich aktivieren oder deaktivieren der Protokollierung.</li>
+<li>
+              <strong>Überwachungsleseberechtigter</strong>: Mit dieser Rolle können Sie Überwachungsprotokolle durchsuchen und exportieren, änderungen an Überwachungseinstellungen jedoch nicht zulassen.</li>
+</ul>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Die Schritte 3-5 gelten nur für Audit (Premium).</p>
+</div>
+<h3 id="step-3-set-up-audit-premium-for-users">Schritt&nbsp;3: Einrichten von Audit (Premium) für Benutzerinnen und Benutzer</h3>
+<p>Überwachungsfeatures (Premium) wie das Protokollieren intelligenter Erkenntnisse erfordern eine bestimmte Lizenzierungs- und Serviceplanaktivierung.</p>
+<ol>
+<li>Wechseln Sie im <strong>Microsoft 365 Admin Center</strong> zu <strong>"Benutzer</strong>&gt;<strong>aktive Benutzer</strong>", und wählen Sie dann einen Benutzer aus.</li>
+<li>Wählen Sie auf der Seite mit den Benutzereigenschaften <strong>Lizenzen und Apps</strong> aus. Überprüfen Sie, ob der Benutzer über eine E5- oder die entsprechende Add-On-Lizenz verfügt.</li>
+<li>Stellen Sie in <strong>Apps</strong> sicher, dass <strong>die erweiterte Überwachung von Microsoft 365</strong> ausgewählt ist. Wenn nicht, wählen Sie sie aus, und speichern Sie Änderungen.</li>
+</ol>
+<p>Die Premiumprotokollierung für Ereignisse wie <strong>MailItemsAccessed</strong> und <strong>Send</strong> beginnt innerhalb von 24 Stunden. Für Ereignisse wie <strong>SearchQueryInitiatedExchange</strong> und <strong>SearchQueryInitiatedSharePoint</strong> ist eine weitere Konfiguration erforderlich.</p>
+<h3 id="step-4-enable-audit-premium-events">Schritt&nbsp;4: Aktivieren von Audit (Premium)-Ereignissen</h3>
+<p>Sie können Benutzersuchen in Exchange Online und SharePoint Online protokollieren, indem Sie bestimmte Überwachungsereignisse aktivieren.</p>
+<p>Aktivieren Von <strong>SearchQueryInitiatedExchange</strong> - und <strong>SearchQueryInitiatedSharePoint-Ereignissen</strong> mit PowerShell:</p>
+<pre><code class="lang-powershell">Set-Mailbox &lt;user&gt; -AuditOwner @{Add="SearchQueryInitiated"}
+</code></pre>
+<div class="NOTE">
+<p>Hinweis</p>
+<p>Führen Sie <code>Set-Mailbox -AuditOwner @{Add="SearchQueryInitiated"}</code> in Multi-Geo-Mandanten in der Region aus, in der das Postfach des Benutzers gehostet wird. Wenn sie zuvor in einer anderen Region aktiviert wurde, entfernen Sie sie dort, und fügen Sie sie dann erneut in der richtigen Region hinzu.</p>
+</div>
+<h3 id="step-5-set-up-audit-retention-policies-in-audit-premium">Schritt&nbsp;5: Einrichten von Aufbewahrungsrichtlinien für Audit (Premium)</h3>
+<p>Erstellen Sie Aufbewahrungsrichtlinien für Überwachungsprotokolle, um complianceanforderungen zu erfüllen. Richtlinien können nach Dienst, Aktivitätstyp oder Benutzer festgelegt und für Daueren von bis zu 10 Jahren mit der erforderlichen Add-On-Lizenz festgelegt werden.</p>
+<h3 id="step-6-search-for-audited-events">Schritt&nbsp;6: Suche nach überwachten Ereignissen</h3>
+<p>Nachdem die Überwachung konfiguriert wurde, durchsuchen Sie das Überwachungsprotokoll im Microsoft Purview-Portal, um Aktivitäten zu untersuchen.</p>
+<h2 id="turn-auditing-on-or-off">Aktivieren oder Deaktivieren der Überwachung</h2>
+<p>Die Überwachungsprotokollierung ist standardmäßig für Microsoft 365-Mandanten aktiviert, zeichnet Benutzer- und Administratoraktivitäten auf und behält sie 180 Tage lang bei, es sei denn, eine längere Aufbewahrung ist konfiguriert. Überprüfen Sie bei neuen Organisationen, ob die Überwachung aktiv ist.</p>
+<p>So überprüfen Sie den Status in PowerShell:</p>
+<pre><code class="lang-powershell">Get-AdminAuditLogConfig | Format-List UnifiedAuditLogIngestionEnabled
+</code></pre>
+<p>Wenn die Überwachung deaktiviert ist, aktivieren Sie sie, um mit der Erfassung von Überwachungsdatensätzen zu beginnen.</p>
+<h3 id="turn-on-auditing">Aktivieren der Überwachung</h3>
+<ol>
+<li>Wählen Sie im Microsoft Purview-Portal <strong>die Option "Überwachen"</strong> aus.</li>
+<li>Wenn Sie von einem Banner aufgefordert werden, die Aufzeichnungsaktivität zu starten, wählen Sie es aus, um die Überwachung zu aktivieren. Es kann bis zu 60 Minuten dauern, bis die Aufzeichnung gestartet wird.</li>
+</ol>
+<p>Oder über PowerShell aktivieren:</p>
+<pre><code class="lang-powershell">Connect-ExchangeOnline
+Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $true
+</code></pre>
+<h3 id="turn-off-auditing">Überwachung deaktivieren</h3>
+<p>Die Überwachung kann nur mit PowerShell deaktiviert werden:</p>
+<pre><code class="lang-powershell">Connect-ExchangeOnline
+Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $false
+</code></pre>
 </div>
 </body>
 </html>

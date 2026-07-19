@@ -28,7 +28,34 @@ body { font-family: sans-serif; padding: 8px 4px 24px; line-height: 1.55; color:
 <body>
 <div class="section-title">Nachweise von Incidents und Entitäten</div>
 <div class="section-content">
-<p><em>Kein Inhalt extrahiert.</em></p><p>Quelle: https://learn.microsoft.com/de-de/training/modules/incident-management-sentinel/4-understand-evidence-entities/</p>
+<p>Microsoft Sentinel verwendet verschiedene Quellen von Sicherheitsinformationen, um Incidents zu erstellen. Sie müssen diese Quellen verstehen, um das Incident Management in Microsoft Sentinel bestmöglich nutzen zu können.</p>
+<h2 id="incident-evidence">Incidentbeweise</h2>
+<p><em>Vorfallnachweise</em> bestehen aus den Sicherheitsereignisinformationen und verwandten Microsoft Sentinel-Ressourcen, die Bedrohungen in der Microsoft Sentinel-Umgebung identifizieren. Nachweise zeigen, wie Microsoft Sentinel eine Bedrohung identifiziert hat, und sind mit bestimmten Ressourcen verknüpft, die Ihr Bewusstsein für Incidentdetails erhöhen können.</p>
+<h3 id="events">Ereignisse</h3>
+<p>Ereignisse leiten Sie zurück zu mindestens einem spezifischen Ereignis in dem mit Microsoft Sentinel verknüpften Log Analytics-Arbeitsbereich. Diese Arbeitsbereiche selbst enthalten in der Regel Tausende von Ereignissen, die zu zahlreich für eine manuelle Analyse sind.</p>
+<p>Wenn Ereignisse von einer an eine Analyseregel in Microsoft Sentinel angefügten Abfrage zurückgegeben werden, werden die Ereignisse zur weiteren Überprüfung an den generierten Incident angefügt. Sie können diese Ereignisse verwenden, um den Umfang und die Häufigkeit des Incidents zu ermitteln, bevor Sie weitere Untersuchungen durchführen.</p>
+<h3 id="alerts">Alarmsignale</h3>
+<p>Die meisten Incidents werden auf Grundlage einer Analyseregelwarnung erzeugt. Unten finden Sie Beispiele für Warnungen:</p>
+<ul>
+<li>Erkennung verdächtiger Dateien.</li>
+<li>Erkennung verdächtiger Benutzeraktivitäten.</li>
+<li>Versuchte Rechteerweiterung.</li>
+</ul>
+<p>Analyseregeln generieren Warnungen entweder auf der Grundlage von KQL-Abfragen (Kusto Query Language) oder einer direkten Verbindung zu Sicherheitslösungen von Microsoft, wie Microsoft Defender for Cloud oder Microsoft Defender XDR. Wenn Sie die Warnungsgruppierung aktivieren, schließt Microsoft Sentinel alle relevanten Warnungsbeweise für den Incident ein.</p>
+<h3 id="bookmarks">Lesezeichen</h3>
+<p>Bei der Untersuchung eines Incidents entdecken Sie möglicherweise Ereignisse, die Sie nachverfolgen oder für eine spätere Untersuchung markieren sollten. Sie können die in Log Analytics durchgeführten Abfragen speichern, indem Sie ein oder mehrere Ereignisse auswählen und sie als Lesezeichen festlegen. Sie können auch Hinweise und Tags speichern, um umfangreichere Informationen für zukünftige Bedrohungssuchprozesse bereitzustellen. Lesezeichen stehen für Sie und für Ihre Teamkollegen zur Verfügung.</p>
+<h2 id="incident-entities">Incidententitäten</h2>
+<p>Eine <em>Entität bei einem Vorfall</em> bezieht sich auf eine Netzwerk- oder Benutzerressource, die in ein Ereignis verwickelt ist. Sie können Entitäten als Einstiegspunkte verwenden, um alle Warnungen und Korrelationen im Zusammenhang mit einer jeweiligen Entität zu untersuchen.</p>
+<p>Entitätsbeziehungen sind bei der Untersuchung von Incidents nützlich. Anstatt die Identitäts-, Netzwerk- und Datenzugriffswarnungen einzeln zu analysieren, können Sie Entitäten verwenden, um Warnungen zu beobachten, die einem bestimmten Benutzer, Host oder einer bestimmten Adresse in Ihrer Umgebung zugeordnet sind.</p>
+<p>Zu den Entitätstypen gehören u. a. folgende:</p>
+<ul>
+<li>Konto</li>
+<li>Gastgeber</li>
+<li>IP</li>
+<li>URL</li>
+<li>Dateihash</li>
+</ul>
+<p>Mithilfe von Entitäten können Sie beispielsweise alle Warnungen identifizieren, die einem bestimmten Contoso-Benutzer, dem Hostcomputer des Benutzers und anderen Hosts zugeordnet sind, mit denen der Benutzer eine Verbindung hergestellt hat. Sie können ermitteln, welche IP-Adressen dem betreffenden Benutzer zugeordnet sind, um herauszufinden, welche Ereignisse und Warnungen möglicherweise Teil desselben Angriffs sind.</p>
 </div>
 </body>
 </html>
