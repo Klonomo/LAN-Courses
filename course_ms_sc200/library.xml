@@ -10,7 +10,15 @@
         bannerIcon="banner"
         flashcardDefinition="flashcard_definition.xml"
         vocabulary="vocabulary.xml"
-        vocabularyListMap="vocabulary_list_map.xml">
+        vocabularyListMap="vocabulary_list_map.xml"
+        encrypted="true"
+        encryptionVersion="1"
+        kdf="argon2id"
+        kdfSalt="8zoe6TNdHZ8CjCviGpkQhQ=="
+        kdfMemory="65536"
+        kdfIterations="3"
+        kdfParallelism="1"
+        contentFingerprint="puTNdIA7Uto1qYHhIGXvzWENvSMQ4U9Q7AiMsAZUrmlQtrE3VM9bKvoTe4maqOusjESUCf+F5IalgKXCerWA2Q0YL30XwDlTZs11iX+T">
         <domain id="domain_kurs" title="Kurs" icon="domain_kurs">
             <chapter id="chapter_01_entschaerfen_von_bedrohungen_mithilfe_von_microsoft_defender" title="Entschärfen von Bedrohungen mithilfe von Microsoft Defender XDR">
                 <subchapter id="subchapter_01_01_einfuehrung_in_den_microsoft_defender_xd" title="Einführung in den Microsoft Defender XDR-Bedrohungsschutz">
