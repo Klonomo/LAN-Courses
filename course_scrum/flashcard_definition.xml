@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flashcard-definition>
+    <!--
+      Client: size sm|md|lg; type=image (data: URIs preferred); display=media|collapsible;
+      hide empty fields; preserve newlines.
+    -->
+    <front>
+        <field id="question" label="Question" type="text" display="primary" size="sm" />
+        <field id="question_image" label="Figure" type="image" display="media" />
+        <field id="choices" label="Options" type="text" display="secondary" size="sm" />
+    </front>
+    <back>
+        <field id="answer" label="Answer" type="text" display="primary" size="md" />
+        <field id="answer_text" label="Answer text" type="text" display="secondary" size="sm" />
+        <field id="answer_image" label="Solution" type="image" display="media" />
+        <field id="explanation" label="Explanation" type="text" display="quote" size="sm" />
+        <field id="discussion" label="Community discussion" type="text" display="collapsible" size="sm" />
+    </back>
+</flashcard-definition>

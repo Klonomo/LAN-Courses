@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<library schemaVersion="1">
+    <course
+        id="course_cism"
+        title="CISM [EN]"
+        author="LAN Fan"
+        lastUpdated="2026-07-20"
+        uuid="7b835478-cdab-5896-a564-3d8a33420993"
+        icons="icons.xml"
+        bannerIcon="banner"
+        flashcardDefinition="flashcard_definition.xml"
+        vocabulary="vocabulary.xml"
+        vocabularyListMap="vocabulary_list_map.xml"
+        encrypted="true"
+        encryptionVersion="1"
+        kdf="argon2id"
+        kdfSalt="de9xNGoBv2iYRDrBzb8pzw=="
+        kdfMemory="65536"
+        kdfIterations="3"
+        kdfParallelism="1"
+        contentFingerprint="FA2y/e5C38qYLCU5SzAyHHi+f1VhbL9mqmet/3iYc0ytB6e2fUocl1/YcS7zBRVvIk/CoNyH5SDjl48rZv7axtunLEMGuxn4uRbp2VLw">
+        <domain id="domain_inofficial" title="Inofficial study questions" icon="domain_inofficial">
+            <chapter id="chapter_iq_topic_01" title="Topic 1 (1249 questions)">
+                <section id="section_iq_topic_01_quiz" title="Practice questions" exp="15" />
+            </chapter>
+        </domain>
+    </course>
+</library>

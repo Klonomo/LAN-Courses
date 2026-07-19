@@ -1,31 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <flashcard-definition>
-    <!--
-      Client layout features required (implement if missing):
-      - size="sm|md|lg": text scale (sm = denser exam-style body)
-      - type="image": render value as image when it is:
-          * a data:image/...;base64,... URI (preferred; encrypted with vocabulary), or
-          * a course-relative path / https URL
-        Multiple images may be separated by newlines (render each).
-        Hide field when empty; scale to card width; pinch/zoom optional
-      - display="media": block below text, full card width
-      - display="collapsible": collapsed by default with label as header;
-        expand shows scrollable pane (max ~40% viewport height);
-        long markdown/plain text with newlines preserved
-      - Hide any field whose text/path is empty
-      - Preserve newlines / monospace-friendly wrapping for KQL snippets in text fields
-      - Front/back still flip as today; empty optional fields must not leave large gaps
-    -->
     <front>
-        <field id="question" label="Frage" type="text" display="primary" size="sm" />
-        <field id="question_image" label="Abbildung" type="image" display="media" />
-        <field id="choices" label="Optionen" type="text" display="secondary" size="sm" />
+        <field id="question" label="Frage" type="text" display="primary" />
+        <field id="choices" label="Optionen" type="text" display="secondary" />
     </front>
     <back>
-        <field id="answer" label="Antwort" type="text" display="primary" size="md" />
-        <field id="answer_text" label="Antworttext" type="text" display="secondary" size="sm" />
-        <field id="answer_image" label="Lösung" type="image" display="media" />
-        <field id="explanation" label="Erklärung" type="text" display="quote" size="sm" />
-        <field id="discussion" label="Community-Diskussion" type="text" display="collapsible" size="sm" />
+        <field id="answer" label="Antwort" type="text" display="primary" />
+        <field id="explanation" label="Erklärung" type="text" display="quote" />
     </back>
 </flashcard-definition>

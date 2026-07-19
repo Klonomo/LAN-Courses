@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<library schemaVersion="1">
+    <course
+        id="course_cissp"
+        title="CISSP [EN]"
+        author="LAN Fan"
+        lastUpdated="2026-07-19"
+        uuid="606616c1-d720-5b79-9a5e-6ec4abf60169"
+        icons="icons.xml"
+        bannerIcon="banner"
+        flashcardDefinition="flashcard_definition.xml"
+        vocabulary="vocabulary.xml"
+        vocabularyListMap="vocabulary_list_map.xml"
+        encrypted="true"
+        encryptionVersion="1"
+        kdf="argon2id"
+        kdfSalt="eL+HJ2wHoDd4zH9gDCc0kQ=="
+        kdfMemory="65536"
+        kdfIterations="3"
+        kdfParallelism="1"
+        contentFingerprint="Vsomvdvh807rdmGk+WSmhMdrDfWX3lCAvDNy3bvjwQo/WpOJtYWA2wdKCzVYeD4MpFTp7t4qTyi2HVmHB1DsXRE7Go1GW8dYCk5i2p5Y">
+    
+        <domain id="domain_inofficial" title="Inofficial study questions" icon="domain_inofficial">
+            <chapter id="chapter_iq_topic_01" title="Topic 1 (484 questions)">
+                <section id="section_iq_topic_01_quiz" title="Practice questions" exp="15" />
+            </chapter>
+        </domain>
+</course>
+</library>

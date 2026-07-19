@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<library schemaVersion="1">
+    <course
+        id="course_scrum"
+        title="Scrum PSM II [EN]"
+        author="LAN Fan"
+        lastUpdated="2026-07-19"
+        uuid="af81b195-085a-5219-a2f1-0388cfb7994d"
+        icons="icons.xml"
+        bannerIcon="banner"
+        flashcardDefinition="flashcard_definition.xml"
+        vocabulary="vocabulary.xml"
+        vocabularyListMap="vocabulary_list_map.xml"
+        encrypted="true"
+        encryptionVersion="1"
+        kdf="argon2id"
+        kdfSalt="mLZUVS5jjD9r2hgnNVJC+Q=="
+        kdfMemory="65536"
+        kdfIterations="3"
+        kdfParallelism="1"
+        contentFingerprint="CKtaCD6nNukudnccS5fJvCJurncJ1lQEtTsBIbrs8VkEwKWOKaPFa6d6PYLbZ+xG/J8dzli3Oyhba+T1bXSa5TwDHDEqR+jNKc/NbkV7">
+
+        <domain id="domain_inofficial" title="Inofficial study questions" icon="domain_inofficial">
+            <chapter id="chapter_iq_topic_01" title="Topic 1 (192 questions)">
+                <section id="section_iq_topic_01_quiz" title="Practice questions" exp="15" />
+            </chapter>
+        </domain>
+</course>
+</library>
